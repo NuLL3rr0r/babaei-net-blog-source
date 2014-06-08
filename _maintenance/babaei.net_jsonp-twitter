@@ -1,0 +1,295 @@
+server {
+    server_name  babaei.net;
+    rewrite ^(.*) http://www.babaei.net$1 permanent;
+
+    # CloudFlare
+    include /srv/.nginx/conf/cloudflare;
+}
+
+upstream www_babaei_net_static_backend {
+    server localhost:8001;
+}
+    
+server {
+    listen 8001;
+    server_name www.babaei.net;
+    location / {
+        root   /srv/babaei.net/wen/;
+    }
+}
+
+server {
+    listen  80;
+    server_name   www.babaei.net;
+
+    error_log     /srv/babaei.net/log/www_error_log;
+    access_log    /srv/babaei.net/log/www_access_log;
+
+    
+    #error_page 405 = $uri;
+    # or
+    error_page 405 =200 @405;
+    location @405 {
+        proxy_method GET;
+        proxy_pass http://www_babaei_net_static_backend;
+    }
+    # and rest of the hack above
+
+
+    if ($args ~ "req=articles&id=36td8kDjA7Hp2KwBD") {
+        rewrite ^ http://fa.babaei.net/blog/2003/12/01/opengl-and-directx-3d-game-programming/? permanent;
+    }
+
+    if ($args ~ "req=articles&id=75fsxs73r1AMc3JA6") {
+        rewrite ^ http://fa.babaei.net/blog/2007/12/15/secure-file-download/? permanent;
+    }
+
+    if ($args ~ "req=articles&id=85oz62F63m9EkXJbz") {
+        rewrite ^ http://fa.babaei.net/blog/2007/12/23/get-an-email-when-google-visits-your-website/? permanent;
+    }
+
+    if ($args ~ "req=articles&id=NR1AIM7W5q50mtfBS") {
+        rewrite ^ http://fa.babaei.net/blog/2008/02/08/cross-platform-persian-keyboard/? permanent;
+    }
+
+    if ($args ~ "req=articles&id=n8pBGaxHOT3I0jCe0") {
+        rewrite ^ http://fa.babaei.net/blog/2008/09/04/c-qt-development-using-eclipse/? permanent;
+    }
+
+    if ($args ~ "req=articles&id=WB9Oz5Fw5ud3cOGWQ") {
+        rewrite ^ http://fa.babaei.net/blog/2009/03/14/dotnet-java-code-obfuscation/? permanent;
+    }
+
+    if ($args ~ "req=articles&id=18LwIb79Cy7trN69f") {
+        rewrite ^ http://fa.babaei.net/blog/2009/05/03/your-distro-is-insecure-ubuntu/? permanent;
+    }
+
+
+    root           /srv/babaei.net/wen/;
+    index          index.html;
+
+    # Error Pages
+    include /srv/.nginx/conf/error;
+
+    # CloudFlare
+    include /srv/.nginx/conf/cloudflare;
+}
+
+server {
+    listen         80;
+    server_name    fa.babaei.net;
+
+    error_log      /srv/babaei.net/log/www_error_fa_log;
+    access_log     /srv/babaei.net/log/www_access_fa_log;
+ 
+    root           /srv/babaei.net/wfa/;
+    index          index.html;
+
+    # Error Pages
+    include        /srv/.nginx/conf/error;
+
+    # CloudFlare
+    include /srv/.nginx/conf/cloudflare;
+}
+
+server {
+    listen         80;
+    listen         443 ssl;
+    server_name    analytics.babaei.net;
+
+    error_log      /srv/babaei.net/log/www_error_analytics_log;
+    access_log     /srv/babaei.net/log/www_access_analytics_log;
+
+    ssl_certificate /etc/ssl/nginx/analytics.babaei.net.crt;
+    ssl_certificate_key /etc/ssl/nginx/analytics.babaei.net.key;
+
+    root           /srv/babaei.net/piwik/;
+    index          index.html index.php;
+    fastcgi_index  index.php;
+
+    location ~ ^.+\.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_param  SCRIPT_FILENAME  /srv/babaei.net/piwik$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+
+    # Error Pages
+    include        /srv/.nginx/conf/error;
+
+    # CloudFlare
+    include /srv/.nginx/conf/cloudflare;
+}
+
+server {
+    listen 80;
+    server_name todo.babaei.net;
+    return 301 https://$server_name$request_uri;  # enforce https
+}
+
+server {
+    listen         443 ssl;
+    server_name    todo.babaei.net;
+
+    error_log      /srv/babaei.net/log/www_error_todo_log;
+    access_log     /srv/babaei.net/log/www_access_todo_log;
+
+    ssl on;
+    ssl_certificate /etc/ssl/nginx/todo.babaei.net.crt;
+    ssl_certificate_key /etc/ssl/nginx/todo.babaei.net.key;
+
+    passenger_enabled on;
+    rails_env production;
+
+    root           /srv/babaei.net/tracks/public;
+
+    # Error Pages
+    include        /srv/.nginx/conf/error;
+
+    # CloudFlare
+    include /srv/.nginx/conf/cloudflare;
+}
+
+server {
+    listen 80;
+    server_name storage.babaei.net;
+    return 301 https://$server_name$request_uri;  # enforce https
+}
+
+server {
+    listen         443 ssl;
+    server_name    storage.babaei.net;
+
+    error_log      /srv/babaei.net/log/www_error_storage_log;
+    access_log     /srv/babaei.net/log/www_access_storage_log;
+
+    ssl on;
+    ssl_certificate /etc/ssl/nginx/storage.babaei.net.crt;
+    ssl_certificate_key /etc/ssl/nginx/storage.babaei.net.key;
+
+    # Path to the root of your installation
+    root /srv/babaei.net/owncloud/;
+
+    client_max_body_size 10G; # set max upload size
+    fastcgi_buffers 64 4K;
+
+    rewrite ^/caldav(.*)$ /remote.php/caldav$1 redirect;
+    rewrite ^/carddav(.*)$ /remote.php/carddav$1 redirect;
+    rewrite ^/webdav(.*)$ /remote.php/webdav$1 redirect;
+
+    index index.php;
+    error_page 403 /core/templates/403.php;
+    error_page 404 /core/templates/404.php;
+
+    location = /robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+
+    location ~ ^/(data|config|\.ht|db_structure\.xml|README) {
+        deny all;
+    }
+
+    location / {
+        # The following 2 rules are only needed with webfinger
+        rewrite ^/.well-known/host-meta /public.php?service=host-meta last;
+        rewrite ^/.well-known/host-meta.json /public.php?service=host-meta-json last;
+
+        rewrite ^/.well-known/carddav /remote.php/carddav/ redirect;
+        rewrite ^/.well-known/caldav /remote.php/caldav/ redirect;
+
+        rewrite ^(/core/doc/[^\/]+/)$ $1/index.html;
+
+        try_files $uri $uri/ index.php;
+    }
+
+    location ~ ^(.+?\.php)(/.*)?$ {
+        try_files $1 = 404;
+
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$1;
+        fastcgi_param PATH_INFO $2;
+        fastcgi_param HTTPS on;
+        fastcgi_pass 127.0.0.1:9000;
+        # Or use unix-socket with 'fastcgi_pass unix:/var/run/php5-fpm.sock;'
+    }
+
+    # Optional: set long EXPIRES header on static assets
+    location ~* ^.+\.(jpg|jpeg|gif|bmp|ico|png|css|js|swf)$ {
+        expires 30d;
+        # Optional: Don't log access to assets
+        access_log off;
+    }
+
+    # Error Pages
+    include /srv/.nginx/conf/error;
+}
+
+server {
+    listen 80;
+    server_name astro.babaei.net;
+    return 301 https://$server_name$request_uri;  # enforce https
+}
+
+server {
+    listen         443 ssl;
+    server_name    astro.babaei.net;
+
+    error_log      /srv/babaei.net/log/www_error_astro_log;
+    access_log     /srv/babaei.net/log/www_access_astro_log;
+
+    ssl on;
+    ssl_certificate /etc/ssl/nginx/astro.babaei.net.crt;
+    ssl_certificate_key /etc/ssl/nginx/astro.babaei.net.key;
+
+    root           /srv/babaei.net/astroforum/;
+    index          index.html index.php;
+    fastcgi_index  index.php;
+
+    location ~ ^.+\.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_param  SCRIPT_FILENAME  /srv/babaei.net/astroforum$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+
+    auth_basic              "Restricted";
+    auth_basic_user_file    /srv/.nginx/.pw;
+
+    # Error Pages
+    include        /srv/.nginx/conf/error;
+}
+
+server {
+    listen 80;
+    server_name astrolcms.babaei.net;
+    return 301 https://$server_name$request_uri;  # enforce https
+}
+
+server {
+    listen         443 ssl;
+    server_name    astrolcms.babaei.net;
+
+    error_log      /srv/babaei.net/log/www_error_astrolcms_log;
+    access_log     /srv/babaei.net/log/www_access_astrolcms_log;
+
+    ssl on;
+    ssl_certificate /etc/ssl/nginx/astrolcms.babaei.net.crt;
+    ssl_certificate_key /etc/ssl/nginx/astrolcms.babaei.net.key;
+
+    root           /srv/babaei.net/astrolcms/;
+    index          index.html index.php;
+    fastcgi_index  index.php;
+
+    location ~ ^.+\.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_param  SCRIPT_FILENAME  /srv/babaei.net/astrolcms$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+
+    auth_basic              "Restricted";
+    auth_basic_user_file    /srv/.nginx/.pw;
+
+    # Error Pages
+    include        /srv/.nginx/conf/error;
+}
+

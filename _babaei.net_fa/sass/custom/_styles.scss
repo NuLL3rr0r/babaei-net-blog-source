@@ -1,0 +1,73 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+#categories {
+	direction: ltr !important;
+    text-align: left;
+}
+
+#content {
+	direction: rtl !important;
+    text-align: justify;
+	font-family: Tahoma;
+}
+
+footer {
+	direction: rtl !important;
+    text-align: justify;
+}
+
+.code {
+	direction: ltr;
+    unicode-bidi: embed;
+}
+
+.imgCenter {
+    display: block;
+    margin: 4px auto;
+    /*-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: #000 0 none;*/
+}
+
+* + table {
+  border-style:solid;
+  border-width:1px;
+  border-color:#e7e3e7;
+}
+ 
+* + table th, * + table td {
+  border-style:dashed;
+  border-width:1px;
+  border-color:#e7e3e7;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+ 
+* + table th {
+  border-style:solid;
+  font-weight:bold;
+  background: url("/images/noise.png?1330434582") repeat scroll left top #F7F3F7;
+}
+ 
+* + table th[align="left"], * + table td[align="left"] {
+  text-align:left;
+}
+ 
+* + table th[align="right"], * + table td[align="right"] {
+  text-align:right;
+}
+ 
+* + table th[align="center"], * + table td[align="center"] {
+  text-align:center;
+}
+

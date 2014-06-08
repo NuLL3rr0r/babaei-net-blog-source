@@ -1,0 +1,63 @@
+1. Install both "Ruby" & "Ruby DevKit" [http://rubyinstaller.org/downloads/]
+D:\Octopress\Ruby193
+D:\Octopress\RubyDevKit
+
+2. Install "Python 2.7.x" [http://www.python.org/getit/]
+D:\Octopress\Python27
+
+3. Install "nginx" [http://nginx.org/en/download.html]
+D:\Octopress\nginx
+
+4. Install cwRsync [https://www.itefix.no/i2/content/cwrsync-free-edition]
+D:\Octopress\cwRsync
+
+5. Install "Git" [http://git-scm.com/download/win]
+D:\Octopress\Git
+
+5. Add the following to PATH:
+D:\Octopress\Ruby193\bin;D:\Octopress\RubyDevKit\bin;D:\Octopress\Python27;D:\Octopress\nginx;D:\Octopress\cwRsync\bin;D:\Octopress\Git\bin;
+
+6. Create the following environment variables with the below values:
+LANG="en_US.UTF-8"
+MM_CHARSET="UTF-8"
+LC_ALL="en_US.UTF-8"
+
+7. Open an instance of "cmd.exe"
+
+8. Change into "Ruby Devkit" folder
+
+9. Do the following:
+chcp 1252 // only if necessary
+ruby dk.rb init
+
+10. Ensure that below the "---" line, path to our ruby installation exist in config.yml:
+---
+ - D:/Octopress/Ruby193
+
+11. Run the following:
+ruby dk.rb install
+
+12. Open an instance of "Git Bash"
+
+13. Clone octopress anywhere you want:
+git clone git://github.com/imathis/octopress.git octopress
+
+14. Do as follows:
+gem install bundler
+bundle install // inside octopress root
+rake install // inside octopress root
+
+Note: If stocks in "bundle install" due to our fucked up network, add --verbose which will do the trick (weird, but works).
+
+15. In _babaei.net folder run the following to generate the blog for the first time
+rake generate
+
+16. Change nginx root to the following in nginx.conf
+../_babaei.net/public
+
+17. Start nginx in its own folder
+nginx
+
+18. Open your browser and point to 127.0.0.1 and
+you should see the blog with its default template.
+

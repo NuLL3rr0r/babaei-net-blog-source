@@ -1,0 +1,6 @@
+http://rubyinstaller.org/downloads/
+https://www.python.org/downloads/
+http://nginx.org/en/download.html
+https://www.itefix.no/i2/cwrsync
+http://www.syntevo.com/smartgithg/download
+http://git-scm.com/download/win
