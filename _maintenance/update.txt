@@ -22,7 +22,6 @@ recent_posts: 4       # Posts in the sidebar Recent Posts section
 
 default_asides: [custom/asides/fa.html, custom/asides/about.html, asides/recent_posts.html, custom/asides/twitter.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html, custom/asides/category_list.html]
 
-# Github repositories
 github_user: NuLL3rr0r
 github_repo_count: 0
 github_show_profile_link: true
@@ -335,6 +334,11 @@ recent_posts: 4       # Posts in the sidebar Recent Posts section
 excerpt_link: "ادامه مطلب &larr;"  # "Continue reading" link text at the bottom of excerpted articles
 
 default_asides: [custom/asides/en.html, custom/asides/about.html, asides/recent_posts.html, custom/asides/twitter.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html, custom/asides/category_list.html]
+
+github_user: NuLL3rr0r
+github_repo_count: 0
+github_show_profile_link: true
+github_skip_forks: true
 
 twitter_user: NuLL3rr0r
 twitter_tweet_count: 4
