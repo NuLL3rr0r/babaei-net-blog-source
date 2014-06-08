@@ -1,0 +1,463 @@
+http://octopress.org/docs/updating/
+
+
+
+///////////////////////////////////////// EN
+
+_babaei.net/plugins/category_list_tag.rb
+
+/// It's safe now let rdiscount stays, ignore kramdown
+_babaei.net/_config.yml
+########
+url: http://www.babaei.net
+title: NuLL3rr0r
+subtitle: The blog of M.S. Babaei
+author: M.S. Babaei
+description: NuLL3rr0r ^ The hackers way to say 3rr0r
+
+destination: ../nginx/html
+
+paginate: 8           # Posts per page on the blog index
+recent_posts: 4       # Posts in the sidebar Recent Posts section
+
+default_asides: [custom/asides/fa.html, asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html, custom/asides/category_list.html]
+
+twitter_user: NuLL3rr0r
+twitter_tweet_count: 4
+twitter_show_replies: false
+twitter_follow_button: true
+twitter_show_follower_count: false
+
+google_plus_one: true
+
+googleplus_user: 117747855970398879725
+googleplus_hidden: true
+
+google_analytics_tracking_id: UA-2377757-1
+google_analytics_set_domain_name: babaei.net  # Tracking one domain with multiple subdomains
+google_analytics_set_allow_linker: false      # Tracking multiple top-level domains
+
+facebook_like: true
+########
+
+_babaei.net/Rakefile
+########
+ssh_user       = "wrs@199.48.133.134"
+ssh_port       = "1317"
+document_root  = "~/babaei.net/wen"
+rsync_delete   = true
+rsync_args     = "--perms --chmod=a+rwx,g+rwx,o-wx"  # Any extra arguments to pass to rsync
+
+public_dir      = "../nginx/html"    # compiled site directory
+########
+
+
+_babaei.net/sass/custom/_colors.scss
+########
+html {
+    background: #fff !important;
+}
+
+body {
+    > div {
+        background: #fff !important;
+        > div {
+            background: #fff !important;
+        }
+    }
+}
+
+$main-bg: #fff !default;
+$page-bg: #fff !default;
+$header-bg: #fff !default;
+
+$title-color: #000 !default;
+$subtitle-color: lighten($title-color, 50) !default;
+
+$text-color: darken($main-bg, 85) !default;
+$text-color-light: darken($main-bg, 65) !default;
+
+$nav-bg: #fff !default;
+$nav-bg-front: #fff !default;
+$nav-bg-back: #fff !default;
+$nav-color: darken($nav-bg, 75) !default;
+$nav-color-hover: darken($nav-color, 100) !default;
+//$nav-border: darken($nav-bg, 100) !default;
+$nav-border-top: darken($nav-bg, 100) !default;
+$nav-border-bottom: darken($nav-bg, 100) !default;
+$nav-border-left: darken($nav-bg, 50) !default;
+//$nav-border-right: lighten($nav-bg, 50) !default;
+
+$footer-bg: #fff !default;
+$footer-bg-front: #fff !default;
+$footer-bg-back: #fff !default;
+$footer-color: darken($footer-bg, 50) !default;
+$footer-color-hover: darken($footer-bg, 75) !default;
+$footer-link-color: darken($footer-bg, 50) !default;
+$footer-link-color-hover: darken($footer-bg, 75) !default;
+//$footer-border: darken($nav-bg, 100) !default;
+$footer-border-top: darken($footer-bg, 25) !default;
+//$footer-border-bottom: darken($footer-bg, 25) !default;
+
+//$page-border-bottom: darken($main-bg, 25) !default;
+
+$pre-bg: lighten($main-bg, 100) !default;
+$pre-border: darken($main-bg, 100) !default;
+$pre-color: darken($main-bg, 100) !default;
+
+pre::-webkit-scrollbar {
+    background:rgba(0,0,0,0.25) !important;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background:rgba(0,0,0,0.25) !important;
+}
+########
+
+_babaei.net/sass/custom/_styles.scss
+########
+#content {
+    text-align: justify;
+}
+########
+
+_babaei.net/source/BingSiteAuth.xml
+_babaei.net/source/favicon.ico
+_babaei.net/source/favicon.png
+_babaei.net/source/google3060f88c691709aa.html
+_babaei.net/source/mywot45efad2ecb041b92480d.html
+
+_babaei.net/source/_includes/google_analytics.html
+########
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.google_analytics_tracking_id }}']);
+    {% if site.google_analytics_set_domain_name %}
+    _gaq.push(['_setDomainName', '{{ site.google_analytics_set_domain_name }}']);
+    {% endif %}
+    {% if site.google_analytics_set_allow_linker %}
+    _gaq.push(['_setAllowLinker', true]);
+    {% endif %}
+    _gaq.push(['_trackPageview']);
+########
+
+// Also add this to the end of the file
+_babaei.net/source/_includes/google_analytics.html
+########
+  <!-- Piwik -->
+  <script type="text/javascript"> 
+    var _paq = _paq || [];
+    _paq.push(["setCookieDomain", "*.babaei.net"]);
+    _paq.push(["setDomains", ["*.babaei.net","*.fa.babaei.net","*.www.babaei.net"]]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.babaei.net//";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="http://analytics.babaei.net/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
+########
+
+_babaei.net/source/_includes/head.html
+########
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }} ^ {{ site.subtitle }}</title>
+
+  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}} ^ {{ site.subtitle }}" type="application/atom+xml">
+
+  <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=hrctip7omk7ly"></script>
+</head>
+########
+
+_babaei.net/source/_includes/custom/footer.html
+########
+  <br />
+  Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author }}
+  <br /><br />
+  All content on this website is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel="license" href="http://opensource.org/licenses/MIT">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for.
+  <br /><br />
+  <span class="credit">Powered by <a href="http://www.freebsd.org/">FreeBSD</a> | <a href="http://nginx.org/">nginx</a> | <a href="http://octopress.org/">Octopress</a></span>  
+  <br />
+  <br />
+########
+
+// Note: if it's missing, copy it from the old dir.
+_babaei.net/source/_includes/asides/twitter.html
+
+_babaei.net/source/_includes/custom/asides/category_list.html
+_babaei.net/source/_includes/custom/asides/fa.html
+_babaei.net/source/blog/20*
+_babaei.net/source/_posts/*
+
+
+
+
+///////////////////////////////////////// FA
+
+_babaei.net_fa/plugins/category_list_tag.rb
+
+/// It's safe now let rdiscount stays, ignore kramdown
+_babaei.net_fa/_config.yml
+########
+url: http://fa.babaei.net
+title: NuLL3rr0r
+subtitle: وبلاگ محمد صادق بابائی
+author: M.S. Babaei
+description: NuLL3rr0r ^ The hackers way to say 3rr0r
+
+destination: ../nginx/html
+
+paginate: 8           # Posts per page on the blog index
+recent_posts: 4       # Posts in the sidebar Recent Posts section
+excerpt_link: "ادامه مطلب &larr;"  # "Continue reading" link text at the bottom of excerpted articles
+
+default_asides: [custom/asides/en.html, asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html, custom/asides/category_list.html]
+
+twitter_user: NuLL3rr0r
+twitter_tweet_count: 4
+twitter_show_replies: false
+twitter_follow_button: true
+twitter_show_follower_count: false
+
+google_plus_one: true
+
+googleplus_user: 117747855970398879725
+googleplus_hidden: true
+
+google_analytics_tracking_id: UA-2377757-1
+google_analytics_set_domain_name: babaei.net  # Tracking one domain with multiple subdomains
+google_analytics_set_allow_linker: false      # Tracking multiple top-level domains
+
+facebook_like: true
+########
+
+_babaei.net_fa/Rakefile
+########
+ssh_user       = "wrs@199.48.133.134"
+ssh_port       = "1317"
+document_root  = "~/babaei.net/wfa"
+rsync_delete   = true
+rsync_args     = "--perms --chmod=a+rwx,g+rwx,o-wx"  # Any extra arguments to pass to rsync
+
+public_dir      = "../nginx/html"    # compiled site directory
+########
+
+_babaei.net_fa/sass/custom/_colors.scss
+########
+html {
+    background: #fff !important;
+}
+
+body {
+    > div {
+        background: #fff !important;
+        > div {
+            background: #fff !important;
+        }
+    }
+}
+
+$main-bg: #fff !default;
+$page-bg: #fff !default;
+$header-bg: #fff !default;
+
+$title-color: #000 !default;
+$subtitle-color: lighten($title-color, 50) !default;
+
+$text-color: darken($main-bg, 85) !default;
+$text-color-light: darken($main-bg, 65) !default;
+
+$nav-bg: #fff !default;
+$nav-bg-front: #fff !default;
+$nav-bg-back: #fff !default;
+$nav-color: darken($nav-bg, 75) !default;
+$nav-color-hover: darken($nav-color, 100) !default;
+//$nav-border: darken($nav-bg, 100) !default;
+$nav-border-top: darken($nav-bg, 100) !default;
+$nav-border-bottom: darken($nav-bg, 100) !default;
+$nav-border-left: darken($nav-bg, 50) !default;
+//$nav-border-right: lighten($nav-bg, 50) !default;
+
+$footer-bg: #fff !default;
+$footer-bg-front: #fff !default;
+$footer-bg-back: #fff !default;
+$footer-color: darken($footer-bg, 50) !default;
+$footer-color-hover: darken($footer-bg, 75) !default;
+$footer-link-color: darken($footer-bg, 50) !default;
+$footer-link-color-hover: darken($footer-bg, 75) !default;
+//$footer-border: darken($nav-bg, 100) !default;
+$footer-border-top: darken($footer-bg, 25) !default;
+//$footer-border-bottom: darken($footer-bg, 25) !default;
+
+//$page-border-bottom: darken($main-bg, 25) !default;
+
+$pre-bg: lighten($main-bg, 100) !default;
+$pre-border: darken($main-bg, 100) !default;
+$pre-color: darken($main-bg, 100) !default;
+
+pre::-webkit-scrollbar {
+    background:rgba(0,0,0,0.25) !important;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background:rgba(0,0,0,0.25) !important;
+}
+########
+
+_babaei.net_fa/sass/custom/_styles.scss
+########
+#categories {
+	direction: ltr !important;
+    text-align: left;
+}
+
+#content {
+	direction: rtl !important;
+    text-align: justify;
+	font-family: Tahoma;
+}
+
+.code {
+	direction: ltr;
+    unicode-bidi: embed;
+}
+
+.imgCenter {
+    display: block;
+    margin: 4px auto;
+    /*-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: #000 0 none;*/
+}
+
+* + table {
+  border-style:solid;
+  border-width:1px;
+  border-color:#e7e3e7;
+}
+ 
+* + table th, * + table td {
+  border-style:dashed;
+  border-width:1px;
+  border-color:#e7e3e7;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+ 
+* + table th {
+  border-style:solid;
+  font-weight:bold;
+  background: url("/images/noise.png?1330434582") repeat scroll left top #F7F3F7;
+}
+ 
+* + table th[align="left"], * + table td[align="left"] {
+  text-align:left;
+}
+ 
+* + table th[align="right"], * + table td[align="right"] {
+  text-align:right;
+}
+ 
+* + table th[align="center"], * + table td[align="center"] {
+  text-align:center;
+}
+########
+
+_babaei.net_fa/source/BingSiteAuth.xml
+_babaei.net_fa/source/favicon.ico
+_babaei.net_fa/source/favicon.png
+_babaei.net_fa/source/google3060f88c691709aa.html
+_babaei.net_fa/source/mywot45efad2ecb041b92480d.html
+
+_babaei.net_fa/source/_includes/google_analytics.html
+########
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '{{ site.google_analytics_tracking_id }}']);
+    {% if site.google_analytics_set_domain_name %}
+    _gaq.push(['_setDomainName', '{{ site.google_analytics_set_domain_name }}']);
+    {% endif %}
+    {% if site.google_analytics_set_allow_linker %}
+    _gaq.push(['_setAllowLinker', true]);
+    {% endif %}
+    _gaq.push(['_trackPageview']);
+########
+
+// Also add this to the end of the file
+_babaei.net_fa/source/_includes/google_analytics.html
+########
+  <!-- Piwik -->
+  <script type="text/javascript"> 
+    var _paq = _paq || [];
+    _paq.push(["setCookieDomain", "*.babaei.net"]);
+    _paq.push(["setDomains", ["*.babaei.net","*.fa.babaei.net","*.www.babaei.net"]]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.babaei.net//";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="http://analytics.babaei.net/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
+########
+
+_babaei.net_fa/source/_includes/head.html
+########
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }} ^ {{ site.subtitle }}</title>
+
+  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}} ^ {{ site.subtitle }}" type="application/atom+xml">
+
+  <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=hh2gxbngitucm"></script>
+</head>
+########
+
+_babaei.net/source/_includes/custom/footer.html
+########
+  <br />
+  Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author }}
+  <br /><br />
+  All content on this website is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel="license" href="http://opensource.org/licenses/MIT">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for.
+  <br /><br />
+  <span class="credit">Powered by <a href="http://www.freebsd.org/">FreeBSD</a> | <a href="http://nginx.org/">nginx</a> | <a href="http://octopress.org/">Octopress</a></span>  
+  <br />
+  <br />
+########
+
+_babaei.net_fa/source/_includes/asides/recent_posts.html
+########
+  <h1>پست های اخیر</h1>
+########
+
+_babaei.net_fa/source/_includes/asides/twitter.html
+########
+  <h1>آخرین توئیت ها</h1>
+########
+
+_babaei.net_fa/source/_includes/custom/asides/category_list.html
+_babaei.net_fa/source/_includes/custom/asides/en.html
+_babaei.net_fa/source/blog/20*
+_babaei.net_fa/source/_posts/*
+
+//////////////////////////////// HACK FOR FEEDBURNER in FA, change 20 to 3
+X Your feed filesize is larger than 576K. You need to reduce its size in order for FeedBurner to process it. Tips for controlling feed file size with Blogger can be found in Tech Tips on FeedBurner Forums, our support site.
+
+D:\Octopress\_babaei.net_fa\source\atom.xml & D:\Octopress\_babaei.net_fa\.themes\classic\source\atom.xml
+########
+  {% for post in site.posts limit: 3 %}
+########
+////////////////////////////////// END HACK FOR FEEDBURNER
