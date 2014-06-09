@@ -202,16 +202,18 @@ _babaei.net/source/_includes/custom/footer.html
 
 _babaei.net/source/_includes/custom/asides/about.html
 ########
+<section>
   <h1>About Me</h1>
   <div style="padding: 8px 0 0 0; margin:0; font-size: 0.9em;">
     <a style="float: left; padding: 0; margin: 0 16px 0 0; text-decoration: none; white-space: normal;" href="/babaei-hires.jpg" target="_blank">
       <img style="display: block; padding: 0; margin: 0;" src="/babaei-lowres.jpg" />
     </a>
-    So, I'm <em>Mohammad</em> and this is my blog where I like to share what I've learnt from past few years, during my day to day experiments. Besides, I'm very fond of <a href="http://en.wikipedia.org/wiki/Free_and_open_source_software" target="_blank">FLOSS</a> world and also enjoy game development. Additionally, My favorite FLOSS projects are <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a>, <a href="http://www.boost.org/" target="_blank">Boost</a> and <a href="http://www.cmake.org/" target="_blank">CMake</a>, just to mention a few. Other than that, I'm a die-hard metal fan and my favorite bands of all times are  <a href="http://www.insomnium.net/‎" target="_blank">Finish melodic death metal band Insomnium</a> and <a href="http://www.archenemy.net/‎" target="_blank">Swedish melodic death metal band Arch Enemy</a>.
+    So, I'm <em>Mohammad</em> and this is my blog where I like to share what I've learnt from past few years, during my day to day experiments. Besides, I'm very fond of <a href="http://en.wikipedia.org/wiki/Free_and_open_source_software" target="_blank">FLOSS</a> world and also enjoy game development. Additionally, My favorite FLOSS projects are <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a>, <a href="http://www.boost.org/" target="_blank">Boost</a> and <a href="http://www.cmake.org/" target="_blank">CMake</a>, just to mention a few. Other than that, I'm a die-hard metal fan and my favorite bands of all times are  <a href="http://www.insomnium.net/" target="_blank">Finish melodic death metal band Insomnium</a> and <a href="http://www.archenemy.net/" target="_blank">Swedish melodic death metal band Arch Enemy</a>.
     <br />
     Please feel free to drop me a line <a href="https://twitter.com/NuLL3rr0r" target="_blank">@NuLL3rr0r</a> on Twitter, or, contact me by my email at <s><em>info [ at ] babaei.net</em></s> if you wish to do so.
     <div style="clear: both; float: none;" />
   </div>
+</section>
 ########
 
 
@@ -593,7 +595,7 @@ _babaei.net_fa/source/_includes/custom/asides/about.html
     <a style="float: left; padding: 0; margin: 0 16px 0 0; text-decoration: none; white-space: normal;" href="/babaei-hires.jpg" target="_blank">
       <img style="display: block; padding: 0; margin: 0;" src="/babaei-lowres.jpg" />
     </a>
-    <em>محمد</em> هستم و در این بلاگ تجربیاتی که در طول سال های گذشته به دست آوردم رو به اشتراک میزارم. شدیدا به <a href="http://fa.wikipedia.org/wiki/%D9%86%D8%B1%D9%85%E2%80%8C%D8%A7%D9%81%D8%B2%D8%A7%D8%B1_%D8%A2%D8%B2%D8%A7%D8%AF" target="_blank">نرم افزارهای آزاد</a> علاقمندم و هم زمان از توسعه بازی های کامپیوتری لذت می برم. برخی از نرم فزارهای آزاد مورد علاقه ام <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a>, <a href="http://www.boost.org/" target="_blank">Boost</a> و <a href="http://www.cmake.org/" target="_blank">CMake</a> هستن. همه ی این ها به کنار، یکی دیگه از علایقم موسیقی متال هست و گروه های منتخب من <a href="http://www.insomnium.net/‎" target="_blank">Insomnium</a> و <a href="http://www.archenemy.net/‎" target="_blank">Arch Enemy</a> هستن.
+    <em>محمد</em> هستم و در این بلاگ تجربیاتی که در طول سال های گذشته به دست آوردم رو به اشتراک میزارم. شدیدا به <a href="http://fa.wikipedia.org/wiki/%D9%86%D8%B1%D9%85%E2%80%8C%D8%A7%D9%81%D8%B2%D8%A7%D8%B1_%D8%A2%D8%B2%D8%A7%D8%AF" target="_blank">نرم افزارهای آزاد</a> علاقمندم و هم زمان از توسعه بازی های کامپیوتری لذت می برم. برخی از نرم فزارهای آزاد مورد علاقه ام <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a>, <a href="http://www.boost.org/" target="_blank">Boost</a> و <a href="http://www.cmake.org/" target="_blank">CMake</a> هستن. همه ی این ها به کنار، یکی دیگه از علایقم موسیقی متال هست و گروه های منتخب من <a href="http://www.insomnium.net/" target="_blank">Insomnium</a> و <a href="http://www.archenemy.net/" target="_blank">Arch Enemy</a> هستن.
     <br />
     جهت تماس با من می تونید از توئیتر <a href="https://twitter.com/NuLL3rr0r" target="_blank">@NuLL3rr0r</a> و یا ایمیل به آدرس <s><em>info [ at ] babaei.net</em></s> استفاده کنید.
     <div style="clear: both; float: none;" />
