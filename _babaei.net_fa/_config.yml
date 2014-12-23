@@ -39,12 +39,13 @@ rdiscount:
     - autolink
     - footnotes
     - smart
-pygments: false # default python pygments have been replaced by pygments.rb
+highlighter: pygments # default python pygments have been replaced by pygments.rb
 
-paginate: 8           # Posts per page on the blog index
-pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
+paginate: 8          # Posts per page on the blog index
+paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
 recent_posts: 4       # Posts in the sidebar Recent Posts section
 excerpt_link: "ادامه مطلب &larr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_separator: "<!--more-->"
 
 titlecase: true       # Converts page and post titles to titlecase
 
@@ -70,10 +71,10 @@ github_skip_forks: true
 
 # Twitter
 twitter_user: NuLL3rr0r
+twitter_tweet_button: true
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
-twitter_tweet_button: true
 twitter_show_follower_count: false
 
 # Google +1
