@@ -1,0 +1,13 @@
+You can generate only one post while you are writing it using
+    rake isolate[your-post]
+and then
+    rake integrate
+to go back to normal.
+
+
+By install Ruby GSL:
+    gem install gsl 
+You may notice a speed increase.
+
+Jekyll's "related posts" uses latent semantic indexing, provided by Classifier::LSI. To do so, it uses vector analysis features, which can be accelerated by (a Ruby wrapper of) GSL, the GNU Scientific Library. If GSL isn't available, a pure-Ruby implementation is used, but it's exceptionally slow for big sites, and using GSL improves performance ~10x
+
