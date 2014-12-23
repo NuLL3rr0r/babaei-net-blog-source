@@ -13,6 +13,7 @@ url: http://www.babaei.net
 title: NuLL3rr0r
 subtitle: The blog of Mohammad S. Babaei
 author: Mohammad S. Babaei
+simple_search: https://www.duckduckgo.com/
 description: NuLL3rr0r ^ The hackers way to say 3rr0r
 
 destination: ../nginx/html
@@ -178,6 +179,12 @@ _babaei.net/source/_includes/head.html
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}} ^ {{ site.subtitle }}" type="application/atom+xml">
 ########
 
+_babaei.net/source/_includes/navigation.html
+########
+    <input type="hidden" name="sites" value="{{ site.url | shorthand_url }}">
+    <input class="search" type="text" name="q" results="0" placeholder="Search&hellip;"/>
+########
+
 _babaei.net/source/atom.xml
 ########
 <title><![CDATA[{{ site.title | cdata_escape }} ^ {{ site.subtitle | cdata_escape }}]]></title>
@@ -327,6 +334,7 @@ url: http://fa.babaei.net
 title: NuLL3rr0r
 subtitle: وبلاگ محمد صادق بابائی
 author: محمد صادق بابائی
+simple_search: https://www.duckduckgo.com/
 description: NuLL3rr0r ^ The hackers way to say 3rr0r
 
 destination: ../nginx/html
@@ -557,6 +565,12 @@ _babaei.net_fa/source/_includes/head.html
   <title>{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }} ^ {{ site.subtitle }}</title>
 
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}} ^ {{ site.subtitle }}" type="application/atom+xml">
+########
+
+_babaei.net_fa/source/_includes/navigation.html
+########
+    <input type="hidden" name="sites" value="{{ site.url | shorthand_url }}">
+    <input class="search" type="text" name="q" results="0" placeholder="Search&hellip;"/>
 ########
 
 _babaei.net_fa/source/atom.xml
