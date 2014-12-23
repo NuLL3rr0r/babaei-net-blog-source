@@ -7,7 +7,7 @@ using namespace std;
 
 DWORD ProcId = 0; // THIS IS OUR GLOBAL VARIABLE FOR THE PROC ID;
 
-void GetProcId(char* ProcName);
+void GetProcId(const char* ProcName);
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     return 0;
 }
 
-void GetProcId(char* ProcName)
+void GetProcId(const char* ProcName)
 {
 	PROCESSENTRY32   pe32;
 	HANDLE         hSnapshot = NULL;
