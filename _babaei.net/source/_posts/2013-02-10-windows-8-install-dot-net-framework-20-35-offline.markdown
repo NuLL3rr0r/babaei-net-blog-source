@@ -21,5 +21,5 @@ Dism /online /enable-feature /featurename:NetFx3 /All /Source:x:\sources\sxs /Li
 
 Replace **x:** with path of your Windows 8 installation DVD.
 
-**Note**: You have to run cmd.exe as Administrator in order for this to work!
+- _**Note**: You have to run cmd.exe as Administrator in order for this to work!_
 
