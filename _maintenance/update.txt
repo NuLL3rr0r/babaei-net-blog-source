@@ -339,6 +339,7 @@ simple_search: https://www.duckduckgo.com/
 description: NuLL3rr0r ^ The hackers way to say 3rr0r
 
 destination: ../nginx/html
+markdown: kramdown
 
 paginate: 8           # Posts per page on the blog index
 paginate_path: "/blog/page/:num"  # Directory base for pagination URLs eg. /posts/2/
