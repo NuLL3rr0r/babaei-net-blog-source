@@ -70,7 +70,7 @@ function showTwitterFeed(tweets, twitter_user) {
 function getTwitterFeed(user, count, replies) {
   count = parseInt(count, 10);
   $.ajax({
-      url: 'twitter_timeline.json?callback=?'
+      url: '/twitter_timeline.json?callback=?'
     , type: 'GET'
     , dataType: 'jsonp'
     , jsonpCallback: 'processTweeter'
