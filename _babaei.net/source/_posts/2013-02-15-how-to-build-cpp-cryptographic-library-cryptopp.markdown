@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to build C++ cryptographic library, Crypto++"
-date: 2013-02-15 03:50
+date: 2013-02-15 03:50 +0330
 comments: true
 categories:
 - C

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Should I Check If A Pointer Is NULL Before Deleting It?"
-date: 2013-02-11 01:52
+date: 2013-02-11 01:52 +0330
 comments: true
 categories:
 - C

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++/Qt Development using Eclipse<br />(C/C++, Java, Perl, Python/Jython, Ruby, etc. All in one IDE)"
-date: 2008-09-04 00:00
+date: 2008-09-04 00:00 +0330
 comments: false
 sharing: true
 footer: true

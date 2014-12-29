@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenGL & DirectX, 3D Game Programming"
-date: 2003-12-01 00:00
+date: 2003-12-01 00:00 +0330
 comments: false
 sharing: true
 footer: true

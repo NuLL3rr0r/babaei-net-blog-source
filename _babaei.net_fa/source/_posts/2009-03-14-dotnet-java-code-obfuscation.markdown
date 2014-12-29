@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ".NET/Java Code Obfuscation"
-date: 2009-03-14 00:00
+date: 2009-03-14 00:00 +0330
 comments: false
 sharing: true
 footer: true

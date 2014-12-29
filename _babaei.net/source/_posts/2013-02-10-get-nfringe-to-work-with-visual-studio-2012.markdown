@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Get nFringe to Work with Visual Studio 2012"
-date: 2013-02-10 17:53
+date: 2013-02-10 17:53 +0330
 comments: true
 categories: 
 - Epic

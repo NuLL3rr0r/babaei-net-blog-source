@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Write your own cross-platform cryptographic library"
-date: 2013-02-15 08:11
+date: 2013-02-15 08:11 +0330
 comments: true
 categories: 
 - C

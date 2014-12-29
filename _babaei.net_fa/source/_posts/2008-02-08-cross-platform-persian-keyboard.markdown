@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cross-Platform Persian Keyboard"
-date: 2008-02-08 00:00
+date: 2008-02-08 00:00 +0330
 comments: false
 sharing: true
 footer: true

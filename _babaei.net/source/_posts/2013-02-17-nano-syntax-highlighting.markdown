@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "nano, Syntax Highlighting"
-date: 2013-02-17 01:27
+date: 2013-02-17 01:27 +0330
 comments: true
 categories:
 - Console

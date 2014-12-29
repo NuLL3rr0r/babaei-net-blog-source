@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Colors Talk: A Colorful Terminal / Console"
-date: 2013-03-03 05:10
+date: 2013-03-03 05:10 +0330
 comments: true
 categories:
 - Bash

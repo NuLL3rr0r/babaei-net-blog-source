@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Windows 8, Install .NET Framework 2.0 - 3.5 Offline"
-date: 2013-02-10 17:31
+date: 2013-02-10 17:31 +0330
 comments: true
 categories:
 - C#

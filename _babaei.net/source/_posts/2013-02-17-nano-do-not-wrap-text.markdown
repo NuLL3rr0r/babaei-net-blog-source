@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "nano, Do not wrap text"
-date: 2013-02-17 01:13
+date: 2013-02-17 01:13 +0330
 comments: true
 categories:
 - Console
