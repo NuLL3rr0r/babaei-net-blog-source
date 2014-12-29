@@ -128,6 +128,27 @@ _babaei.net/sass/custom/_styles.scss
 #content {
     text-align: justify;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+.imgCenter {
+    display: block;
+    margin: 4px auto;
+    /*-webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    -moz-box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    box-shadow: rgba(0, 0, 0, 0) 0 0 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: #000 0 none;*/
+}
 ########
 
 _babaei.net/source/babaei-hires.jpg
@@ -212,7 +233,7 @@ _babaei.net/source/_includes/custom/asides/about.html
 ########
 <section>
   <h1>About Me</h1>
-  <div style="padding: 8px 0 0 0; margin:0; font-size: 0.9em;">
+  <div style="padding: 8px 0 0 0; margin:0; font-size: 0.9em; text-align: right;">
     <a style="float: left; padding: 0; margin: 0 16px 0 0; text-decoration: none; white-space: normal;" href="/babaei-hires.jpg" target="_blank">
       <img style="display: block; padding: 0; margin: 0;" src="/babaei-lowres.jpg" />
     </a>
@@ -305,7 +326,7 @@ _babaei.net/source/javascripts/twitter.js
 function getTwitterFeed(user, count, replies) {
   count = parseInt(count, 10);
   $.ajax({
-      url: 'twitter_timeline.json?callback=?'
+      url: '/twitter_timeline.json?callback=?'
     , type: 'GET'
     , dataType: 'jsonp'
     , jsonpCallback: 'processTweeter'
@@ -465,6 +486,10 @@ footer {
 	font-family: Tahoma;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-align: right;
+}
+
 .code {
 	direction: ltr;
     unicode-bidi: embed;
@@ -608,7 +633,7 @@ _babaei.net_fa/source/_includes/custom/asides/about.html
 ########
 <section>
   <h1>درباره من</h1>
-  <div style="padding: 8px 0 0 0; margin:0; font-size: 0.9em;">
+  <div style="padding: 8px 0 0 0; margin:0; font-size: 0.9em; text-align: left;">
     <a style="float: left; padding: 0; margin: 0 16px 0 0; text-decoration: none; white-space: normal;" href="/babaei-hires.jpg" target="_blank">
       <img style="display: block; padding: 0; margin: 0;" src="/babaei-lowres.jpg" />
     </a>
@@ -721,7 +746,7 @@ _babaei.net/source/javascripts/twitter.js
 function getTwitterFeed(user, count, replies) {
   count = parseInt(count, 10);
   $.ajax({
-      url: 'twitter_timeline.json?callback=?'
+      url: '/twitter_timeline.json?callback=?'
     , type: 'GET'
     , dataType: 'jsonp'
     , jsonpCallback: 'processTweeter'
