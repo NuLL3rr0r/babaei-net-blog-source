@@ -60,7 +60,7 @@ nano -w /srv/babaei.net/cron/update_twitter.sh
 #cd "$(dirname "$0")"
 #ruby update_twitter.rb
 
-/usr/local/bin/ruby /srv/babaei.net/cron/update_twitter.rb
+sudo -u www -g www -H /usr/local/bin/ruby /srv/babaei.net/cron/update_twitter.rb
 ########
 
 chown www:www /srv/babaei.net/cron/update_twitter.rb
@@ -69,12 +69,19 @@ chmod 0700 /srv/babaei.net/cron/update_twitter.rb
 chmod 0700 /srv/babaei.net/cron/update_twitter.sh
 ls -l /srv/babaei.net/cron/
 
-nano -w /etc/crontab
+// Test it with the limited set of environment variables set by cron
+env -i SHELL=/bin/sh PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/etc/:/usr/local/bin:/usr/local/sbin HOME=/root LOGNAME=Charlie /srv/babaei.net/cron/update_twitter.sh
+
+crontab -e -u root
 ########
+SHELL=/bin/sh
+PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/etc/:/usr/local/bin:/usr/local/sbin
+MAILTO=""
+
 # babaei.net/fa.babaei.net Twitter updater for Octopress
 # Evey 8 minutes
-*/8     *       *       *       *       www     /srv/babaei.net/cron/update_twitter.sh >/dev/null 2>&1
+*/8     *       *       *       *       /srv/babaei.net/cron/update_twitter.sh
 ########
 
-service cron restart
+crontab -l
 
