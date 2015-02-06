@@ -62,7 +62,7 @@ You may find all the contents of this book scattered on the Qt wiki or forums bu
 * Parsing XML
 * Multimedia, audio and video playback
 * Capturing photos using Camera
-* Localizing your application using Qt Linguist
+* Localizing your applications using Qt Linguist
 * Using mobile sensors such as GPS, accelerometer, gyroscope, ambient light, and magnetometer
 * Developing mobile applications on Android
 
