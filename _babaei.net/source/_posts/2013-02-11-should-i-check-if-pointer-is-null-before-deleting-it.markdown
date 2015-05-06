@@ -15,7 +15,7 @@ categories:
 - Visual Studio
 ---
 
-Most of the time I see some C++ programers who check if a pointer is NULL befor deleting it.
+Most of the time I see some C++ programmers who check if a pointer is NULL before deleting it.
 
 {% codeblock lang:cpp %}
 if (ptr != NULL) {

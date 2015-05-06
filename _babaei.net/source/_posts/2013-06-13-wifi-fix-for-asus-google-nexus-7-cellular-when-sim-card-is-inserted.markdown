@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wifi Fix For Asus Google Nexus 7 Cellular, When SIM-Card Is Inserted"
-date: 2013-06-13 03:39 +0330
+date: 2013-06-13 03:39 +0430
 comments: true
 categories:
 - Android
