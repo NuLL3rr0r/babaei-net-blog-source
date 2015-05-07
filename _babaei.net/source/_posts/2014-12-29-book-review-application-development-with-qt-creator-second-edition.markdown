@@ -45,7 +45,7 @@ You may find all the contents of this book scattered on the Qt wiki or forums bu
 * Installing and setting up the necessary development tools such as Qt framework, Qt Creator IDE, GDB and CDB debuggers, Valgrind, Android SDK and NDK, JDK and Apache Ant
 * Build, debug, profile and optimize your applications
 * Detect memory leaks before releasing your application
-* VCS integration (Version Control Systems)
+* VCS integration (Version Control System)
 * Coding style configuration
 * .pro file settings and building projects from command line
 * Creating re-usable C++ libraries and linking against them
