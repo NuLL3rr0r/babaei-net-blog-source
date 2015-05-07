@@ -32,7 +32,7 @@ Almost three weeks ago I received a review request from one of the _[Packt Publi
 
 <center>Application Development with Qt Creator, 2nd Edition</center>
 
-[{% img imgCenter /blog/2014/12/27/book-review-application-development-with-qt-creator-second-edition/2014-12-27-book-review-application-development-with-qt-creator-second-edition__001.jpg 372 480 'Application Development with Qt Creator, 2nd Edition (by Ray Rischpater, Packt Publishing)' 'Application Development with Qt Creator, 2nd Edition (by Ray Rischpater, Packt Publishing)' %}](/blog/2014/12/27/book-review-application-development-with-qt-creator-second-edition/2014-12-27-book-review-application-development-with-qt-creator-second-edition__001.jpg)
+[{% img imgCenter /blog/2014/12/29/book-review-application-development-with-qt-creator-second-edition/2014-12-29-book-review-application-development-with-qt-creator-second-edition__001.jpg 372 480 'Application Development with Qt Creator, 2nd Edition (by Ray Rischpater, Packt Publishing)' 'Application Development with Qt Creator, 2nd Edition (by Ray Rischpater, Packt Publishing)' %}](/blog/2014/12/29/book-review-application-development-with-qt-creator-second-edition/2014-12-29-book-review-application-development-with-qt-creator-second-edition__001.jpg)
 
 <!-- more -->
 
