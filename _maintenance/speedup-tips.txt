@@ -5,7 +5,7 @@ and then
 to go back to normal.
 
 
-By install Ruby GSL:
+By installing Ruby GSL:
     gem install gsl 
 You may notice a speed increase.
 
