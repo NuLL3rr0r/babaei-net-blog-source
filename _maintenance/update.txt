@@ -6,7 +6,7 @@ http://octopress.org/docs/updating/
 
 _babaei.net/plugins/category_list_tag.rb
 
-/// It's safe now let rdiscount stays, ignore kramdown
+/// It's safe now, let rdiscount stays, ignore kramdown
 _babaei.net/_config.yml
 ########
 url: http://www.babaei.net
@@ -224,7 +224,7 @@ _babaei.net/source/_includes/custom/footer.html
   <br /><br />
   All content on this website is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel="license" href="http://opensource.org/licenses/MIT">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for.
   <br /><br />
-  <span class="credit">Powered by <a href="http://www.freebsd.org/">FreeBSD</a> | <a href="http://nginx.org/">nginx</a> | <a href="http://octopress.org/">Octopress</a></span>  
+  <span class="credit">Powered by <a href="http://www.freebsd.org/">FreeBSD</a> | <a href="http://nginx.org/">nginx</a> | <a href="http://octopress.org/">Octopress</a></span>
   <br />
   <br />
 ########
@@ -349,7 +349,7 @@ _babaei.net/source/_posts/*
 
 _babaei.net_fa/plugins/category_list_tag.rb
 
-/// It's safe now let rdiscount stays, ignore kramdown
+/// It's safe now, let rdiscount stays, ignore kramdown
 _babaei.net_fa/_config.yml
 ########
 url: http://fa.babaei.net
@@ -618,7 +618,7 @@ _babaei.net_fa/source/_includes/custom/footer.html
   <br /><br />
   تمامی محتویات این وب سایت تحت مجوز <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a> منتشر شده است. همچنین، تمامی سورس کدهای منتشر شده در این وب سایت تحت لیسانس <a rel="license" href="http://opensource.org/licenses/MIT">MIT License</a> منتشر شده است، مگر آن که به صراحت ذکر شده باشد. تمامی محتویات ارائه شده صرفا جنبه آموزشی و اطلاعاتی داشته و فاقد هرگونه ضمانت، تعهد یا شرایطی از هر نوع می باشد. بایستی توجه نمود که اطلاعات عرضه شده حتی ممکن است دقیق و یا بروز نباشد. هرگونه اطمینان به و یا استفاده از محتویات یا منابع منتشر شده در این وب سایت با مسئولیت مخاطب بوده و نگارنده یا نگارندگان هیچ گونه مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.
   <br /><br />
-  <span class="credit">با افتخار نیرو گرفته از <a href="http://www.freebsd.org/">FreeBSD</a> | <a href="http://nginx.org/">nginx</a> | <a href="http://octopress.org/">Octopress</a></span>  
+  <span class="credit">با افتخار نیرو گرفته از <a href="http://www.freebsd.org/">FreeBSD</a> | <a href="http://nginx.org/">nginx</a> | <a href="http://octopress.org/">Octopress</a></span>
   <br />
   <br />
 ########
