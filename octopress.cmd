@@ -11,5 +11,5 @@ set PATH=%~dp0Ruby\bin;%~dp0RubyDevKit\bin;%~dp0Python;%~dp0nginx;%~dp0cwRsync;%
 
 echo %PATH% & echo. & echo %LANG% & echo %MM_CHARSET% & echo %LC_ALL% & echo.
 
-%comspec% /k 
+%comspec% /k
 
