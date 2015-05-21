@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+noscript div {
+	font: normal normal normal 12px/1.5em;
+	letter-spacing: 1px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #F00;
+	background: #FFA4A4;
+}
+
+body form .search {
+    margin-left: 2.0em;
+    font-size: 0.95em;
+    line-height: 1.2em;
+    padding: 0.25em 0.5em 0px;
+    font-size: 0.85em;
+    font-family: "PT Sans","Helvetica Neue",Arial,sans-serif;
+    border-radius: 0.25em;
+    background-clip: padding-box;
+    background-color: #151515;
+    border: 1px double #FFF;
+    color: #FFF;
+}
+
+body form .search > ::-webkit-input-placeholder,
+body form .search > :-moz-placeholder,
+body form .search > ::-moz-placeholder,
+body form .search >     box-shadow: 0px 1px #FFF;
+:-ms-input-placeholder {
+   color: #ccc;
+}
+
+.navbar .nav > li > span, .navbar .nav > li > a, .navbar .nav li.nolink {
+    letter-spacing: 1px !important;
+}
+
+.navbar .nav > li > a, .navbar .nav li.nolink {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","Source Han Sans CN","WenQuanYi Micro Hei",Arial,sans-serif;
+}
+
+.navbar .nav .fa-Blog * {
+    font-family: Tahoma !important;
+    font-size: 11px;
+    padding: 0 8px;
+}
+
+@media only screen and (min-width: 1025px) {
+    #coverImage {
+        background-image: url(/img/cover_high.jpg) !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    #coverImage {
+        background-image: url(/img/cover_medium.jpg) !important;
+    }
+}
+
+@media (max-width:767px) {
+	#coverImage {
+		background-image: url(/img/cover_low.jpg) !important;
+	}
+}
+
+.scroll-down {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 96px;
+    height: 96px;
+    bottom: 128px;
+    z-index: 999;
+}
+
+footer .copy p {
+    font-size: 0.9em !important;
+}
+
+footer .copy a:link {
+    text-decoration: none;
+    color: #9797A6;
+}
+
+footer .copy a:visited {
+    text-decoration: none;
+    color: #9797A6;
+}
+
+footer .copy a:hover {
+    text-decoration: underline;
+    color: #CCC;
+}
+
+footer .copy a:active {
+    text-decoration: none;
+    color: #9797A6;
+}
+
+footer .copy .credit a, footer .copy .license a {
+   letter-spacing: 1px;
+   margin-left: 4px;
+   margin-right: 4px;
+}
+
+#intro .sharing 
+{
+    text-align: right;
+    font-size: 1.4em;
+}
+
+#intro .sharing a
+{
+    padding: 0.4em;
+}
+
+#intro .sharing a:link * {
+    text-decoration: none;
+    color: #AAA;
+}
+
+#intro .sharing a:visited * {
+    text-decoration: none;
+    color: #AAA;
+}
+
+#intro .sharing a:hover * {
+    text-decoration: none;
+    color: #333;
+}
+
+#intro .sharing a:active * {
+    text-decoration: none;
+    color: #AAA;
+}
+
+.postImage {
+    display: block !important;
+    margin: 4px auto !important;
+    width: auto;
+    height: auto;
+}
+

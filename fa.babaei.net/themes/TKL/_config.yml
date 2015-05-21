@@ -1,0 +1,35 @@
+# config
+cover_high: /img/cover_high.jpg
+cover_medium: /img/cover_medium.jpg
+cover_low: /img/cover_low.jpg
+logo: /img/logo.png
+top_saying:
+- title: 
+- content: 
+bottom_saying: 
+# Content
+excerpt_link: ادامه مطلب
+
+rss: /atom.xml
+
+highlightjs: vs
+
+# Miscellaneous
+github: https://github.com/NuLL3rr0r
+twitter: https://twitter.com/NuLL3rr0r
+
+#Links
+links:
+- name: English Blog
+  link: http://www.babaei.net/
+
+# Search
+simple_search: https://www.duckduckgo.com/
+simple_search_site: fa.babaei.net
+simple_search_site_key: sites
+simple_search_query_key: q
+simple_search_placeholder: جستجو&hellip;
+
+# Sharing
+twitter_user: NuLL3rr0r
+

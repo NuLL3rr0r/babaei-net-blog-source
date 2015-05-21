@@ -1,0 +1,174 @@
+# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: NuLL3rr0r
+subtitle: وبلاگ محمد صادق بابائی
+description: NuLL3rr0r ^ The hackers way to say 3rr0r
+author: محمد صادق بابائی
+language: fa-IR
+timezone: Asia/Tehran
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://fa.babaei.net/
+root: /
+permalink: blog/:year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: blog/tags
+archive_dir: blog/archives
+category_dir: blog/categories
+code_dir: blog/downloads/code
+i18n_dir: blog/:lang
+skip_render:
+
+# Writing
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+default_layout: post
+titlecase: true # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 1
+render_drafts: false
+post_asset_folder: true
+relative_link: true
+future: true
+highlight:
+  enable: true
+  line_number: true
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: blog/page
+
+# Extensions
+## Plugins: http://hexo.io/plugins/
+## Themes: http://hexo.io/themes/
+theme: TKL
+
+# Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type:
+
+# Archive
+## Docs: https://github.com/hexojs/hexo-generator-archive
+archive_generator:
+  per_page: 8
+  yearly: true
+  monthly: true
+
+# Categories
+## Docs: https://github.com/hexojs/hexo-generator-category
+category_generator:
+  per_page: 8
+
+# Clean CSS
+## Docs: https://github.com/hexojs/hexo-clean-css
+clean_css:
+  exclude:
+#    - *.min.css
+
+# HTML Minifier
+html_minifier:
+  exclude:
+
+# Index
+## Docs: https://github.com/hexojs/hexo-generator-index
+index_generator:
+  per_page: 8
+
+# Markdown-it
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
+markdown:
+  render:
+    html: true
+    xhtmlOut: true
+    breaks: false
+    linkify: false
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-sup
+    - markdown-it-sub
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: false
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶
+
+# Feed - Atom 1.0 or RSS 2.0
+## Docs: https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 8
+
+# Rsync
+## Docs: https://github.com/hexojs/hexo-deployer-rsync
+deploy:
+  type: rsync
+  host: 199.48.133.134
+  user: wrs
+  root: ~/babaei.net/wen
+  port: 1317
+  delete: true
+  verbose: true
+  ignore_errors: false
+
+# Server
+## Docs: https://github.com/hexojs/hexo-server
+server:
+  port: 4000
+  log: true
+  ip: 127.0.0.1
+
+# Sitemap
+## Docs: https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+    path: sitemap.xml
+
+# Stylus
+## Docs: https://github.com/hexojs/hexo-renderer-stylus
+stylus:
+  compress: true
+  sourcemaps:
+    comment: false
+    inline: false
+    sourceRoot: ''
+    basePath: .
+
+# Tags
+## Docs: https://github.com/hexojs/hexo-generator-tag
+tag_generator:
+  per_page: 8
+
+# Uglify JavaScript
+## Docs: https://github.com/hexojs/hexo-uglify
+uglify:
+  mangle: true
+  output:
+  compress:
+  exclude: 
+#    - "*.min.js"
+

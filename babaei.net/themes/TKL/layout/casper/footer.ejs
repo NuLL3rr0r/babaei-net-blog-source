@@ -1,0 +1,43 @@
+
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    Copyright &copy; 2006 - <%= date(new Date(), 'YYYY') %> <%= config.author %>. All Rights Reserved.
+                    <br /><br />
+                    <span class="license">All content on this website is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for.</span>
+                    <br /><br />
+                    <span class="credit">
+                    Powered by <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://hexo.io/" target="_blank">Hexo</a>
+                    <br />
+                    Based on theme By <a href="//go.kieran.top" target="_blank">Kieran</a>
+                    </span>
+                    <br /><br />
+                </p>
+            </div>
+            <div class="social">
+                <ul>
+                    <% if(theme.github){ %>
+                    <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.twitter){ %>
+                    <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.facebook){ %>
+                    <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.google){ %>
+                    <li><a href="<%- theme.google %>" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.weibo){ %>
+                    <li><a href="<%- theme.weibo %>" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->

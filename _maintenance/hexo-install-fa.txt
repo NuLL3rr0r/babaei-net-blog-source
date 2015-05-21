@@ -1,0 +1,542 @@
+hexo init fa.babaei.net
+cd fa.babaei.net
+npm install
+npm install hexo-clean-css --save
+npm install hexo-deployer-rsync --save
+npm install hexo-generator-feed --save
+npm install hexo-generator-sitemap --save
+npm install hexo-html-minifier --save
+npm install hexo-renderer-markdown-it --save
+npm install hexo-uglify --save
+
+npm uninstall hexo-renderer-marked --save
+
+# Add the necessary ^ for added node modules
+nano -w package.json
+########
+    "hexo": "^3.0.0",
+    "hexo-clean-css": "^0.0.2",
+    "hexo-deployer-rsync": "^0.0.2",
+    "hexo-generator-archive": "^0.1.0",
+    "hexo-generator-category": "^0.1.0",
+    "hexo-generator-feed": "^1.0.1",
+    "hexo-generator-index": "^0.1.0",
+    "hexo-generator-sitemap": "^1.0.1",
+    "hexo-generator-tag": "^0.1.0",
+    "hexo-html-minifier": "^0.0.1",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-markdown-it": "^3.3.1",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-server": "^0.1.2",
+    "hexo-uglify": "^0.0.3"
+########
+
+cd themes
+rm -rf landscape
+git clone https://github.com/SuperKieran/TKL.git
+cd ../
+
+// due to an import error
+nano -w themes/TKL/source/css/screen.css
+########
+/*@import url(normalize.css);*/
+########
+
+nano -w themes/TKL/source/css/custom.css
+########
+@charset "utf-8";
+/* CSS Document */
+
+noscript div {
+	font: normal normal normal 12px/1.5em;
+	letter-spacing: 1px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #F00;
+	background: #FFA4A4;
+}
+
+body form .search {
+    margin-left: 2.0em;
+    font-size: 0.95em;
+    line-height: 1.2em;
+    padding: 0.25em 0.5em 0px;
+    font-size: 0.85em;
+    font-family: "PT Sans","Helvetica Neue",Arial,sans-serif;
+    border-radius: 0.25em;
+    background-clip: padding-box;
+    background-color: #151515;
+    border: 1px double #FFF;
+    color: #FFF;
+}
+
+body form .search > ::-webkit-input-placeholder,
+body form .search > :-moz-placeholder,
+body form .search > ::-moz-placeholder,
+body form .search >     box-shadow: 0px 1px #FFF;
+:-ms-input-placeholder {
+   color: #ccc;
+}
+
+.navbar .nav > li > span, .navbar .nav > li > a, .navbar .nav li.nolink {
+    letter-spacing: 1px !important;
+}
+
+.navbar .nav > li > a, .navbar .nav li.nolink {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","Source Han Sans CN","WenQuanYi Micro Hei",Arial,sans-serif;
+}
+
+.navbar .nav .fa-Blog * {
+    font-family: Tahoma !important;
+    font-size: 11px;
+    padding: 0 8px;
+}
+
+@media only screen and (min-width: 1025px) {
+    #coverImage {
+        background-image: url(/img/cover_high.jpg) !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    #coverImage {
+        background-image: url(/img/cover_medium.jpg) !important;
+    }
+}
+
+@media (max-width:767px) {
+	#coverImage {
+		background-image: url(/img/cover_low.jpg) !important;
+	}
+}
+
+.scroll-down {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 96px;
+    height: 96px;
+    bottom: 128px;
+    z-index: 999;
+}
+
+footer .copy p {
+    font-size: 0.9em !important;
+}
+
+footer .copy a:link {
+    text-decoration: none;
+    color: #9797A6;
+}
+
+footer .copy a:visited {
+    text-decoration: none;
+    color: #9797A6;
+}
+
+footer .copy a:hover {
+    text-decoration: underline;
+    color: #CCC;
+}
+
+footer .copy a:active {
+    text-decoration: none;
+    color: #9797A6;
+}
+
+footer .copy .credit a, footer .copy .license a {
+   letter-spacing: 1px;
+   margin-left: 4px;
+   margin-right: 4px;
+}
+
+#intro .sharing 
+{
+    text-align: right;
+    font-size: 1.4em;
+}
+
+#intro .sharing a
+{
+    padding: 0.4em;
+}
+
+#intro .sharing a:link * {
+    text-decoration: none;
+    color: #AAA;
+}
+
+#intro .sharing a:visited * {
+    text-decoration: none;
+    color: #AAA;
+}
+
+#intro .sharing a:hover * {
+    text-decoration: none;
+    color: #333;
+}
+
+#intro .sharing a:active * {
+    text-decoration: none;
+    color: #AAA;
+}
+
+.postImage {
+    display: block !important;
+    margin: 4px auto !important;
+    width: auto;
+    height: auto;
+}
+########
+
+nano -w themes/TKL/layout/casper/footer.ejs
+########
+            <div class="copy">
+                <p>
+                    &copy; 2006 - <%= date(new Date(), 'YYYY') %> تمامی حقوق برای <%= config.author %> محفوظ است.
+                    <br /><br />
+                    <span class="license">تمامی محتویات این وب سایت تحت مجوز <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a> منتشر شده است. همچنین، تمامی سورس کدهای منتشر شده در این وب سایت تحت لیسانس <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> منتشر شده است، مگر آن که به صراحت ذکر شده باشد. تمامی محتویات ارائه شده صرفا جنبه آموزشی و اطلاعاتی داشته و فاقد هرگونه ضمانت، تعهد یا شرایطی از هر نوع می باشد. بایستی توجه نمود که اطلاعات عرضه شده حتی ممکن است دقیق و یا بروز نباشد. هرگونه اطمینان به و یا استفاده از محتویات یا منابع منتشر شده در این وب سایت با مسئولیت مخاطب بوده و نگارنده یا نگارندگان هیچ گونه مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.</span>
+                    <br /><br />
+                    <span class="credit">
+                    با افتخار نیرو گرفته از <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://hexo.io/" target="_blank">Hexo</a>
+                    <br />
+                    قالب از <a href="//go.kieran.top" target="_blank">Kieran</a>
+                    </span>
+                    <br /><br />
+                </p>
+            </div>
+########
+
+nano -w themes/TKL/layout/casper/head.ejs
+########
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title + " ^ " + config.subtitle %></title>
+.
+.
+.
+    <link rel="Shortcut Icon" href="<%- config.root %>favicon.ico" type="image/ico">
+.
+.
+.
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $( $(this).attr('href') );
+        if( target.length ) {
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+        }
+      });
+	});
+  </script>
+
+  <noscript>
+    <style>
+      .animsition {
+        opacity: initial!important;
+      }
+    </style>
+  </noscript>
+</head>
+########
+
+nano -w themes/TKL/layout/casper/header.ejs
+########
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="<%- config.root %>img/close.png" alt="بستن"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="<%- config.root %>" class="animsition-link" title="صفحه اصلی">صفحه اصلی</a></li>
+            <li><a href="<%- config.root %><%- config.archive_dir %>" class="animsition-link" title="آرشیو">آرشیو</a></li>
+            <!-- Dropdown Menu -->
+			<% if (theme.simple_search && theme.simple_search_site && theme.simple_search_site_key && theme.simple_search_query_key && theme.simple_search_placeholder){ %>
+            <li>
+                <a class="sb-toggle-submenu">جستجو<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <form action="<%- theme.simple_search %>" method="get">
+                        <fieldset role="search">
+                            <input type="hidden" name="<%- theme.simple_search_site_key %>" value="<%- theme.simple_search_site %>">
+                            <input class="search" type="text" name="<%- theme.simple_search_query_key %>" results="0" placeholder="<%- theme.simple_search_placeholder %>"/>
+                        </fieldset>
+                    </form>                
+                </ul>
+            </li>
+            <% } %>
+			 <% if (theme.works && theme.works.length){ %>
+            <li>
+                <a class="sb-toggle-submenu">کارها<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <% theme.works.forEach(function(item){ %>
+                        <li><a href="<%- item.works_url %>" target="_BLANK" class="animsition-link"><%= item.works_name %></a></li>
+                    <% }); %>
+                </ul>
+            </li>
+            <% } %>
+            <% if (site.categories.length){ %>
+        	<li>
+        		<a class="sb-toggle-submenu">دسته ها<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	<% site.categories.sort('name').each(function(item){ %>
+				    <li><a href="<%- config.root %><%- item.path %>" class="animsition-link"><%= item.name %><small>(<%= item.posts.length %>)</small></a></li>
+				    <% }); %>
+				</ul>
+        	</li>
+			<% } %>
+            <% if (theme.links && theme.links.length){ %>
+            <li>
+                <a class="sb-toggle-submenu">لینک ها<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <% theme.links.forEach(function(item){ %>
+                    <li><a href="<%- item.link %>" class="animsition-link"><%= item.name %></a></li>
+                    <% }); %>
+                </ul>
+            </li>
+            <% } %>
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="<%- config.root %>atom.xml" class="animsition-link" title="اشتراک از طریق فید">اشتراک از طریق فید</a></li>
+        </ul>
+    </div>
+.
+.
+.
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link" title="<%- config.title %>"><span><%- config.title %></span></a></li>
+                            <li class="nolink"><%- config.subtitle %></li>
+                            <% if(theme.twitter){ %>
+                            <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <% } %>
+                            <% if(theme.github){ %>
+                            <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            <% } %>
+                            <% if(theme.facebook){ %>
+                            <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <% } %>
+                            <% if(theme.google){ %>
+                            <li><a href="<%- theme.google %>" title="Google+" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            <% } %>
+                            <% if(theme.weibo){ %>
+                            <li><a href="<%- theme.weibo %>" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            <% } %>
+                            <li><div style="direction: rtl; text-align: center;" class="fa-Blog">
+                            <a href="http://www.babaei.net/" style="text-decoration: none;" title="The blog of Mohammad S. Babaei">English Blog</a>
+                            </div>
+                            </li>
+                        </ul>
+                    </nav>
+.
+.
+.
+            <div class="container-fluid element-img" style="background: url(<%- theme.cover_high %>) no-repeat center center fixed">
+.
+.
+.
+                <div class="herofade beige-dk"></div>
+                <div class="scroll-down">
+                    <a href="#topofpage"><img src="/img/scroll_down.png" width="128" height="128"></a>
+                </div>
+            </div>
+.
+.
+.
+        <!-- ============================ END Hero Image =========================== -->
+
+        <a id="topofpage" name="topofpage"></a>
+########
+
+nano -w themes/TKL/layout/layout.ejs
+########
+<body id="index" class="lightnav animsition">
+    <noscript>
+        <div>
+            کاربر گرامی به نظر می رسد که جاوا اسکریپت در مرورگر شما غیر فعال می باشد و یا مرورگر شما از جاوا اسکریپت پشتیبانی نمی نماید. متاسفانه در صورت عدم برطرف شدن این مشکل برخی از قابلیت های وب سایت به درستی کار نمی کند.
+        </div>
+    </noscript>
+########
+
+nano -w themes/TKL/layout/casper/post.ejs
+########
+            <div class="farsiContent">
+                <%- post.content %>
+            </div>
+########
+
+nano -w themes/TKL/_config.yml
+########
+cover_high: /img/cover_high.jpg
+cover_medium: /img/cover_medium.jpg
+cover_low: /img/cover_low.jpg
+.
+.
+.
+top_saying:
+- title: 
+- content: 
+bottom_saying:
+.
+.
+.
+excerpt_link: ادامه مطلب
+
+github: https://github.com/NuLL3rr0r
+twitter: https://twitter.com/NuLL3rr0r
+#facebook: https://www.facebook.com/
+#google: https://google.com/
+#weibo: http://weibo.com/
+
+links:
+- name: English Blog
+  link: http://www.babaei.net/
+
+# Search
+simple_search: https://www.duckduckgo.com/
+simple_search_site: fa.babaei.net
+simple_search_site_key: sites
+simple_search_query_key: q
+simple_search_placeholder: جستجو&hellip;
+
+# Sharing
+twitter_user: NuLL3rr0r
+########
+
+nano -w _config.yml
+########
+title: NuLL3rr0r
+subtitle: وبلاگ محمد صادق بابائی
+description: NuLL3rr0r ^ The hackers way to say 3rr0r
+author: محمد صادق بابائی
+language: fa-IR
+timezone: Asia/Tehran
+
+url: http://fa.babaei.net/
+permalink: blog/:year/:month/:day/:title/
+
+tag_dir: blog/tags
+archive_dir: blog/archives
+category_dir: blog/categories
+code_dir: blog/downloads/code
+i18n_dir: blog/:lang
+
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+titlecase: true # Transform title into titlecase
+filename_case: 1
+post_asset_folder: true
+relative_link: true
+
+per_page: 8
+pagination_dir: blog/page
+
+theme: TKL
+
+# Archive
+## Docs: https://github.com/hexojs/hexo-generator-archive
+archive_generator:
+  per_page: 8
+  yearly: true
+  monthly: true
+
+# Categories
+## Docs: https://github.com/hexojs/hexo-generator-category
+category_generator:
+  per_page: 8
+
+# Clean CSS
+## Docs: https://github.com/hexojs/hexo-clean-css
+clean_css:
+  exclude:
+#    - *.min.css
+
+# HTML Minifier
+html_minifier:
+  exclude:
+
+# Index
+## Docs: https://github.com/hexojs/hexo-generator-index
+index_generator:
+  per_page: 8
+
+# Markdown-it
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
+markdown:
+  render:
+    html: true
+    xhtmlOut: true
+    breaks: false
+    linkify: false
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-sup
+    - markdown-it-sub
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: false
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶
+
+# Feed - Atom 1.0 or RSS 2.0
+## Docs: https://github.com/hexojs/hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 8
+
+# Rsync
+## Docs: https://github.com/hexojs/hexo-deployer-rsync
+deploy:
+  type: rsync
+  host: 199.48.133.134
+  user: wrs
+  root: ~/babaei.net/wen
+  port: 1317
+  delete: true
+  verbose: true
+  ignore_errors: false
+
+# Server
+## Docs: https://github.com/hexojs/hexo-server
+server:
+  port: 4000
+  log: true
+  ip: 127.0.0.1
+
+# Sitemap
+## Docs: https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+    path: sitemap.xml
+
+# Stylus
+## Docs: https://github.com/hexojs/hexo-renderer-stylus
+stylus:
+  compress: true
+  sourcemaps:
+    comment: false
+    inline: false
+    sourceRoot: ''
+    basePath: .
+
+# Tags
+## Docs: https://github.com/hexojs/hexo-generator-tag
+tag_generator:
+  per_page: 8
+
+# Uglify JavaScript
+## Docs: https://github.com/hexojs/hexo-uglify
+uglify:
+  mangle: true
+  output:
+  compress:
+  exclude: 
+#    - "*.min.js"
+########
+
+hexo server
+

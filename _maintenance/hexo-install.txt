@@ -1,0 +1,8 @@
+npm view hexo versions
+// in case you need 2.x.x
+//npm install hexo@2.8.3 -g
+
+npm install hexo-cli -g
+mkdir blog-babaei-net
+cd blog-babaei-net
+
