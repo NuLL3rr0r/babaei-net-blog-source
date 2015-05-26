@@ -45,6 +45,8 @@ git clone git://github.com/imathis/octopress.git octopress
 14. Do as follows:
 gem install bundler
 bundle install // inside octopress root
+// for non-Windows
+// bundle install --path vendor/bundle
 rake install // inside octopress root
 
 Note: If stucks in "bundle install" due to our fucked up network, add --verbose which will do the trick (weird, but works).
@@ -72,7 +74,3 @@ you should see the blog with its default template.
 Liquid Exception: incompatible character encodings: UTF-8 and Windows-1252 in page
 chcp 65001
 // before rake generate
-
-
-
-
