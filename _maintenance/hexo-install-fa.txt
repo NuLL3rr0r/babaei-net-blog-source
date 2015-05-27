@@ -393,6 +393,14 @@ nano -w themes/TKL/layout/casper/header.ejs
         <a id="topofpage" name="topofpage"></a>
 ########
 
+nano -w themes/TKL/layout/casper/index.ejs
+########
+        <nav class="pagination" role="pagination">
+          <% if (page.prev) { %><a class="pull-left" href="<%- url_for(page.prev_link) %>">← پست های جدیدتر</a><% } %>
+          <% if (page.next) { %><a class="pull-right" href="<%- url_for(page.next_link) %>">پست های قدیمی تر →</a><% } %>
+        </nav>
+########
+
 nano -w themes/TKL/layout/layout.ejs
 ########
 <body id="index" class="lightnav animsition">
