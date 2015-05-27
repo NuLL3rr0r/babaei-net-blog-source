@@ -130,7 +130,7 @@ deploy:
   type: rsync
   host: 199.48.133.134
   user: wrs
-  root: ~/babaei.net/wen
+  root: ~/babaei.net/wfa
   port: 1317
   delete: true
   verbose: true
