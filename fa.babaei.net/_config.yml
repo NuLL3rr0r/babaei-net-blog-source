@@ -115,7 +115,7 @@ markdown:
     collisionSuffix: 'v'
     permalink: false
     permalinkClass: header-anchor
-    permalinkSymbol: ¶
+    permalinkSymbol: #
 
 # Feed - Atom 1.0 or RSS 2.0
 ## Docs: https://github.com/hexojs/hexo-generator-feed

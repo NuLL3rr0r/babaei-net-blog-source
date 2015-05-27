@@ -155,6 +155,7 @@ footer .copy .credit a, footer .copy .license a {
 {
     text-align: right;
     font-size: 1.4em;
+    margin-top: 1.1em;
 }
 
 #intro .sharing a
@@ -480,7 +481,7 @@ markdown:
     collisionSuffix: 'v'
     permalink: false
     permalinkClass: header-anchor
-    permalinkSymbol: ¶
+    permalinkSymbol: #
 
 # Feed - Atom 1.0 or RSS 2.0
 ## Docs: https://github.com/hexojs/hexo-generator-feed
