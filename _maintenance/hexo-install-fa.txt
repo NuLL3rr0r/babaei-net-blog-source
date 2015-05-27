@@ -170,13 +170,74 @@ footer .copy .credit a, footer .copy .license a {
     width: auto;
     height: auto;
 }
+
+.postImageTitle {
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.0em;
+}
+
+figure, figure * {
+    direction: ltr !important;
+}
+
+* + table {
+  border-style:solid;
+  border-width:1px;
+  border-color:#e7e3e7;
+}
+ 
+* + table th, * + table td {
+  border-style:dashed;
+  border-width:1px;
+  border-color:#e7e3e7;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+ 
+* + table th {
+  border-style:solid;
+  font-weight:bold;
+  background: url("/images/noise.png?1330434582") repeat scroll left top #F7F3F7;
+}
+ 
+* + table th[align="left"], * + table td[align="left"] {
+  text-align:left;
+}
+ 
+* + table th[align="right"], * + table td[align="right"] {
+  text-align:right;
+}
+ 
+* + table th[align="center"], * + table td[align="center"] {
+  text-align:center;
+}
+
+footer .copy {
+    direction: rtl;
+}
+
+footer .social {
+    float: left !important;
+}
+
+.farsiContent {
+    direction: rtl;
+}
+
+body form .search {
+    direction: rtl;
+}
 ########
 
 nano -w themes/TKL/layout/casper/footer.ejs
 ########
             <div class="copy">
                 <p>
-                    &copy; 2006 - <%= date(new Date(), 'YYYY') %> تمامی حقوق برای <%= config.author %> محفوظ است.
+                    &copy; ۲۰۰۶ - <%= date(new Date(), 'YYYY') %> تمامی حقوق برای <%= config.author %> محفوظ است.
                     <br /><br />
                     <span class="license">تمامی محتویات این وب سایت تحت مجوز <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a> منتشر شده است. همچنین، تمامی سورس کدهای منتشر شده در این وب سایت تحت لیسانس <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> منتشر شده است، مگر آن که به صراحت ذکر شده باشد. تمامی محتویات ارائه شده صرفا جنبه آموزشی و اطلاعاتی داشته و فاقد هرگونه ضمانت، تعهد یا شرایطی از هر نوع می باشد. بایستی توجه نمود که اطلاعات عرضه شده حتی ممکن است دقیق و یا بروز نباشد. هرگونه اطمینان به و یا استفاده از محتویات یا منابع منتشر شده در این وب سایت با مسئولیت مخاطب بوده و نگارنده یا نگارندگان هیچ گونه مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.</span>
                     <br /><br />

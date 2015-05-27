@@ -24,11 +24,11 @@ tags:
 
 If you've ever used a __GNU__ [Gentoo](http://www.gentoo.org/) or [Funtoo](http://www.funtoo.org/wiki/Welcome) __Linux__ variant, or a live version of any of them, you may have noticed their eye-catching colorful terminal or console. Whether you're on a virtual console or one of __KDE__, __GNOME__, __XFCE__, __LXDE__ terminal apps.
 
-<center>A Colorful Xfce4 Terminal on FreeBSD (Bash)</center>
 [{% img postImage /blog/2013/03/03/colors-talk-a-colorful-terminal-console/2013-03-03-colors-talk-a-colorful-terminal-console__001.jpg 825 509 'A Colorful Xfce4 Terminal on FreeBSD (Bash)' 'A Colorful Xfce4 Terminal on FreeBSD (Bash)' %}](/blog/2013/03/03/colors-talk-a-colorful-terminal-console/2013-03-03-colors-talk-a-colorful-terminal-console__001.jpg)
+<span class="postImageTitle">A Colorful Xfce4 Terminal on FreeBSD (Bash)</span>
 
-<center>The default Xfce4 Terminal on FreeBSD (sh/csh)</center>
 [{% img postImage /blog/2013/03/03/colors-talk-a-colorful-terminal-console/2013-03-03-colors-talk-a-colorful-terminal-console__002.jpg 825 509 'The default Xfce4 Terminal on FreeBSD (sh csh)' 'The default Xfce4 Terminal on FreeBSD (sh csh)' %}](/blog/2013/03/03/colors-talk-a-colorful-terminal-console/2013-03-03-colors-talk-a-colorful-terminal-console__002.jpg)
+<span class="postImageTitle">The default Xfce4 Terminal on FreeBSD (sh/csh)</span>
 
 When I've migrated from __Funtoo__ to [FreeBSD](http://www.freebsd.org), the one thing that I've missed so badly was its colorful terminal. The nice thing about these colors is taht they always give you some valuable hints, e.g., currently you're __root__ user or a regular user, the file is a symlink (Symbolic link), executable or just a regular file.
 
