@@ -35,7 +35,7 @@ external_link: true # Open external links in new tab
 filename_case: 1
 render_drafts: false
 post_asset_folder: true
-relative_link: true
+relative_link: false
 future: true
 highlight:
   enable: true
@@ -86,11 +86,6 @@ clean_css:
 # HTML Minifier
 html_minifier:
   exclude:
-
-# Index
-## Docs: https://github.com/hexojs/hexo-generator-index
-index_generator:
-  per_page: 8
 
 # Markdown-it
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/

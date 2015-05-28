@@ -375,7 +375,6 @@ new_post_name: :year-:month-:day-:title.md # File name of new posts
 titlecase: true # Transform title into titlecase
 filename_case: 1
 post_asset_folder: true
-relative_link: true
 
 per_page: 8
 pagination_dir: blog/page
