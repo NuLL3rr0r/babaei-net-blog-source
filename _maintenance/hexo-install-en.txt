@@ -217,6 +217,49 @@ footer .copy .credit a, footer .copy .license a {
 }
 ########
 
+nano -w themes/TKL/layout/casper/analytics.ejs
+########
+<% if (theme.piwik_enable){ %>
+    <!-- Piwik -->
+    <script type="text/javascript"> 
+        var _paq = _paq || [];
+        _paq.push(["setCookieDomain", "*.babaei.net"]);
+        _paq.push(["setDomains", ["*.babaei.net","*.fa.babaei.net","*.www.babaei.net"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics.babaei.net//";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 1]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+            g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="http://analytics.babaei.net/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+<% } %>
+
+<% if (theme.google_analytics_tracking_id){ %>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '<%- theme.google_analytics_tracking_id %>']);
+        <% if (theme.google_analytics_set_domain_name){ %>
+        _gaq.push(['_setDomainName', '<%- theme.google_analytics_set_domain_name %>']);
+        <% } %>
+        <% if (theme.google_analytics_set_allow_linker){ %>
+        _gaq.push(['_setAllowLinker', true]);
+        <% } %>
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+<% } %>
+########
+
 nano -w themes/TKL/layout/casper/footer.ejs
 ########
             <div class="copy">
@@ -359,6 +402,11 @@ nano -w themes/TKL/layout/layout.ejs
             Sorry, it looks like that either you have turned off your browser's JavaScript or your browser originally did not support JavaScript at all. Unfortunately, this website won't function properly without JavaScript unless you fix this issue first.
         </div>
     </noscript>
+.
+.
+.
+    <%- partial('casper/analytics') %>
+</body>
 ########
 
 nano -w themes/TKL/_config.yml
@@ -397,6 +445,14 @@ simple_search_placeholder: Search&hellip;
 
 # Sharing
 twitter_user: NuLL3rr0r
+
+# Google Analytics
+google_analytics_tracking_id: UA-2377757-1
+google_analytics_set_domain_name: babaei.net  # Tracking one domain with multiple subdomains
+google_analytics_set_allow_linker: false      # Tracking multiple top-level domains
+
+# Piwik
+piwik_enable: true
 ########
 
 nano -w _config.yml

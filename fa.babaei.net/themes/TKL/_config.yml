@@ -33,3 +33,11 @@ simple_search_placeholder: جستجو&hellip;
 # Sharing
 twitter_user: NuLL3rr0r
 
+# Google Analytics
+google_analytics_tracking_id: UA-2377757-1
+google_analytics_set_domain_name: babaei.net  # Tracking one domain with multiple subdomains
+google_analytics_set_allow_linker: false      # Tracking multiple top-level domains
+
+# Piwik
+piwik_enable: true
+
