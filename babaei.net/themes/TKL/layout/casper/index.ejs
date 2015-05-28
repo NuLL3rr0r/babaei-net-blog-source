@@ -31,8 +31,10 @@
         </div>
         <% }); %>
         <nav class="pagination" role="pagination">
-          <% if (page.prev) { %><a class="pull-left" href="<%- url_for(page.prev_link) %>">← Newer Posts</a><% } %>
-          <% if (page.next) { %><a class="pull-right" href="<%- url_for(page.next_link) %>">Older Posts →</a><% } %>
+          <%- paginator({
+            prev_text: '← Newer Posts',
+            next_text: 'Older Posts →'
+          }) %>
         </nav>
     </div>
 </section>

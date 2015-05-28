@@ -102,6 +102,42 @@ body form .search >     box-shadow: 0px 1px #FFF;
     z-index: 999;
 }
 
+.pagination {
+    text-align: center;
+    overflow: hidden;
+}
+
+.pagination:before,
+.pagination:after {
+    content: "";
+    display: table;
+}
+
+.pagination:after {
+    clear: both;
+}
+
+.pagination .prev {
+    float: left;
+}
+
+.pagination .next {
+    float: right;
+}
+
+.pagination .page-number {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.pagination .current {
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid gray;
+	border-radius: 20px;
+    color: #000;
+}
+
 footer .copy p {
     font-size: 0.9em !important;
 }
@@ -303,6 +339,16 @@ nano -w themes/TKL/layout/casper/header.ejs
         <!-- ============================ END Hero Image =========================== -->
 
         <a id="topofpage" name="topofpage"></a>
+########
+
+nano -w themes/TKL/layout/casper/index.ejs
+########
+        <nav class="pagination" role="pagination">
+          <%- paginator({
+            prev_text: '← Newer Posts',
+            next_text: 'Older Posts →'
+          }) %>
+        </nav>
 ########
 
 nano -w themes/TKL/layout/layout.ejs

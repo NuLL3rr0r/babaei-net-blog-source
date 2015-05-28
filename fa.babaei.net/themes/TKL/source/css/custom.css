@@ -76,6 +76,42 @@ body form .search >     box-shadow: 0px 1px #FFF;
     z-index: 999;
 }
 
+.pagination {
+    text-align: center;
+    overflow: hidden;
+}
+
+.pagination:before,
+.pagination:after {
+    content: "";
+    display: table;
+}
+
+.pagination:after {
+    clear: both;
+}
+
+.pagination .prev {
+    float: left;
+}
+
+.pagination .next {
+    float: right;
+}
+
+.pagination .page-number {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.pagination .current {
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid gray;
+	border-radius: 20px;
+    color: #000;
+}
+
 footer .copy p {
     font-size: 0.9em !important;
 }
