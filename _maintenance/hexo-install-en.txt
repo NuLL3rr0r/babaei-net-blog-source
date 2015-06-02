@@ -37,6 +37,9 @@ cp fontawesome-webfont.ttf themes/TKL/source/fonts/
 cp fontawesome-webfont.woff themes/TKL/source/fonts/
 cp fontawesome-webfont.woff2 themes/TKL/source/fonts/
 
+// do it manually
+// or
+// https://google-webfonts-helper.herokuapp.com/fonts
 cp montserrat-v6-latin-700.eot themes/TKL/source/fonts/
 cp montserrat-v6-latin-700.svg themes/TKL/source/fonts/
 cp montserrat-v6-latin-700.ttf themes/TKL/source/fonts/
