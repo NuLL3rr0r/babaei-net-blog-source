@@ -21,7 +21,7 @@
 /* ==========================================================================
    0. Includes - Ground zero
    ========================================================================== */
-@import url(normalize.css);
+/*@import url(normalize.css);*/
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
    ========================================================================== */
@@ -30,7 +30,7 @@
 /* Apply these base styles to all icons */
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
-@import url(font-awesome.css);
+/*@import url(font-awesome.css);*/
 
 /* ==========================================================================
    2. General - Setting up some base styles

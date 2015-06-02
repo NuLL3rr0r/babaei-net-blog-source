@@ -37,7 +37,20 @@ cp fontawesome-webfont.ttf themes/TKL/source/fonts/
 cp fontawesome-webfont.woff themes/TKL/source/fonts/
 cp fontawesome-webfont.woff2 themes/TKL/source/fonts/
 
-nano -w themes/TKL/source/css/screen.css
+nano -w themes/TKL/source/css/style.css
+########
+/*@import url(normalize.css);*/
+.
+.
+.
+/* Import the font file with the icons in it */
+/* Apply these base styles to all icons */
+/* Each icon is created by inserting the corret character into the
+   content of the :before pseudo element. Like a boss. */
+/*@import url(font-awesome.css);*/
+########
+
+nano -w themes/TKL/source/css/style.css
 ########
 /* Import the font file with the icons in it */
 /* Apply these base styles to all icons */
