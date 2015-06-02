@@ -282,26 +282,6 @@ nano -w themes/TKL/layout/casper/analytics.ejs
     <noscript><p><img src="http://analytics.babaei.net/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
     <!-- End Piwik Code -->
 <% } %>
-
-<% if (theme.google_analytics_tracking_id){ %>
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', '<%- theme.google_analytics_tracking_id %>']);
-        <% if (theme.google_analytics_set_domain_name){ %>
-        _gaq.push(['_setDomainName', '<%- theme.google_analytics_set_domain_name %>']);
-        <% } %>
-        <% if (theme.google_analytics_set_allow_linker){ %>
-        _gaq.push(['_setAllowLinker', true]);
-        <% } %>
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-<% } %>
 ########
 
 nano -w themes/TKL/layout/casper/footer.ejs
@@ -551,11 +531,6 @@ simple_search_placeholder: Search&hellip;
 
 # Sharing
 twitter_user: NuLL3rr0r
-
-# Google Analytics
-google_analytics_tracking_id: UA-2377757-1
-google_analytics_set_domain_name: babaei.net  # Tracking one domain with multiple subdomains
-google_analytics_set_allow_linker: false      # Tracking multiple top-level domains
 
 # Piwik
 piwik_enable: true
