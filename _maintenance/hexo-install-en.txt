@@ -371,15 +371,15 @@ nano -w themes/TKL/layout/casper/head.ejs
 .
 .
     <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='css/wf-montserrat-v6-latin.css' rel='stylesheet' type='text/css'>
-    <link href='css/wf-open-sans-v13-latin.css' rel='stylesheet' type='text/css'>
+    <link href='/css/wf-montserrat-v6-latin.css' rel='stylesheet' type='text/css'>
+    <link href='/css/wf-open-sans-v13-latin.css' rel='stylesheet' type='text/css'>
 
     <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
     <!--[if IE]>
-    <link href='css/wf-montserrat-v6-latin-regular.css' rel='stylesheet' type='text/css'>
-    <link href='css/wf-montserrat-v6-latin-bold.css' rel='stylesheet' type='text/css'>
-    <link href='css/wf-open-sans-v13-latin-regular.css' rel='stylesheet' type='text/css'>
-    <link href='css/wf-open-sans-v13-latin-semibold.css' rel='stylesheet' type='text/css'>
+    <link href='/css/wf-montserrat-v6-latin-regular.css' rel='stylesheet' type='text/css'>
+    <link href='/css/wf-montserrat-v6-latin-bold.css' rel='stylesheet' type='text/css'>
+    <link href='/css/wf-open-sans-v13-latin-regular.css' rel='stylesheet' type='text/css'>
+    <link href='/css/wf-open-sans-v13-latin-semibold.css' rel='stylesheet' type='text/css'>
     <![endif]-->
 .
 .
