@@ -3,12 +3,12 @@
 
 noscript div {
     direction: rtl;
-	font: normal normal normal 12px/1.5em;
-	letter-spacing: 1px;
-	padding: 5px;
-	text-align: center;
-	border: 1px solid #F00;
-	background: #FFA4A4;
+    font: normal normal normal 12px/1.5em;
+    letter-spacing: 1px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #F00;
+    background: #FFA4A4;
 }
 
 body form .search {
@@ -28,9 +28,9 @@ body form .search {
 body form .search > ::-webkit-input-placeholder,
 body form .search > :-moz-placeholder,
 body form .search > ::-moz-placeholder,
-body form .search >     box-shadow: 0px 1px #FFF;
+body form .search > box-shadow: 0px 1px #FFF;
 :-ms-input-placeholder {
-   color: #ccc;
+    color: #ccc;
 }
 
 .navbar .nav > li > span, .navbar .nav > li > a, .navbar .nav li.nolink {
@@ -41,7 +41,7 @@ body form .search >     box-shadow: 0px 1px #FFF;
     font-family: "Open Sans","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","Source Han Sans CN","WenQuanYi Micro Hei",Arial,sans-serif;
 }
 
-.navbar .nav .fa-Blog * {
+.navbar .nav .en-Blog * {
     font-family: Tahoma !important;
     font-size: 11px;
     padding: 0 8px;
@@ -60,9 +60,9 @@ body form .search >     box-shadow: 0px 1px #FFF;
 }
 
 @media (max-width:767px) {
-	#coverImage {
-		background-image: url(/img/cover_low.jpg) !important;
-	}
+    #coverImage {
+        background-image: url(/img/cover_low.jpg) !important;
+    }
 }
 
 .scroll-down {
@@ -104,11 +104,15 @@ body form .search >     box-shadow: 0px 1px #FFF;
     margin: 0 8px;
 }
 
+.pagination a {
+    overflow: initial !important;
+}
+
 .pagination .current {
-	padding-left: 10px;
-	padding-right: 10px;
-	border: 1px solid gray;
-	border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
     color: #000;
 }
 
@@ -137,21 +141,25 @@ footer .copy a:active {
 }
 
 footer .copy .credit a, footer .copy .license a {
-   letter-spacing: 1px;
-   margin-left: 4px;
-   margin-right: 4px;
+    letter-spacing: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+footer .fa {
+    font-size: 1.6em;
 }
 
 #intro .sharing 
 {
     text-align: right;
-    font-size: 1.4em;
+    font-size: 1.8em;
     margin-top: 1.1em;
 }
 
 #intro .sharing a
 {
-    padding: 0.4em;
+    padding: 0.2em;
 }
 
 #intro .sharing a:link * {
@@ -190,40 +198,44 @@ footer .copy .credit a, footer .copy .license a {
     line-height: 1.0em;
 }
 
+.poem {
+    font-style: oblique;
+}
+
 figure, figure * {
     direction: ltr !important;
 }
 
 * + table {
-  border-style:solid;
-  border-width:1px;
-  border-color:#e7e3e7;
+    border-style:solid;
+    border-width:1px;
+    border-color:#e7e3e7;
 }
  
 * + table th, * + table td {
-  border-style:dashed;
-  border-width:1px;
-  border-color:#e7e3e7;
-  padding-left: 3px;
-  padding-right: 3px;
+    border-style:dashed;
+    border-width:1px;
+    border-color:#e7e3e7;
+    padding-left: 3px;
+    padding-right: 3px;
 }
  
 * + table th {
-  border-style:solid;
-  font-weight:bold;
-  background: url("/images/noise.png?1330434582") repeat scroll left top #F7F3F7;
+    border-style:solid;
+    font-weight:bold;
+    background: url("/images/noise.png?1330434582") repeat scroll left top #f7f3f7;
 }
  
 * + table th[align="left"], * + table td[align="left"] {
-  text-align:left;
+    text-align:left;
 }
  
 * + table th[align="right"], * + table td[align="right"] {
-  text-align:right;
+    text-align:right;
 }
  
 * + table th[align="center"], * + table td[align="center"] {
-  text-align:center;
+    text-align:center;
 }
 
 footer .copy {
@@ -241,4 +253,5 @@ footer .social {
 body form .search {
     direction: rtl;
 }
+
 
