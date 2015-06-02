@@ -37,6 +37,27 @@ cp fontawesome-webfont.ttf themes/TKL/source/fonts/
 cp fontawesome-webfont.woff themes/TKL/source/fonts/
 cp fontawesome-webfont.woff2 themes/TKL/source/fonts/
 
+cp montserrat-v6-latin-700.eot themes/TKL/source/fonts/
+cp montserrat-v6-latin-700.svg themes/TKL/source/fonts/
+cp montserrat-v6-latin-700.ttf themes/TKL/source/fonts/
+cp montserrat-v6-latin-700.woff themes/TKL/source/fonts/
+cp montserrat-v6-latin-700.woff2 themes/TKL/source/fonts/
+cp montserrat-v6-latin-regular.eot themes/TKL/source/fonts/
+cp montserrat-v6-latin-regular.svg themes/TKL/source/fonts/
+cp montserrat-v6-latin-regular.ttf themes/TKL/source/fonts/
+cp montserrat-v6-latin-regular.woff themes/TKL/source/fonts/
+cp montserrat-v6-latin-regular.woff2 themes/TKL/source/fonts/
+cp open-sans-v13-latin-600.eot themes/TKL/source/fonts/
+cp open-sans-v13-latin-600.svg themes/TKL/source/fonts/
+cp open-sans-v13-latin-600.ttf themes/TKL/source/fonts/
+cp open-sans-v13-latin-600.woff themes/TKL/source/fonts/
+cp open-sans-v13-latin-600.woff2 themes/TKL/source/fonts/
+cp open-sans-v13-latin-regular.eot themes/TKL/source/fonts/
+cp open-sans-v13-latin-regular.svg themes/TKL/source/fonts/
+cp open-sans-v13-latin-regular.ttf themes/TKL/source/fonts/
+cp open-sans-v13-latin-regular.woff themes/TKL/source/fonts/
+cp open-sans-v13-latin-regular.woff2 themes/TKL/source/fonts/
+
 nano -w themes/TKL/source/css/style.css
 ########
 /*@import url(normalize.css);*/
@@ -393,17 +414,17 @@ nano -w themes/TKL/layout/casper/head.ejs
 .
 .
 .
--    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
--    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
--    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
--
--    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
--    <!--[if IE]>
--    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
--    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
--    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
--    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
--    <![endif]-->
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='css/wf-montserrat-v6-latin.css' rel='stylesheet' type='text/css'>
+    <link href='css/wf-open-sans-v13-latin.css' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='css/wf-montserrat-v6-latin-regular.css' rel='stylesheet' type='text/css'>
+    <link href='css/wf-montserrat-v6-latin-bold.css' rel='stylesheet' type='text/css'>
+    <link href='css/wf-open-sans-v13-latin-regular.css' rel='stylesheet' type='text/css'>
+    <link href='css/wf-open-sans-v13-latin-semibold.css' rel='stylesheet' type='text/css'>
+    <![endif]-->
 .
 .
 .
