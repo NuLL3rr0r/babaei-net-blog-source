@@ -11,9 +11,18 @@
       		<%- post.content %>
             <div class="clearfix"></div>
             <div class="sharing">
-                <a href="https://twitter.com/share?url=<%- post.permalink %>&text=<%- post.title %><% if(theme.twitter_user){ %>&via=<%- theme.twitter_user %><% } %>" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer.php?u=<%- post.permalink %>" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>
-                <a href="https://plus.google.com/share?url=<%- post.permalink %>" title="Google+" target="_blank"><i class="icon-google-plus"></i></a>
+                <a href="https://twitter.com/share?url=<%- post.permalink %>&text=<%- post.title %><% if(theme.twitter_user){ %>&via=<%- theme.twitter_user %><% } %><% if(post.tags && post.tags.length){ %>&hashtags=<% } %><% post.tags.forEach(function(tag, index) { %><%= tag.name %><% if (post.tags.length !== index+1) { %>,<% } %><% }); %>" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://plus.google.com/share?url=<%- post.permalink %>" title="Google+" target="_blank"><i class="fa fa-google-plus-square"></i></a>
+                <a href="https://www.facebook.com/sharer.php?u=<%- post.permalink %>" title="Facebook" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                <a href="http://www.linkedin.com/shareArticle?url=<%- post.permalink %>&title=<%- post.title %>" title="LinkedIn" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://reddit.com/submit?url=<%- post.permalink %>&title=<%- post.title %>" title="Reddit" target="_blank"><i class="fa fa-reddit-square"></i></a>
+                <a href="http://wordpress.com/press-this.php?u=<%- post.permalink %>&t=<%- post.title %>" title="WordPress" target="_blank"><i class="fa fa-wordpress"></i></a>
+                <a href="http://www.tumblr.com/share/link?url=<%- post.permalink %>&name=<%- post.title %>" title="Tumblr" target="_blank"><i class="fa fa-tumblr-square"></i></a>
+                <a href="https://pinterest.com/pin/create/bookmarklet/?url=<%- post.permalink %>&description=<%- post.title %>" title="Pinterest" target="_blank"><i class="fa fa-pinterest-square"></i></a>
+                <a href="http://www.stumbleupon.com/submit?url=<%- post.permalink %>&title=<%- post.title %>" title="StumbleUpon" target="_blank"><i class="fa fa-stumbleupon-circle"></i></a>
+                <a href="http://digg.com/submit?url=<%- post.permalink %>&title=<%- post.title %>" title="Digg" target="_blank"><i class="fa fa-digg"></i></a>
+                <a href="https://delicious.com/save?v=5&noui&jump=close&url=<%- post.permalink %>&title=<%- post.title %>" title="Delicious" target="_blank"><i class="fa fa-delicious"></i></a>
+                <a href="mailto:?subject=[Blog Post] <%- post.title %>&body=Checkout the full article at <%- page.permalink %>" title="Email" target="_blank"><i class="fa fa-envelope"></i></a>
             </div>
             <hr class="nogutter">
         </div>
