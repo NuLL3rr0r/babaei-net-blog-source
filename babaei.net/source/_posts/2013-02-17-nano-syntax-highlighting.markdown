@@ -89,7 +89,7 @@ $ touch ~/.nanorc
 
 <br/>
 
-**UPDATE:** I usually get the list of all <code>.nanorc</code> files on my system and write them to my <code>~/.nanorc</code> using the following one liner set of commands. It should work on both <code>bash</code> and <code>csh</code>. Moreover, [it disables text-wrapping](/blog/2013/02/17/nano-do-not-wrap-text/) which you can enable by cutting it off from the begging of it. _Just be warned it generates a new <code>~/.nanorc</code> file and wipes out all of your old settings._
+**UPDATE:** I usually get the list of all <code>.nanorc</code> files on my system and write them to my <code>~/.nanorc</code> using the following one liner set of commands. It should work on both <code>bash</code> and <code>csh</code>. Moreover, [it disables text-wrapping](/blog/2013/02/17/nano-do-not-wrap-text/) which you can enable by cutting it off from the begging of it. _Just be warned it generates a new <code>~/.nanorc</code> file for the current user and wipes out all of your old settings._
 
 {% codeblock *BSD lang:sh %}
 $ printf 'set nowrap\n\n' > ~/.nanorc && find /usr/local/share/nano/ -iname '*.nanorc' | xargs printf 'include "%s"\n' >> ~/.nanorc && cat ~/.nanorc
