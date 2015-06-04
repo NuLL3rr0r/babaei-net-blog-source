@@ -1,6 +1,4 @@
 _babaei.net_github
-_cwRsync
-_ssh
 babaei.net/*.log
 babaei.net/.deploy*/
 babaei.net/.DS_Store
@@ -11,6 +9,7 @@ babaei.net/public/
 babaei.net/themes/TKL/.git/
 babaei.net/Thumbs.db
 babaei.net_github
+cwRsync
 fa.babaei.net/*.log
 fa.babaei.net/.deploy*/
 fa.babaei.net/.DS_Store
@@ -20,5 +19,5 @@ fa.babaei.net/node_modules/
 fa.babaei.net/public/
 fa.babaei.net/themes/TKL/.git/
 fa.babaei.net/Thumbs.db
+Git
 npm-debug.log
-
