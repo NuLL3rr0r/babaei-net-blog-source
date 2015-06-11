@@ -294,8 +294,12 @@ footer .fa {
     line-height: 1.0em;
 }
 
-.poem {
+.poem, .poem p {
     font-style: oblique;
+    display: block;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
 }
 ########
 
@@ -631,7 +635,24 @@ index_generator:
 
 # Markdown-it
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
-markdown: 'commonmark'
+markdown:
+  render:
+    html: true
+    xhtmlOut: true
+    breaks: false
+    linkify: false
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-sup
+    - markdown-it-sub
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: false
+    permalinkClass: header-anchor
+    permalinkSymbol: #
 
 # Feed - Atom 1.0 or RSS 2.0
 ## Docs: https://github.com/hexojs/hexo-generator-feed

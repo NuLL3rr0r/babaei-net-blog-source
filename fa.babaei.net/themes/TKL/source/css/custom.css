@@ -198,8 +198,12 @@ footer .fa {
     line-height: 1.0em;
 }
 
-.poem {
+.poem, .poem p {
     font-style: oblique;
+    display: block;
+    unicode-bidi: embed;
+    font-family: monospace;
+    white-space: pre;
 }
 
 figure, figure * {
