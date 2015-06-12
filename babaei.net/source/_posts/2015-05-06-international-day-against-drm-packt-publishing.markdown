@@ -4,6 +4,7 @@ title: "International Day Against DRM at Packt Publishing"
 date: 2015-05-06 23:30:33
 comments: true
 tags:
+- Advertising
 - DRM
 - Packt Publishing
 ---
