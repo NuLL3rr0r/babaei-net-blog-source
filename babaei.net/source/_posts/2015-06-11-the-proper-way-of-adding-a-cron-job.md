@@ -30,13 +30,13 @@ $ crontab -e -u babaei
 {% endcodeblock %}
 
 <br />
-This should create the user crontab files inside <code>/var/cron/tabs/</code> (e.g. <code>/var/cron/tabs/babaei</code>) and open up your system's default text editor which in my case is [nano](http://www.nano-editor.org/). It is better to avoid modifying these files directly and always modify them through <code>crontab -e</code> since you don't have to restart the <code>cron</code> service manually this way. By the way that <code>-e</code> stands for editor mode.
+This should create the user crontab files inside <code>/var/cron/tabs/</code> (e.g. <code>/var/cron/tabs/babaei</code>) and open up your system's default text editor which in my case is [nano](http://www.nano-editor.org/). It is better to avoid modifying these files directly and always modify them through <code>crontab -e</code> since you don't have to restart the <code>cron</code> service manually this way. By the way, <code>-e</code> stands for editor mode.
 
 This is a typical <code>root</code> user crontab file I use on one of my production servers (as you can see there is no who column since it's useless in user's own crontab file format):
 
 {% codeblock lang:sh %}
 SHELL=/bin/sh
-PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/etc/:/usr/local/bin:/usr/local/sbin
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
 
 # Order of crontab fields
@@ -80,7 +80,7 @@ $ crontab -l -u babaei
 As you can see I added a few environment variables to the beginning of my crontab file. This is due to the fact that your cron scripts may not run properly due to executable path issues (e.g. you forgot to use absolute paths for commands you called in your scripts, so it won't be able to find those commands you used in your scripts). If you want to test whether your scripts run properly or not, you should replicate the environment that would be used to run your scripts by testing them with the limited set of environment variables set by cron:
 
 {% codeblock lang:sh %}
-env -i SHELL=/bin/sh PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/etc/:/usr/local/bin:/usr/local/sbin HOME=/root LOGNAME=Charlie /path/to/your/scriptname.sh
+env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /path/to/your/scriptname.sh
 {% endcodeblock %}
 
 <br />
