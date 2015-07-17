@@ -376,9 +376,9 @@ namespace CrossPlatformKeyboard
 اما یادآوری این نكته كه آیا كد حاضر در صفحات ASP.NET قابل استفاده می باشد یا خیر نیز خالی از لطف نمی باشد. متاسفانه كدهای حاضر را نمی توان در یك ASP.NET Web Application بكار گرفت. تنها راه حلی كه برای آن به نظر می رسد استفاده از زبان JavaScript است، كه البته مقداری فرآیند كار را پیچیده تر می نماید.
 
 
-[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2008-02-08-cross-platform-persian-keyboard)
+[دریافت سورس کد کامل از GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2008-02-08-cross-platform-persian-keyboard)
 
-[دریافت سورس کد کامل](2008-02-08-cross-platform-persian-keyboard.7z)
+[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2008-02-08-cross-platform-persian-keyboard)
 
 
 {% codeblock PersianKeyboard.cs lang:csharp %}

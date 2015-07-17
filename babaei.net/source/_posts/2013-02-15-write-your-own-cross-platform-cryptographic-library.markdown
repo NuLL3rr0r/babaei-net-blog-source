@@ -31,7 +31,7 @@ tags:
 
 Previously I've described [the process of building Crypto++ on both FreeBSD and Windows using the GCC, MinGW and VC++ compilers](/blog/2013/02/15/how-to-build-cpp-cryptographic-library-cryptopp/).
 
-Now, we want to develop our own cross-platform cryptographic wrapper library around Crypto++. I've already uploaded the full source code to [GitHub](http://github.com). You can find the link to the code on github at the end of this article.
+Now, we want to develop our own cross-platform cryptographic wrapper library around Crypto++. I've already uploaded the full source code to [GitHub](http://github.com). You can find the link to the code on GitHub at the end of this article.
 
 Before you proceed, you have to build the Crypto++ library as I mentioned earlier [here](/blog/2013/02/15/how-to-build-cpp-cryptographic-library-cryptopp/).
 
@@ -482,6 +482,8 @@ Release:
 <br/>
 
 ### Source Code ###
+
+[Full source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
 [Full source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 

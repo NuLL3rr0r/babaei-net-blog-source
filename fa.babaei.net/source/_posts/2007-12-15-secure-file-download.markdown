@@ -510,9 +510,9 @@ smtp.Credentials = new System.Net.NetworkCredential("some.id@gmail.com", "pw");
 دلیل انتخاب زبان Perl – با توجه به این كه نگارنده تسلط بیشتری بر زبان C# دارد – این بوده است كه در این زبان مسائل بسیار بهتر تشریح می شوند – با توجه به اینكه یادگیری مفاهیم .NET نیازمند صرف وقت كافی می باشد – و قطعا در تعداد مخاطبان مقاله تاثیر گذار بوده است.  قطعا كد C# دارای ارجحیت هائی بر كد Perl می باشد. با توجه به اینكه این زبان Strong-Type و Case Sensetive می باشد تجربه آن جهت برنامه نویسی ساخت یافته توصیه می شود.
 
 
-[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2007-12-15-secure-file-download)
+[دریافت سورس کد کامل از GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2007-12-15-secure-file-download)
 
-[دریافت سورس کد کامل](2007-12-15-secure-file-download.7z)
+[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2007-12-15-secure-file-download)
 
 
 {% codeblock securedown.html lang:html %}

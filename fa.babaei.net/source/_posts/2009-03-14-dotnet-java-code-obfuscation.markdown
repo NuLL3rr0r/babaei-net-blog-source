@@ -599,9 +599,9 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 پس هرگز استفاده از Code Obfuscation به عنوان متدی با ضریب ایمنی قابل قبول را فراموش ننمائید.
 
 
-[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2009-03-14-dotnet-java-code-obfuscation)
+[دریافت سورس کد کامل از GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2009-03-14-dotnet-java-code-obfuscation)
 
-[دریافت سورس کد کامل](2009-03-14-dotnet-java-code-obfuscation.7z)
+[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2009-03-14-dotnet-java-code-obfuscation)
 
 
 {% codeblock snooplogin.cs lang:csharp %}

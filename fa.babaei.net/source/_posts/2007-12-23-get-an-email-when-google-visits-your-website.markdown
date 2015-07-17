@@ -367,9 +367,9 @@ if ($browser =~ m/Googlebot/) {
 به هرحال، در نظر داشته باشيد که: «خلاقيت؛ شرط اول، جهت ورود به دنياي وب مي باشد.»
 
 
-[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2007-12-23-get-an-email-when-google-visited-your-website)
+[دریافت سورس کد کامل از GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2007-12-23-get-an-email-when-google-visited-your-website)
 
-[دریافت سورس کد کامل](2007-12-23-get-an-email-when-google-visited-your-website.7z)
+[دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2007-12-23-get-an-email-when-google-visited-your-website)
 
 
 {% codeblock index.html lang:html %}
