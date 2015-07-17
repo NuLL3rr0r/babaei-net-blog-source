@@ -60,6 +60,33 @@ cp open-sans-v13-latin-regular.svg themes/TKL/source/fonts/
 cp open-sans-v13-latin-regular.ttf themes/TKL/source/fonts/
 cp open-sans-v13-latin-regular.woff themes/TKL/source/fonts/
 cp open-sans-v13-latin-regular.woff2 themes/TKL/source/fonts/
+cp yekan-regular.eot themes/TKL/source/fonts/
+cp yekan-regular.svg themes/TKL/source/fonts/
+cp yekan-regular.ttf themes/TKL/source/fonts/
+cp yekan-regular.woff themes/TKL/source/fonts/
+
+cp wf-montserrat-v6-latin.css themes/TKL/source/css/
+cp wf-montserrat-v6-latin-bold.css themes/TKL/source/css/
+cp wf-montserrat-v6-latin-regular.css themes/TKL/source/css/
+cp wf-open-sans-v13-latin.css themes/TKL/source/css/
+cp wf-open-sans-v13-latin-regular.css themes/TKL/source/css/
+cp wf-open-sans-v13-latin-semibold.css themes/TKL/source/css/
+
+nano -w themes/TKL/source/css/wf-yekan.css
+########
+/* yekan-regular */
+@font-face {
+    font-family: 'Yekan';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/yekan-regular.eot'); /* IE9 Compat Modes */
+    src: local('Yekan-Regular'),
+        url('../fonts/yekan-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/yekan-regular.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/yekan-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/yekan-regular.svg#BYekan') format('svg'); /* Legacy iOS */
+}
+########
 
 
 nano -w themes/TKL/source/css/style.css
@@ -134,7 +161,7 @@ body form .search > box-shadow: 0px 1px #FFF;
 }
 
 .navbar .nav .fa-blog * {
-    font-family: Tahoma !important;
+    font-family: 'Yekan' !important;
     font-size: 11px;
     padding: 0 8px;
 }
@@ -385,6 +412,9 @@ nano -w themes/TKL/layout/casper/head.ejs
     <link href='/css/wf-open-sans-v13-latin-regular.css' rel='stylesheet' type='text/css'>
     <link href='/css/wf-open-sans-v13-latin-semibold.css' rel='stylesheet' type='text/css'>
     <![endif]-->
+
+    <!-- Farsi Webfont (Yekan 400) -->
+    <link href='/css/wf-yekan.css' rel='stylesheet' type='text/css'>
 .
 .
 .

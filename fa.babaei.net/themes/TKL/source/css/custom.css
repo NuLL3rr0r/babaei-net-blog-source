@@ -17,7 +17,7 @@ body form .search {
     line-height: 1.2em;
     padding: 0.25em 0.5em 0px;
     font-size: 0.85em;
-    font-family: "PT Sans","Helvetica Neue",Arial,sans-serif;
+    font-family: 'Yekan', "PT Sans","Helvetica Neue",Arial,sans-serif;
     border-radius: 0.25em;
     background-clip: padding-box;
     background-color: #151515;
@@ -38,11 +38,10 @@ body form .search > box-shadow: 0px 1px #FFF;
 }
 
 .navbar .nav > li > a, .navbar .nav li.nolink {
-    font-family: "Open Sans","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","Source Han Sans CN","WenQuanYi Micro Hei",Arial,sans-serif;
+    font-family: 'Yekan', "Open Sans","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","Source Han Sans CN","WenQuanYi Micro Hei",Arial,sans-serif;
 }
 
 .navbar .nav .en-Blog * {
-    font-family: Tahoma !important;
     font-size: 11px;
     padding: 0 8px;
 }
@@ -148,6 +147,204 @@ footer .copy .credit a, footer .copy .license a {
 
 footer .fa {
     font-size: 1.6em;
+}
+
+* {
+    font-family: 'Yekan', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+body {
+    font-family: 'Yekan', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+p {
+    font-family: 'Yekan', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yekan', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+h1 span, h2 span, h3 span, h4 span, h6 span, h6 span, .navbar .nav > li > span {
+	font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+blockquote p {
+	font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+	font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.btn {
+    font-family: 'Yekan', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.navbar .nav > li > a {
+	font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.navbar .nav li.nolink {
+	font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.learnmore {
+	font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.sb-menu li {
+	font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.sb-menu li a {
+	font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+li.sb-toggle-submenu {
+	font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#hero p {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#videohero p, #fallback p {
+	font-family: 'Yekan', 'Georgia', serif, 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#blog .pager li > a {
+	font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#blog #subscribe p {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#blog-post .author {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#blog-post p.excerpt {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#blog-post a.readmore span {
+	font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#blog-post .published p {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#featured .byline {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#statement p {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.flexslider p {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#process span.number {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.timeline-label p {
+	font-family: 'Yekan', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#process .present, #process .born {
+  font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#pagetabs .page-nav > li > a {
+	font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#team h3 a {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+.popover-title {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#overview .overview-text p {
+	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+
+#leftcol .nav > li > a {
+	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+.help span {
+	font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+#faq h3 {
+	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+#careers .panel-title {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#careers .apply h5 a {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#projects .filter-item a {
+	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+
+ul.filters li p {
+	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+#portfolio-item .client p {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#mailinglist p {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#contact .well p {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#contact .form-control {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#contact .offices li {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#contact .message-us li {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+#contact .alert-success, #contact .alert-danger {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+.alert {
+	font-family: 'Yekan', 'Georgia', serif;
+}
+
+footer .extra-wrap h5 {
+	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+footer ul.list li a, footer ul.list1 li a {
+	font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 #intro .sharing 
