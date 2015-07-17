@@ -174,12 +174,13 @@ CLR نه تنها قلب تپنده .NET FX می باشد بلکه هر برنا
 
 ۳. سپس با استفاده از دستور copy اقدام به ایجاد فایلی های مورد نظرمان نموده٬ پس از وارد نمودن کدهای ذیل و درج کلیدهای Ctrl+Z جهت ذخیره فایل کلید Enter را می فشاریم.
 
+<br />
+
+|                   |          |                  |
 |:------------------|:--------:|-----------------:|
 | زبان برنامه نویسی |          | C#               |
-| نام فایل          |          | hello_cs.cs      |
-| دستور کامپایل     |          | csc  hello_cs.cs |
-
-<br />
+| نام فایل      |          | hello_cs.cs      |
+| دستور کامپایل   |          | csc  hello_cs.cs |
 
 {% codeblock hello_cs.cs lang:csharp %}
 /// <summary>
@@ -197,12 +198,13 @@ class Hello
 }
 {% endcodeblock %}
 
+<br />
+
+|                   |          |                   |
 |:------------------|:--------:|------------------:|
 | زبان برنامه نویسی |          | C++/CLI           |
 | نام فایل          |          | hello_cpp_cli.cpp |
 | دستور کامپایل     |          | cl  /clr  /Fehello_cpp_cli_mixed  hello_cpp_cli.cpp<br />cl  /clr:pure  /Fehello_cpp_cli_pure  hello_cpp_cli.cpp<br />cl  /clr:safe  /Fehello_cpp_cli_verifiable  hello_cpp_cli.cpp |
-
-<br />
 
 {% codeblock hello_cpp_cli.cpp lang:cpp %}
 /// <summary>
@@ -217,12 +219,13 @@ void main()
 }
 {% endcodeblock %}
 
+<br />
+
+|                   |          |                                           |
 |:------------------|:--------:|------------------------------------------:|
 | زبان برنامه نویسی |          | Managed C++                               |
 | نام فایل          |          | hello_cpp_managed.cpp                     |
 | دستور کامپایل     |          | cl  hello_cpp_managed.cpp  /clr:oldSyntax |
-
-<br />
 
 {% codeblock hello_cpp_managed.cpp lang:cpp %}
 /// <summary>
@@ -239,12 +242,13 @@ void main()
 }
 {% endcodeblock %}
 
+<br />
+
+|                   |          |                  |
 |:------------------|:--------:|-----------------:|
 | زبان برنامه نویسی |          | JScript .NET     |
 | نام فایل          |          | hello_js.js      |
 | دستور کامپایل     |          | jsc  hello_js.js |
-
-<br />
 
 {% codeblock hello_js.js lang:javascript %}
 /// <summary>
@@ -256,12 +260,13 @@ import System;
 Console.WriteLine("Hello, World!");
 {% endcodeblock %}
 
+<br />
+
+|                   |          |                   |
 |:------------------|:--------:|------------------:|
 | زبان برنامه نویسی |          | Visual Basic .NET |
 | نام فایل          |          | hello_vb.vb       |
 | دستور کامپایل     |          | vbc  hello_vb.vb  |
-
-<br />
 
 {% codeblock hello_vb.vb lang:vbnet %}
 '@ <summary>
@@ -276,6 +281,8 @@ Module Hello
     End Sub
 End Module
 {% endcodeblock %}
+
+<br />
 
 ۴. در مرحله بعد با استفاده از دستورات داده شده اقدام به کامپایل تمامی کدها می نمائیم. نکته حائز اهمیت در این جا مسیر فایل های اجرائی هر یک از کامپایلرهای مورد نظر می باشد. سه کامپایلر مربوط به C#, JScript .NET, Visual Basic.NET به ترتیب به نام های csc.exe, jsc.exe, vbc.exe در مسیر نصب .NET Framework قرار دارند. همچنین کامپایلر مربوط به C++ به نام cl.exe فقط با نصب Visual Studio و یا Microsoft Windows SDK در سیستم شما نصب خواهد شد و بسته به نوع بسته نصب شده در مسیری متفاوت قرار خواهد گرفت. برای مثال مسیر کامپایلرها ممکن است به شرح ذیل باشد:
 
