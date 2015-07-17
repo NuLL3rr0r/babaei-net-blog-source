@@ -347,6 +347,10 @@ footer ul.list li a, footer ul.list1 li a {
 	font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, figure h5, figure h6, figure p {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif !important;
+}
+
 #intro .sharing 
 {
     text-align: right;
