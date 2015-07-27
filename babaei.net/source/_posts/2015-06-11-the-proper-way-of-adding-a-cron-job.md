@@ -7,7 +7,7 @@ tags:
 - Unix
 ---
 
-Until not so long ago, to add my own cron jobs I always had the habit of modifying <code>/etc/crontab</code> on my FreeBSD system [which turned out to be wrong](https://www.freebsd.org/doc/handbook/configtuning-cron.html). In simple words, there are two types of crontab files:
+Until not so long ago, to add my own cron jobs I always had the habit of modifying <code>/etc/crontab</code> on my [FreeBSD](https://www.freebsd.org/) system [which turned out to be wrong](https://www.freebsd.org/doc/handbook/configtuning-cron.html). In simple words, there are two types of crontab files:
 
 - __System crontab__ which should not be altered due to the troubles it cause during FreeBSD upgrades
 - __User crontab__ which has one less column than the system crontab file

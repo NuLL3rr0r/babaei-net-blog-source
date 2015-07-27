@@ -383,14 +383,19 @@ pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, 
     color: #AAA;
 }
 
-.postImage {
+.post-content {
+    direction: rtl;
+    text-align: justify;
+}
+
+.post-image {
     display: block !important;
     margin: 4px auto !important;
     width: auto;
     height: auto;
 }
 
-.postImageTitle {
+.post-image-title {
     display: block;
     text-align: center;
     letter-spacing: 1px;
@@ -449,10 +454,6 @@ footer .copy {
 
 footer .social {
     float: left !important;
-}
-
-.farsiContent {
-    direction: rtl;
 }
 
 body form .search {

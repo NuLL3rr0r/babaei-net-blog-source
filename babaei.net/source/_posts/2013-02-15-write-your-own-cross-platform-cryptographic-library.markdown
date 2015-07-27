@@ -37,7 +37,7 @@ Before you proceed, you have to build the Crypto++ library as I mentioned earlie
 
 <!-- more -->
 
-### The API ###
+### API ###
 
 I'm not going through the details and I won't describe the code that I've written for this blog post. The code itself should be very legible, therefore I'll leave this task up to you. But I'm going to represent the API, and the way of using it.
 

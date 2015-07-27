@@ -185,14 +185,18 @@ footer .fa {
     color: #AAA;
 }
 
-.postImage {
+.post-content {
+    text-align: justify;
+}
+
+.post-image {
     display: block !important;
     margin: 4px auto !important;
     width: auto;
     height: auto;
 }
 
-.postImageTitle {
+.post-image-title {
     display: block;
     text-align: center;
     letter-spacing: 1px;

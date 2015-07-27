@@ -11,19 +11,21 @@
                         <%- partial('post/meta', {post: post}) %>
                     </span>
                 </div>
-                <div class="col-md-8">
-                    <p>
-                      <% if (post.excerpt){ %>
-                        <%- post.excerpt %>
-                      <% } else { %>
-                        <%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>
-                      <% } %>
-                    </p>
-                    <% if (theme.excerpt_link) { %>
-                    <p class="pull-right readMore">
-                        <a href="<%- config.root %><%- post.path %>"><%= theme.excerpt_link %>...</a>
-                    </p>
-                    <% } %>
+                <div class="post-content">
+                    <div class="col-md-8">
+                        <p>
+                          <% if (post.excerpt){ %>
+                            <%- post.excerpt %>
+                          <% } else { %>
+                            <%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>
+                          <% } %>
+                        </p>
+                        <% if (theme.excerpt_link) { %>
+                        <p class="pull-right readMore">
+                            <a href="<%- config.root %><%- post.path %>"><%= theme.excerpt_link %>...</a>
+                        </p>
+                        <% } %>
+                    </div>
                 </div>
                 <div class="clearfix"></div>
                 <hr class="nogutter">

@@ -305,14 +305,18 @@ footer .fa {
     color: #AAA;
 }
 
-.postImage {
+.post-content {
+    text-align: justify;
+}
+
+.post-image {
     display: block !important;
     margin: 4px auto !important;
     width: auto;
     height: auto;
 }
 
-.postImageTitle {
+.post-image-title {
     display: block;
     text-align: center;
     letter-spacing: 1px;
@@ -516,6 +520,25 @@ nano -w themes/TKL/layout/casper/header.ejs
 
 nano -w themes/TKL/layout/casper/index.ejs
 ########
+                <div class="post-content">
+                    <div class="col-md-8">
+                        <p>
+                          <% if (post.excerpt){ %>
+                            <%- post.excerpt %>
+                          <% } else { %>
+                            <%- post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 220) %>
+                          <% } %>
+                        </p>
+                        <% if (theme.excerpt_link) { %>
+                        <p class="pull-right readMore">
+                            <a href="<%- config.root %><%- post.path %>"><%= theme.excerpt_link %>...</a>
+                        </p>
+                        <% } %>
+                    </div>
+                </div>
+.
+.
+.
         <nav class="pagination" role="pagination">
           <%- paginator({
             prev_text: '← Newer Posts',
@@ -560,6 +583,9 @@ nano -w themes/TKL/layout/post/sharing.ejs
 
 nano -w themes/TKL/layout/post.ejs
 ########
+            <div class="post-content">
+                <%- post.content %>
+            </div>
             <div class="clearfix"></div>
             <div class="sharing">
                 <%- partial('post/sharing') %>
