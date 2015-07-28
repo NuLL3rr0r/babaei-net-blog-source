@@ -23,3 +23,5 @@ Replace **x:** with path of your Windows 8 installation DVD.
 
 - _**Note**: You have to run cmd.exe as Administrator in order for this to work!_
 
+<!-- more -->
+

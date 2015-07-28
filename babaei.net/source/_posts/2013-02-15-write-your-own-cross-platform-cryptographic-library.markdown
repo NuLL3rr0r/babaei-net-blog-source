@@ -66,7 +66,7 @@ This is the full example of what we've discussed so far:
 {% codeblock main.cpp lang:cpp %}
 ///  (The MIT License)
 ///
-///  Copyright (c) 2013 M.S. Babaei
+///  Copyright (c) 2013 Mohammad S. Babaei
 ///
 ///  Permission is hereby granted, free of charge, to any person obtaining a copy
 ///  of this software and associated documentation files (the "Software"), to deal
@@ -174,7 +174,7 @@ I suppose you've already built the library the way that I've described for FreeB
 {% codeblock _src.cmake lang:cmake %}
 #  (The MIT License)
 #
-#  Copyright (c) 2013 M.S. Babaei
+#  Copyright (c) 2013 Mohammad S. Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -205,7 +205,7 @@ SET ( CRYPTOTEST_SOURCE_FILES
 {% codeblock dep-config.cmake lang:cmake %}
 #  (The MIT License)
 #
-#  Copyright (c) 2013 M.S. Babaei
+#  Copyright (c) 2013 Mohammad S. Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -259,7 +259,7 @@ ENDIF ( CRYPTOPP_FOUND )
 {% codeblock CMakeLists.txt lang:cmake %}
 #  (The MIT License)
 #
-#  Copyright (c) 2013 M.S. Babaei
+#  Copyright (c) 2013 Mohammad S. Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -395,7 +395,7 @@ I suppose you've already built the static version of Crypto++, the way that I've
 {% codeblock CryptoTest.pro lang:sh %}
 #  (The MIT License)
 #
-#  Copyright (c) 2013 M.S. Babaei
+#  Copyright (c) 2013 Mohammad S. Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -490,7 +490,7 @@ Release:
 {% codeblock crypto.hpp lang:cpp %}
 ///  (The MIT License)
 ///
-///  Copyright (c) 2013 M.S. Babaei
+///  Copyright (c) 2013 Mohammad S. Babaei
 ///
 ///  Permission is hereby granted, free of charge, to any person obtaining a copy
 ///  of this software and associated documentation files (the "Software"), to deal
@@ -543,7 +543,7 @@ public:
 {% codeblock crypto.cpp lang:cpp %}
 ///  (The MIT License)
 ///
-///  Copyright (c) 2013 M.S. Babaei
+///  Copyright (c) 2013 Mohammad S. Babaei
 ///
 ///  Permission is hereby granted, free of charge, to any person obtaining a copy
 ///  of this software and associated documentation files (the "Software"), to deal

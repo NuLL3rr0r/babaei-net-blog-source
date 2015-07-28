@@ -45,4 +45,3 @@ In fact, the process is very easy and straightforward to follow. Here is what wo
 
 I hope it solves the issue with your Nexus device's WiFi. If you believe you've found any bug or issue, please send a support request via email to the [original developer](http://www.fardjad.com/).
 
-

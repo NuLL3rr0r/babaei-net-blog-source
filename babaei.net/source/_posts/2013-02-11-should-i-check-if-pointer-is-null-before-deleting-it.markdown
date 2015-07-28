@@ -39,3 +39,5 @@ ptr = NULL;
 
 - _**Note**: Keep in mind that deleting a __void*__ pointer results in <strike>undefined behavior</strike> whether it's __NULL__ or not._
 
+<!-- more -->
+

@@ -187,7 +187,7 @@ Then, put the __cloudflare-ip-ranges-updater.sh__ file with the provided content
 
 #  (The MIT License)
 #
-#  Copyright (c) 2013 M.S. Babaei
+#  Copyright (c) 2013 Mohammad S. Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -316,5 +316,4 @@ Thanks to [digitaltoast](https://github.com/digitaltoast) for informing me about
 [Full source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2013-03-09-getting-real-ip-addresses-using-nginx-and-cloudflare)
 
 [Full source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-03-09-getting-real-ip-addresses-using-nginx-and-cloudflare)
-
 

@@ -26,4 +26,3 @@ Well, I just found out that this year, to demonstrate their continuing support f
 Our top priority at Packt has always been to meet the evolving needs of developers in the most practical way possible, while at the same time protecting the hard work of our authors. DRM-free content continues to be instrumental in making that happen, providing the flexibility and freedom that is essential for an efficient and enhanced learning experience. That’s why we’ve been DRM-free from the beginning – we’ll never put limits on the innovation of our users.
 {% endblockquote %}
 
-

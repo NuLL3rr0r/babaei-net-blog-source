@@ -615,7 +615,7 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 /// <summary>
 ///   (The MIT License)
 ///   
-///   Copyright (c) 2009 M.S. Babaei
+///   Copyright (c) 2009 Mohammad S. Babaei
 ///   
 ///   Permission is hereby granted, free of charge, to any person obtaining a copy
 ///   of this software and associated documentation files (the "Software"), to deal
