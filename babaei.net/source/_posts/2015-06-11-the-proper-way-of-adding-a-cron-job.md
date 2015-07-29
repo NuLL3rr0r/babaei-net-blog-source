@@ -22,14 +22,12 @@ To create a crontab for current user:
 $ crontab -e
 {% endcodeblock %}
 
-<br />
 To create a crontab for a specific user (e.g. <code>babaei</code>):
 
 {% codeblock lang:sh %}
 $ crontab -e -u babaei
 {% endcodeblock %}
 
-<br />
 This should create the user crontab files inside <code>/var/cron/tabs/</code> (e.g. <code>/var/cron/tabs/babaei</code>) and open up your system's default text editor which in my case is [nano](http://www.nano-editor.org/). It is better to avoid modifying these files directly and always modify them through <code>crontab -e</code> since you don't have to restart the <code>cron</code> service manually this way. By the way, <code>-e</code> stands for editor mode.
 
 This is a typical <code>root</code> user crontab file I use on one of my production servers (as you can see there is no who column since it's useless in user's own crontab file format):
@@ -62,28 +60,24 @@ MAILTO=""
 30      00      1,8,15,22,28    *       *       /root/.cron/geoupdater
 {% endcodeblock %}
 
-<br />
 To list the cron jobs in the crontab for the current user at any time, use the following command:
 
 {% codeblock lang:sh %}
 $ crontab -l
 {% endcodeblock %}
 
-<br />
 Or for a specefic user you can try this one (e.g. <code>babaei</code>):
 
 {% codeblock lang:sh %}
 $ crontab -l -u babaei
 {% endcodeblock %}
 
-<br />
 As you can see I added a few environment variables to the beginning of my crontab file. This is due to the fact that your cron scripts may not run properly due to executable path issues (e.g. you forgot to use absolute paths for commands you called in your scripts, so it won't be able to find those commands you used in your scripts). If you want to test whether your scripts run properly or not, you should replicate the environment that would be used to run your scripts by testing them with the limited set of environment variables set by cron:
 
 {% codeblock lang:sh %}
 env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /path/to/your/scriptname.sh
 {% endcodeblock %}
 
-<br />
 To see what these variables such as <code>HOME</code>, <code>LOGNAME</code>, <code>MAIL</code>, <code>PATH</code> and <code>SHELL</code> do, please refer to [crontab's manpage or documentation](http://crontab.org/).
 
 I almost forgot to mention that, there is another common pitfall when you are going to run your script or binary executables through a crontab. And that is, they should have executable permission which can be achieved by one of the following commands:
@@ -94,8 +88,9 @@ For the owner of the file:
 $ chmod u+x /path/to/your/executable
 {% endcodeblock %}
 
-<br />
 For everyone:
 {% codeblock lang:sh %}
 chmod a+x /path/to/your/executable
 {% endcodeblock %}
+
+
