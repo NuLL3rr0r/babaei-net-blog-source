@@ -280,15 +280,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 span, h2 span, h3 span, h4 span, h6 span, h6 span, .navbar .nav > li > span {
-	font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 blockquote p {
-	font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 input[placeholder], [placeholder], *[placeholder] {
-	font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .btn {
@@ -296,171 +296,171 @@ input[placeholder], [placeholder], *[placeholder] {
 }
 
 .navbar .nav > li > a {
-	font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .navbar .nav li.nolink {
-	font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .learnmore {
-	font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .sb-menu li {
-	font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .sb-menu li a {
-	font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 li.sb-toggle-submenu {
-	font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #hero p {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #videohero p, #fallback p {
-	font-family: 'Yekan', 'Georgia', serif, 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, 'Open Sans', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #blog .pager li > a {
-	font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #blog #subscribe p {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #blog-post .author {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #blog-post p.excerpt {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #blog-post a.readmore span {
-	font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #blog-post .published p {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #featured .byline {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #statement p {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .flexslider p {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #process span.number {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .timeline-label p {
-	font-family: 'Yekan', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #process .present, #process .born {
-  font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #pagetabs .page-nav > li > a {
-	font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #team h3 a {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 .popover-title {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #overview .overview-text p {
-	font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
+    font-family: 'Yekan', 'Georgia', serif, Helvetica, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
 }
 
 #leftcol .nav > li > a {
-	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 .help span {
-	font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 #faq h3 {
-	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 #careers .panel-title {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #careers .apply h5 a {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #projects .filter-item a {
-	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 
 ul.filters li p {
-	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 #portfolio-item .client p {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #mailinglist p {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #contact .well p {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #contact .form-control {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #contact .offices li {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #contact .message-us li {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 #contact .alert-success, #contact .alert-danger {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 .alert {
-	font-family: 'Yekan', 'Georgia', serif;
+    font-family: 'Yekan', 'Georgia', serif;
 }
 
 footer .extra-wrap h5 {
-	font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
+    font-family: 'Yekan', 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 footer ul.list li a, footer ul.list1 li a {
-	font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-#intro .sharing 
+#intro .sharing
 {
     text-align: right;
     font-size: 1.8em;
@@ -668,7 +668,7 @@ nano -w themes/TKL/layout/casper/head.ejs
           }, 1000);
         }
       });
-	});
+    });
   </script>
 
   <noscript>
@@ -692,7 +692,7 @@ nano -w themes/TKL/layout/casper/header.ejs
             <li><a href="<%- config.root %>" class="animsition-link" title="صفحه اصلی">صفحه اصلی</a></li>
             <li><a href="<%- config.root %><%- config.archive_dir %>" class="animsition-link" title="آرشیو">آرشیو</a></li>
             <!-- Dropdown Menu -->
-			<% if (theme.simple_search && theme.simple_search_site && theme.simple_search_site_key && theme.simple_search_query_key && theme.simple_search_placeholder){ %>
+            <% if (theme.simple_search && theme.simple_search_site && theme.simple_search_site_key && theme.simple_search_query_key && theme.simple_search_placeholder){ %>
             <li>
                 <a class="sb-toggle-submenu">جستجو<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
@@ -705,7 +705,7 @@ nano -w themes/TKL/layout/casper/header.ejs
                 </ul>
             </li>
             <% } %>
-			 <% if (theme.works && theme.works.length){ %>
+            <% if (theme.works && theme.works.length){ %>
             <li>
                 <a class="sb-toggle-submenu">کارها<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
@@ -716,15 +716,15 @@ nano -w themes/TKL/layout/casper/header.ejs
             </li>
             <% } %>
             <% if (site.categories.length){ %>
-        	<li>
-        		<a class="sb-toggle-submenu">دسته ها<span class="sb-caret"></span></a>
-            	<ul class="sb-submenu">
-				  	<% site.categories.sort('name').each(function(item){ %>
-				    <li><a href="<%- config.root %><%- item.path %>" class="animsition-link"><%= item.name %><small>(<%= item.posts.length %>)</small></a></li>
-				    <% }); %>
-				</ul>
-        	</li>
-			<% } %>
+            <li>
+                <a class="sb-toggle-submenu">دسته ها<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <% site.categories.sort('name').each(function(item){ %>
+                    <li><a href="<%- config.root %><%- item.path %>" class="animsition-link"><%= item.name %><small>(<%= item.posts.length %>)</small></a></li>
+                    <% }); %>
+                </ul>
+            </li>
+            <% } %>
             <% if (theme.links && theme.links.length){ %>
             <li>
                 <a class="sb-toggle-submenu">لینک ها<span class="sb-caret"></span></a>

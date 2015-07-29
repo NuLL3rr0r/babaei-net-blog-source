@@ -9,7 +9,7 @@
             <li><a href="<%- config.root %>" class="animsition-link" title="صفحه اصلی">صفحه اصلی</a></li>
             <li><a href="<%- config.root %><%- config.archive_dir %>" class="animsition-link" title="آرشیو">آرشیو</a></li>
             <!-- Dropdown Menu -->
-			<% if (theme.simple_search && theme.simple_search_site && theme.simple_search_site_key && theme.simple_search_query_key && theme.simple_search_placeholder){ %>
+            <% if (theme.simple_search && theme.simple_search_site && theme.simple_search_site_key && theme.simple_search_query_key && theme.simple_search_placeholder){ %>
             <li>
                 <a class="sb-toggle-submenu">جستجو<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
@@ -22,7 +22,8 @@
                 </ul>
             </li>
             <% } %>
-			 <% if (theme.works && theme.works.length){ %>
+            <!-- Dropdown Menu -->
+            <% if (theme.works && theme.works.length){ %>
             <li>
                 <a class="sb-toggle-submenu">کارها<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
@@ -33,15 +34,15 @@
             </li>
             <% } %>
             <% if (site.categories.length){ %>
-        	<li>
-        		<a class="sb-toggle-submenu">دسته ها<span class="sb-caret"></span></a>
-            	<ul class="sb-submenu">
-				  	<% site.categories.sort('name').each(function(item){ %>
-				    <li><a href="<%- config.root %><%- item.path %>" class="animsition-link"><%= item.name %><small>(<%= item.posts.length %>)</small></a></li>
-				    <% }); %>
-				</ul>
-        	</li>
-			<% } %>
+            <li>
+                <a class="sb-toggle-submenu">دسته ها<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    <% site.categories.sort('name').each(function(item){ %>
+                    <li><a href="<%- config.root %><%- item.path %>" class="animsition-link"><%= item.name %><small>(<%= item.posts.length %>)</small></a></li>
+                    <% }); %>
+                </ul>
+            </li>
+            <% } %>
             <% if (theme.links && theme.links.length){ %>
             <li>
                 <a class="sb-toggle-submenu">لینک ها<span class="sb-caret"></span></a>
@@ -128,10 +129,10 @@
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                         <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                             <div>
-                            	<% theme.top_saying.forEach(function(item){ %>
+                                <% theme.top_saying.forEach(function(item){ %>
                                 <h2><%- item.title %></h2>
                                 <p><%- item.content %></p>
-				    			<% }); %>
+                                <% }); %>
 
                             </div>
                         </div>

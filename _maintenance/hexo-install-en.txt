@@ -273,7 +273,7 @@ footer .fa {
     font-size: 1.6em;
 }
 
-#intro .sharing 
+#intro .sharing
 {
     text-align: right;
     font-size: 1.8em;
@@ -433,7 +433,7 @@ nano -w themes/TKL/layout/casper/head.ejs
           }, 1000);
         }
       });
-	});
+    });
   </script>
 
   <noscript>
@@ -450,7 +450,7 @@ nano -w themes/TKL/layout/casper/header.ejs
 ########
             <li><a href="<%- config.root %><%- config.archive_dir %>" class="animsition-link" title="archive">archives</a></li>
             <!-- Dropdown Menu -->
-			 <% if (theme.simple_search && theme.simple_search_site && theme.simple_search_site_key && theme.simple_search_query_key && theme.simple_search_placeholder){ %>
+            <% if (theme.simple_search && theme.simple_search_site && theme.simple_search_site_key && theme.simple_search_query_key && theme.simple_search_placeholder){ %>
             <li>
                 <a class="sb-toggle-submenu">Search<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
