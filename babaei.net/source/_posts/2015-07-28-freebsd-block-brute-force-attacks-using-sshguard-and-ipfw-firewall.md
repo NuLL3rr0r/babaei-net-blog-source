@@ -185,11 +185,11 @@ net.inet.ip.fw.verbose_limit=5
 
 Currently, [FreeBSD Ports](https://www.freebsd.org/ports/) provides five variants of Sshguard:
 
-* <code>security/sshguard</code> :  Protects your host from brute force attacks against ssh and other services.
-* <code>security/sshguard-ipfilter</code> :  Utilizes IPF to protect from brute force attacks against ssh and other services
-* <code>security/sshguard-ipfw</code> :  Utilizes IPFW to protect your host from brute force attacks against ssh and other services
-* <code>security/sshguard-null</code> :  Do-nothing backend for applying detection but not prevention.
-* <code>security/sshguard-pf</code> :  Utilizes PF to protect from brute force attacks against ssh and other services.
+* <code>security/sshguard</code> Protects your host from brute force attacks against ssh and other services.
+* <code>security/sshguard-ipfilter</code> Utilizes IPF to protect from brute force attacks against ssh and other services
+* <code>security/sshguard-ipfw</code> Utilizes IPFW to protect your host from brute force attacks against ssh and other services
+* <code>security/sshguard-null</code> Do-nothing backend for applying detection but not prevention.
+* <code>security/sshguard-pf</code> Utilizes PF to protect from brute force attacks against ssh and other services.
 
 So, we choose <code>security/sshguard-ipfw</code> since we just setup up an IPFW firewall. To install Sshguard for IPFW from Ports collection:
 
