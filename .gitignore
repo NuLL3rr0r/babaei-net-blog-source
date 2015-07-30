@@ -8,7 +8,6 @@ babaei.net/node_modules/
 babaei.net/public/
 babaei.net/themes/TKL/.git/
 babaei.net/Thumbs.db
-babaei.net_github
 cwRsync
 fa.babaei.net/*.log
 fa.babaei.net/.deploy*/
@@ -20,4 +19,5 @@ fa.babaei.net/public/
 fa.babaei.net/themes/TKL/.git/
 fa.babaei.net/Thumbs.db
 Git
+git_babaei.net
 npm-debug.log
