@@ -197,9 +197,6 @@ The first option inside <code>config.json</code> file is <code>temp_dir</code> w
 {% codeblock config.json lang:json %}
 {
     "temp_dir" :  "/var/tmp",
-.
-.
-.
 }
 {% endcodeblock %}
 
@@ -254,7 +251,35 @@ Security module provides many features that you may not notice at the first sigh
 
 Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/). So, some of the hash or encryption algorithms may not work in case you or your distribution built OpenSSL with those options excluded.
 
-<code>checksum_algorithm</code> provides various hash algorithm to verify the archive file integrity later on. <code>md4</code>, <code>md5</code>, <code>mdc2</code>, <code>ripemd160</code>, <code>sha</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code> and <code>whirlpool</code> algorithms are all well supported. If encryption is disabled or you did not provide a private key, OmniBackup creates a checksum file with extension <code>.sum</code> which includes the archive checksum and uploads it along with your archive file. If encryption is enabled and you did provide a private key it uses the checksum file to sign the archive and instead of uploading <code>.sum</code> file, uploads the signature file with extension <code>.sign</code>, so that it can be verified using your public key at the destination. In either case it includes the checksum in reports and send it through email to you.
+<code>checksum_algorithm</code> provides various hash algorithm to verify the archive file integrity later on. <code>md4</code>, <code>md5</code>, <code>mdc2</code>, <code>ripemd160</code>, <code>sha</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code> and <code>whirlpool</code> algorithms are all valid options and well supported. If encryption is disabled or you did not provide a private key, OmniBackup creates a checksum file with extension <code>.sum</code> which includes the archive checksum and uploads it along with your archive file. If encryption is enabled and you did provide a private key it uses the checksum file to sign the archive and instead of uploading <code>.sum</code> file, uploads the signature file with extension <code>.sign</code>, so that it can be verified using your public key at the destination. In either case OmniBackup includes the checksum in reports and send it through email to you.
+
+<code>enable</code> should either set to <code>yes</code> or <code>no</code>. If you set it to <code>no</code> the rest of the options will be ignored.
+
+<code>key_size</code> only accepts <code>128</code>, <code>192</code> and <code>256</code> which in turn enables AES-128, AES-192 and AES-256 encryption.
+
+<code>base64_encode</code> if you set it to <code>yes</code> encrypted archive file, signature file and the encrypted archive passphrase will be base64 encoded, otherwise they all be in binary format which saves up disk space and bandwidth.
+
+<code>passphrase</code> is the passphrase to encrypt or decrypt archive files. If you leave it blank it, OmniBackup generates a random password for each archive file. Otherwise, it uses the specified password for all archive files and ignore both <code>random_passphrase_pattern</code> and <code>random_passphrase_length</code>. If you decide to use a unique password for all backups make sure <code>config.json</code> is only readable by its owner. If set to blank, it pulls in <code>grep</code>, <code>head</code>, <code>strings</code> and <code>tr</code> as dependency.
+
+<code>random_passphrase_pattern</code> indicates the pattern to generate random passphrase for more info see [GNU](http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html) and [BSD](https://www.freebsd.org/cgi/man.cgi?query=grep) implementation of grep:
+
+* <code>alnum</code>: Alphanumeric characters: <code>alpha</code> and <code>digit</code>; in the <code>C</code> locale and ASCII character encoding, this is the same as <code>[0-9A-Za-z]</code>.
+* <code>alpha</code>: Alphabetic characters: <code>lower</code> and <code>upper</code>; in the <code>C</code> locale and ASCII character encoding, this is the same as <code>[A-Za-z]</code>.
+* <code>blank</code>: Blank characters: space and tab.
+* <code>cntrl</code>: Control characters. In ASCII, these characters have octal codes <code>000</code> through <code>037</code>, and <code>177 (DEL)</code>. In other character sets, these are the equivalent characters, if any.
+* <code>digit</code>: Digits: 0 1 2 3 4 5 6 7 8 9.
+* <code>graph</code>: Graphical characters: <code>alnum</code> and <code>punct</code>.
+* <code>lower</code>: Lower-case letters; in the <code>C</code> locale and ASCII character encoding, this is <code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code>.
+* <code>print</code>: Printable characters: <code>alnum</code>, <code>punct</code>, and space.
+* <code>punct</code>: Punctuation characters; in the <code>C</code> locale and ASCII character encoding, this is <code>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~</code>.
+* <code>space</code>: Space characters: in the <code>C</code> locale, this is tab, newline, vertical tab, form feed, carriage return, and space.
+* <code>upper</code>: Upper-case letters: in the <code>C</code> locale and ASCII character encoding, this is <code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code>.
+* <code>xdigit</code>: Hexadecimal digits: <code>0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f</code>.
+
+<code>random_passphrase_length</code> a positive number bigger than <code>0</code> indicates the length of random passphrase.
+
+<code>private_key</code> is used to sign the encrypted archive file so anyone knows the file originated from you. Note it only accepts absolute path and relative paths starting from home folder (tilde <code>~</code>). Also, keep in mind that avoid space and exotic characters inside path. It's both sane and safe to only include A-Z, a-z and underscore in path because I cannot guarantee its safety.
+
 
 
 
