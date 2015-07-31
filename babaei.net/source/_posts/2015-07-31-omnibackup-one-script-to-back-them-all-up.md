@@ -54,7 +54,7 @@ There is also a list of planned features and TODOs which did not make it into <c
 * Refactoring and code clean-up
 * Any potential bug fixes
 
-**_Disclaimer_**: Please be wary of the fact that this script has 3.3K lines of Bash code and devoured hell of a time from me to write and debug. You should also consider that this is my first heavy Bash experiment and I may not write quality code in the language since I'm a newcomer to Bash. I do not claim this OmniBackup is production ready, that's why I did version the first release at <code>0.1.0</code>. Also note that OmniBackup heavily relies on 3rd-party software which increase the chance for fatal bugs, therefore losing data. So, I provide OmniBackup without any warranties, guarantees or conditions, of any kind and I accept no liability or responsibility any misuse or damages. Please use it at your own risk and remember you're solely responsible for any resulting damage or data loss.
+**_Disclaimer_**: Please be wary of the fact that this script has <code>3.3 K</code> lines of Bash code and devoured hell of a time from me to write and debug. You should also consider that this is my first heavy Bash experiment and I may not write quality code in the language since I'm a newcomer to Bash. I do not claim this OmniBackup is production ready, that's why I did version the first release at <code>0.1.0</code>. Also keep in mind that OmniBackup heavily relies on 3rd-party software which increase the chance for fatal bugs, therefore losing data. So, I provide OmniBackup without any warranties, guarantees or conditions, of any kind and I accept no liability or responsibility any misuse or damages. Please use it at your own risk and remember you're solely responsible for any resulting damage or data loss.
 
 **_Credits_**: Special thanks go to my fellow and long-time friend, _Morteza Sabetraftar_ for his help and ideas without whom OmniBackup lacked features or quality.
 
@@ -73,7 +73,7 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 
 * [Message Types and Their Meanings](#MessageTypes)  
 * [Requirements](#Requirements)  
-* [Configuration](#Configuration)  
+* [Installation](#Installation)  
 * [Configuring Temporary Directory](#ConfigTempDirectory)  
 * [Configuring Compression](#ConfigCompression)  
 * [Configuring Security](#ConfigSecurity)  
@@ -97,7 +97,7 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 
 ### Message Types and Their Meanings ###
 
-There are different kind of messages in OmniBackup:
+Before we go any further, you may want to know that other than regular logs there are different kind of messages in OmniBackup which may appear on screen, system logs or mail reports:
 
 * <code>DEBUG</code> it's for development purpose only, so you should not see any message of this kind.
 * <code>ERROR</code> some error happened, but the program is able to continue.
@@ -165,8 +165,96 @@ I should add, not all of the above dependencies are required in order for OmniBa
 <code>sysutils/flock</code> probably a default on GNU/Linux, provides <code>flock</code> executable on FreeBSD
 <code>textproc/jq</code> provides <code>jq</code>
 
-Note that from the above list only <code>flock</code> and <code>jq</code> are mandatory requirements unless based on OmniBackup configuration other dependencies get pulled in. The best way to determine dependencies is to ignore the list of dependencies and first configure you OmniBackup instance. When your done with that, run OmniBackup manually for the first time. If it won't complain about any dependency then you are good to go. However, if it does, then you should resolve the dependencies one by one until you are good to go.
+Note that from the above list only <code>flock</code> and [jq](http://stedolan.github.io/jq/) are only mandatory requirements unless based on OmniBackup configuration other dependencies get pulled in. The best way to determine dependencies is to ignore the list of dependencies and first configure you OmniBackup instance. When your done with that, run OmniBackup manually for the first time. If it won't complain about any dependency then you are good to go. However, if it does, then you should resolve the dependencies one by one until you are good to go.
 
+
+<br />
+<a name="Installation"></a>
+
+### Installation ###
+
+Installing OmniBackup is really easy. It consists of two files: a huge script file, a little more than <code>100 KB</code> named <code>backup.sh</code> which looks for the second file at runtime named <code>config.json</code>. So, let's say I want to install OmniBackup inside <code>/usr/local/omnibackup</code> (I assume from now on you do everything as <code>root</code>):
+
+    $ cd /usr/local/
+    $ git clone https://gitlab.com/NuLL3rr0r/omnibackup.git
+    $ cd omnibackup
+    $ cp config.json.sample config.json
+    $ chmod u+r,u+x,go-r,a-w backup.sh
+    $ chmod u+r,u+w,go-r,go-w,a-x config.json
+
+All we did was cloning the code from [GitLab](https://gitlab.com/), copying over the sample configuration file as a template and assigning the right permissions for both the script and configuration file. I prefer to make this files <code>root</code> accessible only so no one else can read our configuration or modify it or even triggering the backup process.
+
+You should avoid running the backup script in this step. As I mentioned this is just a sample file to get you up and running. You should only run it after the final configuration since it pickups possible dependencies from the configuration file and it may baffles you with the wrong dependencies errors. So, for now open-up the configuration file in your favorite editor and take a look.
+
+
+<br />
+<a name="ConfigTempDirectory"></a>
+
+### Configuring Temporary Directory ###
+
+The first option inside <code>config.json</code> file is <code>temp_dir</code> which specifes the temporary or working directory for OmniBackup. <code>/var/tmp</code> seems to be a reasonable place. Feel free to adopt it according to your needs. But, if you are going to change it to a path other than <code>/var/tmp/</code> or <code>/tmp/</code> choose an empty one. Note that each time you run OmniBackup it creates a log file inside <code>/var/tmp/</code> e.g. <code>/var/tmp/backup.2015-07-31.58471.log</code>. You cannot change the path for the log files due to technical limitations. Keep in mind that OmniBackup never removes it log files due to their small footprints. They also may come handy when reports won't deliver to your email.
+
+{% codeblock config.json lang:json %}
+{
+    "temp_dir" :  "/var/tmp",
+.
+.
+.
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="ConfigCompression"></a>
+
+### Configuring Compression ###
+
+There are three options for compression:
+
+{% codeblock config.json lang:json %}
+    "compression" :
+    {
+        "algorithm"            : "lzma2",
+        "level"                : "6e",
+        "preserve_permissions" : "yes"
+    },
+{% endcodeblock %}
+
+<code>algorithm</code> accepts only four possible values: <code>lzma2</code>, <code>gzip</code> and <code>bzip2</code> which determines the compression algorithm, or, you can leave it empty for no compression. This affects the extension of the backup file which we call archive from now on. For <code>lzma2</code> it will be <code>.tar.xz</code>, for <code>gzip</code>, <code>.tar.gz</code>, for <code>bzip2</code>, <code>tar.bz2</code> and for no compression mode it will be simply <code>.tar</code>. Also, <code>lzma2</code>, <code>gizp</code> and <code>bzip2</code> values, pull in <code>xz</code>, <code>gizp</code> and <code>bizip2</code> binaries as dependency, respectively.
+
+For <code>gizp</code> and <code>bzip2</code> algorithms, <code>level</code> option accepts values between <code>1</code> to <code>9</code>. For <code>lzma2</code> algorithm it accepts values between <code>1</code> to <code>9</code> and <code>1e</code> to <code>9e</code>. <code>e</code> stands for extreme and aggressive compression which demands more RAM and CPU cycles. In case you choose no compression mode, the <code>level</code> will be ignored.
+
+<code>preserve_permissions</code> is self-explanatory, it preserve the archived files permissions inside the final archive file.
+
+
+<br />
+<a name="ConfigSecurity"></a>
+
+### Configuring Security ###
+
+Security module provides many features that you may not notice at the first sight:
+
+{% codeblock config.json lang:json %}
+    "security" :
+    {
+        "checksum_algorithm" :  "sha512",
+
+        "encryption" :
+        {
+            "enable"                    :  "yes",
+            "key_size"                  :  "256",
+            "base64_encode"             :  "no",
+            "passphrase"                :  "",
+            "random_passphrase_pattern" :  "print",
+            "random_passphrase_length"  :  128,
+            "private_key"               :  "~/keys/private.pem"
+        }
+    },
+{% endcodeblock %}
+
+Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/). So, some of the hash or encryption algorithms may not work in case you or your distribution built OpenSSL with those options excluded.
+
+<code>checksum_algorithm</code> provides various hash algorithm to verify the archive file integrity later on. <code>md4</code>, <code>md5</code>, <code>mdc2</code>, <code>ripemd160</code>, <code>sha</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code> and <code>whirlpool</code> algorithms are all well supported. If encryption is disabled or you did not provide a private key, OmniBackup creates a checksum file with extension <code>.sum</code> which includes the archive checksum and uploads it along with your archive file. If encryption is enabled and you did provide a private key it uses the checksum file to sign the archive and instead of uploading <code>.sum</code> file, uploads the signature file with extension <code>.sign</code>, so that it can be verified using your public key at the destination. In either case it includes the checksum in reports and send it through email to you.
 
 
 
