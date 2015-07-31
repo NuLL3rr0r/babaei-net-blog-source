@@ -26,11 +26,13 @@ This blog post covers setting up a basic secure and stateful [IPFW](https://www.
 
 <br />
 
-[IPFW](#IPFW)  
-[Sshguard](#Sshguard)  
-[Unban](#Unban)  
-[Sshguard Won't Start](#SshguardWontStart)  
-[Source Code](#SourceCode)  
+### Contents ###
+
+* [IPFW](#IPFW)  
+* [Sshguard](#Sshguard)  
+* [Unban](#Unban)  
+* [Sshguard Won't Start](#SshguardWontStart)  
+* [Source Code](#SourceCode)  
 
 
 <br />
