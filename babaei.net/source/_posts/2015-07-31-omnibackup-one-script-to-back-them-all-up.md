@@ -179,8 +179,8 @@ Installing OmniBackup is really easy. It consists of two files: a huge script fi
     $ git clone https://gitlab.com/NuLL3rr0r/omnibackup.git
     $ cd omnibackup
     $ cp config.json.sample config.json
-    $ chmod u+r,u+x,go-r,a-w backup.sh
-    $ chmod u+r,u+w,go-r,go-w,a-x config.json
+    $ chmod u+rx,go-r,a-w backup.sh
+    $ chmod u+rw,go-rw,a-x config.json
 
 All we did was cloning the code from [GitLab](https://gitlab.com/), copying over the sample configuration file as a template and assigning the right permissions for both the script and configuration file. I prefer to make this files <code>root</code> accessible only so no one else can read our configuration or modify it or even triggering the backup process.
 
