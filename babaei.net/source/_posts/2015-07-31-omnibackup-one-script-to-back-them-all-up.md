@@ -78,6 +78,7 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 * [Configuring Compression](#ConfigCompression)  
 * [Configuring Security](#ConfigSecurity)  
 * [Configuring Reports](#ConfigReports)  
+* [Configuring Remote Backup Servers](#ConfigRemoteBackupServers)  
 * [Configuring Backup Tasks](#ConfigBackupTasks)  
 * [Configuring Backup Priority and Order](#ConfigBackupPriorityOrder)  
 * [Configuring OpenLDAP Backups](#ConfigOpenLdapBackups)  
@@ -279,6 +280,86 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 <code>random_passphrase_length</code> a positive number bigger than <code>0</code> indicates the length of random passphrase.
 
 <code>private_key</code> is used to sign the encrypted archive file so anyone knows the file originated from you. Note it only accepts absolute path and relative paths starting from home folder (tilde <code>~</code>). Also, keep in mind that avoid space and exotic characters inside path. It's both sane and safe to only include A-Z, a-z and underscore in path because I cannot guarantee its safety.
+
+
+<br />
+<a name="ConfigReports"></a>
+
+### Configuring Reports ###
+
+Reports module is here to allow you become aware of all the details of the events that happened during the backup process through email:
+
+{% codeblock config.json lang:json %}
+    "reports" :
+    {
+        "mailboxes" :
+        [
+            {
+                "email_address"      :  "backups.archive@babaei.net",
+                "attach_passphrases" :  "yes"
+            },
+            {
+                "email_address"      :  "backups.verify@babaei.net",
+                "attach_passphrases" :  "no"
+            }
+        ],
+
+        "subject" :
+        {
+            "success" :  "[{HOST_NAME} {DATE}] BACKUP REPORT / SUCCESS",
+            "error"   :  "[{HOST_NAME} {DATE}] BACKUP REPORT / ERROR",
+            "fatal"   :  "[{HOST_NAME} {DATE}] BACKUP REPORT / FATAL ERROR"
+        },
+
+        "support_info" :  "Have question or need technical assistance, please visit http://www.babaei.net/ or write an email to info [ at ] babaei.net."
+    },
+{% endcodeblock %}
+
+<code>reports.mailboxes</code> is a JSON array of email addresses and their settings who will receive the backup report when it's done, either successfully or failed.
+
+<code>reports.mailboxes.email_address</code> should be a valid email address.
+
+<code>reports.mailboxes.attach_passphrases</code> determines whether the archive passphrases should be attached to the reports for that specific email or not.
+
+<code>reports.subject</code> provides the ability to determine the report subject for different scenarios that might happen during the backup process, so by looking at your inbox you immediately realize what happened and take action if it's neccessary. <code>{HOST_NAME}</code> and <code>{DATE}</code> are special placeholder keywords. They will be replaceed at runtime by the host name OmniBackup backup running on or the date the backup jobs started, respectively.
+
+<code>reports.success</code> is email subject when backup process finished successfully.
+<code>reports.error</code> is email subject when at least one error happened during the backup process.
+<code>reports.fatal</code> is email subject when backup process faces a fatal error so it could not finish the jobs.
+
+
+<br />
+<a name="ConfigRemoteBackupServers"></a>
+
+### Configuring Remote Backup Servers ###
+
+{% codeblock config.json lang:json %}
+    "remote" :
+    {
+        "keep_backup_locally" :  "partial",
+
+        "servers" :
+        [
+            {
+                "host"                :  "10.12.0.4",
+                "port"                :  "22",
+                "user"                :  "babaei",
+                "dir"                 :  "~/backups/{HOST_NAME}",
+                "backups_to_preserve" :  7,
+                "public_key"          :  "~/keys/10.12.0.4-babaei.pem"
+            },
+            {
+                "host"                :  "10.10.0.18",
+                "port"                :  "8931",
+                "user"                :  "babaei",
+                "dir"                 :  "~/backups/{HOST_NAME}",
+                "backups_to_preserve" :  31,
+                "public_key"          :  "~/keys/10.10.0.18-babaei.pem"
+            }
+        ]
+    },
+{% endcodeblock %}
+
 
 
 
