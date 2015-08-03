@@ -1028,6 +1028,8 @@ Reports module is here to allow you become aware of all the details of the event
 
 ### Source Code ###
 
+[Check out source code on GitLab](https://gitlab.com/NuLL3rr0r/omnibackup/)
 
+[Check out source code on GitHub](https://github.com/NuLL3rr0r/omnibackup/)
 
 
