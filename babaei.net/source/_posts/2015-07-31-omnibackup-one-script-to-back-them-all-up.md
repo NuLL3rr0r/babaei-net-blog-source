@@ -193,9 +193,9 @@ You should avoid running the backup script in this step. As I mentioned this is 
 
 ### Configuring Temporary Directory ###
 
-The first option inside <code>config.json</code> file is <code>temp_dir</code> which specifes the temporary or working directory for OmniBackup. <code>/var/tmp</code> seems to be a reasonable place. Feel free to adopt it according to your needs. But, if you are going to change it to a path other than <code>/var/tmp/</code> or <code>/tmp/</code> choose an empty one. Note that each time you run OmniBackup it creates a log file inside <code>/var/tmp/</code> e.g. <code>/var/tmp/backup.2015-07-31.58471.log</code>. You cannot change the path for the log files due to technical limitations. Keep in mind that OmniBackup never removes it log files due to their small footprints. They also may come handy when reports won't deliver to your email.
+The first option inside <code>config.json</code> file is <code>.temp_dir</code> which specifes the temporary or working directory for OmniBackup. <code>/var/tmp</code> seems to be a reasonable place. Feel free to adopt it according to your needs. But, if you are going to change it to a path other than <code>/var/tmp/</code> or <code>/tmp/</code> choose an empty one. Note that each time you run OmniBackup it creates a log file inside <code>/var/tmp/</code> e.g. <code>/var/tmp/backup.2015-07-31.58471.log</code>. You cannot change the path for the log files due to technical limitations. Keep in mind that OmniBackup never removes it log files due to their small footprints. They also may come handy when reports won't deliver to your email.
 
-{% codeblock config.json lang:json %}
+{% codeblock config.json lang:js %}
 {
     "temp_dir" :  "/var/tmp",
 }
@@ -209,20 +209,22 @@ The first option inside <code>config.json</code> file is <code>temp_dir</code> w
 
 There are three options for compression:
 
-{% codeblock config.json lang:json %}
+{% codeblock config.json lang:js %}
+{
     "compression" :
     {
         "algorithm"            : "lzma2",
         "level"                : "6e",
         "preserve_permissions" : "yes"
     },
+}
 {% endcodeblock %}
 
-<code>algorithm</code> accepts only four possible values: <code>lzma2</code>, <code>gzip</code> and <code>bzip2</code> which determines the compression algorithm, or, you can leave it empty for no compression. This affects the extension of the backup file which we call archive from now on. For <code>lzma2</code> it will be <code>.tar.xz</code>, for <code>gzip</code>, <code>.tar.gz</code>, for <code>bzip2</code>, <code>tar.bz2</code> and for no compression mode it will be simply <code>.tar</code>. Also, <code>lzma2</code>, <code>gizp</code> and <code>bzip2</code> values, pull in <code>xz</code>, <code>gizp</code> and <code>bizip2</code> binaries as dependency, respectively.
+<code>.compression.algorithm</code> accepts only four possible values: <code>lzma2</code>, <code>gzip</code> and <code>bzip2</code> which determines the compression algorithm, or, you can leave it empty for no compression. This affects the extension of the backup file which we call archive from now on. For <code>lzma2</code> it will be <code>.tar.xz</code>, for <code>gzip</code>, <code>.tar.gz</code>, for <code>bzip2</code>, <code>tar.bz2</code> and for no compression mode it will be simply <code>.tar</code>. Also, <code>lzma2</code>, <code>gizp</code> and <code>bzip2</code> values, pull in <code>xz</code>, <code>gizp</code> and <code>bizip2</code> binaries as dependency, respectively.
 
-For <code>gizp</code> and <code>bzip2</code> algorithms, <code>level</code> option accepts values between <code>1</code> to <code>9</code>. For <code>lzma2</code> algorithm it accepts values between <code>1</code> to <code>9</code> and <code>1e</code> to <code>9e</code>. <code>e</code> stands for extreme and aggressive compression which demands more RAM and CPU cycles. In case you choose no compression mode, the <code>level</code> will be ignored.
+For <code>gizp</code> and <code>bzip2</code> algorithms, <code>.compression.level</code> option accepts values between <code>1</code> to <code>9</code>. For <code>lzma2</code> algorithm it accepts values between <code>1</code> to <code>9</code> and <code>1e</code> to <code>9e</code>. <code>e</code> stands for extreme and aggressive compression which demands more RAM and CPU cycles. In case you choose no compression mode, the <code>level</code> will be ignored.
 
-<code>preserve_permissions</code> is self-explanatory, it preserve the archived files permissions inside the final archive file.
+<code>.compression.preserve_permissions</code> is self-explanatory, it preserve the archived files permissions inside the final archive file.
 
 
 <br />
@@ -232,7 +234,8 @@ For <code>gizp</code> and <code>bzip2</code> algorithms, <code>level</code> opti
 
 Security module provides many features that you may not notice at the first sight:
 
-{% codeblock config.json lang:json %}
+{% codeblock config.json lang:js %}
+{
     "security" :
     {
         "checksum_algorithm" :  "sha512",
@@ -248,21 +251,22 @@ Security module provides many features that you may not notice at the first sigh
             "private_key"               :  "~/keys/private.pem"
         }
     },
+}
 {% endcodeblock %}
 
 Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/). So, some of the hash or encryption algorithms may not work in case you or your distribution built OpenSSL with those options excluded.
 
-<code>checksum_algorithm</code> provides various hash algorithm to verify the archive file integrity later on. <code>md4</code>, <code>md5</code>, <code>mdc2</code>, <code>ripemd160</code>, <code>sha</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code> and <code>whirlpool</code> algorithms are all valid options and well supported. If encryption is disabled or you did not provide a private key, OmniBackup creates a checksum file with extension <code>.sum</code> which includes the archive checksum and uploads it along with your archive file. If encryption is enabled and you did provide a private key it uses the checksum file to sign the archive and instead of uploading <code>.sum</code> file, uploads the signature file with extension <code>.sign</code>, so that it can be verified using your public key at the destination. In either case OmniBackup includes the checksum in reports and send it through email to you.
+<code>.security.checksum_algorithm</code> provides various hash algorithm to verify the archive file integrity later on. <code>md4</code>, <code>md5</code>, <code>mdc2</code>, <code>ripemd160</code>, <code>sha</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code> and <code>whirlpool</code> algorithms are all valid options and well supported. If encryption is disabled or you did not provide a private key, OmniBackup creates a checksum file with extension <code>.sum</code> which includes the archive checksum and uploads it along with your archive file. If encryption is enabled and you did provide a private key it uses the checksum file to sign the archive and instead of uploading <code>.sum</code> file, uploads the signature file with extension <code>.sign</code>, so that it can be verified using your public key at the destination. In either case OmniBackup includes the checksum in reports and send it through email to you.
 
-<code>enable</code> should either set to <code>yes</code> or <code>no</code>. If you set it to <code>no</code> the rest of the options will be ignored.
+<code>.security.encryption.enable</code> should either set to <code>yes</code> or <code>no</code>. If you set it to <code>no</code> the rest of the options will be ignored.
 
-<code>key_size</code> only accepts <code>128</code>, <code>192</code> and <code>256</code> which in turn enables AES-128, AES-192 and AES-256 encryption.
+<code>.security.encryption.key_size</code> only accepts <code>128</code>, <code>192</code> and <code>256</code> which in turn enables AES-128, AES-192 and AES-256 encryption.
 
-<code>base64_encode</code> if you set it to <code>yes</code> encrypted archive file, signature file and the encrypted archive passphrase will be base64 encoded, otherwise they all be in binary format which saves up disk space and bandwidth.
+<code>.security.encryption.base64_encode</code> if you set it to <code>yes</code> encrypted archive file, signature file and the encrypted archive passphrase will be base64 encoded, otherwise they all be in binary format which saves up disk space and bandwidth.
 
-<code>passphrase</code> is the passphrase to encrypt or decrypt archive files. If you leave it blank it, OmniBackup generates a random password for each archive file. Otherwise, it uses the specified password for all archive files and ignore both <code>random_passphrase_pattern</code> and <code>random_passphrase_length</code>. If you decide to use a unique password for all backups make sure <code>config.json</code> is only readable by its owner. If set to blank, it pulls in <code>grep</code>, <code>head</code>, <code>strings</code> and <code>tr</code> as dependency.
+<code>.security.encryption.passphrase</code> is the passphrase to encrypt or decrypt archive files. If you leave it blank it, OmniBackup generates a random password for each archive file. Otherwise, it uses the specified password for all archive files and ignore both <code>random_passphrase_pattern</code> and <code>random_passphrase_length</code>. If you decide to use a unique password for all backups make sure <code>config.json</code> is only readable by its owner. If set to blank, it pulls in <code>grep</code>, <code>head</code>, <code>strings</code> and <code>tr</code> as dependency.
 
-<code>random_passphrase_pattern</code> indicates the pattern to generate random passphrase for more info see [GNU](http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html) and [BSD](https://www.freebsd.org/cgi/man.cgi?query=grep) implementation of grep:
+<code>.security.encryption.random_passphrase_pattern</code> indicates the pattern to generate random passphrase for more info see [GNU](http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html) and [BSD](https://www.freebsd.org/cgi/man.cgi?query=grep) implementation of grep:
 
 * <code>alnum</code>: Alphanumeric characters: <code>alpha</code> and <code>digit</code>; in the <code>C</code> locale and ASCII character encoding, this is the same as <code>[0-9A-Za-z]</code>.
 * <code>alpha</code>: Alphabetic characters: <code>lower</code> and <code>upper</code>; in the <code>C</code> locale and ASCII character encoding, this is the same as <code>[A-Za-z]</code>.
@@ -277,9 +281,9 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 * <code>upper</code>: Upper-case letters: in the <code>C</code> locale and ASCII character encoding, this is <code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code>.
 * <code>xdigit</code>: Hexadecimal digits: <code>0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f</code>.
 
-<code>random_passphrase_length</code> a positive number bigger than <code>0</code> indicates the length of random passphrase.
+<code>.security.encryption.random_passphrase_length</code> a positive number bigger than <code>0</code> indicates the length of random passphrase.
 
-<code>private_key</code> is used to sign the encrypted archive file so anyone knows the file originated from you. Note it only accepts absolute path and relative paths starting from home folder (tilde <code>~</code>). Also, keep in mind that avoid space and exotic characters inside path. It's both sane and safe to only include A-Z, a-z and underscore in path because I cannot guarantee its safety.
+<code>.security.encryption.private_key</code> is used to sign the encrypted archive file so anyone knows the file originated from you. Note it only accepts absolute path and relative paths starting from home folder (tilde <code>~</code>). Also, keep in mind that avoid space and exotic characters inside path. It's both sane and safe to only include A-Z, a-z and underscore in path because I cannot guarantee its safety.
 
 
 <br />
@@ -289,7 +293,8 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 
 Reports module is here to allow you become aware of all the details of the events that happened during the backup process through email:
 
-{% codeblock config.json lang:json %}
+{% codeblock config.json lang:js %}
+{
     "reports" :
     {
         "mailboxes" :
@@ -313,27 +318,32 @@ Reports module is here to allow you become aware of all the details of the event
 
         "support_info" :  "Have question or need technical assistance, please visit http://www.babaei.net/ or write an email to info [ at ] babaei.net."
     },
+}
 {% endcodeblock %}
 
-<code>reports.mailboxes</code> is a JSON array of email addresses and their settings who will receive the backup report when it's done, either successfully or failed.
+<code>.reports.mailboxes</code> is a JSON array of email addresses and their settings who will receive the backup report when it's done, either successfully or failed.
 
-<code>reports.mailboxes.email_address</code> should be a valid email address.
+<code>.reports.mailboxes.email_address</code> should be a valid email address.
 
-<code>reports.mailboxes.attach_passphrases</code> determines whether the archive passphrases should be attached to the reports for that specific email or not.
+<code>.reports.mailboxes.attach_passphrases</code> determines whether the archive passphrases should be attached to the reports for that specific email or not.
 
-<code>reports.subject</code> provides the ability to determine the report subject for different scenarios that might happen during the backup process, so by looking at your inbox you immediately realize what happened and take action if it's neccessary. <code>{HOST_NAME}</code> and <code>{DATE}</code> are special placeholder keywords. They will be replaceed at runtime by the host name OmniBackup backup running on or the date the backup jobs started, respectively.
+<code>.reports.subject</code> provides the ability to determine the report subject for different scenarios that might happen during the backup process, so by looking at your inbox you immediately realize what happened and take action if it's neccessary. <code>{HOST_NAME}</code> and <code>{DATE}</code> are special placeholder keywords. They will be replaceed at runtime by the host name OmniBackup backup running on or the date the backup jobs started, respectively.
 
-<code>reports.success</code> is email subject when backup process finished successfully.
-<code>reports.error</code> is email subject when at least one error happened during the backup process.
-<code>reports.fatal</code> is email subject when backup process faces a fatal error so it could not finish the jobs.
+<code>.reports.success</code> is email subject when backup process finished successfully.
 
+<code>.reports.error</code> is email subject when at least one error happened during the backup process.
+
+<code>.reports.fatal</code> is email subject when backup process faces a fatal error so it could not finish the jobs.
+
+<code>.reports.support_info</code>
 
 <br />
 <a name="ConfigRemoteBackupServers"></a>
 
 ### Configuring Remote Backup Servers ###
 
-{% codeblock config.json lang:json %}
+{% codeblock config.json lang:js %}
+{
     "remote" :
     {
         "keep_backup_locally" :  "partial",
@@ -358,8 +368,665 @@ Reports module is here to allow you become aware of all the details of the event
             }
         ]
     },
+}
 {% endcodeblock %}
 
+
+<br />
+<a name="ConfigBackupTasks"></a>
+
+### Configuring Backup Tasks ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "archive_name" :  "{DATE}_{HOST_NAME}_{TAG}",
+    },
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="ConfigBackupPriorityOrder"></a>
+
+### Configuring Backup Priority and Order ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "priority_order" :
+        [
+            "openldap",
+            "database",
+            "filesystem",
+            "misc"
+        ],
+    },
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="ConfigOpenLdapBackups"></a>
+
+### Configuring OpenLDAP Backups ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "openldap" :
+        {
+            "flags" :  "",
+            "tag"   :  "openldap-babaei-net"
+        },
+    },
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="ConfigDatabaseBackups"></a>
+
+### Configuring Database Backups ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "database" :
+        {
+            "priority_order" :
+            [
+                "postgres",
+                "mysql"
+            ],
+        },
+    },
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="ConfigPostgreSqlBackups"></a>
+
+### Configuring PostgreSQL Database Backups ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "database" :
+        {
+            "postgres" :
+            {
+                "user" :  "pgsql",
+
+                "databases" :
+                [
+                    {
+                        "tag"     :  "postgres",
+                        "name"    :  "*",
+                        "comment" :  "All PostgreSQL databases"
+                    },
+                    {
+                        "tag"     :  "postgres-gitlab",
+                        "name"    :  "gitlab",
+                        "comment" :  "GitLab database"
+                    },
+                    {
+                        "tag"     :  "postgres-redmine",
+                        "name"    :  "redmine",
+                        "comment" :  "Redmine database"
+                    },
+                    {
+                        "tag"     :  "postgres-agilo",
+                        "name"    :  "agilo",
+                        "comment" :  "Agilo for Trac database"
+                    },
+                    {
+                        "tag"     :  "postgres-owncloud",
+                        "name"    :  "owncloud",
+                        "comment" :  "ownCloud database"
+                    },
+                    {
+                        "tag"     :  "postgres-tracks",
+                        "name"    :  "tracks",
+                        "comment" :  "Get on Tracks database"
+                    }
+                ]
+            },
+        },
+    },
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="ConfigMariaDbMySqlBackups"></a>
+
+### Configuring MariaDB and MySQL Databases Backups ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "database" :
+        {
+            "mysql" :
+            {
+                "user" :  "root",
+
+                "databases" :
+                [
+                    {
+                        "tag"     :  "mysql",
+                        "name"    :  "*",
+                        "comment" :  "All MySQL databases"
+                    },
+                    {
+                        "tag"     :  "mysql-piwik",
+                        "name"    :  "piwik",
+                        "comment" :  "Piwik database"
+                    },
+                    {
+                        "tag"     :  "mysql-osticket",
+                        "name"    :  "osticket",
+                        "comment" :  "Piwik database"
+                    }
+                ]
+            }
+        },
+    },
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="ConfigFilesystemBackups"></a>
+
+### Configuring Filesystem Backups ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "filesystem" :
+        [
+            {
+                "tag"             :  "www",
+                "path"            :  "/usr/local/www/nginx",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "Web server root directory"
+            },
+            {
+                "tag"             :  "repos",
+                "path"            :  "/usr/local/gitlab",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "GitLab repositories"
+            },
+            {
+                "tag"             :  "mail",
+                "path"            :  "/usr/local/mail",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "Mail server root directory"
+            },
+            {
+                "tag"             :  "etc-system",
+                "path"            :  "/etc",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "Base system configurations"
+            },
+            {
+                "tag"             :  "etc-ports",
+                "path"            :  "/usr/local/etc",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "Installed ports configurations"
+            },
+            {
+                "tag"             :  "loader-conf",
+                "path"            :  "/boot/loader.conf",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "System bootstrap configuration information"
+            },
+            {
+                "tag"             :  "boot-splash",
+                "path"            :  "/boot/splash.pcx",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "Boot-time splash screen"
+            },
+            {
+                "tag"             :  "slim-fbsd-theme",
+                "path"            :  "/usr/local/share/slim/themes/fbsd",
+                "follow_symlinks" :  "yes",
+                "comment"         :  "FreeBSD SLiM theme"
+            }
+        ],
+    },
+}
+{% endcodeblock %}
+
+<br />
+<a name="ConfigOtherBackups"></a>
+
+### Configuring Other Backups ###
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "misc" :
+        [
+            {
+                "tag"                   :  "cloudflare-ip-ranges",
+                "command"               :  "/usr/local/www/nginx/cron/cloudflare-ip-ranges-updater.sh",
+                "args"                  :  "ipv4 ipv6",
+                "path"                  :  "/usr/local/www/nginx/include/cloudflare",
+                "follow_symlinks"       :  "yes",
+                "remove_path_when_done" :  "no",
+                "comment"               :  "CloudFlare IP database for nginx RealIP module"
+            }
+        ]
+    },
+}
+{% endcodeblock %}
+
+
+<br />
+<a name="Config3rdPartyCommandsStatusCode"></a>
+
+### 3rd-party Commands Status Codes ###
+
+{% codeblock config.json lang:js %}
+{
+    "command" :
+    {
+        "basename" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "bzip2" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "caller" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "cat" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "cd" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "cut" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "date" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "du" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "dirname" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "echo" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "expr" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "flock" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "grep" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "gzip" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "head" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "hostname" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "jq" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_1"   :  "The last output value was either false or null.",
+                "rc_2"   :  "Usage problem or system error.",
+                "rc_3"   :  "Compile error,.",
+                "rc_4"   :  "Parse error.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "logger" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "mail" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "mkdir" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "mysqldump" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "openssl" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "pg_dump" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "pg_dumpall" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "printf" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "readlink" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "rm" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "scp" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "Operation was successful.",
+                "rc_1"   :  "General error in file copy.",
+                "rc_2"   :  "Destination is not directory, but it should be.",
+                "rc_3"   :  "Maximum symlink level exceeded.",
+                "rc_4"   :  "Connecting to host failed.",
+                "rc_5"   :  "Connection broken.",
+                "rc_6"   :  "File does not exist.",
+                "rc_7"   :  "No permission to access file.",
+                "rc_8"   :  "General error in sftp protocol.",
+                "rc_9"   :  "File transfer protocol mismatch.",
+                "rc_10"  :  "No file matches a given criteria.",
+                "rc_65"  :  "Host not allowed to connect.",
+                "rc_66"  :  "General error in ssh protocol.",
+                "rc_67"  :  "Key exchange failed.",
+                "rc_68"  :  "Reserved.",
+                "rc_69"  :  "MAC error.",
+                "rc_70"  :  "Compression error.",
+                "rc_71"  :  "Service not available.",
+                "rc_72"  :  "Protocol version not supported.",
+                "rc_73"  :  "Host key not verifiable.",
+                "rc_74"  :  "Connection failed.",
+                "rc_75"  :  "Disconnected by application.",
+                "rc_76"  :  "Too many connections.",
+                "rc_77"  :  "Authentication cancelled by user.",
+                "rc_78"  :  "No more authentication methods available.",
+                "rc_79"  :  "Invalid user name.",
+                "rc_any" :  "Unknown scp error."
+            }
+        },
+
+        "slapcat" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "ssh" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "Operation was successful.",
+                "rc_1"   :  "Generic error.",
+                "rc_2"   :  "Connection failed.",
+                "rc_10"  :  "No file matches a given criteria.",
+                "rc_65"  :  "Host not allowed to connect.",
+                "rc_66"  :  "General error in ssh protocol.",
+                "rc_67"  :  "Key exchange failed.",
+                "rc_68"  :  "Reserved.",
+                "rc_69"  :  "MAC error.",
+                "rc_70"  :  "Compression error.",
+                "rc_71"  :  "Service not available.",
+                "rc_72"  :  "Protocol version not supported.",
+                "rc_73"  :  "Host key not verifiable.",
+                "rc_74"  :  "Connection failed.",
+                "rc_75"  :  "Disconnected by application.",
+                "rc_76"  :  "Too many connections.",
+                "rc_77"  :  "Authentication cancelled by user.",
+                "rc_78"  :  "No more authentication methods available.",
+                "rc_79"  :  "Invalid user name.",
+                "rc_255" :  "Generic ssh error.",
+                "rc_any" :  "Unknown ssh error."
+            }
+        },
+
+        "strings" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "sudo" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "tar" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "tr" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        },
+
+        "xz" :
+        {
+            "return_code" :
+            {
+                "rc_0"   :  "The operation completed successfully.",
+                "rc_any" :  "The operation failed."
+            }
+        }
+    }
+}
+{% endcodeblock %}
+
+
+
+<br />
+<a name="FirstRun"></a>
+
+### First Run ###
+
+
+<br />
+<a name="Crontab"></a>
+
+### Crontab ###
+
+
+<br />
+<a name="SourceCode"></a>
+
+### Source Code ###
 
 
 
