@@ -639,6 +639,13 @@ Reports module is here to allow you become aware of all the details of the event
 
 ### 3rd-party Commands Status Codes ###
 
+<code>.command</code> is a vital part of the configuration file and it should be present in order for the backup script to run properly. If you do not know what is this, just leave it alone in the configuration file. That's why I put it at the end of the file, although the order does not matter in the configuration file. For two reason OmniBackup needs this part:
+
+- When OmniBackup runs, the first thing it looks for are the necessary commands. It reads them from this list.
+- When OmniBackup runs a third party command in case of failure it has to translate the return code of that command to a human understandable message. So, if you want to know what happened in case of error you should leave this alone.
+
+For example look at the return codes for <code>jq</code>, <code>scp</code> and <code>ssh</code> commands in the following list. Note that the return codes and their equivalent messages may not be accurate. Believe me, I tried my best to find the accurate ones. If you found something inaccurate, please let me know.
+
 {% codeblock config.json lang:js %}
 {
     "command" :
