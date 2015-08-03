@@ -1022,6 +1022,33 @@ Reports module is here to allow you become aware of all the details of the event
 
 ### Crontab ###
 
+It is recommended to [learn the fundamentals of configuring cron](/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/) if you are not familiar with the topic. Anyway to schedule a backup task as user <code>root</code>:
+
+    $ crontab -e -u root
+
+Then add the backup cron job and make sure the PATH variable is peresent with the following values:
+
+{% codeblock config.json lang:js %}
+SHELL=/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+MAILTO=""
+
+# Order of crontab fields
+# minute    hour    mday    month   wday    command
+
+# OmniBackup
+# at 01:00am UTC
+00      01      *       *       *       /usr/local/omnibackup/backup.sh
+{% endcodeblock %}
+
+To see whether the cron job was added successfully or not, you can issue the following command:
+
+    $ crontab -l -u root
+
+In the above example I scheduled the backup task to run at <code>01:00 AM</code> and since the server timezone is UTC it will run at <code>01:00 AM UTC</code> each night. To test if the backup task runs properly, we can run the script with a limited set of environment variables:
+
+    $ env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /usr/local/omnibackup/backup.sh
+
 
 <br />
 <a name="SourceCode"></a>

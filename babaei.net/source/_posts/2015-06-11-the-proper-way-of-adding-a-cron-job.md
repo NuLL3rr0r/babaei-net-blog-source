@@ -64,7 +64,7 @@ Or for a specefic user you can try this one (e.g. <code>babaei</code>):
 
     $ crontab -l -u babaei
 
-As you can see I added a few environment variables to the beginning of my crontab file. This is due to the fact that your cron scripts may not run properly due to executable path issues (e.g. you forgot to use absolute paths for commands you called in your scripts, so it won't be able to find those commands you used in your scripts). If you want to test whether your scripts run properly or not, you should replicate the environment that would be used to run your scripts by testing them with the limited set of environment variables set by cron:
+As you can see I added a few environment variables to the beginning of my crontab file. This is due to the fact that your cron scripts may not run properly due to executable path issues (e.g. you forgot to use absolute paths for commands you called in your scripts, so it won't be able to find those commands you used in your scripts). If you want to test whether your scripts run properly or not, you should replicate the environment that would be used to run your scripts by testing them with a limited set of environment variables set by cron:
 
     $ env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /path/to/your/scriptname.sh
 
