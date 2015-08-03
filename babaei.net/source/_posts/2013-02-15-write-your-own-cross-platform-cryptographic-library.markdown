@@ -483,9 +483,9 @@ Release:
 
 ### Source Code ###
 
-[Full source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
+[Check out source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
-[Full source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
+[Check out source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
 {% codeblock crypto.hpp lang:cpp %}
 ///  (The MIT License)
