@@ -1026,7 +1026,7 @@ It is recommended to [learn the fundamentals of configuring cron](/blog/2015/06/
 
     $ crontab -e -u root
 
-Then add the backup cron job and make sure the PATH variable is peresent with the following values:
+Then add the backup cron job and make sure the <code>PATH</code> variable is peresent with the following values:
 
 {% codeblock config.json lang:js %}
 SHELL=/bin/sh
