@@ -93,11 +93,12 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 * [First Run](#FirstRun)  
 * [Crontab](#Crontab)  
 * [Restore](#Restore)  
-* [Restore Encrypted Archives](#RestoreEncryptedArchives)  
-* [Restore Archives](#RestoreArchives)  
-* [Restore OpenLDAP](#RestoreOpenLDAP)  
-* [Restore PostgreSQL](#RestorePostgreSQL)  
-* [Restore MariaDB or MySQL](#RestoreMariaDbMySQL)  
+* [Restoring Encrypted Archives](#RestoringEncryptedArchives)  
+* [Restoring Archives](#RestoringArchives)  
+* [Restoring OpenLDAP](#RestoringOpenLDAP)  
+* [Restoring PostgreSQL](#RestoringPostgreSQL)  
+* [Restoring MariaDB or MySQL](#RestoringMariaDbMySQL)  
+* [Staying Away From Disaster](#StayingAwayFromDisaster)  
 * [Source Code](#SourceCode)  
 
 
@@ -1247,33 +1248,45 @@ In the above example I scheduled the backup task to run at <code>01:00 AM</code>
 
 
 <br />
-<a name="RestoreEncryptedArchives"></a>
+<a name="RestoringEncryptedArchives"></a>
 
-### Restore Encrypted Archives ###
-
-
-<br />
-<a name="RestoreArchives"></a>
-
-### Restore Archives ###
+### Restoring Encrypted Archives ###
 
 
 <br />
-<a name="RestoreOpenLDAP"></a>
+<a name="RestoringArchives"></a>
 
-### Restore OpenLDAP ###
-
-
-<br />
-<a name="RestorePostgreSQL"></a>
-
-### Restore PostgreSQL ###
+### Restoring Archives ###
 
 
 <br />
-<a name="RestoreMariaDbMySQL"></a>
+<a name="RestoringOpenLDAP"></a>
 
-### Restore MariaDB or MySQL ###
+### Restoring OpenLDAP ###
+
+
+<br />
+<a name="RestoringPostgreSQL"></a>
+
+### Restoring PostgreSQL ###
+
+
+<br />
+<a name="RestoringMariaDbMySQL"></a>
+
+### Restoring MariaDB or MySQL ###
+
+
+<br />
+<a name="StayingAwayFromDisaster"></a>
+
+### Staying Away From Disaster ###
+
+{% blockquote Grant Fritchey https://www.simple-talk.com/sql/backup-and-recovery/backup-verification-tips-for-database-backup-testing/ Backup Verification: Tips for Database Backup Testing %}
+There’s an old saying “Your data is only as good as your last backup.” That’s very true. But, there’s a little known corollary to this: “Your backups are only as good as your last restore.” It’s great that you’re backing up your databases, but you need to do more. You need to test your backups.
+
+The ultimate test for any backup is a restore to a server, ...
+{% endblockquote %}
 
 
 <br />
