@@ -88,6 +88,8 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 * [Configuring Filesystem Backups](#ConfigFilesystemBackups)  
 * [Configuring Other Backups](#ConfigOtherBackups)  
 * [3rd-party Commands status codes](#Config3rdPartyStatusCode)  
+* [Generating RSA Keys](#GeneratingRSAKeys)  
+* [Password-less SSH Login](#PasswordlessSshLogin)  
 * [First Run](#FirstRun)  
 * [Crontab](#Crontab)  
 * [Restore](#Restore)  
@@ -1048,6 +1050,60 @@ For example look at the return codes for <code>jq</code>, <code>scp</code> and <
 }
 {% endcodeblock %}
 
+
+<br />
+<a name="GeneratingRSAKeys"></a>
+
+### Generating RSA Keys ###
+
+Generating a pair of RSA keys is fairly an easy task. Just make sure you have OpenSSL installed and then we are good to go. To generate a 4096 private RSA key -- since I found it fair enough in terms of both security and performance --:
+
+    $ openssl genrsa -out private.pem 4096
+
+To extract the public key from our private key:
+
+    $ openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+
+
+<br />
+<a name="PasswordlessSshLogin"></a>
+
+### Password-less SSH Login ###
+
+Setting up password-less SSH login is even easier than [Generating RSA Keys](#GeneratingRSAKeys). First, run the following command the host which is going to run OmniBackup:
+
+    $ ssh-keygen -t rsa -b 4096
+
+When it starts asking questions, it's possible to choose the default answers by just pressing Enter on your keyboard:
+
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/babaei/.ssh/id_rsa): 
+    Enter passphrase (empty for no passphrase): 
+    Enter same passphrase again: 
+    Your identification has been saved in /home/babaei/.ssh/id_rsa.
+    Your public key has been saved in /home/babaei/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    e6:b1:2b:53:cd:22:0c:17:70:3f:a0:ab:c3:f4:b1:12 babaei@babaei-pc
+    The key's randomart image is:
+    +--[ RSA 4096]----+
+    |    ..o          |
+    |     o.o         |
+    |    .  .o        |
+    |    ...  .       |
+    |  E o+  So       |
+    | o + oooooo      |
+    |  = o  oo.       |
+    |   o  o  .       |
+    |       o.        |
+    +-----------------+
+
+Then push the public key to every single remote backup server by issuing the following command once for each one of them:
+
+    $ cat ~/.ssh/id_rsa.pub | ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST} 'cat >> ~/.ssh/authorized_keys'
+
+It asks for password the first time you run the above command. After that, you should be able to login to the remote host without being asked for password.
+
+    $ ssh {SSH_PORT_NUMBER} {USER_NAME}@{HOST}
 
 
 <br />
