@@ -90,6 +90,7 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 * [3rd-party Commands status codes](#Config3rdPartyStatusCode)  
 * [First Run](#FirstRun)  
 * [Crontab](#Crontab)  
+* [Restore](#Restore)  
 * [Source Code](#SourceCode)  
 
 
@@ -327,7 +328,7 @@ Reports module is here to allow you become aware of all the details of the event
 
 <code>.reports.mailboxes.attach_passphrases</code> determines whether the archive passphrases should be attached to the reports for that specific email or not.
 
-<code>.reports.subject</code> provides the ability to determine the report subject for different scenarios that might happen during the backup process, so by looking at your inbox you immediately realize what happened and take action if it's neccessary. <code>{HOST_NAME}</code> and <code>{DATE}</code> are special placeholder keywords. They will be replaceed at runtime by the host name OmniBackup backup running on or the date the backup jobs started, respectively.
+<code>.reports.subject</code> provides the ability to determine the report subject for different scenarios that might happen during the backup process, so by looking at your inbox you immediately realize what happened and take action if it's neccessary. <code>{HOST_NAME}</code> and <code>{DATE}</code> are special placeholder keywords. They will be replaced at runtime by the host name OmniBackup backup running on or the date the backup jobs started, respectively.
 
 <code>.reports.success</code> is email subject when backup process finished successfully.
 
@@ -335,12 +336,14 @@ Reports module is here to allow you become aware of all the details of the event
 
 <code>.reports.fatal</code> is email subject when backup process faces a fatal error so it could not finish the jobs.
 
-<code>.reports.support_info</code>
+<code>.reports.support_info</code> allows adding a customized support message to the end of the reports.
 
 <br />
 <a name="ConfigRemoteBackupServers"></a>
 
 ### Configuring Remote Backup Servers ###
+
+In the <code>.remote<code> section of the configuration file, you can configure as many as remote backup servers that you wish. If you plan to keep backup files locally, this section provides two possible ways to that which we'll discuss later. Note that you also have to setup password-less SSH login regardless of choosing a remote server or the current host as a backup server.
 
 {% codeblock config.json lang:js %}
 {
@@ -359,7 +362,7 @@ Reports module is here to allow you become aware of all the details of the event
                 "public_key"          :  "~/keys/10.12.0.4-babaei.pem"
             },
             {
-                "host"                :  "10.10.0.18",
+                "host"                :  "example.net",
                 "port"                :  "8931",
                 "user"                :  "babaei",
                 "dir"                 :  "~/backups/{HOST_NAME}",
@@ -371,11 +374,34 @@ Reports module is here to allow you become aware of all the details of the event
 }
 {% endcodeblock %}
 
+<code>.remote.keep_backup_locally</code> accepts four possible values.
+
+* <code>never</code>: always remove the temporary backup file, no matter what.
+* <code>error</code>: always remove the temporary backup file unless an upload error happens.
+* <code>partial</code>: keep the backup file in case the upload operation for a single backup file was partially successful. This indicates that at least one upload operation for a specific backup file has been successful. So, we are sure we have the backup file on one of the servers.
+* <code>success</code>: do not remove the local backup file and keep it inside <code>.temp_dir</code> directory, even in case of succeeding all upload operations. This option is one way to always keep the backup files locally although it is not recommended to use this method. If you're going to use this method anyway, it is recommended to use some other path instead of <code>/var/tmp/<code> and <code>/tmp</code> as your <code>.temp_dir</code>.
+
+* <code>.remote.servers</code> is a JSON array of backup servers. The second method to keep a copy of backup files locally is to define the current host as another remote server here which is the recommended method to do so.
+
+* <code>.remote.servers.host</code> is the host name or IP address of a backup server.
+
+* <code>.remote.servers.port</code> is the SSH port for that backup server.
+
+* <code>.remote.servers.user</code> is a user with SSH access on the server.
+
+* <code>.remote.servers.dir</code> specifies a directory in which we keep the backup files. <code>{HOST_NAME}</code> is recognized as a valid placeholder for current host (not the backup server) and should be automatically replaced at runtime.
+
+* <code>.backups_to_preserve</code> determines how many days of older backups should be kept. For example, if I set this to <code>10</code> for one of the backup servers, I should only have 10 days of backup on that server, plus today or tonight's backup. Be advised that any negative number -- e.g. -1 -- has special meanings here. It means do not clean up any old backups, basically keep them forever.
+
+* <code>public_key</code> is a public key in PEM format for encrypting passphrases. As you recall these passphrases are required to decrypt the archive files. If you do not specify a public key for a backup server you do not have access to encrypted passphrases on that server. It is useful in case that you do not wish to keep the passphrases in the same place as your encrypted archive files, even the encrypted ones. I must warn you, if you are using random passphrases and you did not provide any public key here, I should assure you that your backups are good for nothing. In addition to everything, it's possible to only provide one pair of RSA keys instead of one private key and multiple public keys if you are the sole receiver of the backup files on those multiple servers.
+
 
 <br />
 <a name="ConfigBackupTasks"></a>
 
 ### Configuring Backup Tasks ###
+
+The <code>.backup</code> is the actual part of the configuration which determines what has to be backed up. I 'll break theme done in to a few section for the sake of simplicity.
 
 {% codeblock config.json lang:js %}
 {
@@ -385,6 +411,12 @@ Reports module is here to allow you become aware of all the details of the event
     },
 }
 {% endcodeblock %}
+
+<code>.backup.archive_name</code> is a pattern for archive file names. You can prefix or postfix them as you wish by modifying this option. <code>{DATE}</code> shall be replaced by the actual date that OmniBackup started. The date format is fixed and looks like YYYY-MM-DD. <code>{HOST_NAME}</code> shall be replaced by the host that OmniBackup runs on. <code>{TAG}</code> is an option for each item that should be backup, so it shall be replaced with that option for each backup. So, a typical backup archive file should look like this with above configuration:
+
+    2015-07-31_core.babaei.net_openldap-babaei-net.tar.xz
+
+<code>2015-07-31</code>, <code>core.babaei.net</code> and <code>openldap-babaei-net</code> are {DATE}, {HOST_NAME} and {TAG} in the archive file name, respectively.
 
 
 <br />
@@ -1055,6 +1087,12 @@ To see whether the cron job was added successfully or not, you can issue the fol
 In the above example I scheduled the backup task to run at <code>01:00 AM</code> and since the server timezone is UTC it will run at <code>01:00 AM UTC</code> each night. To verify if the backup task runs properly, we can run the script with a limited set of environment variables:
 
     $ env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /usr/local/omnibackup/backup.sh
+
+
+<br />
+<a name="Restore"></a>
+
+### Restore ###
 
 
 <br />
