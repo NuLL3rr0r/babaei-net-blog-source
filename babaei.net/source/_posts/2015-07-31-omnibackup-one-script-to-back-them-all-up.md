@@ -93,6 +93,11 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 * [First Run](#FirstRun)  
 * [Crontab](#Crontab)  
 * [Restore](#Restore)  
+* [Restore Encrypted Archives](#RestoreEncryptedArchives)  
+* [Restore Archives](#RestoreArchives)  
+* [Restore OpenLDAP](#RestoreOpenLDAP)  
+* [Restore PostgreSQL](#RestorePostgreSQL)  
+* [Restore MariaDB or MySQL](#RestoreMariaDbMySQL)  
 * [Source Code](#SourceCode)  
 
 
@@ -426,6 +431,8 @@ The <code>.backup</code> is the actual part of the configuration which determine
 
 ### Configuring Backup Priority and Order ###
 
+One of the most important steps is to configure what should be backed up, in which order:
+
 {% codeblock config.json lang:js %}
 {
     "backup" :
@@ -441,11 +448,32 @@ The <code>.backup</code> is the actual part of the configuration which determine
 }
 {% endcodeblock %}
 
+<code>.backup.priority_order</code> only recognizes four elements: <code>openldap</code>, <code>database</code>, <code>filesystem</code> and <code>misc</code>. They should be self-explanatory. I have to add a comment for <code>misc</code> which is a special item in this list. It allows you to run an external script and pass arguments to it. After the script is finished, OmniBackup is able to backup a directory or file as its output. We will discuss this later.
+
+In the above example, OmniBackup backups in this order: OpenLDAP, databases, filesystem and finally other customized backups. You can change the order by swapping the their order of appearance. If you want for example avoid backing up, filesystem, you should remove it from list. Otherwise, OmniBackup looks for its configuration.
+
+Let's consider an example if I need to only backup first database and then filesystem:
+
+{% codeblock config.json lang:js %}
+{
+    "backup" :
+    {
+        "priority_order" :
+        [
+            "database",
+            "filesystem"
+        ],
+    },
+}
+{% endcodeblock %}
+
 
 <br />
 <a name="ConfigOpenLdapBackups"></a>
 
 ### Configuring OpenLDAP Backups ###
+
+This is all we need to backup OpenLDAP objects and directories using <code>slapcat</code>:
 
 {% codeblock config.json lang:js %}
 {
@@ -460,11 +488,17 @@ The <code>.backup</code> is the actual part of the configuration which determine
 }
 {% endcodeblock %}
 
+<code>.backup.openldap.flags</code> is used to pass arguments directly to <code>slapcat</code>. If you are OK with defaults or do not have any idea what is that, just leave it as it is.
+
+<code>.backup.openldap.tag</code> is used to replace {TAG} in <code>.backup.archive_name</code>. Since it's going to be part of a file name, it is a highly recommended to avoid using space or any other character that needs escaping or quotation.
+
 
 <br />
 <a name="ConfigDatabaseBackups"></a>
 
 ### Configuring Database Backups ###
+
+Like the general backup configuration, database section also needs specifying the types of backups and their priority order:
 
 {% codeblock config.json lang:js %}
 {
@@ -482,11 +516,17 @@ The <code>.backup</code> is the actual part of the configuration which determine
 }
 {% endcodeblock %}
 
+OmniBackup officially only recognizes two types of database to backup. PostgreSQL and MariaDB / MySQL. Of course it won't stop you from writing your own backup scripts for other databases. You can plug it to OmniBackup using <code>.backup.misc</code> which we'll describe later.
+
+Everything for <code>.backup.priority_order</code> also applies here.
+
 
 <br />
 <a name="ConfigPostgreSqlBackups"></a>
 
 ### Configuring PostgreSQL Database Backups ###
+
+Configuring PostgreSQL backups consists of two easy steps: first providing a user name and finally a list of databases to backup.
 
 {% codeblock config.json lang:js %}
 {
@@ -537,11 +577,29 @@ The <code>.backup</code> is the actual part of the configuration which determine
 }
 {% endcodeblock %}
 
+<code>backup.database.postgres.user</code> is the user's name which runs our PostgreSQL service. For example, on my FreeBSD system it is called <code>pgsql</code> and this user should created by Ports or pkgng installation of PostgreSQL. It has different names on different platforms. You can figure it out by investigating <code>/etc/passwd</code> or <code>/etc/master.passwd</code>:
+
+    $ cat /etc/passwd
+
+or
+
+    $ cat /etc/master.passwd
+
+<code>backup.database.postgres.databases</code> is a JSON array of PostgreSQL databases.
+
+<code>backup.database.postgres.databases.tag</code> is a tag for archive file name. Everything for <code>.backup.openldap.tag</code> also applies here.
+
+<code>backup.database.postgres.databases.name</code> is the exact database name inside your PostgreSQL instance. <code>*</code> means create a backup of all tables in one go in one single dump file. I found it a best practice to have an overall dump and separate dumps for each database. Why? Because, in one hand I sometimes forget to add new databases here, so that <code>*</code> takes care of that for me. On the other hand sometimes you may face error restoring or importing back all your databases using a single dump file -- due to a bug, human error or anything --, so you have each database backup separately, then you won't loose much.
+
+<code>backup.database.postgres.databases.comment</code> is used inside logs, syslogs and reports to refer to that table instead of name which is not always clear.
+
 
 <br />
 <a name="ConfigMariaDbMySqlBackups"></a>
 
 ### Configuring MariaDB and MySQL Databases Backups ###
+
+The same as PostgreSQL goes for configuring MariaDB or MySQL databases:
 
 {% codeblock config.json lang:js %}
 {
@@ -577,11 +635,23 @@ The <code>.backup</code> is the actual part of the configuration which determine
 }
 {% endcodeblock %}
 
+<code>backup.database.mysql.user</code> serves a similar purpose as <code>backup.database.postgres.user</code>.
+
+<code>backup.database.mysql.databases</code> is a JSON array of MariaDB / MySQL databases.
+
+<code>backup.database.mysql.databases.tag</code> is a tag for archive file name. Everything for <code>.backup.openldap.tag</code> also applies here.
+
+<code>backup.database.mysql.databases.name</code> serves the exact same purpose as <code>backup.database.postgres.name</code>.
+
+<code>backup.database.mysql.databases.comment</code> is used inside logs, syslogs and reports to refer to that table instead of name which is not always clear.
+
 
 <br />
 <a name="ConfigFilesystemBackups"></a>
 
 ### Configuring Filesystem Backups ###
+
+Configuring filesystem backups are much easier sinc it's just a list of paths (files or directories) to backup:
 
 {% codeblock config.json lang:js %}
 {
@@ -642,10 +712,21 @@ The <code>.backup</code> is the actual part of the configuration which determine
 }
 {% endcodeblock %}
 
+<code>backup.filesystem.tag</code> serves the exact same purpose as <code>backup.openldap.tag</code>.
+
+<code>backup.filesystem.path</code> is path to a directory or a file or symbolic link to backup.
+
+<code>backup.filesystem.follow_symlinks</code> determines whether to follow symbolic links or leave them out from backups.
+
+<code>backup.filesystem.comment</code> serves the exact same purpose as <code>backup.database.postgres.name</code>.
+
+
 <br />
 <a name="ConfigOtherBackups"></a>
 
 ### Configuring Other Backups ###
+
+Misc section allows plugging extra backup scripts to OmniBackup and capture their output to archive. This one is also a JSON array:
 
 {% codeblock config.json lang:js %}
 {
@@ -666,6 +747,20 @@ The <code>.backup</code> is the actual part of the configuration which determine
     },
 }
 {% endcodeblock %}
+
+<code>backup.misc.tag</code> serves the exact same purpose as <code>backup.openldap.tag</code>.
+
+<code>backup.misc.command</code> is the command or script name to run. Although you can use pipe, arguments or in general a complicated one-liner command it is not recommended to do so since this option does not meant for such a scenario. I highly recommend creating another script and put everything there. If your script succeeds return <code>0</code>, if not, return none zero values such as <code>1</code>.
+
+<code>backup.misc.args</code> is the list of arguments to pass to your script.
+
+<code>backup.misc.path</code> is path to a directory or a file or symbolic link to backup.
+
+<code>backup.misc.follow_symlinks</code> determines whether to follow symbolic links or leave them out from backups.
+
+<code>backup.misc.remove_path_when_done</code> determines whether to remove the path or not after the extra script finished it jobs successfully. Be careful with this one if it's still not clear.
+
+<code>backup.misc.comment</code> serves the exact same purpose as <code>backup.database.postgres.name</code>.
 
 
 <br />
@@ -1149,6 +1244,36 @@ In the above example I scheduled the backup task to run at <code>01:00 AM</code>
 <a name="Restore"></a>
 
 ### Restore ###
+
+
+<br />
+<a name="RestoreEncryptedArchives"></a>
+
+### Restore Encrypted Archives ###
+
+
+<br />
+<a name="RestoreArchives"></a>
+
+### Restore Archives ###
+
+
+<br />
+<a name="RestoreOpenLDAP"></a>
+
+### Restore OpenLDAP ###
+
+
+<br />
+<a name="RestorePostgreSQL"></a>
+
+### Restore PostgreSQL ###
+
+
+<br />
+<a name="RestoreMariaDbMySQL"></a>
+
+### Restore MariaDB or MySQL ###
 
 
 <br />
