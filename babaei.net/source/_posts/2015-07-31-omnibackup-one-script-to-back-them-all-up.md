@@ -101,8 +101,6 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 * [Restoring OpenLDAP Backups](#RestoringOpenLDAP)  
 * [Restoring PostgreSQL Backups](#RestoringPostgreSQL)  
 * [Restoring MariaDB or MySQL Backups](#RestoringMariaDbMySQL)  
-* [Restoring Filesystem Backups](#RestoringFilesystem)  
-* [Restoring Other Backups](#RestoringMisc)  
 * [Staying Away From Disaster](#StayingAwayFromDisaster)  
 * [Source Code](#SourceCode)  
 
@@ -605,7 +603,7 @@ or
 
 <code>backup.database.postgres.databases.tag</code> is a tag for archive file name. Everything for <code>.backup.openldap.tag</code> also applies here.
 
-<code>backup.database.postgres.databases.name</code> is the exact database name inside your PostgreSQL instance. * means create a backup of all tables in one go, in one single dump file. I found it a best practice to have an overall dump and separate dumps for each database. Why? Because, in one hand I sometimes forget to add new databases here, so that * takes care of that for me. On the other hand, sometimes you may face error restoring or importing back all your databases using a single dump file -- due to a bug, human error or anything --, so you have each database backup separately, then you won't loose much in such a scenario.
+<code>backup.database.postgres.databases.name</code> is the exact database name inside your PostgreSQL instance. * means create a backup of all tables in one go, in one single dump file. I found it a best practice to have an entire database dump and a separate dump for each database. Why? Because, in one hand I sometimes forget to add new databases here, so that * takes care of that for me. On the other hand, sometimes you may face error restoring or importing back all your databases using a single dump file -- due to a bug, human error or anything --, so you have each database backup separately, then you won't loose much in such a scenario.
 
 <code>backup.database.postgres.databases.comment</code> is used inside logs, syslogs and reports to refer to that table instead of name which is not always clear.
 
@@ -1209,7 +1207,7 @@ When it starts asking questions, it's possible to choose the default answers by 
     Your identification has been saved in /home/babaei/.ssh/id_rsa.
     Your public key has been saved in /home/babaei/.ssh/id_rsa.pub.
     The key fingerprint is:
-    e6:b1:2b:53:cd:22:0c:17:70:3f:a0:ab:c3:f4:b1:12 babaei@babaei-pc
+    e6:b1:2b:53:cd:22:0c:17:70:3f:a0:ab:c3:f4:b1:12 babaei@blog.babaei.net
     The key's randomart image is:
     +--[ RSA 4096]----+
     |    ..o          |
@@ -1292,7 +1290,7 @@ babaei:mohammad.babaei@babaei.net:mail.example.com:465
 root=postmaster
 mailhub=mail.example.com:465
 rewriteDomain=babaei.net
-hostname=myblog.babaei.net
+hostname=blog.babaei.net
 FromLineOverride=YES
 UseTLS=YES
 AuthUser=email@example.com
@@ -1380,10 +1378,10 @@ In order to restore anything backed-up by OmniBackup, the initial step is to ret
 e.g.
 
     $ mkdir -p /var/tmp/openldap-restore/
-    $ scp -P 22 babaei@10.12.0.4:~/backups/myblog.babaei.net/openldap-babaei-net/2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.* /var/tmp/openldap-restore/
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt            /var/tmp/openldap-restore   100%
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret     /var/tmp/openldap-restore   100%
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign       /var/tmp/openldap-restore   100%
+    $ scp -P 22 babaei@10.12.0.4:~/backups/blog.babaei.net/openldap-babaei-net/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.* /var/tmp/openldap-restore/
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt            /var/tmp/openldap-restore   100%
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret     /var/tmp/openldap-restore   100%
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign       /var/tmp/openldap-restore   100%
 
 The above example retrieves three files from the remote server <code>10.12.0.4</code> since I enabled encryption, into the directory <code>/var/tmp/openldap-restore</code>.
 
@@ -1397,36 +1395,36 @@ OK, depending on our encryption settings in OmniBackup's configuration file. Thi
 
 If encryption was enabled for our archive file without a public key, OmniBackup give us two file. They should have <code>.crypt</code> and <code>.crypt.sum</code> extensions:
 
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
 
 If we did provide a public key for a remote server, OmniBackup gives us two more files other than the actual archive file itself on that server with extensions <code>.crypt.secret</code> and <code>.crypt.sign</code>:
 
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
 
 The next step is to know whether our encrypted file is in binary or Base64 encoded format. If we did disable or enable Base64 encoding at the time of archive creation it should affect all <code>.crypt</code>, <code>.crypt.secret</code> and <code>.crypt.sign</code> files together. We can use <code>file</code> utility to distinguish these two formats:
 
 For example if it's Base64 encoded:
 
-    $ file 2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt: ASCII text
+    $ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: ASCII text
 
 If it's binary:
 
-    $ file 2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt: data
+    $ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: data
 
 Now, it's time to verify our archive's integrity. If you get only <code>.crypt</code> and <code>.crypt.sum</code> files, you can verify the archive integrity this way:
 
-    $ cat 2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
-    SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+    $ cat 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
+    SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
 The contents of the <code>.sum</code> file is nothing more than a hash generated from the contents of our actual archive file. In the above example the chosen hash was SHA-512. So, we have to verify the hash this way:
 
-    $ openssl dgst -sha512 2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    SHA512(2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+    $ openssl dgst -sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+    SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
 We've just reproduced the original hash and it looks exactly the same as the archived one which verifies the file integrity. But there is one flaw with encryption without a public key, we cannot be sure that someone else did not change the file and generate their own hash unless we find the emailed report or log files and check the hash against them.
 
@@ -1446,22 +1444,22 @@ Anyway, OpenSSL has support for the following hash algorithms:
 
 In addition to that, there are alternative utilities than OpenSSL to regenerate the archive hash. For example, FreeBSD provides <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha512</code> and <code>rmd160</code>, while GNU/Linux provides <code>md5sum</code>, <code>sha1sum</code>, <code>sha224sum</code>, <code>sha256sum</code>, <code>sha384sum</code> and <code>sha512sum</code> utilities to do so. No matter which tool or program you use, results must be the same:
 
-    $ sha512 2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    SHA512 (2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt) = 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+    $ sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+    SHA512 (2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt) = 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
 OK, let's assume you did provide a public key for the remote backup server that you've retrieved the archive file from. First, we have to verify the archive file's origin using the public key from OmniBackup's host (the current host). Note that this public key may not be the same as the public key provided by the remote backup server. It's a sibiling to private key in the <code>.security.encryption.option</code> of OmniBackup configuration file. For the sake of simplicity, from now on I assume you only have a single pair of keys called <code>private.pem</code> and <code>public.pem</code>.
 
-OK, the signature file for our example is <code>2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign</code>. So:
+OK, the signature file for our example is <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign</code>. So:
 
 For binary format:
 
-    $ openssl rsautl -verify -inkey public.pem -pubin -keyform PEM -in 2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
-    SHA512(2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+    $ openssl rsautl -verify -inkey public.pem -pubin -keyform PEM -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
+    SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
 For Base64 encoded format:
 
-    $ openssl base64 -d -in 2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign | openssl rsautl -verify -inkey public.pem -pubin -keyform PEM 
-    SHA512(2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+    $ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign | openssl rsautl -verify -inkey public.pem -pubin -keyform PEM 
+    SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
 If it prints out the archive file checksum in whatever hash format you chose as archive's checksum, then the file origin is valid and OK. From here on, you can verify the integrity as mentioned earlier.
 
@@ -1469,39 +1467,39 @@ If you did not use a unique password for all of your archive, we should take an 
 
     [encrypted_archive.crypt](SECRET_PASSPHRASE)
     e.g.
-    [2015-07-31_myblog.babaei.net_openldap-babaei-net.tar.xz.crypt](?PL].]2IFTm*P=M7moy?4OH_VP?i^0T.oN\S04C"k8?RTyeal^H+ZF^ Gz!Ihb;n?_sgADNY-#;Nn:Hs34ybpOSmgd/9,X1Yhv:JkeE]o{Z;|!\@f*VoWo6&lmI|(vzJ)
+    [2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt](?PL].]2IFTm*P=M7moy?4OH_VP?i^0T.oN\S04C"k8?RTyeal^H+ZF^ Gz!Ihb;n?_sgADNY-#;Nn:Hs34ybpOSmgd/9,X1Yhv:JkeE]o{Z;|!\@f*VoWo6&lmI|(vzJ)
 
 For those archives that have the <code>.secret</code> file, there is another way. It's possible to decrypt and extract the passphrase from it's <code>.secret</code> file using backup server's private key. Of course, it may or may not be different than OmniBackup's private key depending on your choice to use one pair of keys for everything or multiple ones at the time of archive creation. To decrypt the passphrase:
 
 For binary format:
 
-    $ openssl base64 -d -in 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt.secret | openssl rsautl -decrypt -inkey private.pem -out 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt.pwd
+    $ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret | openssl rsautl -decrypt -inkey private.pem -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
 
 For Base64 encoded format:
 
-    $ openssl rsautl -decrypt -inkey private.pem -in 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt.secret -out 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt.pwd
+    $ openssl rsautl -decrypt -inkey private.pem -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
 
-OK, what we did basically is decrypting and writing the passphrase to a file with <code>.pwd</code> extension called <code>2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt.pwd</code>. We decided to write it to a file since it's a random set of characters and it may for example contain spaces at the end which is not distinguishable. However, If you would like to print it on screen instead of a file, it's possible to omit the <code>-out</code> parameter from <code>openssl</code> command line.
+OK, what we did basically is decrypting and writing the passphrase to a file with <code>.pwd</code> extension called <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd</code>. We decided to write it to a file since it's a random set of characters and it may for example contain spaces at the end which is not distinguishable. However, If you would like to print it on screen instead of a file, it's possible to omit the <code>-out</code> parameter from <code>openssl</code> command line.
 
 OK, if you recall the passphrase, extract it from your email or decrypted it from a <code>.secret</code> file, now its time to decrypt the actual archive, itself.
 
 To decrypt it from binary format, and provide the password from command line
 
-    $ openssl enc -aes-256-cbc -d -in 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz -k SECRET_PASSPHRASE -md sha1
+    $ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k SECRET_PASSPHRASE -md sha1
 
 To decrypt it from Base64 format, and provide the password from command line
 
-    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz -k SECRET_PASSPHRASE -md sha1
+    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k SECRET_PASSPHRASE -md sha1
 
 To decrypt it from binary format, and provide the password from a <code>.pwd</code> file:
 
-    $ openssl enc -aes-256-cbc -d -in 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz -pass file:"2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
+    $ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
 
 To decrypt it from Base64 format, and provide the password from a <code>.pwd</code> file:
 
-    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_babaei-pc_openldap-babaei-net.tar.xz -pass file:"2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
+    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
 
-Now we've got our achive file <code>2015-07-31_babaei-pc_openldap-babaei-net.tar.xz.crypt</code> decrypted. For instruction on how to restore it, move to the next section.
+Now we've got our achive file <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt</code> decrypted. For instruction on how to restore it, move to the next section.
 
 
 <br />
@@ -1514,34 +1512,34 @@ If you did not have encryption enabled, you should have a <code>.sum</code> file
 Depending on how we configured <code>.compression</code> in OmniBackup's configuration file, our archive might have different extensions and formats, therefore requires different decompression algorithms. To decompress and untar our archive file:
 
 LZMA2:
-    $ tar xvJf 2015-07-31_babaei-pc_openldap-babaei-net..tar.xz
+    $ tar xvJf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
 gzip
-    $ tar xvzf 2015-07-31_babaei-pc_openldap-babaei-net..tar.xz
+    $ tar xvzf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
 bzip2:
-    $ tar xvjf 2015-07-31_babaei-pc_openldap-babaei-net..tar.bz2
+    $ tar xvjf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
 
 No Compression:
-    $ tar xvf 2015-07-31_babaei-pc_openldap-babaei-net..tar
+    $ tar xvf 2015-07-31_blog.babaei.net_openldap-babaei-net..tar
 
 And if you required to restore the permissions from archive file:
 
 LZMA2:
-    $ tar xvJpf 2015-07-31_babaei-pc_openldap-babaei-net..tar.xz
+    $ tar xvJpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
 gzip
-    $ tar xvzpf 2015-07-31_babaei-pc_openldap-babaei-net..tar.xz
+    $ tar xvzpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
 bzip2:
-    $ tar xvjpf 2015-07-31_babaei-pc_openldap-babaei-net..tar.bz2
+    $ tar xvjpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
 
 No Compression:
-    $ tar xvpf 2015-07-31_babaei-pc_openldap-babaei-net..tar
+    $ tar xvpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar
 
 If you would like to extract the archive file in path other than the current directory:
 
-    $ tar {OPTIONS} {ARCHIVE_FILE} -C /path/to/extract
+    $ tar {OPTIONS} {ARCHIVE_FILE} -C /path/to/extract/to
 
 
 <br />
@@ -1549,11 +1547,40 @@ If you would like to extract the archive file in path other than the current dir
 
 ### Restoring OpenLDAP ###
 
+After [extracting the OpenLDAP archive file](RestoringArchives), restoring OpenLDAP database is a peace of cake. On my FreeBSD system I do the following (you may want to take a backup of <code>/var/db/openldap-data</code> first):
+
+    $ service slapd stop
+    $ rm -rf /var/db/openldap-data
+    $ service slapd start
+    $ cd 2015-07-31_blog.babaei.net_openldap-babaei-net
+    $ slapadd -l openldap-babaei-net.ldif
+    $ slapcat
+
+Be advised that, <code>slapd</code> service name or <code>/var/db/openldap-data</code> database may have different names or paths on other operating systems.
+
 
 <br />
 <a name="RestoringPostgreSQL"></a>
 
 ### Restoring PostgreSQL ###
+
+After [extracting the PostgreSQL archive file](RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file --:
+
+    $ cd 2015-07-31_blog.babaei.net_postgres
+    $ sudo -u pgsql psql -f postgres.sql postgres
+
+The overall format for restoring the entire database backup is as follows:
+
+    $ sudo -u {PGSQL_SYSTEM_USER} psql -f {DUMPALL_FILE} postgres
+
+If you would like to only restore one database for example named <code>gitlab</code>:
+
+    $ cd 2015-07-31_blog.babaei.net_postgres-gitlab
+    $ sudo -u pgsql psql gitlab < postgres-gitlab.sql
+
+The overall format for restoring a single database is as follows:
+
+    $ sudo -u {PGSQL_SYSTEM_USER} psql {DATABASE_NAME} < {DATABASE_DUMP_FILE}
 
 
 <br />
@@ -1561,18 +1588,21 @@ If you would like to extract the archive file in path other than the current dir
 
 ### Restoring MariaDB or MySQL ###
 
+After [extracting the MariaDB or MySQL archive file](RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file --:
 
-<br />
-<a name="RestoringFilesystem"></a>
+    $ cd 2015-07-31_blog.babaei.net_mysql
+    $ mysql -u root -p < mysql.sql
 
-### Restoring Filesystem Backups ###
+If you would like to only restore one database for example named <code>piwik</code>:
 
+    $ cd cd 2015-07-31_blog.babaei.net_mysql-piwik
+    $ mysql -u root -p
+    MariaDB [(none)]> create database piwik;
+    MariaDB [piwik]> use piwik;
+    MariaDB [piwik]> source mysql-piwik.sql;
+    MariaDB [piwik]> \q
 
-<br />
-<a name="RestoringMisc"></a>
-
-### Restoring Other Backups ###
-
+Note that in the above examples, <code>root</code> is not a system user and it's a MariaDB / MySQL internal user who has enough privileges to restore a database.
 
 <br />
 <a name="StayingAwayFromDisaster"></a>
