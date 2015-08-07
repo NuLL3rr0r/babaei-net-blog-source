@@ -1512,29 +1512,37 @@ If you did not have encryption enabled, you should have a <code>.sum</code> file
 Depending on how we configured <code>.compression</code> in OmniBackup's configuration file, our archive might have different extensions and formats, therefore requires different decompression algorithms. To decompress and untar our archive file:
 
 LZMA2:
+
     $ tar xvJf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
-gzip
+gzip:
+
     $ tar xvzf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
 bzip2:
+
     $ tar xvjf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
 
 No Compression:
+
     $ tar xvf 2015-07-31_blog.babaei.net_openldap-babaei-net..tar
 
 And if you required to restore the permissions from archive file:
 
 LZMA2:
+
     $ tar xvJpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
 gzip
+
     $ tar xvzpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
 bzip2:
+
     $ tar xvjpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
 
 No Compression:
+
     $ tar xvpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar
 
 If you would like to extract the archive file in path other than the current directory:
