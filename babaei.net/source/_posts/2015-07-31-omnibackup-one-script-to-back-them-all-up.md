@@ -9,42 +9,42 @@ tags:
 - Unix
 ---
 
-A week ago was _[System Administrator Appreciation Day](http://sysadminday.com/)_. It is celebrated on the last _Friday_ in _July_ and it has been celebrated since _July 28, 2000_. But, system administrators know not all days are like today. They face many hard times and struggles during their careers and the worse of them all is either a [security breech](/blog/2015/07/30/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/) or data loss.
+A week ago was _[System Administrator Appreciation Day](http://sysadminday.com/)_. It is celebrated on the last _Friday_ in _July_ and it has been celebrated since _July 28, 2000_. But, system administrators know not all days are like that day. They face many hard times and struggles during their careers and the worse of them all is either a [security breech](/blog/2015/07/30/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/) or data loss.
 
-For so many years I've been writing and maintaining backup scripts on and on, for every single database I added, for every single directory with critical data, or any other service I was running on every new server I got my hands on. In the end, I found myself ended up in a pile of backup scripts and multitudinous cron entries which was a nightmare to keep track of. I even had to manage the schedule so that two backup scripts do not run at the same time. Even more, I had to manually track the backups whether they were successful or not. Also, someone has to delete the old ones to make rooms for the next ones.
+For so many years I've been writing and maintaining backup scripts on and on, for every single database I added, for every single directory with critical data, or any other service I was running on every new server I got my hands on. In the end, I found myself ended up in a pile of backup scripts and multitudinous cron entries which was a nightmare to keep track of. I even had to manage the schedule so that two backup scripts do not run at the same time. Even more, I had to manually track the backups to see whether they were successful or not. Also, someone has to manually delete the old ones to make rooms for the next ones.
 
-Therefore, I came up with an elegant solution to replace the old process which I found exceptionally error-prone. I call it [OmniBackup](https://gitlab.com/NuLL3rr0r/omnibackup/). At last, I'm able to keep abreast of all the ever-growing data that I have to keep safe, confidently.
+Therefore, I came up with an elegant solution to replace the old process which I found exceptionally error-prone. An end to all my hardships which I call [OmniBackup](https://gitlab.com/NuLL3rr0r/omnibackup/). At last, I'm able to confidently keep abreast of all the ever-growing data that I have to keep safe.
 
-"So, what exactly is OmniBackup?" you may ask. That's a fair question. OmniBackup is a [MIT licensed](http://opensource.org/licenses/MIT) [Bash](http://www.gnu.org/software/bash/) script which delivers the following set of features:
+"So, what exactly is OmniBackup?" you may ask. "A fair question," I would say. OmniBackup is a [MIT licensed](http://opensource.org/licenses/MIT) [Bash](http://www.gnu.org/software/bash/) script which delivers the following set of features:
 
 * Configuration and customization of backup mechanism through [JSON](http://json.org/)
 * Support for [OpenLDAP](http://www.openldap.org/) backups
 * Support for [PostgreSQL](http://www.postgresql.org/) backups as a whole or per database
 * Support for [MariaDB](https://mariadb.org/) and [MySQL](https://www.mysql.com/) backups as a whole or per database
 * Support for filesystem backups with optional ability to follow symbolic links
-* Support for running custom scripts with custom arguments with the ability to backup and automatic clean-up of a specific path as the script's output which allows extending it for many different customized backup scenarios
-* Custom backup file name tagging which allows including date or host name in the archive name
+* Support for pluggable customized scripts to extend OmniBackup functionality beyond its original design which allows support for many different backup scenarios that has not been built into OmniBackup, yet
+* Backup file name tagging which allows including date or host name in the archive name
 * Online backup without a prerequisite to suspend any service
-* Support for backup tasks priority order
+* Support for customized backup tasks priority order
 * Support for multiple backup servers
 * Ability to always keep a copy of backups offline
-* Ability to keep a copy of backups offline if no backup server is available, or in case of error such as a file transfer error
+* Ability to keep a copy of backups offline if no backup server is available, or in case of an error such as a file transfer error
 * Secure file transfer through SSH / SCP protocol
-* LZMA2, [gzip](http://www.gzip.org/) and [bzip2](http://www.bzip.org/) compression algorithms along with different compression levels
+* LZMA2, [gzip](http://www.gzip.org/) and [bzip2](http://www.bzip.org/) compression algorithms along with different compression levels to maintain a balance between speed and file size
 * Ability to preserve permissions inside backup files
 * Support for symmetric cryptography algorithms AES-128, AES-192 and AES-256 (a.k.a Rijndael or Advanced Encryption Standard)
 * Random passphrase generation for encrypted backups with variable length and patterns or a unique passphrase for all backups
 * Support for RSA signatures to verify the backup origin and integrity
 * Passphrase encryption using RSA public keys for individual backup servers
 * Backup integrity verification by offering hash algorithm such as MD4, MD5, MDC-2, RIPEMD160, SHA, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 and WHIRLPOOL
-* Base64 encoding
+* Optional Base64 encoding
 * System logs and a standalone log file including all details
 * Reporting through email to a list of recipients with ability to include passphrases
 * Customized mail subject for successful and failed backup operations
 * Customized support message for reports
 * [Crontab](http://crontab.org/) integration
 * Custom temporary / working directory
-* Automatic clean-up ability
+* Automatic and smart clean-up ability
 * One instance only policy which avoids running multiple instances by mistake at the same time, therefore avoids system slow-down
 * An example configuration file in JSON format to get you up and running
 
@@ -56,9 +56,9 @@ There is also a list of planned features and TODOs which did not make it into <c
 * Refactoring and code clean-up
 * Any potential bug fixes
 
-**_Disclaimer_**: Please be wary of the fact that this script has approximately <code>3.5 K</code> lines of Bash code and devoured hell of a time from me to write and debug. You should also consider that this is my first heavy Bash experiment and I may not write quality code in the language since I'm a newcomer to Bash. I do not claim that OmniBackup is production ready, that's why I did version the first release at <code>0.1.0</code>. Also keep in mind that OmniBackup heavily relies on 3rd-party software which increases the chance for fatal bugs, therefore losing data. So, I provide OmniBackup without any warranties, guarantees or conditions, of any kind and I accept no liability or responsibility for any misuse or damages. Please use it at your own risk and remember you are solely responsible for any resulting damage or data loss.
+**_Disclaimer:_** _Please be wary of the fact that this script has approximately <code>3.5 K</code> lines of Bash code and devoured hell of a time from me to write and debug. You should also consider that this is my first heavy Bash experiment and I may not write quality code in the language since I'm a newcomer to Bash. I do not claim that OmniBackup is production ready, that's why I did version the first release at <code>0.1.0</code>. Also keep in mind that OmniBackup heavily relies on 3rd-party software which increases the chance for fatal bugs, therefore losing data. So, I provide OmniBackup without any warranties, guarantees or conditions, of any kind and I accept no liability or responsibility for any misuse or damage. Please use it at your own risk and remember you are solely responsible for any resulting damage or data loss._
 
-**_Credits_**: Special thanks go to my fellow and long-time friend, _Morteza Sabetraftar_ for his help and ideas without whom OmniBackup lacked features or quality.
+**_Credits:_** _Many thanks go to my fellow and long-time friend, **_Morteza Sabetraftar_** for his help and ideas without whom OmniBackup lacked features or quality. Another kudos goes to my brother **_Amir_** by releasing me from shopping, cooking and house-cleaning without even mentioning it, an invaluable and priceless assistance that encouraged me even more to use my best endeavours to get this task done._
 
 Please, feel free to clone and modify it as you wish. Pull requests for new features, improvements or bug fixes are also very welcome.
 
@@ -89,7 +89,7 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 * [Configuring MariaDB and MySQL Databases Backups](#ConfigMariaDbMySqlBackups)  
 * [Configuring Filesystem Backups](#ConfigFilesystemBackups)  
 * [Configuring Other Backups](#ConfigMiscBackups)  
-* [3rd-party Commands status codes](#Config3rdPartyStatusCode)  
+* [3rd-party Commands status codes](#Config3rdPartyCommandsStatusCode)  
 * [Generating RSA Keys](#GeneratingRSAKeys)  
 * [Password-less SSH Login](#PasswordlessSshLogin)  
 * [SMTP Relay for Hosts with Private IPs](#SmtpRelay)  
@@ -110,10 +110,10 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 
 ### Message Types and Their Meanings ###
 
-Before we go any further, you may want to know that other than regular logs there are different kind of messages in OmniBackup which may appear on screen, system logs or mail reports:
+Before we go any further, you may want to know that other than regular logs there are different kinds of messages in OmniBackup which may appear on screen, system logs or mail reports:
 
 * <code>DEBUG</code> it's for development purpose only, so you should not see any message of this kind.
-* <code>ERROR</code> some error happened, but the program is able to continue.
+* <code>ERROR</code> some error happened, but hopefully the program is able to continue.
 * <code>FATAL</code> indicates that something went south due to unrecoverable errors and the program terminates immediately.
 * <code>INFO</code> informational notices to inform you about regular events inside the program.
 * <code>SUCCESS</code> indicates an operation has been successful.
@@ -126,9 +126,9 @@ Before we go any further, you may want to know that other than regular logs ther
 
 ### Requirements ###
 
-For now OmniBackup officially only supports [FreeBSD](https://www.freebsd.org/) since all my servers and desktop instances at both home and work are running FreeBSD. This does not mean official support for [GNU](http://www.gnu.org/)/[Linux](https://www.kernel.org/) won't arrive any time soon in the near future. In fact I used to be a heavy [Funtoo](http://www.funtoo.org/) user and even before that [Gentoo](https://www.gentoo.org/). These days I only have a [Slackware](http://www.slackware.com/) instance which I use for cross-compiling C++ libraries to [Android](https://www.android.com/). So, it's just a matter of time before official support arrives. In my estimation, the current code should work out of the box inside any GNU/Linux distribution since I tried my best to write it in a platform-independent manner by reading pile of man pages. I assume if it works on FreeBSD it should also work on other BSDs and GNU/Linuxes. But I'm only 99.99% sure and when it comes to programming computers 0.01% human error is really too much and risky. So, before I announce GNU/Linux support official I must test it at least once. But until that moment comes, I really appreciate feedbacks and possible patches or pull-requests.
+For now OmniBackup officially only supports [FreeBSD](https://www.freebsd.org/) since all my servers and desktop instances at both home and work are running FreeBSD. This does not mean official support for [GNU](http://www.gnu.org/)/[Linux](https://www.kernel.org/) won't arrive any time soon in the near future. In fact I used to be a heavy [Funtoo](http://www.funtoo.org/) user and even before that [Gentoo](https://www.gentoo.org/). These days I only have a [Slackware](http://www.slackware.com/) instance which I use for cross-compiling C++ libraries to [Android](https://www.android.com/). So, it's just a matter of time before official support arrives. In my estimation, the current code should work out of the box inside any GNU/Linux distribution since I tried my best to write it in a platform-independent manner by reading pile of man pages. I assume if it works on FreeBSD it should also work on other BSDs and GNU/Linuxes. But I'm only 99.99% sure and when it comes to programming computers 0.01% human error is really too much and risky. So, before I announce GNU/Linux support official, I must test it at least once. But until that moment comes, I really appreciate feedbacks and possible patches or pull-requests.
 
-Aside from Bash, OmniBackup requires other tools and utilities. Although most of these programs are found in a base installation of your operating system, it relies on a few other programs which has to be installed before we continue. Note that if OmniBackup cannot find a program it gives you a fatal error message and exits.
+Aside from Bash, OmniBackup requires other tools and utilities. Although most of these programs are found in a base installation of your operating system, it relies on a few other programs which has to be installed before go any further. Note that if OmniBackup cannot find a program it gives you a fatal error message and exits.
 
 Requirements for OmniBackup include:
 
@@ -179,7 +179,7 @@ I should add, not all of the above dependencies are required in order for OmniBa
 * <code>sysutils/flock</code> probably a default on GNU/Linux, provides <code>flock</code> executable on FreeBSD
 * <code>textproc/jq</code> provides <code>jq</code>
 
-Note that from the above list only <code>flock</code> and [jq](http://stedolan.github.io/jq/) are only mandatory requirements unless based on OmniBackup configurations other dependencies get pulled in. The best way to determine dependencies is to ignore the list of dependencies and first configure you OmniBackup instance. When your done with that, run OmniBackup manually for the first time. If it won't complain about any dependency then you are good to go. However, if it does, then you should resolve the dependencies one by one until you are good to go.
+Note that from the above list only <code>flock</code> and [jq](http://stedolan.github.io/jq/) are only mandatory requirements unless based on OmniBackup configurations other dependencies get pulled in. The best way to determine dependencies is to ignore the list of dependencies and first configure your OmniBackup instance. When your done with that, run OmniBackup manually for the first time. If it won't complain about any dependency then you are good to go. However, if it does, then you should resolve the dependencies one by one until you are good to go.
 
 
 <br />
@@ -187,7 +187,7 @@ Note that from the above list only <code>flock</code> and [jq](http://stedolan.g
 
 ### Installation ###
 
-Installing OmniBackup is really easy. It consists of two files: a huge script file, a little more than <code>100 KB</code> named <code>backup.sh</code> which looks for the second file at runtime named <code>config.json</code>. So, let's say I want to install OmniBackup inside <code>/usr/local/omnibackup</code>. In addition to that, I assume from now on you do everything as <code>root</code> user:
+Installing OmniBackup is really easy. It consists of two files: a huge script file -- a little less than <code>105 KB</code> -- named <code>backup.sh</code> which looks for the second file at runtime named <code>config.json</code>. So, let's say I want to install OmniBackup inside <code>/usr/local/omnibackup</code>. In addition to that, I assume from now on you do everything as <code>root</code> user:
 
     $ cd /usr/local/
     $ git clone https://gitlab.com/NuLL3rr0r/omnibackup.git
@@ -196,9 +196,9 @@ Installing OmniBackup is really easy. It consists of two files: a huge script fi
     $ chmod u+rx,go-r,a-w backup.sh
     $ chmod u+rw,go-rw,a-x config.json
 
-All we did was cloning the code from [GitLab](https://gitlab.com/), copying over the sample configuration file as a template and assigning the right permissions for both the script and configuration file. I prefer to make this files <code>root</code> accessible only so no one else can read our configuration or modify it or even triggering the backup process.
+All we did was cloning the code from [GitLab](https://gitlab.com/), copying over the sample configuration file as a template and assigning the right permissions for both the script and configuration file. I prefer to make this files <code>root</code> accessible only, so no one else can read our configuration or modify it or even triggering the backup process.
 
-You should avoid running the backup script in this step. As I mentioned you copied a sample file to get you up and running. So, you should only run it after the final configurations are done, since it pickups possible dependencies from the configuration file and it may baffles you with the wrong dependencies errors. So, for now open-up the configuration file in your favorite editor and take a look.
+You should avoid running the backup script in this step. As I mentioned we just copied a sample file to get you up and running. So, you should only run it after the final configurations are done, since it pickups possible dependencies from the configuration file and it may baffles you with the wrong dependencies errors. So, for now open-up the configuration file in your favorite editor and take a look.
 
 
 <br />
@@ -206,7 +206,7 @@ You should avoid running the backup script in this step. As I mentioned you copi
 
 ### Configuring Temporary Directory ###
 
-The first option inside <code>config.json</code> file is <code>.temp_dir</code> which specifes the temporary or working directory for OmniBackup. <code>/var/tmp</code> seems to be a reasonable place. Feel free to adopt it according to your needs. But, if you are going to change it to a path other than <code>/var/tmp/</code> or <code>/tmp/</code> choose an empty one. Note that each time you run OmniBackup it creates a log file inside <code>/var/tmp/</code> e.g. <code>/var/tmp/backup.2015-07-31.58471.log</code>. You cannot change the path for the log files due to technical limitations. Keep in mind that OmniBackup never removes it log files due to their small footprints. They also may come handy when reports won't deliver to your email.
+The first option inside <code>config.json</code> file is <code>.temp_dir</code> which specifes the temporary or working directory for OmniBackup. <code>/var/tmp</code> seems to be a reasonable place. Feel free to adopt it according to your needs. But, if you are going to change it to a path other than <code>/var/tmp/</code> or <code>/tmp/</code> choose an empty one. Note that each time you run OmniBackup it creates a log file inside <code>/var/tmp/</code> e.g. <code>/var/tmp/backup.2015-07-31.58471.log</code>. You cannot change the path for the log files due to technical limitations. Keep in mind that OmniBackup never removes its log files due to their small footprints. They may come handy when reports won't deliver to your email.
 
 {% codeblock config.json lang:json %}
 {
@@ -233,7 +233,7 @@ You've been given three options for compression:
 }
 {% endcodeblock %}
 
-<code>.compression.algorithm</code> accepts only four possible values: <code>lzma2</code>, <code>gzip</code> and <code>bzip2</code> which determines the compression algorithm, or, you can leave it blank for no compression. This affects the extension of the backup file which we call archive from now on. For <code>lzma2</code> it will be <code>.tar.xz</code>, for <code>gzip</code>, <code>.tar.gz</code>, for <code>bzip2</code>, <code>tar.bz2</code> and for no compression mode it will be simply <code>.tar</code>. Also, <code>lzma2</code>, <code>gizp</code> and <code>bzip2</code> values, pull in <code>xz</code>, <code>gizp</code> and <code>bizip2</code> binaries as dependency, respectively.
+<code>.compression.algorithm</code> accepts only four possible values: <code>lzma2</code>, <code>gzip</code> and <code>bzip2</code> which determines the compression algorithm, or, you can leave it blank for no compression at all. This affects the extension of the backup file which we call archive from now on. For <code>lzma2</code> it will be <code>.tar.xz</code>, for <code>gzip</code>, <code>.tar.gz</code>, for <code>bzip2</code>, <code>tar.bz2</code> and for no compression mode it will be simply <code>.tar</code>. Also, <code>lzma2</code>, <code>gizp</code> and <code>bzip2</code> values, pull in <code>xz</code>, <code>gizp</code> and <code>bizip2</code> binaries as dependency, respectively.
 
 <code>.compression.level</code> option accepts values between <code>1</code> to <code>9</code> for <code>gizp</code> and <code>bzip2</code> algorithms. For <code>lzma2</code> algorithm it accepts values between <code>1</code> to <code>9</code> and <code>1e</code> to <code>9e</code>. <code>e</code> stands for extreme and aggressive compression which demands more RAM and CPU cycles. In case you choose no compression mode, the <code>level</code> option will be ignored.
 
@@ -269,15 +269,15 @@ Security module provides many features that you may not notice at the first sigh
 
 Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/). So, some of the hash or encryption algorithms may not work in case you or your distribution built OpenSSL with those options excluded.
 
-<code>.security.checksum_algorithm</code> provides various hash algorithm to verify the archive file integrity later on. <code>md4</code>, <code>md5</code>, <code>mdc2</code>, <code>ripemd160</code>, <code>sha</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code> and <code>whirlpool</code> algorithms are all valid options and well supported. If encryption is disabled or you did not provide a private key, OmniBackup creates a checksum file with extension <code>.sum</code> which includes the archive checksum and uploads it along with your archive file. If encryption is enabled and you did provide a private key it uses the checksum file to sign the archive and instead of uploading <code>.sum</code> file, uploads the signature file with extension <code>.sign</code>, so that it can be verified using your public key at the destination. In either case OmniBackup includes the checksum in reports and send it through email to you.
+<code>.security.checksum_algorithm</code> provides various hash algorithms to verify the archive file integrity later on. <code>md4</code>, <code>md5</code>, <code>mdc2</code>, <code>ripemd160</code>, <code>sha</code>, <code>sha1</code>, <code>sha224</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code> and <code>whirlpool</code> algorithms are all valid options and well supported. If encryption is disabled or you did not provide a private key, OmniBackup creates a checksum file with extension <code>.sum</code> which includes the archive checksum and uploads it along with your archive file. If encryption is enabled and you did provide a private key it uses the checksum file to sign the archive and instead of uploading <code>.sum</code> file, uploads the signature file with extension <code>.sign</code>, so that it can be verified using your public key at the destination. In either case OmniBackup includes the checksum in reports and send it through email to you.
 
-<code>.security.encryption.enable</code> should either set to <code>yes</code> or <code>no</code>. If you set it to <code>no</code> the rest of the options will be ignored.
+<code>.security.encryption.enable</code> should either set to <code>yes</code> or <code>no</code>. If you set it to <code>no</code> the rest of the encryption options will be ignored.
 
-<code>.security.encryption.key_size</code> only accepts <code>128</code>, <code>192</code> and <code>256</code> which in turn enables AES-128, AES-192 and AES-256 encryption.
+<code>.security.encryption.key_size</code> only accepts <code>128</code>, <code>192</code> and <code>256</code> values which in turn enables AES-128, AES-192 and AES-256 encryption.
 
-<code>.security.encryption.base64_encode</code> if you set it to <code>yes</code>, the encrypted archive file, signature file and the encrypted archive passphrase will be base64 encoded, otherwise they all be in binary format which saves up disk space and bandwidth.
+<code>.security.encryption.base64_encode</code> if you set it to <code>yes</code>, the encrypted archive file, signature file and the encrypted archive passphrase will be base64 encoded, otherwise they will all be in binary format which saves up disk space and bandwidth.
 
-<code>.security.encryption.passphrase</code> is the passphrase to encrypt or decrypt archive files. If you leave it blank, OmniBackup generates a random password for each archive file. Otherwise, it uses the specified password for all archive files and ignore both <code>random_passphrase_pattern</code> and <code>random_passphrase_length</code>. If you decide to use a unique password for all backups make sure <code>config.json</code> is only readable by its owner. If set to blank, it pulls in <code>grep</code>, <code>head</code>, <code>strings</code> and <code>tr</code> as dependency.
+<code>.security.encryption.passphrase</code> is the passphrase to encrypt or decrypt archive files. If you leave it blank, OmniBackup generates a random password for each archive file. Otherwise, it uses the specified password for all archive files and ignore both <code>random_passphrase_pattern</code> and <code>random_passphrase_length</code> options. If you decide to use a unique password for all backups make sure <code>config.json</code> is only readable by its owner. If set to blank, it pulls in <code>grep</code>, <code>head</code>, <code>strings</code> and <code>tr</code> as dependency.
 
 <code>.security.encryption.random_passphrase_pattern</code> indicates the pattern to generate a random passphrase. For more information see the documentation of [GNU](http://www.gnu.org/software/grep/manual/html_node/Character-Classes-and-Bracket-Expressions.html) and [BSD](https://www.freebsd.org/cgi/man.cgi?query=grep) implementations of <code>grep</code>:
 
@@ -285,7 +285,7 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 * <code>alpha</code> Alphabetic characters: <code>lower</code> and <code>upper</code>; in the <code>C</code> locale and ASCII character encoding, this is the same as <code>[A-Za-z]</code>.
 * <code>blank</code> Blank characters: space and tab.
 * <code>cntrl</code> Control characters. In ASCII, these characters have octal codes <code>000</code> through <code>037</code>, and <code>177 (DEL)</code>. In other character sets, these are the equivalent characters, if any.
-* <code>digit</code> Digits: 0 1 2 3 4 5 6 7 8 9.
+* <code>digit</code> Digits: <code>0 1 2 3 4 5 6 7 8 9</code>.
 * <code>graph</code> Graphical characters: <code>alnum</code> and <code>punct</code>.
 * <code>lower</code> Lower-case letters; in the <code>C</code> locale and ASCII character encoding, this is <code>a b c d e f g h i j k l m n o p q r s t u v w x y z</code>.
 * <code>print</code> Printable characters: <code>alnum</code>, <code>punct</code>, and space.
@@ -294,9 +294,9 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 * <code>upper</code> Upper-case letters: in the <code>C</code> locale and ASCII character encoding, this is <code>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</code>.
 * <code>xdigit</code> Hexadecimal digits: <code>0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f</code>.
 
-<code>.security.encryption.random_passphrase_length</code> a positive number bigger than <code>0</code> indicates the length of random passphrase.
+<code>.security.encryption.random_passphrase_length</code> a positive number bigger than <code>0</code> that indicates the length of random passphrases.
 
-<code>.security.encryption.private_key</code> is used to sign the encrypted archive file so anyone knows the file originated from you. Note it only accepts absolute path and relative paths starting from home folder (tilde <code>~</code>). Do not start paths relative to OmniBackup directory. Also, keep in mind that avoid space and exotic characters inside path. It's both sane and safe to only include <code>A-Z</code>, <code>a-z</code> and underscore <code>_</code> in path because I cannot guarantee its safety. I'll describe [RSA key generation](#GeneratingRSAKeys) later.
+<code>.security.encryption.private_key</code> is a private key in PEM format used to sign the encrypted archive file so that anyone knows the file originated from you. Note it only accepts absolute path and relative paths starting from home folder (tilde <code>~</code>). Do not start paths relative to OmniBackup directory. Also, keep in mind that avoid space and exotic characters inside path. It's both sane and safe to only include <code>A-Z</code>, <code>a-z</code> and underscore <code>_</code> in path because I cannot guarantee its safety. We'll discuss [RSA key generation](#GeneratingRSAKeys) later on.
 
 
 <br />
@@ -304,7 +304,7 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 
 ### Configuring Reports ###
 
-Reports module is here to allow you become aware of all the details of the events that happened during the backup process through email:
+Reports module is here to allow you become aware of all the details of the events that happened during the backup process, through email:
 
 {% codeblock config.json lang:json %}
 {
@@ -338,15 +338,15 @@ Reports module is here to allow you become aware of all the details of the event
 
 <code>.reports.mailboxes.email_address</code> should be a valid email address.
 
-<code>.reports.mailboxes.attach_passphrases</code> determines whether the archive passphrases should be attached to the reports for that specific email or not.
+<code>.reports.mailboxes.attach_passphrases</code> determines whether passphrases for archive files should be attached to the reports for that specific email or not.
 
-<code>.reports.subject</code> provides the ability to determine the subject of reports for different scenarios that might happen during the backup process, so by looking at your inbox you immediately realize what happened and take the appropriate action if it's necessary. <code>{HOST_NAME}</code> and <code>{DATE}</code> are special placeholder keywords. They will be replaced at runtime by the host name OmniBackup backup running on or the date the backup jobs started, respectively.
+<code>.reports.subject</code> provides the ability to determine the subject of reports for different scenarios that might happen during the backup process at runtime, so by looking at your inbox you immediately realize what happened and take the appropriate action if it's necessary. <code>{HOST_NAME}</code> and <code>{DATE}</code> are recognized special placeholder keywords. They will be replaced at runtime by the host name OmniBackup backup running on or the date OmniBackup instance starts backup jobs, respectively.
 
-<code>.reports.success</code> is email subject when backup process finished successfully.
+<code>.reports.success</code> is the email subject when backup process finished successfully.
 
-<code>.reports.error</code> is email subject when at least one error happened during the backup process.
+<code>.reports.error</code> is the email subject when at least one error happened during the backup process.
 
-<code>.reports.fatal</code> is email subject when backup process faced a fatal error so it could not finish the jobs.
+<code>.reports.fatal</code> is the email subject when backup process faced a fatal error so it could not finish the jobs.
 
 <code>.reports.support_info</code> allows adding a customized support message to the end of the reports.
 
@@ -355,7 +355,7 @@ Reports module is here to allow you become aware of all the details of the event
 
 ### Configuring Remote Backup Servers ###
 
-In the <code>.remote</code> section of the configuration file, you can configure as many as remote backup servers that you wish. If you plan to keep backup files locally, this section provides two possible ways to do that which we'll discuss later. Note that you also have to setup [password-less SSH login](#PasswordlessSshLogin) regardless of choosing a remote server or the current host as a backup server.
+Using the <code>.remote</code> section of the configuration file, you can configure as many as remote backup servers that you wish. If you plan to keep backup files locally, this section provides two possible ways to do that which we'll discuss later. Note that you also have to setup [password-less SSH login](#PasswordlessSshLogin) regardless of choosing a remote server or the current host as a backup server.
 
 {% codeblock config.json lang:json %}
 {
@@ -391,7 +391,7 @@ In the <code>.remote</code> section of the configuration file, you can configure
 * <code>never</code>: always remove the temporary backup file, no matter what.
 * <code>error</code>: always remove the temporary backup file unless an upload error happens.
 * <code>partial</code>: keep the backup file in case the upload operation for a single backup file was partially successful. This indicates that at least one upload operation for a specific backup file has been successful. So, we are sure we have the backup file on at least one of the backup servers.
-* <code>success</code>: do not remove the local backup file and keep it inside <code>.temp_dir</code> directory, even in case of succeeding all upload operations. This option is one way to always keep the backup files locally although it is not recommended to use this method. If you're going to use this method anyway, it is recommended to use some other path instead of <code>/var/tmp/</code> and <code>/tmp</code> as your <code>.temp_dir</code>.
+* <code>success</code>: do not remove the local backup file and keep it inside <code>.temp_dir</code> directory, even in case of succeeding all upload operations. This option is one way to always keep the backup files locally although it is not recommended. If you're going to use this method anyway, it is recommended to use some other path instead of <code>/var/tmp</code> or <code>/tmp</code> as your <code>.temp_dir</code>.
 
 * <code>.remote.servers</code> is a JSON array of backup servers. The second method to keep a copy of backup files locally is to define the current host as another remote server here which is the recommended method to do so.
 
@@ -403,9 +403,9 @@ In the <code>.remote</code> section of the configuration file, you can configure
 
 * <code>.remote.servers.dir</code> specifies a directory in which we keep the backup files. <code>{HOST_NAME}</code> is recognized as a valid placeholder for the current host's name (not the backup server) and should be automatically replaced at runtime.
 
-* <code>.backups_to_preserve</code> determines how many days of older backups should be kept. For example, if I set this to <code>10</code> for one of the backup servers, I should only have <code>10</code> days of backup on that server, plus today or tonight's backup. Be advised that any negative number -- e.g. <code>-1</code> -- has special meanings here. It means do not clean up any old backups, basically keep them forever.
+* <code>.backups_to_preserve</code> determines how many days of older backups should be kept. For example, if I set this to <code>10</code> for one of the backup servers, I should only have <code>10</code> days of backup on that server, plus today or tonight's backup. Be advised that any negative number -- e.g. <code>-1</code> -- has special meanings here. It means do not clean up any older backup, basically keep them forever.
 
-* <code>public_key</code> is a public key in PEM format for encrypting passphrases. As you recall these passphrases are required to decrypt the archive files. If you do not specify a public key for a backup server you do not have access to encrypted passphrases on that server. It is useful in case that you do not wish to keep the passphrases in the same place as your encrypted archive files, even the encrypted ones. I must warn and assure you, if you are using random passphrases and and you did not provide any public key here, your backups are good for nothing unless you chose to attach passphrases to at least one email in the reports section. In addition to everything, it's possible to only provide one pair of RSA keys instead of one private key and multiple public keys if you are the sole receiver of the backup files on those multiple servers. I'll describe [RSA key generation](#GeneratingRSAKeys) later.
+* <code>public_key</code> is a public key in PEM format for encrypting passphrases. As you recall these passphrases are required to decrypt the archive files. If you do not specify a public key for a backup server, you do not have access to encrypted passphrases on that server. It is useful in case that you do not wish to keep the passphrases in the same place as your encrypted archive files, even the encrypted ones. I must warn and assure you, if you are using random passphrases and and you did not provide any public key here, your backups are good for nothing unless you chose to attach passphrases to at least one email in the reports section. In addition to everything, it's possible to only provide one pair of RSA keys instead of one private key and multiple public keys if you are the sole receiver of the backup files on those multiple servers. I'll describe [RSA key generation](#GeneratingRSAKeys) later.
 
 
 <br />
@@ -413,7 +413,7 @@ In the <code>.remote</code> section of the configuration file, you can configure
 
 ### Configuring Backup Tasks ###
 
-<code>.backup</code> is the actual part of the configuration which determines what has to be backed up. I 'll break them down into a few sections for the sake of simplicity.
+<code>.backup</code> is the actual part of the configuration which determines what has to be backed up. I'll break it down into a few sections for the sake of simplicity.
 
 {% codeblock config.json lang:json %}
 {
@@ -424,11 +424,11 @@ In the <code>.remote</code> section of the configuration file, you can configure
 }
 {% endcodeblock %}
 
-<code>.backup.archive_name</code> is a pattern for archive file names. You can prefix or postfix them as you wish by modifying this option. <code>{DATE}</code> shall be replaced by the actual date that OmniBackup job started. The date format is fixed and looks like <code>YYYY-MM-DD</code>. <code>{HOST_NAME}</code> shall be replaced by the host name that OmniBackup runs on. <code>{TAG}</code> is an option for each item that should be backup, so it shall be replaced with that option's value for each backup task. So, with above configuration in mind, a typical backup archive file should look like this:
+<code>.backup.archive_name</code> is a pattern for archive file names. You can prefix or postfix them as you wish by modifying this option. <code>{DATE}</code> shall be replaced by the actual date that OmniBackup script started. The date format is fixed and looks like <code>YYYY-MM-DD</code>. <code>{HOST_NAME}</code> shall be replaced by the host name that OmniBackup runs on. <code>{TAG}</code> is an option for each item that should be backed up, so it shall be replaced with that option's value for each backup task. So, with above configuration in mind, a typical backup archive file should look like this:
 
-    2015-07-31_core.babaei.net_openldap-babaei-net.tar.xz
+    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
 
-<code>2015-07-31</code>, <code>core.babaei.net</code> and <code>openldap-babaei-net</code> are <code>{DATE}</code>, <code>{HOST_NAME}</code> and <code>{TAG}</code> in the archive file name, respectively.
+<code>2015-07-31</code>, <code>blog.babaei.net</code> and <code>openldap-babaei-net</code> are <code>{DATE}</code>, <code>{HOST_NAME}</code> and <code>{TAG}</code> in the archive file name, respectively.
 
 
 <br />
@@ -455,7 +455,7 @@ One of the most important steps is to configure what should be backed up, in whi
 
 <code>.backup.priority_order</code> only recognizes four elements: <code>openldap</code>, <code>database</code>, <code>filesystem</code> and <code>misc</code>. Although, they should be self-explanatory, I have to add a comment for <code>misc</code> which is a special item in this list. It allows you to run an external script and pass arguments to it. After the script is finished, OmniBackup is able to backup a directory or file as its output. So, we'll be able to plug extra scripts to OmniBackup. We will discuss this later.
 
-In the above example, OmniBackup backups in this order: OpenLDAP, databases, filesystem and finally other customized backups. You can change the order by swapping the their order of appearance. If you want for example avoid backing up, filesystem, you should remove it from list. Otherwise, OmniBackup looks for its configuration.
+In the above example, OmniBackup backups in this order: OpenLDAP, databases, filesystem and finally other customized backups. You can change the order by swapping their order of appearance. If you want for example avoid backing up, filesystem, you should remove it from this list. Otherwise, OmniBackup looks for its configuration.
 
 Let's consider an example if I need to only backup first database and then filesystem:
 
@@ -495,7 +495,7 @@ This is all we need to backup OpenLDAP objects and directories using <code>slapc
 }
 {% endcodeblock %}
 
-<code>.backup.openldap.tag</code> is used to replace <code>{TAG}</code> in <code>.backup.archive_name</code>. Since it's going to be part of a file name, it is highly recommended to avoid using space or any other character that needs escaping or quotation.
+<code>.backup.openldap.tag</code> is used to replace <code>{TAG}</code> in <code>.backup.archive_name</code>. Since it's going to be part of a file name, it is highly recommended to avoid space or any other character that needs escaping or quotation.
 
 <code>.backup.openldap.user</code> is optional system user to run <code>slapcat</code> under.
 
@@ -509,7 +509,7 @@ This is all we need to backup OpenLDAP objects and directories using <code>slapc
 
 ### Configuring Database Backups ###
 
-Like the general backup configuration, database section also needs specifying the types of backups and their priority order:
+Like the general backup configuration, database section also needs specifying the types of backup jobs and their order of running:
 
 {% codeblock config.json lang:json %}
 {
@@ -527,7 +527,7 @@ Like the general backup configuration, database section also needs specifying th
 }
 {% endcodeblock %}
 
-OmniBackup officially only recognizes two types of database to backup. PostgreSQL and MariaDB / MySQL. Of course it won't stop you from writing your own backup scripts for other databases. You can plug such scripts to OmniBackup using <code>.backup.misc</code> which we'll describe later.
+OmniBackup officially only recognizes two types of database to backup. PostgreSQL and MariaDB / MySQL. Of course, it won't stop you from writing your own backup scripts for other databases. You can plug such scripts to OmniBackup using <code>.backup.misc</code> which we'll see later.
 
 <code>.backup.database.priority_order</code> everything for <code>.backup.priority_order</code> also applies here.
 
@@ -537,7 +537,7 @@ OmniBackup officially only recognizes two types of database to backup. PostgreSQ
 
 ### Configuring PostgreSQL Database Backups ###
 
-Configuring PostgreSQL backups consists of two easy steps: first providing a user name with an optional group name and finally a list of databases to backup.
+Configuring PostgreSQL backups consists of two easy steps: first providing a user name with an optional group name and finally a list of databases to backup:
 
 {% codeblock config.json lang:json %}
 {
@@ -589,7 +589,7 @@ Configuring PostgreSQL backups consists of two easy steps: first providing a use
 }
 {% endcodeblock %}
 
-<code>backup.database.postgres.user</code> is a system user's name which runs our PostgreSQL service. For example, on my FreeBSD system it is called <code>pgsql</code>. This user should be created by Ports or pkgng installation of PostgreSQL. It has different names on different platforms. You can figure it out by investigating <code>/etc/passwd</code> or <code>/etc/master.passwd</code>:
+<code>backup.database.postgres.user</code> is a system user's name which runs our PostgreSQL service. For example, on my FreeBSD system it is called <code>pgsql</code>. This user should be created by Ports, pkgng installation of PostgreSQL or whatever package manager your distro uses. It has different names on different platforms. You can figure it out by investigating <code>/etc/passwd</code> or <code>/etc/master.passwd</code>:
 
     $ cat /etc/passwd
 
@@ -605,7 +605,7 @@ or
 
 <code>backup.database.postgres.databases.name</code> is the exact database name inside your PostgreSQL instance. * means create a backup of all tables in one go, in one single dump file. I found it a best practice to have an entire database dump and a separate dump for each database. Why? Because, in one hand I sometimes forget to add new databases here, so that * takes care of that for me. On the other hand, sometimes you may face error restoring or importing back all your databases using a single dump file -- due to a bug, human error or anything --, so you have each database backup separately, then you won't loose much in such a scenario.
 
-<code>backup.database.postgres.databases.comment</code> is used inside logs, syslogs and reports to refer to that table instead of name which is not always clear.
+<code>backup.database.postgres.databases.comment</code> is used inside logs, syslogs and reports to refer to that database instead of name which is not always clear.
 
 
 <br />
@@ -655,13 +655,13 @@ The same as PostgreSQL goes for configuring MariaDB or MySQL databases:
 
 <code>backup.database.mysql.group</code> serves a similar purpose as <code>backup.database.postgres.group</code> and is optional.
 
-<code>backup.database.mysql.internal_user</code> is mandatory MariaDB / MySQL internal user - usually root - name who has enough privileges to take backup.
+<code>backup.database.mysql.internal_user</code> is mandatory MariaDB / MySQL internal user name - usually root - who has enough privileges to take backups.
 
 <code>backup.database.mysql.databases</code> is a JSON array of MariaDB / MySQL databases.
 
 <code>backup.database.mysql.databases.tag</code> is a tag for archive file name. Everything for <code>.backup.openldap.tag</code> also applies here.
 
-<code>backup.database.mysql.databases.name</code> serves the exact same purpose as <code>backup.database.postgres.name</code>.
+<code>backup.database.mysql.databases.name</code> serves the exact same purpose as <code>backup.database.postgres.databases.name</code>.
 
 <code>backup.database.mysql.databases.comment</code> serves the exact same purpose as <code>backup.database.postgres.databases.comment</code>.
 
@@ -734,11 +734,11 @@ Configuring filesystem backups are much easier since it's just a list of paths (
 
 <code>backup.filesystem.tag</code> serves the exact same purpose as <code>backup.openldap.tag</code>.
 
-<code>backup.filesystem.path</code> is path to a directory, file or symbolic link to backup.
+<code>backup.filesystem.path</code> is the path to a directory, file or symbolic link to backup.
 
 <code>backup.filesystem.follow_symlinks</code> determines whether to follow symbolic links or leave them out from the archive.
 
-<code>backup.filesystem.comment</code> serves the exact same purpose as <code>backup.database.postgres.comment</code>.
+<code>backup.filesystem.comment</code> serves the exact same purpose as <code>backup.database.postgres.databases.comment</code>.
 
 
 <br />
@@ -746,7 +746,7 @@ Configuring filesystem backups are much easier since it's just a list of paths (
 
 ### Configuring Other Backups ###
 
-Misc section allows plugging extra backup scripts to OmniBackup and capture their output to archive. This one is also a JSON array:
+Misc section allows plugging extra backup scripts to OmniBackup and capture their output as an archive. This one is also a JSON array:
 
 {% codeblock config.json lang:json %}
 {
@@ -770,17 +770,17 @@ Misc section allows plugging extra backup scripts to OmniBackup and capture thei
 
 <code>backup.misc.tag</code> serves the exact same purpose as <code>backup.openldap.tag</code>.
 
-<code>backup.misc.command</code> is the command or script to run. Although you can use pipes, arguments or in general a complicated one-liner command it is not recommended to do so since this option does not meant for such a scenario. I highly recommend creating another script and put everything there. If your script succeeds return <code>0</code>, if not, return none zero values such as <code>1</code>.
+<code>backup.misc.command</code> is the command or script to run. Although you can use pipes, arguments or in general a complicated one-liner command it is not recommended to do so since this option does not meant for such a scenario. I highly recommend creating another script and put everything in there. If your script succeeds return <code>0</code>, if not, return none zero values such as <code>1</code>.
 
 <code>backup.misc.args</code> is the list of arguments to pass to your script.
 
-<code>backup.misc.path</code> is path to a directory, file or symbolic link to backup.
+<code>backup.misc.path</code> is the path to a directory, file or symbolic link as external script's output to backup.
 
 <code>backup.misc.follow_symlinks</code> determines whether to follow symbolic links or leave them out from the archive.
 
 <code>backup.misc.remove_path_when_done</code> determines whether to remove the path or not after the external script finished it jobs successfully. Be careful with this one if you don't know what is it or its function is not clear to you, yet.
 
-<code>backup.misc.comment</code> serves the exact same purpose as <code>backup.database.postgres.comment</code>.
+<code>backup.misc.comment</code> serves the exact same purpose as <code>backup.database.postgres.databases.comment</code>.
 
 
 <br />
@@ -788,12 +788,12 @@ Misc section allows plugging extra backup scripts to OmniBackup and capture thei
 
 ### 3rd-party Commands Status Codes ###
 
-<code>.command</code> is a vital part of the configuration file and it should be present in order for OmniBackup to run properly. If its function is ambiguous to you, just leave it alone in the configuration file. That's why I put it at the end of the file, although the order does not matter in the configuration file. For two reason OmniBackup needs this part:
+<code>.command</code> is a vital part of the configuration file and it should be present in order for OmniBackup to run properly. If its function is ambiguous to you, just leave it alone in the configuration file. That's why I put it at the end of the file, although the order does not matter in the configuration file. For two reasons OmniBackup needs this part:
 
-- When OmniBackup runs, the first thing it looks for are the necessary commands. It reads them from this list.
+- When OmniBackup runs, the first thing it looks for are its dependencies. It reads them from this list.
 - When OmniBackup runs a third party command in case of failure it has to translate the return code of that command to a human understandable message. So, if you want to know what happened in case of error, you should leave this alone or extend it if you are sure about what are you doing.
 
-For example look at the return codes for <code>jq</code>, <code>scp</code> and <code>ssh</code> commands in the following list. Note that the return codes and their equivalent messages may not be accurate. Believe me, I tried my best to find the accurate ones. If you found something inaccurate, please let me know.
+For example look at the return codes for <code>jq</code>, <code>scp</code> and <code>ssh</code> commands in the following list. Note that the return codes and their equivalent messages may not be accurate. Believe me, I tried my best to find the accurate ones. If you find something inaccurate, please let me know.
 
 {% codeblock config.json lang:json %}
 {
@@ -1527,7 +1527,7 @@ No Compression:
 
     $ tar xvf 2015-07-31_blog.babaei.net_openldap-babaei-net..tar
 
-And if you required to restore the permissions from archive file:
+And if you are required to restore the permissions from archive file:
 
 LZMA2:
 
