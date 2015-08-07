@@ -1180,7 +1180,7 @@ For example look at the return codes for <code>jq</code>, <code>scp</code> and <
 
 ### Generating RSA Keys ###
 
-Generating a pair of RSA keys is fairly an easy task. Just make sure you have OpenSSL installed and then we are good to go. To generate a <code>4096</code> private RSA key -- since I found it fair enough in terms of both security and performance -- :
+Generating a pair of RSA keys is fairly an easy task. Just make sure you have OpenSSL installed and then we are good to go. To generate a <code>4096-bit</code> private RSA key -- since I found it fair enough in terms of both security and performance -- :
 
     $ openssl genrsa -out private.pem 4096
 
@@ -1221,11 +1221,11 @@ When it starts asking questions, it's possible to choose the default answers by 
     |       o.        |
     +-----------------+
 
-Then push the public key to every single remote backup server by issuing the following command, once for each one of them:
+Then push the public key to every single remote backup server by issuing the following command, once for each server:
 
     $ cat ~/.ssh/id_rsa.pub | ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP} 'cat >> ~/.ssh/authorized_keys'
 
-It asks for password the first time you run the above command. After that, you should be able to login to the remote host without being asked for a password.
+It asks for password the first time you run the above command per each server. After that, you should be able to login to the desired remote host without being asked for a password:
 
     $ ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST}
 
@@ -1235,9 +1235,9 @@ It asks for password the first time you run the above command. After that, you s
 
 ### SMTP Relay for Hosts with Private IPs ###
 
-If you did not setup a mail server or your server does not have a public IP you have to use another mail server, either your own or public services such as [Gmail](https://mail.google.com/), [Yahoo Mail](https://mail.yahoo.com/), [Inbox.com](http://www.inbox.com/), [Outlook](https://www.microsoft.com/en-us/outlook-com/) or any other one as SMTP relay for outgoing messages. So, OmniBackup or any other program will be able to send email through a relay. [sSMTP](https://www.freebsd.org/doc/handbook/outgoing-only.html) is such a great tool to easlity allow that.
+If you did not setup a mail server or your server does not have a public IP you have to use another mail server, either your own or public services such as [Gmail](https://mail.google.com/), [Yahoo Mail](https://mail.yahoo.com/), [Inbox.com](http://www.inbox.com/), [Outlook](https://www.microsoft.com/en-us/outlook-com/) or any other one as SMTP relay for outgoing messages. So that OmniBackup or any other program will be able to send email through a relay. [sSMTP](https://www.freebsd.org/doc/handbook/outgoing-only.html) is such a great tool to easlity allow that.
 
-On my FreeBSD system I have to first completely disable [Sendmail](https://www.sendmail.com/sm/open_source/) which is the default MTA installed with FreeBSD:
+On my FreeBSD system I have to first completely disable [Sendmail](https://www.sendmail.com/sm/open_source/) which is the default MTA in a base installation of FreeBSD:
 
 {% codeblock /etc/rc.conf lang:sh %}
 sendmail_enable="NO"
@@ -1256,7 +1256,7 @@ Or, install the binary package from [pkgng](https://www.freebsd.org/doc/handbook
 
     $ pkg install mail/ssmtp
 
-To replace <code>sendmail</code> with <code>ssmtp</code>, either:
+To replace <code>sendmail</code> with <code>ssmtp</code>, either do the following:
 
     $ cd /usr/ports/mail/ssmtp/
     $ make replace
@@ -1279,7 +1279,7 @@ OK, before you can use the program, you should copy the files <code>revaliases.s
 
 Let's assume, I have a running SMTP mail server on <code>mail.example.com</code> which allows SSL connections on port <code>465</code>. I have a working user account on this mail server called <code>email@example.com</code>.
 
-Now I want every message from user <code>root</code> to be sent as [Charlie Root](http://lists.freebsd.org/pipermail/freebsd-questions/2005-September/098372.html) <code>charlie.root@babaei.net</code> and every message from user <code>babaei</code> as <code>mohammad.babaei@babaei.net</code>. All other users as <code>username@babaei.net</code>. So:
+Now, I want every message from user <code>root</code> to be sent as [Charlie Root](http://lists.freebsd.org/pipermail/freebsd-questions/2005-September/098372.html) <code>charlie.root@babaei.net</code> and every message from user <code>babaei</code> as <code>mohammad.babaei@babaei.net</code>. All other users as <code>username@babaei.net</code>. So:
 
 {% codeblock /usr/local/etc/ssmtp/revaliases lang:sh %}
 root:charlie.root@babaei.net:mail.example.com:465
@@ -1312,25 +1312,25 @@ If everything is done properly, you should be able to send an email from command
 
 ### First Run ###
 
-OK, after taking the journey of configuring OmniBackup, now it's time to run it for the first time to verify it works properly.
+OK, after taking the journey of configuring OmniBackup, now it's time to run it for the first time in order to verify it works properly.
 
     $ bash /usr/local/omnibackup/backup.sh
 
-This run-time follow of OmniBackup is as follows:
+The run-time flow of OmniBackup is as follows:
 
-* OmniBackup starts by looking for its dependencies and initializing its modules through its configuration file. Most <code>FATAL</code> errors are identified at this stage. If you get a <code>FATAL</code> error it terminates with the an appropriate message which points to the root of the issue. Otherwise, you should get to the next step.
+* OmniBackup starts by looking for its dependencies and initializing its modules through its configuration file. Most <code>FATAL</code> errors are identified at this stage. If you get a <code>FATAL</code> error it terminates with an appropriate message which points you to the root of the issue (usually configuration errors). Otherwise, you should get to the next stage.
 
-* In this step OmniBackup tries to verify the remote backup servers connectivity and cleanups older backups if it has to. If a connection error happens, OmniBackup ignores the error an continues to the next step. That's because it may be a temporary down-time and the the backup server may be available later.
+* In this step OmniBackup tries to verify the remote backup servers connectivity and cleans-up older backups if it has to. If a connection error happens, OmniBackup ignores the error and continues to the next step. That's because it may be a temporary down-time and the the backup server might be available later.
 
-* At this stage OmniBackup is ready to proceed with backup tasks. So, it starts the backup tasks in the order that you have specified through the configuration file. It runs each backup task one by one, compress them into an archive file, does the encryption if enabled, finally, uploads them to the backup servers. If an error other than connection errors happen, it leaves the temporary data untouched for your inspection and moves to the next backup task. So, you have to manually clean-up those files, later on. If a connection problem to a remote server occur it obeys <code>.backup.keep_backup_locally</code> settings.
+* At this stage OmniBackup is ready to proceed with backup tasks. So, it starts the backup tasks in the order that you have specified through the configuration file. It runs each backup task one by one, compress it into an archive file and does the encryption if enabled, finally, uploads it to the backup servers. If an error other than connection errors happen, it leaves the temporary data untouched for your inspection and moves on to the next backup task. So, you have to manually clean-up those files, later on. If a connection problem to a remote server occurs it obeys <code>.backup.keep_backup_locally</code> settings.
 
-* In the penultimate step, OmniBackup clean-ups all the temporary files unless there are errors from previous steps.
+* In the penultimate step, OmniBackup cleans-up all the temporary files unless there are errors from previous steps.
 
 * And finally OmniBackup sends reports to the specified list of recipients in the <code>.reports</code> section of the configuration file.
 
-Note that in any stage if a <code>FATAL</code> error happens it tries to first go to clean-up stage and send the reports. But sometimes there's a possibility for <code>FATAL</code> errors before OmniBackup initialized successfully so the follow may not work as expected and you may not receive any reports. In such situation manual inspection is expected.
+Note that in any stage if a <code>FATAL</code> error happens it tries to first go to clean-up stage and send the reports. But sometimes there's a possibility for <code>FATAL</code> errors even before OmniBackup initialized successfully so the flow may not work as expected and you may not receive any reports. In such a situation manual inspection is expected.
 
-Moreover, it's possibility to interrupt or break the backup operation at any time using <code>Ctrl+C</code> or <code>SIGTERM</code>. In such a situations, OmniBackup tries to release it's lock gracefully, but you won't receive any mail reports.
+Moreover, it's possible to interrupt or break the backup operation at any time using <code>Ctrl+C</code> or <code>SIGTERM</code>. In such a situation, OmniBackup tries to release it's lock gracefully, but you won't receive any mail reports.
 
 
 <br />
@@ -1338,7 +1338,7 @@ Moreover, it's possibility to interrupt or break the backup operation at any tim
 
 ### Crontab ###
 
-It is highly recommended to [learn the fundamentals of configuring cron jobs](/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/) if you are not familiar with the topic. Anyway to schedule a backup task as user <code>root</code>:
+It is highly recommended to [learn the fundamentals of configuring cron jobs](/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/) if you are not familiar with the topic. Anyway, to schedule a backup task as user <code>root</code>:
 
     $ crontab -e -u root
 
@@ -1361,7 +1361,7 @@ To see whether the cron job was added successfully or not, you can issue the fol
 
     $ crontab -l -u root
 
-In the above example I scheduled the backup task to run at <code>01:00 AM</code> and since the server timezone is UTC it will run at <code>01:00 AM UTC</code> each night. To verify whether the backup task runs properly as a cron job or not, we can run the script with a limited set of environment variables:
+In the above example I scheduled the backup task to run at <code>01:00 AM</code> and since the server timezone is UTC it will run at <code>01:00 AM UTC</code> each night. To verify whether the backup job runs properly as a cron job or not, it's possible to run OmniBackup with a limited set of environment variables:
 
     $ env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /usr/local/omnibackup/backup.sh
 
@@ -1371,7 +1371,7 @@ In the above example I scheduled the backup task to run at <code>01:00 AM</code>
 
 ### Restore ###
 
-In order to restore anything backed-up by OmniBackup, the initial step is to retrieve the related archive file from one of the remote backup servers, there are many ways to do so. The easiest that I've found is using <code>scp</code> command:
+In order to restore anything backed-up by OmniBackup, the initial step is to retrieve the intended archive file from one of the remote backup servers, there are many ways to do so. The easiest that I've found is using <code>scp</code> command:
 
     $ scp -P {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP}:{PATH_TO_FILE} {LOCAL_TEMPORATY_PATH}
 
@@ -1383,7 +1383,7 @@ e.g.
     2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret     /var/tmp/openldap-restore   100%
     2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign       /var/tmp/openldap-restore   100%
 
-The above example retrieves three files from the remote server <code>10.12.0.4</code> since I enabled encryption, into the directory <code>/var/tmp/openldap-restore</code>.
+The above example retrieves three files from the remote server <code>10.12.0.4</code> by using wildcard character *, into the directory <code>/var/tmp/openldap-restore</code>. Since I enabled encryption, I need all those files.
 
 
 <br />
@@ -1393,18 +1393,18 @@ The above example retrieves three files from the remote server <code>10.12.0.4</
 
 OK, depending on our encryption settings in OmniBackup's configuration file. This step may become a little bit longer or shorter.
 
-If encryption was enabled for our archive file without a public key, OmniBackup give us two file. They should have <code>.crypt</code> and <code>.crypt.sum</code> extensions:
+If encryption was enabled for our archive file without a public key, OmniBackup gives us two files. They should have <code>.crypt</code> and <code>.crypt.sum</code> extensions:
 
     2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
     2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
 
-If we did provide a public key for a remote server, OmniBackup gives us two more files other than the actual archive file itself on that server with extensions <code>.crypt.secret</code> and <code>.crypt.sign</code>:
+If we did provide a public key for a remote server, OmniBackup gives us two more files other than the actual archive file itself on that server with extensions <code>.crypt.secret</code> and <code>.crypt.sign</code> but not a <code>.crypt.sum</code> file:
 
     2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
     2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret
     2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
 
-The next step is to know whether our encrypted file is in binary or Base64 encoded format. If we did disable or enable Base64 encoding at the time of archive creation it should affect all <code>.crypt</code>, <code>.crypt.secret</code> and <code>.crypt.sign</code> files together. We can use <code>file</code> utility to distinguish these two formats:
+The next step is to know whether our encrypted archive file is in binary or Base64 encoded format. If we did disable or enabled Base64 encoding at the time of archive creation it should affect all <code>.crypt</code>, <code>.crypt.secret</code> and <code>.crypt.sign</code> files together, so they are all either binary or Base64 encoded. We can use <code>file</code> utility to distinguish these two formats:
 
 For example if it's Base64 encoded:
 
@@ -1426,9 +1426,9 @@ The contents of the <code>.sum</code> file is nothing more than a hash generated
     $ openssl dgst -sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
     SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
-We've just reproduced the original hash and it looks exactly the same as the archived one which verifies the file integrity. But there is one flaw with encryption without a public key, we cannot be sure that someone else did not change the file and generate their own hash unless we find the emailed report or log files and check the hash against them.
+We've just reproduced the original hash and it looks exactly the same as the archived one which verifies the file integrity. But there is one flaw with encryption without a public key, we cannot be sure that someone else did not change the file and generate their own hash unless we locate the emailed report or log files and check the hash against them.
 
-Anyway, OpenSSL has support for the following hash algorithms:
+Anyway, OpenSSL has support for various hash algorithms through the following command-line parameters:
 
     -md4            to use the md4 message digest algorithm
     -md5            to use the md5 message digest algorithm
@@ -1442,12 +1442,12 @@ Anyway, OpenSSL has support for the following hash algorithms:
     -sha512         to use the sha512 message digest algorithm
     -whirlpool      to use the whirlpool message digest algorithm
 
-In addition to that, there are alternative utilities than OpenSSL to regenerate the archive hash. For example, FreeBSD provides <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha512</code> and <code>rmd160</code>, while GNU/Linux provides <code>md5sum</code>, <code>sha1sum</code>, <code>sha224sum</code>, <code>sha256sum</code>, <code>sha384sum</code> and <code>sha512sum</code> utilities to do so. No matter which tool or program you use, results must be the same:
+In addition to that, there are alternative utilities than OpenSSL to regenerate the archive hash. For example, FreeBSD provides <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha512</code> and <code>rmd160</code>, while GNU/Linux provides <code>md5sum</code>, <code>sha1sum</code>, <code>sha224sum</code>, <code>sha256sum</code>, <code>sha384sum</code> and <code>sha512sum</code> utilities to do so. No matter which tool or program you use, the final results must be the same:
 
     $ sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
     SHA512 (2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt) = 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
-OK, let's assume you did provide a public key for the remote backup server that you've retrieved the archive file from. First, we have to verify the archive file's origin using the public key from OmniBackup's host (the current host). Note that this public key may not be the same as the public key provided by the remote backup server. It's a sibiling to private key in the <code>.security.encryption.option</code> of OmniBackup configuration file. For the sake of simplicity, from now on I assume you only have a single pair of keys called <code>private.pem</code> and <code>public.pem</code>.
+OK, let's assume you did provide a public key for the remote backup server that you've just retrieved the archive file from. First, we have to verify the archive file's origin using the public key from OmniBackup's host (the current host). Note that this public key may not be the same as the public key provided by the remote backup server. It's a sibiling to private key in the <code>.security.encryption.private_key</code> option of OmniBackup configuration file. For the sake of simplicity, from now on I assume you only have a single pair of keys called <code>private.pem</code> and <code>public.pem</code> rather than having multiple pair of keys.
 
 OK, the signature file for our example is <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign</code>. So:
 
@@ -1461,9 +1461,9 @@ For Base64 encoded format:
     $ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign | openssl rsautl -verify -inkey public.pem -pubin -keyform PEM 
     SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
 
-If it prints out the archive file checksum in whatever hash format you chose as archive's checksum, then the file origin is valid and OK. From here on, you can verify the integrity as mentioned earlier.
+If it prints out the archive file checksum in whatever hash format you chose as archive's checksum, then the file origin is valid and OK. From here on, you can verify the archive's integrity as mentioned earlier.
 
-If you did not use a unique password for all of your archive, we should take an extra step to retrieve the passphrase in order to be able to decrypt the archive. If you do not have a <code>.secret</code> file, you did not provide a public key for that server probably. The only way to retrieve the password is to go through your emails and find the proper report email for that archive and extract the attached password at the end of the report. If you did not allow OmniBackup to attach the passphrases to the email reports, I can only wish you the best of luck. It looks something like this depending on your chosen settings in the <code>.security.encryption</code> area of OmniBackup's configuration file:
+If you did not use a unique password for all of your archives, we should take an extra step to retrieve the passphrase in order to be able to decrypt the archive. If you do not have a <code>.secret</code> file, you probably did not provide a public key for that server. The only way to retrieve the password is to go through your emails and find the proper report email for that archive and extract the attached password at the end of that report. If you did not allow OmniBackup to attach the passphrases to the email reports, I can only wish you the best of luck. You'll be lost forever! However, if you found it in your reports, it looks something like this depending on your chosen settings in the <code>.security.encryption</code> area of OmniBackup's configuration file:
 
     [encrypted_archive.crypt](SECRET_PASSPHRASE)
     e.g.
@@ -1481,15 +1481,15 @@ For Base64 encoded format:
 
 OK, what we did basically is decrypting and writing the passphrase to a file with <code>.pwd</code> extension called <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd</code>. We decided to write it to a file since it's a random set of characters and it may for example contain spaces at the end which is not distinguishable. However, If you would like to print it on screen instead of a file, it's possible to omit the <code>-out</code> parameter from <code>openssl</code> command line.
 
-OK, if you recall the passphrase, extract it from your email or decrypted it from a <code>.secret</code> file, now its time to decrypt the actual archive, itself.
+OK, if you recall your unique passphrase, extracted it from your email or decrypted it from a <code>.secret</code> file, now its time to decrypt the actual archive, itself.
 
 To decrypt it from binary format, and provide the password from command line
 
-    $ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k SECRET_PASSPHRASE -md sha1
+    $ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
 
 To decrypt it from Base64 format, and provide the password from command line
 
-    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k SECRET_PASSPHRASE -md sha1
+    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
 
 To decrypt it from binary format, and provide the password from a <code>.pwd</code> file:
 
@@ -1499,7 +1499,7 @@ To decrypt it from Base64 format, and provide the password from a <code>.pwd</co
 
     $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
 
-Now we've got our achive file <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt</code> decrypted. For instruction on how to restore it, move to the next section.
+Now we've got our achive file <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt</code> decrypted as <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz</code>. For instructions on how to restore it, move to the next section.
 
 
 <br />
@@ -1509,7 +1509,7 @@ Now we've got our achive file <code>2015-07-31_blog.babaei.net_openldap-babaei-n
 
 If you did not have encryption enabled, you should have a <code>.sum</code> file along with the archive file to verify archive integrity. Please refer to the previous section in order to find out how to do that.
 
-Depending on how we configured <code>.compression</code> in OmniBackup's configuration file, our archive might have different extensions and formats, therefore requires different decompression algorithms. To decompress and untar our archive file:
+Depending on how we configured <code>.compression.algorithm</code> in OmniBackup's configuration file, our archive may have different extensions and formats, therefore requires different decompression algorithms. To decompress and untar our archive file:
 
 LZMA2:
 
@@ -1545,7 +1545,7 @@ No Compression:
 
     $ tar xvpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar
 
-If you would like to extract the archive file in path other than the current directory:
+If you would like to extract the archive file in a path other than the current directory:
 
     $ tar {OPTIONS} {ARCHIVE_FILE} -C /path/to/extract/to
 
@@ -1555,7 +1555,7 @@ If you would like to extract the archive file in path other than the current dir
 
 ### Restoring OpenLDAP ###
 
-After [extracting the OpenLDAP archive file](RestoringArchives), restoring OpenLDAP database is a peace of cake. On my FreeBSD system I do the following (you may want to take a backup of <code>/var/db/openldap-data</code> first):
+After [extracting the OpenLDAP archive file](#RestoringArchives), restoring OpenLDAP database is a peace of cake. On my FreeBSD system I do the following (you may want to take a backup from <code>/var/db/openldap-data</code> first):
 
     $ service slapd stop
     $ rm -rf /var/db/openldap-data
@@ -1564,7 +1564,7 @@ After [extracting the OpenLDAP archive file](RestoringArchives), restoring OpenL
     $ slapadd -l openldap-babaei-net.ldif
     $ slapcat
 
-Be advised that, <code>slapd</code> service name or <code>/var/db/openldap-data</code> database may have different names or paths on other operating systems.
+Be advised that, <code>slapd</code> service or <code>/var/db/openldap-data</code> database may have different names or paths on other operating systems.
 
 
 <br />
@@ -1572,7 +1572,7 @@ Be advised that, <code>slapd</code> service name or <code>/var/db/openldap-data<
 
 ### Restoring PostgreSQL ###
 
-After [extracting the PostgreSQL archive file](RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file --:
+After [extracting the PostgreSQL archive file](#RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file -- :
 
     $ cd 2015-07-31_blog.babaei.net_postgres
     $ sudo -u pgsql psql -f postgres.sql postgres
@@ -1596,7 +1596,7 @@ The overall format for restoring a single database is as follows:
 
 ### Restoring MariaDB or MySQL ###
 
-After [extracting the MariaDB or MySQL archive file](RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file --:
+After [extracting the MariaDB or MySQL archive file](#RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file -- :
 
     $ cd 2015-07-31_blog.babaei.net_mysql
     $ mysql -u root -p < mysql.sql
