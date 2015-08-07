@@ -416,8 +416,8 @@ Remove both PID file and blacklist file, then start Sshguard service again:
 
 ### Source Code ###
 
-[Check out source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2015-07-30-freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall)
+[Check out the source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2015-07-30-freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall)
 
-[Check out source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2015-07-30-freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall)
+[Check out the source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2015-07-30-freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall)
 
 

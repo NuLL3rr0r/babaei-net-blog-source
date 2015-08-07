@@ -1604,6 +1604,7 @@ If you would like to only restore one database for example named <code>piwik</co
 
 Note that in the above examples, <code>root</code> is not a system user and it's a MariaDB / MySQL internal user who has enough privileges to restore a database.
 
+
 <br />
 <a name="StayingAwayFromDisaster"></a>
 
@@ -1621,8 +1622,8 @@ The ultimate test for any backup is a restore to a server, ...
 
 ### Source Code ###
 
-[Check out source code on GitLab](https://gitlab.com/NuLL3rr0r/omnibackup/)
+[Check out the source code on GitLab](https://gitlab.com/NuLL3rr0r/omnibackup/)
 
-[Check out source code on GitHub](https://github.com/NuLL3rr0r/omnibackup/)
+[Check out the source code on GitHub](https://github.com/NuLL3rr0r/omnibackup/)
 
 
