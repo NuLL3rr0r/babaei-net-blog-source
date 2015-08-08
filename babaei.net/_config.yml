@@ -130,9 +130,9 @@ deploy:
 # Server
 ## Docs: https://github.com/hexojs/hexo-server
 server:
-  port: 4000
+  port: 13000
   log: true
-  ip: 127.0.0.1
+  ip: 0.0.0.0
 
 # Sitemap
 ## Docs: https://github.com/hexojs/hexo-generator-sitemap
