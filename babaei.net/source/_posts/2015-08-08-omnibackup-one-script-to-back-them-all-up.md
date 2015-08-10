@@ -178,6 +178,7 @@ I should add, not all of the above dependencies are required in order for OmniBa
 * <code>databases/mysql5*-client</code> one of these ports provides <code>mysqldump</code>
 * <code>openldap24-server</code> provides <code>slapcat</code>
 * <code>security/sudo</code> provides <code>sudo</code>
+* <code>shells/bash</code> provides <code>bash</code>
 * <code>sysutils/flock</code> probably a default on GNU/Linux, provides <code>flock</code> executable on FreeBSD
 * <code>textproc/jq</code> provides <code>jq</code>
 
