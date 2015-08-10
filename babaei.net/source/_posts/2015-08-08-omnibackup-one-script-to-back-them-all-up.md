@@ -134,6 +134,7 @@ Aside from Bash, OmniBackup requires other tools and utilities. Although most of
 Requirements for OmniBackup include:
 
 * <code>basename</code>
+* <code>bash</code> version <code>4.2+</code>
 * <code>bzip2</code>
 * <code>caller</code>
 * <code>cat</code>
@@ -150,7 +151,7 @@ Requirements for OmniBackup include:
 * <code>gzip</code>
 * <code>head</code>
 * <code>hostname</code>
-* <code>jq</code>
+* <code>jq</code> version <code>1.4+</code>
 * <code>logger</code>
 * <code>mail</code>
 * <code>mkdir</code>
