@@ -30,7 +30,7 @@ I tried the following to remove the file without any success:
     $ rm *.mp4
     rm: *.mp4: No such file or directory
 
-When I tried auto-completion by pressing <code>Tab<code> key a few times on <code>csh</code> it showed the file name as:
+When I tried auto-completion by pressing <code>Tab</code> key a few times on <code>csh</code> it showed the file name as:
 
     output-file.mp4
 
