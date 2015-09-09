@@ -1,5 +1,5 @@
 title: Delete a File With Invalid or Bad Characters in File Name on FreeBSD
-date: 2015-09-08 17:50:08
+date: 2015-09-09 12:54:08
 tags:
 - FreeBSD
 - Unix
@@ -61,7 +61,7 @@ So, I gave <code>rm -i</code> a go after changing to my home directory:
     output-file.mp4 ? y
     remove some-other-file ? ^C
 
-As it can be seen in the output, <code>rm</code> now considers the file and even prints the newline character in the output. So I entered <code>y</code> and it deleted the file with bad name. For, the other files on the list I simply pressed <code>Ctrl+C</code> to exit the list completely.
+As it can be seen in the output, <code>rm</code> now considers the file and even prints the newline character in the output. So I entered <code>y</code> and it deleted the file with bad name. For, the other files on the list I simply pressed <code>Ctrl+C</code> to exit the list completely (Note: if Ctrl+C won't work for you, try <code>Ctrl+Z</code> or <code>Ctrl+D</code>).
 
 I also found an interesting <code>--</code> flag through my journey inside <code>rm</code> man page which may come handy one day:
 
