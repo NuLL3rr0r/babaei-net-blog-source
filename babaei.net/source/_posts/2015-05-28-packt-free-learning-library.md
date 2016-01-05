@@ -7,7 +7,7 @@ tags:
 
 From 30th April, 2015 Packt Publishing has thrown open the virtual doors of its new Free Learning Library and offering its customers a daily chance to grab a fresh free eBook from its website. The publisher is encouraging people to learn new skills and try out new technologies and so every day it will be offering a different eBook from its huge list of titles free for anyone to download.
 
-[{% img post-image /blog/2015/05/28/packt-free-learning-library/2015-05-28-packt-free-learning-library__001.png 590 295 'Packt Free Learning Library' 'Packt Free Learning Library' %}](/blog/2015/05/28/packt-free-learning-library/2015-05-28-packt-free-learning-library__001.png)
+[{% img post-image /blog/2015/05/28/packt-free-learning-library/2015-05-28-packt-free-learning-library__001.png 590 295 "'Packt Free Learning Library'" "'Packt Free Learning Library'" %}](/blog/2015/05/28/packt-free-learning-library/2015-05-28-packt-free-learning-library__001.png)
 <span class="post-image-title">Every day Packt Publishing is giving away books for free to help teach new tech skills</span>
 
 <!-- more -->

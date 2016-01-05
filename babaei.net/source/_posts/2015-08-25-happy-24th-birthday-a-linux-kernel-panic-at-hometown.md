@@ -10,7 +10,7 @@ tags:
 - Unix
 ---
 
-[{% img post-image /blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/2015-08-25-happy-24th-birthday-a-linux-kernel-panic-at-hometown__001.jpg 540 480 'A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)' 'A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)' %}](/blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/2015-08-25-happy-24th-birthday-a-linux-kernel-panic-at-hometown__001_hq.jpg)
+[{% img post-image /blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/2015-08-25-happy-24th-birthday-a-linux-kernel-panic-at-hometown__001.jpg 540 480 "'A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)'" "'A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)'" %}](/blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/2015-08-25-happy-24th-birthday-a-linux-kernel-panic-at-hometown__001_hq.jpg)
 <span class="post-image-title">A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)</span>
 
 Undeniably, flaming has been around since the dawn of the Internet age. And even worse, it has been on the rise ever since. Gazillions of flame wars on websites such as [Slashdot](http://slashdot.org) or [Reddit](https://www.reddit.com/) surely is enough proof, the greatest of which is the perennial debates between users of competing operating systems. 

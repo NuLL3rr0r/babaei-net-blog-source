@@ -5,7 +5,7 @@ tags:
 - Packt Publishing
 ---
 
-[{% img post-image /blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png 941 470 'Packt Essential IT Skills of 2015 and Challenges for 2016' 'Packt Essential IT Skills of 2015 and Challenges for 2016' %}](/blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png)
+[{% img post-image /blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png 941 470 "'Packt Essential IT Skills of 2015 and Challenges for 2016'" "'Packt Essential IT Skills of 2015 and Challenges for 2016'" %}](/blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png)
 <span class="post-image-title">Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!</span>
 
 At a time of rapid development and innovation, tech skills have never been more valuable. The right skills and cutting-edge knowledge can bring huge rewards.
@@ -24,7 +24,7 @@ __Find out more [here](http://bit.ly/1HScEds).__
 
 **_Update_**:
 
-[{% img post-image /blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png 600 300 'Packt $5 Campaign - Packt Publishing' 'Packt $5 Campaign - Packt Publishing' %}](/blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png)
+[{% img post-image /blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png 600 300 "'Packt $5 Campaign - Packt Publishing'" "'Packt $5 Campaign - Packt Publishing'" %}](/blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png)
 <span class="post-image-title">Packt $5 Campaign - Packt Publishing</span>
 
 From the 17th December 2015 into the New Year, Packt Publishing is inviting the tech world to [explore its extensive library of eBooks and Video courses for one amazing price](https://www.packtpub.com/?utm_source=JK-babaei&utm_medium=referral&utm_campaign=OME5D2015). Every single eBook and Video course Packt has ever created [will be available on packtpub.com for just $5](https://www.packtpub.com/?utm_source=JK-babaei&utm_medium=referral&utm_campaign=OME5D2015)!

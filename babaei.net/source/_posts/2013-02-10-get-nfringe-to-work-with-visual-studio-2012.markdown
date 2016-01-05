@@ -6,7 +6,7 @@ comments: true
 tags:
 - Epic
 - Game Development
-- Game Programing
+- Game Programming
 - nFringe
 - UDK
 - UnrealScript
