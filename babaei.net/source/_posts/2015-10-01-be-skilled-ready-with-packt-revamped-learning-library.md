@@ -1,3 +1,4 @@
+---
 title: 'Be Skilled & Ready with Packt’s revamped learning library'
 date: 2015-10-01 17:29:14
 tags:

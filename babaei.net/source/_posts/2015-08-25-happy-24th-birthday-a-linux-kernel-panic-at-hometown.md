@@ -1,3 +1,4 @@
+---
 title: 'Happy 24th Birthday: A Linux Kernel Panic At Hometown'
 date: 2015-08-25 21:00:00
 tags:

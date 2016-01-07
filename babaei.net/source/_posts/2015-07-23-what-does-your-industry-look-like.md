@@ -1,3 +1,4 @@
+---
 title: What does your industry look like?
 date: 2015-07-23 15:14:36
 tags:
