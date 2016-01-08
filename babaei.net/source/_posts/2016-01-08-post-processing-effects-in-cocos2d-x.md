@@ -7,6 +7,7 @@ tags:
 - Cocos2d-x
 - Game Development
 - Game Programming
+- OpenGL
 - VC++
 - Visual C++
 - Visual Studio
