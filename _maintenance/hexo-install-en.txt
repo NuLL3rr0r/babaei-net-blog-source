@@ -11,6 +11,10 @@ npm install hexo-uglify --save
 
 npm uninstall hexo-renderer-marked --save
 
+npm install hexo-admin --save
+hexo server -d
+open http://localhost:13000/admin/
+
 
 cd themes
 rm -rf landscape
