@@ -1,3 +1,11 @@
+layout: post
+title: Migrating From Octopress To Hexo
+comments: true
+tags:
+  - Hexo
+  - Octopress
+categories: []
+date: 2015-05-28 01:44:00
 ---
 layout: post
 title: "Migrating From Octopress To Hexo"
@@ -22,3 +30,4 @@ Well, I was living a happy life with _[Octopress 2.x](https://github.com/imathis
 
 There are so many good things about Hexo. But, above them all [the easy Octopress migration with zero effort](http://hexo.io/docs/migration.html#Octopress). It's just a matter of moving all your post files from Octopress <code>source/_posts</code> directory to Hexo <code>source/_posts</code> directory. And hell yeah Hexo generator is blazingly fast.
 
+__Update (2016/01/11)__: Great news! I just noticed [Jared Forsyth](http://jaredly.github.io/) ([@jaredforsyth](http://twitter.com/jaredforsyth)) has released v1.x of [hexo-admin](https://github.com/jaredly/hexo-admin) a few months ago which works on 3.x branch of Hexo. I'm writing this update from hexo-admin panel using [v1.1.1](https://github.com/jaredly/hexo-admin/releases) of the plug-in which works flawlessly. Awesome work, Jared.
