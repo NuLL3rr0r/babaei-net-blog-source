@@ -5,6 +5,7 @@ npm install hexo-clean-css --save
 npm install hexo-deployer-rsync --save
 npm install hexo-generator-feed --save
 npm install hexo-generator-sitemap --save
+npm install hexo-console-rename --save
 npm install hexo-html-minifier --save
 npm install hexo-renderer-markdown-it --save
 npm install hexo-uglify --save
