@@ -622,6 +622,12 @@ nano -w themes/TKL/layout/casper/footer.ejs
                     <% } %>
                     <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="fa fa-git"></i></a>&nbsp;</li>
                     <% } %>
+                    <% if(theme.linkedin){ %>
+                    <li><a href="<%- theme.linkedin %>" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.telegram){ %>
+                    <li><a href="<%- theme.telegram %>" title="Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a>&nbsp;</li>
+                    <% } %>
                     <% if(theme.facebook){ %>
                     <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;</li>
                     <% } %>
@@ -759,6 +765,12 @@ nano -w themes/TKL/layout/casper/header.ejs
                             <% if(theme.github){ %>
                             <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="fa fa-git"></i></a></li>
                             <% } %>
+                            <% if(theme.linkedin){ %>
+                            <li><a href="<%- theme.linkedin %>" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <% } %>
+                            <% if(theme.telegram){ %>
+                            <li><a href="<%- theme.telegram %>" title="Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                            <% } %>
                             <% if(theme.facebook){ %>
                             <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <% } %>
@@ -886,6 +898,7 @@ bottom_saying:
 excerpt_link: ادامه مطلب
 
 github: https://github.com/NuLL3rr0r
+linkedin: https://linkedin.com/in/mohammad-s-babaei-00282768telegram: https://telegram.me/babaei_net
 twitter: https://twitter.com/NuLL3rr0r
 #facebook: https://www.facebook.com/
 #google: https://google.com/

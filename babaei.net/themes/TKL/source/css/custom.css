@@ -153,6 +153,10 @@ footer .fa {
     font-size: 1.6em;
 }
 
+footer .social {
+    letter-spacing: 2px;
+}
+
 #intro .sharing
 {
     text-align: right;
