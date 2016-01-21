@@ -497,6 +497,45 @@ footer ul.list li a, footer ul.list1 li a {
     color: #AAA;
 }
 
+#intro .subscribe
+{
+    direction: rtl;
+    text-align: center;
+    font-size: 1.0em;
+    margin-top: 1.0em;
+    margin-bottom: 2.0em;
+}
+
+#intro .subscribe i
+{
+    margin-left: 1.0em;
+    margin-right: 1.0em;
+}
+
+#intro .subscribe a:link * {
+    text-decoration: none;
+    color: #333;
+}
+
+#intro .subscribe a:visited * {
+    text-decoration: none;
+    color: #333;
+}
+
+#intro .subscribe a:hover * {
+    text-decoration: none;
+    color: #999;
+}
+
+#intro .subscribe a:active * {
+    text-decoration: none;
+    color: #333;
+}
+
+figure.highlight {
+    margin-bottom: 1.0em;
+}
+
 .post-content {
     direction: rtl;
     text-align: justify;
@@ -853,6 +892,11 @@ nano -w themes/TKL/layout/layout.ejs
 // http://crunchify.com/list-of-all-social-sharing-urls-for-handy-reference-social-media-sharing-buttons-without-javascript/
 // https://github.com/bradvin/social-share-urls
 
+nano -w themes/TKL/layout/post/subscribe.ejs
+########
+<a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i> جهت اطلاع از جدیدترین پست های وبلاگ در کانال تلگرام عضو شوید!</a>
+########
+
 nano -w themes/TKL/layout/post/sharing.ejs
 ########
 <a href="https://twitter.com/share?url=<%- post.permalink %>&text=<%- post.title %><% if(theme.twitter_user){ %>&via=<%- theme.twitter_user %><% } %><% if(post.tags && post.tags.length){ %>&hashtags=<% } %><% post.tags.forEach(function(tag, index) { %><%= tag.name.replace(/ /g,'') %><% if (post.tags.length !== index+1) { %>,<% } %><% }); %>" title="Twitter" target="_blank"><i class="fa fa-twitter-square"></i></a>
@@ -878,6 +922,12 @@ nano -w themes/TKL/layout/casper/post.ejs
             <div class="sharing">
                 <%- partial('post/sharing') %>
             </div>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+            <div class="subscribe">
+                <%- partial('post/subscribe') %>
+            </div>
+            <div class="clearfix"></div>
 ########
 
 nano -w themes/TKL/_config.yml

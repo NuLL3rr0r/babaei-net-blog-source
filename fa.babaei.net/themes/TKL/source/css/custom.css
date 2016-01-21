@@ -387,6 +387,41 @@ pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, 
     color: #AAA;
 }
 
+#intro .subscribe
+{
+    direction: rtl;
+    text-align: center;
+    font-size: 1.0em;
+    margin-top: 1.0em;
+    margin-bottom: 2.0em;
+}
+
+#intro .subscribe i
+{
+    margin-left: 1.0em;
+    margin-right: 1.0em;
+}
+
+#intro .subscribe a:link * {
+    text-decoration: none;
+    color: #333;
+}
+
+#intro .subscribe a:visited * {
+    text-decoration: none;
+    color: #333;
+}
+
+#intro .subscribe a:hover * {
+    text-decoration: none;
+    color: #999;
+}
+
+#intro .subscribe a:active * {
+    text-decoration: none;
+    color: #333;
+}
+
 figure.highlight {
     margin-bottom: 1.0em;
 }
