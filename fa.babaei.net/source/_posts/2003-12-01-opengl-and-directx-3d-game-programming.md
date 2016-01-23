@@ -10,9 +10,10 @@ tags:
 - C++
 - C#
 - DirectX
-- Game
+- gamedev
 - Game Development
 - Game Programming
+- indiedev
 - OpenGL
 - Windows
 ---
