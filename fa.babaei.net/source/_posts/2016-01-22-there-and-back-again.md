@@ -24,4 +24,7 @@ date: 2016-01-22 06:46:00
 
 <!-- more -->
 
+### مقالات مرتبط ###
 
+* [تاریخچه FreeBSD](/blog/2016/01/23/the-history-of-freebsd/)
+* [سری آموزشی توسعه بازی های کامپیوتری و C++](/blog/2016/01/23/game-development-and-c-tutorials-series/)
