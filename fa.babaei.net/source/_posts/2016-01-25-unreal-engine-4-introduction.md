@@ -37,6 +37,7 @@ tags:
 * [زبان برنامه نویسی](#programming-language)
 * [Unreal Editor](#ue4-editor)
 * [محیط توسعه](#ide)
+* [Unreal Tournament](#unreal-tournament)
 
 
 <br />
@@ -125,6 +126,14 @@ UE4 از Virtual Reality یا به اختصار VR بر روی [SteamVR/HTC Vive
 * محیط رسمی مورد پشتیبانی جهت توسعه در پلتفرم ویندوز [Microsoft Visual Studio](https://en.wikipedia.org/wiki/Microsoft_Visual_Studio) می باشد. تا نسخه 4.10.2 که آخرین نسخه پایدار فعلی است، بهتر است از Visual Studio 2013 Update 5 استفاده نمائید ([ابتدا اعلام شد که این نسخه با Visual Studio 2015 Update 1 سازگار نمی باشد اما بعدا اعلام شد که مشکلی وجود نداشته است](https://forums.unrealengine.com/showthread.php?96897-4-10-2-Hotfix-Released)). از آن جهت که مایکروسافت به اجبار تمامی توسعه دهندگان ویندوز را به ارتقا هرچه سریعتر به نسخه 2015 آن تشویق می نماید، در نسخه سری UE 4.11 و بالاتر، نسخه رسمی مورد پشتیبانی، Visual Studio 2015 با Update 1 و یا بالاتر می باشد. طبق گفته Epic از نسخه 4.11  به بعد پشتیبانی از Visual Studio 2013 منسوخ شد.
 * در محیط Mac OS X همانطور که انتظار می رود محیط رسمی توسعه فقط [Apple Xcode](https://en.wikipedia.org/wiki/Xcode) می باشد.
 * در محیط Linux روش پیشنهادی [Coss-Compile](https://en.wikipedia.org/wiki/Cross_compiler) از ویندوز برای لینوکس می باشد (در حال حاضر Coss-Compile از Mac OS X مقدور نمی باشد). اما می توان اقدام به تولید [Unix Makefile](https://en.wikipedia.org/wiki/Makefile) یا [CMakeLists.txt](https://en.wikipedia.org/wiki/CMake) نموده سپس با استفاده از یکی از IDE های [Qt Creator](https://en.wikipedia.org/wiki/Qt_Creator) یا [KDevelop](https://en.wikipedia.org/wiki/KDevelop) 4.6+ یا هر IDE با پشتیبانی از یکی از روش های فوق، اقدام به باز نمودن پروژه نمود. چناچه از KDevelop استفاده نمائید نیاز به حداقل 3 تا 4 گیگابایت رم خواهد بود. همچنین نیازمندی های مورد نیاز شامل [Mono](https://en.wikipedia.org/wiki/Mono_%28software%29) 3.x به علاوه Compiler [زبان C#](https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29) و کتابخانه های [.NET](https://en.wikipedia.org/wiki/.NET_Framework) نسخه 4.0، کامپایلر [Clang](https://en.wikipedia.org/wiki/Clang) 3.3.x تا 3.6.x بجز 3.5.x، کتابخانه [Qt](https://en.wikipedia.org/wiki/Qt_%28software%29) 4 یا 5  و یا [GTK](https://en.wikipedia.org/wiki/GTK%2B).
+
+
+<br />
+<a name="unreal-tournament"></a>
+
+### Unreal Tournament ###
+
+همزمان با [عرضه کد های UE4 از سوی Epic بر روی  GitHub](https://github.com/EpicGames/UnrealEngine)، یک [Repository](https://en.wikipedia.org/wiki/Software_repository) دیگر جهت [توسعه نسخه بعدی Unreal Tournament](https://en.wikipedia.org/wiki/Unreal_Tournament) بر [روی اکانت GitHub این شرکت](https://github.com/EpicGames/) ایجاد و کار بر روی آن بر اساس UE4 شروع شد. تاریخچه کامل توسعه آن به همراه تمامی منابع و Asset های مورد استفاده، برای همگان قابل رویت می باشد که آن را تبدیل به یک منبع آموزشی فوق العاده جهت استفاده افرادی که تمایل به مشاهده چگونگی ساخت بازی های بزرگ دارند، می نماید. به مانند کد UE4، شما حتی قابلیت اعمال تغییر بر روی کد آن و عرضه تغییرات خود به Epic را خواهید شد که ممکن است از سوی آن ها پذیرفته شود. Epic اعلام نموده که لزوما این Repository و محتویات آن، در ساخت Unreal Tournament بعدی مورد استفاده قرار نخواهد گرفت!
 
 <br />
 در ادامه این سری آموزشی، ابتدا به نحوه ی نصب، پیکربندی و راه اندازی UE4 با استفاده از Epic Games Launcher و یا دریافت و کامپایل از سورس کد به همراه تمامی پیش نیاز ها و ابزارهای آن خواهیم پرداخت. پس از آن قادر خواهیم بود توسعه بازی در محیط UE4 را به همراه هم تجربه نمائیم.
