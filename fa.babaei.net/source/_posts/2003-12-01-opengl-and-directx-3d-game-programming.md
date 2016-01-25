@@ -1,21 +1,17 @@
 ---
-layout: post
 title: "OpenGL & DirectX, 3D Game Programming"
 date: 2003-12-01 00:00
-comments: false
-sharing: true
-footer: true
 tags:
-- C
-- C++
-- C#
-- DirectX
-- gamedev
-- Game Development
-- Game Programming
-- indiedev
-- OpenGL
-- Windows
+  - C
+  - C++
+  - C#
+  - DirectX
+  - gamedev
+  - Game Development
+  - Game Programming
+  - indiedev
+  - OpenGL
+  - Windows
 ---
 
 ### <center>معرفی و بررسی پلاتفرم های ساخت بازی و انیمیشن کامپیوتری</center> ###

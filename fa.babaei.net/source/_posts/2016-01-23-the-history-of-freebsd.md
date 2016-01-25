@@ -1,4 +1,5 @@
-title: The History of FreeBSD
+---
+title: "The History of FreeBSD"
 date: 2016-01-23 13:25:06
 tags:
   - FreeBSD

@@ -1,18 +1,14 @@
 ---
-layout: post
 title: "Cross-Platform Persian Keyboard"
 date: 2008-02-08 00:00
-comments: false
-sharing: true
-footer: true
 tags:
-- .NET
-- .NET Framework
-- C#
-- Cross Platform
-- Mono
-- Persian
-- Windows
+  - .NET
+  - .NET Framework
+  - C#
+  - Cross Platform
+  - Mono
+  - Persian
+  - Windows
 ---
 
 ### <center>طراحی و بكارگیری كیبورد فارسی مستقل از سیستم عامل</center> ###

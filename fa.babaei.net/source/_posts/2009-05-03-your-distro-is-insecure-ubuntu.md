@@ -1,15 +1,11 @@
 ---
-layout: post
 title: "Your Distro is Insecure: Ubuntu"
 date: 2009-05-03 00:00
-comments: false
-sharing: true
-footer: true
 tags:
-- GNU
-- Linux
-- Security
-- Ubuntu
+  - GNU
+  - Linux
+  - Security
+  - Ubuntu
 ---
 
 ### <center>توزیع شما نا امن است: اوبونتو</center> ###

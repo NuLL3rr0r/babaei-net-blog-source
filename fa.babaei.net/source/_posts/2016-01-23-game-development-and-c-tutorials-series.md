@@ -1,4 +1,5 @@
-title: Game Development and C++ Tutorials Series
+---
+title: "Game Development and C++ Tutorials Series"
 date: 2016-01-23 16:35:33
 tags:
   - Android

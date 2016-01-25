@@ -1,23 +1,19 @@
 ---
-layout: post
 title: "Get An Email When Google Visits Your Website"
 date: 2007-12-23 20:49
-comments: false
-sharing: true
-footer: true
 tags:
-- .NET
-- .NET Framework
-- ASP.NET
-- C#
-- FreeBSD
-- GNU
-- Google
-- HTML
-- Linux
-- Mono
-- Perl
-- Unix
+  - .NET
+  - .NET Framework
+  - ASP.NET
+  - C#
+  - FreeBSD
+  - GNU
+  - Google
+  - HTML
+  - Linux
+  - Mono
+  - Perl
+  - Unix
 ---
 
 ### <center>چه زماني گوگل به وب سايت شما سركشي مي كند</center> ###

@@ -1,33 +1,29 @@
 ---
-layout: post
 title: ".NET/Java Code Obfuscation"
 date: 2009-03-14 00:00
-comments: false
-sharing: true
-footer: true
 tags:
-- .NET
-- .NET Framework
-- C
-- C++
-- C++/CLI
-- GNU
-- IronPython
-- IronRuby
-- Java
-- JDK
-- JVM
-- Linux
-- Mac OS X
-- Mono
-- Perl
-- Python
-- Ruby
-- Ruby.NET
-- Unix
-- Visual Studio
-- Windows
-- Xcode
+  - .NET
+  - .NET Framework
+  - C
+  - C++
+  - C++/CLI
+  - GNU
+  - IronPython
+  - IronRuby
+  - Java
+  - JDK
+  - JVM
+  - Linux
+  - Mac OS X
+  - Mono
+  - Perl
+  - Python
+  - Ruby
+  - Ruby.NET
+  - Unix
+  - Visual Studio
+  - Windows
+  - Xcode
 ---
 
 ### <center>مبهم سازی کد در .NET و Java</center> ###

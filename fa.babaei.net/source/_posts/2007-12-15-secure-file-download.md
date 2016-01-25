@@ -1,23 +1,19 @@
 ---
-layout: post
 title: "Secure File Download"
 date: 2007-12-15 00:00
-comments: false
-sharing: true
-footer: true
 tags:
-- .NET
-- .NET Framework
-- ASP.NET
-- C#
-- FreeBSD
-- GNU
-- HTML
-- Linux
-- Mono
-- Perl
-- Security
-- Unix
+  - .NET
+  - .NET Framework
+  - ASP.NET
+  - C#
+  - FreeBSD
+  - GNU
+  - HTML
+  - Linux
+  - Mono
+  - Perl
+  - Security
+  - Unix
 ---
 
 ### <center>ساخت لینك های دانلود متفاوت برای كاربران سایت</center> ###
