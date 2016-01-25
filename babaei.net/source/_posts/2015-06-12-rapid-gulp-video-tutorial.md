@@ -1,11 +1,11 @@
 ---
-title: Rapid Gulp Video Tutorial
+title: "Rapid Gulp Video Tutorial"
 date: 2015-06-12 14:06:50
 tags:
-- Advertising
-- Gulp
-- Packt Publishing
-- Tutorial
+  - Advertising
+  - Gulp
+  - Packt Publishing
+  - Tutorial
 ---
 
 Modern web development is filled with an abundance of tools and technologies, but it’s difficult to know where to begin. You want both efficiency of your work and high performance of your site; Gulp brings that right to your doorstep. With its rising popularity, you don’t want to leave Gulp out of your toolbox.

@@ -1,14 +1,14 @@
 ---
-title: 'Happy 24th Birthday: A Linux Kernel Panic At Hometown'
+title: "Happy 24th Birthday: A Linux Kernel Panic At Hometown"
 date: 2015-08-25 21:00:00
 tags:
-- Crash
-- FLOSS
-- FreeBSD
-- GNU
-- Kernel Panic
-- Linux
-- Unix
+  - Crash
+  - FLOSS
+  - FreeBSD
+  - GNU
+  - Kernel Panic
+  - Linux
+  - Unix
 ---
 
 [{% img post-image /blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/2015-08-25-happy-24th-birthday-a-linux-kernel-panic-at-hometown__001.jpg 540 480 "'A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)'" "'A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)'" %}](/blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/2015-08-25-happy-24th-birthday-a-linux-kernel-panic-at-hometown__001_hq.jpg)

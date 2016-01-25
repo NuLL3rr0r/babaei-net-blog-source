@@ -1,9 +1,9 @@
 ---
-title: Packt $5 Campaign - Packt Publishing
+title: "Packt $5 Campaign - Packt Publishing"
 date: 2015-12-19 10:47:34
 tags:
-- Advertising
-- Packt Publishing
+  - Advertising
+  - Packt Publishing
 ---
 
 [{% img post-image /blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png 600 300 "'Packt $5 Campaign - Packt Publishing'" "'Packt $5 Campaign - Packt Publishing'" %}](/blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png)

@@ -1,9 +1,9 @@
 ---
-title: Delete a File With Invalid or Bad Characters in File Name on FreeBSD
+title: "Delete a File With Invalid or Bad Characters in File Name on FreeBSD"
 date: 2015-09-09 12:54:08
 tags:
-- FreeBSD
-- Unix
+  - FreeBSD
+  - Unix
 ---
 
 There once was a time when I did the following inside my home directory:

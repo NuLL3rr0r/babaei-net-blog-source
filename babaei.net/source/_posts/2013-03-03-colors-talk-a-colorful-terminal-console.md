@@ -1,25 +1,23 @@
 ---
-layout: post
 title: "Colors Talk: A Colorful Terminal / Console"
 date: 2013-03-03 05:10
-comments: true
 tags:
-- Bash
-- Console
-- csh
-- FreeBSD
-- Funtoo
-- Gentoo
-- GNOME
-- GNU
-- KDE
-- Linux
-- LXDE
-- nano
-- sh
-- Terminal
-- Unix
-- XFCE
+  - Bash
+  - Console
+  - csh
+  - FreeBSD
+  - Funtoo
+  - Gentoo
+  - GNOME
+  - GNU
+  - KDE
+  - Linux
+  - LXDE
+  - nano
+  - sh
+  - Terminal
+  - Unix
+  - XFCE
 ---
 
 If you've ever used a __GNU__ [Gentoo](http://www.gentoo.org/) or [Funtoo](http://www.funtoo.org/wiki/Welcome) __Linux__ variant, or a live version of any of them, you may have noticed their eye-catching colorful terminal or console. Whether you're on a virtual console or one of __KDE__, __GNOME__, __XFCE__, __LXDE__ terminal apps.

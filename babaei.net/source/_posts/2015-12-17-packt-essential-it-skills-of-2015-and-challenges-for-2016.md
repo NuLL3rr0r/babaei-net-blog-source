@@ -1,9 +1,9 @@
 ---
-title: Packt Essential IT Skills of 2015 and Challenges for 2016
+title: "Packt Essential IT Skills of 2015 and Challenges for 2016"
 date: 2015-12-17 22:48:06
 tags:
-- Advertising
-- Packt Publishing
+  - Advertising
+  - Packt Publishing
 ---
 
 [{% img post-image /blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png 941 470 "'Packt Essential IT Skills of 2015 and Challenges for 2016'" "'Packt Essential IT Skills of 2015 and Challenges for 2016'" %}](/blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png)

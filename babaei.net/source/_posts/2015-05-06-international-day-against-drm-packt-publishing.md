@@ -1,12 +1,10 @@
 ---
-layout: post
 title: "International Day Against DRM at Packt Publishing"
 date: 2015-05-06 23:30:33
-comments: true
 tags:
-- Advertising
-- DRM
-- Packt Publishing
+  - Advertising
+  - DRM
+  - Packt Publishing
 ---
 
 {% blockquote Defective by Design - International Day Against DRM  May, 6th 2015 https://www.defectivebydesign.org/dayagainstdrm %}

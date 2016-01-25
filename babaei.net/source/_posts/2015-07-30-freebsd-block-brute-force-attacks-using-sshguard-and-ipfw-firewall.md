@@ -1,20 +1,20 @@
 ---
-title: 'FreeBSD: Block Brute-force Attacks Using Sshguard and IPFW Firewall'
+title: "FreeBSD: Block Brute-force Attacks Using Sshguard and IPFW Firewall"
 date: 2015-07-30 19:56:00
 tags:
-- Brute-force
-- Firewall
-- FreeBSD
-- GNU
-- IPF
-- IPFILTER
-- IPFW
-- Linux
-- PF
-- Security
-- SSH
-- Unix
-- Vulnerability
+  - Brute-force
+  - Firewall
+  - FreeBSD
+  - GNU
+  - IPF
+  - IPFILTER
+  - IPFW
+  - Linux
+  - PF
+  - Security
+  - SSH
+  - Unix
+  - Vulnerability
 ---
 
 There is an old saying that the only safe computer is one that's disconnected from the network, turned off, and locked in an underground bunker—and even then you can't be sure!

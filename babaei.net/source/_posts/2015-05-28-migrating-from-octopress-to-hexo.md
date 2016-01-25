@@ -1,11 +1,9 @@
-layout: post
-title: Migrating From Octopress To Hexo
-comments: true
+---
+title: "Migrating From Octopress To Hexo"
+date: 2015-05-28 01:44:00
 tags:
   - Hexo
   - Octopress
-categories: []
-date: 2015-05-28 01:44:00
 ---
 
 Well, I was living a happy life with _[Octopress 2.x](https://github.com/imathis/octopress)_ despite the fact that I didn't do much blogging in the past couple of years. Moreover, in my estimation [Octopress](http://octopress.org/) still should be considered as one of the greatest blogging platforms among [its peers](https://www.staticgen.com/) and I really got nothing against it. But, I see a few shortcomings which made me looking for alternatives (and some of these still affects [the 3.x version of Octopress](https://github.com/octopress/octopress)):

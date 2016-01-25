@@ -1,18 +1,16 @@
 ---
-layout: post
 title: "Should I Check If A Pointer Is NULL Before Deleting It?"
 date: 2013-02-11 01:52
-comments: true
 tags:
-- C
-- C++
-- Clang
-- G++
-- GCC
-- MSVC
-- VC++
-- Visual C++
-- Visual Studio
+  - C
+  - C++
+  - Clang
+  - G++
+  - GCC
+  - MSVC
+  - VC++
+  - Visual C++
+  - Visual Studio
 ---
 
 Most of the time I see some C++ programmers who check if a pointer is NULL before deleting it.

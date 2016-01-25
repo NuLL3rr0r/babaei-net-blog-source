@@ -1,32 +1,30 @@
 ---
-layout: post
 title: "Write your own cross-platform cryptographic library"
 date: 2013-02-15 08:11
-comments: true
 tags:
-- C
-- C++
-- Clang
-- CMake
-- Cross-platform
-- Crypto++
-- Cryptography
-- FreeBSD
-- G++
-- GCC
-- GNU
-- iOS
-- Linux
-- Mac OS X
-- MSVC
-- QMake
-- Qt Creator
-- Security
-- Unix
-- VC++
-- Visual C++
-- Visual Studio
-- Windows
+  - C
+  - C++
+  - Clang
+  - CMake
+  - Cross-platform
+  - Crypto++
+  - Cryptography
+  - FreeBSD
+  - G++
+  - GCC
+  - GNU
+  - iOS
+  - Linux
+  - Mac OS X
+  - MSVC
+  - QMake
+  - Qt Creator
+  - Security
+  - Unix
+  - VC++
+  - Visual C++
+  - Visual Studio
+  - Windows
 ---
 
 Previously I've described [the process of building Crypto++ on both FreeBSD and Windows using the GCC, MinGW and VC++ compilers](/blog/2013/02/15/how-to-build-cpp-cryptographic-library-cryptopp/).

@@ -1,9 +1,9 @@
 ---
-title: What does your industry look like?
+title: "What does your industry look like?"
 date: 2015-07-23 15:14:36
 tags:
-- Advertising
-- Packt Publishing
+  - Advertising
+  - Packt Publishing
 ---
 
 [{% img post-image /blog/2015/07/23/what-does-your-industry-look-like/2015-07-23-what-does-your-industry-look-like__001.png 463 168 "'Packt Free Learning Library'" "'Packt Free Learning Library'" %}](/blog/2015/07/23/what-does-your-industry-look-like/2015-07-23-what-does-your-industry-look-like__001.png)

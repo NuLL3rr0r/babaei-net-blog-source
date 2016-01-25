@@ -1,9 +1,9 @@
 ---
-title: 'Be Skilled & Ready with Packt’s revamped learning library'
+title: "Be Skilled & Ready with Packt’s revamped learning library"
 date: 2015-10-01 17:29:14
 tags:
-- Advertising
-- Packt Publishing
+  - Advertising
+  - Packt Publishing
 ---
 
 [{% img post-image /blog/2015/10/01/be-skilled-ready-with-packt-revamped-learning-library/2015-10-01-be-skilled-ready-with-packt-revamped-learning-library__001.png 590 295 "'Be Skilled & Ready with Packt’s revamped learning library – over 3,000 titles for a whole year now just $100!'" "'Be Skilled & Ready with Packt’s revamped learning library – over 3,000 titles for a whole year now just $100!'" %}](/blog/2015/10/01/be-skilled-ready-with-packt-revamped-learning-library/2015-10-01-be-skilled-ready-with-packt-revamped-learning-library__001.png)

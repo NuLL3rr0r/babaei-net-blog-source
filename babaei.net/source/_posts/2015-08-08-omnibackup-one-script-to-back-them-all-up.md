@@ -1,13 +1,13 @@
 ---
-title: 'OmniBackup: One Script to back them all up'
+title: "OmniBackup: One Script to back them all up"
 date: 2015-08-08 03:23:23
 tags:
-- Backup
-- FreeBSD
-- GNU
-- Linux
-- OmniBackup
-- Unix
+  - Backup
+  - FreeBSD
+  - GNU
+  - Linux
+  - OmniBackup
+  - Unix
 ---
 
 A week ago was _[System Administrator Appreciation Day](http://sysadminday.com/)_. It is celebrated on the last _Friday_ in _July_ and it has been celebrated since _July 28, 2000_. But, system administrators know not all days are like that day. They face many hard times and struggles during their careers and the worse of them all is either a [security breech](/blog/2015/07/30/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/) or data loss.

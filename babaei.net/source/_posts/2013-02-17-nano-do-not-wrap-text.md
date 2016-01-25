@@ -1,18 +1,16 @@
 ---
-layout: post
 title: "nano, Do not wrap text"
 date: 2013-02-17 01:13
-comments: true
 tags:
-- Console
-- FreeBSD
-- Funtoo
-- Gentoo
-- GNU
-- Linux
-- nano
-- Terminal
-- Unix
+  - Console
+  - FreeBSD
+  - Funtoo
+  - Gentoo
+  - GNU
+  - Linux
+  - nano
+  - Terminal
+  - Unix
 ---
 
 [GNU nano](http://www.nano-editor.org/) is my favorite text editor while I'm on console. However, there's one thing about nano which annoys me: _automatic text wrapping!_

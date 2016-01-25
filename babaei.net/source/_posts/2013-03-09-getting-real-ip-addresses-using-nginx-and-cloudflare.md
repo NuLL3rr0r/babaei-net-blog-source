@@ -1,20 +1,18 @@
 ---
-layout: post
 title: "Getting real IP addresses using Nginx and CloudFlare"
 date: 2013-03-09 01:35
-comments: true
 tags:
-- AWK
-- Bash
-- CloudFlare
-- Cron
-- FreeBSD
-- Funtoo
-- Gentoo
-- GNU
-- Linux
-- Nginx
-- Unix
+  - AWK
+  - Bash
+  - CloudFlare
+  - Cron
+  - FreeBSD
+  - Funtoo
+  - Gentoo
+  - GNU
+  - Linux
+  - Nginx
+  - Unix
 ---
 
 OK, I suppose you know what [CloudFlare](http://www.cloudflare.com/) is, and are familiar with [Nginx](http://nginx.org/) configuration process, before we proceed any further. Just in case you don't know, __CloudFlare__ offers free and commercial, cloud-based services to help secure and accelerate websites. The thing is, I'm really satisfied with the services they offer except a repellent issue about logging the real IP address of your website's visitors. Since __CloudFlare__ acts as a reverse proxy, all connections come from __CloudFlare__'s IP addresses, not the real visitors anymore. Anyway, using __Nginx__ there's a simple workaround for this issue, which I'll describe in the rest of this post.

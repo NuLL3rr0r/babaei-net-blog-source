@@ -1,16 +1,16 @@
 ---
-title: Post-Processing Effects in Cocos2d-x
+title: "Post-Processing Effects in Cocos2d-x"
 date: 2016-01-08 22:10:30
 tags:
-- C
-- C++
-- Cocos2d-x
-- Game Development
-- Game Programming
-- OpenGL
-- VC++
-- Visual C++
-- Visual Studio
+  - C
+  - C++
+  - Cocos2d-x
+  - Game Development
+  - Game Programming
+  - OpenGL
+  - VC++
+  - Visual C++
+  - Visual Studio
 ---
 
 [{% img post-image /blog/2016/01/08/post-processing-effects-in-cocos2d-x/gray_black_and_white_shader.png 960 540 "'Gray (black and white) post-processing effect in Cocos2d-x'" "'Gray (black and white) post-processing effect in Cocos2d-x'" %}](/blog/2016/01/08/post-processing-effects-in-cocos2d-x/gray_black_and_white_shader.png)

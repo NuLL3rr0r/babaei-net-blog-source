@@ -1,29 +1,27 @@
 ---
-layout: post
 title: "How to build C++ cryptographic library, Crypto++"
 date: 2013-02-15 03:50
-comments: true
 tags:
-- C
-- C++
-- Clang
-- Cross-platform
-- Crypto++
-- Cryptography
-- FreeBSD
-- G++
-- GCC
-- GNU
-- iOS
-- Linux
-- Mac OS X
-- MSVC
-- Security
-- Unix
-- VC++
-- Visual C++
-- Visual Studio
-- Windows
+  - C
+  - C++
+  - Clang
+  - Cross-platform
+  - Crypto++
+  - Cryptography
+  - FreeBSD
+  - G++
+  - GCC
+  - GNU
+  - iOS
+  - Linux
+  - Mac OS X
+  - MSVC
+  - Security
+  - Unix
+  - VC++
+  - Visual C++
+  - Visual Studio
+  - Windows
 ---
 
 [Crypto++](http://www.cryptopp.com/) is an awesome free and open source C++ class library of cryptographic algorithms and schemes which fully supports 32-bit and 64-bit architectures for many major operating systems, including FreeBSD, Linux, Solaris, Windows, Mac OS X and iOS. Currently, Crypto++ officially supports the following compilers:
