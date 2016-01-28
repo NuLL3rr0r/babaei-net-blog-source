@@ -34,8 +34,12 @@ tags:
 
 ## <center>سری آموزشی توسعه بازی های کامپیوتری و C++</center> ##
 
+<br />
+
 [{% img post-image /blog/2016/01/23/game-development-and-c-tutorials-series/game-development.jpg 640 360 "'سری آموزشی توسعه بازی های کامپیوتری و C++'" "'سری آموزشی توسعه بازی های کامپیوتری و C++'" %}](/blog/2016/01/23/game-development-and-c-tutorials-series/game-development.jpg)
 <span class="post-image-title">سری آموزشی توسعه بازی های کامپیوتری و C++ -  منبع تصویر: [ویکی پدیا](https://en.wikipedia.org/wiki/File:Vg_development_icon.svg)</span>
+
+<br />
 
 پس از [شروع سری آموزشی FreeBSD](/blog/2016/01/23/the-history-of-freebsd/)، تصمیم بر این شد که همزمان سری آموزشی توسعه بازی رو راه اندازی کنم. از آنجائی که من Game Engine های مبتنی بر [C++](https://en.wikipedia.org/wiki/C%2B%2B) رو ترجیح میدم و بر موتورهای بازی [Unreal Engine 4](https://www.unrealengine.com/) و [Cocos2d-x](http://www.cocos2d-x.org/) تسلط دارم دو دوره مجزای بازی سازی رو با هر یک از این Game Engine ها در این بلاگ شروع می کنم. ممکنه بعدها سرکی هم به [OGRE](http://www.ogre3d.org/) و [Godot]( http://www.godotengine.org/) (بخوانید گِدو، نام این Engine از نمایشنامه Waiting for Godot گرفته شده) بکشیم. اما در حال حاضر فقط Cocos2d-x و Unreal Engine 4.
 

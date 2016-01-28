@@ -2,16 +2,22 @@
 title: "The History of FreeBSD"
 date: 2016-01-23 13:25:06
 tags:
+  - FLOSS
   - FreeBSD
   - GNU
   - LINUX
+  - Open Source
   - UNIX
 ---
 
 ## <center>تاریخچه FreeBSD</center> ##
 
+<br />
+
 [{% img post-image /blog/2016/01/23/the-history-of-freebsd/evolution-of-unix-and-unix-like-systems.png 1959 1306 "'نمودار سیر تکاملی سیستم عامل های Unix و شبه Unix'" "'نمودار سیر تکاملی سیستم عامل های Unix و شبه Unix'" %}](/blog/2016/01/23/the-history-of-freebsd/evolution-of-unix-and-unix-like-systems.png)
 <span class="post-image-title">نمودار سیر تکاملی سیستم عامل های یونیکس و شبه یونیکس - منبع تصویر: [ویکی پدیا](https://en.wikipedia.org/wiki/File:Unix_history-simple.svg)</span>
+
+<br />
 
 اگر از یک سیستم عامل آزاد و کد باز استفاده می نمائید، به احتمال قریب به یقین مبتنی بر [گنو](https://www.gnu.org/) و [هسته لینوکس](https://www.kernel.org/) می باشد. اما باید بدانید این پلتفرم های کد باز و آزاد نه تنها اولین نرم افزارها در نوع خود نبوده، حتی حرفه ای ترین و یا موفق ترین نرم افزارهای کد باز تجاری شده در نوع خود نیز محسوب نخواهند شد. در هر سه این موارد [Berkeley Software Distribution یا به اختصار BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)  از [GNU/Linux](http://www.gnu.org/gnu/linux-and-gnu.en.html)  پیشی می گیرد. حال سوال اصلی اینجاست که چرا BSD در [اکوسیستم نرم افزارهای آزاد](https://en.wikipedia.org/wiki/Free_and_open-source_software) به حاشیه رانده شده است، در حالی که توزیع های مختلف GNU/Linux گوی سبقت را از آن ربوده اند؟
 
@@ -97,7 +103,7 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 
 در واقع تنها تفاوت در مدل توسعه، لیسانس و مقداری بخت و اقبال، سرنوشت هر یک از این سیستم عامل ها را به شکل دیگری رقم زده است. در پایان، اما نکته اصلی و حائز اهمیت آزاد بودن این پلتفرم ها می باشد که هر یک به عنوان نقطه قوت خود بر آن می بالند.
 
-در مقاله بعدی به تشریح ماهیت، مفاهیم، ویژگی های و اهداف FreeBSD خواهیم پرداخت.
+[در مقاله بعدی به تشریح ماهیت، مفاهیم، ویژگی ها و اهداف FreeBSD خواهیم پرداخت](http://127.0.0.1:13001/blog/2016/01/28/what-is-freebsd-an-overview-of-freebsd-operating-system/).
 
 
 <br />
@@ -111,4 +117,11 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 * [About the FreeBSD Project](https://www.freebsd.org/doc/handbook/history.html)
 * [FreeBSD Mall, Company History]( https://www.freebsdmall.com/cgi-bin/fm/history.html)
 * [Linux Today - Report from Comdex--Walnut Creek CDROM, FreeBSD and Slackware](http://www.linuxtoday.com/infrastructure/1998112000105OP)
+
+
+<br />
+
+### مقالات مرتبط ###
+
+* [FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBSD](/blog/2016/01/28/what-is-freebsd-an-overview-of-freebsd-operating-system/)
 

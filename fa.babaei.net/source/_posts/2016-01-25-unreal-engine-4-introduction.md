@@ -5,11 +5,13 @@ tags:
   - Blueprints
   - Cross-platform
   - Epic
+  - FLOSS
   - gamedev
   - Game Development
   - Game Programming
   - indiedev
   - Kismet
+  - Open Source
   - UDK
   - Unreal Engine
   - UnrealScript
@@ -17,8 +19,12 @@ tags:
 
 ## <center>مقدمه ای بر موتور ساخت بازی Unreal Engine 4</center> ##
 
+<br />
+
 [{% img post-image /blog/2016/01/25/unreal-engine-4-introduction/unreal-engine-4.png 601 201 "'صفحه بارگذاری Unreal Engine 4 Editor'" "'صفحه بارگذاری Unreal Engine 4 Editor'" %}](/blog/2016/01/25/unreal-engine-4-introduction/unreal-engine-4.png)
 <span class="post-image-title">صفحه بارگذاری Unreal Engine 4 Editor</span>
+
+<br />
 
 علیرغم حضور نام های بزرگی مانند [CryEngine](http://cryengine.com/) از شرکت [Crytek](http://www.crytek.com/) و سایرین در دنیای بازی، بدون شک [Unreal Engine](http://unrealengine.com/) موفق ترین موتور بازی سازی [AAA](https://en.wikipedia.org/wiki/AAA_%28video_game_industry%29) تا به امروز می باشد.  با ظهور مارکت های جدیدی مانند [Valve Steam](http://store.steampowered.com/), [Apple App Store](https://www.apple.com/appstore), [Google Play](https://play.google.com/) و سایر بازارهای از این دست در دنیای بازی های کامپیوتری، فرصت های بسیاری جهت درخشش [توسعه دهندگان مستقل](https://en.wikipedia.org/wiki/Independent_video_game_development) در دنیای بازهای کامپیوتری ایجاد شد. قطعا یکی از عوامل موفقیت توسعه دهندگان مستقل در این بازارهای نوظهور موتور بازی سازی [Unity](http://www.unity3d.com/) بود که برای چند سال سلطان بی چون و چرای دنیای Indie بود. این موتور بازی سازی بدلیل سهولت یادگیری و استفاده، همچنین قابلیت تولید خروجی برای پلتفرم های مختلف شامل دسکتاپ، موبایل و کنسول در ازای پرداخت مبلغی نسبتا معقول، داشتن فروشگاه Asset که باعث کاهش هزینه توسعه بازی ها توسط توسعه دهندگان می شد، از محبوب ترین موتورهای بازی سازی نزد تولیدکنندگان مستقل می باشد. لذا شرکت [Epic](http://www.epicgames.com/) سازنده موتور بازی سازی Unreal Engine ابتدا با عرضه [UDK](http://www.unrealengine.com/udk/) که بر اساس موتور Unreal Engine 3 توسعه داده شده بود و سپس باز نمودن و عرضه کد Unreal Engine 4 بر روی [GitHub](https://github.com/) که قبلا با مبلغ بسیار گزافی فقط در اختیار آنهائی که این شرکت Licensees می نامید قرار داشت، گام بزرگی به سوی تسخیر بخشی از بازار بازی های مستقل نهاد.
 
