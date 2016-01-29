@@ -103,7 +103,7 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 
 در واقع تنها تفاوت در مدل توسعه، لیسانس و مقداری بخت و اقبال، سرنوشت هر یک از این سیستم عامل ها را به شکل دیگری رقم زده است. در پایان، اما نکته اصلی و حائز اهمیت آزاد بودن این پلتفرم ها می باشد که هر یک به عنوان نقطه قوت خود بر آن می بالند.
 
-[در مقاله بعدی به تشریح ماهیت، مفاهیم، ویژگی ها و اهداف FreeBSD خواهیم پرداخت](http://127.0.0.1:13001/blog/2016/01/28/what-is-freebsd-an-overview-of-freebsd-operating-system/).
+[در مقاله بعدی به تشریح ماهیت، مفاهیم، ویژگی ها و اهداف FreeBSD خواهیم پرداخت](http://127.0.0.1:13001/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/).
 
 
 <br />
@@ -123,5 +123,5 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 
 ### مقالات مرتبط ###
 
-* [FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBSD](/blog/2016/01/28/what-is-freebsd-an-overview-of-freebsd-operating-system/)
+* [FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBSD](/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/)
 
