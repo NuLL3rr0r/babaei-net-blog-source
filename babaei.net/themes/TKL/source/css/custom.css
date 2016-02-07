@@ -233,7 +233,9 @@ figure.highlight {
 
 .post-image {
     display: block !important;
-    margin: 4px auto !important;
+    margin: 0 auto !important;
+    margin-top: 2.0em;
+    margin-bottom: 1.0em;
     width: auto;
     height: auto;
 }
@@ -246,8 +248,10 @@ figure.highlight {
     font-size: 0.8em;
 	font-style: italic;
     font-weight: normal;
-    line-height: 1.0em;
+    line-height: 1.5em;
     margin: 1.1em;
+    margin-bottom: 2.0em;
+    color: #151515;
 }
 
 .poem, .poem p {

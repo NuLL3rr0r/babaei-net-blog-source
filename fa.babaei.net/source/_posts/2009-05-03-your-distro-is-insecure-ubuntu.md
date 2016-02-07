@@ -8,7 +8,7 @@ tags:
   - Ubuntu
 ---
 
-### <center>توزیع شما نا امن است: اوبونتو</center> ###
+<div class="post-title-fa">توزیع شما نا امن است: اوبونتو</div>
 
 <!-- more -->
 

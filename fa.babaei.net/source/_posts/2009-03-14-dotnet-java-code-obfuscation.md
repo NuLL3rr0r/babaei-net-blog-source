@@ -26,7 +26,7 @@ tags:
   - Xcode
 ---
 
-### <center>مبهم سازی کد در .NET و Java</center> ###
+<div class="post-title-fa">مبهم سازی کد در .NET و Java</div>
 
 #### چكیده ####
 

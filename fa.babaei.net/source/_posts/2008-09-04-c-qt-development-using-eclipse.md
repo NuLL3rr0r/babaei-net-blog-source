@@ -41,7 +41,7 @@ tags:
   - Xcode
 ---
 
-### <center>توسعه پروژه های C++ مبتنی بر Qt با استفاده از Eclipse</center> ###
+<div class="post-title-fa">توسعه پروژه های C++ مبتنی بر Qt با استفاده از Eclipse</div>
 
 [{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__000_cover.jpg 458 297 "'C++ Qt Development using Eclipse'" "'C++ Qt Development using Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__000_cover.jpg)
 
