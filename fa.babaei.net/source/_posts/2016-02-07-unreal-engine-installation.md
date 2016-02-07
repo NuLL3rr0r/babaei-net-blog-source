@@ -7,6 +7,7 @@ tags:
   - Game Development
   - Game Programming
   - indiedev
+  - UE4
   - Unreal Engine
 ---
 
@@ -21,7 +22,7 @@ tags:
 
 در پایان این مقاله، قادر به انجام موارد ذیل خواهید بود:
 
-* ساخت یک حساب کاربری نزد شرکت Epic Games (البته اگر در حال حاضر چنین حسابی ندارید)
+* ساخت یک حساب کاربری نزد شرکت Epic Games (البته اگر در حال حاضر چنین حساب کاربری ندارید)
 * دریافت و راه اندازی برنامه نصب به نام Epic Game Launcher
 * ورود به Epic Game Launcher با حساب کاربری تان
 * نصب Unreal Engine
