@@ -217,6 +217,8 @@ class Hello
 }
 {% endcodeblock %}
 
+<br />
+
 <div style="direction: ltr !important;">
     <table class="table table-striped table-hover">
         <tr>
@@ -263,6 +265,8 @@ void main()
 }
 {% endcodeblock %}
 
+<br />
+
 <div style="direction: ltr !important;">
     <table class="table table-striped table-hover">
         <tr>
@@ -307,6 +311,8 @@ void main()
 }
 {% endcodeblock %}
 
+<br />
+
 <div style="direction: ltr !important;">
     <table class="table table-striped table-hover">
         <tr>
@@ -345,6 +351,8 @@ import System;
 
 Console.WriteLine("Hello, World!");
 {% endcodeblock %}
+
+<br />
 
 <div style="direction: ltr !important;">
     <table class="table table-striped table-hover">
