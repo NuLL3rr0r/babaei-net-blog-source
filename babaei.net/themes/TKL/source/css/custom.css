@@ -79,6 +79,10 @@ body form .search > box-shadow: 0px 1px #FFF;
     z-index: 999;
 }
 
+.sb-menu.secondary i {
+    color: #666;
+}
+
 .pagination {
     text-align: center;
     overflow: hidden;
@@ -199,8 +203,8 @@ footer .social {
 
 #intro .subscribe i
 {
-    margin-left: 1.0em;
-    margin-right: 1.0em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
 #intro .subscribe a:link * {
@@ -221,6 +225,16 @@ footer .social {
 #intro .subscribe a:active * {
     text-decoration: none;
     color: #333;
+}
+
+#intro .subscribe .social ul {
+	margin: 0;
+	padding: 0;
+}
+
+#intro .subscribe .social li {
+	background: none;
+	display: inline-block;
 }
 
 figure.highlight {

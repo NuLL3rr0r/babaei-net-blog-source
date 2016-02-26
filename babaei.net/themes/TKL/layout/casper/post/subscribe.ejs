@@ -1,1 +1,34 @@
-<a href="<%- theme.telegram %>" title="Subscribe via Telegram!" target="_blank"><i class="fa fa-paper-plane"></i> Subscribe via Telegram! <i class="fa fa-paper-plane"></i></a>
+<div class="social">
+    <ul>
+        <% if(theme.twitter){ %>
+        <li><a href="<%- theme.twitter %>" title="Follow me on Twitter" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.github){ %>
+        <li><a href="<%- theme.github %>" title="Follow me on Github" target="_blank"><i class="fa fa-git"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.linkedin){ %>
+        <li><a href="<%- theme.linkedin %>" title="Follow me on Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.telegram){ %>
+        <li><a href="<%- theme.telegram %>" title="Subscribe via Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.subscribe){ %>
+        <li><a href="<%- theme.subscribe %>" title="Subscribe via Email" target="_blank"><i class="fa fa-envelope"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.rss){ %>
+        <li><a href="<%- theme.rss %>" title="Subscribe via RSS" target="_blank"><i class="fa fa-rss"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.contact){ %>
+        <li><a href="<%- theme.contact %>" title="Send me a message" target="_blank"><i class="fa fa-comment"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.facebook){ %>
+        <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.google){ %>
+        <li><a href="<%- theme.google %>" title="Google-Plus" target="_blank"><i class="fa fa-google-plus"></i></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.weibo){ %>
+        <li><a href="<%- theme.weibo %>" title="Sina-Weibo" target="_blank"><i class="fa fa-weibo"></i></a>&nbsp;</li>
+        <% } %>
+    </ul>
+</div>

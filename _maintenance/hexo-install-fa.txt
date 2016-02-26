@@ -193,6 +193,10 @@ body form .search > box-shadow: 0px 1px #FFF;
     z-index: 999;
 }
 
+.sb-menu.secondary i {
+    color: #666;
+}
+
 .pagination {
     text-align: center;
     overflow: hidden;
@@ -265,6 +269,10 @@ footer .copy .credit a, footer .copy .license a {
 
 footer .fa {
     font-size: 1.6em;
+}
+
+footer .social {
+    letter-spacing: 2px;
 }
 
 * {
@@ -465,6 +473,10 @@ footer ul.list li a, footer ul.list1 li a {
     font-family: 'Yekan', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
+pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, figure h5, figure h6, figure p {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif !important;
+}
+
 #intro .sharing
 {
     text-align: right;
@@ -499,7 +511,7 @@ footer ul.list li a, footer ul.list1 li a {
 
 #intro .subscribe
 {
-    direction: rtl;
+    direction: ltr;
     text-align: center;
     font-size: 1.0em;
     margin-top: 1.0em;
@@ -508,8 +520,8 @@ footer ul.list li a, footer ul.list1 li a {
 
 #intro .subscribe i
 {
-    margin-left: 1.0em;
-    margin-right: 1.0em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
 #intro .subscribe a:link * {
@@ -530,6 +542,16 @@ footer ul.list li a, footer ul.list1 li a {
 #intro .subscribe a:active * {
     text-decoration: none;
     color: #333;
+}
+
+#intro .subscribe .social ul {
+	margin: 0;
+	padding: 0;
+}
+
+#intro .subscribe .social li {
+	background: none;
+	display: inline-block;
 }
 
 figure.highlight {
@@ -673,17 +695,26 @@ nano -w themes/TKL/layout/casper/footer.ejs
             </div>
             <div class="social">
                 <ul>
-                    <% if(theme.github){ %>
                     <% if(theme.twitter){ %>
-                    <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;</li>
+                    <li><a href="<%- theme.twitter %>" title="مرا در توئیتر دنبال کنید" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;</li>
                     <% } %>
-                    <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="fa fa-git"></i></a>&nbsp;</li>
+                    <% if(theme.github){ %>
+                    <li><a href="<%- theme.github %>" title="مرا در گیت هاب دنبال کنید" target="_blank"><i class="fa fa-git"></i></a>&nbsp;</li>
                     <% } %>
                     <% if(theme.linkedin){ %>
-                    <li><a href="<%- theme.linkedin %>" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;</li>
+                    <li><a href="<%- theme.linkedin %>" title="مرا در لینکدین دنبال کنید" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;</li>
                     <% } %>
                     <% if(theme.telegram){ %>
-                    <li><a href="<%- theme.telegram %>" title="Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a>&nbsp;</li>
+                    <li><a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.subscribe){ %>
+                    <li><a href="<%- theme.subscribe %>" title="اشتراک توسط ایمیل" target="_blank"><i class="fa fa-envelope"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.rss){ %>
+                    <li><a href="<%- theme.rss %>" title="اشتراک از طریق فید" target="_blank"><i class="fa fa-rss"></i></a>&nbsp;</li>
+                    <% } %>
+                    <% if(theme.contact){ %>
+                    <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i></a>&nbsp;</li>
                     <% } %>
                     <% if(theme.facebook){ %>
                     <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;</li>
@@ -806,7 +837,27 @@ nano -w themes/TKL/layout/casper/header.ejs
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="<%- config.root %>atom.xml" class="animsition-link" title="اشتراک از طریق فید">اشتراک از طریق فید</a></li>
+            <% if(theme.twitter){ %>
+            <li><a href="<%- theme.twitter %>" title="مرا در توئیتر دنبال کنید" target="_blank"><i class="fa fa-twitter"></i>&nbsp;&nbsp;&nbsp;&nbsp;مرا در توئیتر دنبال کنید</a></li>
+            <% } %>
+            <% if(theme.github){ %>
+            <li><a href="<%- theme.github %>" title="مرا در گیت هاب دنبال کنید" target="_blank"><i class="fa fa-git"></i>&nbsp;&nbsp;&nbsp;&nbsp;مرا در گیت هاب دنبال کنید</a></li>
+            <% } %>
+            <% if(theme.linkedin){ %>
+            <li><a href="<%- theme.linkedin %>" title="مرا در لینکدین دنبال کنید" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;مرا در لینکدین دنبال کنید</a></li>
+            <% } %>
+            <% if(theme.telegram){ %>
+            <li><a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;&nbsp;&nbsp;اشتراک در کانال تلگرام</a></li>
+            <% } %>
+            <% if(theme.subscribe){ %>
+            <li><a href="<%- theme.subscribe %>" title="اشتراک توسط ایمیل" target="_blank"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;اشتراک توسط ایمیل</a></li>
+            <% } %>
+            <% if(theme.rss){ %>
+            <li><a href="<%- theme.rss %>" title="اشتراک از طریق فید" target="_blank"><i class="fa fa-rss"></i>&nbsp;&nbsp;&nbsp;&nbsp;اشتراک از طریق فید</a></li>
+            <% } %>
+            <% if(theme.contact){ %>
+            <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;ماس با من</a></li>
+            <% } %>
         </ul>
     </div>
 .
@@ -817,16 +868,25 @@ nano -w themes/TKL/layout/casper/header.ejs
                             <li><a href="/" class="animsition-link" title="<%- config.title %>"><span><%- config.title %></span></a></li>
                             <li class="nolink"><%- config.subtitle %></li>
                             <% if(theme.twitter){ %>
-                            <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="<%- theme.twitter %>" title="مرا در توئیتر دنبال کنید" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <% } %>
                             <% if(theme.github){ %>
-                            <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="fa fa-git"></i></a></li>
+                            <li><a href="<%- theme.github %>" title="مرا در گیت هاب دنبال کنید" target="_blank"><i class="fa fa-git"></i></a></li>
                             <% } %>
                             <% if(theme.linkedin){ %>
-                            <li><a href="<%- theme.linkedin %>" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="<%- theme.linkedin %>" title="مرا در لینکدین دنبال کنید" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <% } %>
                             <% if(theme.telegram){ %>
-                            <li><a href="<%- theme.telegram %>" title="Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                            <li><a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                            <% } %>
+                            <% if(theme.subscribe){ %>
+                            <li><a href="<%- theme.subscribe %>" title="اشتراک توسط ایمیل" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                            <% } %>
+                            <% if(theme.rss){ %>
+                            <li><a href="<%- theme.rss %>" title="اشتراک از طریق فید" target="_blank"><i class="fa fa-rss"></i></a></li>
+                            <% } %>
+                            <% if(theme.contact){ %>
+                            <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i></a></li>
                             <% } %>
                             <% if(theme.facebook){ %>
                             <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -837,8 +897,8 @@ nano -w themes/TKL/layout/casper/header.ejs
                             <% if(theme.weibo){ %>
                             <li><a href="<%- theme.weibo %>" title="Sina-Weibo" target="_blank"><i class="fa fa-weibo"></i></a></li>
                             <% } %>
-                            <li><div style="direction: rtl; text-align: center;" class="fa-blog">
-                            <a href="http://fa.babaei.net" style="text-decoration: none;" title="وبلاگ محمد صادق بابائی">وبلاگ فارسی</a>
+                            <li><div style="direction: rtl; text-align: center;" class="en-blog">
+                            <a href="http://www.babaei.net/" style="text-decoration: none;" title="The blog of Mohammad S. Babaei">English Blog</a>
                             </div>
                             </li>
                         </ul>
@@ -912,7 +972,40 @@ nano -w themes/TKL/layout/layout.ejs
 
 nano -w themes/TKL/layout/post/subscribe.ejs
 ########
-<a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i> جهت اطلاع از جدیدترین پست های وبلاگ در کانال تلگرام عضو شوید!</a>
+<div class="social">
+    <ul>
+        <% if(theme.twitter){ %>
+        <li><a href="<%- theme.twitter %>" title="مرا در توئیتر دنبال کنید" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.github){ %>
+        <li><a href="<%- theme.github %>" title="مرا در گیت هاب دنبال کنید" target="_blank"><i class="fa fa-git"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.linkedin){ %>
+        <li><a href="<%- theme.linkedin %>" title="مرا در لینکدین دنبال کنید" target="_blank"><i class="fa fa-linkedin"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.telegram){ %>
+        <li><a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.subscribe){ %>
+        <li><a href="<%- theme.subscribe %>" title="اشتراک توسط ایمیل" target="_blank"><i class="fa fa-envelope"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.rss){ %>
+        <li><a href="<%- theme.rss %>" title="اشتراک از طریق فید" target="_blank"><i class="fa fa-rss"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.contact){ %>
+        <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.facebook){ %>
+        <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.google){ %>
+        <li><a href="<%- theme.google %>" title="Google-Plus" target="_blank"><i class="fa fa-google-plus"></i></i></a>&nbsp;</li>
+        <% } %>
+        <% if(theme.weibo){ %>
+        <li><a href="<%- theme.weibo %>" title="Sina-Weibo" target="_blank"><i class="fa fa-weibo"></i></a>&nbsp;</li>
+        <% } %>
+    </ul>
+</div>
 ########
 
 nano -w themes/TKL/layout/post/sharing.ejs
@@ -964,14 +1057,21 @@ bottom_saying:
 .
 .
 excerpt_link: ادامه مطلب
-
+.
+.
+.
+# Miscellaneous
+contact: http://subscribe.babaei.net/?lang=fa&contact-form
 github: https://github.com/NuLL3rr0r
-linkedin: https://linkedin.com/in/mohammad-s-babaei-00282768telegram: https://telegram.me/babaei_net
+linkedin: https://linkedin.com/in/mohammad-s-babaei-00282768
+subscribe: http://subscribe.babaei.net/?lang=fa&subscription=en,fa
+telegram: https://telegram.me/babaei_net
 twitter: https://twitter.com/NuLL3rr0r
 #facebook: https://www.facebook.com/
 #google: https://google.com/
 #weibo: http://weibo.com/
 
+#Links
 links:
 - name: English Blog
   link: http://www.babaei.net/

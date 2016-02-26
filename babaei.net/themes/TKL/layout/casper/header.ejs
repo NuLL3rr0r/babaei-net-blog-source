@@ -56,7 +56,27 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="<%- config.root %>atom.xml" class="animsition-link" title="rss">RSS</a></li>
+            <% if(theme.twitter){ %>
+            <li><a href="<%- theme.twitter %>" title="Follow me on Twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;&nbsp;&nbsp;&nbsp;Follow me on Twitter</a></li>
+            <% } %>
+            <% if(theme.github){ %>
+            <li><a href="<%- theme.github %>" title="Follow me on Github" target="_blank"><i class="fa fa-git"></i>&nbsp;&nbsp;&nbsp;&nbsp;Follow me on Github</a></li>
+            <% } %>
+            <% if(theme.linkedin){ %>
+            <li><a href="<%- theme.linkedin %>" title="Follow me on Linkedin" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;Follow me on Linkedin</a></li>
+            <% } %>
+            <% if(theme.telegram){ %>
+            <li><a href="<%- theme.telegram %>" title="Subscribe via Telegram" target="_blank" class="animsition-link"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;&nbsp;&nbsp;Subscribe via Telegram</a></li>
+            <% } %>
+            <% if(theme.subscribe){ %>
+            <li><a href="<%- theme.subscribe %>" title="Subscribe via Email" target="_blank" class="animsition-link"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;Subscribe via Email</a></li>
+            <% } %>
+            <% if(theme.rss){ %>
+            <li><a href="<%- theme.rss %>" title="Subscribe via RSS" target="_blank" class="animsition-link"><i class="fa fa-rss"></i>&nbsp;&nbsp;&nbsp;&nbsp;Subscribe via RSS</a></li>
+            <% } %>
+            <% if(theme.contact){ %>
+            <li><a href="<%- theme.contact %>" title="Send me a message" target="_blank" class="animsition-link"><i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;Send me a message</a></li>
+            <% } %>
         </ul>
     </div>
     
@@ -85,16 +105,25 @@
                             <li><a href="/" class="animsition-link" title="<%- config.title %>"><span><%- config.title %></span></a></li>
                             <li class="nolink"><%- config.subtitle %></li>
                             <% if(theme.twitter){ %>
-                            <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="<%- theme.twitter %>" title="Follow me on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <% } %>
                             <% if(theme.github){ %>
-                            <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="fa fa-git"></i></a></li>
+                            <li><a href="<%- theme.github %>" title="Follow me on Github" target="_blank"><i class="fa fa-git"></i></a></li>
                             <% } %>
                             <% if(theme.linkedin){ %>
-                            <li><a href="<%- theme.linkedin %>" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="<%- theme.linkedin %>" title="Follow me on Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <% } %>
                             <% if(theme.telegram){ %>
-                            <li><a href="<%- theme.telegram %>" title="Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                            <li><a href="<%- theme.telegram %>" title="Subscribe via Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                            <% } %>
+                            <% if(theme.subscribe){ %>
+                            <li><a href="<%- theme.subscribe %>" title="Subscribe via Email" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                            <% } %>
+                            <% if(theme.rss){ %>
+                            <li><a href="<%- theme.rss %>" title="Subscribe via RSS" target="_blank"><i class="fa fa-rss"></i></a></li>
+                            <% } %>
+                            <% if(theme.contact){ %>
+                            <li><a href="<%- theme.contact %>" title="Send me a message" target="_blank"><i class="fa fa-comment"></i></a></li>
                             <% } %>
                             <% if(theme.facebook){ %>
                             <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>

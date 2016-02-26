@@ -56,7 +56,27 @@
         </ul>
         <!-- Lists in Slidebars -->
         <ul class="sb-menu secondary">
-            <li><a href="<%- config.root %>atom.xml" class="animsition-link" title="اشتراک از طریق فید">اشتراک از طریق فید</a></li>
+            <% if(theme.twitter){ %>
+            <li><a href="<%- theme.twitter %>" title="مرا در توئیتر دنبال کنید" target="_blank"><i class="fa fa-twitter"></i>&nbsp;&nbsp;&nbsp;&nbsp;مرا در توئیتر دنبال کنید</a></li>
+            <% } %>
+            <% if(theme.github){ %>
+            <li><a href="<%- theme.github %>" title="مرا در گیت هاب دنبال کنید" target="_blank"><i class="fa fa-git"></i>&nbsp;&nbsp;&nbsp;&nbsp;مرا در گیت هاب دنبال کنید</a></li>
+            <% } %>
+            <% if(theme.linkedin){ %>
+            <li><a href="<%- theme.linkedin %>" title="مرا در لینکدین دنبال کنید" target="_blank"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;&nbsp;&nbsp;مرا در لینکدین دنبال کنید</a></li>
+            <% } %>
+            <% if(theme.telegram){ %>
+            <li><a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;&nbsp;&nbsp;اشتراک در کانال تلگرام</a></li>
+            <% } %>
+            <% if(theme.subscribe){ %>
+            <li><a href="<%- theme.subscribe %>" title="اشتراک توسط ایمیل" target="_blank"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;اشتراک توسط ایمیل</a></li>
+            <% } %>
+            <% if(theme.rss){ %>
+            <li><a href="<%- theme.rss %>" title="اشتراک از طریق فید" target="_blank"><i class="fa fa-rss"></i>&nbsp;&nbsp;&nbsp;&nbsp;اشتراک از طریق فید</a></li>
+            <% } %>
+            <% if(theme.contact){ %>
+            <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;ماس با من</a></li>
+            <% } %>
         </ul>
     </div>
     
@@ -85,16 +105,25 @@
                             <li><a href="/" class="animsition-link" title="<%- config.title %>"><span><%- config.title %></span></a></li>
                             <li class="nolink"><%- config.subtitle %></li>
                             <% if(theme.twitter){ %>
-                            <li><a href="<%- theme.twitter %>" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="<%- theme.twitter %>" title="مرا در توئیتر دنبال کنید" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <% } %>
                             <% if(theme.github){ %>
-                            <li><a href="<%- theme.github %>" title="Github" target="_blank"><i class="fa fa-git"></i></a></li>
+                            <li><a href="<%- theme.github %>" title="مرا در گیت هاب دنبال کنید" target="_blank"><i class="fa fa-git"></i></a></li>
                             <% } %>
                             <% if(theme.linkedin){ %>
-                            <li><a href="<%- theme.linkedin %>" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="<%- theme.linkedin %>" title="مرا در لینکدین دنبال کنید" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                             <% } %>
                             <% if(theme.telegram){ %>
-                            <li><a href="<%- theme.telegram %>" title="Telegram" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                            <li><a href="<%- theme.telegram %>" title="اشتراک در کانال تلگرام" target="_blank"><i class="fa fa-paper-plane"></i></a></li>
+                            <% } %>
+                            <% if(theme.subscribe){ %>
+                            <li><a href="<%- theme.subscribe %>" title="اشتراک توسط ایمیل" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                            <% } %>
+                            <% if(theme.rss){ %>
+                            <li><a href="<%- theme.rss %>" title="اشتراک از طریق فید" target="_blank"><i class="fa fa-rss"></i></a></li>
+                            <% } %>
+                            <% if(theme.contact){ %>
+                            <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i></a></li>
                             <% } %>
                             <% if(theme.facebook){ %>
                             <li><a href="<%- theme.facebook %>" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
