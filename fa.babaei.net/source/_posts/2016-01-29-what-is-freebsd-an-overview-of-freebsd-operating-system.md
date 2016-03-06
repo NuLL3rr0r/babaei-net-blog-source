@@ -314,5 +314,5 @@ FAQ حاضر فقط به منظور پاسخ به سوالات افراد تاز
 ### مقالات مرتبط ###
 
 * [تاریخچه FreeBSD](/blog/2016/01/23/the-history-of-freebsd/)
-
+* [FreeBSD یا Linux مسئله این است؟](/blog/2016/03/06/freebsd-vs-linux/)
 
