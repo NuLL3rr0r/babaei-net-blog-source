@@ -120,5 +120,5 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 ### مقالات مرتبط ###
 
 * [FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBSD](/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/)
-* [FreeBSD یا Linux مسئله این است؟](/blog/2016/03/06/freebsd-vs-linux/)
+* [FreeBSD یا Linux مسئله این است؟](/blog/2016/03/07/freebsd-vs-linux/)
 
