@@ -856,7 +856,7 @@ nano -w themes/TKL/layout/casper/header.ejs
             <li><a href="<%- theme.rss %>" title="اشتراک از طریق فید" target="_blank"><i class="fa fa-rss"></i>&nbsp;&nbsp;&nbsp;&nbsp;اشتراک از طریق فید</a></li>
             <% } %>
             <% if(theme.contact){ %>
-            <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;ماس با من</a></li>
+            <li><a href="<%- theme.contact %>" title="تماس با من" target="_blank"><i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;تماس با من</a></li>
             <% } %>
         </ul>
     </div>
