@@ -1,5 +1,7 @@
 @echo off
 
+title BABAEI.NET HEXO CLI
+
 cd %~dp0
 
 set LANG=en_US.UTF-8
