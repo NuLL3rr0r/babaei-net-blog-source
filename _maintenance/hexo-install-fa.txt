@@ -559,6 +559,10 @@ pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, 
     margin-bottom: 1.0em;
 }
 
+#intro .comments noscript {
+    direction: rtl;
+}
+
 figure.highlight {
     margin-bottom: 1.0em;
 }
