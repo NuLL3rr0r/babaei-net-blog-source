@@ -362,6 +362,11 @@ footer .social {
 	display: inline-block;
 }
 
+#intro .comments {
+    margin-top: 2.0em;
+    margin-bottom: 1.0em;
+}
+
 figure.highlight {
     margin-bottom: 1.0em;
 }
@@ -434,7 +439,7 @@ nano -w themes/TKL/layout/casper/footer.ejs
                     <span class="license">All content on this website is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for.</span>
                     <br /><br />
                     <span class="credit">
-                    Powered by <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://hexo.io/" target="_blank">Hexo</a>
+                    Powered by <a href="http://freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://postgresql.org/" target="_blank">PostgreSQL</a> | <a href="http://hexo.io/" target="_blank">Hexo</a> | <a href="http://discourse.org/" target="_blank">Discourse</a>
                     <br />
                     Based on theme By <a href="//go.kieran.top" target="_blank">Kieran</a>
                     </span>
@@ -480,10 +485,6 @@ nano -w themes/TKL/layout/casper/footer.ejs
 
 nano -w themes/TKL/layout/casper/head.ejs
 ########
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title + " ^ " + config.subtitle %></title>
-.
-.
-.
     <link rel="Shortcut Icon" href="<%- config.root %>favicon.ico" type="image/ico">
 .
 .
@@ -680,6 +681,28 @@ nano -w themes/TKL/layout/layout.ejs
 </body>
 ########
 
+nano -w themes/TKL/layout/post/comments.ejs
+########
+<div id="discourse-comments">
+  <center>
+    <noscript>
+      Please enable JavaScript to view the <a href="<%- theme.discourse_url %>">comments powered by Discourse.</a>
+    </noscript>
+  </center>
+</div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: '<%- theme.discourse_url %>',
+                     discourseEmbedUrl: '<%= url %>' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+########
+
 // http://crunchify.com/list-of-all-social-sharing-urls-for-handy-reference-social-media-sharing-buttons-without-javascript/
 // https://github.com/bradvin/social-share-urls
 
@@ -747,7 +770,10 @@ nano -w themes/TKL/layout/casper/post.ejs
                 <%- partial('post/sharing') %>
             </div>
             <div class="clearfix"></div>
-            <hr class="nogutter">
+            <div class="comments">
+                <%- partial('post/comments') %>
+            </div>
+            <div class="clearfix"></div>
             <div class="subscribe">
                 <%- partial('post/subscribe') %>
             </div>
@@ -802,6 +828,9 @@ twitter_user: NuLL3rr0r
 
 # Piwik
 piwik_enable: true
+
+# Discourse
+discourse_url: http://discuss.babaei.net/
 ########
 
 nano -w _config.yml

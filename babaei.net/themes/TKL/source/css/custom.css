@@ -237,6 +237,11 @@ footer .social {
 	display: inline-block;
 }
 
+#intro .comments {
+    margin-top: 2.0em;
+    margin-bottom: 1.0em;
+}
+
 figure.highlight {
     margin-bottom: 1.0em;
 }

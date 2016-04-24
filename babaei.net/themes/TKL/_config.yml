@@ -40,3 +40,6 @@ twitter_user: NuLL3rr0r
 # Piwik
 piwik_enable: true
 
+# Discourse
+discourse_url: http://discuss.babaei.net/
+

@@ -554,6 +554,11 @@ pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, 
 	display: inline-block;
 }
 
+#intro .comments {
+    margin-top: 2.0em;
+    margin-bottom: 1.0em;
+}
+
 figure.highlight {
     margin-bottom: 1.0em;
 }
@@ -686,7 +691,7 @@ nano -w themes/TKL/layout/casper/footer.ejs
                     <span class="license">تمامی محتویات این وب سایت تحت مجوز <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a> منتشر شده است. همچنین، تمامی سورس کدهای منتشر شده در این وب سایت تحت لیسانس <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> منتشر شده است، مگر آن که به صراحت ذکر شده باشد. تمامی محتویات ارائه شده صرفا جنبه آموزشی و اطلاعاتی داشته و فاقد هرگونه ضمانت، تعهد یا شرایطی از هر نوع می باشد. بایستی توجه نمود که اطلاعات عرضه شده حتی ممکن است دقیق و یا بروز نباشد. هرگونه اطمینان به و یا استفاده از محتویات یا منابع منتشر شده در این وب سایت با مسئولیت مخاطب بوده و نگارنده یا نگارندگان هیچ گونه مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.</span>
                     <br /><br />
                     <span class="credit">
-                    با افتخار نیرو گرفته از <a href="http://www.freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://hexo.io/" target="_blank">Hexo</a>
+                    با افتخار نیرو گرفته از <a href="http://freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://postgresql.org/" target="_blank">PostgreSQL</a> | <a href="http://hexo.io/" target="_blank">Hexo</a> | <a href="http://discourse.org/" target="_blank">Discourse</a>
                     <br />
                     قالب از <a href="//go.kieran.top" target="_blank">Kieran</a>
                     </span>
@@ -731,10 +736,6 @@ nano -w themes/TKL/layout/casper/footer.ejs
 
 nano -w themes/TKL/layout/casper/head.ejs
 ########
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title + " ^ " + config.subtitle %></title>
-.
-.
-.
     <link rel="Shortcut Icon" href="<%- config.root %>favicon.ico" type="image/ico">
 .
 .
@@ -967,6 +968,28 @@ nano -w themes/TKL/layout/layout.ejs
 </body>
 ########
 
+nano -w themes/TKL/layout/post/comments.ejs
+########
+<div id="discourse-comments">
+  <center>
+    <noscript>
+      جهت دسترسی به <a href="<%- theme.discourse_url %>">بخش نظرات</a> لطفا جاوا اسکریپت را در مرورگر خود فعال نمائید.
+    </noscript>
+  </center>
+</div>
+
+<script type="text/javascript">
+  DiscourseEmbed = { discourseUrl: '<%- theme.discourse_url %>',
+                     discourseEmbedUrl: '<%= url %>' };
+
+  (function() {
+    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+  })();
+</script>
+########
+
 // http://crunchify.com/list-of-all-social-sharing-urls-for-handy-reference-social-media-sharing-buttons-without-javascript/
 // https://github.com/bradvin/social-share-urls
 
@@ -1034,7 +1057,10 @@ nano -w themes/TKL/layout/casper/post.ejs
                 <%- partial('post/sharing') %>
             </div>
             <div class="clearfix"></div>
-            <hr class="nogutter">
+            <div class="comments">
+                <%- partial('post/comments') %>
+            </div>
+            <div class="clearfix"></div>
             <div class="subscribe">
                 <%- partial('post/subscribe') %>
             </div>
@@ -1088,6 +1114,9 @@ twitter_user: NuLL3rr0r
 
 # Piwik
 piwik_enable: true
+
+# Discourse
+discourse_url: http://discuss.fa.babaei.net/
 ########
 
 nano -w _config.yml

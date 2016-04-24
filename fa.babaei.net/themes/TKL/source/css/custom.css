@@ -436,6 +436,11 @@ pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, 
 	display: inline-block;
 }
 
+#intro .comments {
+    margin-top: 2.0em;
+    margin-bottom: 1.0em;
+}
+
 figure.highlight {
     margin-bottom: 1.0em;
 }
