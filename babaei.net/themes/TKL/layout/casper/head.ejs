@@ -16,7 +16,11 @@
   }
 %>
 <head>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <% if (title) { %>
+    <title><%= title %></title>
+  <% } else { %>
+    <title><% if (title) { %><%= title %> | <% } %><%= config.title + " ^ " + config.subtitle %></title>
+  <% } %>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>

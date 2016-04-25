@@ -485,6 +485,17 @@ nano -w themes/TKL/layout/casper/footer.ejs
 
 nano -w themes/TKL/layout/casper/head.ejs
 ########
+.
+.
+.
+  <% if (title) { %>
+    <title><%= title %></title>
+  <% } else { %>
+    <title><% if (title) { %><%= title %> | <% } %><%= config.title + " ^ " + config.subtitle %></title>
+  <% } %>
+.
+.
+.
     <link rel="Shortcut Icon" href="<%- config.root %>favicon.ico" type="image/ico">
 .
 .
