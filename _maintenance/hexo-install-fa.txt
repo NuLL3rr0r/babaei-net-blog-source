@@ -479,7 +479,7 @@ pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, 
 
 #intro .sharing
 {
-    text-align: right;
+    text-align: left;
     font-size: 1.8em;
     margin-top: 1.1em;
 }
