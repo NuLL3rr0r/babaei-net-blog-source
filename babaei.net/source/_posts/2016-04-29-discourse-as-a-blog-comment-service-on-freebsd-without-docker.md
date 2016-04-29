@@ -1,12 +1,15 @@
 ---
 title: "Discourse as a Blog Comment Service on FreeBSD without Docker"
-date: 2016-04-29 01:11:31
+date: 2016-04-29 06:49:31
 tags:
   - Docker
   - FreeBSD
+  - GNU
   - Hexo
+  - Linux
   - Ruby
   - Ruby on Rails
+  - Unix
 ---
 
 [{% img post-image /blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png 1000 293 "'Discourse Logo'" "'Discourse Logo'" %}](/blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png)
