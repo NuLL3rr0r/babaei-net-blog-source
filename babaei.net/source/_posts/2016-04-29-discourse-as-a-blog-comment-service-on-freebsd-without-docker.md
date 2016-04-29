@@ -105,9 +105,9 @@ Note that I choose graphics/ImageMagick-nox11 over graphics/ImageMagick since it
 
 ### Database ###
 
-OK, after installing the required dependencies, it's time to initialize the database by creating a username and a password. In addition to that we have to enable the required PostgreSQL extentions.
+OK, after installing the required dependencies, it's time to initialize the database by creating a user name and a password. In addition to that we have to enable the required PostgreSQL extensions.
 
-By default, Discourse chooses <code>discourse</code> for both database name and username. I'll choose <code>discourse</code> username and <code>discourse_production</code> for database name. Let's assume that I want [discuss.babaei.net](http://discuss.babaei.net/) and [discuss.fa.babaei.net](http://discuss.fa.babaei.net/) share the same Discourse instance.
+By default, Discourse chooses <code>discourse</code> for both database name and user name. I'll choose <code>discourse</code> user name and <code>discourse_production</code> for database name. Let's assume that I want [discuss.babaei.net](http://discuss.babaei.net/) and [discuss.fa.babaei.net](http://discuss.fa.babaei.net/) share the same Discourse instance.
 
 If you are planing to run only one website / blog on Discourse:
 
@@ -133,7 +133,7 @@ If you plan for a multi-site install, <s>in addition to the above commands</s>:
 
 Finally exit PostgreSQL command line by issuing: <code>\q</code>.
 
-One more thing: it's possible to protect the user login with a password. In tht case, instead of:
+One more thing: it's possible to protect the user login with a password. In that case, instead of:
 
     template1=# CREATE USER discourse CREATEDB;
 
@@ -141,7 +141,7 @@ Create the user using this command:
 
     template1=# CREATE ROLE discourse LOGIN ENCRYPTED PASSWORD '${SECRET_PASSWORD}' NOINHERIT VALID UNTIL 'infinity';
 
-Obviously instead of <code>${SECRET_PASSWORD}</code> you must put your own password. Since PostgreSQL by default do not listen for external connections and only accepts local requests, you may find it unnecessary to password-protect the user login unless you are runnung Discourse and PostgreSQL on different machines.
+Obviously instead of <code>${SECRET_PASSWORD}</code> you must put your own password. Since PostgreSQL by default do not listen for external connections and only accepts local requests, you may find it unnecessary to password-protect the user login unless you are running Discourse and PostgreSQL on different machines.
 
 You can check whether your PostgreSQL instance refuses external connections or not by taking a look at <code>/usr/local/pgsql/data/pg_hba.conf</code>:
 
@@ -164,7 +164,7 @@ The above default settings allows local connectons only.
 
 ### System User and Group ###
 
-Now that we've initialized the database, we have to create the Discourse system username and group. Note that the username must be the same as the username you chose at the previous step. We chose <code>discourse</code> username at the time of database creation. We'll also go with <code>/home/discourse</code> as Discourse home directory. So:
+Now that we've initialized the database, we have to create the Discourse system user name and group. Note that the user name must be the same as the user name you chose at the previous step. We chose <code>discourse</code> user name at the time of database creation. We'll also go with <code>/home/discourse</code> as Discourse home directory. So:
 
     $ pw addgroup discourse
     $ pw adduser discourse -g discourse -m -d /home/discourse -c "Discourse"
@@ -541,7 +541,7 @@ As the first line in that file suggests you must avoid touching this file. Inste
     # Update Notification
     new_version_emails = true
 
-Note that some of the above settings are imaginary and is provided as an example. So, they might not work for you and you should adjust them according to your environment, or do not override the defualt ones at all.
+Note that some of the above settings are imaginary and is provided as an example. So, they might not work for you and you should adjust them according to your environment, or do not override the default ones at all.
 
 If you are running a multi-site setup you have to create another file named <code>config/multisite.yml</code>. First take a look at <code>config/multisite.yml.production-sample</code> to get an idea of what its contents look like:
 
@@ -642,7 +642,7 @@ This one should take some time to complete.
 
 ### Startup Script ###
 
-Congratulations! If you made it so far you've probably setup Discourse successfuly. But, before we run the Discourse application server let's write a small script to run it properly in a simple way.
+Congratulations! If you made it so far you've probably setup Discourse successfully. But, before we run the Discourse application server let's write a small script to run it properly in a simple way.
 
 First, let's create the required directories, and set the current permissions:
 
@@ -684,7 +684,7 @@ And then run the script if you wish:
 
     $ /home/discourse/cron/server.sh
 
-To check if your Sidekiq instance and Thin server started successfuly or not:
+To check if your Sidekiq instance and Thin server started successfully or not:
 
     $ ps auxw | grep ruby
     discourse    2573   0.0 12.9 1163352 178056  -  S    Mon01AM  128:25.44 ruby22: sidekiq 4.0.2 discourse [0 of 25 busy] (ruby22)
@@ -697,11 +697,11 @@ To check if your Sidekiq instance and Thin server started successfuly or not:
     discourse    2590   0.0 12.9  983232 193454  -  I    Mon01AM    6:33.88 ruby22: thin server (/home/discourse/discourse/tmp/sockets/thin.6.sock) (ruby22)
     discourse    2591   0.0 13.1  983333 187443  -  I    Mon01AM    7:12.01 ruby22: thin server (/home/discourse/discourse/tmp/sockets/thin.7.sock) (ruby22)
 
-To stop your Sidekiq or Thin instances I highly recommend sending <code>SIGTERM</code> insteamd of <code>SIGKILL</code> to their processes and give them some time to clean-up gracefully:
+To stop your Sidekiq or Thin instances I highly recommend sending <code>SIGTERM</code> instead of <code>SIGKILL</code> to their processes and give them some time to clean-up gracefully:
 
     $ kill -SIGTERM 2576
 
-If you are looking for an easir way to stop and monitor your Thin and Sidekiq instances, <code>sysutils/htop</code> is an viable option.
+If you are looking for an easier way to stop and monitor your Thin and Sidekiq instances, <code>sysutils/htop</code> is an viable option.
 
 
 ### Cron Jobs ###
@@ -716,7 +716,7 @@ When your default editor appears, add this to the end of your cron jobs:
     # At Boot
     @reboot     /home/discourse/cron/server.sh
 
-Now to check whether your cron job has been added successfuly or not, enter the following command:
+Now to check whether your cron job has been added successfully or not, enter the following command:
 
     $ crontab -l
 
