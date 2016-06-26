@@ -65,6 +65,30 @@ pagination_dir: blog/page
 ## Themes: http://hexo.io/themes/
 theme: TKL
 
+# All-minifier
+## Docs: https://github.com/unhealthy/hexo-all-minifier
+html_minifier:
+  enable: true
+  exclude:
+css_minifier:
+  enable: true
+  exclude: 
+#    - '*.min.css'
+js_minifier:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude: 
+#    - '*.min.js'
+image_minifier:
+  enable: false
+  interlaced: false
+  multipass: true
+  optimizationLevel: 7
+  pngquant: false
+  progressive: false
+
 # Archive
 ## Docs: https://github.com/hexojs/hexo-generator-archive
 archive_generator:
@@ -76,17 +100,6 @@ archive_generator:
 ## Docs: https://github.com/hexojs/hexo-generator-category
 category_generator:
   per_page: 8
-
-# Clean CSS
-## Docs: https://github.com/hexojs/hexo-clean-css
-clean_css:
-  exclude:
-#    - *.min.css
-
-# HTML Minifier
-## Docs: https://github.com/hexojs/hexo-html-minifier
-html_minifier:
-  exclude:
 
 # Markdown-it
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
@@ -154,13 +167,4 @@ stylus:
 ## Docs: https://github.com/hexojs/hexo-generator-tag
 tag_generator:
   per_page: 8
-
-# Uglify JavaScript
-## Docs: https://github.com/hexojs/hexo-uglify
-uglify:
-  mangle: true
-  output:
-  compress:
-  exclude: 
-#    - "*.min.js"
 

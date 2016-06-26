@@ -1,3 +1,8 @@
+# Update to npm > 3.0.0.0
+# to avoid node_modules long path
+# issue on Windows
+npm install npm -g
+
 npm view hexo versions
 // in case you need 2.x.x
 //npm install hexo@2.8.3 -g
