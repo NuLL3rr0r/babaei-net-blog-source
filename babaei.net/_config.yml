@@ -84,6 +84,7 @@ clean_css:
 #    - *.min.css
 
 # HTML Minifier
+## Docs: https://github.com/hexojs/hexo-html-minifier
 html_minifier:
   exclude:
 
