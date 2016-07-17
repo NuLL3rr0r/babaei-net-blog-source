@@ -37,7 +37,7 @@ Therefore, I came up with an elegant solution to replace the old process which I
 * Random passphrase generation for encrypted backups with variable length and patterns or a unique passphrase for all backups
 * Support for RSA signatures to verify the backup origin and integrity
 * Passphrase encryption using RSA public keys for individual backup servers
-* Backup integrity verification by offering hash algorithm such as MD4, MD5, MDC-2, RIPEMD160, SHA, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 and WHIRLPOOL
+* Backup integrity verification by offering hash algorithms such as MD4, MD5, MDC-2, RIPEMD160, SHA, SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 and WHIRLPOOL
 * Optional Base64 encoding
 * System logs and a standalone log file including all details
 * Reporting through email to a list of recipients with ability to include passphrases
