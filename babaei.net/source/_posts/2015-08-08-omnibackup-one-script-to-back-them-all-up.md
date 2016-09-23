@@ -10,6 +10,12 @@ tags:
   - Unix
 ---
 
+__Update 1 [2016/09/23]:__ _OmniBackup now officially supports GNU/Linux. [More info](https://github.com/NuLL3rr0r/omnibackup#Requirements)..._
+
+__Update 2 [2016/09/23]:__ _[Official documentation](https://github.com/NuLL3rr0r/omnibackup) moved to GitHub._
+
+<br />
+
 A week ago was _[System Administrator Appreciation Day](http://sysadminday.com/)_. It is celebrated on the last _Friday_ in _July_ and it has been celebrated since _July 28, 2000_. But, system administrators know not all days are like that day. They face many hard times and struggles during their careers and the worse of them all is either a [security breech](/blog/2015/07/30/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/) or data loss.
 
 For so many years I've been writing and maintaining backup scripts on and on, for every single database I added, for every single directory with critical data, or any other service I was running on every new server I got my hands on. In the end, I found myself ended up in a pile of backup scripts and multitudinous cron entries which was a nightmare to keep track of. I even had to manage the schedule so that two backup scripts do not run at the same time. Even more, I had to manually track the backups to see whether they were successful or not. Also, someone has to manually delete the old ones to make rooms for the next ones.
@@ -130,7 +136,7 @@ Before we go any further, you may want to know that other than regular logs ther
 
 For now OmniBackup officially only supports [FreeBSD](https://www.freebsd.org/) since all my servers and desktop instances at both home and work are running FreeBSD. This does not mean official support for [GNU](http://www.gnu.org/)/[Linux](https://www.kernel.org/) won't arrive any time soon in the near future. In fact I used to be a heavy [Funtoo](http://www.funtoo.org/) user and even before that [Gentoo](https://www.gentoo.org/). These days I only have a [Slackware](http://www.slackware.com/) instance which I use for cross-compiling C++ libraries to [Android](https://www.android.com/). So, it's just a matter of time before official support arrives. In my estimation, the current code should work out of the box inside any GNU/Linux distribution since I tried my best to write it in a platform-independent manner by reading pile of man pages. I assume if it works on FreeBSD it should also work on other BSDs and GNU/Linuxes. But I'm only 99.99% sure and when it comes to programming computers 0.01% human error is really too much and risky. So, before I announce GNU/Linux support official, I must test it at least once. But until that moment comes, I really appreciate feedbacks and possible patches or pull-requests.
 
-Aside from Bash, OmniBackup requires other tools and utilities. Although most of these programs are found in a base installation of your operating system, it relies on a few other programs which has to be installed before go any further. Note that if OmniBackup cannot find a program it gives you a fatal error message and exits.
+Aside from Bash, OmniBackup requires other tools and utilities. Although most of these programs are found in a base installation of your operating system, it relies on a few other programs which has to be installed before you go any further. Note that if OmniBackup cannot find a program it gives you a fatal error message and exits.
 
 Requirements for OmniBackup include:
 
@@ -183,7 +189,7 @@ I should add, not all of the above dependencies are required in order for OmniBa
 * <code>sysutils/flock</code> probably a default on GNU/Linux, provides <code>flock</code> executable on FreeBSD
 * <code>textproc/jq</code> provides <code>jq</code>
 
-Note that from the above list only <code>flock</code> and [jq](http://stedolan.github.io/jq/) are only mandatory requirements unless based on OmniBackup configurations other dependencies get pulled in. The best way to determine dependencies is to ignore the list of dependencies and first configure your OmniBackup instance. When your done with that, run OmniBackup manually for the first time. If it won't complain about any dependency then you are good to go. However, if it does, then you should resolve the dependencies one by one until you are good to go.
+Note that from the above list <code>flock</code> and [jq](http://stedolan.github.io/jq/) are only mandatory requirements unless based on OmniBackup configurations other dependencies get pulled in. The best way to determine dependencies is to ignore the list of dependencies and first configure your OmniBackup instance. When your done with that, run OmniBackup manually for the first time. If it won't complain about any dependency then you are good to go. However, if it does, then you should resolve the dependencies one by one until you are good to go.
 
 
 <br />
