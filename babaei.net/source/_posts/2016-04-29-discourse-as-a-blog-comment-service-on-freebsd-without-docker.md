@@ -12,6 +12,10 @@ tags:
   - Unix
 ---
 
+__Update [2016/09/30]:__ _Two sections has been added to the end of the article for major FreeBSD upgrades and Discourse upgrades._
+
+<br />
+
 [{% img post-image /blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png 1000 293 "'Discourse Logo'" "'Discourse Logo'" %}](/blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png)
 <span class="post-image-title">Figure 1. Discourse Logo</span>
 
@@ -668,11 +672,11 @@ I chose to go with [Thin](http://code.macournoyer.com/thin/) and Unix domain soc
 
 Alternatively it's possible to use TCP connections instead of Unix domain sockets (consider that Unix domain sockets can achieve better throughput than the TCP/IP loopback). To run Thin server and listen for connections on port <code>11011</code>, replace the last line of the script with:
 
-    sudo -u discourse -H RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 bundle exec thin start -p 11011 > /home/discourse/discourse/log/thin.log 2>&1&
+    $ sudo -u discourse -H RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 bundle exec thin start -p 11011 > /home/discourse/discourse/log/thin.log 2>&1&
 
-To serve the application on default Rails server instead of Thin (Definitely a bad decision since it's slower), replace the last line of the script with:
+To serve the application on default Rails server instead of Thin (definitely a bad decision since it's slower), replace the last line of the script with:
 
-    sudo -u discourse -H RAILS_ENV='production' RUBY_GC_MALLOC_LIMIT=90000000 bundle exec rails server /home/discourse/discourse/log/rails_server.log
+    $ sudo -u discourse -H RAILS_ENV='production' RUBY_GC_MALLOC_LIMIT=90000000 bundle exec rails server /home/discourse/discourse/log/rails_server.log
 
 By the way, you can read about [what's the big deal about that bloody RUBY_GC_MALLOC_LIMIT=90000000 here](https://meta.discourse.org/t/tuning-ruby-and-rails-for-discourse/4126).
 
@@ -1004,6 +1008,101 @@ I took the example Nginx configuration from <code>config/nginx.sample.conf</code
     
 ### Troubleshooting ###
 
-So, that's it if you did setup everything right, you must see the Discourse home page by entering e.g. [discuss.babaei.net](http://discuss.babaei.net/) or [discuss.fa.babaei.net](http://discuss.fa.babaei.net/) inside your browser. Otherwise, the first place to check are the log files that reside inside <code>/home/discourse/log/</code> and <code>/home/discourse/discourse/log/</code>. If you still do not have any clue why it's not working, make sure to double check that you did follow the tutorial correctly. Other than that, you are always welcome to discuss it in the comments section below.
+So, that's it. If you did setup everything right, you must see the Discourse home page by entering e.g. [discuss.babaei.net](http://discuss.babaei.net/) or [discuss.fa.babaei.net](http://discuss.fa.babaei.net/) inside your browser. Otherwise, the first place to check are the log files that reside inside <code>/home/discourse/log/</code> and <code>/home/discourse/discourse/log/</code>. If you still do not have any clue why it's not working, make sure to double check that you did follow the tutorial correctly. Other than that, you are always welcome to discuss it in the comments section below.
 
 
+### Major FreeBSD Upgrades ###
+
+Generally, after each major upgrade to FreeBSD there are version bumps and ABI changes to the shared libraries on the system which which will break most third-party applications. After a major version upgrade, all native gems need to be upgraded. So in order to survive the upgrade, simply run:
+
+    $ cd /home/discourse/discourse/
+    $ rm -rf vendor/bundle/ruby
+    $ gem pristine --all
+    $ sudo -u discourse -H bundle install --deployment --without test --without development
+
+
+### Upgrading Discourse ###
+
+__1.__ First kill Sidekiq and Thin servers:
+
+    $ ps | grep discourse | grep -v grep | awk '{print $1}' | xargs kill -9
+
+__2.__ Then, take a backup from all your Discourse databases. In my case:
+
+    $ mkdir -p ~/discourse-backups/
+    $ sudo -u pgsql pg_dump discourse_babaei_net_production > ~/discourse-backups/discourse_babaei_net_production.sql
+    $ sudo -u pgsql pg_dump discourse_fa_babaei_net_production > ~/discourse-backups/discourse_fa_babaei_net_production.sql
+    $ sudo -u pgsql pg_dump discourse_production > ~/discourse-backups/discourse_production.sql
+
+__3.__ Update the local Discourse git repository with the latest changes from its official GitHub repository:
+
+    $ cd /home/discourse/discourse/
+    $ sudo -u discourse -g discourse -H git pull
+
+__4.__ Now, let's switch to desired version of Discourse:
+
+    $ sudo -u discourse -g discourse -H git status
+    HEAD detached at v1.5.1
+    nothing to commit, working tree clean
+
+    $ sudo -u discourse -g discourse -H git reset --hard
+    HEAD is now at 47e9321 Version bump to v1.5.1
+
+    $ sudo -u discourse -g discourse -H git tag -l
+
+The last command outputs a lengthy list of git tags as we saw earlier. Choose the latest stable tag or the one you desire and switch to the new tag (see the following note):
+
+    $ sudo -u discourse -g discourse -H git checkout tags/v1.5.4
+    Previous HEAD position was 47e9321... Version bump to v1.5.1
+    HEAD is now at c8081af... Version bump to v1.5.4
+
+__Note__: At the time of writing this note, the latest stable tag is <code>v1.6.4</code>. Bear in mind that the minimum required version of Ruby for this version is <code>2.3</code>. On the other hand, FreeBSD uses Ruby <code>2.2</code> by default. So, either stick to <code>1.5.x</code> or install Ruby RVM to manage several Ruby binaries without dependency breaks. For the sake of simplicity, I'm not going to cover RVM. There are plenty of great tutorials on the topic out there. Just search for "FreeBSD RVM".
+
+__5.__ Install the new gems:
+
+    $ sudo -u discourse -g discourse -H bundle install --deployment --without test --without development
+
+__6.__ It's time to migrate the database. For a single instant installation of Discourse:
+
+    $ sudo -u discourse -g discourse -H RAILS_ENV='production' bundle exec rake db:migrate
+
+If you are running a multi-site instance, run the following command instead of the previous one:
+
+    $ sudo -u discourse -g discourse -H RAILS_ENV='production' bundle exec rake multisite:migrate
+
+__7.__ Precompile the new assets:
+
+    $ sudo -u discourse -g discourse -H RAILS_ENV=production bundle exec rake assets:precompile
+
+__8.__ Finally run the script we wrote earlier to start Discourse:
+
+    $  sh /home/discourse/cron/server.sh &
+
+__9.__ Done! Check if everything is working fine through your browser.
+
+
+#### Things went south? ####
+
+Do not worry!
+
+__1.__ Restore the database (this can be safely skipped for patch versions, e.g. reverting 1.5.4 to 1.5.1, as they usually won't introduce any changes to the database structure, unless your actual data is corrupted):
+
+    $ sudo -u pgsql psql -d template1
+    template1=# DROP DATABASE discourse_babaei_net_production;
+    template1=# DROP DATABASE discourse_fa_babaei_net_production;
+    template1=# DROP DATABASE discourse_production;
+    template1=# \q
+
+    $ sudo -u pgsql psql discourse_babaei_net_production < ~/discourse-backups/discourse_babaei_net_production.sql
+    $ sudo -u pgsql psql discourse_fa_babaei_net_production < ~/discourse-backups/discourse_fa_babaei_net_production.sql
+    $ sudo -u pgsql psql discourse_production < ~/discourse-backups/discourse_production.sql
+
+__2.__ Revert back to the old version:
+
+    $ sudo -u discourse -g discourse -H git checkout tags/v1.5.1
+
+__3.__ Run the script we wrote earlier to start Discourse:
+
+    $  sh /home/discourse/cron/server.sh &
+
+__4.__ Done! Check if everything is working fine through your browser.
