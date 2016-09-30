@@ -123,7 +123,7 @@ If you are planing to run only one website / blog on Discourse:
     discourse_production=# CREATE EXTENSION hstore;
     discourse_production=# CREATE EXTENSION pg_trgm;
 
-If you plan for a multi-site install, <s>in addition to the above commands</s>:
+If you plan for a multi-site install, in addition to the above commands:
 
     discourse_production=# CREATE DATABASE discourse_babaei_net_production WITH ENCODING='UTF8' OWNER discourse;
     discourse_production=# CREATE DATABASE discourse_fa_babaei_net_production WITH ENCODING='UTF8' OWNER discourse;
