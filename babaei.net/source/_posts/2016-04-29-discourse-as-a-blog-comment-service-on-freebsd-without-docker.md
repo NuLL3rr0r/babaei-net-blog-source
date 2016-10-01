@@ -1204,6 +1204,46 @@ The last step includes installing bundler inside the new environment for Discour
 
     (DISCOURSE) $ gem install bundler
 
+Before proceeding to Discourse installation or upgrade, I highly recommend to verify the new Ruby environment:
+
+    (DISCOURSE) $ echo $PATH
+    /home/discourse/.gem/ruby/2.3.1/bin:/home/discourse/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/bin:/home/discourse/.rubies/ruby-2.3.1/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/root/bin
+
+    (DISCOURSE) $ which ruby
+    /home/discourse/.rubies/ruby-2.3.1/bin/ruby
+
+    (DISCOURSE) $ which bundle
+    /home/discourse/.gem/ruby/2.3.1/bin/bundle
+
+    (DISCOURSE) $ which gem
+    /home/discourse/.rubies/ruby-2.3.1/bin/gem
+
+    (DISCOURSE) $ cd ~/discourse
+    (DISCOURSE) $ bundle env
+    Environment
+
+        Bundler   1.13.2
+        Rubygems  2.6.4
+        Ruby      2.2.5p319 (2016-04-26 revision 54774) [amd64-freebsd11]
+        GEM_HOME  /home/discourse/.gem/ruby/2.3.1
+        GEM_PATH  /home/discourse/.gem/ruby/2.3.1:/home/discourse/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0
+        Git       2.9.2
+
+It is very important that the new Ruby path appears before any other path in the <code>$PATH</code> variable. And, for <code>ruby</code>, <code>gem</code> and <code>bundler</code> executables, the path must refer to the corresponding version inside <code>/home/discourse/</code>.
+
+As you can see my Ruby version is wrong. For me the easy fix was to reboot the system. After that eveything was fine:
+
+    (DISCOURSE) $ cd ~/discourse
+    (DISCOURSE) $ bundle env
+    Environment
+
+        Bundler   1.13.2
+        Rubygems  2.5.1
+        Ruby      2.3.1p112 (2016-04-26 revision 54768) [x86_64-freebsd11.0]
+        GEM_HOME  /home/discourse/.gem/ruby/2.3.1
+        GEM_PATH  /home/discourse/.gem/ruby/2.3.1:/home/discourse/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0
+        Git       2.9.2
+
 OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we got rid of <code>sudo</code> since we are already running <code>bash</code> under <code>discourse</code> user, hence, any process that starts from this command line will run as user <code>discourse</code>):
 
     (DISCOURSE) $ ps | grep discourse | grep -v grep | awk '{print $1}' | xargs kill -9
