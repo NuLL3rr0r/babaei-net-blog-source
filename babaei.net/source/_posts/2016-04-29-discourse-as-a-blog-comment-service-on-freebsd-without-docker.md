@@ -1241,5 +1241,15 @@ OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we g
 
     (DISCOURSE) $ exit
 
-    $ sh /home/discourse/cron/server.sh &
+Modify the shebang line of <code>/home/discourse/cron/server.sh</code> script and change it from <code>#!/bin/sh</code> to <code>#!/usr/bin/env bash</code>:
+
+    #!/usr/bin/env bash
+
+    cd /home/discourse/discourse/
+    sudo -u discourse -H nohup bundle exec sidekiq -e production > /home/discourse/discourse/log/sidekiq.log 2>&1&
+    sudo -u discourse -H RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 nohup bundle exec thin start -s8 --socket /home/discourse/discourse/tmp/sockets/thin.sock > /home/discourse/discourse/log/thin.log 2>&1&
+
+Run the discourse server and check your discourse installation to see if everything works fine:
+
+    $ /home/discourse/cron/server.sh &
 
