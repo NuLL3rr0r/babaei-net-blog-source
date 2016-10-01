@@ -678,7 +678,7 @@ nano -w themes/TKL/layout/casper/analytics.ejs
             g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
         })();
     </script>
-    <noscript><p><img src="http://analytics.babaei.net/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+    <noscript><p><img src="https://analytics.babaei.net/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
     <!-- End Piwik Code -->
 <% } %>
 ########
@@ -1112,7 +1112,7 @@ twitter: https://twitter.com/NuLL3rr0r
 #Links
 links:
 - name: English Blog
-  link: http://www.babaei.net/
+  link: https://www.babaei.net/
 
 # Search
 simple_search: https://www.duckduckgo.com/
@@ -1128,7 +1128,7 @@ twitter_user: NuLL3rr0r
 piwik_enable: true
 
 # Discourse
-discourse_url: http://discuss.fa.babaei.net/
+discourse_url: https://discuss.fa.babaei.net/
 ########
 
 nano -w _config.yml
@@ -1140,7 +1140,7 @@ author: محمد صادق بابائی
 language: fa-IR
 timezone: Asia/Tehran
 
-url: http://fa.babaei.net/
+url: https://fa.babaei.net/
 permalink: blog/:year/:month/:day/:title/
 
 tag_dir: blog/tags

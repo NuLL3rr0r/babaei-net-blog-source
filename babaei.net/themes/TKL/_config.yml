@@ -25,7 +25,7 @@ twitter: https://twitter.com/NuLL3rr0r
 #Links
 links:
 - name: وبلاگ فارسی
-  link: http://fa.babaei.net/
+  link: https://fa.babaei.net/
 
 # Search
 simple_search: https://www.duckduckgo.com/
@@ -41,5 +41,5 @@ twitter_user: NuLL3rr0r
 piwik_enable: true
 
 # Discourse
-discourse_url: http://discuss.babaei.net/
+discourse_url: https://discuss.babaei.net/
 

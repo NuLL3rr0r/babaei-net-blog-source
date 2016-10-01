@@ -25,7 +25,7 @@ twitter: https://twitter.com/NuLL3rr0r
 #Links
 links:
 - name: English Blog
-  link: http://www.babaei.net/
+  link: https://www.babaei.net/
 
 # Search
 simple_search: https://www.duckduckgo.com/
@@ -41,5 +41,5 @@ twitter_user: NuLL3rr0r
 piwik_enable: true
 
 # Discourse
-discourse_url: http://discuss.fa.babaei.net/
+discourse_url: https://discuss.fa.babaei.net/
 
