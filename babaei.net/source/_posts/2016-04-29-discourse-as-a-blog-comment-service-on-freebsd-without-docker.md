@@ -1092,10 +1092,22 @@ Do not worry!
 __1.__ Restore the database (this can be safely skipped for patch versions, e.g. reverting 1.5.4 to 1.5.1, as they usually won't introduce any changes to the database structure, unless your actual data is corrupted):
 
     $ sudo -u pgsql psql -d template1
+    template1=# DROP DATABASE discourse_production;
     template1=# DROP DATABASE discourse_babaei_net_production;
     template1=# DROP DATABASE discourse_fa_babaei_net_production;
-    template1=# DROP DATABASE discourse_production;
-    template1=# \q
+    template1=# CREATE DATABASE discourse_production WITH ENCODING='UTF8' OWNER discourse;
+    template1=# CREATE DATABASE discourse_babaei_net_production WITH ENCODING='UTF8' OWNER discourse;
+    template1=# CREATE DATABASE discourse_fa_babaei_net_production WITH ENCODING='UTF8' OWNER discourse;
+    template1=# \c discourse_production
+    discourse_production=# CREATE EXTENSION hstore;
+    discourse_production=# CREATE EXTENSION pg_trgm;
+    discourse_production=# \c discourse_babaei_net_production
+    discourse_babaei_net_production=# CREATE EXTENSION hstore;
+    discourse_babaei_net_production=# CREATE EXTENSION pg_trgm;
+    discourse_babaei_net_production=# \c discourse_fa_babaei_net_production
+    discourse_fa_babaei_net_production=# CREATE EXTENSION hstore;
+    discourse_fa_babaei_net_production=# CREATE EXTENSION pg_trgm;
+    discourse_fa_babaei_net_production=# \q;
 
     $ sudo -u pgsql psql discourse_babaei_net_production < ~/discourse-backups/discourse_babaei_net_production.sql
     $ sudo -u pgsql psql discourse_fa_babaei_net_production < ~/discourse-backups/discourse_fa_babaei_net_production.sql
@@ -1137,7 +1149,7 @@ Check whether you have Bash installed or not since it's required by chruby (chru
 
 It is recommended to run Ruby version managers as users instead of a system-wide configuration. So:
 
-    $ sudo -u discourse -g discourse bash
+    $ sudo -u discourse -g discourse -H bash
     $ export PS1="(DISCOURSE) $PS1"
 
 This will drop us in a bash command prompt as <code>discourse</code> user. Now, we have to import chruby environment variables to our shell by running:
@@ -1191,7 +1203,7 @@ __Note 2:__ Looks like the new version of Discourse (<code>1.6.4</code>) pulls i
 After successful installation of the new Ruby, let's see if it gets picked up by chruby. After installing new Rubies, you must restart the shell before chruby can recognize them:
 
     (DISCOURSE) $ exit
-    $ sudo -u discourse -g discourse bash
+    $ sudo -u discourse -g discourse -H bash
     $ export PS1="(DISCOURSE) $PS1"
     (DISCOURSE) $ chruby
        ruby-2.3.1
@@ -1262,6 +1274,8 @@ As you can see my Ruby version is wrong. For me the easy fix was to reboot the s
 OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we got rid of <code>sudo</code> since we are already running <code>bash</code> under <code>discourse</code> user, hence, any process that starts from this command line will run as user <code>discourse</code>):
 
     (DISCOURSE) $ ps | grep discourse | grep -v grep | awk '{print $1}' | xargs kill -9
+    (DISCOURSE) $ ps | grep sidekiq | grep -v grep | awk '{print $1}' | xargs kill -9
+    (DISCOURSE) $ ps | grep thin | grep -v grep | awk '{print $1}' | xargs kill -9
 
     (DISCOURSE) $ mkdir -p ~/db-backups/
     (DISCOURSE) $ sudo -u pgsql pg_dump discourse_babaei_net_production > ~/db-backups/discourse_babaei_net_production.sql
