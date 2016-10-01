@@ -1173,6 +1173,21 @@ At the moment <code>2.3.1</code> is the latest stable one. So, to install Ruby <
     Installing ruby-2.3.1...
     Installed ruby-2.3.1 to /home/discourse/.rubies/ruby-2.3.1
 
+__Note 1:__ I had <code>lang/gcc-4.8.5_2</code> installed on my system which caused a lot of trouble for me. Remove it before you install the new Ruby, or bundler spits out these errors while building native extensions such as libv8:
+
+    current directory:
+    /usr/home/discourse/discourse/vendor/bundle/ruby/2.3.0/gems/unf_ext-0.0.7.1/ext/unf_ext
+    make "DESTDIR="
+    compiling unf.cc
+    g++: error: unrecognized command line option '-Wshorten-64-to-32'
+    g++: error: unrecognized command line option '-Wdivision-by-zero'
+    g++: error: unrecognized command line option '-Wextra-tokens'
+    *** Error code 1
+
+This happens because when we build Ruby it mix up compilers.
+
+__Note 2:__ Looks like the new version of Discourse (<code>1.6.4</code>) pulls in a new dependency called <code>rmmseg-cpp</code> which requires gcc (I know! I hate Ruby, Rails and friends, too). Remove gcc, proceed with the installation. When the bundle install failed, reinstall gcc again (it can stay till your next Ruby installation for Discourse) and resume the installation instructions.
+
 After successful installation of the new Ruby, let's see if it gets picked up by chruby. After installing new Rubies, you must restart the shell before chruby can recognize them:
 
     (DISCOURSE) $ exit
@@ -1279,20 +1294,53 @@ OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we g
 
     (DISCOURSE) $ RAILS_ENV=production bundle exec rake assets:precompile
 
-    (DISCOURSE) $ exit
-
-Modify the shebang line of <code>/home/discourse/cron/server.sh</code> script and change it from <code>#!/bin/sh</code> to <code>#!/usr/bin/env bash</code>. Moreover, implement the following changes:
+Modify the shebang line of <code>/home/discourse/cron/server.sh</code> script and change it from <code>#!/bin/sh</code> to <code>#!/usr/bin/env bash</code>:
 
     #!/usr/bin/env bash
 
     source /usr/local/share/chruby/chruby.sh
     chruby ruby-2.3.1
 
-    cd /home/discourse/discourse/
-    sudo -u discourse -H nohup bundle exec sidekiq -e production > /home/discourse/discourse/log/sidekiq.log 2>&1&
-    sudo -u discourse -H RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 nohup bundle exec thin start -s8 --socket /home/discourse/discourse/tmp/sockets/thin.sock > /home/discourse/discourse/log/thin.log 2>&1&
+    cd ~/discourse/
+    nohup bundle exec sidekiq -e production > ~/sidekiq.log 2>&1&
+    RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 nohup \
+        bundle exec thin start -s8 --socket \
+        ~/discourse/tmp/sockets/thin.sock > ~/discourse/log/thin.log 2>&1&
 
 Run the discourse server and check your discourse installation to see if everything works fine:
 
-    $ /home/discourse/cron/server.sh &
+    (DISCOURSE) $ /home/discourse/cron/server.sh &
 
+So far, so good. Now we have to remove the cron job we previously set up for <code>root</code> user:
+
+    $ crontab -e -u root
+
+Remove these lines:
+
+    # Discourse
+    # At Boot
+    @reboot     /home/discourse/cron/server.sh
+
+Then save and exit. Enter the following command to see if it has been removed:
+
+    $ crontab -l
+
+Now, we have to set up the cron job for <code>discourse</code> user:
+    
+    $ crontab -e -u discourse
+
+Your list of cron jobs must be empty. Add the following lines ([read more on cron jobs](/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/)):
+
+    SHELL=/bin/sh
+    PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+    MAILTO=""
+
+    # Discourse
+    # At Boot
+    @reboot     /home/discourse/cron/server.sh
+
+Now to see whether your cron job has been added successfully or not, enter the following command:
+
+    $ crontab -l -u discourse
+
+Reboot your system to see if it start ups automatically.
