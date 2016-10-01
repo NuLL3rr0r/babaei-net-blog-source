@@ -1107,7 +1107,7 @@ __1.__ Restore the database (this can be safely skipped for patch versions, e.g.
     discourse_babaei_net_production=# \c discourse_fa_babaei_net_production
     discourse_fa_babaei_net_production=# CREATE EXTENSION hstore;
     discourse_fa_babaei_net_production=# CREATE EXTENSION pg_trgm;
-    discourse_fa_babaei_net_production=# \q;
+    discourse_fa_babaei_net_production=# \q
 
     $ sudo -u pgsql psql discourse_babaei_net_production < ~/discourse-backups/discourse_babaei_net_production.sql
     $ sudo -u pgsql psql discourse_fa_babaei_net_production < ~/discourse-backups/discourse_fa_babaei_net_production.sql
