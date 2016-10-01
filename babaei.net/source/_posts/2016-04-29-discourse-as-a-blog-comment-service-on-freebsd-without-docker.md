@@ -1119,8 +1119,8 @@ Ruby version managers are designed to manage multiple installations of Ruby at t
 Instead of RVM or rbenv I'll go with chruby (there are plenty of great tutorials on the topic out there. Just search for "FreeBSD RVM", "FreeBSD rbenv" or whatever):
 
     $ cd /usr/ports/devel/ruby-build/
+    [ ] RBENV   Install rbenv for installation support
     $ make config-recursive
-    [X] RBENV   Install rbenv for installation support
     $ make install clean
 
     $ cd /usr/ports/devel/chruby/
@@ -1155,7 +1155,7 @@ To make this permanent, add the following lines to <code>~/.bashrc</code> (equal
 
 OK, let's find out which version of Ruby is the latest stable <code>2.3.x</code>:
 
-    (DISCOURSE) $ rbenv install --list | grep -w '2.3'
+    (DISCOURSE) $ ruby-build --definitions | grep -w '2.3'
       2.2.3
       2.3.0-dev
       2.3.0-preview1
@@ -1167,24 +1167,13 @@ OK, let's find out which version of Ruby is the latest stable <code>2.3.x</code>
 
 At the moment <code>2.3.1</code> is the latest stable one. So, to install Ruby <code>2.3.1</code> (this takes some time):
 
-    (DISCOURSE) $ CC=clang RUBY_CONFIGURE_OPTS=--with-opt-dir=/usr/local rbenv install 2.3.1
+    (DISCOURSE) $ CC=clang RUBY_CONFIGURE_OPTS=--with-opt-dir=/usr/local ruby-build 2.3.1 ~/.rubies/ruby-2.3.1
     Downloading ruby-2.3.1.tar.bz2...
     -> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
     Installing ruby-2.3.1...
-    Installed ruby-2.3.1 to /home/discourse/.rbenv/versions/2.3.1
+    Installed ruby-2.3.1 to /home/discourse/.rubies/ruby-2.3.1
 
-After successful installation of Ruby, let's move it to a proper location to get picked up by chruby:
-
-    (DISCOURSE) $ mkdir -p ~/.rubies/
-    (DISCOURSE) $ mv ~/.rbenv/versions/2.3.1 ~/.rubies/ruby-2.3.1
-
-It is possible to modify <code>/usr/local/share/chruby/chruby.sh</code>, so that you don't have to move Ruby versions around after each installation:
-
-    RUBIES+=(~/.rbenv/versions/*)
-
-But I won't recommend it, since after each upgrade <code>/usr/local/share/chruby/chruby.sh</code> will be overwritten, thus breaking your installation.
-
-See if chruby detects the new Ruby. After installing new Rubies, you must restart the shell before chruby can recognize them:
+After successful installation of the new Ruby, let's see if it gets picked up by chruby. After installing new Rubies, you must restart the shell before chruby can recognize them:
 
     (DISCOURSE) $ exit
     $ sudo -u discourse -g discourse bash
@@ -1194,9 +1183,26 @@ See if chruby detects the new Ruby. After installing new Rubies, you must restar
 
 Time to choose the new Ruby:
 
-    $ chruby ruby-2.3.1
-    $ ruby --version
+    (DISCOURSE) $ chruby ruby-2.3.1
+    (DISCOURSE) $ ruby --version
     ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-freebsd11.0]
+
+To set default Ruby permanently, put the following line inside <code>~/.bashrc</code>:
+
+    # Default Ruby Version
+    chruby ruby-2.3.1
+
+So, at the end your <code>~/.bashrc</code> must look like this (the order is important):
+
+    # chruby
+    source /usr/local/share/chruby/chruby.sh
+
+    # Default Ruby Version
+    chruby ruby-2.3.1
+
+The last step includes installing bundler inside the new environment for Discourse installation and update:
+
+    (DISCOURSE) $ gem install bundler
 
 OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we got rid of <code>sudo</code> since we are already running <code>bash</code> under <code>discourse</code> user, hence, any process that starts from this command line will run as user <code>discourse</code>):
 
