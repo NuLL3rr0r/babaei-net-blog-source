@@ -1281,9 +1281,12 @@ OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we g
 
     (DISCOURSE) $ exit
 
-Modify the shebang line of <code>/home/discourse/cron/server.sh</code> script and change it from <code>#!/bin/sh</code> to <code>#!/usr/bin/env bash</code>:
+Modify the shebang line of <code>/home/discourse/cron/server.sh</code> script and change it from <code>#!/bin/sh</code> to <code>#!/usr/bin/env bash</code>. Moreover, implement the following changes:
 
     #!/usr/bin/env bash
+
+    source /usr/local/share/chruby/chruby.sh
+    chruby ruby-2.3.1
 
     cd /home/discourse/discourse/
     sudo -u discourse -H nohup bundle exec sidekiq -e production > /home/discourse/discourse/log/sidekiq.log 2>&1&
