@@ -712,7 +712,7 @@ To stop your Sidekiq or Thin instances I highly recommend sending <code>SIGTERM<
 If you are looking for an easier way to stop and monitor your Thin and Sidekiq instances, <code>sysutils/htop</code> is an viable option.
 
 
-### Cron Jobs ###
+### Cron Job ###
 
 Well, I am sure we cannot afford to run the script manually after each reboot, so we have to [set it up as a cron job](/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/):
 
