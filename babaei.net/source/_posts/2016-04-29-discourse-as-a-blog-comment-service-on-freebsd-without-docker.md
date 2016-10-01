@@ -12,7 +12,11 @@ tags:
   - Unix
 ---
 
-__Update [2016/09/30]:__ _Two sections has been added to the end of the article for major FreeBSD upgrades and Discourse upgrades._
+__Update 1 [2016/09/30]:__ _A section has been added to the end of the article for dealing with major FreeBSD upgrades._
+
+__Update 2 [2016/09/30]:__ _A section has been added to the end of the article for upgrading current installation of Discourse to newer versions._
+
+__Update 3 [2016/09/30]:__ _A section has been added to the end of the article for installing Discourse under Ruby version managers which is required for dealing with newer versions of Discourse since the current system-wide version of Ruby on FreeBSD is <code>2.2.5p319</code>._
 
 <br />
 
@@ -1056,7 +1060,7 @@ The last command outputs a lengthy list of git tags as we saw earlier. Choose th
     Previous HEAD position was 47e9321... Version bump to v1.5.1
     HEAD is now at c8081af... Version bump to v1.5.4
 
-__Note__: At the time of writing this note, the latest stable tag is <code>v1.6.4</code>. Bear in mind that the minimum required version of Ruby for this version is <code>2.3</code>. On the other hand, FreeBSD uses Ruby <code>2.2</code> by default. So, either stick to <code>1.5.x</code> or install Ruby RVM to manage several Ruby binaries without dependency breaks. For the sake of simplicity, I'm not going to cover RVM. There are plenty of great tutorials on the topic out there. Just search for "FreeBSD RVM".
+__Note__: At the time of writing this note, the latest stable tag is <code>v1.6.4</code>. Bear in mind that the minimum required version of Ruby for this version is <code>2.3.x</code>. On the other hand, FreeBSD uses Ruby <code>2.2.x</code> by default. So, either stick to <code>1.5.x</code> or install a Ruby version manager to manage several Ruby binaries without dependency breaks. For the sake of simplicity, I'm not going to cover Ruby version managers in this section. Instead, a dedicated section on Ruby version managers can be found at the of the article.
 
 __5.__ Install the new gems:
 
@@ -1103,6 +1107,133 @@ __2.__ Revert back to the old version:
 
 __3.__ Run the script we wrote earlier to start Discourse:
 
-    $  sh /home/discourse/cron/server.sh &
+    $ sh /home/discourse/cron/server.sh &
 
 __4.__ Done! Check if everything is working fine through your browser.
+
+
+### Ruby Version Manager ###
+
+Ruby version managers are designed to manage multiple installations of Ruby at the same time on the same system. There are quite  [a few Ruby version managers](https://www.ruby-toolbox.com/categories/ruby_version_management) but the most notable ones are [RVM](https://rvm.io/), [rbenv](https://github.com/rbenv/rbenv) and [chruby](https://github.com/postmodern/chruby).
+ 
+Instead of RVM or rbenv I'll go with chruby (there are plenty of great tutorials on the topic out there. Just search for "FreeBSD RVM", "FreeBSD rbenv" or whatever):
+
+    $ cd /usr/ports/devel/ruby-build/
+    $ make config-recursive
+    [X] RBENV   Install rbenv for installation support
+    $ make install clean
+
+    $ cd /usr/ports/devel/chruby/
+    $ make config-recursive
+    $ make install clean
+
+Or if you are using pkgng:
+
+    $ pkg install ruby-build chruby
+
+Check whether you have Bash installed or not since it's required by chruby (chruby installation must automatically pulls in <code>shells/bash</code>):
+
+    $ pkg info bash
+
+It is recommended to run Ruby version managers as users instead of a system-wide configuration. So:
+
+    $ sudo -u discourse -g discourse bash
+    $ export PS1="(DISCOURSE) $PS1"
+
+This will drop us in a bash command prompt as <code>discourse</code> user. Now, we have to import chruby environment variables to our shell by running:
+
+    (DISCOURSE) $ source ~/.bashrc
+
+or (yes that is a dot and a space):
+
+    (DISCOURSE) $ . ~/.bashrc
+
+To make this permanent, add the following lines to <code>~/.bashrc</code> (equals to <code>/home/discourse/.bashrc</code> in our setup):
+
+    # chruby
+    source /usr/local/share/chruby/chruby.sh
+
+OK, let's find out which version of Ruby is the latest stable <code>2.3.x</code>:
+
+    (DISCOURSE) $ rbenv install --list | grep -w '2.3'
+      2.2.3
+      2.3.0-dev
+      2.3.0-preview1
+      2.3.0-preview2
+      2.3.0
+      2.3.1
+      rbx-2.2.3
+      rbx-2.3.0
+
+At the moment <code>2.3.1</code> is the latest stable one. So, to install Ruby <code>2.3.1</code> (this takes some time):
+
+    (DISCOURSE) $ CC=clang RUBY_CONFIGURE_OPTS=--with-opt-dir=/usr/local rbenv install 2.3.1
+    Downloading ruby-2.3.1.tar.bz2...
+    -> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
+    Installing ruby-2.3.1...
+    Installed ruby-2.3.1 to /home/discourse/.rbenv/versions/2.3.1
+
+After successful installation of Ruby, let's move it to a proper location to get picked up by chruby:
+
+    (DISCOURSE) $ mkdir -p ~/.rubies/
+    (DISCOURSE) $ mv ~/.rbenv/versions/2.3.1 ~/.rubies/ruby-2.3.1
+
+It is possible to modify <code>/usr/local/share/chruby/chruby.sh</code>, so that you don't have to move Ruby versions around after each installation:
+
+    RUBIES+=(~/.rbenv/versions/*)
+
+But I won't recommend it, since after each upgrade <code>/usr/local/share/chruby/chruby.sh</code> will be overwritten, thus breaking your installation.
+
+See if chruby detects the new Ruby. After installing new Rubies, you must restart the shell before chruby can recognize them:
+
+    (DISCOURSE) $ exit
+    $ sudo -u discourse -g discourse bash
+    $ export PS1="(DISCOURSE) $PS1"
+    (DISCOURSE) $ chruby
+       ruby-2.3.1
+
+Time to choose the new Ruby:
+
+    $ chruby ruby-2.3.1
+    $ ruby --version
+    ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-freebsd11.0]
+
+OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we got rid of <code>sudo</code> since we are already running <code>bash</code> under <code>discourse</code> user, hence, any process that starts from this command line will run as user <code>discourse</code>):
+
+    (DISCOURSE) $ ps | grep discourse | grep -v grep | awk '{print $1}' | xargs kill -9
+
+    (DISCOURSE) $ mkdir -p ~/db-backups/
+    (DISCOURSE) $ sudo -u pgsql pg_dump discourse_babaei_net_production > ~/db-backups/discourse_babaei_net_production.sql
+    (DISCOURSE) $ sudo -u pgsql pg_dump discourse_fa_babaei_net_production > ~/db-backups/discourse_fa_babaei_net_production.sql
+    (DISCOURSE) $ sudo -u pgsql pg_dump discourse_production > ~/db-backups/discourse_production.sql
+
+    (DISCOURSE) $ cd ~/discourse/
+    (DISCOURSE) $ git pull
+
+    (DISCOURSE) $ git status
+    HEAD detached at v1.5.4
+    nothing to commit, working tree clean
+
+    (DISCOURSE) $ git reset --hard
+    HEAD is now at c8081af Version bump to v1.5.4
+    
+    (DISCOURSE) $ git tag -l
+
+    (DISCOURSE) $ git checkout tags/v1.6.4
+    Previous HEAD position was c8081af... Version bump to v1.5.4
+    HEAD is now at 4673295... Version bump to v1.6.4
+
+    (DISCOURSE) $ bundle install --deployment --without test --without development
+
+    # single instance installations
+    (DISCOURSE) $ RAILS_ENV='production' bundle exec rake db:migrate
+
+    # multi-site setup
+    (DISCOURSE) $ RAILS_ENV='production' bundle exec rake multisite:migrate
+
+    (DISCOURSE) $ RAILS_ENV=production bundle exec rake assets:precompile
+
+    (DISCOURSE) $ exit
+
+    $ sh /home/discourse/cron/server.sh &
+
