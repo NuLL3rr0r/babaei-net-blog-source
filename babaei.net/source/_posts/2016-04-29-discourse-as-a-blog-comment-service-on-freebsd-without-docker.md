@@ -1142,11 +1142,11 @@ It is recommended to run Ruby version managers as users instead of a system-wide
 
 This will drop us in a bash command prompt as <code>discourse</code> user. Now, we have to import chruby environment variables to our shell by running:
 
-    (DISCOURSE) $ source ~/.bashrc
+    (DISCOURSE) $ source /usr/local/share/chruby/chruby.sh
 
 or (yes that is a dot and a space):
 
-    (DISCOURSE) $ . ~/.bashrc
+    (DISCOURSE) $ . /usr/local/share/chruby/chruby.sh
 
 To make this permanent, add the following lines to <code>~/.bashrc</code> (equals to <code>/home/discourse/.bashrc</code> in our setup):
 
