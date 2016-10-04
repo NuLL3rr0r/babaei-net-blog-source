@@ -1066,10 +1066,10 @@ __5.__ Install the new gems:
 
     $ sudo -u discourse -g discourse -H bundle install --deployment --without test --without development
 
-__Note__: Upgrading to <code>1.5.4</code> will fail at this stage on FreeBSD <code>11.0-RELEASE</code> due to build errors from libv8. What worked for me is this:
+__Note__: Installing or upgrading to <code>1.5.x</code> will fail at this stage on FreeBSD <code>11.0-RELEASE</code> due to build errors from libv8. What worked for me is this:
 
     $ pkg install v8
-    $ bundle config build.libv8 --with-system-v8
+    $ sudo -u discourse -g discourse -H bundle config build.libv8 --with-system-v8
     $ sudo -u discourse -g discourse -H bundle install --deployment --without test --without development
 
 After that proceed to the next step.
