@@ -692,7 +692,7 @@ nano -w themes/TKL/layout/casper/footer.ejs
                     <span class="license">تمامی محتویات این وب سایت تحت مجوز <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a> منتشر شده است. همچنین، تمامی سورس کدهای منتشر شده در این وب سایت تحت لیسانس <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> منتشر شده است، مگر آن که به صراحت ذکر شده باشد. تمامی محتویات ارائه شده صرفا جنبه آموزشی و اطلاعاتی داشته و فاقد هرگونه ضمانت، تعهد یا شرایطی از هر نوع می باشد. بایستی توجه نمود که اطلاعات عرضه شده حتی ممکن است دقیق و یا بروز نباشد. هرگونه اطمینان به و یا استفاده از محتویات یا منابع منتشر شده در این وب سایت با مسئولیت مخاطب بوده و نگارنده یا نگارندگان هیچ گونه مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.</span>
                     <br /><br />
                     <span class="credit">
-                    با افتخار نیرو گرفته از <a href="http://freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://postgresql.org/" target="_blank">PostgreSQL</a> | <a href="http://hexo.io/" target="_blank">Hexo</a> | <a href="http://discourse.org/" target="_blank">Discourse</a>
+                    با افتخار نیرو گرفته از <a href="http://freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="http://postgresql.org/" target="_blank">PostgreSQL</a> | <a href="http://hexo.io/" target="_blank">Hexo</a>
                     <br />
                     قالب از <a href="//go.kieran.top" target="_blank">Kieran</a>
                     </span>
@@ -982,24 +982,14 @@ nano -w themes/TKL/layout/layout.ejs
 
 nano -w themes/TKL/layout/post/comments.ejs
 ########
-<div id="discourse-comments">
-  <center>
-    <noscript>
-      جهت دسترسی به <a href="<%- theme.discourse_url %>">بخش نظرات</a> لطفا جاوا اسکریپت را در مرورگر خود فعال نمائید.
-    </noscript>
-  </center>
+<div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    <% if(config.disqus_shortname) { %>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    <% } %>
 </div>
-
-<script type="text/javascript">
-  DiscourseEmbed = { discourseUrl: '<%- theme.discourse_url %>',
-                     discourseEmbedUrl: '<%= url %>' };
-
-  (function() {
-    var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
-    d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
-  })();
-</script>
 ########
 
 // http://crunchify.com/list-of-all-social-sharing-urls-for-handy-reference-social-media-sharing-buttons-without-javascript/
@@ -1126,9 +1116,6 @@ twitter_user: NuLL3rr0r
 
 # Piwik
 piwik_enable: true
-
-# Discourse
-discourse_url: https://discuss.fa.babaei.net/
 ########
 
 nano -w _config.yml
@@ -1269,45 +1256,4 @@ tag_generator:
 ########
 
 hexo server
-
-
-
-////////////// discourse rtl-comments embedded stylesheet
-
-.profiler-results {
-    visibility: hidden;
-}
-
-.discourse {
-    direction: rtl;
-}
-
-header.discourse .button {
-    float: left;
-}
-
-article {
-    direction: rtl;
-}
-
-.post .post-date a {
-    float: left;
-}
-
-article.post .post-date {
-    float: left;
-}
-
-article.post .author {
-    float: right;
-}
-
-footer {
-    direction: rtl;
-}
-
-footer .logo {
-    float: left;
-}
-
 

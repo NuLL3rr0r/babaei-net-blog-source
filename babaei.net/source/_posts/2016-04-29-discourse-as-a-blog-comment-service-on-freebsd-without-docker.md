@@ -18,6 +18,8 @@ __Update 2 [2016/09/30]:__ _A section has been added to the end of the article f
 
 __Update 3 [2016/09/30]:__ _A section has been added to the end of the article for installing Discourse under Ruby version managers which is required for dealing with newer versions of Discourse since the current system-wide version of Ruby on FreeBSD is <code>2.2.5p319</code>._
 
+__Update 4 [2016/10/06]:__ _I decided to get rid of Discourse on this blog for various reasons including negative feedback from my readers, performance issues, being a memory hog and not so easy on memory, difficult maintenance, dealing with building Ruby Gems which is a tedious task in case they fail to build and a bug that duplicates my posts and creates a new thread for each post which means it won't show previous comments. Last but not least, in my estimation it's too heavy for such a small task such as a comment system._ **_As a result, this guide won't be maintained anymore._**
+
 <br />
 
 [{% img post-image /blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png 1000 293 "'Discourse Logo'" "'Discourse Logo'" %}](/blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png)
