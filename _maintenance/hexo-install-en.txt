@@ -689,18 +689,6 @@ nano -w themes/TKL/layout/layout.ejs
 </body>
 ########
 
-nano -w themes/TKL/layout/post/comments.ejs
-########
-<div id="comment" class="comments-area">
-    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
-    <% if(config.disqus_shortname) { %>
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-    <% } %>
-</div>
-########
-
 // http://crunchify.com/list-of-all-social-sharing-urls-for-handy-reference-social-media-sharing-buttons-without-javascript/
 // https://github.com/bradvin/social-share-urls
 
