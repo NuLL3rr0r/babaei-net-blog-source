@@ -551,15 +551,6 @@ pre, figure, figure *, figure body, figure h1, figure h2, figure h3, figure h4, 
 	display: inline-block;
 }
 
-#intro .comments {
-    margin-top: 3.0em;
-    margin-bottom: 2.0em;
-}
-
-#intro .comments noscript {
-    direction: rtl;
-}
-
 figure.highlight {
     margin-bottom: 1.0em;
 }
@@ -1045,10 +1036,6 @@ nano -w themes/TKL/layout/casper/post.ejs
             <div class="clearfix"></div>
             <div class="sharing">
                 <%- partial('post/sharing') %>
-            </div>
-            <div class="clearfix"></div>
-            <div class="comments">
-                <%- partial('post/comments') %>
             </div>
             <div class="clearfix"></div>
             <div class="subscribe">

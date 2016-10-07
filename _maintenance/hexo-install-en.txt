@@ -359,11 +359,6 @@ footer .social {
 	display: inline-block;
 }
 
-#intro .comments {
-    margin-top: 3.0em;
-    margin-bottom: 2.0em;
-}
-
 figure.highlight {
     margin-bottom: 1.0em;
 }
@@ -754,10 +749,6 @@ nano -w themes/TKL/layout/casper/post.ejs
             <div class="clearfix"></div>
             <div class="sharing">
                 <%- partial('post/sharing') %>
-            </div>
-            <div class="clearfix"></div>
-            <div class="comments">
-                <%- partial('post/comments') %>
             </div>
             <div class="clearfix"></div>
             <div class="subscribe">
