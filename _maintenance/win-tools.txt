@@ -1,7 +1,0 @@
-rsync deploy :  http://blog.gluwer.com/2013/06/deploy-static-website---rsync-on-windows/
-
-plink :  http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
-ssh   :  http://www.wischik.com/lu/programmer/unison-ssh.html
-
-cwRsync :  https://www.itefix.no/i2/cwrsync
-
