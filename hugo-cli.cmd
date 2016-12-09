@@ -10,6 +10,7 @@ set GOROOT=E:\OPT\Go\
 
 set PATH=E:\OPT\Python27\Scripts;%PATH%
 set PATH=E:\OPT\Python27;%PATH%
+set PATH=E:\OPT\Go\bin;%PATH%
 set PATH=E:\OPT\cwRsync;%PATH%
 set PATH=E:\OPT\Git\bin;%PATH%
 set PATH=E:\OPT\Hugo;%PATH%
