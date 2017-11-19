@@ -1,3 +1,3 @@
 #!/bin/sh
 cd ./babaei.net/ \
-    && gutenberg --interface 0.0.0.0 --port 1001
+    && gutenberg serve --interface 0.0.0.0 --port 1001
