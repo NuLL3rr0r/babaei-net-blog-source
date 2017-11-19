@@ -15,3 +15,4 @@ generate_rss = true
 rss_limit = 16
 
 [extra]
+author = "Mohammad S. Babaei"
