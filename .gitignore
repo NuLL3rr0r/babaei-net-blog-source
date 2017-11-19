@@ -1,7 +1,3 @@
 *.DS_Store
 Desktop.ini
 Thumbs.db
-
-src/public
-src/themes/.git/
-src/themes/beautifulhugo/.git/
