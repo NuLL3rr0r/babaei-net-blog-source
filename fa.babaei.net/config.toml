@@ -1,12 +1,17 @@
-# The URL the site will be built for
 base_url = "https://fa.babaei.net"
+title = "وبلاگ محمد صادق بابائی"
+description = "The hackers way to say 3rr0r"
+language_code = "fa"
 
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
-
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Gutenberg
 highlight_code = true
+highlight_theme = "gruvbox-dark"
+#theme = ""
+
+generate_tags_pages = true
+generate_categories_pages = true
+
+generate_rss = true
+rss_limit = 16
 
 [extra]
-# Put all your custom variables here
