@@ -1,15 +1,15 @@
 base_url = "https://www.babaei.net"
-title = "NuLL3rr0r; The blog of Mohammad S. Babaei"
-description = "The hackers way to say 3rr0r"
+title = "Mohammad S. Babaei"
+description = "The blog of Mohammad S. Babaei"
 language_code = "en"
 
 compile_sass = true
 highlight_code = true
 highlight_theme = "gruvbox-dark"
-#theme = ""
+theme = "minimal-blog"
 
-generate_tags_pages = true
-generate_categories_pages = true
+generate_tags_pages = false
+generate_categories_pages = false
 
 generate_rss = true
 rss_limit = 16
