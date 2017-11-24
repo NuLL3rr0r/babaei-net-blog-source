@@ -15,4 +15,7 @@ generate_rss = true
 rss_limit = 16
 
 [extra]
-author = "Mohammad S. Babaei"
+minimal_blog_author = "Mohammad S. Babaei"
+minimal_blog_avatar = "images/mohammad-s-babaei.png"
+minimal_blog_avatar_thumbnail = "images/mohammad-s-babaei_thumbnail.png"
+minimal_blog_rtl = false
