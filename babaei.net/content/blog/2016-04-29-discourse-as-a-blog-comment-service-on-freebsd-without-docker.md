@@ -731,7 +731,7 @@ For your cron job to take effect:
 Now, after each reboot it will start automatically.
 
 
-### Nginx Congiguration ###
+### Nginx Configuration ###
 
 I took the example Nginx configuration from <code>config/nginx.sample.conf</code> and adapt it to our example:
 
