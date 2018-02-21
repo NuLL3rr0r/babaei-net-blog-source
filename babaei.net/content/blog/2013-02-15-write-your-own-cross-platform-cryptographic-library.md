@@ -1,7 +1,7 @@
 +++
 title = "Write your own cross-platform cryptographic library"
 slug = "write-your-own-cross-platform-cryptographic-library"
-date = "2013-02-15T08:11:00Z"
+date = 2013-02-15T08:11:00Z
 tags = [ "C", "C++", "Clang", "CMake", "Cross-platform", "Crypto++", "Cryptography", "FreeBSD", "G++", "GCC", "GNU", "iOS", "Linux", "Mac OS X", "MSVC", "QMake", "Qt Creator", "Security", "Unix", "VC++", "Visual C++", "Visual Studio", "Windows" ]
 #template = "post.html"
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Happy 24th Birthday: A Linux Kernel Panic At Hometown"
 slug = "happy-24th-birthday-a-linux-kernel-panic-at-hometown"
-date = "2015-08-25T21:00:00Z"
+date = 2015-08-25T21:00:00Z
 tags = [ "Crash", "FLOSS", "FreeBSD", "GNU", "Kernel Panic", "Linux", "Unix" ]
 #template = "post.html"
 +++

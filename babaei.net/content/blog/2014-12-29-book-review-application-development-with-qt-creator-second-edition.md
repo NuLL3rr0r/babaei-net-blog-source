@@ -1,7 +1,7 @@
 +++
 title = "Book Review: Application Development with Qt Creator - Second Edition"
 slug = "book-review-application-development-with-qt-creator-second-edition"
-date = "2014-12-29T04:27:20Z"
+date = 2014-12-29T04:27:20Z
 tags = [ "Android", "Book Review", "C", "C++", "Clang", "CMake", "Cross-platform", "FreeBSD", "G++", "GCC", "GNU", "iOS", "Linux", "Mac OS X", "MSVC", "QMake", "Packt Publishing", "Qt Creator", "Unix", "VC++", "Visual C++", "Visual Studio", "Windows" ]
 #template = "post.html"
 +++

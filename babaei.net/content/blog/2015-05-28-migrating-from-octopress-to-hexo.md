@@ -1,7 +1,7 @@
 +++
 title = "Migrating From Octopress To Hexo"
 slug = "migrating-from-octopress-to-hexo"
-date = "2015-05-28T01:44:00Z"
+date = 2015-05-28T01:44:00Z
 tags = [ "Hexo", "Octopress" ]
 #template = "post.html"
 +++

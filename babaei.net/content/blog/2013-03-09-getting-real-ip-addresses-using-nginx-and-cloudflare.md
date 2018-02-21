@@ -1,7 +1,7 @@
 +++
 title = "Getting real IP addresses using Nginx and CloudFlare"
 slug = "getting-real-ip-addresses-using-nginx-and-cloudflare"
-date = "2013-03-09T01:35:00Z"
+date = 2013-03-09T01:35:00Z
 tags = [ "AWK", "Bash", "CloudFlare", "Cron", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "Nginx", "Unix" ]
 #template = "post.html"
 +++

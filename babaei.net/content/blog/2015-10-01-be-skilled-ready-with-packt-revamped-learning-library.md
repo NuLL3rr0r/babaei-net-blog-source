@@ -1,7 +1,7 @@
 +++
 title = "Be Skilled & Ready with Packt’s revamped learning library"
 slug = "be-skilled-ready-with-packt-revamped-learning-library"
-date = "2015-10-01T17:29:14Z"
+date = 2015-10-01T17:29:14Z
 tags = [ "Advertising", "Packt Publishing" ]
 #template = "post.html"
 +++
