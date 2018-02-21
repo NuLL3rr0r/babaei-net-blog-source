@@ -1,7 +1,7 @@
 +++
 title = "OmniBackup: One Script to back them all up"
 slug = "omnibackup-one-script-to-back-them-all-up"
-date = "2015-08-08T03:23:23Z"
+date = 2015-08-08T03:23:23Z
 tags = [ "Backup", "FreeBSD", "GNU", "Linux", "OmniBackup", "Unix" ]
 #template = "post.html"
 +++

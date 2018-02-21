@@ -1,7 +1,7 @@
 +++
 title = "Colors Talk: A Colorful Terminal / Console"
 slug = "colors-talk-a-colorful-terminal-console"
-date = "2013-03-03T05:10:00Z"
+date = 2013-03-03T05:10:00Z
 tags = [ "Bash", "Console", "csh", "FreeBSD", "Funtoo", "Gentoo", "GNOME", "GNU", "KDE", "Linux", "LXDE", "nano", "sh", "Terminal", "Unix", "XFCE" ]
 #template = "post.html"
 +++

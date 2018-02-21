@@ -1,7 +1,7 @@
 +++
 title = "Discourse as a Blog Comment Service on FreeBSD without Docker"
 slug = "discourse-as-a-blog-comment-service-on-freebsd-without-docker"
-date = "2016-04-29T06:49:31Z"
+date = 2016-04-29T06:49:31Z
 tags = [ "Docker", "FreeBSD", "GNU", "Hexo", "Linux", "Ruby", "Ruby on Rails", "Unix" ]
 #template = "post.html"
 +++

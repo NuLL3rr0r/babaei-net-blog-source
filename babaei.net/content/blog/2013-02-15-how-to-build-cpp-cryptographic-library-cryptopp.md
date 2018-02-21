@@ -1,7 +1,7 @@
 +++
 title = "How to build C++ cryptographic library, Crypto++"
 slug = "how-to-build-cpp-cryptographic-library-cryptopp"
-date = "2013-02-15T03:50:00Z"
+date = 2013-02-15T03:50:00Z
 tags = [ "C", "C++", "Clang", "Cross-platform", "Crypto++", "Cryptography", "FreeBSD", "G++", "GCC", "GNU", "iOS", "Linux", "Mac OS X", "MSVC", "Security", "Unix", "VC++", "Visual C++", "Visual Studio", "Windows" ]
 #template = "post.html"
 +++

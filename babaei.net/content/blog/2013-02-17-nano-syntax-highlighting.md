@@ -1,7 +1,7 @@
 +++
 title = "nano, Syntax Highlighting"
 slug = "nano-syntax-highlighting"
-date = "2013-02-17T01:27:00Z"
+date = 2013-02-17T01:27:00Z
 tags = [ "Console", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "nano", "Terminal", "Unix" ]
 #template = "post.html"
 +++

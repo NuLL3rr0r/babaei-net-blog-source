@@ -1,7 +1,7 @@
 +++
 title = "Get nFringe to Work with Visual Studio 2012"
 slug = "get-nfringe-to-work-with-visual-studio-2012"
-date = "2013-02-10T17:53:00Z"
+date = 2013-02-10T17:53:00Z
 tags = [ "Epic", "Game Development", "Game Programming", "nFringe", "UDK", "UnrealScript", "Visual Stuio", "Windows" ]
 #template = "post.html"
 +++

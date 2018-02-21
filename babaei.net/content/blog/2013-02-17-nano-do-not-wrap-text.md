@@ -1,7 +1,7 @@
 +++
 title = "nano, Do not wrap text"
 slug = "nano-do-not-wrap-text"
-date = "2013-02-17T01:13:00Z"
+date = 2013-02-17T01:13:00Z
 tags = [ "Console", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "nano", "Terminal", "Unix" ]
 #template = "post.html"
 +++

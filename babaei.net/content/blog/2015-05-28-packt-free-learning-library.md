@@ -1,7 +1,7 @@
 +++
 title = "Packt Free Learning Library"
 slug = "packt-free-learning-library"
-date = "2015-05-28T03:37:59Z"
+date = 2015-05-28T03:37:59Z
 tags = [ "Advertising", "Packt Publishing" ]
 #template = "post.html"
 +++

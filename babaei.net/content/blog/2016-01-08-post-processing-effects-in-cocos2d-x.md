@@ -1,7 +1,7 @@
 +++
 title = "Post-Processing Effects in Cocos2d-x"
 slug = "post-processing-effects-in-cocos2d-x"
-date = "2016-01-08T22:10:30Z"
+date = 2016-01-08T22:10:30Z
 tags = [ "C", "C++", "Cocos2d-x", "Game Development", "Game Programming", "OpenGL", "VC++", "Visual C++", "Visual Studio" ]
 #template = "post.html"
 +++

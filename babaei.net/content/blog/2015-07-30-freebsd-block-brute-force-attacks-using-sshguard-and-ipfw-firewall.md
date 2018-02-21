@@ -1,7 +1,7 @@
 +++
 title = "FreeBSD: Block Brute-force Attacks Using Sshguard and IPFW Firewall"
 slug = "freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall"
-date = "2015-07-30T19:56:00Z"
+date = 2015-07-30T19:56:00Z
 tags = [ "Brute-force", "Firewall", "FreeBSD", "GNU", "IPF", "IPFILTER", "IPFW", "Linux", "PF", "Security", "SSH", "Unix", "Vulnerability" ]
 #template = "post.html"
 +++

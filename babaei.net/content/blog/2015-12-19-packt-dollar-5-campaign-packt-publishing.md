@@ -1,7 +1,7 @@
 +++
 title = "Packt $5 Campaign - Packt Publishing"
 slug = "packt-dollar-5-campaign-packt-publishing"
-date = "2015-12-19T10:47:34Z"
+date = 2015-12-19T10:47:34Z
 tags = [ "Advertising", "Packt Publishing" ]
 #template = "post.html"
 +++

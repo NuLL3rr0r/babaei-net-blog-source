@@ -1,7 +1,7 @@
 +++
 title = "Packt Essential IT Skills of 2015 and Challenges for 2016"
 slug = "packt-essential-it-skills-of-2015-and-challenges-for-2016"
-date = "2015-12-17T22:48:06Z"
+date = 2015-12-17T22:48:06Z
 tags = [ "Advertising", "Packt Publishing" ]
 #template = "post.html"
 +++
