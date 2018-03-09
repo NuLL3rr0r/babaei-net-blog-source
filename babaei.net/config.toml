@@ -19,4 +19,10 @@ minimal_blog_author = "Mohammad S. Babaei"
 minimal_blog_avatar = "images/mohammad-s-babaei.png"
 minimal_blog_avatar_thumbnail = "images/mohammad-s-babaei_thumbnail.png"
 minimal_blog_excerpt_link = "Read more..."
+minimal_blog_copyright_text = "Copyright &copy; 2006 - 2018 Mohammad S. Babaei. All Rights Reserved."
+minimal_blog_license_text = "All content on this website is licensed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel=\"license\" href=\"http://opensource.org/licenses/MIT\" target=\"_blank\">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for."
+minimal_blog_powered_by = [
+    { title = "FreeBSD", url = "http://freebsd.org/" },
+    { title = "nginx", url = "http://nginx.org/" }
+]
 minimal_blog_rtl = false
