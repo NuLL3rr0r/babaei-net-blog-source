@@ -17,6 +17,7 @@ rss_limit = 16
 [extra]
 minimal_blog_author = "Mohammad S. Babaei"
 minimal_blog_avatar = "images/mohammad-s-babaei.png"
+minimal_blog_avatar_shape = "dodecagon"
 minimal_blog_avatar_thumbnail = "images/mohammad-s-babaei_thumbnail.png"
 minimal_blog_excerpt_link = "Read more..."
 minimal_blog_copyright_text = "Copyright &copy; 2006 - 2018 Mohammad S. Babaei. All Rights Reserved."
