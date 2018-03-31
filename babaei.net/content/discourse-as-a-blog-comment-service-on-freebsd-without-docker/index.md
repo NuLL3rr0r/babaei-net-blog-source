@@ -16,7 +16,7 @@ __Update 4 [2016/10/06]:__ _I decided to get rid of Discourse on this blog for v
 
 <br />
 
-{{ img(src="discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png", href="discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png", description="Figure 1. Discourse Logo", width=1000, height=293) }}
+{{ img(src="/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png", href="/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png", description="Figure 1. Discourse Logo", width=1000, height=293) }}
 
 Well, when it comes to blog comment hosting services for static blogs, you will have a plethora of options such as [SolidOpinion](http://solidopinion.com/), [Disqus](https://disqus.com/), [Livefyre](http://web.livefyre.com/), Google+ or Facebook comments, and many more. Unfortunately, such services has never been an option for me and I resisted them like forever. Yes, I've got one million reasons to believe and do so which demands another post of its own. So, I'll avoid that argument for now.
 
