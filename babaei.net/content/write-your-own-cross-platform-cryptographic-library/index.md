@@ -28,11 +28,11 @@ Please keep in mind that this is a simple class, which serves a learning porpuse
 
 **4.** Our __Crypto__ class has 3 simple static functions, and the return type for all of them is Boolean.
 
-{% codeblock lang:cpp %}
+```cpp
 static bool Encrypt(const std::string &plainText, std::string &out_encodedText, std::string &out_error);
 static bool Decrypt(const std::string &cipherText, std::string &out_recoveredText, std::string &out_error);
 static bool GenerateHash(const std::string &text, std::string &out_digest, std::string &out_error);
-{% endcodeblock %}
+```
 
 If something goes wrong, the returned value should be __false__. Then you may find the __out_error__ variable useful which you've already passed to the function. You'll find the reason for failure by looking at this variable. Of course we could've simply thrown an exception, but in my opinion, in this case it doesn't make sense.
 
@@ -40,7 +40,7 @@ The __Encrypt__ and __Decrypt__ functions are using __AES (Advanced Encryption S
 
 This is the full example of what we've discussed so far:
 
-{% codeblock main.cpp lang:cpp %}
+{% codeblock(file="main.cpp", lang=cpp) %}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -126,11 +126,11 @@ int main()
 
     return 0;
 }
-{% endcodeblock %}
+{% end %}
 
 And this is the identical output of running the above program:
 
-<pre>
+```
 Original :  The quick brown fox jumps over the lazy dog.
 AES      :  A5EC91437CB6E857E08F1875CDF89A2AAD7D9F4B4A8FCFC6E163C6FD29417D30ED627C25E14D34BE7D47D819F11AE88D
 
@@ -141,7 +141,7 @@ Original :  The quick brown fox jumps over the lazy dog.
 SHA-1    :  408D94384216F890FF7A0C3528E8BED1E0B01621
 
 Press enter to exit, please.
-</pre>
+```
 
 
 ### Building and Running on FreeBSD / *nix ###
@@ -335,7 +335,7 @@ $ cmake ../
 
 If it all goes well, you'll see something like this:
 
-<pre>
+```
 -- The C compiler identification is GNU 4.6.4
 -- The CXX compiler identification is GNU 4.6.4
 -- Check for working C compiler: /usr/local/bin/gcc46
@@ -352,7 +352,7 @@ If it all goes well, you'll see something like this:
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/babaei/Desktop/crypto/build
-</pre>
+```
 
 **3.** To start the build process, enter the following command:
 
@@ -432,7 +432,7 @@ As for __Qt Creator + VC++__ (previous section), I suppose you have the dependen
 
 3. The build settings that I've changed for the project to build properly, are these (Right-click on the project name in the Solution Explorer window, and then from the opened context-menu select Properties):
 
-<pre>
+```
 Debug:
     Configuration Properties > C/C++ > General > $(ProjectDir)\win_deps\include
     Configuration Properties > C/C++ > Preprocessor > Runtime Library > WIN32_LEAN_AND_MEAN
@@ -446,7 +446,7 @@ Release:
     Configuration Properties > C/C++ > Code Generation > Runtime Library > Multi-threaded (/MT)
     Configuration Properties > Linker > General > Addition Library Directories > $(ProjectDir)\win_deps\lib
     Configuration Properties > C/C++ > Additional Dependecies > cryptlib.lib
-</pre>
+```
 
 
 <br/>

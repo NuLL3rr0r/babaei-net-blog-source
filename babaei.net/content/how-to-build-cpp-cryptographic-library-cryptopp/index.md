@@ -38,24 +38,24 @@ For the first time, the AVX FPU extension kernel support appeared in FreeBSD 9.1
 
 **1.** I prefer to install Crypto++ from FreeBSD ports. So:
 
-{% codeblock lang:sh %}
+```sh
 $ cd /usr/ports/security/cryptopp/
 $ make config
-{% endcodeblock %}
+```
 
 I usually build Crypto++ with these options:
 
-<pre>
+```
 [ ] DEBUG    Install debug symbols
 [ ] DOCS     Build and/or install documentation
 [*] GCC46    Build with GCC 4.6+
 [*] STATIC   Build static version only (no shared libs)
 [*] THREADS  Threading support
-</pre>
+```
 
 If the bug affects you (FreeBSD < 9.1+, having older versions or snapshots of GCC 4.4+ enabled as default compiler), first you should uncheck __GCC46__ option, then disable the [newer version of GCC](http://www.freebsd.org/doc/en/articles/custom-gcc/article.html) for Crypto++ in your __/etc/make.conf__ beforehand.
 
-{% codeblock %}
+```make
 .if !empty(.CURDIR:M/usr/ports/*) && exists(/usr/local/bin/gcc46)
 .if empty(.CURDIR:M/usr/ports/security/cryptopp*)
 CC=gcc46 
@@ -63,13 +63,13 @@ CXX=g++46
 CPP=cpp46
 .endif
 .endif
-{% endcodeblock %}
+```
 
 **2.** Build and install Crypto++ by issuing the following command:
 
-{% codeblock lang:sh %}
+```sh
 $ make install clean
-{% endcodeblock %}
+```
 
 _Note: If you are affected by the above bug, you should pay attention to the g++ options which are applied by Ports at this step. You should use the same options to build your own code with Crypto++._
 
@@ -86,13 +86,15 @@ Also, there is [an easier solution which I found on Qt Centre forums that relies
 **1.** Open an instance of __cmd.exe__ and navigate to the extracted source directory of Crypto++ (e.g. cryptopp561).
 
 **2.** Then run the following commands:
-{% codeblock lang:sh %}
-erase /f GNUmakefile
-qmake -project
-{% endcodeblock %}
+
+```cmd
+> erase /f GNUmakefile
+> qmake -project
+```
 
 **3.** Now there should be a file named __CURRENT_DIRECTORY.pro__ (e.g. cryptopp561.pro) which is generate by the previous qmake command. Open the generated __.pro__ file in your favorite editor and make the following changes:
-{% codeblock lang:sh %}
+
+```makefile
 #TEMPLATE = app
 #TARGET = cryptopp561
 #INCLUDEPATH += .
@@ -102,23 +104,25 @@ TARGET = cryptopp
 INCLUDEPATH += .
 CONFIG -= qt
 LIBS += -lws2_32
-{% endcodeblock %}
+```
 
 **4.** Open __fipstest.cpp__ and replace every __'OutputDebugString'__ with __'OutputDebugStringA'__.
 
 **5.** Finally, generate the proper makefiles and build the library by using the following commands:
-{% codeblock lang:sh %}
-qmake
-mingw32-make all -j<NUMBER_OF_YOUR_CPU_CORES + 1>
-{% endcodeblock %}
+
+```cmd
+> qmake
+> mingw32-make all -j<NUMBER_OF_YOUR_CPU_CORES + 1>
+```
 
 **6.** Copy the following __.dll (shared)__ and __.a (static)__ files, generated for both debug and release variants to __YOUR_COMPILER_LINK_PATH__.
-<pre>
+
+```
 CRYPTOPP_SOURCE_DIRECTORY/debug/cryptopp.dll
 CRYPTOPP_SOURCE_DIRECTORY/debug/libcryptopp.a
 CRYPTOPP_SOURCE_DIRECTORY/release/cryptopp.dll
 CRYPTOPP_SOURCE_DIRECTORY/release/libcryptopp.a
-</pre>
+```
 
 **7.** Copy __CRYPTOPP_SOURCE_DIRECTORY/*.h__ files to __YOUR_COMPILER_INCLUDE_PATH/cryptopp/__ in order to be able to include Crypto++ headers from your own code.
 
@@ -148,7 +152,7 @@ All modules passed to a given invocation of the linker must have been compiled w
 
 **3.** There are 4 projects in the solution, and the only one that we need to build static version of Crypto++ is the __cryptlib__ project. So, right click on the __cryptlib__ project and ensure that you have the following settings for the project in both Debug and Release build modes:
 
-<pre>
+```
 Debug:
     Configuration Properties > General > Target Name > $(ProjectName)_d
     Configuration Properties > General > Configuration Type > Static library (.lib)
@@ -160,11 +164,11 @@ Release:
     Configuration Properties > General > Configuration Type > Static library (.lib)
     Configuration Properties > C/C++ > Code Generation > Runtime Library > Multi-threaded (/MT)
     Configuration Properties > C/C++ > Output Files > Program Database File Name > $(OutDir)$(ProjectName).pdb
-</pre>
+```
 
 **4.** Now build the __cryptlib__ project in both Debug and Release build modes. If everything goes smoothly, grab these files and copy them to your lib folder:
 
-<pre>
+```
 Debug:
     {Crypto++ Source Directory}\Win32\Output\Debug\cryptlib_d.lib
     {Crypto++ Source Directory}\Win32\Output\Debug\cryptlib_d.pdb
@@ -172,13 +176,13 @@ Debug:
 Release:
     {Crypto++ Source Directory}\Win32\Output\Release\cryptlib.lib
     {Crypto++ Source Directory}\Win32\Output\Release\cryptlib.pdb
-</pre>
+```
 
 **5.** Last but not least, copy all the __*.h__ files from the extracted Crypto++ source directory to __{your own include directory}/cryptopp__.
 
 _Note: When you're using static builds with VC++ on Windows you should always include __Windows.h__ before Crypto++ headers, or else, you'll have difficulties._
 
-{% codeblock lang:cpp %}
+```cpp
 #if defined(WIN32)
 #include <windows.h>
 #endif
@@ -189,7 +193,7 @@ _Note: When you're using static builds with VC++ on Windows you should always in
 #include <cryptopp/filters.h>
 #include <cryptopp/hex.h>
 #include <cryptopp/sha.h>
-{% endcodeblock %}
+```
 
 
 <br />

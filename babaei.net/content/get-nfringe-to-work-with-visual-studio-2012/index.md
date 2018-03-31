@@ -12,29 +12,28 @@ The only prerequisite that you need is your previous VS2010 + nFringe installati
 
 **1.** Open Windows Command Prompt (cmd.exe) and run the following commands:
 
-<pre>
-xcopy /E "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Pixel Mine" "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\"
-
-xcopy /E "C:\Program Files (x86)\Microsoft Visual Studio 10.0\UnrealScript" "C:\Program Files (x86)\Microsoft Visual Studio 11.0\"
-</pre>
+```cmd
+> xcopy /E "C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Extensions\Pixel Mine" "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\"
+> xcopy /E "C:\Program Files (x86)\Microsoft Visual Studio 10.0\UnrealScript" "C:\Program Files (x86)\Microsoft Visual Studio 11.0\"
+```
 
 **2.** Open up **extension.vsixmanifest** in Notepad or your favorite editor and change **VisualStudio Version** to **11** (Note: In the following path change **1.1** with your nfringe version, e.g. 1.2).
 
-<pre>
-notepad "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Pixel Mine nFringe (UnrealScript)\1.1\extension.vsixmanifest"
-</pre>
+```cmd
+> notepad "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Pixel Mine nFringe (UnrealScript)\1.1\extension.vsixmanifest"
+```
 
-{% codeblock lang:xml %}
+```xml
     <InstalledByMsi>true</InstalledByMsi>
     <SupportedProducts>
       <VisualStudio Version="11.0">
-{% endcodeblock %}
+```
 
 **3.** Run the following command to register nFringe extension in Visual Studio 2012:
 
-<pre>
-"C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe" /setup
-</pre>
+```cmd
+> "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\devenv.exe" /setup
+```
 
 **4.** Finally, you need to re-validate your nFringe license in VS2012.
 

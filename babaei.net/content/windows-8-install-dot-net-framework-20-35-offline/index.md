@@ -10,9 +10,9 @@ Well, I've failed to install .NET Framework 2.0/3.5 in Windows 8 using Program a
 
 In Windows Command Prompt (cmd.exe) or Run dialog, enter the following command and hit Enter:
 
-<pre>
-Dism /online /enable-feature /featurename:NetFx3 /All /Source:x:\sources\sxs /LimitAccess
-</pre>
+```cmd
+> Dism /online /enable-feature /featurename:NetFx3 /All /Source:x:\sources\sxs /LimitAccess
+```
 
 Replace **x:** with path of your Windows 8 installation DVD.
 
