@@ -8,7 +8,7 @@ tags = [ "Console", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "nano", "Term
 
 [GNU nano](http://www.nano-editor.org/) is my favorite text editor while I'm on console. Although, it doesn't offer syntax highlighting by default, it comes with a decent set of syntax highlighting files. Usually, these files are exist in __/usr/local/share/nano__ or __/usr/share/nano__, depending on your distro's preference. You can enable syntax highlighting for your prefered language(s) by including related file(s) with __.nanorc__ extension in your __~/.nanorc__ file.
 
-{% codeblock ~/.nanorc - FreeBSD lang:sh %}
+{% codeblock(description="~/.nanorc - FreeBSD", lang="sh") %}
 include "/usr/local/share/nano/asm.nanorc"
 include "/usr/local/share/nano/awk.nanorc"
 include "/usr/local/share/nano/c.nanorc"
@@ -37,9 +37,9 @@ include "/usr/local/share/nano/sh.nanorc"
 include "/usr/local/share/nano/tcl.nanorc"
 include "/usr/local/share/nano/tex.nanorc"
 include "/usr/local/share/nano/xml.nanorc"
-{% endcodeblock %}
+{% end %}
 
-{% codeblock ~/.nanorc - Funtoo or Gentoo lang:sh %}
+{% codeblock(description="~/.nanorc - Funtoo or Gentoo", lang="sh") %}
 include "/usr/share/nano/asm.nanorc"
 include "/usr/share/nano/awk.nanorc"
 include "/usr/share/nano/c.nanorc"
@@ -68,13 +68,13 @@ include "/usr/share/nano/sh.nanorc"
 include "/usr/share/nano/tcl.nanorc"
 include "/usr/share/nano/tex.nanorc"
 include "/usr/share/nano/xml.nanorc"
-{% endcodeblock %}
+{% end %}
 
 Note: If the file doesn't exist, you should create it first:
 
-{% codeblock lang:sh %}
+```sh
 $ touch ~/.nanorc
-{% endcodeblock %}
+```
 
 <!-- more -->
 
@@ -82,13 +82,13 @@ $ touch ~/.nanorc
 
 **UPDATE:** I usually get the list of all <code>.nanorc</code> files on my system and write them to my <code>~/.nanorc</code> using the following one liner set of commands. It should work on both <code>bash</code> and <code>csh</code>. Moreover, [it disables text-wrapping](/blog/2013/02/17/nano-do-not-wrap-text/) which you can enable by cutting it off from the begging of it. _Just be warned it generates a new <code>~/.nanorc</code> file for the current user and wipes out all of your old settings._
 
-{% codeblock *BSD lang:sh %}
+{% codeblock(description="*BSD", lang="sh") %}
 $ printf 'set nowrap\n\n' > ~/.nanorc && find /usr/local/share/nano/ -iname '*.nanorc' | xargs printf 'include "%s"\n' >> ~/.nanorc && cat ~/.nanorc
-{% endcodeblock %}
+{% end %}
 
-{% codeblock GNU/Linux lang:sh %}
+{% codeblock(description="GNU/Linux", lang="sh") %}
 $ printf 'set nowrap\n\n' > ~/.nanorc && find /usr/share/nano/ -iname '*.nanorc' | xargs printf 'include "%s"\n' >> ~/.nanorc && cat ~/.nanorc
-{% endcodeblock %}
+{% end %}
 
 <br/>
 

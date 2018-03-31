@@ -40,7 +40,7 @@ The __Encrypt__ and __Decrypt__ functions are using __AES (Advanced Encryption S
 
 This is the full example of what we've discussed so far:
 
-{% codeblock(file="main.cpp", lang="cpp") %}
+{% codeblock(description="main.cpp", lang="cpp") %}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -148,7 +148,7 @@ Press enter to exit, please.
 
 I suppose you've already built the library the way that I've described for FreeBSD. So, I wrote a small CMake script which consists of 3 files, to take care of building the release version of the example application and our Crypto library:
 
-{% codeblock(file="_src.cmake", lang="cmake") %}
+{% codeblock(description="_src.cmake", lang="cmake") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -179,7 +179,7 @@ SET ( CRYPTOTEST_SOURCE_FILES
 )
 {% end %}
 
-{% codeblock(file="dep-config.cmake", lang="cmake") %}
+{% codeblock(description="dep-config.cmake", lang="cmake") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -233,7 +233,7 @@ ELSE ( CRYPTOPP_FOUND )
 ENDIF ( CRYPTOPP_FOUND )
 {% end %}
 
-{% codeblock(file="CMakeLists.txt", lang="cmake") %}
+{% codeblock(description="CMakeLists.txt", lang="cmake") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -369,7 +369,7 @@ I suppose you've already built the static version of Crypto++, the way that I've
 
 **1.** The only thing along with __main.cpp__ (Exmple application), __crypto.hpp__ and __crypto.cpp__ that you need, in order to build the project is a __qmake__ __.pro__ file with the correct settings:
 
-{% codeblock(file="CryptoTest.pro", lang="make") %}
+{% codeblock(description="CryptoTest.pro", lang="make") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -464,7 +464,7 @@ Release:
 
 [Check out the source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
-{% codeblock(file="crypto.hpp", lang="cpp") %}
+{% codeblock(description="crypto.hpp", lang="cpp") %}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -517,7 +517,7 @@ public:
 #endif /* CRYPTO_HPP */
 {% end %}
 
-{% codeblock(file="crypto.cpp", lang="cpp") %}
+{% codeblock(description="crypto.cpp", lang="cpp") %}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
