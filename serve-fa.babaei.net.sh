@@ -1,3 +1,3 @@
 #!/bin/sh
 cd ./fa.babaei.net/ \
-    && gutenberg serve --interface 0.0.0.0 --port 1002
+    && hugo server --bind 0.0.0.0 --port 1001 --buildDrafts
