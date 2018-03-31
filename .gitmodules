@@ -1,6 +1,8 @@
 [submodule "babaei.net/themes/minimal-blog"]
 	path = babaei.net/themes/minimal-blog
 	url = git@github.com:NuLL3rr0r/gutenberg-theme-minimal-blog.git
+	branch = master
 [submodule "fa.babaei.net/themes/minimal-blog"]
 	path = fa.babaei.net/themes/minimal-blog
 	url = git@github.com:NuLL3rr0r/gutenberg-theme-minimal-blog.git
+	branch = master
