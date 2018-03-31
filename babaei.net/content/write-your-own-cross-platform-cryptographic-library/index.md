@@ -40,7 +40,7 @@ The __Encrypt__ and __Decrypt__ functions are using __AES (Advanced Encryption S
 
 This is the full example of what we've discussed so far:
 
-{% codeblock(file="main.cpp", lang=cpp) %}
+{% codeblock(file="main.cpp", lang="cpp") %}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -148,7 +148,7 @@ Press enter to exit, please.
 
 I suppose you've already built the library the way that I've described for FreeBSD. So, I wrote a small CMake script which consists of 3 files, to take care of building the release version of the example application and our Crypto library:
 
-{% codeblock _src.cmake lang:cmake %}
+{% codeblock(file="_src.cmake", lang="cmake") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -177,9 +177,9 @@ SET ( CRYPTOTEST_SOURCE_FILES
     main.cpp
     crypto.cpp
 )
-{% endcodeblock %}
+{% end %}
 
-{% codeblock dep-config.cmake lang:cmake %}
+{% codeblock(file="dep-config.cmake", lang="cmake") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -231,9 +231,9 @@ ELSE ( CRYPTOPP_FOUND )
         MESSAGE ( FATAL_ERROR "Could not find Crypto++" )
     ENDIF ( CRYPTOPP_FIND_REQUIRED )
 ENDIF ( CRYPTOPP_FOUND )
-{% endcodeblock %}
+{% end %}
 
-{% codeblock CMakeLists.txt lang:cmake %}
+{% codeblock(file="CMakeLists.txt", lang="cmake") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -312,26 +312,26 @@ IF ( DEP_FOUND )
     )
     
 ENDIF ( DEP_FOUND )
-{% endcodeblock %}
+{% end %}
 
 
 **1.** To build the project change the current path to the source code directory that you've just downloaded, then run the following command:
 
-{% codeblock lang:sh %}
+```sh
 $ mkdir build && cd build
-{% endcodeblock %}
+```
 
 **2.** If you've built Crypto++ with GCC 4.4+ (e.g. 4.6), then issue something like the following command:
 
-{% codeblock lang:sh %}
+```sh
 $ cmake -DCMAKE_C_COMPILER=/usr/local/bin/gcc46 -DCMAKE_CXX_COMPILER=/usr/local/bin/g++46 ../
-{% endcodeblock %}
+```
 
 Otherwise:
 
-{% codeblock lang:sh %}
+```sh
 $ cmake ../
-{% endcodeblock %}
+```
 
 If it all goes well, you'll see something like this:
 
@@ -356,9 +356,9 @@ If it all goes well, you'll see something like this:
 
 **3.** To start the build process, enter the following command:
 
-{% codeblock lang:sh %}
+```sh
 $ make install
-{% endcodeblock %}
+```
 
 **4.** Now you should have a copy of __CryptoTest__ executable in the __release__ directory of your source directory. There's also another one in the current directory (temporary __build__ directory) which is identical to the other one in the __release__ directory.
 
@@ -369,7 +369,7 @@ I suppose you've already built the static version of Crypto++, the way that I've
 
 **1.** The only thing along with __main.cpp__ (Exmple application), __crypto.hpp__ and __crypto.cpp__ that you need, in order to build the project is a __qmake__ __.pro__ file with the correct settings:
 
-{% codeblock CryptoTest.pro lang:sh %}
+{% codeblock(file="CryptoTest.pro", lang="make") %}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -417,7 +417,7 @@ SOURCES += main.cpp\
         crypto.cpp
 
 HEADERS  += crypto.hpp
-{% endcodeblock %}
+{% end %}
 
 **2.** Open up the CryptoTest.pro file in Qt Creator, then build and run both debug/release versions of your application. Peace of cake! Isn't it?
 
@@ -464,7 +464,7 @@ Release:
 
 [Check out the source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
-{% codeblock crypto.hpp lang:cpp %}
+{% codeblock(file="crypto.hpp", lang="cpp") %}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -515,9 +515,9 @@ public:
 
 
 #endif /* CRYPTO_HPP */
-{% endcodeblock %}
+{% end %}
 
-{% codeblock crypto.cpp lang:cpp %}
+{% codeblock(file="crypto.cpp", lang="cpp") %}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -675,5 +675,4 @@ bool Crypto::GenerateHash(const string &text, string &out_digest, string &out_er
 
     return false;
 }
-{% endcodeblock %}
-
+{% end %}
