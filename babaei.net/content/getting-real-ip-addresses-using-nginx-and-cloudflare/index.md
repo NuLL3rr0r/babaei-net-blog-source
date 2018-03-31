@@ -24,22 +24,22 @@ Well, to achieve over goal we have to first build __Nginx__ with [HttpRealipModu
 
 In fact, building and installing __Nginx__ from [Ports](http://www.freebsd.org/ports/) is very easy and straightforward. Just issue the following commands:
 
-{% codeblock lang:sh %}
+```sh
 $ cd /usr/ports/www/nginx
 $ make config
-{% endcodeblock %}
+```
 
 You have to find and choose __HTTP_REALIP__ by hitting __Spacebar__ on your keyboard in the opening configuration window:
 
-<pre>
+```
 [*] HTTP_REALIP           Enable http_realip module
-</pre>
+```
 
 By issuing the following command __Nginx__ will be built and installed by __Ports__.
 
-{% codeblock lang:sh %}
+```sh
 $ make install clean
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -48,25 +48,25 @@ $ make install clean
 
 To build and install __Nginx__ with __RealIP__ support from __Portage__ on __Gentoo__ or __Funtoo__ we have to first touch the __make.conf__ file with the following content. Just add the __realip__ keyword to __NGINX_MODULES_HTTP__:
 
-{% codeblock /etc/make.conf lang:sh %}
+{% codeblock(description="/etc/make.conf") %}
 # nginx
 NGINX_MODULES_HTTP="some other modules ... realip"
-{% endcodeblock %}
+{% end %}
 
 Start the building and installation process by using the __emerge__ command:
 
-{% codeblock lang:sh %}
+```sh
 $ emerge -avt www-servers/nginx
-{% endcodeblock %}
+```
 
 You should see the __realip__ keyword without "-" sign in the __NGINX_MODULES_HTTP__ on the __emerge__ command output:
 
-<pre>
+```
 Calculating dependencies... done!
 [ebuild   R    ] www-servers/nginx-1.x.x  USE="some use flags -some -disbaled -use -flags" NGIN
 X_MODULES_HTTP="some other modules ... realip ... -some -disbaled -modules" NGINX_MODULES_MAIL=
 "some modules -some -disbaled -modules"
-</pre>
+```
 
 <br/>
 
@@ -75,14 +75,14 @@ X_MODULES_HTTP="some other modules ... realip ... -some -disbaled -modules" NGIN
 
 By following the instructions given below, it is easy to build __Nginx__ from source with __RealIP__ module support on any other distro. Because the __RealIP__ module won't build by default, you need to enable it with the configuration option __with-http_realip_module__.
 
-{% codeblock lang:sh %}
+```sh
 $ wget http://nginx.org/download/nginx-1.x.x.tar.gz
 $ tar xvzf nginx-1.x.x.tar.gz
 $ cd nginx-1.x.x
 $ ./configure --with-http_realip_module
 $ make
 $ make install
-{% endcodeblock %}
+```
 
 <br/>
 
@@ -95,13 +95,13 @@ You need to first fetch __CloudFlare__'s [IPv4](https://www.cloudflare.com/ips-v
 
 Let's say we've chosen __/usr/local/www/nginx__ as __Ngix__ default host root. So, we put each vhost in its own directory at __/usr/local/www__. And, also put the vhost configurations inside the **/usr/local/www/_vhosts** directory. In addition to that, we create an **_include** directory at **/usr/local/www** for sharing CloudFlare settings among our vhosts.
 
-{% codeblock lang:sh %}
+```sh
 mkdir -p /usr/local/www/_include/
-{% endcodeblock %}
+```
 
 Anyway, our CloudFlare configuration file at **/usr/local/www/_include/cloudflare** looks like this:
 
-{% codeblock /usr/local/www/_include/cloudflare lang:sh %}
+{% codeblock(description="/usr/local/www/_include/cloudflare") %}
 # CloudFlare
 # https://www.cloudflare.com/ips-v4
 # https://www.cloudflare.com/ips-v6
@@ -124,11 +124,11 @@ set_real_ip_from 2803:f800::/32;
 set_real_ip_from 2405:b500::/32;
 set_real_ip_from 2405:8100::/32;
 real_ip_header CF-Connecting-IP;
-{% endcodeblock %}
+{% end %}
 
 Finally, you can enable __RealIP__ for each vhost by including the **/usr/local/www/_include/cloudflare** file:
 
-{% codeblock /usr/local/www/_vhosts/example.com lang:sh %}
+{% codeblock(description="/usr/local/www/_vhosts/example.com") %}
 server {
     server_name  example.com;
     rewrite ^(.*) http://www.example.com$1 permanent;
@@ -156,7 +156,7 @@ server {
     # CloudFlare
     include /usr/local/www/_include/cloudflare;
 }
-{% endcodeblock %}
+{% end %}
 
 <br/>
 
@@ -165,13 +165,13 @@ server {
 
 You have to first create the **/usr/local/www/_cron** directory:
 
-{% codeblock lang:sh %}
+```sh
 $ mkdir -p /usr/local/www/_cron
-{% endcodeblock %}
+```
 
 Then, put the __cloudflare-ip-ranges-updater.sh__ file with the provided contents inside the **/usr/local/www/_cron** directory. The major prerequisites for this script to run correctly are [AWK](http://cm.bell-labs.com/cm/cs/awkbook/) and [FreeBSD fetch](<http://www.freebsd.org/cgi/man.cgi?fetch(1)>) or [GNU Wget](http://www.gnu.org/software/wget/). Also, you may need to change the __shebang__ line or script variables such as **CLOUDFLARE_IP_RANGES_FILE_PATH**, **WWW_GROUP** and **WWW_USER** according to your OS requirements.
 
-{% codeblock /usr/local/www/_cron/cloudflare-ip-ranges-updater.sh lang:sh %}
+{% codeblock(description="/usr/local/www/_cron/cloudflare-ip-ranges-updater.sh", lang="sh") %}
 #!/bin/sh
 
 #  (The MIT License)
@@ -227,24 +227,24 @@ chown $WWW_USER:$WWW_GROUP $CLOUDFLARE_IP_RANGES_FILE_PATH
 
 rm -rf $CLOUDFLARE_IPSV4_LOCAL_FILE
 rm -rf $CLOUDFLARE_IPSV6_LOCAL_FILE
-{% endcodeblock %}
+{% end %}
 
 After that, set the script file's permissions to executable by all users:
 
-{% codeblock lang:sh %}
+```sh
 $ chmod a+x /usr/local/www/_cron/cloudflare-ip-ranges-updater.sh
-{% endcodeblock %}
+```
 
 Now, you may want to test the script by issuing the following set of commands:
 
-{% codeblock lang:sh %}
+```sh
 $ /usr/local/www/_cron/cloudflare-ip-ranges-updater.sh
 $ cat /usr/local/www/_include/cloudflare
-{% endcodeblock %}
+```
 
 The output must be something like this:
 
-<pre>
+```
 # CloudFlare IP Ranges
 # Generated at Sat Mar  9 00:15:58 UTC 2013 by /usr/local/www/_cron/cloudflare-ip-ranges-updater.sh
 
@@ -267,31 +267,31 @@ set_real_ip_from 2803:f800::/32;
 set_real_ip_from 2405:b500::/32;
 set_real_ip_from 2405:8100::/32;
 real_ip_header CF-Connecting-IP;
-</pre>
+```
 
 If you want to update the CloudFlare IP Ranges every 24:00 hours as root user you should add the following at the end of your system's crontab file:
 
-{% codeblock /etc/crontab lang:sh %}
+{% codeblock(description="/etc/crontab") %}
 # CloudFlare IP Ranges Automatic Update
 # Every 24:00 hours at 04:00am UTC
 00      04      *       *       *       root    /usr/local/www/_cron/cloudflare-ip-ranges-updater.sh >/dev/null 2>&1
-{% endcodeblock %}
+{% end %}
 
 It's also possible to set time intervals weekly or several times a month, a day or even hours:
 
-{% codeblock /etc/crontab other time interval samples lang:sh %}
+{% codeblock(description=" /etc/crontab other time interval samples") %}
 # Every 30 minutes
 */30     *       *       *       *       root    /usr/local/www/_cron/cloudflare-ip-ranges-updater.sh >/dev/null 2>&1
 # or
 # Every 7 days at 02:30am UTC
 30      02      1,8,15,22,28    *       root    /usr/local/www/_cron/cloudflare-ip-ranges-updater.sh >/dev/null 2>&1
-{% endcodeblock %}
+{% end %}
 
 Finally, restart the __cron__ service:
 
-{% codeblock lang:sh %}
+```sh
 $ service cron restart
-{% endcodeblock %}
+```
 
 <br />
 
@@ -305,4 +305,3 @@ Thanks to [digitaltoast](https://github.com/digitaltoast) for informing me about
 [Check out the source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2013-03-09-getting-real-ip-addresses-using-nginx-and-cloudflare)
 
 [Check out the source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-03-09-getting-real-ip-addresses-using-nginx-and-cloudflare)
-
