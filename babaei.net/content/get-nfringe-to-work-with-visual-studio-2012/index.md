@@ -40,4 +40,3 @@ The only prerequisite that you need is your previous VS2010 + nFringe installati
 Happy coding ;)
 
 <!-- more -->
-

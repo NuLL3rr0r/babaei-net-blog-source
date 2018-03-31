@@ -217,4 +217,3 @@ You can't! You cannot build the Crypto++ DLL and claim it's FIPS compliant. The 
 ### Related Articles ###
 
 [Write your own cross-platform cryptographic library](/blog/2013/02/15/write-your-own-cross-platform-cryptographic-library/)
-

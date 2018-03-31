@@ -96,4 +96,3 @@ $ printf 'set nowrap\n\n' > ~/.nanorc && find /usr/share/nano/ -iname '*.nanorc'
 
 [nano, Do not wrap text](/blog/2013/02/17/nano-do-not-wrap-text/)  
 [Colors Talk: A Colorful Terminal / Console](/blog/2013/03/03/colors-talk-a-colorful-terminal-console/)
-

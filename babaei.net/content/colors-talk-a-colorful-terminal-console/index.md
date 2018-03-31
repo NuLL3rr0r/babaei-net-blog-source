@@ -311,4 +311,3 @@ $ chsh -s /usr/local/bin/bash root
 
 [nano, Do not wrap text](/blog/2013/02/17/nano-do-not-wrap-text/)  
 [nano, Syntax Highlighting](/blog/2013/02/17/nano-syntax-highlighting/)
-
