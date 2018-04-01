@@ -1,9 +1,8 @@
 +++
-title = "How to build C++ cryptographic library, Crypto++"
+title = "How to Build C++ Cryptographic Library, Crypto++"
 slug = "how-to-build-cpp-cryptographic-library-cryptopp"
 date = 2013-02-15T03:50:00Z
 tags = [ "C", "C++", "Clang", "Cross-platform", "Crypto++", "Cryptography", "FreeBSD", "G++", "GCC", "GNU", "iOS", "Linux", "Mac OS X", "MSVC", "Security", "Unix", "VC++", "Visual C++", "Visual Studio", "Windows" ]
-#template = "post.html"
 +++
 
 [Crypto++](http://www.cryptopp.com/) is an awesome free and open source C++ class library of cryptographic algorithms and schemes which fully supports 32-bit and 64-bit architectures for many major operating systems, including FreeBSD, Linux, Solaris, Windows, Mac OS X and iOS. Currently, Crypto++ officially supports the following compilers:
@@ -18,7 +17,7 @@ The latest version at the time of this writing is 5.6.1.
 
 In spite of the power that Crypto++ offers, building and using it can be a little bit tricky. In the following we will describe the process of building Crypto++ on both FreeBSD and Windows using the GCC, MinGW and VC++ compilers.
 
-<!-- more -->
+<!--more-->
 
 [How do I build Crypto++ on FreeBSD?](#CryptoFreeBSD)  
 [How do I build Crypto++ using MinGW on Microsoft Windows?](#CryptoMinGW)  
@@ -38,7 +37,7 @@ For the first time, the AVX FPU extension kernel support appeared in FreeBSD 9.1
 
 **1.** I prefer to install Crypto++ from FreeBSD ports. So:
 
-```sh
+```
 $ cd /usr/ports/security/cryptopp/
 $ make config
 ```
@@ -55,7 +54,7 @@ I usually build Crypto++ with these options:
 
 If the bug affects you (FreeBSD < 9.1+, having older versions or snapshots of GCC 4.4+ enabled as default compiler), first you should uncheck __GCC46__ option, then disable the [newer version of GCC](http://www.freebsd.org/doc/en/articles/custom-gcc/article.html) for Crypto++ in your __/etc/make.conf__ beforehand.
 
-```make
+{{< codeblock lang="make" title="/etc/make.conf" >}}
 .if !empty(.CURDIR:M/usr/ports/*) && exists(/usr/local/bin/gcc46)
 .if empty(.CURDIR:M/usr/ports/security/cryptopp*)
 CC=gcc46 
@@ -63,11 +62,11 @@ CXX=g++46
 CPP=cpp46
 .endif
 .endif
-```
+{{< /codeblock >}}
 
 **2.** Build and install Crypto++ by issuing the following command:
 
-```sh
+```
 $ make install clean
 ```
 
@@ -87,14 +86,14 @@ Also, there is [an easier solution which I found on Qt Centre forums that relies
 
 **2.** Then run the following commands:
 
-```cmd
+```
 > erase /f GNUmakefile
 > qmake -project
 ```
 
 **3.** Now there should be a file named __CURRENT_DIRECTORY.pro__ (e.g. cryptopp561.pro) which is generate by the previous qmake command. Open the generated __.pro__ file in your favorite editor and make the following changes:
 
-```makefile
+{{< codeblock lang="make" title="/etc/make.conf" >}}
 #TEMPLATE = app
 #TARGET = cryptopp561
 #INCLUDEPATH += .
@@ -104,13 +103,13 @@ TARGET = cryptopp
 INCLUDEPATH += .
 CONFIG -= qt
 LIBS += -lws2_32
-```
+{{< /codeblock >}}
 
 **4.** Open __fipstest.cpp__ and replace every __'OutputDebugString'__ with __'OutputDebugStringA'__.
 
 **5.** Finally, generate the proper makefiles and build the library by using the following commands:
 
-```cmd
+```
 > qmake
 > mingw32-make all -j<NUMBER_OF_YOUR_CPU_CORES + 1>
 ```
@@ -182,7 +181,7 @@ Release:
 
 _Note: When you're using static builds with VC++ on Windows you should always include __Windows.h__ before Crypto++ headers, or else, you'll have difficulties._
 
-```cpp
+{{< highlight cpp >}}
 #if defined(WIN32)
 #include <windows.h>
 #endif
@@ -193,7 +192,7 @@ _Note: When you're using static builds with VC++ on Windows you should always in
 #include <cryptopp/filters.h>
 #include <cryptopp/hex.h>
 #include <cryptopp/sha.h>
-```
+{{< /highlight >}}
 
 
 <br />
@@ -216,4 +215,4 @@ You can't! You cannot build the Crypto++ DLL and claim it's FIPS compliant. The 
 
 ### Related Articles ###
 
-[Write your own cross-platform cryptographic library](/blog/2013/02/15/write-your-own-cross-platform-cryptographic-library/)
+[Write your own cross-platform cryptographic library](/blog/write-your-own-cross-platform-cryptographic-library/)

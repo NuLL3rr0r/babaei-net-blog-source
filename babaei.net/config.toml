@@ -1,29 +1,101 @@
-base_url = "https://www.babaei.net"
+baseURL = "https://www.babaei.net/"
+languageCode = "en-us"
 title = "Mohammad S. Babaei"
-description = "The blog of Mohammad S. Babaei"
-language_code = "en"
 
-compile_sass = true
-highlight_code = true
-highlight_theme = "gruvbox-dark"
-theme = "minimal-blog"
+theme = "beautifulhugo"
+#uglyurls = "true"
+Paginate = 8
+PaginatePath = "/blog/page"
 
-generate_tags_pages = false
-generate_categories_pages = false
+[permalinks]
+    post = "/blog/:slug/"
 
-generate_rss = true
-rss_limit = 16
+[Params]
+    comments = true
+    commit = "https://github.com/NuLL3rr0r/babaei-net-blog-source/tree/"
+    dateFormat = "January 2, 2006"
+    favicon = ""
+    gcse = ""
+    logo = "img/mohammad-s-babaei.png"
+    piwik = ""
+    readingTime = true
+    rss = true
+    share_img = ""
+    subtitle = "Unreal Engine / C++ Developer"
+    useChroma = true
 
-[extra]
-minimal_blog_author = "Mohammad S. Babaei"
-minimal_blog_avatar = "images/mohammad-s-babaei.png"
-minimal_blog_avatar_shape = "dodecagon"
-minimal_blog_avatar_thumbnail = "images/mohammad-s-babaei_thumbnail.png"
-minimal_blog_excerpt_link = "Read more..."
-minimal_blog_copyright_text = "Copyright &copy; 2006 - 2018 Mohammad S. Babaei. All Rights Reserved."
-minimal_blog_license_text = "All content on this website is licensed under the <a rel=\"license\" href=\"http://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel=\"license\" href=\"http://opensource.org/licenses/MIT\" target=\"_blank\">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for."
-minimal_blog_powered_by = [
-    { title = "FreeBSD", url = "http://freebsd.org/" },
-    { title = "nginx", url = "http://nginx.org/" }
-]
-minimal_blog_rtl = false
+[Author]
+    name = "Mohammad S. Babaei"
+    website = "https://www.babaei.net/"
+#    email = "youremail@domain.com"
+#    facebook = "username"
+#    googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
+    github = "NuLL3rr0r"
+    gitlab = "NuLL3rr0r"
+    twitter = "NuLL3rr0r"
+#    reddit = "username"
+#    linkedin = "username"
+#    xing = "username"
+#    stackoverflow = "users/XXXXXXX/username"
+#    snapchat = "username"
+#    instagram = "username"
+#    youtube = "user/username" # or channel/channelname
+#    soundcloud = "username"
+#    spotify = "username"
+#    bandcamp = "username"
+#    itchio = "username"
+#    vk = "username"
+#    paypal = "username"
+    telegram = "babaei_net"
+
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 2
+
+[[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+[[menu.main]]
+    identifier = "subscribe"
+    name = "Subscribe"
+    weight = 5
+
+[[menu.main]]
+    parent = "subscribe"
+    name = "Subscribe via Email"
+    url = "http://subscribe.babaei.net/?lang=en&subscription=en"
+    weight = 1
+
+[[menu.main]]
+    parent = "subscribe"
+    name = "Subscribe via RSS"
+    url = "/index.xml"
+    weight = 2
+
+[[menu.main]]
+    name = "Email"
+    url = "http://subscribe.babaei.net/?lang=en&contact-form"
+    weight = 6
+
+[[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 7
+
+[[menu.main]]
+    name = "وبلاگ فارسی"
+    url = "https://fa.babaei.net/"
+    weight = 8

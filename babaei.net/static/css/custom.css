@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.codeblock .title {
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 1.1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.1em;
+    color: #151515;
+}
+
+.box figure {
+    margin: 2.0em;
+}
+
+figcaption {
+    margin-top: 0.75em;
+}
+
+figcaption p {
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 1.1em;
+    margin-top: 0.1em;
+    margin-bottom: 2.0em;
+    color: #151515;
+}

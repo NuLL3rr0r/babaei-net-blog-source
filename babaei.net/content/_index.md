@@ -1,5 +1,4 @@
 +++
-paginate_by = 8
-paginate_path = "page"
-sort_by = "date"
 +++
+
+I'm a C++ programmer and Unreal Engine 4 game developer.

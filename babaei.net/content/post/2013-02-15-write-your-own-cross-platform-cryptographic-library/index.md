@@ -1,9 +1,8 @@
 +++
-title = "Write your own cross-platform cryptographic library"
+title = "Write Your Own Cross-Platform Cryptographic Library"
 slug = "write-your-own-cross-platform-cryptographic-library"
 date = 2013-02-15T08:11:00Z
 tags = [ "C", "C++", "Clang", "CMake", "Cross-platform", "Crypto++", "Cryptography", "FreeBSD", "G++", "GCC", "GNU", "iOS", "Linux", "Mac OS X", "MSVC", "QMake", "Qt Creator", "Security", "Unix", "VC++", "Visual C++", "Visual Studio", "Windows" ]
-#template = "post.html"
 +++
 
 Previously I've described [the process of building Crypto++ on both FreeBSD and Windows using the GCC, MinGW and VC++ compilers](/blog/2013/02/15/how-to-build-cpp-cryptographic-library-cryptopp/).
@@ -12,7 +11,7 @@ Now, we want to develop our own cross-platform cryptographic wrapper library aro
 
 Before you proceed, you have to build the Crypto++ library as I mentioned earlier [here](/blog/2013/02/15/how-to-build-cpp-cryptographic-library-cryptopp/).
 
-<!-- more -->
+<!--more-->
 
 ### API ###
 
@@ -28,11 +27,11 @@ Please keep in mind that this is a simple class, which serves a learning porpuse
 
 **4.** Our __Crypto__ class has 3 simple static functions, and the return type for all of them is Boolean.
 
-```cpp
+{{< highlight cpp >}}
 static bool Encrypt(const std::string &plainText, std::string &out_encodedText, std::string &out_error);
 static bool Decrypt(const std::string &cipherText, std::string &out_recoveredText, std::string &out_error);
 static bool GenerateHash(const std::string &text, std::string &out_digest, std::string &out_error);
-```
+{{< /highlight >}}
 
 If something goes wrong, the returned value should be __false__. Then you may find the __out_error__ variable useful which you've already passed to the function. You'll find the reason for failure by looking at this variable. Of course we could've simply thrown an exception, but in my opinion, in this case it doesn't make sense.
 
@@ -40,7 +39,7 @@ The __Encrypt__ and __Decrypt__ functions are using __AES (Advanced Encryption S
 
 This is the full example of what we've discussed so far:
 
-{% codeblock(description="main.cpp", lang="cpp") %}
+{{< codeblock lang="cpp" title="main.cpp" >}}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -126,7 +125,7 @@ int main()
 
     return 0;
 }
-{% end %}
+{{< /codeblock >}}
 
 And this is the identical output of running the above program:
 
@@ -148,7 +147,7 @@ Press enter to exit, please.
 
 I suppose you've already built the library the way that I've described for FreeBSD. So, I wrote a small CMake script which consists of 3 files, to take care of building the release version of the example application and our Crypto library:
 
-{% codeblock(description="_src.cmake", lang="cmake") %}
+{{< codeblock lang="cmake" title="_src.cmake" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -177,9 +176,9 @@ SET ( CRYPTOTEST_SOURCE_FILES
     main.cpp
     crypto.cpp
 )
-{% end %}
+{{< /codeblock >}}
 
-{% codeblock(description="dep-config.cmake", lang="cmake") %}
+{{< codeblock lang="cmake" title="dep-config.cmake" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -231,9 +230,9 @@ ELSE ( CRYPTOPP_FOUND )
         MESSAGE ( FATAL_ERROR "Could not find Crypto++" )
     ENDIF ( CRYPTOPP_FIND_REQUIRED )
 ENDIF ( CRYPTOPP_FOUND )
-{% end %}
+{{< /codeblock >}}
 
-{% codeblock(description="CMakeLists.txt", lang="cmake") %}
+{{< codeblock lang="cmake" title="CMakeLists.txt" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -312,24 +311,24 @@ IF ( DEP_FOUND )
     )
     
 ENDIF ( DEP_FOUND )
-{% end %}
+{{< /codeblock >}}
 
 
 **1.** To build the project change the current path to the source code directory that you've just downloaded, then run the following command:
 
-```sh
+```
 $ mkdir build && cd build
 ```
 
 **2.** If you've built Crypto++ with GCC 4.4+ (e.g. 4.6), then issue something like the following command:
 
-```sh
+```
 $ cmake -DCMAKE_C_COMPILER=/usr/local/bin/gcc46 -DCMAKE_CXX_COMPILER=/usr/local/bin/g++46 ../
 ```
 
 Otherwise:
 
-```sh
+```
 $ cmake ../
 ```
 
@@ -356,7 +355,7 @@ If it all goes well, you'll see something like this:
 
 **3.** To start the build process, enter the following command:
 
-```sh
+```
 $ make install
 ```
 
@@ -369,7 +368,7 @@ I suppose you've already built the static version of Crypto++, the way that I've
 
 **1.** The only thing along with __main.cpp__ (Exmple application), __crypto.hpp__ and __crypto.cpp__ that you need, in order to build the project is a __qmake__ __.pro__ file with the correct settings:
 
-{% codeblock(description="CryptoTest.pro", lang="make") %}
+{{< codeblock lang="make" title="CryptoTest.pro" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mohammad S. Babaei
@@ -417,7 +416,7 @@ SOURCES += main.cpp\
         crypto.cpp
 
 HEADERS  += crypto.hpp
-{% end %}
+{{< /codeblock >}}
 
 **2.** Open up the CryptoTest.pro file in Qt Creator, then build and run both debug/release versions of your application. Peace of cake! Isn't it?
 
@@ -453,7 +452,7 @@ Release:
 
 ### Related Articles ###
 
-[How to build C++ cryptographic library, Crypto++](/blog/2013/02/15/how-to-build-cpp-cryptographic-library-cryptopp/)
+[How to build C++ cryptographic library, Crypto++](/blog/how-to-build-cpp-cryptographic-library-cryptopp/)
 
 
 <br/>
@@ -464,7 +463,7 @@ Release:
 
 [Check out the source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
-{% codeblock(description="crypto.hpp", lang="cpp") %}
+{{< codeblock lang="cpp" title="crypto.hpp" >}}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -515,9 +514,9 @@ public:
 
 
 #endif /* CRYPTO_HPP */
-{% end %}
+{{< /codeblock >}}
 
-{% codeblock(description="crypto.cpp", lang="cpp") %}
+{{< codeblock lang="cpp" title="crypto.cpp" >}}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mohammad S. Babaei
@@ -675,4 +674,4 @@ bool Crypto::GenerateHash(const string &text, string &out_digest, string &out_er
 
     return false;
 }
-{% end %}
+{{< /codeblock >}}

@@ -1,18 +1,3 @@
-base_url = "https://fa.babaei.net"
-title = "وبلاگ محمد صادق بابائی"
-description = "The hackers way to say 3rr0r"
-language_code = "fa"
-
-compile_sass = true
-highlight_code = true
-highlight_theme = "gruvbox-dark"
-#theme = ""
-
-generate_tags_pages = true
-generate_categories_pages = true
-
-generate_rss = true
-rss_limit = 16
-
-[extra]
-author = "محمد صادق بابائی"
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
