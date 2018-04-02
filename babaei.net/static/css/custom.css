@@ -158,6 +158,6 @@ figcaption p {
 
 .blog-archives .row .post-title a:focus,
 .blog-archives .row .post-title a:hover {
-  text-decoration: none;
-  color: #0085a1;
+      text-decoration: none;
+      color: #0085a1;
 }
