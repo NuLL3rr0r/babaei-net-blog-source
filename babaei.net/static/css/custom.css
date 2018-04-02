@@ -8,7 +8,7 @@
   margin-top: 265px;
 }
 
-@media only screen and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 959px) {
     .navbar-header {
        float: none;
     }
@@ -49,8 +49,17 @@
        padding-bottom: 10px;
     }
 
+    .navbar-collapse.in {
+        overflow-y: auto !important;
+    }
+
     .collapse.in {
        display: block !important;
+    }
+
+    .navbar-collapse {
+        overflow-x: visible !important;
+        -webkit-overflow-scrolling: touch !important;
     }
 
     .navbar-custom .nav .navlinks-container.show-children {
@@ -69,10 +78,10 @@
         background: inherit !important;
     }
 
-    .navbar-custom .nav .navlinks-container:hover .navlinks-children {
+    /*.navbar-custom .nav .navlinks-container:hover .navlinks-children {
     }
 
-    /*.navbar-custom .nav .navlinks-container:active:hover .navlinks-children,
+    .navbar-custom .nav .navlinks-container:active:hover .navlinks-children,
     .navbar-custom .nav .navlinks-container:hover:active .navlinks-children,
     .navbar-custom .nav .navlinks-container:active .navlinks-children {
         display: block !important;
