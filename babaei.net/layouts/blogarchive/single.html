@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div role="main" class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-archives">
+                {{ .Content }}
+                {{ range (where .Site.Pages "Type" "post") }}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <i class="fa fa-calendar-o"></i>&nbsp;
+                        <span>{{ .Date | dateFormat "2006"}}</span>
+                        <span>{{ .Date | dateFormat "Jan" }}</span>
+                        <span>{{ .Date | dateFormat "02" }}</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <span class="post-title">
+                            <a href="{{ .Permalink }}">
+                                {{ .Title }}
+                            </a>
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+{{ end }}

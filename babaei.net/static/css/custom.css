@@ -35,3 +35,31 @@ figcaption p {
     margin-bottom: 2.0em;
     color: #151515;
 }
+
+.blog-archives {
+
+}
+
+.blog-archives .row {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.blog-archives .row .post-title {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.blog-archives .row .post-title a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #404040;
+}
+
+.blog-archives .row .post-title a:focus,
+.blog-archives .row .post-title a:hover {
+  text-decoration: none;
+  color: #0085a1;
+}
