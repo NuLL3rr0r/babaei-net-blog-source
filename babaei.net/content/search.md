@@ -3,7 +3,7 @@
 
 <div style="min-height: 400px; display: flex; align-items: center;"> 
     <div class="container">
-        <div class="col-sm-offset-3 col-sm-6">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
             <form action="https://www.duckduckgo.com/" method="get">
                 <fieldset role="search">
                     <input name="sites" value="babaei.net" data-_extension-text-contrast="bg" type="hidden">
