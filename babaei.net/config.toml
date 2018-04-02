@@ -54,24 +54,29 @@ PaginatePath = "/blog/page"
     weight = 1
 
 [[menu.main]]
+    name = "Archives"
+    url = "/blog/archives/"
+    weight = 2
+
+[[menu.main]]
     name = "Resume"
     url = "/resume/"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     name = "Projects"
     url = "/projects/"
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 4
+    weight = 5
 
 [[menu.main]]
     identifier = "subscribe"
     name = "Subscribe"
-    weight = 5
+    weight = 6
 
 [[menu.main]]
     parent = "subscribe"
@@ -86,16 +91,22 @@ PaginatePath = "/blog/page"
     weight = 2
 
 [[menu.main]]
+    parent = "subscribe"
+    name = "Subscribe via Telegram"
+    url = "https://telegram.me/babaei_net"
+    weight = 3
+
+[[menu.main]]
     name = "Email"
     url = "http://subscribe.babaei.net/?lang=en&contact-form"
-    weight = 6
+    weight = 7
 
 [[menu.main]]
     name = "Search"
     url = "/search/"
-    weight = 7
+    weight = 8
 
 [[menu.main]]
     name = "وبلاگ فارسی"
     url = "https://fa.babaei.net/"
-    weight = 8
+    weight = 9
