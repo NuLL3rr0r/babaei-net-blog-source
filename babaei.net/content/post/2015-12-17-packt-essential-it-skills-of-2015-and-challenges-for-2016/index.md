@@ -3,17 +3,15 @@ title = "Packt Essential IT Skills of 2015 and Challenges for 2016"
 slug = "packt-essential-it-skills-of-2015-and-challenges-for-2016"
 date = 2015-12-17T22:48:06Z
 tags = [ "Advertising", "Packt Publishing" ]
-#template = "post.html"
 +++
 
-[{% img post-image /blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png 941 470 "'Packt Essential IT Skills of 2015 and Challenges for 2016'" "'Packt Essential IT Skills of 2015 and Challenges for 2016'" %}](/blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/2015-12-17-packt-essential-it-skills-of-2015-and-challenges-for-2016__001.png)
-<span class="post-image-title">Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!</span>
+{{< figure src="/blog/packt-essential-it-skills-of-2015-and-challenges-for-2016/packt-essential-it-skills-of-2015-and-challenges-for-2016.png" alt="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" caption="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" >}}
 
 At a time of rapid development and innovation, tech skills have never been more valuable. The right skills and cutting-edge knowledge can bring huge rewards.
 
 Over the summer, Packt Publishing carried out [a survey of more than 20,000 people from across the world of tech](http://bit.ly/1NYBOs3), to investigate what skills are most important in today’s fast-changing technological landscape. Now, as the year draws to a close, the publisher is continuing their invitation to ‘Skill Up’ by reviewing the year and looking closely at what the future might hold. From the key challenges to the skills and tools people are most passionate about learning, Packt is preparing for an exciting 2016.
 
-<!-- more -->
+<!--more-->
 
 To do this, Packt has created a __short survey__ that asks respondents what was significant in 2015, and what trends and challenges look set to dominate technology in 2016. [Whatever your area of tech, Packt wants to hear from you](http://bit.ly/1HScEds)!
 
@@ -25,8 +23,6 @@ __Find out more [here](http://bit.ly/1HScEds).__
 
 **_Update_**:
 
-[{% img post-image /blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png 600 300 "'Packt $5 Campaign - Packt Publishing'" "'Packt $5 Campaign - Packt Publishing'" %}](/blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/2015-12-19-packt-dollar-5-campaign-packt-publishing__001.png)
-<span class="post-image-title">Packt $5 Campaign - Packt Publishing</span>
+{{< figure src="/blog/packt-dollar-5-campaign-packt-publishing/packt-dollar-5-campaign-packt-publishing.png" alt="Packt $5 Campaign - Packt Publishing" caption="Packt $5 Campaign - Packt Publishing" >}}
 
 From the 17th December 2015 into the New Year, Packt Publishing is inviting the tech world to [explore its extensive library of eBooks and Video courses for one amazing price](https://www.packtpub.com/?utm_source=JK-babaei&utm_medium=referral&utm_campaign=OME5D2015). Every single eBook and Video course Packt has ever created [will be available on packtpub.com for just $5](https://www.packtpub.com/?utm_source=JK-babaei&utm_medium=referral&utm_campaign=OME5D2015)!
-
