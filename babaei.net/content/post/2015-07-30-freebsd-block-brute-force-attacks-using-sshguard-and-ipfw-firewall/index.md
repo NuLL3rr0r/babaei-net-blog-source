@@ -3,7 +3,6 @@ title = "FreeBSD: Block Brute-force Attacks Using Sshguard and IPFW Firewall"
 slug = "freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall"
 date = 2015-07-30T19:56:00Z
 tags = [ "Brute-force", "Firewall", "FreeBSD", "GNU", "IPF", "IPFILTER", "IPFW", "Linux", "PF", "Security", "SSH", "Unix", "Vulnerability" ]
-#template = "post.html"
 +++
 
 There is an old saying that the only safe computer is one that's disconnected from the network, turned off, and locked in an underground bunker—and even then you can't be sure!
@@ -12,7 +11,7 @@ Since most of us can't afford to keep our servers in an underground bunker, the 
 
 This blog post covers setting up a basic secure and stateful [IPFW](https://www.freebsd.org/doc/handbook/firewalls-ipfw.html) firewall on [FreeBSD](https://www.freebsd.org/) along with [Sshguard](http://www.sshguard.net/) by [iXsystems Inc](https://www.ixsystems.com/) as intrusion prevention system.
 
-<!-- more -->
+<!--more-->
 
 <br />
 
@@ -36,14 +35,14 @@ Before I begin, I have to mention that this guide was written for <code>FreeBSD 
 
 OK, in order to configure our firewall we have to modify <code>/etc/rc.conf</code>. First, you should make sure no other firewall is running by looking for <code>pf_enable="YES"</code> or <code>ipfilter_enable="YES"</code> inside <code>/etc/rc.conf</code>. If you have any of them, you should disable them by either setting their value to <code>"NO"</code> or removing them completely. After that we can enable and configure our IPFW firewall inside <code>/etc/rc.conf</code>:
 
-{% codeblock /etc/rc.conf lang:sh %}
+{{< codeblock lang="" title="/etc/rc.conf" >}}
 firewall_enable="YES"
 firewall_quiet="YES"
 firewall_type="workstation"
 firewall_myservices="11011 domain http https imap imaps pop3 pop3s smtp smtps"
 firewall_allowservices="any"
 firewall_logdeny="YES"
-{% endcodeblock %}
+{{< /codeblock >}}
 
 I'm not going verbose except for <code>firewall_myservices</code> which requires explanation. If you would like to play with these options and you are on a SSH session, please be wary of the fact that even the slightest change in the above setup may drop the connection, therefore, close the session and effectively lock you out of the server. For example <code>firewall_quiet="NO"</code> alone is enough for such a scenario. So, please take a look at [FreeBSD Handbook](https://www.freebsd.org/doc/handbook/firewalls-ipfw.html) or [/etc/rc.conf man page](https://www.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5) before any modification in case you are not sure what you're doing. I also highly recommend [this great article by Digital Ocean](https://www.digitalocean.com/community/tutorials/recommended-steps-for-new-freebsd-10-1-servers) which did a good job of summing it all up in a novice-friendly way.
 
@@ -51,17 +50,21 @@ By default the above setup blocks all inbound connections on all ports for both 
 
 For example, let's say you are running <code>dns/bind910</code> on your server and you know it's listening for dns queries on port <code>53</code>. You can search for the port name which FreeBSD recognizes by looking up the port number inside <code>/etc/services</code>.
 
-    $ cat /etc/services | grep -w "53"
-    domain		 53/tcp	   #Domain Name Server
-    domain		 53/udp	   #Domain Name Server
+```
+$ cat /etc/services | grep -w "53"
+domain		 53/tcp	   #Domain Name Server
+domain		 53/udp	   #Domain Name Server
+```
 
 In the above example the port name for both TCP and UDP is <code>domain</code>. Now, let's consider another example: You are running a mail server and instead of specifying the port name or protocol you would like to directly use port numbers in <code>firewall_myservices</code> list. So, we do the exact opposite for our outgoing server:
 
-    $ cat /etc/services | grep -w "smtp"
-    smtp		 25/tcp	   mail		#Simple Mail Transfer
-    smtp		 25/udp	   mail		#Simple Mail Transfer
-    smtps		465/tcp	   #smtp protocol over TLS/SSL (was ssmtp)
-    smtps		465/udp	   #smtp protocol over TLS/SSL (was ssmtp)
+```
+$ cat /etc/services | grep -w "smtp"
+smtp		 25/tcp	   mail		#Simple Mail Transfer
+smtp		 25/udp	   mail		#Simple Mail Transfer
+smtps		465/tcp	   #smtp protocol over TLS/SSL (was ssmtp)
+smtps		465/udp	   #smtp protocol over TLS/SSL (was ssmtp)
+```
 
 As you can see the equal port numbers are <code>25</code> and <code>465</code>. Depending on how you did configured your mail server (e.g. <code>25</code> for PLAIN and STARTTLS, <code>465</code> for TLS/SSL) you can pick one or both <code>25</code> and <code>465</code>.
 
@@ -69,15 +72,19 @@ As you may have noticed already, I did mixed numbers and names in the <code>fire
 
 Now it's time to start the firewall by running the following command:
 
-    $ service ipfw start
+```
+$ service ipfw start
+```
 
 After starting the firewall you can always check the current rules by using the following command:
 
-    $ ipfw list
+```
+$ ipfw list
+```
 
 Now, you may ask there is one little issue with configuring IPFW through <code>firewall_myservices</code>. This list is TCP only and there is no way to configure UDP ports through <code>/etc/rc.conf</code>. OK, we address that by extending the default configuration through our own script without touching any files from the base system which is the proper way to do so. If you take a look at <code>/etc/rc.firewall</code> script, I'm sure you'll figure out how FreeBSD applies <code>firewall_*</code> options. So, we adopt the same approach by writing our own script. Therefore, we create and put the following script inside <code>/usr/local/etc/</code> in the first step:
 
-{% codeblock /usr/local/etc/rc.firewall lang:sh %}
+{{< codeblock lang="sh" title="/usr/local/etc/rc.firewall" >}}
 #!/bin/sh
 
 #  (The MIT License)
@@ -133,7 +140,7 @@ quietstop)
     echo "Error: unknown parameter '${1}'"
     ;;
 esac
-{% endcodeblock %}
+{{< /codeblock >}}
 
 Then we have to fix its permissions to make it read-only and executable by anyone:
 
@@ -141,7 +148,7 @@ Then we have to fix its permissions to make it read-only and executable by anyon
 
 In the end, we have to apply our own configuration for both TCP and UDP ports inside <code>/etc/rc.conf</code>:
 
-{% codeblock /etc/rc.conf lang:sh %}
+{{< codeblock lang="" title="/etc/rc.conf" >}}
 firewall_enable="YES"
 firewall_quiet="YES"
 firewall_type="workstation"
@@ -151,24 +158,28 @@ firewall_logdeny="YES"
 firewall_coscripts="/usr/local/etc/rc.firewall"
 firewall_myservices_tcp="11011 domain http https imap imaps pop3 pop3s smtp smtps"
 firewall_myservices_udp="domain"
-{% endcodeblock %}
+{{< /codeblock >}}
 
 Then it's time to restart IPFW firewall and check whether our script did its job properly or not:
 
-    $ service ipfw restart
-    $ ipfw list
+```
+$ service ipfw restart
+$ ipfw list
+```
 
 <code>firewall_myservices_tcp</code> and <code>firewall_myservices_tcp</code> are our own extended options. Note that we'll leave alone <code>firewall_myservices</code> despite the fact that it's still functional. For the sake of clarity we choose to use our own <code>firewall_myservices_tcp</code> and avoid using or mixing it with <code>firewall_myservices</code>. So, from now on we abandon <code>firewall_myservices</code>.
 
 Last but not least, a recommended best practice is putting a limit on the logging of denials per IP address. This will prevent a single, persistent user to fill up our logs. To do so we should adjust <code>net.inet.ip.fw.verbose_limit</code> by issuing the following command:
 
-    $ sysctl net.inet.ip.fw.verbose_limit=5
+```
+$ sysctl net.inet.ip.fw.verbose_limit=5
+```
 
 This adjusts the number of logs per IP to <code>5</code>. In order to make that permanent and apply it on future reboots we should add it to <code>/etc/sysctl.conf</code>:
 
-{% codeblock /etc/sysctl.conf lang:sh %}
+{{< codeblock lang="" title="/etc/sysctl.conf" >}}
 net.inet.ip.fw.verbose_limit=5
-{% endcodeblock %}
+{{< /codeblock >}}
 
 
 <br />
@@ -204,9 +215,9 @@ Or if you are using [pkgng](https://www.freebsd.org/doc/handbook/pkgng-intro.htm
 
 Finally, to enable Sshguard for a typical usage we have to modify our <code>/etc/r.conf</code> as follows:
 
-{% codeblock /etc/rc.conf lang:sh %}
+{{< codeblock lang="" title="/etc/rc.conf" >}}
 sshguard_enable="YES"
-{% endcodeblock %}
+{{< /codeblock >}}
 
 But, Sshguard on FreeBSD gives you more options to tweak. The valid options are:
 
@@ -224,7 +235,9 @@ Please note that some of the above options directly map to their command line op
 
 Anyway, let's start Sshguard:
 
-    $ service sshguard start
+```
+$ service sshguard start
+```
 
 Now, we can test our setup from another machine with different IP to see if it works. I did tried it without any luck. Unfortunately, it did not worked as expected since IPFW runs a first-match-win policy. This is due to the fact that the rules generated by Sshguard has lower priority than the ones generated by our script that we wrote earlier. According to [the official documentation of Sshguard](http://www.sshguard.net/docs/setup/firewall/ipfw/), it adds blocking rules with IDs from 55000 to 55050 by default:
 
@@ -236,7 +249,7 @@ If you have an allow policy higher than 55050 in your IPFW chain, move it to a l
 
 So we have to modify our own script to adapt to the new situation:
 
-{% codeblock /usr/local/etc/rc.firewall lang:sh %}
+{{< codeblock lang="" title="/usr/local/etc/rc.firewall" >}}
 #!/bin/sh
 
 #  (The MIT License)
@@ -306,11 +319,11 @@ quietstop)
     echo "Error: unknown parameter '${1}'"
     ;;
 esac
-{% endcodeblock %}
+{{< /codeblock >}}
 
 So, we added <code>firewall_myservices_rules_id_start</code> and <code>firewall_myservices_rules_id_step</code> as a way to control the ID assignment of the rules. Now our final configuration for IPFW + Sshguard looks like this one:
 
-{% codeblock /etc/rc.conf lang:sh %}
+{{< codeblock lang="" title="/etc/rc.conf" >}}
 firewall_enable="YES"
 firewall_quiet="YES"
 firewall_type="workstation"
@@ -331,7 +344,7 @@ sshguard_pardon_min_interval="420"
 sshguard_prescribe_interval="1200"
 sshguard_whitelistfile="/usr/local/etc/sshguard.whitelist"
 sshguard_flags=""
-{% endcodeblock %}
+{{< /codeblock >}}
 
 After making the final modification we have to restart IPFW once more and check out the rules:
 
@@ -397,8 +410,10 @@ Or simply delete the rule using its ID:
 
 Remove both PID file and blacklist file, then start Sshguard service again:
 
-    $ rm /var/run/sshguard.pid /var/db/sshguard/blacklist.db
-    $ service sshguard start
+```
+$ rm /var/run/sshguard.pid /var/db/sshguard/blacklist.db
+$ service sshguard start
+```
 
 
 <br />
@@ -409,5 +424,3 @@ Remove both PID file and blacklist file, then start Sshguard service again:
 [Check out the source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2015-07-30-freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall)
 
 [Check out the source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2015-07-30-freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall)
-
-
