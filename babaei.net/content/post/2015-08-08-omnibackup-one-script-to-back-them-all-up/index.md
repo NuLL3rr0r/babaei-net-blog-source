@@ -3,7 +3,6 @@ title = "OmniBackup: One Script to back them all up"
 slug = "omnibackup-one-script-to-back-them-all-up"
 date = 2015-08-08T03:23:23Z
 tags = [ "Backup", "FreeBSD", "GNU", "Linux", "OmniBackup", "Unix" ]
-#template = "post.html"
 +++
 
 __Update 1 [2016/09/23]:__ _OmniBackup now officially supports GNU/Linux. [More info](https://github.com/NuLL3rr0r/omnibackup#Requirements)..._
@@ -70,7 +69,7 @@ Please, feel free to clone and modify it as you wish. Pull requests for new feat
 
 The rest of this post serves as a comprehensive guide on how to setup OmniBackup in order to backup and restore all your critical data in a production environment.
 
-<!-- more -->
+<!--more-->
 
 <br />
 
@@ -214,11 +213,11 @@ You should avoid running the backup script in this step. As I mentioned we just 
 
 The first option inside <code>config.json</code> file is <code>.temp_dir</code> which specifes the temporary or working directory for OmniBackup. <code>/var/tmp</code> seems to be a reasonable place. Feel free to adopt it according to your needs. But, if you are going to change it to a path other than <code>/var/tmp/</code> or <code>/tmp/</code> choose an empty one. Note that each time you run OmniBackup it creates a log file inside <code>/var/tmp/</code> e.g. <code>/var/tmp/backup.2015-07-31.58471.log</code>. You cannot change the path for the log files due to technical limitations. Keep in mind that OmniBackup never removes its log files due to their small footprints. They may come handy when reports won't deliver to your email.
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "temp_dir" :  "/var/tmp",
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 
 <br />
@@ -228,7 +227,7 @@ The first option inside <code>config.json</code> file is <code>.temp_dir</code> 
 
 You've been given three options for compression:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "compression" :
     {
@@ -237,7 +236,7 @@ You've been given three options for compression:
         "preserve_permissions" : "yes"
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>.compression.algorithm</code> accepts only four possible values: <code>lzma2</code>, <code>gzip</code> and <code>bzip2</code> which determines the compression algorithm, or, you can leave it blank for no compression at all. This affects the extension of the backup file which we call archive from now on. For <code>lzma2</code> it will be <code>.tar.xz</code>, for <code>gzip</code>, <code>.tar.gz</code>, for <code>bzip2</code>, <code>tar.bz2</code> and for no compression mode it will be simply <code>.tar</code>. Also, <code>lzma2</code>, <code>gizp</code> and <code>bzip2</code> values, pull in <code>xz</code>, <code>gizp</code> and <code>bizip2</code> binaries as dependency, respectively.
 
@@ -253,7 +252,7 @@ You've been given three options for compression:
 
 Security module provides many features that you may not notice at the first sight:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "security" :
     {
@@ -271,7 +270,7 @@ Security module provides many features that you may not notice at the first sigh
         }
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/). So, some of the hash or encryption algorithms may not work in case you or your distribution built OpenSSL with those options excluded.
 
@@ -312,7 +311,7 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 
 Reports module is here to allow you become aware of all the details of the events that happened during the backup process, through email:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "reports" :
     {
@@ -338,7 +337,7 @@ Reports module is here to allow you become aware of all the details of the event
         "support_info" :  "Have question or need technical assistance, please visit http://www.babaei.net/ or write an email to info [ at ] babaei.net."
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>.reports.mailboxes</code> is a JSON array of email addresses and their settings who will receive the backup report when it's done, either successful or failed.
 
@@ -363,7 +362,7 @@ Reports module is here to allow you become aware of all the details of the event
 
 Using the <code>.remote</code> section of the configuration file, you can configure as many as remote backup servers that you wish. If you plan to keep backup files locally, this section provides two possible ways to do that which we'll discuss later. Note that you also have to setup [password-less SSH login](#PasswordlessSshLogin) regardless of choosing a remote server or the current host as a backup server.
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "remote" :
     {
@@ -390,7 +389,7 @@ Using the <code>.remote</code> section of the configuration file, you can config
         ]
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>.remote.keep_backup_locally</code> accepts four possible values.
 
@@ -421,14 +420,14 @@ Using the <code>.remote</code> section of the configuration file, you can config
 
 <code>.backup</code> is the actual part of the configuration which determines what has to be backed up. I'll break it down into a few sections for the sake of simplicity.
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
         "archive_name" :  "{DATE}_{HOST_NAME}_{TAG}",
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>.backup.archive_name</code> is a pattern for archive file names. You can prefix or postfix them as you wish by modifying this option. <code>{DATE}</code> shall be replaced by the actual date that OmniBackup script started. The date format is fixed and looks like <code>YYYY-MM-DD</code>. <code>{HOST_NAME}</code> shall be replaced by the host name that OmniBackup runs on. <code>{TAG}</code> is an option for each item that should be backed up, so it shall be replaced with that option's value for each backup task. So, with above configuration in mind, a typical backup archive file should look like this:
 
@@ -444,7 +443,7 @@ Using the <code>.remote</code> section of the configuration file, you can config
 
 One of the most important steps is to configure what should be backed up, in which order:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -457,7 +456,7 @@ One of the most important steps is to configure what should be backed up, in whi
         ],
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>.backup.priority_order</code> only recognizes four elements: <code>openldap</code>, <code>database</code>, <code>filesystem</code> and <code>misc</code>. Although, they should be self-explanatory, I have to add a comment for <code>misc</code> which is a special item in this list. It allows you to run an external script and pass arguments to it. After the script is finished, OmniBackup is able to backup a directory or file as its output. So, we'll be able to plug extra scripts to OmniBackup. We will discuss this later.
 
@@ -465,7 +464,7 @@ In the above example, OmniBackup backups in this order: OpenLDAP, databases, fil
 
 Let's consider an example if I need to only backup first database and then filesystem:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -476,7 +475,7 @@ Let's consider an example if I need to only backup first database and then files
         ],
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 
 <br />
@@ -486,7 +485,7 @@ Let's consider an example if I need to only backup first database and then files
 
 This is all we need to backup OpenLDAP objects and directories using <code>slapcat</code>:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -499,7 +498,7 @@ This is all we need to backup OpenLDAP objects and directories using <code>slapc
         },
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>.backup.openldap.tag</code> is used to replace <code>{TAG}</code> in <code>.backup.archive_name</code>. Since it's going to be part of a file name, it is highly recommended to avoid space or any other character that needs escaping or quotation.
 
@@ -517,7 +516,7 @@ This is all we need to backup OpenLDAP objects and directories using <code>slapc
 
 Like the general backup configuration, database section also needs specifying the types of backup jobs and their order of running:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -531,7 +530,7 @@ Like the general backup configuration, database section also needs specifying th
         },
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 OmniBackup officially only recognizes two types of database to backup. PostgreSQL and MariaDB / MySQL. Of course, it won't stop you from writing your own backup scripts for other databases. You can plug such scripts to OmniBackup using <code>.backup.misc</code> which we'll see later.
 
@@ -545,7 +544,7 @@ OmniBackup officially only recognizes two types of database to backup. PostgreSQ
 
 Configuring PostgreSQL backups consists of two easy steps: first providing a user name with an optional group name and finally a list of databases to backup:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -593,15 +592,19 @@ Configuring PostgreSQL backups consists of two easy steps: first providing a use
         },
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>backup.database.postgres.user</code> is a system user's name which runs our PostgreSQL service. For example, on my FreeBSD system it is called <code>pgsql</code>. This user should be created by Ports, pkgng installation of PostgreSQL or whatever package manager your distro uses. It has different names on different platforms. You can figure it out by investigating <code>/etc/passwd</code> or <code>/etc/master.passwd</code>:
 
-    $ cat /etc/passwd
+```
+$ cat /etc/passwd
+```
 
 or
 
-    $ cat /etc/master.passwd
+```
+$ cat /etc/master.passwd
+```
 
 <code>backup.database.postgres.group</code> is a mandatory system group's name which runs our PostgreSQL service. This one is completely optional. You can figure this one out by investigating <code>/etc/group</code>.
 
@@ -621,7 +624,7 @@ or
 
 The same as PostgreSQL goes for configuring MariaDB or MySQL databases:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -655,7 +658,7 @@ The same as PostgreSQL goes for configuring MariaDB or MySQL databases:
         },
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>backup.database.mysql.user</code> serves a similar purpose as <code>backup.database.postgres.user</code> except opposed to PostgreSQL this one is optional.
 
@@ -679,7 +682,7 @@ The same as PostgreSQL goes for configuring MariaDB or MySQL databases:
 
 Configuring filesystem backups are much easier since it's just a list of paths (files or directories) to backup:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -736,7 +739,7 @@ Configuring filesystem backups are much easier since it's just a list of paths (
         ],
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>backup.filesystem.tag</code> serves the exact same purpose as <code>backup.openldap.tag</code>.
 
@@ -754,7 +757,7 @@ Configuring filesystem backups are much easier since it's just a list of paths (
 
 Misc section allows plugging extra backup scripts to OmniBackup and capture their output as an archive. This one is also a JSON array:
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "backup" :
     {
@@ -772,7 +775,7 @@ Misc section allows plugging extra backup scripts to OmniBackup and capture thei
         ]
     },
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 <code>backup.misc.tag</code> serves the exact same purpose as <code>backup.openldap.tag</code>.
 
@@ -801,7 +804,7 @@ Misc section allows plugging extra backup scripts to OmniBackup and capture thei
 
 For example look at the return codes for <code>jq</code>, <code>scp</code> and <code>ssh</code> commands in the following list. Note that the return codes and their equivalent messages may not be accurate. Believe me, I tried my best to find the accurate ones. If you find something inaccurate, please let me know.
 
-{% codeblock config.json lang:json %}
+{{< codeblock lang="json" title="config.json" >}}
 {
     "command" :
     {
@@ -1178,7 +1181,7 @@ For example look at the return codes for <code>jq</code>, <code>scp</code> and <
         }
     }
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 
 <br />
@@ -1188,11 +1191,15 @@ For example look at the return codes for <code>jq</code>, <code>scp</code> and <
 
 Generating a pair of RSA keys is fairly an easy task. Just make sure you have OpenSSL installed and then we are good to go. To generate a <code>4096-bit</code> private RSA key -- since I found it fair enough in terms of both security and performance -- :
 
-    $ openssl genrsa -out private.pem 4096
+```
+$ openssl genrsa -out private.pem 4096
+```
 
 To extract the public key from our private key:
 
-    $ openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+```
+$ openssl rsa -in private.pem -out public.pem -outform PEM -pubout
+```
 
 
 <br />
@@ -1202,38 +1209,46 @@ To extract the public key from our private key:
 
 Setting up a password-less SSH login is even easier than [Generating RSA Keys](#GeneratingRSAKeys). First, run the following command on the host which is going to run OmniBackup:
 
-    $ ssh-keygen -t rsa -b 4096
+```
+$ ssh-keygen -t rsa -b 4096
+```
 
 When it starts asking questions, it's possible to choose the default answers by just pressing <code>Return</code> or <code>Enter</code> key on your keyboard:
 
-    Generating public/private rsa key pair.
-    Enter file in which to save the key (/home/babaei/.ssh/id_rsa): 
-    Enter passphrase (empty for no passphrase): 
-    Enter same passphrase again: 
-    Your identification has been saved in /home/babaei/.ssh/id_rsa.
-    Your public key has been saved in /home/babaei/.ssh/id_rsa.pub.
-    The key fingerprint is:
-    e6:b1:2b:53:cd:22:0c:17:70:3f:a0:ab:c3:f4:b1:12 babaei@blog.babaei.net
-    The key's randomart image is:
-    +--[ RSA 4096]----+
-    |    ..o          |
-    |     o.o         |
-    |    .  .o        |
-    |    ...  .       |
-    |  E o+  So       |
-    | o + oooooo      |
-    |  = o  oo.       |
-    |   o  o  .       |
-    |       o.        |
-    +-----------------+
+```
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/babaei/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/babaei/.ssh/id_rsa.
+Your public key has been saved in /home/babaei/.ssh/id_rsa.pub.
+The key fingerprint is:
+e6:b1:2b:53:cd:22:0c:17:70:3f:a0:ab:c3:f4:b1:12 babaei@blog.babaei.net
+The key's randomart image is:
++--[ RSA 4096]----+
+|    ..o          |
+|     o.o         |
+|    .  .o        |
+|    ...  .       |
+|  E o+  So       |
+| o + oooooo      |
+|  = o  oo.       |
+|   o  o  .       |
+|       o.        |
++-----------------+
+```
 
 Then push the public key to every single remote backup server by issuing the following command, once for each server:
 
-    $ cat ~/.ssh/id_rsa.pub | ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP} 'cat >> ~/.ssh/authorized_keys'
+```
+$ cat ~/.ssh/id_rsa.pub | ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP} 'cat >> ~/.ssh/authorized_keys'
+```
 
 It asks for password the first time you run the above command per each server. After that, you should be able to login to the desired remote host without being asked for a password:
 
-    $ ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST}
+```
+$ ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST}
+```
 
 
 <br />
@@ -1245,54 +1260,62 @@ If you did not setup a mail server or your server does not have a public IP you 
 
 On my FreeBSD system I have to first completely disable [Sendmail](https://www.sendmail.com/sm/open_source/) which is the default MTA in a base installation of FreeBSD:
 
-{% codeblock /etc/rc.conf lang:sh %}
+{{< codeblock lang="" title="/etc/rc.conf" >}}
 sendmail_enable="NO"
 sendmail_submit_enable="NO"
 sendmail_outbound_enable="NO"
 sendmail_msp_queue_enable="NO"
-{% endcodeblock %}
+{{< /codeblock >}}
 
 Then we build and install <code>mail/ssmtp</code> from [Ports collection](https://www.freebsd.org/ports/):
 
-    $ cd /usr/ports/mail/ssmtp/
-    $ make config-recursive
-    $ make install clean
+```
+$ cd /usr/ports/mail/ssmtp/
+$ make config-recursive
+$ make install clean
+```
 
 Or, install the binary package from [pkgng](https://www.freebsd.org/doc/handbook/pkgng-intro.html):
 
-    $ pkg install mail/ssmtp
+```
+$ pkg install mail/ssmtp
+```
 
 To replace <code>sendmail</code> with <code>ssmtp</code>, either do the following:
 
-    $ cd /usr/ports/mail/ssmtp/
-    $ make replace
+```
+$ cd /usr/ports/mail/ssmtp/
+$ make replace
+```
 
 Or, change your <code>/etc/mail/mailer.conf</code> to:
 
-{% codeblock /etc/mail/mailer.conf lang:sh %}
+{{< codeblock lang="" title="/etc/mail/mailer.conf" >}}
 sendmail        /usr/local/sbin/ssmtp
 send-mail       /usr/local/sbin/ssmtp
 mailq           /usr/local/sbin/ssmtp
 newaliases      /usr/local/sbin/ssmtp
 hoststat        /usr/bin/true
 purgestat       /usr/bin/true
-{% endcodeblock %}
+{{< /codeblock >}}
 
 OK, before you can use the program, you should copy the files <code>revaliases.sample</code> and <code>ssmtp.conf.sample</code> in <code>/usr/local/etc/ssmtp</code> to <code>revaliases</code> and <code>ssmtp.conf</code> respectively, then edit them to suit your needs:
 
-    $ cp /usr/local/etc/ssmtp/revaliases.sample /usr/local/etc/ssmtp/revaliases
-    $ cp /usr/local/etc/ssmtp/ssmtp.conf.sample /usr/local/etc/ssmtp/ssmtp.conf
+```
+$ cp /usr/local/etc/ssmtp/revaliases.sample /usr/local/etc/ssmtp/revaliases
+$ cp /usr/local/etc/ssmtp/ssmtp.conf.sample /usr/local/etc/ssmtp/ssmtp.conf
+```
 
 Let's assume, I have a running SMTP mail server on <code>mail.example.com</code> which allows SSL connections on port <code>465</code>. I have a working user account on this mail server called <code>email@example.com</code>.
 
 Now, I want every message from user <code>root</code> to be sent as [Charlie Root](http://lists.freebsd.org/pipermail/freebsd-questions/2005-September/098372.html) <code>charlie.root@babaei.net</code> and every message from user <code>babaei</code> as <code>mohammad.babaei@babaei.net</code>. All other users as <code>username@babaei.net</code>. So:
 
-{% codeblock /usr/local/etc/ssmtp/revaliases lang:sh %}
+{{< codeblock lang="" title="/usr/local/etc/ssmtp/revaliases" >}}
 root:charlie.root@babaei.net:mail.example.com:465
 babaei:mohammad.babaei@babaei.net:mail.example.com:465
-{% endcodeblock %}
+{{< /codeblock >}}
 
-{% codeblock /usr/local/etc/ssmtp/ssmtp.conf lang:sh %}
+{{< codeblock lang="" title="/usr/local/etc/ssmtp/ssmtp.conf" >}}
 root=postmaster
 mailhub=mail.example.com:465
 rewriteDomain=babaei.net
@@ -1302,7 +1325,7 @@ UseTLS=YES
 AuthUser=email@example.com
 AuthPass=SECRET_PASSWORD
 Debug=NO
-{% endcodeblock %}
+{{< /codeblock >}}
 
 Note that if you are using <code>STARTTLS</code> on another port other than <code>465</code>, you should use <code>UseSTARTTLS=YES</code> instead of <code>UseTLS=YES</code> in the above example.
 
@@ -1310,7 +1333,9 @@ There's also a security consideration in the above example. You should always ke
 
 If everything is done properly, you should be able to send an email from command line:
 
-    $ cat /etc/motd | mail -v -s "Hello, World!" your.email@target.domain
+```
+$ cat /etc/motd | mail -v -s "Hello, World!" your.email@target.domain
+```
 
 
 <br />
@@ -1320,7 +1345,9 @@ If everything is done properly, you should be able to send an email from command
 
 OK, after taking the journey of configuring OmniBackup, now it's time to run it for the first time in order to verify it works properly.
 
-    $ bash /usr/local/omnibackup/backup.sh
+```
+$ bash /usr/local/omnibackup/backup.sh
+```
 
 The run-time flow of OmniBackup is as follows:
 
@@ -1346,11 +1373,13 @@ Moreover, it's possible to interrupt or break the backup operation at any time u
 
 It is highly recommended to [learn the fundamentals of configuring cron jobs](/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/) if you are not familiar with the topic. Anyway, to schedule a backup task as user <code>root</code>:
 
-    $ crontab -e -u root
+```
+$ crontab -e -u root
+```
 
 Then add the backup cron job and make sure the <code>PATH</code> variable is present with the following values:
 
-{% codeblock config.json lang:sh %}
+{{< codeblock lang="json" title="config.json" >}}
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
@@ -1361,15 +1390,19 @@ MAILTO=""
 # OmniBackup
 # at 01:00am UTC
 00      01      *       *       *       /usr/local/omnibackup/backup.sh
-{% endcodeblock %}
+{{< /codeblock >}}
 
 To see whether the cron job was added successfully or not, you can issue the following command:
 
-    $ crontab -l -u root
+```
+$ crontab -l -u root
+```
 
 In the above example I scheduled the backup task to run at <code>01:00 AM</code> and since the server timezone is UTC it will run at <code>01:00 AM UTC</code> each night. To verify whether the backup job runs properly as a cron job or not, it's possible to run OmniBackup with a limited set of environment variables:
 
-    $ env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /usr/local/omnibackup/backup.sh
+```
+$ env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /usr/local/omnibackup/backup.sh
+```
 
 
 <br />
@@ -1379,15 +1412,19 @@ In the above example I scheduled the backup task to run at <code>01:00 AM</code>
 
 In order to restore anything backed-up by OmniBackup, the initial step is to retrieve the intended archive file from one of the remote backup servers, there are many ways to do so. The easiest that I've found is using <code>scp</code> command:
 
-    $ scp -P {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP}:{PATH_TO_FILE} {LOCAL_TEMPORATY_PATH}
+```
+$ scp -P {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP}:{PATH_TO_FILE} {LOCAL_TEMPORATY_PATH}
+```
 
 e.g.
 
-    $ mkdir -p /var/tmp/openldap-restore/
-    $ scp -P 22 babaei@10.12.0.4:~/backups/blog.babaei.net/openldap-babaei-net/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.* /var/tmp/openldap-restore/
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt            /var/tmp/openldap-restore   100%
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret     /var/tmp/openldap-restore   100%
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign       /var/tmp/openldap-restore   100%
+```
+$ mkdir -p /var/tmp/openldap-restore/
+$ scp -P 22 babaei@10.12.0.4:~/backups/blog.babaei.net/openldap-babaei-net/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.* /var/tmp/openldap-restore/
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt            /var/tmp/openldap-restore   100%
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret     /var/tmp/openldap-restore   100%
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign       /var/tmp/openldap-restore   100%
+```
 
 The above example retrieves three files from the remote server <code>10.12.0.4</code> by using wildcard character *, into the directory <code>/var/tmp/openldap-restore</code>. Since I enabled encryption, I need all those files.
 
@@ -1401,57 +1438,73 @@ OK, depending on our encryption settings in OmniBackup's configuration file. Thi
 
 If encryption was enabled for our archive file without a public key, OmniBackup gives us two files. They should have <code>.crypt</code> and <code>.crypt.sum</code> extensions:
 
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
+```
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
+```
 
 If we did provide a public key for a remote server, OmniBackup gives us two more files other than the actual archive file itself on that server with extensions <code>.crypt.secret</code> and <code>.crypt.sign</code> but not a <code>.crypt.sum</code> file:
 
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
+```
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
+```
 
 The next step is to know whether our encrypted archive file is in binary or Base64 encoded format. If we did disable or enabled Base64 encoding at the time of archive creation it should affect all <code>.crypt</code>, <code>.crypt.secret</code> and <code>.crypt.sign</code> files together, so they are all either binary or Base64 encoded. We can use <code>file</code> utility to distinguish these two formats:
 
 For example if it's Base64 encoded:
 
-    $ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: ASCII text
+```
+$ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: ASCII text
+```
 
 If it's binary:
 
-    $ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: data
+```
+$ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: data
+```
 
 Now, it's time to verify our archive's integrity. If you get only <code>.crypt</code> and <code>.crypt.sum</code> files, you can verify the archive integrity this way:
 
-    $ cat 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
-    SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
+$ cat 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
+SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
 
 The contents of the <code>.sum</code> file is nothing more than a hash generated from the contents of our actual archive file. In the above example the chosen hash was SHA-512. So, we have to verify the hash this way:
 
-    $ openssl dgst -sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
+$ openssl dgst -sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
 
 We've just reproduced the original hash and it looks exactly the same as the archived one which verifies the file integrity. But there is one flaw with encryption without a public key, we cannot be sure that someone else did not change the file and generate their own hash unless we locate the emailed report or log files and check the hash against them.
 
 Anyway, OpenSSL has support for various hash algorithms through the following command-line parameters:
 
-    -md4            to use the md4 message digest algorithm
-    -md5            to use the md5 message digest algorithm
-    -mdc2           to use the mdc2 message digest algorithm
-    -ripemd160      to use the ripemd160 message digest algorithm
-    -sha            to use the sha message digest algorithm
-    -sha1           to use the sha1 message digest algorithm
-    -sha224         to use the sha224 message digest algorithm
-    -sha256         to use the sha256 message digest algorithm
-    -sha384         to use the sha384 message digest algorithm
-    -sha512         to use the sha512 message digest algorithm
-    -whirlpool      to use the whirlpool message digest algorithm
+```
+-md4            to use the md4 message digest algorithm
+-md5            to use the md5 message digest algorithm
+-mdc2           to use the mdc2 message digest algorithm
+-ripemd160      to use the ripemd160 message digest algorithm
+-sha            to use the sha message digest algorithm
+-sha1           to use the sha1 message digest algorithm
+-sha224         to use the sha224 message digest algorithm
+-sha256         to use the sha256 message digest algorithm
+-sha384         to use the sha384 message digest algorithm
+-sha512         to use the sha512 message digest algorithm
+-whirlpool      to use the whirlpool message digest algorithm
+```
 
 In addition to that, there are alternative utilities than OpenSSL to regenerate the archive hash. For example, FreeBSD provides <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha512</code> and <code>rmd160</code>, while GNU/Linux provides <code>md5sum</code>, <code>sha1sum</code>, <code>sha224sum</code>, <code>sha256sum</code>, <code>sha384sum</code> and <code>sha512sum</code> utilities to do so. No matter which tool or program you use, the final results must be the same:
 
-    $ sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
-    SHA512 (2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt) = 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
+$ sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
+SHA512 (2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt) = 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
 
 OK, let's assume you did provide a public key for the remote backup server that you've just retrieved the archive file from. First, we have to verify the archive file's origin using the public key from OmniBackup's host (the current host). Note that this public key may not be the same as the public key provided by the remote backup server. It's a sibiling to private key in the <code>.security.encryption.private_key</code> option of OmniBackup configuration file. For the sake of simplicity, from now on I assume you only have a single pair of keys called <code>private.pem</code> and <code>public.pem</code> rather than having multiple pair of keys.
 
@@ -1459,31 +1512,41 @@ OK, the signature file for our example is <code>2015-07-31_blog.babaei.net_openl
 
 For binary format:
 
-    $ openssl rsautl -verify -inkey public.pem -pubin -keyform PEM -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
-    SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
+$ openssl rsautl -verify -inkey public.pem -pubin -keyform PEM -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
+SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
 
 For Base64 encoded format:
 
-    $ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign | openssl rsautl -verify -inkey public.pem -pubin -keyform PEM 
-    SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
+$ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign | openssl rsautl -verify -inkey public.pem -pubin -keyform PEM 
+SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+```
 
 If it prints out the archive file checksum in whatever hash format you chose as archive's checksum, then the file origin is valid and OK. From here on, you can verify the archive's integrity as mentioned earlier.
 
 If you did not use a unique password for all of your archives, we should take an extra step to retrieve the passphrase in order to be able to decrypt the archive. If you do not have a <code>.secret</code> file, you probably did not provide a public key for that server. The only way to retrieve the password is to go through your emails and find the proper report email for that archive and extract the attached password at the end of that report. If you did not allow OmniBackup to attach the passphrases to the email reports, I can only wish you the best of luck. You'll be lost forever! However, if you found it in your reports, it looks something like this depending on your chosen settings in the <code>.security.encryption</code> area of OmniBackup's configuration file:
 
-    [encrypted_archive.crypt](SECRET_PASSPHRASE)
-    e.g.
-    [2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt](?PL].]2IFTm*P=M7moy?4OH_VP?i^0T.oN\S04C"k8?RTyeal^H+ZF^ Gz!Ihb;n?_sgADNY-#;Nn:Hs34ybpOSmgd/9,X1Yhv:JkeE]o{Z;|!\@f*VoWo6&lmI|(vzJ)
+```
+[encrypted_archive.crypt](SECRET_PASSPHRASE)
+e.g.
+[2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt](?PL].]2IFTm*P=M7moy?4OH_VP?i^0T.oN\S04C"k8?RTyeal^H+ZF^ Gz!Ihb;n?_sgADNY-#;Nn:Hs34ybpOSmgd/9,X1Yhv:JkeE]o{Z;|!\@f*VoWo6&lmI|(vzJ)
+```
 
 For those archives that have the <code>.secret</code> file, there is another way. It's possible to decrypt and extract the passphrase from it's <code>.secret</code> file using backup server's private key. Of course, it may or may not be different than OmniBackup's private key depending on your choice to use one pair of keys for everything or multiple ones at the time of archive creation. To decrypt the passphrase:
 
 For binary format:
 
-    $ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret | openssl rsautl -decrypt -inkey private.pem -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
+```
+$ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret | openssl rsautl -decrypt -inkey private.pem -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
+```
 
 For Base64 encoded format:
 
-    $ openssl rsautl -decrypt -inkey private.pem -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
+```
+$ openssl rsautl -decrypt -inkey private.pem -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
+```
 
 OK, what we did basically is decrypting and writing the passphrase to a file with <code>.pwd</code> extension called <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd</code>. We decided to write it to a file since it's a random set of characters and it may for example contain spaces at the end which is not distinguishable. However, If you would like to print it on screen instead of a file, it's possible to omit the <code>-out</code> parameter from <code>openssl</code> command line.
 
@@ -1491,19 +1554,27 @@ OK, if you recall your unique passphrase, extracted it from your email or decryp
 
 To decrypt it from binary format, and provide the password from command line
 
-    $ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
+```
+$ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
+```
 
 To decrypt it from Base64 format, and provide the password from command line
 
-    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
+```
+$ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
+```
 
 To decrypt it from binary format, and provide the password from a <code>.pwd</code> file:
 
-    $ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
+```
+$ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
+```
 
 To decrypt it from Base64 format, and provide the password from a <code>.pwd</code> file:
 
-    $ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
+```
+$ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
+```
 
 Now we've got our achive file <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt</code> decrypted as <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz</code>. For instructions on how to restore it, move to the next section.
 
@@ -1519,41 +1590,59 @@ Depending on how we configured <code>.compression.algorithm</code> in OmniBackup
 
 LZMA2:
 
-    $ tar xvJf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
+$ tar xvJf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
 
 gzip:
 
-    $ tar xvzf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
+$ tar xvzf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
 
 bzip2:
 
-    $ tar xvjf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
+```
+$ tar xvjf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
+```
 
 No Compression:
 
-    $ tar xvf 2015-07-31_blog.babaei.net_openldap-babaei-net..tar
+```
+$ tar xvf 2015-07-31_blog.babaei.net_openldap-babaei-net..tar
+```
 
 And if you are required to restore the permissions from archive file:
 
 LZMA2:
 
-    $ tar xvJpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
+$ tar xvJpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
 
 gzip
 
-    $ tar xvzpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
+$ tar xvzpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
+```
 
 bzip2:
 
-    $ tar xvjpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
+```
+$ tar xvjpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
+```
 
 No Compression:
 
-    $ tar xvpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar
+```
+$ tar xvpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar
+```
 
 If you would like to extract the archive file in a path other than the current directory:
 
-    $ tar {OPTIONS} {ARCHIVE_FILE} -C /path/to/extract/to
+```
+$ tar {OPTIONS} {ARCHIVE_FILE} -C /path/to/extract/to
+```
 
 
 <br />
@@ -1563,12 +1652,14 @@ If you would like to extract the archive file in a path other than the current d
 
 After [extracting the OpenLDAP archive file](#RestoringArchives), restoring OpenLDAP database is a peace of cake. On my FreeBSD system I do the following (you may want to take a backup from <code>/var/db/openldap-data</code> first):
 
-    $ service slapd stop
-    $ rm -rf /var/db/openldap-data
-    $ service slapd start
-    $ cd 2015-07-31_blog.babaei.net_openldap-babaei-net
-    $ slapadd -l openldap-babaei-net.ldif
-    $ slapcat
+```
+$ service slapd stop
+$ rm -rf /var/db/openldap-data
+$ service slapd start
+$ cd 2015-07-31_blog.babaei.net_openldap-babaei-net
+$ slapadd -l openldap-babaei-net.ldif
+$ slapcat
+```
 
 Be advised that, <code>slapd</code> service or <code>/var/db/openldap-data</code> database may have different names or paths on other operating systems.
 
@@ -1580,21 +1671,29 @@ Be advised that, <code>slapd</code> service or <code>/var/db/openldap-data</code
 
 After [extracting the PostgreSQL archive file](#RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file -- :
 
-    $ cd 2015-07-31_blog.babaei.net_postgres
-    $ sudo -u pgsql psql -f postgres.sql postgres
+```
+$ cd 2015-07-31_blog.babaei.net_postgres
+$ sudo -u pgsql psql -f postgres.sql postgres
+```
 
 The overall format for restoring the entire database backup is as follows:
 
-    $ sudo -u {PGSQL_SYSTEM_USER} psql -f {DUMPALL_FILE} postgres
+```
+$ sudo -u {PGSQL_SYSTEM_USER} psql -f {DUMPALL_FILE} postgres
+```
 
 If you would like to only restore one database for example named <code>gitlab</code>:
 
-    $ cd 2015-07-31_blog.babaei.net_postgres-gitlab
-    $ sudo -u pgsql psql gitlab < postgres-gitlab.sql
+```
+$ cd 2015-07-31_blog.babaei.net_postgres-gitlab
+$ sudo -u pgsql psql gitlab < postgres-gitlab.sql
+```
 
 The overall format for restoring a single database is as follows:
 
-    $ sudo -u {PGSQL_SYSTEM_USER} psql {DATABASE_NAME} < {DATABASE_DUMP_FILE}
+```
+$ sudo -u {PGSQL_SYSTEM_USER} psql {DATABASE_NAME} < {DATABASE_DUMP_FILE}
+```
 
 
 <br />
@@ -1604,17 +1703,21 @@ The overall format for restoring a single database is as follows:
 
 After [extracting the MariaDB or MySQL archive file](#RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file -- :
 
-    $ cd 2015-07-31_blog.babaei.net_mysql
-    $ mysql -u root -p < mysql.sql
+```
+$ cd 2015-07-31_blog.babaei.net_mysql
+$ mysql -u root -p < mysql.sql
+```
 
 If you would like to only restore one database for example named <code>piwik</code>:
 
-    $ cd cd 2015-07-31_blog.babaei.net_mysql-piwik
-    $ mysql -u root -p
-    MariaDB [(none)]> create database piwik;
-    MariaDB [piwik]> use piwik;
-    MariaDB [piwik]> source mysql-piwik.sql;
-    MariaDB [piwik]> \q
+```
+$ cd cd 2015-07-31_blog.babaei.net_mysql-piwik
+$ mysql -u root -p
+MariaDB [(none)]> create database piwik;
+MariaDB [piwik]> use piwik;
+MariaDB [piwik]> source mysql-piwik.sql;
+MariaDB [piwik]> \q
+```
 
 Note that in the above examples, <code>root</code> is not a system user and it's a MariaDB / MySQL internal user who has enough privileges to restore a database.
 
@@ -1624,11 +1727,11 @@ Note that in the above examples, <code>root</code> is not a system user and it's
 
 ### Staying Away From Disaster ###
 
-{% blockquote Grant Fritchey https://www.simple-talk.com/sql/backup-and-recovery/backup-verification-tips-for-database-backup-testing/ Backup Verification: Tips for Database Backup Testing %}
+{{< blockquote author="Grant Fritchey" link="https://www.simple-talk.com/sql/backup-and-recovery/backup-verification-tips-for-database-backup-testing/" title="Backup Verification: Tips for Database Backup Testing" >}}
 There’s an old saying “Your data is only as good as your last backup.” That’s very true. But, there’s a little known corollary to this: “Your backups are only as good as your last restore.” It’s great that you’re backing up your databases, but you need to do more. You need to test your backups.
 
 The ultimate test for any backup is a restore to a server, ...
-{% endblockquote %}
+{{< /blockquote >}}
 
 
 <br />
@@ -1646,316 +1749,316 @@ The ultimate test for any backup is a restore to a server, ...
 
 ### Example Report ###
 
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2076 <== This is OmniBackup v0.1.0.
-    [Fri Jul 31 01:00:00 UTC 2015] 2079 <== Initiating the backup process '/usr/local/omnibackup/backup.sh'...
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/readlink'.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/dirname'.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/basename'.
-    [Fri Jul 31 01:00:00 UTC 2015] 2083 <== Initiating 'Logger' module...
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/bin/echo'.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/cut'.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/logger'.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2085 <== 'Logger' module initialized successfully.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2086 <== Writing logs to '/var/tmp/backup.2015-07-31.58471.log'.
-    [Fri Jul 31 01:00:00 UTC 2015] 2095 <== Initiating 'Config' module...
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/bin/cat'.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/jq'.
-    [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2103 <== 'Config' module initialized successfully.
-    [Fri Jul 31 01:00:00 UTC 2015] 2106 <== Translating status codes to message...
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2154 <== Successfully translated status codes to message.
-    [Fri Jul 31 01:00:01 UTC 2015] 2157 <== Initiating 'Clean up' module...
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/bin/mkdir'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/bin/rm'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2184 <== Temp directory '/var/tmp/backup.2015-07-31.58471' has been created and ready.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2186 <== 'Clean up' module initialized successfully.
-    [Fri Jul 31 01:00:01 UTC 2015] 2189 <== Initiating 'Reports' module...
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/mail'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/printf'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2245 <== 'Reports' module initialized successfully.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/flock'.
-    [Fri Jul 31 01:00:01 UTC 2015] 2249 <== Trying to acquire the lock '/var/run/omnibackup.lock'...
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2253 <== Successfully acquired the lock.
-    [Fri Jul 31 01:00:01 UTC 2015] 2259 <== Initiating 'Compression' module...
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/tar'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/xz'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2341 <== 'Compression' module initialized successfully.
-    [Fri Jul 31 01:00:01 UTC 2015] 2344 <== Initiating 'Security' module...
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/grep'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/head'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/strings'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/tr'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/openssl'.
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2411 <== 'Security' module initialized successfully.
-    [Fri Jul 31 01:00:01 UTC 2015] 2414 <== Initiating 'Remote' module...
-    [Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/du'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/bin/expr'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/scp'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/ssh'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2493 <== 'Remote' module initialized successfully.
-    [Fri Jul 31 01:00:02 UTC 2015] 2496 <== Initiating 'Backup' module...
-    [Fri Jul 31 01:00:02 UTC 2015] 2581 <== Initiating 'Database dump' module...
-    [Fri Jul 31 01:00:02 UTC 2015] 2639 <== Initiating 'PostgreSQL dump' module...
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/sudo'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/pg_dump'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/pg_dumpall'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2703 <== 'PostgreSQL dump' module initialized successfully.
-    [Fri Jul 31 01:00:02 UTC 2015] 2712 <== Initiating 'MySQL/MariaDB dump' module...
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/mysqldump'.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2776 <== 'MariaDB/MySQL dump' module initialized successfully.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2780 <== 'Database dump' module initialized successfully.
-    [Fri Jul 31 01:00:02 UTC 2015] 2790 <== Initiating 'Filesystem backup' module...
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2853 <== 'Filesystem backup' module initialized successfully.
-    [Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2993 <== 'Backup' module initialized successfully.
-    [Fri Jul 31 01:00:02 UTC 2015] 3039 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net' exists...
-    [Fri Jul 31 01:00:03 UTC 2015] 3052 <== Cleaning up old backups at 'r999@10.17.0.114:203/~/backups/core.babaei.net'...
-    [Fri Jul 31 01:00:03 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/'...
-    [Fri Jul 31 01:00:03 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/'...
-    [Fri Jul 31 01:00:04 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/'...
-    [Fri Jul 31 01:00:04 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/'...
-    [Fri Jul 31 01:00:04 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/'...
-    [Fri Jul 31 01:00:05 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/'...
-    [Fri Jul 31 01:00:05 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/'...
-    [Fri Jul 31 01:00:05 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/'...
-    [Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/'...
-    [Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/'...
-    [Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/'...
-    [Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/'...
-    [Fri Jul 31 01:00:07 UTC 2015] 1853 <== Creating a backup from 'All PostgreSQL databases'...
-    [Fri Jul 31 01:00:07 UTC 2015] 1867 <== Dumping 'postgres::'*'' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres/postgres.sql'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt)= 0d4caeb42692dbb5595df82b53c3ff3d14687525eca8ca153470b18aea4b8e8922968e561def455968923772b8886660d91a398838cc4a307a4a0e5513d3dab5
-    [Fri Jul 31 01:00:08 UTC 2015] 1647 <== Uploading 'All PostgreSQL databases'...
-    [Fri Jul 31 01:00:08 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/2015-07-31' exists...
-    [Fri Jul 31 01:00:09 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/2015-07-31'
-    [Fri Jul 31 01:00:09 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/2015-07-31'...
-    [Fri Jul 31 01:00:09 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt'... ~  56K
-    [Fri Jul 31 01:00:09 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:00:10 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.key'...
-    [Fri Jul 31 01:00:10 UTC 2015] 300 <== SUCCESS 1878 <== 'All PostgreSQL databases' backup completed successfully.
-    [Fri Jul 31 01:00:10 UTC 2015] 1853 <== Creating a backup from 'GitLab database'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1867 <== Dumping 'postgres::gitlabhq_production' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab/postgres-gitlab.sql'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres-gitlab'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
-    [Fri Jul 31 01:00:10 UTC 2015] 1647 <== Uploading 'GitLab database'...
-    [Fri Jul 31 01:00:10 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/2015-07-31' exists...
-    [Fri Jul 31 01:00:11 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/2015-07-31'
-    [Fri Jul 31 01:00:11 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/2015-07-31'...
-    [Fri Jul 31 01:00:11 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt'... ~  32K
-    [Fri Jul 31 01:00:11 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:00:11 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:11 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt'...
-    [Fri Jul 31 01:00:11 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.key'...
-    [Fri Jul 31 01:00:11 UTC 2015] 300 <== SUCCESS 1878 <== 'GitLab database' backup completed successfully.
-    [Fri Jul 31 01:00:11 UTC 2015] 1853 <== Creating a backup from 'Redmine database'...
-    [Fri Jul 31 01:00:11 UTC 2015] 1867 <== Dumping 'postgres::redmine' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine/postgres-redmine.sql'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres-redmine'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt)= 13edd1c5bf9cd70f172f9daf5dd632661a8c228cd310086001afeae3f1bc71cdc2de1af69423f5d645d13b09fff68455e80400880d8523a74794b41acfb346e1
-    [Fri Jul 31 01:00:12 UTC 2015] 1647 <== Uploading 'Redmine database'...
-    [Fri Jul 31 01:00:12 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/2015-07-31' exists...
-    [Fri Jul 31 01:00:12 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/2015-07-31'
-    [Fri Jul 31 01:00:13 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/2015-07-31'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt'... ~  16K
-    [Fri Jul 31 01:00:13 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:00:13 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.key'...
-    [Fri Jul 31 01:00:13 UTC 2015] 300 <== SUCCESS 1878 <== 'Redmine database' backup completed successfully.
-    [Fri Jul 31 01:00:13 UTC 2015] 1853 <== Creating a backup from 'ownCloud database'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1867 <== Dumping 'postgres::owncloud_db' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud/postgres-owncloud.sql'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres-owncloud'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
-    [Fri Jul 31 01:00:13 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
-    [Fri Jul 31 01:00:14 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:14 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt)= 143e7c0242414dfd56a405ad96ee8261330a73a16d50c27003bb07a610fb4819422791ab40a7acb4d210d650e8ed526d4202f99f6729c2ba441a7b10e25d7f02
-    [Fri Jul 31 01:00:14 UTC 2015] 1647 <== Uploading 'ownCloud database'...
-    [Fri Jul 31 01:00:14 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/2015-07-31' exists...
-    [Fri Jul 31 01:00:14 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/2015-07-31'
-    [Fri Jul 31 01:00:14 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/2015-07-31'...
-    [Fri Jul 31 01:00:14 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt'... ~  16K
-    [Fri Jul 31 01:00:14 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:00:15 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:00:15 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt'...
-    [Fri Jul 31 01:00:15 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.key'...
-    [Fri Jul 31 01:00:15 UTC 2015] 300 <== SUCCESS 1878 <== 'ownCloud database' backup completed successfully.
-    [Fri Jul 31 01:00:15 UTC 2015] 1853 <== Creating a backup from 'All MySQL databases'...
-    [Fri Jul 31 01:00:15 UTC 2015] 1867 <== Dumping 'mysql::'*'' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql/mysql.sql'...
-    [Fri Jul 31 01:00:16 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
-    [Fri Jul 31 01:01:01 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_mysql'...
-    [Fri Jul 31 01:01:02 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
-    [Fri Jul 31 01:01:03 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
-    [Fri Jul 31 01:01:03 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
-    [Fri Jul 31 01:01:03 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:01:04 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt)= 9e7c0f0fb5d4ace5cc6727ed0c1b70ca477b878c75c8fcc8cb42b43ccfe72f497ba3c78304d6767a7802420dab73edcffc19f8ba171a0e33dd696abc28bc5e38
-    [Fri Jul 31 01:01:04 UTC 2015] 1647 <== Uploading 'All MySQL databases'...
-    [Fri Jul 31 01:01:04 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/2015-07-31' exists...
-    [Fri Jul 31 01:01:04 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/2015-07-31'
-    [Fri Jul 31 01:01:04 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/2015-07-31'...
-    [Fri Jul 31 01:01:04 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt'... ~  11M
-    [Fri Jul 31 01:01:05 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:01:05 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:01:05 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt'...
-    [Fri Jul 31 01:01:05 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.key'...
-    [Fri Jul 31 01:01:05 UTC 2015] 300 <== SUCCESS 1878 <== 'All MySQL databases' backup completed successfully.
-    [Fri Jul 31 01:01:05 UTC 2015] 1853 <== Creating a backup from 'Piwik database'...
-    [Fri Jul 31 01:01:05 UTC 2015] 1867 <== Dumping 'mysql::piwik' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik/mysql-piwik.sql'...
-    [Fri Jul 31 01:01:06 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
-    [Fri Jul 31 01:01:50 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_mysql-piwik'...
-    [Fri Jul 31 01:01:50 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
-    [Fri Jul 31 01:01:50 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
-    [Fri Jul 31 01:01:51 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
-    [Fri Jul 31 01:01:51 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:01:51 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt)= aa90141fe55f5543622887ae81c6911e8663af6fbc57ea8336564481c3d261e4e9ce4ee6425936b7f67996cbf4d546b8ab76f92b1301f19ab19167b8a2ce1889
-    [Fri Jul 31 01:01:51 UTC 2015] 1647 <== Uploading 'Piwik database'...
-    [Fri Jul 31 01:01:51 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/2015-07-31' exists...
-    [Fri Jul 31 01:01:51 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/2015-07-31'
-    [Fri Jul 31 01:01:51 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/2015-07-31'...
-    [Fri Jul 31 01:01:51 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt'... ~  10M
-    [Fri Jul 31 01:01:52 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:01:52 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:01:52 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt'...
-    [Fri Jul 31 01:01:52 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.key'...
-    [Fri Jul 31 01:01:52 UTC 2015] 300 <== SUCCESS 1878 <== 'Piwik database' backup completed successfully.
-    [Fri Jul 31 01:01:54 UTC 2015] 292 <== INFO 1921 <== All database backup tasks finished.
-    [Fri Jul 31 01:01:54 UTC 2015] 1955 <== Creating a backup from 'Web server root directory'...
-    [Fri Jul 31 01:01:54 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
-    [Fri Jul 31 01:31:02 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
-    [Fri Jul 31 01:31:02 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
-    [Fri Jul 31 01:31:23 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
-    [Fri Jul 31 01:31:23 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:31:35 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt)= 9c068d61717ac52f48489842d1c04ad52abbbabbe181cd0aa9e1f291c2108eea336a0d8b239a0a37987fddf8868c40869f80e5af5e5d9c79114deb4a3de8d1fc
-    [Fri Jul 31 01:31:35 UTC 2015] 1647 <== Uploading 'Web server root directory'...
-    [Fri Jul 31 01:31:35 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/2015-07-31' exists...
-    [Fri Jul 31 01:31:36 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/2015-07-31'
-    [Fri Jul 31 01:31:36 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/2015-07-31'...
-    [Fri Jul 31 01:31:36 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt'... ~ 1.4G
-    [Fri Jul 31 01:32:19 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:32:19 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:32:19 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt'...
-    [Fri Jul 31 01:32:19 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.key'...
-    [Fri Jul 31 01:32:19 UTC 2015] 300 <== SUCCESS 1962 <== 'Web server root directory' backup completed successfully.
-    [Fri Jul 31 01:32:19 UTC 2015] 1955 <== Creating a backup from 'GitLab repositories'...
-    [Fri Jul 31 01:32:19 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
-    [Fri Jul 31 01:52:40 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
-    [Fri Jul 31 01:52:40 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
-    [Fri Jul 31 01:52:55 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
-    [Fri Jul 31 01:52:55 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:53:03 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt)= 88036dac6d9c5d636a7e31ce0b2303f48f41cc9188f31543f3a964107ab4f364756352cd7320c0471fbbb37068cdfdd1ac0d9b56e8902b82b40754de082a3d4a
-    [Fri Jul 31 01:53:03 UTC 2015] 1647 <== Uploading 'GitLab repositories'...
-    [Fri Jul 31 01:53:03 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/2015-07-31' exists...
-    [Fri Jul 31 01:53:03 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/2015-07-31'
-    [Fri Jul 31 01:53:03 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/2015-07-31'...
-    [Fri Jul 31 01:53:03 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt'... ~ 1.1G
-    [Fri Jul 31 01:53:31 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 01:53:32 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt.sum'...
-    [Fri Jul 31 01:53:32 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt'...
-    [Fri Jul 31 01:53:32 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.key'...
-    [Fri Jul 31 01:53:32 UTC 2015] 300 <== SUCCESS 1962 <== 'GitLab repositories' backup completed successfully.
-    [Fri Jul 31 01:53:32 UTC 2015] 1955 <== Creating a backup from 'Mail server root directory'...
-    [Fri Jul 31 01:53:32 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
-    [Fri Jul 31 02:21:44 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
-    [Fri Jul 31 02:21:44 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
-    [Fri Jul 31 02:21:57 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
-    [Fri Jul 31 02:21:57 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:04 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt)= 2b28e978f74ff857deb0643fc5f1dbf7b6c50acec3f919cebf672c9038ec365a06a7ddd2c80c5e28b7cecff9b2d659ab9dde4e9ad606d3d7e4d1819284cb19b8
-    [Fri Jul 31 02:22:04 UTC 2015] 1647 <== Uploading 'Mail server root directory'...
-    [Fri Jul 31 02:22:04 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/2015-07-31' exists...
-    [Fri Jul 31 02:22:05 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/2015-07-31'
-    [Fri Jul 31 02:22:05 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/2015-07-31'...
-    [Fri Jul 31 02:22:05 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt'... ~ 1.2G
-    [Fri Jul 31 02:22:44 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 02:22:44 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:44 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt'...
-    [Fri Jul 31 02:22:44 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.key'...
-    [Fri Jul 31 02:22:44 UTC 2015] 300 <== SUCCESS 1962 <== 'Mail server root directory' backup completed successfully.
-    [Fri Jul 31 02:22:44 UTC 2015] 1955 <== Creating a backup from 'Base system configurations'...
-    [Fri Jul 31 02:22:44 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
-    [Fri Jul 31 02:22:47 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
-    [Fri Jul 31 02:22:48 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
-    [Fri Jul 31 02:22:48 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
-    [Fri Jul 31 02:22:48 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:48 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt)= bdfca0fb8bad158780368589da43b0ccc86bfc6f7aa089f615714eb09308854328b9ae8699c267688b50e2fd99aee8fcc1d43054488beae3b1410769f2858422
-    [Fri Jul 31 02:22:48 UTC 2015] 1647 <== Uploading 'Base system configurations'...
-    [Fri Jul 31 02:22:48 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/2015-07-31' exists...
-    [Fri Jul 31 02:22:48 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/2015-07-31'
-    [Fri Jul 31 02:22:48 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/2015-07-31'...
-    [Fri Jul 31 02:22:48 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt'... ~ 304K
-    [Fri Jul 31 02:22:49 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 02:22:49 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:49 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt'...
-    [Fri Jul 31 02:22:49 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.key'...
-    [Fri Jul 31 02:22:49 UTC 2015] 300 <== SUCCESS 1962 <== 'Base system configurations' backup completed successfully.
-    [Fri Jul 31 02:22:49 UTC 2015] 1955 <== Creating a backup from 'Installed ports configurations'...
-    [Fri Jul 31 02:22:49 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
-    [Fri Jul 31 02:22:53 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
-    [Fri Jul 31 02:22:53 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
-    [Fri Jul 31 02:22:53 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
-    [Fri Jul 31 02:22:53 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:53 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt)= 0df1727a77395ae4346fd9f257451fd9976bc6a2933c209c8daf8aa655834a6f6c472764d067703c954f4963ee2f0f4b585c565de48f4c42aa216204971c7b2e
-    [Fri Jul 31 02:22:53 UTC 2015] 1647 <== Uploading 'Installed ports configurations'...
-    [Fri Jul 31 02:22:53 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/2015-07-31' exists...
-    [Fri Jul 31 02:22:53 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/2015-07-31'
-    [Fri Jul 31 02:22:54 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/2015-07-31'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt'... ~ 640K
-    [Fri Jul 31 02:22:54 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 02:22:54 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.key'...
-    [Fri Jul 31 02:22:54 UTC 2015] 300 <== SUCCESS 1962 <== 'Installed ports configurations' backup completed successfully.
-    [Fri Jul 31 02:22:54 UTC 2015] 1955 <== Creating a backup from 'System bootstrap configuration information'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:54 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt)= d6900b1cb7cd3277eb15d5c80c01dd7b937fd002d66d4c0d1b0e40acfcc90acffc8a3c41a73761c21574b79fed0e8e904e59d71ea512e928cb3079ab75aa7e7c
-    [Fri Jul 31 02:22:55 UTC 2015] 1647 <== Uploading 'System bootstrap configuration information'...
-    [Fri Jul 31 02:22:55 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/2015-07-31' exists...
-    [Fri Jul 31 02:22:55 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/2015-07-31'
-    [Fri Jul 31 02:22:55 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/2015-07-31'...
-    [Fri Jul 31 02:22:55 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt'... ~ 4.0K
-    [Fri Jul 31 02:22:55 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt.sum'... ~ 4.0K
-    [Fri Jul 31 02:22:56 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt.sum'...
-    [Fri Jul 31 02:22:56 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt'...
-    [Fri Jul 31 02:22:56 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.key'...
-    [Fri Jul 31 02:22:56 UTC 2015] 300 <== SUCCESS 1962 <== 'System bootstrap configuration information' backup completed successfully.
-    [Fri Jul 31 02:22:56 UTC 2015] 292 <== INFO 3141 <== All backup tasks finished.
-    [Fri Jul 31 02:22:56 UTC 2015] 3159 <== Cleaning up '/var/tmp/backup.2015-07-31.58471'...
-    [Fri Jul 31 02:22:56 UTC 2015] 3218 <== It took 1h 22m 56s to finish all backup tasks.
-    [Fri Jul 31 02:22:56 UTC 2015] 292 <== INFO 3219 <== All backups by OmniBackup v0.1.0.
+```
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2076 <== This is OmniBackup v0.1.0.
+[Fri Jul 31 01:00:00 UTC 2015] 2079 <== Initiating the backup process '/usr/local/omnibackup/backup.sh'...
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/readlink'.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/dirname'.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/basename'.
+[Fri Jul 31 01:00:00 UTC 2015] 2083 <== Initiating 'Logger' module...
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/bin/echo'.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/cut'.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/logger'.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2085 <== 'Logger' module initialized successfully.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2086 <== Writing logs to '/var/tmp/backup.2015-07-31.58471.log'.
+[Fri Jul 31 01:00:00 UTC 2015] 2095 <== Initiating 'Config' module...
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/bin/cat'.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/jq'.
+[Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2103 <== 'Config' module initialized successfully.
+[Fri Jul 31 01:00:00 UTC 2015] 2106 <== Translating status codes to message...
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2154 <== Successfully translated status codes to message.
+[Fri Jul 31 01:00:01 UTC 2015] 2157 <== Initiating 'Clean up' module...
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/bin/mkdir'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/bin/rm'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2184 <== Temp directory '/var/tmp/backup.2015-07-31.58471' has been created and ready.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2186 <== 'Clean up' module initialized successfully.
+[Fri Jul 31 01:00:01 UTC 2015] 2189 <== Initiating 'Reports' module...
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/mail'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/printf'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2245 <== 'Reports' module initialized successfully.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/flock'.
+[Fri Jul 31 01:00:01 UTC 2015] 2249 <== Trying to acquire the lock '/var/run/omnibackup.lock'...
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2253 <== Successfully acquired the lock.
+[Fri Jul 31 01:00:01 UTC 2015] 2259 <== Initiating 'Compression' module...
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/tar'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/xz'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2341 <== 'Compression' module initialized successfully.
+[Fri Jul 31 01:00:01 UTC 2015] 2344 <== Initiating 'Security' module...
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/grep'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/head'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/strings'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/tr'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/openssl'.
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 2411 <== 'Security' module initialized successfully.
+[Fri Jul 31 01:00:01 UTC 2015] 2414 <== Initiating 'Remote' module...
+[Fri Jul 31 01:00:01 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/du'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/bin/expr'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/scp'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/bin/ssh'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2493 <== 'Remote' module initialized successfully.
+[Fri Jul 31 01:00:02 UTC 2015] 2496 <== Initiating 'Backup' module...
+[Fri Jul 31 01:00:02 UTC 2015] 2581 <== Initiating 'Database dump' module...
+[Fri Jul 31 01:00:02 UTC 2015] 2639 <== Initiating 'PostgreSQL dump' module...
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/sudo'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/pg_dump'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/pg_dumpall'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2703 <== 'PostgreSQL dump' module initialized successfully.
+[Fri Jul 31 01:00:02 UTC 2015] 2712 <== Initiating 'MySQL/MariaDB dump' module...
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 237 <== Found command '/usr/local/bin/mysqldump'.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2776 <== 'MariaDB/MySQL dump' module initialized successfully.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2780 <== 'Database dump' module initialized successfully.
+[Fri Jul 31 01:00:02 UTC 2015] 2790 <== Initiating 'Filesystem backup' module...
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2853 <== 'Filesystem backup' module initialized successfully.
+[Fri Jul 31 01:00:02 UTC 2015] 292 <== INFO 2993 <== 'Backup' module initialized successfully.
+[Fri Jul 31 01:00:02 UTC 2015] 3039 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net' exists...
+[Fri Jul 31 01:00:03 UTC 2015] 3052 <== Cleaning up old backups at 'r999@10.17.0.114:203/~/backups/core.babaei.net'...
+[Fri Jul 31 01:00:03 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/'...
+[Fri Jul 31 01:00:03 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/'...
+[Fri Jul 31 01:00:04 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/'...
+[Fri Jul 31 01:00:04 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/'...
+[Fri Jul 31 01:00:04 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/'...
+[Fri Jul 31 01:00:05 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/'...
+[Fri Jul 31 01:00:05 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/'...
+[Fri Jul 31 01:00:05 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/'...
+[Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/'...
+[Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/'...
+[Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/'...
+[Fri Jul 31 01:00:06 UTC 2015] 3062 <== Cleaning up 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/'...
+[Fri Jul 31 01:00:07 UTC 2015] 1853 <== Creating a backup from 'All PostgreSQL databases'...
+[Fri Jul 31 01:00:07 UTC 2015] 1867 <== Dumping 'postgres::'*'' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres/postgres.sql'...
+[Fri Jul 31 01:00:08 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
+[Fri Jul 31 01:00:08 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres'...
+[Fri Jul 31 01:00:08 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
+[Fri Jul 31 01:00:08 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
+[Fri Jul 31 01:00:08 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz'...
+[Fri Jul 31 01:00:08 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:08 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt)= 0d4caeb42692dbb5595df82b53c3ff3d14687525eca8ca153470b18aea4b8e8922968e561def455968923772b8886660d91a398838cc4a307a4a0e5513d3dab5
+[Fri Jul 31 01:00:08 UTC 2015] 1647 <== Uploading 'All PostgreSQL databases'...
+[Fri Jul 31 01:00:08 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/2015-07-31' exists...
+[Fri Jul 31 01:00:09 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/2015-07-31'
+[Fri Jul 31 01:00:09 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres/2015-07-31'...
+[Fri Jul 31 01:00:09 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt'... ~  56K
+[Fri Jul 31 01:00:09 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:00:10 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:10 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.crypt'...
+[Fri Jul 31 01:00:10 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres.tar.xz.key'...
+[Fri Jul 31 01:00:10 UTC 2015] 300 <== SUCCESS 1878 <== 'All PostgreSQL databases' backup completed successfully.
+[Fri Jul 31 01:00:10 UTC 2015] 1853 <== Creating a backup from 'GitLab database'...
+[Fri Jul 31 01:00:10 UTC 2015] 1867 <== Dumping 'postgres::gitlabhq_production' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab/postgres-gitlab.sql'...
+[Fri Jul 31 01:00:10 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
+[Fri Jul 31 01:00:10 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres-gitlab'...
+[Fri Jul 31 01:00:10 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
+[Fri Jul 31 01:00:10 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
+[Fri Jul 31 01:00:10 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz'...
+[Fri Jul 31 01:00:10 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:10 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
+[Fri Jul 31 01:00:10 UTC 2015] 1647 <== Uploading 'GitLab database'...
+[Fri Jul 31 01:00:10 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/2015-07-31' exists...
+[Fri Jul 31 01:00:11 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/2015-07-31'
+[Fri Jul 31 01:00:11 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-gitlab/2015-07-31'...
+[Fri Jul 31 01:00:11 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt'... ~  32K
+[Fri Jul 31 01:00:11 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:00:11 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:11 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt'...
+[Fri Jul 31 01:00:11 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.key'...
+[Fri Jul 31 01:00:11 UTC 2015] 300 <== SUCCESS 1878 <== 'GitLab database' backup completed successfully.
+[Fri Jul 31 01:00:11 UTC 2015] 1853 <== Creating a backup from 'Redmine database'...
+[Fri Jul 31 01:00:11 UTC 2015] 1867 <== Dumping 'postgres::redmine' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine/postgres-redmine.sql'...
+[Fri Jul 31 01:00:12 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
+[Fri Jul 31 01:00:12 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres-redmine'...
+[Fri Jul 31 01:00:12 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
+[Fri Jul 31 01:00:12 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
+[Fri Jul 31 01:00:12 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz'...
+[Fri Jul 31 01:00:12 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:12 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt)= 13edd1c5bf9cd70f172f9daf5dd632661a8c228cd310086001afeae3f1bc71cdc2de1af69423f5d645d13b09fff68455e80400880d8523a74794b41acfb346e1
+[Fri Jul 31 01:00:12 UTC 2015] 1647 <== Uploading 'Redmine database'...
+[Fri Jul 31 01:00:12 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/2015-07-31' exists...
+[Fri Jul 31 01:00:12 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/2015-07-31'
+[Fri Jul 31 01:00:13 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-redmine/2015-07-31'...
+[Fri Jul 31 01:00:13 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt'... ~  16K
+[Fri Jul 31 01:00:13 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:00:13 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:13 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt'...
+[Fri Jul 31 01:00:13 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-redmine.tar.xz.key'...
+[Fri Jul 31 01:00:13 UTC 2015] 300 <== SUCCESS 1878 <== 'Redmine database' backup completed successfully.
+[Fri Jul 31 01:00:13 UTC 2015] 1853 <== Creating a backup from 'ownCloud database'...
+[Fri Jul 31 01:00:13 UTC 2015] 1867 <== Dumping 'postgres::owncloud_db' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud/postgres-owncloud.sql'...
+[Fri Jul 31 01:00:13 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
+[Fri Jul 31 01:00:13 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_postgres-owncloud'...
+[Fri Jul 31 01:00:13 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
+[Fri Jul 31 01:00:13 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
+[Fri Jul 31 01:00:13 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz'...
+[Fri Jul 31 01:00:14 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:14 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt)= 143e7c0242414dfd56a405ad96ee8261330a73a16d50c27003bb07a610fb4819422791ab40a7acb4d210d650e8ed526d4202f99f6729c2ba441a7b10e25d7f02
+[Fri Jul 31 01:00:14 UTC 2015] 1647 <== Uploading 'ownCloud database'...
+[Fri Jul 31 01:00:14 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/2015-07-31' exists...
+[Fri Jul 31 01:00:14 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/2015-07-31'
+[Fri Jul 31 01:00:14 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/postgres-owncloud/2015-07-31'...
+[Fri Jul 31 01:00:14 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt'... ~  16K
+[Fri Jul 31 01:00:14 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:00:15 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt.sum'...
+[Fri Jul 31 01:00:15 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt'...
+[Fri Jul 31 01:00:15 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.key'...
+[Fri Jul 31 01:00:15 UTC 2015] 300 <== SUCCESS 1878 <== 'ownCloud database' backup completed successfully.
+[Fri Jul 31 01:00:15 UTC 2015] 1853 <== Creating a backup from 'All MySQL databases'...
+[Fri Jul 31 01:00:15 UTC 2015] 1867 <== Dumping 'mysql::'*'' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql/mysql.sql'...
+[Fri Jul 31 01:00:16 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
+[Fri Jul 31 01:01:01 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_mysql'...
+[Fri Jul 31 01:01:02 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
+[Fri Jul 31 01:01:03 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
+[Fri Jul 31 01:01:03 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz'...
+[Fri Jul 31 01:01:03 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt.sum'...
+[Fri Jul 31 01:01:04 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt)= 9e7c0f0fb5d4ace5cc6727ed0c1b70ca477b878c75c8fcc8cb42b43ccfe72f497ba3c78304d6767a7802420dab73edcffc19f8ba171a0e33dd696abc28bc5e38
+[Fri Jul 31 01:01:04 UTC 2015] 1647 <== Uploading 'All MySQL databases'...
+[Fri Jul 31 01:01:04 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/2015-07-31' exists...
+[Fri Jul 31 01:01:04 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/2015-07-31'
+[Fri Jul 31 01:01:04 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql/2015-07-31'...
+[Fri Jul 31 01:01:04 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt'... ~  11M
+[Fri Jul 31 01:01:05 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:01:05 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt.sum'...
+[Fri Jul 31 01:01:05 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.crypt'...
+[Fri Jul 31 01:01:05 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql.tar.xz.key'...
+[Fri Jul 31 01:01:05 UTC 2015] 300 <== SUCCESS 1878 <== 'All MySQL databases' backup completed successfully.
+[Fri Jul 31 01:01:05 UTC 2015] 1853 <== Creating a backup from 'Piwik database'...
+[Fri Jul 31 01:01:05 UTC 2015] 1867 <== Dumping 'mysql::piwik' to '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik/mysql-piwik.sql'...
+[Fri Jul 31 01:01:06 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
+[Fri Jul 31 01:01:50 UTC 2015] 1474 <== Removing '2015-07-31_core.babaei.net_mysql-piwik'...
+[Fri Jul 31 01:01:50 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
+[Fri Jul 31 01:01:50 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
+[Fri Jul 31 01:01:51 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz'...
+[Fri Jul 31 01:01:51 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt.sum'...
+[Fri Jul 31 01:01:51 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt)= aa90141fe55f5543622887ae81c6911e8663af6fbc57ea8336564481c3d261e4e9ce4ee6425936b7f67996cbf4d546b8ab76f92b1301f19ab19167b8a2ce1889
+[Fri Jul 31 01:01:51 UTC 2015] 1647 <== Uploading 'Piwik database'...
+[Fri Jul 31 01:01:51 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/2015-07-31' exists...
+[Fri Jul 31 01:01:51 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/2015-07-31'
+[Fri Jul 31 01:01:51 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/mysql-piwik/2015-07-31'...
+[Fri Jul 31 01:01:51 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt'... ~  10M
+[Fri Jul 31 01:01:52 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:01:52 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt.sum'...
+[Fri Jul 31 01:01:52 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt'...
+[Fri Jul 31 01:01:52 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mysql-piwik.tar.xz.key'...
+[Fri Jul 31 01:01:52 UTC 2015] 300 <== SUCCESS 1878 <== 'Piwik database' backup completed successfully.
+[Fri Jul 31 01:01:54 UTC 2015] 292 <== INFO 1921 <== All database backup tasks finished.
+[Fri Jul 31 01:01:54 UTC 2015] 1955 <== Creating a backup from 'Web server root directory'...
+[Fri Jul 31 01:01:54 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
+[Fri Jul 31 01:31:02 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
+[Fri Jul 31 01:31:02 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
+[Fri Jul 31 01:31:23 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz'...
+[Fri Jul 31 01:31:23 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt.sum'...
+[Fri Jul 31 01:31:35 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt)= 9c068d61717ac52f48489842d1c04ad52abbbabbe181cd0aa9e1f291c2108eea336a0d8b239a0a37987fddf8868c40869f80e5af5e5d9c79114deb4a3de8d1fc
+[Fri Jul 31 01:31:35 UTC 2015] 1647 <== Uploading 'Web server root directory'...
+[Fri Jul 31 01:31:35 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/2015-07-31' exists...
+[Fri Jul 31 01:31:36 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/2015-07-31'
+[Fri Jul 31 01:31:36 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/www/2015-07-31'...
+[Fri Jul 31 01:31:36 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt'... ~ 1.4G
+[Fri Jul 31 01:32:19 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:32:19 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt.sum'...
+[Fri Jul 31 01:32:19 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.crypt'...
+[Fri Jul 31 01:32:19 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_www.tar.xz.key'...
+[Fri Jul 31 01:32:19 UTC 2015] 300 <== SUCCESS 1962 <== 'Web server root directory' backup completed successfully.
+[Fri Jul 31 01:32:19 UTC 2015] 1955 <== Creating a backup from 'GitLab repositories'...
+[Fri Jul 31 01:32:19 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
+[Fri Jul 31 01:52:40 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
+[Fri Jul 31 01:52:40 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
+[Fri Jul 31 01:52:55 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz'...
+[Fri Jul 31 01:52:55 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt.sum'...
+[Fri Jul 31 01:53:03 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt)= 88036dac6d9c5d636a7e31ce0b2303f48f41cc9188f31543f3a964107ab4f364756352cd7320c0471fbbb37068cdfdd1ac0d9b56e8902b82b40754de082a3d4a
+[Fri Jul 31 01:53:03 UTC 2015] 1647 <== Uploading 'GitLab repositories'...
+[Fri Jul 31 01:53:03 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/2015-07-31' exists...
+[Fri Jul 31 01:53:03 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/2015-07-31'
+[Fri Jul 31 01:53:03 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/repos/2015-07-31'...
+[Fri Jul 31 01:53:03 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt'... ~ 1.1G
+[Fri Jul 31 01:53:31 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 01:53:32 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt.sum'...
+[Fri Jul 31 01:53:32 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.crypt'...
+[Fri Jul 31 01:53:32 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_repos.tar.xz.key'...
+[Fri Jul 31 01:53:32 UTC 2015] 300 <== SUCCESS 1962 <== 'GitLab repositories' backup completed successfully.
+[Fri Jul 31 01:53:32 UTC 2015] 1955 <== Creating a backup from 'Mail server root directory'...
+[Fri Jul 31 01:53:32 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
+[Fri Jul 31 02:21:44 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
+[Fri Jul 31 02:21:44 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
+[Fri Jul 31 02:21:57 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz'...
+[Fri Jul 31 02:21:57 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:04 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt)= 2b28e978f74ff857deb0643fc5f1dbf7b6c50acec3f919cebf672c9038ec365a06a7ddd2c80c5e28b7cecff9b2d659ab9dde4e9ad606d3d7e4d1819284cb19b8
+[Fri Jul 31 02:22:04 UTC 2015] 1647 <== Uploading 'Mail server root directory'...
+[Fri Jul 31 02:22:04 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/2015-07-31' exists...
+[Fri Jul 31 02:22:05 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/2015-07-31'
+[Fri Jul 31 02:22:05 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/mail/2015-07-31'...
+[Fri Jul 31 02:22:05 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt'... ~ 1.2G
+[Fri Jul 31 02:22:44 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 02:22:44 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:44 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.crypt'...
+[Fri Jul 31 02:22:44 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_mail.tar.xz.key'...
+[Fri Jul 31 02:22:44 UTC 2015] 300 <== SUCCESS 1962 <== 'Mail server root directory' backup completed successfully.
+[Fri Jul 31 02:22:44 UTC 2015] 1955 <== Creating a backup from 'Base system configurations'...
+[Fri Jul 31 02:22:44 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
+[Fri Jul 31 02:22:47 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
+[Fri Jul 31 02:22:48 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
+[Fri Jul 31 02:22:48 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz'...
+[Fri Jul 31 02:22:48 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:48 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt)= bdfca0fb8bad158780368589da43b0ccc86bfc6f7aa089f615714eb09308854328b9ae8699c267688b50e2fd99aee8fcc1d43054488beae3b1410769f2858422
+[Fri Jul 31 02:22:48 UTC 2015] 1647 <== Uploading 'Base system configurations'...
+[Fri Jul 31 02:22:48 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/2015-07-31' exists...
+[Fri Jul 31 02:22:48 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/2015-07-31'
+[Fri Jul 31 02:22:48 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-system/2015-07-31'...
+[Fri Jul 31 02:22:48 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt'... ~ 304K
+[Fri Jul 31 02:22:49 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 02:22:49 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:49 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.crypt'...
+[Fri Jul 31 02:22:49 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-system.tar.xz.key'...
+[Fri Jul 31 02:22:49 UTC 2015] 300 <== SUCCESS 1962 <== 'Base system configurations' backup completed successfully.
+[Fri Jul 31 02:22:49 UTC 2015] 1955 <== Creating a backup from 'Installed ports configurations'...
+[Fri Jul 31 02:22:49 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
+[Fri Jul 31 02:22:53 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
+[Fri Jul 31 02:22:53 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
+[Fri Jul 31 02:22:53 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz'...
+[Fri Jul 31 02:22:53 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:53 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt)= 0df1727a77395ae4346fd9f257451fd9976bc6a2933c209c8daf8aa655834a6f6c472764d067703c954f4963ee2f0f4b585c565de48f4c42aa216204971c7b2e
+[Fri Jul 31 02:22:53 UTC 2015] 1647 <== Uploading 'Installed ports configurations'...
+[Fri Jul 31 02:22:53 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/2015-07-31' exists...
+[Fri Jul 31 02:22:53 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/2015-07-31'
+[Fri Jul 31 02:22:54 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/etc-ports/2015-07-31'...
+[Fri Jul 31 02:22:54 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt'... ~ 640K
+[Fri Jul 31 02:22:54 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 02:22:54 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:54 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt'...
+[Fri Jul 31 02:22:54 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_etc-ports.tar.xz.key'...
+[Fri Jul 31 02:22:54 UTC 2015] 300 <== SUCCESS 1962 <== 'Installed ports configurations' backup completed successfully.
+[Fri Jul 31 02:22:54 UTC 2015] 1955 <== Creating a backup from 'System bootstrap configuration information'...
+[Fri Jul 31 02:22:54 UTC 2015] 1463 <== Creating archive '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
+[Fri Jul 31 02:22:54 UTC 2015] 1493 <== Generating a random passphrase for '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
+[Fri Jul 31 02:22:54 UTC 2015] 1542 <== Encrypting '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
+[Fri Jul 31 02:22:54 UTC 2015] 1552 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz'...
+[Fri Jul 31 02:22:54 UTC 2015] 1562 <== Generating archive checksum '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:54 UTC 2015] 1581 <== SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt)= d6900b1cb7cd3277eb15d5c80c01dd7b937fd002d66d4c0d1b0e40acfcc90acffc8a3c41a73761c21574b79fed0e8e904e59d71ea512e928cb3079ab75aa7e7c
+[Fri Jul 31 02:22:55 UTC 2015] 1647 <== Uploading 'System bootstrap configuration information'...
+[Fri Jul 31 02:22:55 UTC 2015] 1268 <== Checking if 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/2015-07-31' exists...
+[Fri Jul 31 02:22:55 UTC 2015] 1275 <== Creating 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/2015-07-31'
+[Fri Jul 31 02:22:55 UTC 2015] 1295 <== Uploading to 'r999@10.17.0.114:203/~/backups/core.babaei.net/loader-conf/2015-07-31'...
+[Fri Jul 31 02:22:55 UTC 2015] 1300 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt'... ~ 4.0K
+[Fri Jul 31 02:22:55 UTC 2015] 1370 <== Uploading '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt.sum'... ~ 4.0K
+[Fri Jul 31 02:22:56 UTC 2015] 1690 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt.sum'...
+[Fri Jul 31 02:22:56 UTC 2015] 1696 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt'...
+[Fri Jul 31 02:22:56 UTC 2015] 1708 <== Removing '/var/tmp/backup.2015-07-31.58471/2015-07-31_core.babaei.net_loader-conf.tar.xz.key'...
+[Fri Jul 31 02:22:56 UTC 2015] 300 <== SUCCESS 1962 <== 'System bootstrap configuration information' backup completed successfully.
+[Fri Jul 31 02:22:56 UTC 2015] 292 <== INFO 3141 <== All backup tasks finished.
+[Fri Jul 31 02:22:56 UTC 2015] 3159 <== Cleaning up '/var/tmp/backup.2015-07-31.58471'...
+[Fri Jul 31 02:22:56 UTC 2015] 3218 <== It took 1h 22m 56s to finish all backup tasks.
+[Fri Jul 31 02:22:56 UTC 2015] 292 <== INFO 3219 <== All backups by OmniBackup v0.1.0.
 
-    Have question or need technical assistance, please visit http://www.babaei.net/ or write an email to info [ at ] babaei.net.
-
-
-    [2015-07-31_core.babaei.net_postgres.tar.xz.crypt](sY1JCw8va0sYESubH55MG81CIH0HmvMbXakquBGdXvCMKtP6bSmMSlSWLOPQqWHUGnIoyeFjUmZXB6dPn7w9qxrB6MHDuCTz7MLOq3PiS9FH1bzL6kVqkMgcskeJduZY)
-    [2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt](COKeMtmQevwbU7y9lz96OCzFYjaxnzfXEjoTUCHvAYHBWLV8obluJvwuK4afEkOdPs9vIyuHkx4lgePYdyAejIN5JYffiwQBKtbQYRohhZ39ejYrnbppXBsvQjRbF8up)
-    [2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt](C4oLIMxFBXjLGUjCQ1I4xQGJhLE7pIM8HWtvJOhkR9TNJn3CcadmWpYSp6pbZZCmLs5tMbJ9QQhwB3c1H8GIPzWJLop3bm49c55K7ynrTEj4GW2KjlhozwvNdTps0sJ0)
-    [2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt](HIKxwvSuk6wIHlRjRchxtT6OxIMdzfiRVehCbrK3QsS8SC6jLXxE1BP2zssVMq5IWpCtRrp89plkxIdKLBLhjC3hKyA7Wo0lc9oZs2nqYob2ofCqWS8IkgRBAaGKJdaj)
-    [2015-07-31_core.babaei.net_mysql.tar.xz.crypt](hxISUfxgJc49IMr7Z75vlEO71Gy7ZR6bRPNPbRU32UpAIzTzlYm94sefQOgmkv4L7kYMU5e4xN48hhnqZPj9no4UnMgy5C1LdGsm3TPKYUv8Ogzc2h77gPdCcjxjI5Ds)
-    [2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt](QkAtura4wHJ95RHutBgaaFKwWqIvqjswTsfL8vz7HlFpjXLOUeJRaAT6uKDBiOccaggFWD7cru845GLxfYpa4wVTWLUXaUbmB5UyeQ0Jt99qDVvDivLfXUN7EVOIjlD4)
-    [2015-07-31_core.babaei.net_www.tar.xz.crypt](ciaLyhXnJj9KRiXVsJhEOTt8slxbEYoGRwq9GHuL6nKXZm6rHqA9ySNRe1uwFpGUNVbx7hatcWUFxAC4Wfzzh8OOH8lj4ND7p4T9N3B6pG1Jn6sG3o4EKhYPw75WyRgY)
-    [2015-07-31_core.babaei.net_repos.tar.xz.crypt](vvEYkJr4KvjalYPIwPs9TRm7UOmqOeLBPVzk02Djov718PoVooVtM5YcsSWqwVort10LK8EY6Q2thCPWCoUnCV6TfznewYW1DZ3OwPqhVWNNdaARvXpdpKmF5nkdxtgV)
-    [2015-07-31_core.babaei.net_mail.tar.xz.crypt](EBNcWoyZy3kH2fr8YpjW5IIZzFfTMU0EanLXyr0fvObcXb4h3xap2j710YWYkFL5pYliy9BylRMqDBRtDBv6zKXoQsdiiqbvdd79YAIW50DZNCmuJ3hTDi3hYbMsRJpm)
-    [2015-07-31_core.babaei.net_etc-system.tar.xz.crypt](Qs2aqAPFmsLJ3hz0dB01NzKj3zCV33sXUH39u4YZudfQquXg9q9UeAtQtEzIHUG6alWIG67ANHbEZug8l7E5D55Sv4If81vKnyj2HU1Qrv31GFfxg2IWhCDovSuJloJR)
-    [2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt](z8SfpAvMsI2efM56WNs3PrxIS9CB1ITD8bB5FMYPyVKqysWTChR3PoMbIjUzNBp02PsX3hJn1Ws7OyZ02UEeqaUMavuOLzeCQDJXnUOYnmUfqzJTE07Hiw3GpkPaJzxb)
-    [2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt](nGedoAb7kTnlu9gApBX1vurtalU6SEWq8SZ0KweKoLCSG7QUZzDWVUY4PHbIRiahOP3008Gmg4NtpeAOKzohjwgLqQ9vXCLNAcBVqgIYMiDRILsLZ7X81E7WaI3zGkWp)
+Have question or need technical assistance, please visit http://www.babaei.net/ or write an email to info [ at ] babaei.net.
 
 
+[2015-07-31_core.babaei.net_postgres.tar.xz.crypt](sY1JCw8va0sYESubH55MG81CIH0HmvMbXakquBGdXvCMKtP6bSmMSlSWLOPQqWHUGnIoyeFjUmZXB6dPn7w9qxrB6MHDuCTz7MLOq3PiS9FH1bzL6kVqkMgcskeJduZY)
+[2015-07-31_core.babaei.net_postgres-gitlab.tar.xz.crypt](COKeMtmQevwbU7y9lz96OCzFYjaxnzfXEjoTUCHvAYHBWLV8obluJvwuK4afEkOdPs9vIyuHkx4lgePYdyAejIN5JYffiwQBKtbQYRohhZ39ejYrnbppXBsvQjRbF8up)
+[2015-07-31_core.babaei.net_postgres-redmine.tar.xz.crypt](C4oLIMxFBXjLGUjCQ1I4xQGJhLE7pIM8HWtvJOhkR9TNJn3CcadmWpYSp6pbZZCmLs5tMbJ9QQhwB3c1H8GIPzWJLop3bm49c55K7ynrTEj4GW2KjlhozwvNdTps0sJ0)
+[2015-07-31_core.babaei.net_postgres-owncloud.tar.xz.crypt](HIKxwvSuk6wIHlRjRchxtT6OxIMdzfiRVehCbrK3QsS8SC6jLXxE1BP2zssVMq5IWpCtRrp89plkxIdKLBLhjC3hKyA7Wo0lc9oZs2nqYob2ofCqWS8IkgRBAaGKJdaj)
+[2015-07-31_core.babaei.net_mysql.tar.xz.crypt](hxISUfxgJc49IMr7Z75vlEO71Gy7ZR6bRPNPbRU32UpAIzTzlYm94sefQOgmkv4L7kYMU5e4xN48hhnqZPj9no4UnMgy5C1LdGsm3TPKYUv8Ogzc2h77gPdCcjxjI5Ds)
+[2015-07-31_core.babaei.net_mysql-piwik.tar.xz.crypt](QkAtura4wHJ95RHutBgaaFKwWqIvqjswTsfL8vz7HlFpjXLOUeJRaAT6uKDBiOccaggFWD7cru845GLxfYpa4wVTWLUXaUbmB5UyeQ0Jt99qDVvDivLfXUN7EVOIjlD4)
+[2015-07-31_core.babaei.net_www.tar.xz.crypt](ciaLyhXnJj9KRiXVsJhEOTt8slxbEYoGRwq9GHuL6nKXZm6rHqA9ySNRe1uwFpGUNVbx7hatcWUFxAC4Wfzzh8OOH8lj4ND7p4T9N3B6pG1Jn6sG3o4EKhYPw75WyRgY)
+[2015-07-31_core.babaei.net_repos.tar.xz.crypt](vvEYkJr4KvjalYPIwPs9TRm7UOmqOeLBPVzk02Djov718PoVooVtM5YcsSWqwVort10LK8EY6Q2thCPWCoUnCV6TfznewYW1DZ3OwPqhVWNNdaARvXpdpKmF5nkdxtgV)
+[2015-07-31_core.babaei.net_mail.tar.xz.crypt](EBNcWoyZy3kH2fr8YpjW5IIZzFfTMU0EanLXyr0fvObcXb4h3xap2j710YWYkFL5pYliy9BylRMqDBRtDBv6zKXoQsdiiqbvdd79YAIW50DZNCmuJ3hTDi3hYbMsRJpm)
+[2015-07-31_core.babaei.net_etc-system.tar.xz.crypt](Qs2aqAPFmsLJ3hz0dB01NzKj3zCV33sXUH39u4YZudfQquXg9q9UeAtQtEzIHUG6alWIG67ANHbEZug8l7E5D55Sv4If81vKnyj2HU1Qrv31GFfxg2IWhCDovSuJloJR)
+[2015-07-31_core.babaei.net_etc-ports.tar.xz.crypt](z8SfpAvMsI2efM56WNs3PrxIS9CB1ITD8bB5FMYPyVKqysWTChR3PoMbIjUzNBp02PsX3hJn1Ws7OyZ02UEeqaUMavuOLzeCQDJXnUOYnmUfqzJTE07Hiw3GpkPaJzxb)
+[2015-07-31_core.babaei.net_loader-conf.tar.xz.crypt](nGedoAb7kTnlu9gApBX1vurtalU6SEWq8SZ0KweKoLCSG7QUZzDWVUY4PHbIRiahOP3008Gmg4NtpeAOKzohjwgLqQ9vXCLNAcBVqgIYMiDRILsLZ7X81E7WaI3zGkWp)
+```
