@@ -7,7 +7,7 @@ tags = [ "Hexo", "Octopress" ]
 
 Well, I was living a happy life with _[Octopress 2.x](https://github.com/imathis/octopress)_ despite the fact that I didn't do much blogging in the past couple of years. Moreover, in my estimation [Octopress](http://octopress.org/) still should be considered as one of the greatest blogging platforms among [its peers](https://www.staticgen.com/) and I really got nothing against it. But, I see a few shortcomings which made me looking for alternatives (and some of these still affects [the 3.x version of Octopress](https://github.com/octopress/octopress)):
 
-<!-- more -->
+<!--more-->
 
 * Being very slow on page generation specially when I enable UTF-8 encoding for [my other blog in Farsi](http://fa.babaei.net/). Even building and installing _[Ruby/GSL](http://rb-gsl.rubyforge.org/)_ on my FreeBSD machine did not made any difference (I was not able to build it on windows since it relies on GCC). Sorry, I prefer FreeBSD over GNU/Linux.
 
