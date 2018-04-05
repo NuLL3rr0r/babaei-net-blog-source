@@ -11,7 +11,7 @@ __Update 2 [2016/09/23]:__ _[Official documentation](https://github.com/NuLL3rr0
 
 <br />
 
-A week ago was _[System Administrator Appreciation Day](http://sysadminday.com/)_. It is celebrated on the last _Friday_ in _July_ and it has been celebrated since _July 28, 2000_. But, system administrators know not all days are like that day. They face many hard times and struggles during their careers and the worse of them all is either a [security breech](/blog/2015/07/30/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/) or data loss.
+A week ago was _[System Administrator Appreciation Day](http://sysadminday.com/)_. It is celebrated on the last _Friday_ in _July_ and it has been celebrated since _July 28, 2000_. But, system administrators know not all days are like that day. They face many hard times and struggles during their careers and the worse of them all is either a [security breech](/blog/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/) or data loss.
 
 For so many years I've been writing and maintaining backup scripts on and on, for every single database I added, for every single directory with critical data, or any other service I was running on every new server I got my hands on. In the end, I found myself ended up in a pile of backup scripts and multitudinous cron entries which was a nightmare to keep track of. I even had to manage the schedule so that two backup scripts do not run at the same time. Even more, I had to manually track the backups to see whether they were successful or not. Also, someone has to manually delete the old ones to make rooms for the next ones.
 
@@ -1371,7 +1371,7 @@ Moreover, it's possible to interrupt or break the backup operation at any time u
 
 ### Crontab ###
 
-It is highly recommended to [learn the fundamentals of configuring cron jobs](/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/) if you are not familiar with the topic. Anyway, to schedule a backup task as user <code>root</code>:
+It is highly recommended to [learn the fundamentals of configuring cron jobs](/blog/the-proper-way-of-adding-a-cron-job/) if you are not familiar with the topic. Anyway, to schedule a backup task as user <code>root</code>:
 
 ```
 $ crontab -e -u root

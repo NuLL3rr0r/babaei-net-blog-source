@@ -135,9 +135,9 @@ Here is a [comprehensive awesome tutorial on compiling and integrating Crypto++ 
 
 _Note: Default project file for building the dynamic version which ships with Crypto++ uses static linking (/MT or /MTd). This is so wrong, and it should be /MD or /MDd. Despite the fact that dynamic version builds just fine, you will end up in plenty of ambiguous linker errors when linking your own code against the dynamic version of Crypto++. The reason is that your are linking against different versions of the run-time libraries. So, do not mix static and dynamic versions of the run-time libraries._
 
-{% blockquote MSDN http://msdn.microsoft.com/en-us/library/2kzt1wy3(v=vs.110).aspx /MD, /MT, /LD (Use Run-Time Library) %}
+{{< blockquote author="MSDN" link="http://msdn.microsoft.com/en-us/library/2kzt1wy3(v=vs.110).aspx" title="/MD, /MT, /LD (Use Run-Time Library)" >}}
 All modules passed to a given invocation of the linker must have been compiled with the same run-time library compiler option (/MD, /MT, /LD).
-{% endblockquote %}
+{{< /blockquote >}}
 
 
 <br />

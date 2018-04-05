@@ -38,11 +38,11 @@ There is NO WARRANTY, to the extent permitted by law.
 
 If you don't have __Bash__ installed, you can install it from [Ports](http://www.freebsd.org/ports/) on __FreeBSD__ easily:
 
-{% codeblock lang:sh %}
+```
 $ cd /usr/ports/shells/bash
 $ make config-recursive
 $ make install clean
-{% endcodeblock %}
+```
 
 **2.** Create or replace both __~/.bashrc__ and __~/.dir_colors__ files with the following content, for both __babaei__ and __root__ users:
 
