@@ -3,6 +3,7 @@ title = "International Day Against DRM at Packt Publishing"
 slug = "international-day-against-drm-packt-publishing"
 date = 2015-05-06T23:30:33Z
 tags = [ "Advertising", "DRM", "Packt Publishing" ]
+aliases = [ "/blog/2015/05/06/international-day-against-drm-packt-publishing/" ]
 +++
 
 {{< blockquote author="Defective by Design - International Day Against DRM  May, 6th 2015" link="https://www.defectivebydesign.org/dayagainstdrm" >}}

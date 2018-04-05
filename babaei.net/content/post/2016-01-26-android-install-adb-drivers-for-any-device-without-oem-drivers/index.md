@@ -3,6 +3,7 @@ title = "Android: Install ADB drivers for any device without OEM drivers"
 slug = "android-install-adb-drivers-for-any-device-without-oem-drivers"
 date = 2016-01-26T03:38:37Z
 tags = [ "ADB", "Android", "Nexus 5", "Nexus 7", "Windows" ]
+aliases = [ "/blog/2016/01/26/android-install-adb-drivers-for-any-device-without-oem-drivers/" ]
 +++
 
 {{< figure src="/blog/android-install-adb-drivers-for-any-device-without-oem-drivers/android-robot.png" alt="Figure 1. Android Robot" caption="Figure 1. Android Robot" >}}

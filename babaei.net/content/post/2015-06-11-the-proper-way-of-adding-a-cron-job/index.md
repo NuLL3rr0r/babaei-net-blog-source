@@ -3,6 +3,7 @@ title = "The Proper Way of Adding a Cron Job"
 slug = "the-proper-way-of-adding-a-cron-job"
 date = 2015-06-11T16:37:18Z
 tags = [ "FreeBSD", "GNU", "Linux", "Unix" ]
+aliases = [ "/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/" ]
 +++
 
 Until not so long ago, to add my own cron jobs I always had the habit of modifying <code>/etc/crontab</code> on my [FreeBSD](https://www.freebsd.org/) system [which turned out to be wrong](https://www.freebsd.org/doc/handbook/configtuning-cron.html). In simple words, there are two types of crontab files:

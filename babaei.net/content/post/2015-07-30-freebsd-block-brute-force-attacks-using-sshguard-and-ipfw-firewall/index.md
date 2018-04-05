@@ -3,6 +3,7 @@ title = "FreeBSD: Block Brute-force Attacks Using Sshguard and IPFW Firewall"
 slug = "freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall"
 date = 2015-07-30T19:56:00Z
 tags = [ "Brute-force", "Firewall", "FreeBSD", "GNU", "IPF", "IPFILTER", "IPFW", "Linux", "PF", "Security", "SSH", "Unix", "Vulnerability" ]
+aliases = [ "/blog/2015/07/30/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/" ]
 +++
 
 There is an old saying that the only safe computer is one that's disconnected from the network, turned off, and locked in an underground bunker—and even then you can't be sure!

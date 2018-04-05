@@ -3,6 +3,7 @@ title = "Wifi Fix for Asus Google Nexus 7 Cellular, When SIM-Card Is Inserted"
 slug = "wifi-fix-for-asus-google-nexus-7-cellular-when-sim-card-is-inserted"
 date = 2013-06-13T03:39:00Z
 tags = [ "Android", "Nexus 7" ]
+aliases = [ "/blog/2013/06/13/wifi-fix-for-asus-google-nexus-7-cellular-when-sim-card-is-inserted/" ]
 +++
 
 As a Nexus 7 tablet user I've been struggling with my Nexus 7 WiFi from the moment that I've owned it. It was originally released with Android 4.2.0 installed. Nonetheless, Android 4.2.1 and 4.2.2 didn't get me anywhere with the WiFi issue. In fact, you may have suffered from this issue, and are already familiar with. After inserting a SIM-Card into the device, Android asks to restart the device. However, after rebooting you will notice the WiFi module won't work. No matter how hard you try it won't see any WiFi network while keeps saying "WPS failed. Please try again in a few minutes". Even tried an open unencrypted WiFi without any luck. In fact, the only solution that worked for me was removing the SIM-Card completely and do a factory reset.

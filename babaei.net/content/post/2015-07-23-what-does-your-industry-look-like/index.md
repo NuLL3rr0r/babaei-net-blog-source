@@ -3,6 +3,7 @@ title = "What does your industry look like?"
 slug = "what-does-your-industry-look-like"
 date = 2015-07-23T15:14:36Z
 tags = [ "Advertising", "Packt Publishing" ]
+aliases = [ "/blog/2015/07/23/what-does-your-industry-look-like/" ]
 +++
 
 {{< figure src="/blog/what-does-your-industry-look-like/what-does-your-industry-look-like.png" alt="What does your industry look like?" caption="What does your industry look like?" >}}

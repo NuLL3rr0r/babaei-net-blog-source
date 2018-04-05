@@ -3,6 +3,7 @@ title = "nano, Do Not Wrap Text"
 slug = "nano-do-not-wrap-text"
 date = 2013-02-17T01:13:00Z
 tags = [ "Console", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "nano", "Terminal", "Unix" ]
+aliases = [ "/blog/2013/02/17/nano-do-not-wrap-text/" ]
 +++
 
 [GNU nano](http://www.nano-editor.org/) is my favorite text editor while I'm on console. However, there's one thing about nano which annoys me: _automatic text wrapping!_

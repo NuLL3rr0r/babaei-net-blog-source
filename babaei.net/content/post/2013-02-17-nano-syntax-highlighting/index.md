@@ -3,6 +3,7 @@ title = "nano, Syntax Highlighting"
 slug = "nano-syntax-highlighting"
 date = 2013-02-17T01:27:00Z
 tags = [ "Console", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "nano", "Terminal", "Unix" ]
+aliases = [ "/blog/2013/02/17/nano-syntax-highlighting/" ]
 +++
 
 [GNU nano](http://www.nano-editor.org/) is my favorite text editor while I'm on console. Although, it doesn't offer syntax highlighting by default, it comes with a decent set of syntax highlighting files. Usually, these files are exist in __/usr/local/share/nano__ or __/usr/share/nano__, depending on your distro's preference. You can enable syntax highlighting for your prefered language(s) by including related file(s) with __.nanorc__ extension in your __~/.nanorc__ file.

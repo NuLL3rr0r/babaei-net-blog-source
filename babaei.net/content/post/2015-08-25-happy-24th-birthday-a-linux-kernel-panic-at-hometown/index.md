@@ -3,6 +3,7 @@ title = "Happy 24th Birthday: A Linux Kernel Panic At Hometown"
 slug = "happy-24th-birthday-a-linux-kernel-panic-at-hometown"
 date = 2015-08-25T21:00:00Z
 tags = [ "Crash", "FLOSS", "FreeBSD", "GNU", "Kernel Panic", "Linux", "Unix" ]
+aliases = [ "/blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/" ]
 +++
 
 {{< figure src="/blog/happy-24th-birthday-a-linux-kernel-panic-at-hometown/happy-24th-birthday-a-linux-kernel-panic-at-hometown.jpg" link="/blog/happy-24th-birthday-a-linux-kernel-panic-at-hometown/happy-24th-birthday-a-linux-kernel-panic-at-hometown-hq.jpg" alt="A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)" caption="A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)" >}}

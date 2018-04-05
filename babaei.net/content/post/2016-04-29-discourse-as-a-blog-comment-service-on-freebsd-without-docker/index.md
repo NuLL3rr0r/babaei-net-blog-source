@@ -3,6 +3,7 @@ title = "Discourse as a Blog Comment Service on FreeBSD without Docker"
 slug = "discourse-as-a-blog-comment-service-on-freebsd-without-docker"
 date = 2016-04-29T06:49:31Z
 tags = [ "Docker", "FreeBSD", "GNU", "Hexo", "Linux", "Ruby", "Ruby on Rails", "Unix" ]
+aliases = [ "/blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/" ]
 +++
 
 __Update 1 [2016/09/30]:__ _A section has been added to the end of the article for dealing with major FreeBSD upgrades._

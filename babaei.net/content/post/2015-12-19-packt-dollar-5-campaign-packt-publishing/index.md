@@ -3,6 +3,7 @@ title = "Packt $5 Campaign - Packt Publishing"
 slug = "packt-dollar-5-campaign-packt-publishing"
 date = 2015-12-19T10:47:34Z
 tags = [ "Advertising", "Packt Publishing" ]
+aliases = [ "/blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/" ]
 +++
 
 {{< figure src="/blog/packt-dollar-5-campaign-packt-publishing/packt-dollar-5-campaign-packt-publishing.png" alt="Packt $5 Campaign - Packt Publishing" caption="Packt $5 Campaign - Packt Publishing" >}}

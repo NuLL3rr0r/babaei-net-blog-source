@@ -3,6 +3,7 @@ title = "Post-Processing Effects in Cocos2d-x"
 slug = "post-processing-effects-in-cocos2d-x"
 date = 2016-01-08T22:10:30Z
 tags = [ "C", "C++", "Cocos2d-x", "Game Development", "Game Programming", "OpenGL", "VC++", "Visual C++", "Visual Studio" ]
+aliases = [ "/blog/2016/01/08/post-processing-effects-in-cocos2d-x/" ]
 +++
 
 {{< figure src="/blog/post-processing-effects-in-cocos2d-x/gray-black-and-white-shader.png" alt="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" caption="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" >}}

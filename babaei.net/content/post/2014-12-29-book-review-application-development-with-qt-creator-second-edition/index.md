@@ -3,6 +3,7 @@ title = "Book Review: Application Development with Qt Creator - Second Edition"
 slug = "book-review-application-development-with-qt-creator-second-edition"
 date = 2014-12-29T04:27:20Z
 tags = [ "Android", "Book Review", "C", "C++", "Clang", "CMake", "Cross-platform", "FreeBSD", "G++", "GCC", "GNU", "iOS", "Linux", "Mac OS X", "MSVC", "QMake", "Packt Publishing", "Qt Creator", "Unix", "VC++", "Visual C++", "Visual Studio", "Windows" ]
+aliases = [ "/blog/2014/12/29/book-review-application-development-with-qt-creator-second-edition/" ]
 +++
 
 Almost three weeks ago I received a review request from one of the _[Packt Publishing](http://www.packtpub.com/)_ staffs to review _[Application Development with Qt Creator, 2nd Edition](http://www.packtpub.com/application-development/application-development-qt-creator-2nd-edition)_ written by _[Ray Rischpater](http://www.lothlorien.com/dove/)_ which has been recently published by Packt Publishing. Since I've been developing cross platform [Qt](http://qt-project.org/) (cute, often mispronounced as Q-T cue-tee) applications from Qt 4 era back in 2008 -- when Qt Creator was not around yet and the project was running by Trolltech at the time -- and a handful of Qt Quick mobile applications over the past two years, I consider myself eligible enough to write a brief review on it. So, I was provided with a review copy and after reading it cover to cover, my thoughts on the book are as follows.

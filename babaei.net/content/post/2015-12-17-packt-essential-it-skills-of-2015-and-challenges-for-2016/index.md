@@ -3,6 +3,7 @@ title = "Packt Essential IT Skills of 2015 and Challenges for 2016"
 slug = "packt-essential-it-skills-of-2015-and-challenges-for-2016"
 date = 2015-12-17T22:48:06Z
 tags = [ "Advertising", "Packt Publishing" ]
+aliases = [ "/blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/" ]
 +++
 
 {{< figure src="/blog/packt-essential-it-skills-of-2015-and-challenges-for-2016/packt-essential-it-skills-of-2015-and-challenges-for-2016.png" alt="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" caption="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" >}}

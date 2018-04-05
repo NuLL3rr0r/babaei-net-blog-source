@@ -3,6 +3,7 @@ title = "Rapid Gulp Video Tutorial"
 slug = "rapid-gulp-video-tutorial"
 date = 2015-06-12T14:06:50Z
 tags = [ "Advertising", "Gulp", "Packt Publishing", "Tutorial" ]
+aliases = [ "/blog/2015/06/12/rapid-gulp-video-tutorial/" ]
 +++
 
 Modern web development is filled with an abundance of tools and technologies, but it’s difficult to know where to begin. You want both efficiency of your work and high performance of your site; Gulp brings that right to your doorstep. With its rising popularity, you don’t want to leave Gulp out of your toolbox.

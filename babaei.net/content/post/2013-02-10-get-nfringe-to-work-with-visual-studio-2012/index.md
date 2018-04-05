@@ -3,6 +3,7 @@ title = "Get nFringe to Work with Visual Studio 2012"
 slug = "get-nfringe-to-work-with-visual-studio-2012"
 date = 2013-02-10T17:53:00Z
 tags = [ "Epic", "Game Development", "Game Programming", "nFringe", "UDK", "UnrealScript", "Visual Stuio", "Windows" ]
+aliases = [ "/blog/2013/02/10/get-nfringe-to-work-with-visual-studio-2012/" ]
 +++
 
 As you've noticed there's still no official support for Microsoft Visual Studio 2012 in recent Pixel Mine nFringe releases. While ago I came across [an awesome forum post at Epic Games Forums]( http://forums.epicgames.com/threads/874296-debug-Unreal-Script-error-at-vs2011?p=30795357&viewfull=1#post30795357) which describs a simple process of getting nFringe to work with VS2012. Since then I've used it in my day to day development tasks and I had no difficulties at all using it. And damn, it's pretty stable despite the fact that not officially supported by Pixel Mine. Even nFringe version 1.1 which I've tested is playing nice with VS2012.

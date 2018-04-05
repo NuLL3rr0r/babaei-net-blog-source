@@ -3,6 +3,7 @@ title = "OmniBackup: One Script to back them all up"
 slug = "omnibackup-one-script-to-back-them-all-up"
 date = 2015-08-08T03:23:23Z
 tags = [ "Backup", "FreeBSD", "GNU", "Linux", "OmniBackup", "Unix" ]
+aliases = [ "/blog/2015/08/08/omnibackup-one-script-to-back-them-all-up/" ]
 +++
 
 __Update 1 [2016/09/23]:__ _OmniBackup now officially supports GNU/Linux. [More info](https://github.com/NuLL3rr0r/omnibackup#Requirements)..._
