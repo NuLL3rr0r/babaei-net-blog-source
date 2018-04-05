@@ -98,6 +98,30 @@
     }
 }
 
+footer {
+    padding: 5% 0;
+}
+
+footer .copyright {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: justify;
+  margin-top: 40px;
+}
+
+footer .copyright p {
+    font-size: 0.9em !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+footer .copyright .credit a,
+footer .copyright .license a {
+    letter-spacing: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
 .codeblock .title {
     display: block;
     text-align: center;
