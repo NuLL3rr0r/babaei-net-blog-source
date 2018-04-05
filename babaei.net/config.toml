@@ -97,7 +97,7 @@ PaginatePath = "/blog/page"
     weight = 3
 
 [[menu.main]]
-    name = "Email"
+    name = "Contact"
     url = "http://subscribe.babaei.net/?lang=en&contact-form"
     weight = 7
 
