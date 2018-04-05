@@ -17,12 +17,15 @@ PaginatePath = "/blog/page"
     favicon = "/favicon.ico"
 #    gcse = ""
     logo = "/img/mohammad-s-babaei.png"
-    piwik = ""
     readingTime = true
     rss = true
     share_img = ""
     subtitle = "Unreal Engine / C++ Developer"
     useChroma = true
+
+[Params.piwik]
+    server = "analytics.babaei.net"
+    id = "1"
 
 [Author]
     name = "Mohammad S. Babaei"
