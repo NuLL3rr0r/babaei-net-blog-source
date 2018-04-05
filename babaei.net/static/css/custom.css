@@ -122,6 +122,26 @@ footer .copyright .license a {
     margin-right: 4px;
 }
 
+.well p {
+    line-height: 2.0em;
+}
+
+/*.post-list, .post-title,*/
+.post-list, .post-entry,
+/*.post-heading,*/
+.blog-post {
+    text-align: justify;
+}
+
+.post-entry p,
+.blog-post p {
+    line-height: 2.0em;
+}
+
+.intro-header .post-heading h1 {
+    font-size: 36px;
+}
+
 .codeblock .title {
     display: block;
     text-align: center;
@@ -156,21 +176,6 @@ figcaption p {
     margin-top: 0.1em;
     margin-bottom: 2.0em;
     color: #151515;
-}
-
-/*.post-list, .post-title,*/
-.post-list, .post-entry,
-/*.post-heading,*/
-.blog-post {
-    text-align: justify;
-}
-
-.blog-post p {
-    line-height: 2.0em;
-}
-
-.intro-header .post-heading h1 {
-    font-size: 36px;
 }
 
 .blog-archives {
