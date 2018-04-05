@@ -165,6 +165,10 @@ figcaption p {
     text-align: justify;
 }
 
+.blog-post p {
+    line-height: 2.0em;
+}
+
 .intro-header .post-heading h1 {
     font-size: 36px;
 }
