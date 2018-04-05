@@ -1,89 +1,146 @@
-*,*:before,*:after{
-    box-sizing:border-box
+/*
+    Forked from
+    https://gitlab.com/Keats/vincent.is/blob/master/sass/resume.scss
+*/
+
+*, *:before, *:after {
+    box-sizing: border-box;
 }
-body{
-    font-family:'Fira Mono', sans-serif;
-    margin-bottom:5rem;
-    margin-top:5rem
+
+body {
+    font-family: 'Fira Mono', sans-serif;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    background: white;
 }
-p,li{
-    line-height:1.5;
-    word-wrap:break-word
+
+a:link {
+    text-decoration: none;
+    color: #666;
 }
-li{
-    margin-bottom:0.5rem
+
+a:visited {
+    text-decoration: none;
+    color: #666;
 }
-.more{
-    word-wrap:break-word
+
+a:hover {
+    text-decoration: none;
+    color: #333;
 }
-.container{
-    width:900px;
-    margin:0 auto
+
+a:active {
+    text-decoration: none;
+    color: #000;
 }
-h1{
-    margin-bottom:1rem
+
+p, li {
+    line-height: 1.5;
+    word-wrap: break-word;
 }
-.tagline{
-    margin-bottom:1rem;
-    font-size:1.25rem
+
+li {
+    margin-bottom: 0.5rem;
 }
-.intro,.experiences,.side-projects{
-    margin-top:2rem
+
+.more {
+    word-wrap: break-word;
 }
-.timeline{
-    border-left:1px solid #aaa;
-    padding:0 1rem 0 1.5rem;
-    margin-left:0.75rem
+
+.container {
+    width: 900px;
+    margin: 3.0em auto;
 }
-.work{
-    position:relative;
-    margin-bottom:2rem
+
+h1 {
+    margin-bottom: 1rem;
 }
-.work__dot{
-    width:20px;
-    height:20px;
-    position:absolute;
-    border:1px solid #aaa;
-    border-radius:50%;
-    z-index:1000;
-    left:-34px;
-    background:white
+
+.tagline {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
 }
-.work__info{
-    font-weight:normal;
-    display:inline-block;
-    font-family:'Fira Mono', sans-serif;
-    margin-left:0.5rem
+
+.intro,.experiences,.side-projects {
+    margin-top: 2rem;
 }
-.work--last{
-    margin-bottom:0
+
+.timeline {
+    border-left: 1px solid #aaa;
+    padding: 0 1rem 0 1.5rem;
+    margin-left: 0.75rem;
 }
-.more{
-    margin-top:2rem
+
+.work {
+    position: relative;
+    margin-bottom: 2rem;
 }
-@media (max-width: 640px){
-    .container{
-        width:100%;
-        max-width:100%;
-        padding:0.5rem 1rem;
-        margin-top:0
+
+.work-dot {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    z-index: 1000;
+    left: -34px;
+    background: white;
+}
+
+.work-info {
+    font-weight: normal;
+    display: inline-block;
+    font-family: 'Fira Mono', sans-serif;
+    margin-left: 0.5rem;
+}
+
+.work-last {
+    margin-bottom: 0;
+}
+
+.more {
+    margin-top: 2rem;
+}
+
+.contact ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contact li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1.5em;
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem 1rem;
+        margin-top: 0;
     }
-    ul{
-        padding-left:0.5rem
+
+    ul {
+        padding-left: 0.5rem;
     }
 }
-@media print{
-    body{
-        padding:0 1rem;
-        margin:0
+
+@media print {
+    body {
+        padding: 0 1rem;
+        margin: 0;
     }
-    .container{
-        margin-top:0
+
+    .container {
+        margin-top: 0;
     }
-    .container p{
-        margin-bottom:0
+
+    .container p {
+        margin-bottom: 0;
     }
-    .download-resume{
-        display:none
+
+    .print-resume {
+        display: none;
     }
 }
