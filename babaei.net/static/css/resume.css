@@ -113,6 +113,11 @@ h1 {
     margin-right: 1.5em;
 }
 
+.intro p {
+    line-height: 2.0em;
+    text-align: justify;
+}
+
 @media (max-width: 640px) {
     .container {
         width: 100%;

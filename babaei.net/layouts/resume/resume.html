@@ -1,117 +1,338 @@
+<!--
+    Forked from
+    https://gitlab.com/Keats/vincent.is/blob/master/templates/resume.html
+-->
+
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-      <meta charset="UTF-8">
-      <meta name="apple-mobile-web-app-capable" content="yes">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
-      <title>Vincent Prouillet</title>
-      <link rel="stylesheet" href="/css/resume.css" />
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-          ga('create', 'UA-43335571-1', 'auto');
-          ga('send', 'pageview');
-        </script>
+        <title>
+            {{ if .Site.Author.name }}
+            {{ .Site.Author.name }}
+            {{ end }}
+        </title>
+
+        <link rel="stylesheet" href="/css/normalize.css" />
+        <link rel="stylesheet" href="/css/resume.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-  <body>
-    <div class="container meta">
-        <h1>Vincent Prouillet</h1>
-        <div class="tagline">Full Stack Software Engineer</div>
-        <div class="contact">
-            <a href="mailto:prouillet.vincent@gmail.com">prouillet.vincent@gmail.com</a> |
-            <a href="https://vincent.is">vincent.is</a> |
-            <a href="http://github.com/Keats">github.com/Keats</a>
-            </span>
+
+    <body>
+        <div class="container meta">
+            <div class="container title">
+                {{ if .Site.Author.name }}
+                <h1>{{ .Site.Author.name }}</h1>
+                {{ end }}
+
+                <div class="tagline">C++ / Unreal Engine 4 Developer</div>
+
+                <div class="contact">
+                    <ul>
+                        <li>
+                            {{ if .Site.Author.website }}
+                            <i class="fa fa-home"></i>&nbsp;<a href="{{ .Site.Author.website }}">babaei.net</a>
+                            {{ end }}
+                        </li>
+                        <li>
+                            {{ if .Site.Author.github }}
+                            <i class="fa fa-github"></i>&nbsp;<a href="https://github.com/{{ .Site.Author.github }}">github.com/NuLL3rr0r</a>
+                            {{ end }}
+                        </li>
+                        <li>
+                            <span class="print-resume">
+                                <i class="fa fa-print"></i>&nbsp;<a href="javascript:window.print()">Print</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+           </div>
+
+            <div class="container intro">
+                <h2>Introduction</h2>
+                <p>
+                    I have been working as a professional game developer for almost a decade, having acquired a wealth of experience that ranges from C++ to Unreal Engine 4 game development. Moreover, I have been involved with three major video games, namely, Reminiscence, <a href="https://vimeo.com/175407810">Resonance (a.k.a. Ghalb-e Simorgh)</a>, and <a href="https://vimeo.com/175401743">Thrateon (a.k.a. Age of Pahlevans II, or, Asr-e Pahlevanan 2)</a>, based on Unreal technology.
+                </p>
+                <p>
+                    Although I have chiefly assumed the role of a developer in game development industry, having an unquenchable desire to thrive as well as years of experience to rely upon, I enjoy being challenged and working on projects that require me to work outside my knowledge set and comfort zone.
+                </p>
+            </div>
+
+            <div class="container experiences">
+                <h2>Professional Experiences</h2>
+
+                <div class="timeline">
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Lead Game Programmer, Atitel
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2017 - Now
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Developing Reminiscence, a first-person shooter (FPS) 3d video game under development in Unreal Engine 4 and C++ for Microsoft Windows and SteamOS
+                            </li>
+                            <li>
+                                System administration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Game Programmer, Indie
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2015 - 2017
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Went indie and worked on two unpublished video games written and developed in C++, Cocos2d-x, and Unreal Engine 4
+                            </li>
+                            <li>
+                                This helped me get back to hardcore game development after taking a break from game development for two years
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Middle-level Manager & Lead Programmer, Gostaresh Tejarat Electronic Dena
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2014 - 2015
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Engineering support department manager
+                            </li>
+                            <li>
+                                VAS department manager
+                            </li>
+                            <li>
+                                Project manager and scrum master
+                            </li>
+                            <li>
+                                Lead C++ programmer on Android (Qt Quick and NDK)
+                            </li>
+                            <li>
+                                Back-end and front-end development in C++ using Wt web-toolkit
+                            </li>
+                            <li>
+                                System administration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Project Manager & Lead Programmer, Approsia
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2013 - 2014
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Responsible for development of various mobile games and applications as a project manager and scrum master
+                            </li>
+                            <li>
+                                Lead C++ programmer on Android (Qt Quick and NDK)
+                            </li>
+                            <li>
+                                Back-end and front-end development in C++ using Wt web-toolkit
+                            </li>
+                            <li>
+                                System administration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Game Programmer, RAS Games
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2010 - 2013
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Worked on <a href="https://vimeo.com/175407810">Resonance (a.k.a. Ghalb-e Simorgh)</a>, a platformer 3d video game developed in Unreal Development Kit (a.k.a. UDK) for Microsoft Windows
+                            </li>
+                            <li>
+                                Worked on <a href="https://vimeo.com/175401743">Thrateon (a.k.a. Age of Pahlevans II, or, Asr-e Pahlevanan 2)</a>, a role-playing (RPG) 3d video game developed in Unreal Development Kit (a.k.a. UDK) for Microsoft Windows
+                            </li>
+                            <li>
+                                Game-play programming and scripting (UDK, UnrealScript)
+                            </li>
+                            <li>
+                                UI programming using Scaleform Gfx (ActionScript 2.0 and 3.0)
+                            </li>
+                            <li>
+                                Tools programming (C++, C#, STL, Boost, Qt, QML, Wt, WPF, ZeroMQ, ...)
+                            </li>
+                            <li>
+                                UDK engine extension using C/C++ through a technic called DLL-Bind in order to extend UDK capabilities and write custom in-house systems for our games (e.g. save/load, srt subtitles, RPC, ...)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Lead Programmer, Rayan Hiva Kish
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2011
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Participated in development of a video conference system (worked on both MCU and Terminal modules)
+                            </li>
+                            <li>
+                                Back-end development in C++
+                            </li>
+                            <li>
+                                Front-end development in C++
+                            </li>
+                            <li>
+                                Responsible for creation of two custom distributions for both MCU (based on FreeBSD) and Terminal (GNU/Linux) machines
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Expert & Judge, Iran Skills
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2010
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Expert & Judge in IT Network Systems Administration competition
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            CEO & Core Programmer, Hamrahan Farday-e Aseman
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2005 - 2010
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Co-founded tech company and served as its CEO
+                            </li>
+                            <li>
+                                Responsible for development of various in-house content management systems
+                            </li>
+                            <li>
+                                Back-end development in C#
+                            </li>
+                            <li>
+                                Front-end development in C#, JavaScript and Macromedia/Adobe Flash and ActionScript for both web and desktop applications
+                            </li>
+                            <li>
+                                System administration
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="work work-last">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Programmer, Freelance
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2002 - 2005
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>
+                                Various out-sourced projects including financial desktop applications, multimedia content creation, and web design and development
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container experiences">
+                <h2>Teaching Experiences</h2>
+
+                <div class="timeline">
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Smart School of Kermanshah (High School)
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2004 - 2010
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>CIW</li>
+                            <li>Multimedia</li>
+                            <li>Web design and development</li>
+                        </ul>
+                    </div>
+
+                    <div class="work">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Information and Communication Technology Training Center of Kermanshah
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2005 - 2008
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>CIW</li>
+                            <li>Multimedia</li>
+                            <li>Programming</li>
+                            <li>Web design and development</li>
+                        </ul>
+                    </div>
+
+                    <div class="work work-last">
+                        <div class="work-dot"></div>
+                        <h3>
+                            Education and Training Organization of Kermanshah
+                            <span class="work-info">
+                                <i class="fa fa-calendar-o"></i>
+                                2006
+                            </span>
+                        </h3>
+                        <ul>
+                            <li>Advanced multimedia and web design course for teachers</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
-    </div>
-
-    <div class="container intro">
-        <h2>Introduction</h2>
-        <p>
-            I am a developer with an entrepreneurial mind and a good eye for UX.<br>
-            I have experience working remotely and in-house, both as a solo developer and in small teams and can
-            jump in projects quickly.
-        </p>
-    </div>
-
-    <div class="container experiences">
-        <h2>Experiences</h2>
-
-        <div class="timeline">
-            <div class="work">
-                <div class="work__dot"></div>
-                <h3>Freelancer<span class="work__info">— Remote — 2017-Now</span></h3>
-                <ul>
-                    <li>
-                        Stroly.jp: rewrite of map viewer (2/3 lines of code, 1/4 gzipped size), rewrite of Android app in Kotlin,
-                        cleanup and improvemetn of the main Django site.
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="work">
-                <div class="work__dot"></div>
-                <h3>Director, We Are Wizards <span class="work__info">— London/Remote — 2014-Now</span></h3>
-                <ul>
-                    <li>Co-founded tech agency making MVPs for clients</li>
-                    <li>
-                        Developed our own product <a href="https://proppy.io">https://proppy.io</a> to make our proposal
-                        writing experience better wearing all hats: user testing, development, customer support.
-                    </li>
-                </ul>
-            </div>
-
-            <div class="work">
-                <div class="work__dot"></div>
-                <h3>Contractor <span class="work__info">— London/Remote — 2014</span></h3>
-                <h4>Django developer, Timetric — London — 6 months</h4>
-                <ul>
-                    <li>Improvement/bug fixing of Excel <=> Postgres data transfers</li>
-                    <li>Optimised a machine learning pipeline and Elasticsearch queries</li>
-                    <li>Postgres tuning</li>
-                </ul>
-
-                <h4>Front-end developer, Service Trade — Remote — 2 months</h4>
-                <ul>
-                    <li>Added features/design to the tablet version of the app in EmberJS</li>
-                </ul>
-            </div>
-
-            <div class="work work--last">
-                <div class="work__dot"></div>
-                <h3>Django/JavaScript/Go developer, Green Man Gaming <span class="work__info">— London — 2013-2014</span></h3>
-                <ul>
-                    <li>Maintained and improved the Green Man Gaming shop and Playfire (Django + jQuery)</li>
-                    <li>
-                        Main developer of Playfire 4 Web: third-party javascript to interact with
-Playfire via widgets such as comments and Want button
-                    </li>
-                    <li>Developed a Steam scraper in Go</li>
-                </ul>
-            </div>
-        </div>
-
-            <div class="more">
-                More on LinkedIn: <a href="https://www.linkedin.com/in/vincentprouillet">https://www.linkedin.com/in/vincentprouillet</a>
-            </div>
-
-        <div class="container side-projects">
-            <h2>Side projects</h2>
-
-            <p><b>Tera:</b> Template engine based on Jinja2 and Django templates written in Rust</p>
-            <p><b>Gutenberg:</b> Static site engine written in Rust</p>
-        </div>
-
-        <div class="container skills">
-            <h2>Technical skills</h2>
-            <p>Python (Django, Flask), JavaScript/TypeScript (React, Angular), Golang, Rust, Postgres</p>
-        </div>
-    </div>
-  </body>
+    </body>
 </html>
