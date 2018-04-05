@@ -159,7 +159,7 @@ title = "Projects"
             <h2>Thrateon</h2>
         </div>
         <div class="trailer">
-        {{< vimeo 175407810 >}}
+        {{< vimeo 175401743 >}}
         </div>
         <div class="extra-info">
             <table class="table table-hover">
