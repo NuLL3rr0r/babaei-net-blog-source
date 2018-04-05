@@ -158,6 +158,17 @@ figcaption p {
     color: #151515;
 }
 
+/*.post-list, .post-title,*/
+.post-list, .post-entry,
+/*.post-heading,*/
+.blog-post {
+    text-align: justify;
+}
+
+.intro-header .post-heading h1 {
+    font-size: 36px;
+}
+
 .blog-archives {
 
 }

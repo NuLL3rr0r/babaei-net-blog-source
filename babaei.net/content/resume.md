@@ -1,2 +1,4 @@
 +++
+title = "Resume"
+type = "resume"
 +++
