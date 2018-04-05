@@ -20,8 +20,10 @@ PaginatePath = "/blog/page"
     readingTime = true
     rss = true
     share_img = ""
+    socialShare = true
     subtitle = "Unreal Engine / C++ Developer"
     useChroma = true
+    useHLJS = false
 
 [Params.piwik]
     server = "analytics.babaei.net"
