@@ -1,8 +1,6 @@
 +++
+title = "Search"
 +++
-
-Search
-------
 
 In order to search the site using [DuckDuckGo](https://duckduckgo.com/), enter a phrase in the following text box and hit enter:
 

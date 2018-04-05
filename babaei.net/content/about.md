@@ -1,9 +1,6 @@
 +++
+title = "About Me"
 +++
-
-About Me
---------
-<br/>
 
 My first exposure to videogames occurred during a visit to my aunt’s house in the late 80’s. I was riveted at the sight of motioning icons on the TV screen. Later, I learned the videogame was called River Raid, and the console 8-bit Atari 2600. When my parents bought me my first gaming console the next summer, I found my lifelong passion: making games.
 
