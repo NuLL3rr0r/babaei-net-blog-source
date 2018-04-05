@@ -145,6 +145,7 @@ title = "Projects"
                             Role
                         </th>
                         <td>
+                            Core programmer<br />
                             Gameplay programmer<br />
                             UI programmer<br />
                             Tools programmer<br />
@@ -225,6 +226,7 @@ title = "Projects"
                             Role
                         </th>
                         <td>
+                            Core programmer<br />
                             Gameplay programmer<br />
                             UI programmer<br />
                             Tools programmer<br />
