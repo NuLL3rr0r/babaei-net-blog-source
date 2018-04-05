@@ -1,2 +1,14 @@
 +++
 +++
+
+About Me
+--------
+<br/>
+
+My first exposure to videogames occurred during a visit to my aunt’s house in the late 80’s. I was riveted at the sight of motioning icons on the TV screen. Later, I learned the videogame was called River Raid, and the console 8-bit Atari 2600. When my parents bought me my first gaming console the next summer, I found my lifelong passion: making games.
+
+Although the game development industry in my home country of Iran is still in the making, I am affiliated with a respectable group of game developers known as the nation’s first generation. My first foray into computer graphics was in the late 90’s when I received a copy of “PC Intern: System Programming: The Encyclopedia of DOS Programming Know-how,” and learned how to create and animate sprites in 320x200 VGA graphics mode using 256 colors. My debut as a game developer took place in the early 2000’s when I learned about Macromedia Flash 5, followed by a few experimental and hobby projects in Managed DirectX, XNA and OGRE3D.
+
+My professional game development career began by joining one of the innovative and upstart gaming studios in Iran named RAS Games. At the time they came up with promising projects such as Age of Pahlevans I (2009) and Mithra's Planet (2010), and fortunately, I had the opportunity to be part of two major 3D games development, namely, Resonance and Thrateon (sequel to Age of Pahlevans), for almost three years, based on Unreal technology (UDK), in platformer and role-playing (RPG) genres, respectively. The experience at RAS Games played a key role in my preparation as a gameplay programmer, UI programmer, and tools programmer in the game development industry. Having acquired a wide array of cognizance for over a decade ranging from C++ to Unreal Engine 4 3D game development to Cocos2d-x 2D game development, I aspire to continue my journey as a life-long learner and professional game developer.
+
+With an undying love and drive when it comes to pursuing my career in game development industry, as of now, I'm working on Reminiscence, a first-person shooter (FPS) game under development in Unreal Engine 4 and C++ for Microsoft Windows and SteamOS at [Atitel game studio](http://atitel.com/).
