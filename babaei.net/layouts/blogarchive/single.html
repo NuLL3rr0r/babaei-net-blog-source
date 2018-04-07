@@ -4,25 +4,28 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="blog-archives">
                 {{ .Content }}
-                {{ range (where .Site.Pages "Type" "post") }}
-                {{ range .Pages }}
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
+                <div class="blog-archives-grouped-by-date">
+                    <div class="blog-archives-year">
                         <i class="fa fa-calendar-o"></i>&nbsp;
-                        <span>{{ .Date | dateFormat "2006"}}</span>
-                        <span>{{ .Date | dateFormat "Jan" }}</span>
-                        <span>{{ .Date | dateFormat "02" }}</span>
+                        {{.Key}}
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <span class="post-title">
+                    {{ range .Pages }}
+                    <div class="blog-archives-post">
+                        <div class="blog-archives-post-date">
+                            <i class="fa fa-calendar-o"></i>&nbsp;
+                            <span>{{ .Date | dateFormat "2006"}}</span>
+                            <span>{{ .Date | dateFormat "Jan" }}</span>
+                            <span>{{ .Date | dateFormat "02" }}</span>
+                        </div>
+                        <div class="blog-archives-post-title">
                             <a href="{{ .Permalink }}">
                                 {{ .Title }}
                             </a>
-                        </span>
+                        </div>
                     </div>
-                    <div class="clearfix"></div>
+                    {{ end }}
                 </div>
-                {{ end }}
                 {{ end }}
             </div>
         </div>
