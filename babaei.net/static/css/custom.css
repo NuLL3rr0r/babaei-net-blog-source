@@ -264,6 +264,6 @@ figcaption p {
 
 @media (min-width: 1152px) {
     #social-share {
-        text-align: right;
+        text-align: center;
     }
 }
