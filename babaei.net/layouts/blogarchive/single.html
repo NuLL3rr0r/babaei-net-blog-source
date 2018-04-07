@@ -4,7 +4,8 @@
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="blog-archives">
                 {{ .Content }}
-                {{ range (where .Site.Pages "Type" "post").GroupByDate "2006" }}
+                {{ range (where .Site.Pages "Type" "post") }}
+                {{ range .Pages.GroupByDate "2006" }}
                 <div class="blog-archives-grouped-by-date">
                     <div class="blog-archives-year">
                         <i class="fa fa-calendar-o"></i>&nbsp;
@@ -26,6 +27,7 @@
                     </div>
                     {{ end }}
                 </div>
+                {{ end }}
                 {{ end }}
             </div>
         </div>
