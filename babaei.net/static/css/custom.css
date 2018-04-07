@@ -70,8 +70,12 @@
     }
 
     .navbar-collapse {
-        overflow-x: visible !important;
+        overflow-x: hidden !important;
         -webkit-overflow-scrolling: touch !important;
+    }
+
+    .navbar-collapse.collapse {
+        overflow-x: hidden !important;
     }
 
     .navbar-custom .nav .navlinks-container.show-children {
