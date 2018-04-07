@@ -261,19 +261,3 @@ figcaption p {
 .portfolio .fixed-table-container {
     border: 0 !important;
 }
-
-@media (min-width: 1152px) {
-    #social-share {
-        position:fixed;
-        top: 50%;
-        left: 0;
-        height: 340px;
-        margin-top: -170px;
-        background: transparent;
-        overflow: visible;
-    }
-
-    #social-share ul li {
-        display: block;
-    }
-}
