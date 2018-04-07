@@ -90,14 +90,13 @@
         background: inherit !important;
     }
 
-    /*.navbar-custom .nav .navlinks-container:hover .navlinks-children {
+    .navbar-custom .nav .navlinks-container:hover .navlinks-children {
+        display: none;
     }
 
-    .navbar-custom .nav .navlinks-container:active:hover .navlinks-children,
-    .navbar-custom .nav .navlinks-container:hover:active .navlinks-children,
-    .navbar-custom .nav .navlinks-container:active .navlinks-children {
-        display: block !important;
-    }*/
+    .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
+        display: block;
+    }
 
     .navbar-custom .nav .navlinks-children {
         position: initial !important;
