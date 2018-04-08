@@ -250,7 +250,7 @@ figcaption p {
 
 .portfolio .project .title {
     border-bottom: 2px solid #ccc;
-    margin: 1.0em 0;
+    margin: 0;
 }
 
 .portfolio p {
