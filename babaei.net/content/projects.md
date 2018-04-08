@@ -30,7 +30,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Year
+                            Year(s)
                         </th>
                         <td>
                             Under active development since 2017
@@ -108,7 +108,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Year
+                            Year(s)
                         </th>
                         <td>
                             2010 - 2013
@@ -191,7 +191,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Year
+                            Year(s)
                         </th>
                         <td>
                             2010 - 2013
