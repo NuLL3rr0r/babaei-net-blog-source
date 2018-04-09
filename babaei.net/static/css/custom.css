@@ -21,7 +21,8 @@ h1, h2, h3, h4, h5, h6,
 .posts-list .post-preview .post-meta,
 .post-heading .post-meta,
 .posts-list .post-preview .post-entry figure figcaption p,
-.blog-post figure figcaption p {
+.blog-post figure figcaption p,
+.portfolio .project .extra-info th {
     font-family: 'Roboto Condensed', 'sans-serif';
 }
 
