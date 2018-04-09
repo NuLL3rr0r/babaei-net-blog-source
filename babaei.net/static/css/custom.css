@@ -7,6 +7,10 @@ iframe {
     overflow: hidden;
 }
 
+.navbar-custom #main-navbar .navbar-right li:last-child {
+    font-family: 'Vazir';
+}
+
 .navbar-custom .avatar-container {
     margin-top: 75px;
 }
