@@ -16,7 +16,9 @@ footer .copyright,
 
 h1, h2, h3, h4, h5, h6,
 .navbar-custom .navbar-brand,
-.navbar-custom #main-navbar .navbar-right li a {
+.navbar-custom #main-navbar .navbar-right li a,
+.blog-post figure figcaption p,
+.post-entry figure figcaption p {
     font-family: 'Roboto Condensed', 'sans-serif';
 }
 
