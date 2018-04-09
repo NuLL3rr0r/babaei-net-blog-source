@@ -8,11 +8,15 @@
 }
 
 body {
-    font-family: 'Fira Mono', sans-serif;
+    font-family: 'Roboto', 'sans-serif';
     margin-bottom: 5rem;
     margin-top: 5rem;
     background: white;
     color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', 'sans-serif';
 }
 
 a:link {
@@ -59,7 +63,12 @@ h1 {
 
 .tagline {
     margin-bottom: 1rem;
+    font-family: 'Roboto Condensed', 'sans-serif';
     font-size: 1.25rem;
+}
+
+.contact {
+    font-family: 'Roboto Condensed', 'sans-serif';
 }
 
 .intro,.experiences,.side-projects {
@@ -91,7 +100,8 @@ h1 {
 .work-info {
     font-weight: normal;
     display: inline-block;
-    font-family: 'Fira Mono', sans-serif;
+    font-family: 'Roboto Condensed', 'sans-serif';
+    font-size: 0.8em;
     margin-left: 0.5rem;
 }
 
