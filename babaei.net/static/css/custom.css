@@ -34,21 +34,39 @@ h1, h2, h3, h4, h5, h6,
     font-size: 14px;
 }
 
+@media (min-width: 1152px) {
+    .top-nav-short .navbar-brand {
+        font-size: 18px;
+
+        -webkit-transition: font-size .2s ease-in-out;
+        -moz-transition: font-size .2s ease-in-out;
+        transition: font-size .2s ease-in-out;
+    }
+
+    .top-nav-short #main-navbar .navbar-right li a {
+        font-size: 12px;
+
+        -webkit-transition: font-size .2s ease-in-out;
+        -moz-transition: font-size .2s ease-in-out;
+        transition: font-size .2s ease-in-out;
+    }
+}
+
 @media (max-width: 1151px) {
     .navbar-custom .navbar-brand {
         font-size: 18px;
 
-        -webkit-transition: font-size .5s ease-in-out;
-        -moz-transition: font-size .5s ease-in-out;
-        transition: font-size .5s ease-in-out;
+        -webkit-transition: font-size .2s ease-in-out;
+        -moz-transition: font-size .2s ease-in-out;
+        transition: font-size .2s ease-in-out;
     }
 
     .navbar-custom #main-navbar .navbar-right li a {
         font-size: 12px;
 
-        -webkit-transition: font-size .5s ease-in-out;
-        -moz-transition: font-size .5s ease-in-out;
-        transition: font-size .5s ease-in-out;
+        -webkit-transition: font-size .2s ease-in-out;
+        -moz-transition: font-size .2s ease-in-out;
+        transition: font-size .2s ease-in-out;
     }
 }
 
