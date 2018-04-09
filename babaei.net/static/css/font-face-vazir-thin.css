@@ -2,6 +2,6 @@
     font-family: 'Vazir';
     font-weight: 100;
     src: local('Vazir Thin'), local('Vazir-Thin'),
-        url('../fonts/vazir-thin.woff2') format('woff2'),
-        url('../fonts/vazir-thin.woff') format('woff');
+         url('../fonts/vazir-thin.woff2') format('woff2'),
+         url('../fonts/vazir-thin.woff') format('woff');
 }
