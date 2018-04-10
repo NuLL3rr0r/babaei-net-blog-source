@@ -7,4 +7,4 @@ And
 .
 .
 .
-an INFP that will never grow up
+an INFP that will never grow up.
