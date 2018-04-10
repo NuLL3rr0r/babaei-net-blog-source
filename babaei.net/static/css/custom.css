@@ -224,9 +224,9 @@ footer {
 }
 
 footer .copyright {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  text-align: justify;
-  margin-top: 40px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: justify;
+    margin-top: 40px;
 }
 
 footer .copyright p {

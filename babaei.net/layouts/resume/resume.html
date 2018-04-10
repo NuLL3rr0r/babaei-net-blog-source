@@ -11,9 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            {{ if .Site.Author.name }}
-            {{ .Site.Author.name }}
-            {{ end }}
+            Mohammad S. Babaei
         </title>
 
         <link rel="stylesheet" href="{{ "css/normalize.css" | absURL }}" />
@@ -45,18 +43,14 @@
     <body>
         <div class="container meta">
             <div class="container title">
-                {{ if .Site.Author.name }}
-                <h1>{{ .Site.Author.name }}</h1>
-                {{ end }}
+                <h1>Mohammad S. Babaei</h1>
 
                 <div class="tagline">C++ / Unreal Engine 4 Developer</div>
 
                 <div class="contact">
                     <ul>
                         <li>
-                            {{ if .Site.Author.website }}
-                            <i class="fa fa-home"></i>&nbsp;<a href="{{ .Site.Author.website }}">babaei.net</a>
-                            {{ end }}
+                            <i class="fa fa-home"></i>&nbsp;<a href="https://www.babaei.net/">babaei.net</a>
                         </li>
                         <li>
                             {{ if .Site.Author.github }}
