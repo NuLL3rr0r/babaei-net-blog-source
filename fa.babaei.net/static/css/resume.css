@@ -1,0 +1,162 @@
+/*
+    Forked from
+    https://gitlab.com/Keats/vincent.is/blob/master/sass/resume.scss
+*/
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    background: white;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', 'sans-serif';
+}
+
+a:link {
+    text-decoration: none;
+    color: #666;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+p, li {
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.more {
+    word-wrap: break-word;
+}
+
+.container {
+    width: 900px;
+    margin: 3.0em auto;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.tagline {
+    margin-bottom: 1rem;
+    font-family: 'Roboto Condensed', 'sans-serif';
+    font-size: 1.25rem;
+}
+
+.contact {
+    font-family: 'Roboto Condensed', 'sans-serif';
+}
+
+.intro,.experiences,.side-projects {
+    margin-top: 2rem;
+}
+
+.timeline {
+    border-left: 1px solid #aaa;
+    padding: 0 1rem 0 1.5rem;
+    margin-left: 0.75rem;
+}
+
+.work {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.work-dot {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    z-index: 1000;
+    left: -34px;
+    background: white;
+}
+
+.work-info {
+    font-weight: normal;
+    display: inline-block;
+    font-family: 'Roboto Condensed', 'sans-serif';
+    font-size: 0.8em;
+    margin-left: 0.5rem;
+}
+
+.work-last {
+    margin-bottom: 0;
+}
+
+.more {
+    margin-top: 2rem;
+}
+
+.contact ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contact li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1.5em;
+}
+
+.intro p {
+    line-height: 2.0em;
+    text-align: justify;
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem 1rem;
+        margin-top: 0;
+    }
+
+    ul {
+        padding-left: 0.5rem;
+    }
+}
+
+@media print {
+    body {
+        padding: 0 1rem;
+        margin: 0;
+    }
+
+    .container {
+        margin-top: 0;
+    }
+
+    .container p {
+        margin-bottom: 0;
+    }
+
+    .print-resume {
+        display: none;
+    }
+}

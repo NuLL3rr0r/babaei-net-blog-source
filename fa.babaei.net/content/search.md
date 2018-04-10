@@ -1,0 +1,25 @@
++++
+title = "جستجو"
++++
+
+جهست جستجو در وب سایت با استفاده از موتور جستجوی [داک‌داک‌گو](https://duckduckgo.com/), عبارت مورد نظر خود را در کادر ذیل وارد نموده، سپس کلید Enter را بفشارید:
+
+<div style="display: flex; align-items: center;">
+    <div class="container">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+            <form action="https://www.duckduckgo.com/" method="get">
+                <fieldset role="search">
+                    <input name="sites" value="babaei.net" data-_extension-text-contrast="bg" type="hidden">
+                    <div class="form-group">
+                        <label for="searchInput">عبارت مورد نظر جهت جستجو</label>
+                        <input class="form-control" id="searchInput" name="q" results="0" placeholder="جستجو..." data-_extension-text-contrast="" type="text">
+                    </div>
+                </fieldset>
+                <div style="text-align: center;">
+                    <input class="btn btn-primary" type="submit" value="جستجو با داک‌داک‌گو">
+                </div>
+            </form>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

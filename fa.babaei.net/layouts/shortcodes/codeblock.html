@@ -1,0 +1,14 @@
+<div class="codeblock">
+    {{ if .Get "title"}}
+    <span class="title">{{ .Get "title" }}</span>
+    {{ end }}
+    {{ if .Get "lang"}}
+    {{ highlight .Inner (.Get "lang") "hl_lines=true" }}
+    {{ else }}
+    {{ if .Get "plain"}}
+    <pre>{{ .Inner }}</pre>
+    {{ else }}
+    {{ highlight .Inner "" "hl_lines=true" }}
+    {{ end }}
+    {{ end }}
+</div>

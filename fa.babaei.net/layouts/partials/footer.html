@@ -1,0 +1,128 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          {{ range .Site.Data.beautifulhugo.social.social_icons }}
+            {{- if isset $.Site.Author .id }}
+              <li>
+                <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa {{ .icon }} fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            {{- end -}}
+          {{ end }}
+          <li>
+            <a href="http://subscribe.babaei.net/?lang=en&subscription=en" title="اشتراک توسط ایمیل">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {{ if .Site.Params.rss }}
+          <li>
+            {{ if .RSSLink }}
+            <a href="{{ .RSSLink }}" title="اشتراک از طریق فید">
+            {{ else }}
+            <a href="{{ .Site.RSSLink }}" title="اشتراک از طریق فید">
+            {{ end }}
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {{ end }}
+          <li>
+            <a href="http://subscribe.babaei.net/?lang=en&contact-form" title="تماس با من">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-comment fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+
+        <div class="copyright">
+            <p  class="credits copyright text-muted">
+                &copy; ۲۰۰۶ - ۲۰۱۸ تمامی حقوق برای <a href="{{ .Site.Author.website }}">{{ .Site.Author.name }}</a> محفوظ است.
+                <br /><br />
+                <span class="license">تمامی محتویات این وب سایت تحت مجوز <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a> منتشر شده است. همچنین، تمامی سورس کدهای منتشر شده در این وب سایت تحت لیسانس <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> منتشر شده است، مگر آن که به صراحت ذکر شده باشد. تمامی محتویات ارائه شده صرفا جنبه آموزشی و اطلاعاتی داشته و فاقد هرگونه ضمانت، تعهد یا شرایطی از هر نوع می باشد. بایستی توجه نمود که اطلاعات عرضه شده حتی ممکن است دقیق و یا بروز نباشد. هرگونه اطمینان به و یا استفاده از محتویات یا منابع منتشر شده در این وب سایت با مسئولیت مخاطب بوده و نگارنده یا نگارندگان هیچ گونه مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.</span>
+                <br /><br />
+                <span class="credit">
+                با افتخار نیرو گرفته از <a href="http://freebsd.org/" target="_blank">FreeBSD</a> | <a href="http://nginx.org/" target="_blank">nginx</a> | <a href="https://gohugo.io/" target="_blank">Hugo v{{ .Hugo.Version }}</a>
+                <br />
+                پوسته توسط <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> تغییر یافته به <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+                </span>
+                <br />
+                {{ with .Site.Params.commit }}
+                نسخه <a href="{{.}}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>
+                {{ end }}
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{{ "js/katex.min.js" | absURL }}"></script>
+<script src="{{ "js/auto-render.min.js" | absURL }}"></script>
+<script src="{{ "js/jquery.min.js" | absURL }}"></script>
+<script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
+<script src="{{ "js/main.js" | absURL }}"></script>
+{{- if .Site.Params.staticman }}
+<script src="{{ "js/staticman.js" | absURL }}"></script>
+{{- end }}
+{{- if  .Site.Params.useHLJS }}
+<script src="{{ "js/highlight.min.js" | absURL }}"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script>
+{{- end -}}
+<script> renderMathInElement(document.body); </script>
+<script src="{{ "js/photoswipe.min.js" | absURL }}"></script>
+<script src="{{ "js/photoswipe-ui-default.min.js" | absURL }}"></script>
+<script src="{{ "js/load-photoswipe.js" | absURL }}"></script>
+<!-- Google Custom Search Engine -->
+{{ if .Site.Params.gcse }}
+<script>
+  (function() {
+    var cx = '{{ .Site.Params.gcse }}';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+{{ end }}
+
+{{ if .Site.Params.piwik }}
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setCookieDomain", "*.babaei.net"]);
+  _paq.push(["setDomains", ["*.babaei.net","*.fa.babaei.net","*.www.babaei.net"]]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://{{ .Site.Params.piwik.server }}/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "{{ .Site.Params.piwik.id }}"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+<!-- Piwik Image Tracker -->
+<img src="http://{{ .Site.Params.piwik.server }}/piwik.php?idsite={{ .Site.Params.piwik.id }}&amp;rec=1" style="border:0" alt="" />
+<!-- End Piwik -->
+</noscript>
+<!-- End Piwik Code -->
+{{ end }}
+
+{{- partial "footer_custom.html" . }}
