@@ -55,7 +55,7 @@ PaginatePath = "/blog/page"
 
 [[menu.main]]
     name = "وبلاگ"
-    url = "https://fa.babaei.net/"
+    url = ""
     weight = 1
 
 [[menu.main]]
