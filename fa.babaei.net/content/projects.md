@@ -1,11 +1,11 @@
 +++
-title = "Projects"
+title = "پروژه ها"
 +++
 
 <div class="portfolio">
     <div class="project">
         <div class="title">
-            <h2>Reminiscence</h2>
+            <h2>صدای نسل ها</h2>
         </div>
         <div class="trailer">
         </div>
@@ -14,58 +14,59 @@ title = "Projects"
                 <tbody>
                     <tr>
                         <th>
-                            Genre
+                            ژانر
                         </th>
                         <td>
-                            First-person shooter (FPS)
+                            تیراندازی اول شخص
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Developer
+                            توسعه دهنده
                         </th>
                         <td>
-                            Atitel
+                            آتی تل
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Year(s)
+                            سال
                         </th>
                         <td>
-                            Under active development since 2017
+                            ۲۰۱۷ - تاکنون
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Engine
+                            موتور بازی
                         </th>
                         <td>
-                            Unreal Engine 4
+                            آنریل انجین ۴ / Unreal Engine 4
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Platform
+                            پلتفرم اجرا
                         </th>
                         <td>
-                            Microsoft Windows, SteamOS
+                            ویندوز، استیم
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Description
+                            توضیحات
                         </th>
                         <td>
-                            Reminiscence is a first-person shooter video game. The main events of the game take place in the Middle East in 2028 with multiple flashbacks depicting the events from several different perspectives. Players play as various special-force agents, all of whom are members of an international special force in order to oppose and fight ISIS forces on multiple fronts.
+                            صدای نسل ها یک بازی سبک تیراندازی اول شخص (first-person shooter یا FPS) می‌باشد که رخدادهای اصلی آن در خاورمیانه ۲۰۲۸ به همراه وقفه های زمانی به گذشته و از چندین منظر روایت خواهند شد. بازیکن ها در نقش چند مامور ویژه در مقابل نیروهای تروریست مانند داعش به نبرد خواهند پرداخت.
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Role
+                            وظایف
                         </th>
                         <td>
-                            Lead game programmer
+                            برنامه نویس ارشد و لید فنی<br />
+                            برنامه نویس C++ و هسته<br />
                         </td>
                     </tr>
                 </tbody>
@@ -74,7 +75,7 @@ title = "Projects"
     </div>
     <div class="project">
         <div class="title">
-            <h2>Resonance</h2>
+            <h2>قلب سیمرغ</h2>
         </div>
         <div class="trailer">
         {{< vimeo 175407810 >}}
@@ -84,39 +85,39 @@ title = "Projects"
                 <tbody>
                     <tr>
                         <th>
-                            A.K.A.
+                            نام های دیگر
                         </th>
                         <td>
-                            Ghalb-e Simorgh
+                            Resonance
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Genre
+                            ژانر
                         </th>
                         <td>
-                            Platformer
+                            سکوبازی
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Developer
+                            توسعه دهنده
                         </th>
                         <td>
-                            RAS Games
+                            رسانا افزار شریف
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Year(s)
+                            سال
                         </th>
                         <td>
-                            2010 - 2013
+                            ۲۰۱۰ - ۲۰۱۳
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Engine
+                            موتور بازی
                         </th>
                         <td>
                             Unreal Development Kit (UDK)
@@ -124,31 +125,29 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Platform
+                            پلتفرم اجرا
                         </th>
                         <td>
-                            Microsoft Windows
+                            ویندوز
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Description
+                            توضیحات
                         </th>
                         <td>
-                            It’s a 3D video game loosely based on the Iranian animation Ghalb-e Simurgh. The main character, Rasa, is a teenager that has been trained by the legendary warrior Rostam from Shahnameh. He’s looking for Jam-e Jam* in order to become a king. In his precarious journey, he goes to dangerous Alborz mountains to find the ancient lost civilization.
-                            <br /><br />
-                            * a.k.a. Cup of Djemscheed is a cup of divination, which in Persian mythology was long possessed by the rulers of ancient Greater Iran
+                            کاراکتر اصلی بازی نوجوانی است به نام رسا که توسط رستم افسانه‌ای برای مقابله با خطرات پیش رو تعلیم دیده و آماده می شود. او به دنبال جام جم می‌باشد تا توسط آن تبدیل به پادشاه ایران زمین شود. در این سفر پرخطر او به رشته کوه‌های البرز خواهد رفت تا تمدنی باستانی را پیدا کند.
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Role
+                            وظایف
                         </th>
                         <td>
-                            Core programmer<br />
-                            Gameplay programmer<br />
-                            UI programmer<br />
-                            Tools programmer<br />
+                            برنامه نویس هسته<br />
+                            برنامه نویس گیم پلی<br />
+                            برنامه نویس رابط کاربری<br />
+                            برنامه نویس ابزار<br />
                         </td>
                     </tr>
                 </tbody>
@@ -157,7 +156,7 @@ title = "Projects"
     </div>
     <div class="project">
         <div class="title">
-            <h2>Thrateon</h2>
+            <h2>عصر پهلوانان ۲</h2>
         </div>
         <div class="trailer">
         {{< vimeo 175401743 >}}
@@ -167,39 +166,39 @@ title = "Projects"
                 <tbody>
                     <tr>
                         <th>
-                            A.K.A.
+                            نام های دیگر
                         </th>
                         <td>
-                            Age of Pahlevans II / Asr-e Pahlevanan 2
+                            تراتئون / Thrateon / Age of Pahlevans II / Asr-e Pahlevanan 2
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Genre
+                            ژانر
                         </th>
                         <td>
-                            Role-playing (RPG)
+                            نقش‌آفرینی
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Developer
+                            توسعه دهنده
                         </th>
                         <td>
-                            RAS Games
+                            رسانا افزار شریف
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Year(s)
+                            سال
                         </th>
                         <td>
-                            2010 - 2013
+                            ۲۰۱۰ - ۲۰۱۳
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Engine
+                            موتور بازی
                         </th>
                         <td>
                             Unreal Development Kit (UDK)
@@ -207,29 +206,29 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Platform
+                            پلتفرم اجرا
                         </th>
                         <td>
-                            Microsoft Windows
+                            ویندوز
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Description
+                            توضیحات
                         </th>
                         <td>
-                            It’s a role-playing 3D video game based on Shahnameh by the Persian poet Ferdowsi and a direct sequel to Age of Pahlevans I (2009). The main plot happens in the ancient city of Zabol and borrows many of its characters from Iranian mythology.
+                            بازی عصر پهلوانان مبتنی بر شخصیت‌ها و داستان‌های شاهنامه می باشد. این بازی دنباله ای بر نسخه پیشین این بازی که در سال ۲۰۰۹ عرضه شده است می باشد. وقایع و رخدادهای بازی در شهر باستانی زابل اتفاق خواهد افتاد و بسیاری از اساطیر ایرانی در آن حضور دارند.
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Role
+                            وظایف
                         </th>
                         <td>
-                            Core programmer<br />
-                            Gameplay programmer<br />
-                            UI programmer<br />
-                            Tools programmer<br />
+                            برنامه نویس هسته<br />
+                            برنامه نویس گیم پلی<br />
+                            برنامه نویس رابط کاربری<br />
+                            برنامه نویس ابزار<br />
                         </td>
                     </tr>
                 </tbody>

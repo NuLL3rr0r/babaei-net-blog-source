@@ -144,3 +144,8 @@ pre .code,
 .blog-archives {
     direction: rtl;
 }
+
+.portfolio th,
+.portfolio td {
+    text-align: justify;
+}
