@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'Roboto Condensed';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Roboto Condensed Italic'), local('RobotoCondensed-Italic'),
-         url('../fonts/roboto-condensed-v16-latin-italic.woff2') format('woff2'),
-         url('../fonts/roboto-condensed-v16-latin-italic.woff') format('woff');
-}
