@@ -130,10 +130,7 @@ footer .copyright {
     float: left;
 }
 
-pre,
-pre .code,
-.codeblock,
-.highlight {
+code, kbd, pre, samp {
     direction: initial;
 }
 

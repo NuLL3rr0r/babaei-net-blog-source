@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'Roboto Condensed', 'sans-serif';
 }
 
+code, kbd, pre, samp {
+    font-family: 'Roboto Mono', 'Roboto', 'sans-serif';
+}
+
 h1, h2, h3, h4, h5, h6,
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
