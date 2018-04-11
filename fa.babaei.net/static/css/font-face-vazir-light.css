@@ -1,7 +1,0 @@
-@font-face {
-    font-family: 'Vazir';
-    font-weight: 300;
-    src: local('Vazir Light'), local('Vazir-Light'),
-         url('../fonts/vazir-light.woff2') format('woff2'),
-         url('../fonts/vazir-light.woff') format('woff');
-}
