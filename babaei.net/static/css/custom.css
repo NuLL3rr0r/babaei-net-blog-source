@@ -263,6 +263,11 @@ footer .copyright .license a {
     line-height: 2.0em;
 }
 
+.post-preview .post-meta, .post-heading .post-meta-tags {
+    margin-top: 1.0em;
+    text-align: justify;
+}
+
 .intro-header .post-heading h1 {
     font-size: 36px;
 }

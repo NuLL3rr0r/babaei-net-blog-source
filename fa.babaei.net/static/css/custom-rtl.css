@@ -32,8 +32,14 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'Vazir', 'Roboto Condensed', 'Roboto', 'Tahoma', 'sans-serif';
 }
 
-.navbar-custom #main-navbar .navbar-right li:first-child a {
+.navbar-custom #main-navbar .navbar-right li:first-child a,
+.post-preview .post-meta, .post-heading .post-meta-tags,
+.posts-list .post-preview .post-meta-tags {
     font-family: 'Roboto Condensed', 'Roboto', 'sans-serif';
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.6em;
 }
 
 .navbar-custom .nav .navlinks-container .navlinks-parent {
@@ -125,7 +131,11 @@ footer .copyright {
 }
 
 .post-preview .post-read-more {
-    float: right;
+    float: left;
+}
+
+.posts-list .post-preview .post-entry {
+    margin-top: 1.5em;
 }
 
 .pager .previous > a, .pager .previous > span {
