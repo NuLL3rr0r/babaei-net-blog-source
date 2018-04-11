@@ -115,7 +115,7 @@ footer .copyright {
 }
 
 .post-preview .post-meta-tags {
-    direction: ltr;
+    direction: initial;
 }
 
 .post-preview .post-read-more {
