@@ -328,7 +328,7 @@ PostProcess::Impl::~Impl() = default;
 
 There are three important objects that we hold inside our <code>Impl</code> class and therefore <code>m_pimpl</code> object:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 GLProgram* glProgram;
 RenderTexture* renderTexture;
 Sprite* sprite;
@@ -356,13 +356,13 @@ Now let's take a look at <code>Postprocess::draw()</code> method:
 
 __Note__: It's possible to accept a <code>cocos2d::Node*</code> instead of <code>cocos2d::Layer*</code> as <code>Postprocess::draw()</code> parameter to make it a more generic method. But, as I commented inside the function instead of:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 layer->visit();
 {{< /highlight >}}
 
 You should be writing this:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 auto renderer = Director::getInstance()->getRenderer();
 auto& parentTransform = Director::getInstance()->getMatrix(MATRIX_STACK_TYPE::MATRIX_STACK_MODELVIEW);
 layer->visit(renderer, parentTransform, true);
@@ -477,13 +477,13 @@ OK, these are the changes we maded in the above <code>HelloWorldScene.h</code> f
 
 1. We first add the forward declaration for <code>PostProcess</code> class instead of including the actual header file in order to keep compile times lower:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 class PostProcess;
 {{< /highlight >}}
 
 2. Then, we defined the sibling layers - just like picture B. - as private member variables including the actual game layer and each post-processing effect's layer:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 Layer* m_gameLayer;
 PostProcess* m_colorPostProcessLayer;
 PostProcess* m_grayPostProcessLayer;
@@ -491,7 +491,7 @@ PostProcess* m_grayPostProcessLayer;
 
 3. Finally, we did override the update method in order to re-draw post-processing effects on each tick of the game:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 virtual void update(float delta) override;
 {{< /highlight >}}
 
@@ -664,13 +664,13 @@ OK, time to break down the changes in <code>HelloWorldScene.cpp</code> file:
 
 1. We first include the header file for <code>PostProcess</code> class that we forward declared earlier:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 #include "PostProcess.hpp"
 {{< /highlight >}}
 
 2. After that, the first and foremost step involves initializing the sibling layers including <code>m_gameLayer</code>, <code>m_colorPostProcessLayer</code> and <code>m_grayPostProcessLayer</code> at the beginning of <code>HelloWorldScene::init()</code> method. Notice the <code>z-orders</code> that we specified when we were adding them to the current scene using <code>addChild</code> method:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 m_gameLayer = Layer::create();
 this->addChild(m_gameLayer, 0);
 
@@ -687,27 +687,27 @@ this->addChild(m_grayPostProcessLayer, 2);
 
 3. Now replace the rest of <code>this->addChild()</code> methods till the end of <code>HelloWorldScene::init()</code> method implementation with <code>m_gameLayer->addChild()</code>:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 m_gameLayer->addChild(menu, 1);
 {{< /highlight >}}
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 m_gameLayer->addChild(label, 1);
 {{< /highlight >}}
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 m_gameLayer->addChild(sprite, 0);
 {{< /highlight >}}
 
 4. The last modification to <code>HelloWorldScene::init()</code> method requires scheduling the <code>HelloWorldScene::update</code> method before returning from it:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 this->scheduleUpdate();
 {{< /highlight >}}
 
 5. Finally add the <code>HelloWorld::update()</code> method implementation at the end of the file:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 void HelloWorld::update(float delta)
 {
 	m_colorPostProcessLayer->draw(m_gameLayer);
@@ -720,7 +720,7 @@ void HelloWorld::update(float delta)
 
 As I guarantied adding and removing effects requires the least of efforts. You can easily enable or disable any effect inside this method. For example, if you need to disable both effects immediately, commenting the first two lines will suffice:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 void HelloWorld::update(float delta)
 {
 	//m_colorPostProcessLayer->draw(m_gameLayer);
@@ -733,7 +733,7 @@ void HelloWorld::update(float delta)
 
 Or, maybe you need to only apply the gray effect and remove the color transition effect from the post-processing hierarchy:
 
-{{< highlight lang="cpp" >}}
+{{< highlight cpp >}}
 void HelloWorld::update(float delta)
 {
 	//m_colorPostProcessLayer->draw(m_gameLayer);
