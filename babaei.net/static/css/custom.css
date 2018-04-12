@@ -298,9 +298,26 @@ footer .copyright .license a {
     font-size: 36px;
 }
 
-.post-preview a,
-p a {
+p a:link,
+p a:visited {
+   color: #808080;
+}
+
+p a:hover,
+p a:active {
+   color: #111;
+   text-decoration: underline;
+}
+
+.post-preview a:hover,
+.post-preview a:active {
     color: #111;
+}
+
+.post-preview a:link h,
+.post-preview a:visited h
+p a:link,
+p a:visited {
 }
 
 .codeblock .title {
