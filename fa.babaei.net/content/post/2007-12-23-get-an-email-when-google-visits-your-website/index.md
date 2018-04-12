@@ -672,8 +672,6 @@ public partial class GooglebotDetector : System.Web.UI.Page
 <a href="https://mail.google.com/" target="_blank">https://mail.google.com/</a>
 </pre>
 
-<br />
-
 
 [^1]: [http://www.google.com/webmasters/tools/](http://www.google.com/webmasters/tools/)
 

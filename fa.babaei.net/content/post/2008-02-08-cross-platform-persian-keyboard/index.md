@@ -682,7 +682,6 @@ namespace CrossPlatformKeyboard
 <a href="http://msdn2.microsoft.com/en-us/vs2005/aa718347.aspx" target="_blank">http://msdn2.microsoft.com/en-us/vs2005/aa718347.aspx</a>
 </pre>
 
-<br />
 
 [^1]: تمامی فایل ها و كدهای استفاده شده در این مقاله در انتهای مطلب در قالب یک فایل فشرده قابل دریافت می باشد. نام فایل نمونه demo.exe واقع در پوشه ی "CrossPlatformPersianKeyboard" می باشد.
 

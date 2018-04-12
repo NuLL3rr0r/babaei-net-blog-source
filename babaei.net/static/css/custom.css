@@ -312,6 +312,11 @@ footer .copyright .license a {
     color: #151515;
 }
 
+pre {
+    margin-top: 1.0em;
+    margin-bottom: 2.5em;
+}
+
 .box figure {
     margin: 2.0em;
 }

@@ -1208,8 +1208,6 @@ sub ErrorH {
 <a href="https://mail.google.com/" target="_blank">https://mail.google.com/</a>
 </pre>
 
-<br />
-
 
 [^1]: تمامی كدهای استفاده شده در این مقاله در انتهای مطلب در قالب یک فایل فشرده قابل دریافت می باشد.
 

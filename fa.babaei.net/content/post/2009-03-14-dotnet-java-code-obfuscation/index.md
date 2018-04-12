@@ -2095,8 +2095,6 @@ namespace SnoopSecurity
 <a href="http://support.microsoft.com/kb/931906" target="_blank">http://support.microsoft.com/kb/931906</a>
 </pre>
 
-<br />
-
 
 [^1]: Common Language Runtime
 
