@@ -6,8 +6,7 @@ tags = [ "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "UNIX" ]
 aliases = [ "/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/" ]
 +++
 
-[{% img post-image /blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/beastie-the-bsd-daemon-mascot.png 990 612 "'Beastie The BSD Daemon / Mascot'" "'Beastie The BSD Daemon / Mascot'" %}](/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/beastie-the-bsd-daemon-mascot.png)
-<div style="direction: ltr;"><span class="post-image-title">'Beastie' The BSD Daemon / Mascot (a near homophone of the letters B-S-D pronounced slurred together)</span></div>
+{{< figure src="/blog/what-is-freebsd-an-overview-of-freebsd-operating-system/beastie-the-bsd-daemon-mascot.png" alt="'Beastie' The BSD Daemon / Mascot (a near homophone of the letters B-S-D pronounced slurred together)" caption="'Beastie' The BSD Daemon / Mascot (a near homophone of the letters B-S-D pronounced slurred together)" >}}
 
 __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) یک سیستم عامل مدرن و پیشرفته جهت استفاده در سرورها، کامپیوترهای شخصی، لپ تاپ ها و دستگاه های Embedded به همراه [پشتیبانی از پلتفرم های گسترده](https://www.freebsd.org/platforms/) می باشد که توسط هواداران آن به شکل داوطلبانه برای بیش از سه دهه در دست توسعه بوده است. قابلیت های پیشرفته آن در زمینه شبکه، امنیت و ذخیره سازی، آن را به انتخاب اول برخی از پرترافیک ترین وب سایت ها، همچنین دستگاه ها و سیستم های فراگیر شبکه (فایروال ها و روترها) و ذخیره سازی داده (NAS/SAN) نموده است. این سیستم عامل توسط کمپانی ها، [ISP](https://en.wikipedia.org/wiki/Internet_service_provider) ها، دانشگاه ها، موسسات تحقیقاتی، دانشجویان، دانش آموزان و کاربران خانگی در سراسر دنیا به منظور کار و امور تحقیقاتی مورد استفاده قرار می گیرد.
 
