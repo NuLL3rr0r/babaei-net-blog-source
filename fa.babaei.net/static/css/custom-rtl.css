@@ -150,8 +150,14 @@ code, kbd, pre, samp {
     direction: initial;
 }
 
-.box figure {
+.box figure figcaption {
     text-align: center;
+}
+
+.box figure figcaption h4 {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
 }
 
 .blogarchive-heading {
