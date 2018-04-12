@@ -259,7 +259,33 @@ footer .copyright .license a {
 }
 
 .post-entry p,
-.blog-post p {
+.post-entry li,
+.post-entry .h1,
+.post-entry .h2,
+.post-entry .h3,
+.post-entry .h4,
+.post-entry .h5,
+.post-entry .h6,
+.post-entry h1,
+.post-entry h2,
+.post-entry h3,
+.post-entry h4,
+.post-entry h5,
+.post-entry h6,
+.blog-post p,
+.blog-post li,
+.blog-post .h1,
+.blog-post .h2,
+.blog-post .h3,
+.blog-post .h4,
+.blog-post .h5,
+.blog-post .h6,
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-post h4,
+.blog-post h5,
+.blog-post h6 {
     line-height: 2.0em;
 }
 
