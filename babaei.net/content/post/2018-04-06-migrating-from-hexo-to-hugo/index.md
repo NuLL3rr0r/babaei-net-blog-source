@@ -11,6 +11,6 @@ Fast-forward, I played with [Gutenburg](https://www.getgutenberg.io/) (written i
 
 I came back to check out Hugo once more last week and to my surprise, I found it really stable and production ready with tons of features and themes. So, here is my new blog ported over to the mighty Hugo.
 
-__P.S.__ Although Hugo satisfies all my current needs, I'm more interested in Rust projects than the Go ones since I'm playing around with Rust as an alternative to Modern C++ these days. So, I'll keep an eye on Gutenberg; who knows another port might be underway :)
+__P.S.__ Although Hugo satisfies all my current needs, I'm more interested in Rust projects than the [Go](https://golang.org/) ones since I'm playing around with Rust as an alternative to Modern C++ these days. So, I'll keep an eye on Gutenberg; who knows another port might be underway :)
 
 <!--more-->
