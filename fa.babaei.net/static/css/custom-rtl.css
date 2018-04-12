@@ -150,6 +150,10 @@ code, kbd, pre, samp {
     direction: initial;
 }
 
+.box figure {
+    text-align: center;
+}
+
 .blogarchive-heading {
     direction: rtl;
 }
