@@ -160,6 +160,10 @@ code, kbd, pre, samp {
     font-weight: normal;
 }
 
+.pswp__caption .pswp__caption__center {
+    direction: rtl;
+}
+
 .blogarchive-heading {
     direction: rtl;
 }
