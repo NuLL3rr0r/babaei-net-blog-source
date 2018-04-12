@@ -6,8 +6,7 @@ tags = [ "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "UNIX" ]
 aliases = [ "/blog/2016/03/07/freebsd-vs-linux/" ]
 +++
 
-[{% img post-image /blog/2016/03/07/freebsd-vs-linux/freebsd-vs-linux.png 768 384 "'FreeBSD در مقابل Linux'" "'FreeBSD در مقابل Linux'" %}](/blog/2016/03/07/freebsd-vs-linux/freebsd-vs-linux.png)
-<span class="post-image-title">FreeBSD در مقابل Linux</span>
+{{< figure src="/blog/freebsd-vs-linux/freebsd-vs-linux.png" alt="FreeBSD در مقابل Linux" caption="FreeBSD در مقابل Linux" >}}
 
 قبل از پرداختن به تفاوت های میان [FreeBSD](https://www.freebsd.org/) و [GNU/Linux](http://www.gnu.org/gnu/linux-and-gnu.en.html) بایستی خاطر نشان شد که بیش از هر چیز شباهت های زیادی میان این دو وجود دارد. در واقع هر دوی آن ها توسط سازمان های غیرانتفاعی مختص خود با یک هدف مشترک توسعه می یابند: قابل اتکاترین سیستم عامل با بیشترین قابلیت استفاده.
 
@@ -139,8 +138,7 @@ BSD ها بسیار به UNIX شبیه هستند چرا که در واقع آن
 
 تعداد BSD ها هیچ وقت از تعداد انگشتان دو دست بیشتر نبوده است. در مقابل، تصویر ذیل علیرغم نمایش موفقیت لینوکس، پراکندگی دنیای لینوکس را به خوبی نمایان می سازد:
 
-[{% img post-image /blog/2016/03/07/freebsd-vs-linux/linux-distribution-timeline.png 100 100 "'جدول زمانی توزیع های لینوکس'" "'جدول زمانی توزیع های لینوکس'" %}](/blog/2016/03/07/freebsd-vs-linux/linux-distribution-timeline.png)
-<span class="post-image-title">جدول زمانی توزیع های لینوکس - منبع تصویر: [ویکی پدیا](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)</span>
+{{< figure src="/blog/freebsd-vs-linux/linux-distribution-timeline.png" alt="جدول زمانی توزیع های لینوکس - منبع تصویر: ویکی پدیا" caption="جدول زمانی توزیع های لینوکس - منبع تصویر: ویکی پدیا" link="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg" >}}
 
 
 <br />
