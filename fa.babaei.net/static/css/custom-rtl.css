@@ -172,3 +172,7 @@ code, kbd, pre, samp {
 .portfolio td {
     text-align: justify;
 }
+
+.footnotes {
+    direction: rtl;
+}

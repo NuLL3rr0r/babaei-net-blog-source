@@ -407,3 +407,7 @@ figcaption p {
         text-align: center;
     }
 }
+
+.footnotes {
+    word-wrap: break-word;
+}
