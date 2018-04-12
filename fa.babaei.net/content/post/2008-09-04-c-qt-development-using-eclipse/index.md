@@ -153,11 +153,11 @@ Eclipse[^13] به عنوان یک پلتفرم نرم افزاری کد باز �
 
 اگر کاربر ویندوز هستید به آدرس ذیل مراجعه نمائید:
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 <a href="http://java.sun.com/">http://java.sun.com/</a>
 </pre>
-</div><br />
+
+<br />
 
 سپس در قسمت سمت راست صفحه و در ناحیه Popular Downloads بر روی گزینه Java SE کلیک نمائید (مطابق با تصویر 1.A.).
 
@@ -173,17 +173,19 @@ Eclipse[^13] به عنوان یک پلتفرم نرم افزاری کد باز �
 Your download transaction cannot be approved. Contact Customer Service.
 ```
 
+<br />
+
 این بدان دلیل است که شرکت Sun بر اساس تحریم های وارده دریافت تمامی نرم افزارهای خود را برای کاربران ایرانی غیرممکن کرده است (همین اتفاق برای MySQL پس از خرید آن توسط Sun نیز رخ داده است). البته نگران نباشید می توانید با یک اکانت VPN و یا یک Proxy به دریافت آن اقدام نمائید. کافیست IP شما برای دانلود با محدوده IP های ایران و کشورهای مورد تحریم همخوانی نداشته باشد. پس حتما با روشی وارد سایت شوید که اشتباه شناسائی شوید.
 
 در نهایت دقت نمائید که بسته های متفاوتی از Java برای نصب موجود می باشد برای مثال JRE[^31] که برای کاربران نهائی است که از نرم افزارهای مبتنی بر جاوا استفاده می نمایند و JDK[^32] برای توسعه دهندگان نرم افزارهای تحت جاوا. به همین دلیل ما هم اقدام به دریافت و نصب JDK‌ می نمائیم.
 
 اگر کاربر OS X می باشید برای دریافت Xcode به آدرس زیر بروید:
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 <a href="http://developer.apple.com/tools/download/">http://developer.apple.com/tools/download/</a>
 </pre>
-</div><br />
+
+<br />
 
 توجه داشته باشید که برای دریافت Xcode بایستی یک Apple ID داشته باشید. دریافت آن رایگان است پس حتما ثبت نام نمائید. حجم تقریبی آخرین نسخه آن حدود 1 GB است.
 
@@ -191,11 +193,11 @@ Your download transaction cannot be approved. Contact Customer Service.
 
 ۲. پس از نصب نرم افزارهای تشریح شده در مرحله قبل با مراجعه به آدرس ذیل اقدام به دریافت Eclipse Classic مطابق با سیستم عامل موردنظرتان نمائید (مطابق با تصویر 2.A.).
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 <a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a>
 </pre>
-</div><br />
+
+<br />
 
 {{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-002-a.jpg" alt="تصویر2.A. – دریافت Eclipse" title="تصویر2.A. – دریافت Eclipse" >}}
 
@@ -222,6 +224,8 @@ Windows:
 Mac OS X:
     Eclipse/Preferences/General/Startup and Shutdown/Prompt for workspace on startup
 ```
+
+<br />
 
 {{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-a.jpg" alt="تصویر3.A. – لوگوی Eclipse" title="تصویر3.A. – لوگوی Eclipse" >}}
 
@@ -271,6 +275,8 @@ Windows:
 Mac OS X:
     Eclipse/Prefrences/General/Appearance/Color and Fonts/Basic/Text Font
 ```
+
+<br />
 
 قلم پیش فرض برای Mac OS X قلم Monaco و برای Windows قلم Courier New می باشد.
 
@@ -410,7 +416,6 @@ public class Hello {
 ۶. پس از نصب سایر Plug-in ها خاطر نشان می شویم که شما فقط می توانید کدهای مربوط به زبان های موردنظرتان را ایجاد٬ ویرایش و یا ذخیره نمائید. جهت تست و اجرای آن ها بایستی کامپایلر یا مفسر آن ها از قبل در سیستم شما نصب شده باشد.
 جهت نصب هر یک از مفسرهای مورد نیاز٬ بسته به نوع سیستم عامل تان به آدرس های ذیل مراجعه نمائید:
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 Perl
     <a href="http://www.activestate.com/Products/activeperl/">http://www.activestate.com/Products/activeperl/</a>
@@ -427,7 +432,8 @@ Ruby
 Ruby on Rails
     <a href="http://www.rubyonrails.org/down">http://www.rubyonrails.org/down</a>
 </pre>
-</div>
+
+<br />
 
 لازم به یادآوری است که در Mac OS X – Leopard آخرین نسخه هر یک از مفسرهای مورد نیاز از قبل نصب شده است. جهت آگاهی از نسخه نصب شده می توانید از روشی که در ادامه می آید استفاده نمائید.
 
@@ -442,6 +448,8 @@ $ python
 >>> raise SystemExit
 ```
 
+<br />
+
 {{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-a.jpg" alt="تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby" title="تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby" >}}
 
 برخی از مفسرها احتیاج دارند که برای کار با Eclipse٬ بدان معرفی شوند. برای مثال Python و Jython از این گونه است.
@@ -451,6 +459,8 @@ $ python
 ```
 /Library/Frameworks/Python.framework/Versions/2.5/bin/python2.5
 ```
+
+<br />
 
 {{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-b.jpg" alt="تصویر6.B. – تنظیمات مفسر Python" title="تصویر6.B. – تنظیمات مفسر Python" >}}
 
@@ -675,6 +685,8 @@ Mac OS X:
     Eclipse/Preferences/General/Workspace/Text file encoding/Other/UTF-8
 ```
 
+<br />
+
 علاوه بر این برخی مفسرها مانند Python بصورت پیش فرض نمی توانند برنامه هائی را که از کاراکترهای فارسی استفاده نموده اند اجرا نمایند (به یاد داشته باشید که تنظیم یاد شده فقط برای ذخیره فایل ها است). البته برای مفسر Python چندین روش وجود دارد که بتوان چنین برنامه هائی را اجرا نمود. به عنوان نمونه استفاده از راهنماهای مفسر و یا استفاده از ماژول هائی خاص در برنامه و ... که تشریح آن در قالب چنین مقاله ای نمی گنجد.
 
 #### جمع بندی ####
@@ -688,7 +700,6 @@ Mac OS X:
 
 #### منابع و ماخذ ####
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 <a href="http://www.amazon.com/Book-Qt-Art-Building-Applications/dp/1593271476" target="_blank">Molkentin, D. (2007) The Book of Qt 4: The Art of Building Qt Applications No Starch Press</a>
 <a href="http://www.amazon.com/C-GUI-Programming-Qt-4/dp/0131872494" target="_blank">Blanchette, J. & Summerfield, M. (2006) C++ GUI Programming with Qt 4 Prentice Hall PTR</a>
@@ -766,8 +777,8 @@ Mac OS X:
 <a href="http://labs.trolltech.com/blogs/2007/07/11/develop-qt-applications-in-eclipse/" target="_blank">http://labs.trolltech.com/blogs/2007/07/11/develop-qt-applications-in-eclipse/</a>
 <a href="http://wiki.eclipse.org/index.php/CDT/User/FAQ#I_am_using_a_non_gnu_compiler_and_I_get_the_following_messages:_.22Error_launching_external_scanner_info_generator_.28gcc_-E_-P_-v_-dD.22_and_.22File_not_indexed_because_it_was_not_built_.22._How_do_I_get_rid_of_them.3F" target="_blank">http://wiki.eclipse.org/index.php/CDT/User/FAQ#I_am_using_a_non_gnu_compiler_and_I_get_the_following_messages:_.22Error_launching_external_scanner_info_generator_.28gcc_-E_-P_-v_-dD.22_and_.22File_not_indexed_because_it_was_not_built_.22._How_do_I_get_rid_of_them.3F</a>
 </pre>
-</div>
 
+<br />
 
 [^1]: بخوانید Mac OS 10
 
