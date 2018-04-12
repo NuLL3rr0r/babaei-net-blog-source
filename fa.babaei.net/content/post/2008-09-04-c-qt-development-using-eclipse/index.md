@@ -6,7 +6,7 @@ tags = [ ".NET", ".NET Framework", "C", "C++", "CDT", "Cygwin", "EPIC", "Eclipse
 aliases = [ "/blog/2008/09/04/c-qt-development-using-eclipse/" ]
 +++
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__000_cover.jpg 458 297 "'C++ Qt Development using Eclipse'" "'C++ Qt Development using Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__000_cover.jpg)
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-000-cover.jpg" alt="C++ Qt Development using Eclipse" title="C++ Qt Development using Eclipse" >}}
 
 #### چكیده ####
 
@@ -154,26 +154,24 @@ Eclipse[^13] به عنوان یک پلتفرم نرم افزاری کد باز �
 اگر کاربر ویندوز هستید به آدرس ذیل مراجعه نمائید:
 
 <div style="direction: ltr; text-align: left;">
+<pre>
 <a href="http://java.sun.com/">http://java.sun.com/</a>
+</pre>
 </div><br />
 
 سپس در قسمت سمت راست صفحه و در ناحیه Popular Downloads بر روی گزینه Java SE کلیک نمائید (مطابق با تصویر 1.A.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__001_a.jpg 1154 866 "'تصویر1.A. – دریافت JDK'" "'تصویر1.A. – دریافت JDK'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__001_a.jpg)
-<span class="post-image-title">تصویر 1.A. – دریافت JDK</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-001-a.jpg" alt="تصویر1.A. – دریافت JDK" title="تصویر1.A. – دریافت JDK" >}}
 
 در صفحه بعد بر روی Get the JDK download واقع در قسمت بالا و وسط صفحه کلیک نمائید (مطابق با تصویر 1.B.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__001_b.jpg 1154 866 "'تصویر1.B. – دریافت JDK'" "'تصویر1.B. – دریافت JDK'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__001_b.jpg)
-<span class="post-image-title">تصویر 1.B. – دریافت JDK</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-001-b.jpg" alt="تصویر1.B. – دریافت JDK" title="تصویر1.B. – دریافت JDK" >}}
 
 نهایتا در صفحه بعد بایستی با انتخاب نوع سیستم عامل و پذیرفتن توافقنامه میان شما و شرکت Sun به صفحه انتخاب نوع نصب – Online یا Offline – مراجعه نمائید. متاسفانه کاربران ایرانی پس از پذیرفتن متن قرار داد با پیام خطای ذیل مواجه می شوند:
 
-<div style="direction: ltr; text-align: left;">
-<pre>
+{{< codeblock lang="" plain="true" >}}
 Your download transaction cannot be approved. Contact Customer Service.
-</pre>
-</div>
+{{< /codeblock >}}
 
 این بدان دلیل است که شرکت Sun بر اساس تحریم های وارده دریافت تمامی نرم افزارهای خود را برای کاربران ایرانی غیرممکن کرده است (همین اتفاق برای MySQL پس از خرید آن توسط Sun نیز رخ داده است). البته نگران نباشید می توانید با یک اکانت VPN و یا یک Proxy به دریافت آن اقدام نمائید. کافیست IP شما برای دانلود با محدوده IP های ایران و کشورهای مورد تحریم همخوانی نداشته باشد. پس حتما با روشی وارد سایت شوید که اشتباه شناسائی شوید.
 
@@ -182,7 +180,9 @@ Your download transaction cannot be approved. Contact Customer Service.
 اگر کاربر OS X می باشید برای دریافت Xcode به آدرس زیر بروید:
 
 <div style="direction: ltr; text-align: left;">
+<pre>
 <a href="http://developer.apple.com/tools/download/">http://developer.apple.com/tools/download/</a>
+</pre>
 </div><br />
 
 توجه داشته باشید که برای دریافت Xcode بایستی یک Apple ID داشته باشید. دریافت آن رایگان است پس حتما ثبت نام نمائید. حجم تقریبی آخرین نسخه آن حدود 1 GB است.
@@ -192,22 +192,20 @@ Your download transaction cannot be approved. Contact Customer Service.
 ۲. پس از نصب نرم افزارهای تشریح شده در مرحله قبل با مراجعه به آدرس ذیل اقدام به دریافت Eclipse Classic مطابق با سیستم عامل موردنظرتان نمائید (مطابق با تصویر 2.A.).
 
 <div style="direction: ltr; text-align: left;">
+<pre>
 <a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a>
+</pre>
 </div><br />
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse
-__002_a.jpg 1154 866 "'تصویر2.A. – دریافت Eclipse'" "'تصویر2.A. – دریافت Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__002_a.jpg) 
-<span class="post-image-title">تصویر 2.A. – دریافت Eclipse</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-002-a.jpg" alt="تصویر2.A. – دریافت Eclipse" title="تصویر2.A. – دریافت Eclipse" >}}
 
 در صفحه بعد با انتخاب Mirror مورد نظر یا تائید Mirror از پیش تعریف شده اقدام به دریافت Eclipse نمائید.
 
 پس از دریافت Eclipse بسته به نوع سیستم عامل و نسخه آن با فایلی مشابه eclipse-SDK-3.4-macosx-carbon.tar.gz و یا eclipse-SDK-3.4-win32.zip مواجه خواهید شد. یادآور می شویم که Eclipse احتیاجی به نصب ندارد٬ کافیست آن را از حالت فشرده خارج و اجرا کنید. برای مثال در Windows در مسیر C:\Eclipse\ و یا در Mac OS X در مسیر /Applications/Eclipse/. کافیست یک میانبر از فایل اصلی Eclipse در Desktop, Start Menu, Dock‌ و یا هر مکان دیگری ایجاد نمائید. نام فایل اصلی آن در Windows فایل eclipse.exe و در OS X فایل Eclipse با آیکنی به شکل خورشید گرفتگی می باشد. (مطابق با تصاویر 2.B. و 2.C.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__002_b.jpg 752 483 "'تصویر2.B. – پوشه Eclipse'" "'تصویر2.B. – پوشه Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__002_b.jpg)
-<span class="post-image-title">تصویر 2.B. – پوشه Eclipse</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-002-b.jpg" alt="تصویر2.B. – پوشه Eclipse" title="تصویر2.B. – پوشه Eclipse" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__002_c.jpg 1115 325 "'تصویر2.C. – اجرای Eclipse از Dock'" "'تصویر2.C. – اجرای Eclipse از Dock'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__002_c.jpg)
-<span class="post-image-title">تصویر 2.C. – اجرای Eclipse از Dock</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-002-c.jpg" alt="تصویر2.C. – اجرای Eclipse از Dock" title="تصویر2.C. – اجرای Eclipse از Dock" >}}
 
 <div style="text-decoration: underline">
 نکته بسیار مهمی که بایستی بدان توجه نمائید این است که در نام گذاری پوشه Eclipse مطلقا از فاصله – یا کلید Space – استفاده ننمائید. برای مثال اگر قصد دارید نام پوشه را “Eclipse Java”  بگذارید آنرا بدین شکل نامگذاری کنید: EclipseJava بدون هرگونه فاصله ای٬ چرا که برخی از Plug-in ها با نرم افزار در این حالت ناسازگاری ایجاد می کنند. پس اگر یک Plug-in ناسازگار داشتید بد نیست در کنار سایر احتمالات نگاهی به نام پوشه Eclipse‌ تان بیاندازید هر چند که باز هم توصیه می کنیم از Space استفاده ننمائید.
@@ -217,81 +215,68 @@ __002_a.jpg 1154 866 "'تصویر2.A. – دریافت Eclipse'" "'تصویر2.A
 
 در اولین بار اجرا٬ لوگوی نرم افزار را مشاهده می نمائید (مطابق با تصویر 3.A.)٬ و متعاقبا پنجره ای با نام Workspace Launcher که از شما می خواهد مسیری را جهت ذخیره پروژه های ایجاد شده در Eclipse مشخص نمائید. با زدن کلید Browse مسیر موردنظرتان را تعیین نمائید. با چک زدن گزینه Use this as the default and do not ask again از نمایش این کادر در اجرای بعدی جلوگیری نمائید (مطابق با تصویر3.B. ) البته بعدها می توانید از طریق منوی File/Switch Workspace/Other… و یا از طریق یکی از مسیرهای زیر اقدام به تغییر مسیر پروژه هایتان نمائید:
 
-<div style="direction: ltr; text-align: left;">
-<pre>
-Windows: 
+{{< codeblock lang="" plain="true" >}}
+Windows:
     Window/Preferences/General/Startup and Shutdown/Prompt for workspace on startup
 
 Mac OS X:
     Eclipse/Preferences/General/Startup and Shutdown/Prompt for workspace on startup
-</pre>
-</div>
+{{< /codeblock >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_a.jpg 458 297 "'تصویر3.A. – لوگوی Eclipse'" "'تصویر3.A. – لوگوی Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_a.jpg)
-<span class="post-image-title">تصویر 3.A. – لوگوی Eclipse</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-a.jpg" alt="تصویر3.A. – لوگوی Eclipse" title="تصویر3.A. – لوگوی Eclipse" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_b.jpg 589 246 "'تصویر3.B. – تعیین فضای کاری Eclipse'" "'تصویر3.B. – تعیین فضای کاری Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_b.jpg)
-<span class="post-image-title">تصویر 3.B. – تعیین فضای کاری Eclipse</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-b.jpg" alt="تصویر3.B. – تعیین فضای کاری Eclipse" title="تصویر3.B. – تعیین فضای کاری Eclipse" >}}
 
 پس از عبور از کادر بالا  با محیط اصلی Eclipse‌ و منو های آن مواجه خواهید شد (مطابق با تصاویر 3.C. و 3.D.):
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_c.jpg 1026 770 "'تصویر3.C. – محیط اصلی Eclipse'" "'تصویر3.C. – محیط اصلی Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_c.jpg)
-<span class="post-image-title">تصویر 3.C. – محیط اصلی Eclipse</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-c.jpg" alt="تصویر3.C. – محیط اصلی Eclipse" title="تصویر3.C. – محیط اصلی Eclipse" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_d.jpg 582 22 "'تصویر3.D. – منوهای اصلی Eclipse'" "'تصویر3.D. – منوهای اصلی Eclipse'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_d.jpg) 
-<span class="post-image-title">تصویر 3.D. – منوهای اصلی Eclipse</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-d.jpg" alt="تصویر3.D. – منوهای اصلی Eclipse" title="تصویر3.D. – منوهای اصلی Eclipse" >}}
 
 از منوی File/New دستور Java Project را اجرا نمائید. سپس در کادر محاوره ای New Java Project و در قسمت Project Name‌ اقدام به درج نام پروژه نمائید٬ آنگاه بر روی Finish‌ کلیک نمائید (مطابق با تصویر 3.E.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_e.jpg 567 763 "'تصویر3.E. – ایجاد یک پروژه جدید Java'" "'تصویر3.E. – ایجاد یک پروژه جدید Java'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_e.jpg)
-<span class="post-image-title">تصویر 3.E. – ایجاد یک پروژه جدید Java</span>
- 
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-e.jpg" alt="تصویر3.E. – ایجاد یک پروژه جدید Java" title="تصویر3.E. – ایجاد یک پروژه جدید Java" >}}
+
 با کلیک بر روی Finish مشاهده می نمائید که محیط نرم افزار دگرگون می شود و در سمت چپ صفحه در ناحیه Package Explorer پوشه ای هم نام با نام پروژه ای که در مرحله قبل تعیین نمودید تولید شده است (در پروژه فرضی ما نام پروژه JTest می باشد). چنانچه محتویات آن قابل رویت نمی باشد لیست را با کلیک بر روی دستگیره ی آن گسترش دهید تا به پوشه دیگری تحت عنوان src برسید. بر روی آن کلیک راست نمائید. در منوی باز شده دستور Package را از منوی New برگزینید (مطابق با تصویر 3.F.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_f.jpg 751 506 "'تصویر3.F. – نحوه ی ایجاد یک Package جدید'" "'تصویر3.F. – نحوه ی ایجاد یک Package جدید'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_f.jpg)
-<span class="post-image-title">تصویر 3.F. – نحوه ی ایجاد یک Package جدید</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-f.jpg" alt="تصویر3.F. – نحوه ی ایجاد یک Package جدید" title="تصویر3.F. – نحوه ی ایجاد یک Package جدید" >}}
 
 سپس پنجره ای تحت عنوان New Java Package به نمایش در می آید. در کادر Name نام Package مورد نظرتان را وارد نمائید. دقت نمائید که نام Package با حروف کوچک آغاز شود در غیر اینصورت Eclipse در ناحیه بالای صفحه٬ هشداری را مبنی بر نامعتبر بودن نامگذاری نمایان خواهد ساخت. پس از تعیین نام بر روی Finish کلیک نمائید (مطابق با تصویر 3.G.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_g.jpg 527 502 "'تصویر3.G. – تعیین نام یک Package جدید'" "'تصویر3.G. – تعیین نام یک Package جدید'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_g.jpg)
-<span class="post-image-title">تصویر 3.G. – تعیین نام یک Package جدید</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-g.jpg" alt="تصویر3.G. – تعیین نام یک Package جدید" title="تصویر3.G. – تعیین نام یک Package جدید" >}}
 
 مشاهده می نمائید که پس از کلیک بر روی دکمه Finish در پوشه src یگ گره هم نام با نام Package شما ایجاد خواهد شد (در پروژه ما این نام test می باشد). سپس بر روی نام Package جدید مجددا کلیک راست و این بار از منوی New گزینه Class را انتخاب نمائید (مطابق با تصویر 3.H.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_h.jpg 751 506 "'تصویر3.H. – نحوه ی ایجاد یک Class جدید'" "'تصویر3.H. – نحوه ی ایجاد یک Class جدید'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_h.jpg)
-<span class="post-image-title">تصویر 3.H. – نحوه ی ایجاد یک Class جدید</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-h.jpg" alt="تصویر3.H. – نحوه ی ایجاد یک Class جدید" title="تصویر3.H. – نحوه ی ایجاد یک Class جدید" >}}
 
 پس از صدور دستور Class کادری تحت عنوان New Java Class جهت تنظیم نام و تعیین سایر خصوصیات کلاس مورد نظر به نمایش در می آید. این بار برخلاف حالت قبل جهت تعیین نام کلاس در کادر Name بایستی نام کلاس با حروف بزرگ شروع شود در غیر اینصورت باز هم با هشدار Eclipse مواجه خواهید شد. پس از تعیین نام مورد نظر بر روی دکمه Finish کلیک نمائید (مطابق با تصویر 3.I.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_i.jpg 533 680 "'تصویر3.I. – تعیین نام و خصوصیات یک Class جدید'" "'تصویر3.I. – تعیین نام و خصوصیات یک Class جدید'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_i.jpg)
-<span class="post-image-title">تصویر 3.I. – تعیین نام و خصوصیات یک Class جدید</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-i.jpg" alt="تصویر3.I. – تعیین نام و خصوصیات یک Class جدید" title="تصویر3.I. – تعیین نام و خصوصیات یک Class جدید" >}}
 
 در نهایت پس از پشت سر گذاشتن تمامی مراحل یاد شده با ناحیه سفید رنگی مواجه خواهید شد که کدهای ذیل در آن درج شده است:
 
-{% codeblock lang:java %}
+{{< highlight java >}}
 package test;
 
 public class Hello {
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 چنانچه ناحیه سفید رنگ (ناحیه کدها) جای کمی برای نمایش کدها دارد می توانید پنل Welcome در سمت راست صفحه نمایش را ببندید٬ به این دلیل که معمولا بدان نیازی ندارید. همچینین اگر نیاز دارید سایز یا نوع قلم مربوط به کدها را تغییر دهید می توانید از مسیر زیر اقدام نمائید:
 
-<div style="direction: ltr; text-align: left;">
-<pre>
-Windows: 
+{{< codeblock lang="" plain="true" >}}
+Windows:
     Window/Prefrences/General/Appearance/Color and Fonts/Basic/Text Font
 
 Mac OS X:
     Eclipse/Prefrences/General/Appearance/Color and Fonts/Basic/Text Font
-</pre>
-</div>
+{{< /codeblock >}}
 
 قلم پیش فرض برای Mac OS X قلم Monaco و برای Windows قلم Courier New می باشد.
 
 به هر صورت کد کلاس Hello را به شکل ذیل تصحیح نمائید:
 
-{% codeblock lang:java %}
+{{< highlight java >}}
 package test;
 
 public class Hello {
@@ -299,24 +284,21 @@ public class Hello {
         System.out.println(“Hello, World!”);
     }
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 حال جهت اجرای کد در ویندوز کلید Ctrl+F11 و در Mac OS X کلیدهای Shift+Command+F11 را بفشارید. همچنین می توانید از منوی Run دستور Run را صادر نمائید و یا بر روی آیکن Run در نوار ابزار کلیک نمائید (مطابق با تصویر 3.J.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_j.jpg 566 126 "'تصویر3.J. – اجرای پروژه از نوار ابزار'" "'تصویر3.J. – اجرای پروژه از نوار ابزار'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_j.jpg)
-<span class="post-image-title">تصویر 3.J. – اجرای پروژه از نوار ابزار</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-j.jpg" alt="تصویر3.J. – اجرای پروژه از نوار ابزار" title="تصویر3.J. – اجرای پروژه از نوار ابزار" >}}
 
 پس از اولین بار اجرا با پنجره ای تحت عنوان Run As مواجه خواهید شد. در این پنجره پروفایل مربوط به نحوه ی اجرای پروژه را بر روی Java Application تنظیم و بر روی OK کلید نمائید (مطابق با تصویر 3.K.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_k.jpg 352 352 "'تصویر3.K. – تعیین پروفایل تنظیمات اجرای پروژه'" "'تصویر3.K. – تعیین پروفایل تنظیمات اجرای پروژه'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_k.jpg)
-<span class="post-image-title">تصویر 3.K. – تعیین پروفایل تنظیمات اجرای پروژه</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-k.jpg" alt="تصویر3.K. – تعیین پروفایل تنظیمات اجرای پروژه" title="تصویر3.K. – تعیین پروفایل تنظیمات اجرای پروژه" >}}
 
 لازم به ذکر است که این پنجره فقط یک بار و آن هم در اولین بار اجرای پروژه نمایان می شود. جهت تغییر تنظیمات آن می توانید از فلش رو به پائین سمت راست دکمه Run در نوار ابزار و یا از Run As و Run History واقع در منوی Run استفاده نمائید.
 
 پس از اجرای پروژه بایستی عبارت Hello, World! را در پنل Console واقع در مجموعه پنل های پائینی نرم افزار مشاهده نمائید (مطابق با تصویر 3.L.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_l.jpg 1052 748 "'تصویر3.L. – اجرای پروژه'" "'تصویر3.L. – اجرای پروژه'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__003_l.jpg)
-<span class="post-image-title">تصویر3.L. – اجرای پروژه</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-003-l.jpg" alt="تصویر3.L. – اجرای پروژه" title="تصویر3.L. – اجرای پروژه" >}}
 
 بسیار خب٬ تبریک می گوئیم. اولین – و شاید هم آخرین – پروژه جاوای خود را در Eclipse به پایان رساندید. مشخص شد که تمامی مراحل نصب و پیکربندی تا اینجا به خوبی پیش رفته است. پس هم اکنون نوبت نصب سایر Plug-in ها است.
 
@@ -324,61 +306,47 @@ public class Hello {
 
 از منوی Help گزینه Software Updates را انتخاب نمائید تا صفحه Software Updates and Add-ons باز شود. سپس زبانه Available Software را انتخاب کنید (مطابق با تصویر 4.A.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_a.jpg 951 554 "'تصویر4.A. – پنجره Software Updates'" "'تصویر4.A. – پنجره Software Updates'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_a.jpg)
-<span class="post-image-title">تصویر 4.A. – پنجره Software Updates</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-a.jpg" alt="تصویر4.A. – پنجره Software Updates" title="تصویر4.A. – پنجره Software Updates" >}}
 
 پس از رفتن به زبانه Available Software با لیستی مواجه می شوید که در دو ستون با نام های Name و Version مرتب شده است. در ستون Name در کنار نام هر یک از آیتم ها یک کادر بدون تیک و یک فلش با اشاره به جهت راست را می یابید. با کلیک بر روی فلش مربوط به گزینه Ganymede Update Site٬ لیست را توسعه دهید. با توسعه لیست کلمه Pending… ظاهر و چند لحظه ای طول می کشد تا نام افزودنی های رسمی نرم افزار نمایان شود. سپس از این لیست گزینه C and C++ Development را به همراه تمامی زیر مجموعه های آن بر گزینید (مطابق با تصاویر 4.B. و 4.C.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_b.jpg 951 554 "'تصویر4.B. – در حال فراحوانی لیست افزودنی های رسمی'" "'تصویر4.B. – در حال فراحوانی لیست افزودنی های رسمی'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_b.jpg) 
-<span class="post-image-title">تصویر 4.B. – در حال فراحوانی لیست افزودنی های رسمی</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-b.jpg" alt="تصویر4.B. – در حال فراحوانی لیست افزودنی های رسمی" title="تصویر4.B. – در حال فراحوانی لیست افزودنی های رسمی" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_c.jpg 951 554 "'تصویر4.C. – انتخاب افزودنی CDT'" "'تصویر4.C. – انتخاب افزودنی CDT'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_c.jpg)
-<span class="post-image-title">تصویر 4.C. – انتخاب افزودنی CDT</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-c.jpg" alt="تصویر4.C. – انتخاب افزودنی CDT" title="تصویر4.C. – انتخاب افزودنی CDT" >}}
 
 با کلیک بر روی کلید Install… واقع در سمت راست پنجره٬ پنجره ای تحت عنوان Progress Information نمایان می شود (مطابق با تصویر 4.D.). در حال حاضر نرم افزار مشغول بررسی مشکلات احتمالی٬ در صورت فقدان نیازمندی های Plug-in مربوطه می باشد. چنانچه مسئله ای وجود داشته باشد Eclipse شما را مطلع می کند. در غیر اینصورت در پنجره ای دیگر نام و نسخه ماژول های انتخابی جهت نصب را مشاهده می نمائید (مطابق با تصویر 4.E.). با کلیک بر روی دکمه Next قرارداد مربوط به استفاده از Plug-in میان شما و توسعه دهنده آن٬ به نمایش در خواهد آمد (مطابق با تصویر 4.F.). با قبول قرارداد بر روی Finish کلیک نمائید.
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_d.jpg 518 180 "'تصویر4.D. – در حال بررسی نیازمندی های Plug-in‌ مربوطه'" "'تصویر4.D. – در حال بررسی نیازمندی های Plug-in‌ مربوطه'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_d.jpg)
-<span class="post-image-title">تصویر 4.D. – در حال بررسی نیازمندی های Plug-in‌ مربوطه</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-d.jpg" alt="تصویر4.D. – در حال بررسی نیازمندی های Plug-in‌ مربوطه" title="تصویر4.D. – در حال بررسی نیازمندی های Plug-in‌ مربوطه" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_e.jpg 1026 588 "'تصویر4.E. – نمایش و تائید نسخه٬ حجم و سایر توضیحات ماژول های انتخاب شده'" "'تصویر4.E. – نمایش و تائید نسخه٬ حجم و سایر توضیحات ماژول های انتخاب شده'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_e.jpg)
-<span class="post-image-title">تصویر 4.E. – نمایش و تائید نسخه٬ حجم و سایر توضیحات ماژول های انتخاب شده</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-e.jpg" alt="تصویر4.E. – نمایش و تائید نسخه٬ حجم و سایر توضیحات ماژول های انتخاب شده" title="تصویر4.E. – نمایش و تائید نسخه٬ حجم و سایر توضیحات ماژول های انتخاب شده" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_f.jpg 1025 586 "'تصویر4.F. – قبول قرارداد استفاده از Plug-in'" "'تصویر4.F. – قبول قرارداد استفاده از Plug-in'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_f.jpg)
-<span class="post-image-title">تصویر 4.F. – قبول قرارداد استفاده از Plug-in</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-f.jpg" alt="تصویر4.F. – قبول قرارداد استفاده از Plug-in" title="تصویر4.F. – قبول قرارداد استفاده از Plug-in" >}}
 
 در ادامه فرآیند نصب٬ پنجره Install با نمایش نام بسته های در حال نصب به همراه میزان پیشرفت٬ دریافت و نصب آن ها به نمایش در می آید (مطابق با تصویر 4.G.). می توانید با کلیک بر روی دکمه Details جزئیات فرآیند دریافت و نصب را مشاهده نمائید (مطابق با تصویر 4.H.) و یا با کلیک بر روی دکمه ی Run in Background عمل دریافت و نصب را در پس زمینه انجام دهید (مطابق با تصویر 4.I.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_g.jpg 518 212 "'تصویر4.G. – نمایش پیشرفت مراحل دریافت و نصب Plug-in'" "'تصویر4.G. – نمایش پیشرفت مراحل دریافت و نصب Plug-in'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_g.jpg)
-<span class="post-image-title">تصویر 4.G. – نمایش پیشرفت مراحل دریافت و نصب Plug-in</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-g.jpg" alt="تصویر4.G. – نمایش پیشرفت مراحل دریافت و نصب Plug-in" title="تصویر4.G. – نمایش پیشرفت مراحل دریافت و نصب Plug-in" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_h.jpg 844 576 "'تصویر4.H. – جزئیات مراحل نصب'" "'تصویر4.H. – جزئیات مراحل نصب'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_h.jpg)
-<span class="post-image-title">تصویر 4.H. – جزئیات مراحل نصب</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-h.jpg" alt="تصویر4.H. – جزئیات مراحل نصب" title="تصویر4.H. – جزئیات مراحل نصب" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_i.jpg 562 42 "'تصویر4.I. – نمایش پیشرفت مراحل نصب در پس زمینه'" "'تصویر4.I. – نمایش پیشرفت مراحل نصب در پس زمینه'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_i.jpg)
-<span class="post-image-title">تصویر 4.I. – نمایش پیشرفت مراحل نصب در پس زمینه</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-i.jpg" alt="تصویر4.I. – نمایش پیشرفت مراحل نصب در پس زمینه" title="تصویر4.I. – نمایش پیشرفت مراحل نصب در پس زمینه" >}}
 
 پس از اتمام مراحل دریافت و نصب Plug-in موردنظر٬ Eclipse با نمایش پیامی مبنی بر تائید اعمال تغییرات ایجاد شده توسط Plug-in٬ پیشنهاد می کند تا نرم افزار را Restart‌ نمائید. با انتخاب گزینه Yes این عمل را تائید نمائید (مطابق با تصویر 4.J.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_j.jpg 518 144 "'تصویر4.J. – تائید اعمال تغییرات'" "'تصویر4.J. – تائید اعمال تغییرات'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_j.jpg)
-<span class="post-image-title">تصویر 4.J. – تائید اعمال تغییرات</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-j.jpg" alt="تصویر4.J. – تائید اعمال تغییرات" title="تصویر4.J. – تائید اعمال تغییرات" >}}
 
 پس از اعمال تغییرات و اجرای مجدد Eclipse٬ احتمالا متوجه تغییر ظاهر صفحه آغازین خواهید شد (مطابق با تصویر 4.K.). این تغییر اثر افزودنی CDT‌ است و نشان دهنده نصب موفقیت آمیز آن است. البته لزوما هر افزودنی که نصب می کنید چنین تغییری ایجاد نمی نماید. جهت بررسی صحت نصب Plug-in مورد نظر می توانید از منوی Help٬ دستور Software Updates… را صادر نمائید. با رفتن به زبانه Installed Software می توانید Plug-in های نصب شده را به همراه نسخه آن مشاهده نمائید (مطابق با تصویر 4.L.). البته می توانید از مسیر Help/About در Windows و از مسیر Eclipse/About‌ در OS X به جزئیات بیشتری از Eclipse و Plug-in های آن دسترسی پیدا کنید.
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_k.jpg 1026 770 "'تصویر4.K. – تغییر صفحه آغازین پس از نصب CDT'" "'تصویر4.K. – تغییر صفحه آغازین پس از نصب CDT'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_k.jpg)
-<span class="post-image-title">تصویر 4.K. – تغییر صفحه آغازین پس از نصب CDT</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-k.jpg" alt="تصویر4.K. – تغییر صفحه آغازین پس از نصب CDT" title="تصویر4.K. – تغییر صفحه آغازین پس از نصب CDT" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_l.jpg 951 554 "'تصویر4.L. –  نمایش Plug-in های نصب شده به علاوه شماره نسخ آن'" "'تصویر4.L. –  نمایش Plug-in های نصب شده به علاوه شماره نسخ آن'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__004_l.jpg)
-<span class="post-image-title">تصویر 4.L. –  نمایش Plug-in های نصب شده به علاوه شماره نسخ آن</span>
- 
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-004-l.jpg" alt="تصویر4.L. –  نمایش Plug-in های نصب شده به علاوه شماره نسخ آن" title="تصویر4.L. –  نمایش Plug-in های نصب شده به علاوه شماره نسخ آن" >}}
+
 همچنین بهتر است جهت آگاهی از نصب صحیح CDT‌ و تائید آن٬ یک کد HW به زبان C/C++ به همراه Eclipse نوشته و آن را کامپایل نمائید. البته در حال حاضر امکان کامپایل هیچگونه کدی را با CDT نخواهید داشت چرا که CDT هیچگونه کامپایلری برای C/C++‌ را به همراه ندارد و بایستی از یک کامپایلر جهت کامپایل کدها استفاده نمائید. در OS X با نصب Xcode این کامپایلر در اختیار شما قرار گرفته است اما بدلیل اینکه در ویندوز هیچگونه کامپایلری از قبل وجود ندارد این عمل را در مرحله پایانی انجام می دهیم.
 
 ۵. بسیار خب٬ حال نوبت نصب سایر Plug-in ها است. روش نصب برای اکثر Plug-in هائی که برای Eclipse موجود می باشد تقریبا یکسان است. همچنین اختلاف روش های دوم و سوم بسیار ناچیز است اما بهتر است جهت نصب Plug-in ها تا آن جا که مقدور است از روش دوم استفاده شود. به این اختلاف در ادامه اشاره می نمائیم.
 
 از منوی Help دستور Software Updates… را صادر نمائید. در پنجره گشوده شده اطمینان حاصل نمائید که در زبانه Available Software قرار دارید. دکمه Add Site… را کلیک نمائید تا کادر Add Site نمایان شود. در کادر Add Site و در قسمت Location بایستی URL بسته مورد نظر جهت نصب را وارد نمائید (مطابق با تصویر 5.A.). معمولا با مراجعه به وب سایت رسمی Plug-in ها که اتفاقا اکثرا در Sourceforge[^33]‌ میزبانی می شوند می توانید این آدرس را استخراج نمائید.
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse
-__005_a.jpg 951 554 "'تصویر5.A. – نصب Plug-in ها با استفاده از قابلیت Add Site'" "'تصویر5.A. – نصب Plug-in ها با استفاده از قابلیت Add Site'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__005_a.jpg) 
-<span class="post-image-title">تصویر 5.A. – نصب Plug-in ها با استفاده از قابلیت Add Site</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-005-a.jpg" alt="تصویر5.A. – نصب Plug-in ها با استفاده از قابلیت Add Site" title="تصویر5.A. – نصب Plug-in ها با استفاده از قابلیت Add Site" >}}
 
 تنها تفاوتی که در روش نصب Online و Offline مشاهده می شود از تنظیمات این کادر سرچشمه می گیرد. در این کادر شما می توانید یک HTTP URL٬ یک آدرس در شبکه٬ آدرس پوشه ای از هارد درایو کامپیوترتان و یا یک فایل فشرده که حاوی بسته های مورد نظر باشد را وارد نمائید. جهت استفاده از روش Online٬ آدرس بسته موردنظر را بر روی وب وارد نمائید. برای نصب Offline بایستی ابتدا اقدام به دریافت بسته های مورد نظر از وب سایت توسعه دهنده آن نموده سپس آن را در یک پوشه در کامپیوترتان ذخیره نمائید آنگاه در کادر Add Site با کلیک بر دکمه ی Local… اقدام به مشخص نمودن آدرس آن نمائید. چنانچه کل بسته شما یک فایل .zip و یا .jar‌ است می توانید از دکمه Archive… بدین منظور استفاده نمائید.
 
@@ -437,8 +405,7 @@ __005_a.jpg 951 554 "'تصویر5.A. – نصب Plug-in ها با استفاده
 
 آدرس هر یک از Plug-in های مورد نظرتان را به صورت تک تک در کادر Add Site‌ اضافه نمائید تا بصورت یک جا اقدام به نصب آن ها نمائید٬ مدت زمانی کوتاه طول می کشد تا بسته ها به همراه سایر مولفه های آن برای نصب شناسائی شوند (مطابق با تصویر 5.B.). باقی مراحل نصب با روش پیشین برای نصب CDT یکسان است٬ بنابراین از شرح آن خودداری می نمائیم.
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__005_b.jpg 951 597 "'تصویر5.B. – نصب Plug-in ها با استفاده از قابلیت Add Site'" "'تصویر5.B. – نصب Plug-in ها با استفاده از قابلیت Add Site'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__005_b.jpg) 
-<span class="post-image-title">تصویر 5.B. – نصب Plug-in ها با استفاده از قابلیت Add Site</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-005-b.jpg" alt="تصویر5.B. – نصب Plug-in ها با استفاده از قابلیت Add Site" title="تصویر5.B. – نصب Plug-in ها با استفاده از قابلیت Add Site" >}}
 
 ۶. پس از نصب سایر Plug-in ها خاطر نشان می شویم که شما فقط می توانید کدهای مربوط به زبان های موردنظرتان را ایجاد٬ ویرایش و یا ذخیره نمائید. جهت تست و اجرای آن ها بایستی کامپایلر یا مفسر آن ها از قبل در سیستم شما نصب شده باشد.
 جهت نصب هر یک از مفسرهای مورد نیاز٬ بسته به نوع سیستم عامل تان به آدرس های ذیل مراجعه نمائید:
@@ -466,39 +433,34 @@ Ruby on Rails
 
 ابتدا از Applications/Utilities/ برنامه Terminal را اجرا نمائید. سپس دستوارت زیر را اجرا نمائید:
 
-{% codeblock lang:sh %}
-perl –v
-ruby –v
-python
-raise SystemExit
-{% endcodeblock %}
+```
+$ perl –v
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_a.jpg 507 369 "'تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby'" "'تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_a.jpg) 
-<span class="post-image-title">تصویر 6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl/Python/Ruby</span>
+$ ruby –v
+
+$ python
+>>> raise SystemExit
+```
+
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-a.jpg" alt="تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby" title="تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby" >}}
 
 برخی از مفسرها احتیاج دارند که برای کار با Eclipse٬ بدان معرفی شوند. برای مثال Python و Jython از این گونه است.
 
 در ویندوز از منوی Window و در OS X از منوی Eclipse گزینه Preferences را انتخاب نمائید. سپس از منوی سمت راست نرم افزار مسیر Pydev/Interpreter – python را دنبال نمائید (مطابق با تصویر 6.B.). آنگاه بر روی New…‌ کلیک نمائید. تا کادر Open باز شود. سپس در کادر باز شده٬ فایل مفسر Python را از مسیری که نصب نموده اید انتخاب نمائید. نام این فایل در ویندوز python.exe‌ است. در Mac OS X از مسیری مشابه مسیر زیر بدان دسترسی خواهید داشت. نام این فایل python2.5 است. (مطابق با تصویر 6.C.):
 
-<div style="direction: ltr; text-align: left;">
-<pre>
+```
 /Library/Frameworks/Python.framework/Versions/2.5/bin/python2.5
-</pre>
-</div>
+```
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_b.jpg 961 704 "'تصویر6.B. – تنظیمات مفسر Python'" "'تصویر6.B. – تنظیمات مفسر Python'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_b.jpg)
-<span class="post-image-title">تصویر 6.B. – تنظیمات مفسر Python</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-b.jpg" alt="تصویر6.B. – تنظیمات مفسر Python" title="تصویر6.B. – تنظیمات مفسر Python" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_c.jpg 558 359 "'تصویر6.C. – انتخاب مفسر Python'" "'تصویر6.C. – انتخاب مفسر Python'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_c.jpg)
-<span class="post-image-title">تصویر 6.C. – انتخاب مفسر Python</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-c.jpg" alt="تصویر6.C. – انتخاب مفسر Python" title="تصویر6.C. – انتخاب مفسر Python" >}}
 
 پس از انتخاب مفسر Python٬ نرم افزار Eclipse کتابخانه های موردنظر آن را شناسائی می نماید و در پنجره ای از شما جهت افزودن مسیرهای یاد شده به مسیرهای مورد شناسائی نرم افزار تائید می خواهد (مطابق با تصویر 6.D.). با تائید آن به پنجره تنظیمات مفسر Python باز می گردید. این بار پنجره را با ظاهری متفاوت مشاهده می نمائید (مطابق با تصویر 6.E.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_d.jpg 592 492 "'تصویر6.D. – افزودن کتابخانه های مورد نظر به مسیر نرم افزار'" "'تصویر6.D. – افزودن کتابخانه های مورد نظر به مسیر نرم افزار'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_d.jpg)
-<span class="post-image-title">تصویر 6.D. – افزودن کتابخانه های مورد نظر به مسیر نرم افزار</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-d.jpg" alt="تصویر6.D. – افزودن کتابخانه های مورد نظر به مسیر نرم افزار" title="تصویر6.D. – افزودن کتابخانه های مورد نظر به مسیر نرم افزار" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_e.jpg 961 704 "'تصویر6.E. – تنظیمات مفسر پس از اعمال تغییرات'" "'تصویر6.E. – تنظیمات مفسر پس از اعمال تغییرات'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__006_e.jpg) 
-<span class="post-image-title">تصویر 6.E. – تنظیمات مفسر پس از اعمال تغییرات</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-e.jpg" alt="تصویر6.E. – تنظیمات مفسر پس از اعمال تغییرات" title="تصویر6.E. – تنظیمات مفسر پس از اعمال تغییرات" >}}
 
 همین روند را می توانید برای پیکربندی Jython‌ و یا هر مفسر دیگری که بدان نیاز دارد به کار گیرید.
 
@@ -561,30 +523,23 @@ raise SystemExit
 
 پس از دریافت Qt و Qt Eclipse Integration اقدام به نصب آن ها می نمائیم. برای مثال فایل نصب Qt در ویندوز چیزی مشابه qt-win-opensource-4.4.1-mingw.exe می باشد. آن را اجرا نمائید و مدتی را جهت استخراج و تائید صحت سلامت فایل های مورد نصب صبر نمائید. در Wizard گشوده شده مراحل را مطابق تنظیماتی که مایل هستید دنبال نمائید. تنها نکته ای که در نصب Qt نیاز به تشریح دارد تظیمات مربوط به کامپایلر MinGW‌ است. پس از پشت سر گذاشتن سایر تنظیمات برنامه نصب از شما می خواهد محلی که کامپایلر MinGW در آن قرار دارد را مشخص نمائید (مطابق با تصویر 7.A.). چنانچه از قبل نسخه ای از آن در سیستم تان نصب شده است برنامه نصب را بدان مسیر راهنمائی نمائید. در غیر اینصورت با چک زدن گزینه Download and install minimal MinGW installation. اقدام به تعیین مسیری جهت نصب آن بنمائید (مطابق با تصویر 7.B.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_a.jpg 503 393 "'تصویر7.A. – تعیین محلی که MinGW از قبل در آن جا نصب شده است'" "'تصویر7.A. – تعیین محلی که MinGW از قبل در آن جا نصب شده است'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_a.jpg)
-<span class="post-image-title">تصویر 7.A. – تعیین محلی که MinGW از قبل در آن جا نصب شده است</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-007-a.jpg" alt="تصویر7.A. – تعیین محلی که MinGW از قبل در آن جا نصب شده است" title="تصویر7.A. – تعیین محلی که MinGW از قبل در آن جا نصب شده است" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_b.jpg 503 393 "'تصویر7.B. – تعیین محل نصب نسخه جدیدی از MinGW'" "'تصویر7.B. – تعیین محل نصب نسخه جدیدی از MinGW'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_b.jpg)
-<span class="post-image-title">تصویر 7.B. – تعیین محل نصب نسخه جدیدی از MinGW</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-007-b.jpg" alt="تصویر7.B. – تعیین محل نصب نسخه جدیدی از MinGW" title="تصویر7.B. – تعیین محل نصب نسخه جدیدی از MinGW" >}}
 
 دقت نمائید که پس از چک زدن گزینه فوق الذکر٬ برنامه نصب بصورت کاملا خودکار و پیش از نصب Qt اقدام به دریافت و نصب MinGW می نماید. پس از قبول توافق نامه استفاده MinGW در مرحله بعد بایستی با انتخاب یک Mirror‌ اقدام به دریافت فایل نصب آن نمائید. همچنین قادر به در یافت سورس کد MinGW‌ نیز می باشید که البته برای کار با Qt و یا کامپایل کدهای C++ بدان نیازی نخواهید داشت (مطابق با تصویر 7.C.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_c.jpg 503 393 "'تصویر7.C. – تعیین Mirror برای دریافت MinGW'" "'تصویر7.C. – تعیین Mirror برای دریافت MinGW'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_c.jpg)
-<span class="post-image-title">تصویر 7.C. – تعیین Mirror برای دریافت MinGW</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-007-c.jpg" alt="تصویر7.C. – تعیین Mirror برای دریافت MinGW" title="تصویر7.C. – تعیین Mirror برای دریافت MinGW" >}}
 
 چنانچه مایل به نگهداری فایل نصب MinGW می باشید برنامه نصب آن را در پوشه ای که جهت نصب Qt مشخص نموده اید ذخیره می نماید. برای مثال این مسیر می تواند به صورت C:\Qt\4.4.1\downloads\ باشد. برنامه نصب در این مسیر دو فایل برای مثال تحت عنوان MinGW-3.4.2.mirrors‌ و MinGW-3.4.2.exe تشکیل می دهد که اولی یک فایل متنی جهت نگهداری آدرس Mirror‌ های فایل نصب MinGW است و دومی فایل نصب آن است پس از اتمام دریافت٬ برنامه نصب این پوشه را به همراه تمامی محتویات آن حذف می نماید. پس اگر قصد دارید فایل نصب MinGW را بردارید پس از دریافت کامل آن سریعا یک کپی از آن را در مکان دیگری ایجاد نمائید.
 
 مابقی مراحل نصب بسیار مشخص و واضح می باشد. پس از نصب Qt‌ نوبت به نصب Qt Eclipse Integration می باشد. نکته ای که یادآوری آن الزامیست این است که این بسته را بایستی همیشه پس از نصب CDT نصب نمود چرا که پیش نیاز کار با C++/Qt در Eclipse افزودنی CDT‌ است. به هر صورت نام فایل نصب چیزی مشابه qt-eclipse-integration-win32-1.4.1.exe می باشد و نصب آن نیز براحتی صورت می پذیرد. در این مرحله تنها کاری که انجام می دهید مشخص نمودن پوشه ای جهت نصب  QtEI٬ و پس از آن مشخص نمودن محل Eclipse و پوشه bin کامپایلر MinGW برای برنامه نصب است (مطابق با تصاویر 7.D. و 7.E.). پس از نصب آن می توانید Eclipse را اجرا نمائید. حال تمامی ابزارهای کار شما آماده اند. فقط بهتر است تک تک آن ها را تست نمائید. در گام بعدی قصد پرداختن به این مهم را داریم.
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_d.jpg 503 393 "'تصویر7.D. – تعیین محل نصب Qt Eclipse Integration'" "'تصویر7.D. – تعیین محل نصب Qt Eclipse Integration'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_d.jpg)
-<span class="post-image-title">تصویر 7.D. – تعیین محل نصب Qt Eclipse Integration</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-007-d.jpg" alt="تصویر7.D. – تعیین محل نصب Qt Eclipse Integration" title="تصویر7.D. – تعیین محل نصب Qt Eclipse Integration" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_e.jpg 503 393 "'تصویر7.E. تعیین محل نصب Eclipse و پوشه bin کامپایلر MinGW برای برنامه نصب Qt Eclipse Integration'" "'تصویر7.E. تعیین محل نصب Eclipse و پوشه bin کامپایلر MinGW برای برنامه نصب Qt Eclipse Integration'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_e.jpg)
-<span class="post-image-title">تصویر 7.E. تعیین محل نصب Eclipse و پوشه bin کامپایلر MinGW برای برنامه نصب Qt Eclipse Integration</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-007-e.jpg" alt="تصویر7.E. تعیین محل نصب Eclipse و پوشه bin کامپایلر MinGW برای برنامه نصب Qt Eclipse Integration" title="تصویر7.E. تعیین محل نصب Eclipse و پوشه bin کامپایلر MinGW برای برنامه نصب Qt Eclipse Integration" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse
-__007_f.jpg 1024 768 "'تصویر7.F. – صفحه آغازین Eclipse پس از نصب Qt Eclipse Integration'" "'تصویر7.F. – صفحه آغازین Eclipse پس از نصب Qt Eclipse Integration'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__007_f.jpg)
-<span class="post-image-title">تصویر 7.F. – صفحه آغازین Eclipse پس از نصب Qt Eclipse Integration</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-007-f.jpg" alt="تصویر7.F. – صفحه آغازین Eclipse پس از نصب Qt Eclipse Integration" title="تصویر7.F. – صفحه آغازین Eclipse پس از نصب Qt Eclipse Integration" >}}
 
 ۸.  جهت تائید نصب صحیح سایر Plug-in ها و همچنین مشاهده شماره نسخه آن ها٬ همانطور که قبلا توضیح داده شد؛ یک بار دیگر از آدرس Help/Software Updates…/Installed Software اقدام نمائید.
 
@@ -594,15 +549,13 @@ __007_f.jpg 1024 768 "'تصویر7.F. – صفحه آغازین Eclipse پس ا�
 
 در پنل Project Explorer بر روی نام پروژه تان کلیک راست نموده٬ از منوی New دستور Source File را صادر نمائید. سپس در کادر گشوده شده و در کادر Source File نام فایل C++ را با پسوند .cpp تعیین نمائید. در کادر Template گزینه Default C++ source template و یا گزینه <None> را برگزینید. تفاوت گزینه ها در کادر Template مربوط به نحوه ایجاد مستندات در فایل مورد نظر می باشد (مطابق با تصویر 8.B.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_a.jpg 527 577 "'تصویر8.A. – ایجاد یک پروژه C++'" "'تصویر8.A. – ایجاد یک پروژه C++'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_a.jpg)
-<span class="post-image-title">تصویر 8.A. – ایجاد یک پروژه C++</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-a.jpg" alt="تصویر8.A. – ایجاد یک پروژه C++" title="تصویر8.A. – ایجاد یک پروژه C++" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_b.jpg 527 416 "'تصویر8.B. – ایجاد یک فایل سورس C++'" "'تصویر8.B. – ایجاد یک فایل سورس C++'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_b.jpg) 
-<span class="post-image-title">تصویر 8.B. – ایجاد یک فایل سورس C++</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-b.jpg" alt="تصویر8.B. – ایجاد یک فایل سورس C++" title="تصویر8.B. – ایجاد یک فایل سورس C++" >}}
 
 حال کد زیر را در فایل ایجاد شده درج نمائید:
 
-{% codeblock lang:cpp %}
+{{< highlight cpp >}}
 #include <iostream>
 
 using namespace std;
@@ -611,98 +564,83 @@ int main() {
     cout << "Hello, World!";
     return 0;
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 اکنون نوبت اجرای کد می باشد؛ پس کد را اجرا نمائید.  به احتمال زیاد با پیام خطائی تحت عنوان Launch faild. Binary not found. از سوی Application Launcher مواجه خواهید شد (مطابق با تصویر 8.C.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_c.jpg 518 137 "'تصویر8.C. – خطا در اجرای کدهای C, C++'" "'تصویر8.C. – خطا در اجرای کدهای C, C++'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_c.jpg) 
-<span class="post-image-title">تصویر 8.C. – خطا در اجرای کدهای C/C++</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-c.jpg" alt="تصویر8.C. – خطا در اجرای کدهای C, C++" title="تصویر8.C. – خطا در اجرای کدهای C, C++" >}}
 
 علت بروز خطا این است که کد باینری یا در واقع اجرائی از پروژه شما ایجاد نشده است. بایستی از منوی Project دستور Build را اجرا نمائید تا کامپایلر اقدام به ایجاد نسخه باینری کدهای شما نماید. هم اکنون می توانید پروژه را اجرا نمائید. البته در دفعات بعد چنانچه نیاز به Build مجدد پروژه باشد Eclipse بصورت خودکار این عمل را انجام می دهد (مطابق با تصویر 8.D.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_d.jpg 1153 866 "'تصویر8.D. – اجرای برنامه Hello, World! در C++'" "'تصویر8.D. – اجرای برنامه Hello, World! در C++'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_d.jpg) 
-<span class="post-image-title">تصویر 8.D. – اجرای برنامه Hello, World! در C++</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-d.jpg" alt="تصویر8.D. – اجرای برنامه Hello, World! در C++" title="تصویر8.D. – اجرای برنامه Hello, World! در C++" >}}
 
 هم اکنون نوبت تست EPIC برای Perl می باشد. از مسیر File/New/Project…/Perl/Perl Project‌ اقدام به ایجاد یک پروژه جدید نمائید. سپس در پنل Project Explorer با کلیک بر روی پوشه پروژه از منوی New گزینه Other… را برگزینید. سپس از کادر New دستور Perl File را از پوشه Perl برگزینید. در صفحه بعد نام پروژه را با پسوند .pl تعیین نمائید. آنگاه در فایل جدید کد ذیل را درج نمائید:
 
-{% codeblock lang:perl %}
+{{< highlight perl >}}
 print "Hello, World!";
-{% endcodeblock %}
+{{< /highlight >}}
 
 حال نوبت اجرای کد است؛ کد را اجرا نمائید (مطابق با تصویر 8.E.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_e.jpg 1153 866 "'تصویر8.E. – اجرای برنامه Hello, World! در Perl'" "'تصویر8.E. – اجرای برنامه Hello, World! در Perl'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_e.jpg) 
-<span class="post-image-title">تصویر 8.E. – اجرای برنامه Hello, World! در Perl</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-e.jpg" alt="تصویر8.E. – اجرای برنامه Hello, World! در Perl" title="تصویر8.E. – اجرای برنامه Hello, World! در Perl" >}}
 
 بسیار خب٬ جهت تست Python و پلاگین آن Pydev٬ از مسیر File/New/Project…/Pydev/Pydev Project اقدام نمائید. در صفحه بعد علاوه بر نام پروژه نسخه مورد نظر Python را تعیین نمائید (مطابق با تصویر 8.F.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_f.jpg 527 504 "'تصویر8.F. – تعیین نام پروژه به همراه نسخه Python'" "'تصویر8.F. – تعیین نام پروژه به همراه نسخه Python'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_f.jpg)
-<span class="post-image-title">تصویر 8.F. – تعیین نام پروژه به همراه نسخه Python</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-f.jpg" alt="تصویر8.F. – تعیین نام پروژه به همراه نسخه Python" title="تصویر8.F. – تعیین نام پروژه به همراه نسخه Python" >}}
 
 پس از ایجاد پروژه جدید با کلیک راست بر روی پوشه src واقع در پوشه پروژه از منوی New دستور Pydev Package را صادر نمائید. پس از تعیین نام Package٬ یک فایل تحت عنوان __init__.py در آن ایجاد می شود. محتویات فایل را به شکل زیر تغییر دهید:
 
-{% codeblock lang:python %}
+{{< highlight python >}}
 print "Hello, World!"
-{% endcodeblock %}
+{{< /highlight >}}
 
 کد را اجرا نمائید (مطابق با تصویر 8.G.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_g.jpg 1167 865 "'تصویر8.G. – اجرای برنامه Hello, World! در Python'" "'تصویر8.G. – اجرای برنامه Hello, World! در Python'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_g.jpg)
-<span class="post-image-title">تصویر 8.G. – اجرای برنامه Hello, World! در Python</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-g.jpg" alt="تصویر8.G. – اجرای برنامه Hello, World! در Python" title="تصویر8.G. – اجرای برنامه Hello, World! در Python" >}}
 
 جهت تست RDT و Ruby نیز از مسیر File/New/Project…/Ruby گزینه Ruby Project را برگزینید. پس از تعیین نام پروژه با کلیک بر پوشه حاوی پروژه دستور Ruby File را از منوی New برگزینید. سپس فایلی با پسوند .rb ایجاد نمائید. کد HW مربوط به Ruby بسیار ساده می باشد:
 
-{% codeblock lang:ruby %}
+{{< highlight ruby >}}
 puts "Hello, World!"
-{% endcodeblock %}
+{{< /highlight >}}
 
 پس از تست موفقیت آمیز سایر Plug-in ها حال نوبت تست Qt/MinGW/QtEI می باشد. متاسفانه بدلیل این که QtEI هنوز در آغاز راه می باشد تعداد بسیار زیادی Bug در نسخه های متعدد آن موجود می باشد. احتمالا با ایجاد یک پروژه Qt هرگز موفق به اجرای آن نخواهید شد. پس با دقت تمامی مراحل را دنبال نمائید:
 
 ابتدا از منوی File گزینه New سپس Project… را برگزینید. آنگاه در کادر New Project گزینه Qt Gui Project را از پوشه Qt انتخاب نمائید (مطابق با تصویر 8.H.). در Qt می توانید علاوه بر پروژه Gui٬ پروژه نوع Console را نیز ایجاد نمائید. به هر حال هدف ما پروژه Gui می باشد. بر روی Next کلیک نمائید. در صفحه بعد پس از انتخاب نام پروژه (نام پروژه را جهت هماهنگی با ادامه مطلب QtTest برگزینید) بر روی Finish کلیک نمائید. متاسفانه در نسخه فعلی QtEI پس از ایجاد پروژه سریعا با خطائی در پنجره Console و هشدار دیگری در پنجره Problems مواجه می شوید (مطابق با تصاویر8.I. و 8.J)[^47].
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_h.jpg 178 55 "'تصویر8.H.– ایجاد یک پروژه C++ با رابط کاربری از نوع Qt'" "'تصویر8.H.– ایجاد یک پروژه C++ با رابط کاربری از نوع Qt'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_h.jpg)
-<span class="post-image-title">تصویر 8.H.– ایجاد یک پروژه C++ با رابط کاربری از نوع Qt</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-h.jpg" alt="تصویر8.H.– ایجاد یک پروژه C++ با رابط کاربری از نوع Qt" title="تصویر8.H.– ایجاد یک پروژه C++ با رابط کاربری از نوع Qt" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_i.jpg 667 170 "'تصویر8.I. – خطا در تولید نسخه باینری پروژه Qt'" "'تصویر8.I. – خطا در تولید نسخه باینری پروژه Qt'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_i.jpg)
-<span class="post-image-title">تصویر 8.I. – خطا در تولید نسخه باینری پروژه Qt</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-i.jpg" alt="تصویر8.I. – خطا در تولید نسخه باینری پروژه Qt" title="تصویر8.I. – خطا در تولید نسخه باینری پروژه Qt" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_j.jpg 667 170 "'تصویر8.J. – هشدار Eclipse در کادر Problems'" "'تصویر8.J. – هشدار Eclipse در کادر Problems'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_j.jpg)
-<span class="post-image-title">تصویر 8.J. – هشدار Eclipse در کادر Problems</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-j.jpg" alt="تصویر8.J. – هشدار Eclipse در کادر Problems" title="تصویر8.J. – هشدار Eclipse در کادر Problems" >}}
 
 جهت رفع خطا بر روی پوشه محتوی پروژه در پنل Project Explorer راست کلیک٬ سپس Properties را برگزینید. در کادر Properties for QtTest از ناحیه سمت چپ صحفه زبانه C/C++ Make Project را برگزینید. سپس وارد زبانهEnvironment  شوید. در ناحیه Environment variables to set متغیر PATH را انتخاب نمائید. همان طور که مشاهده می نمائید مقدار این متغیر محیطی چیزی مشابه C:\Qt\4.4.1\bin; ${env_var:PATH} می باشد (مطابق با تصویر 8.K.) که بایستی آن را به چیزی مانند آنچه در ذیل می آید تغییر دهید تا به مسیر کامپایلر اشاره نماید. با فرض نصب MinGW در شاخه پیش فرض با کلیک بر گزینه Edit آنرا به شکل زیر تغییر دهید (مطابق با تصاویر 8.L. و 8.M.):
 
-<div style="direction: ltr; text-align: left;">
-<pre>
+{{< highlight lang="" >}}
 C:\Qt\4.4.1\bin;C:\MinGW\bin;${env_var:PATH}
-</pre>
-</div>
+{{< /highlight >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_k.jpg 683 581 "'تصویر8.K. – نحوه تغییر مقدار متغیر محیطی PATH'" "'تصویر8.K. – نحوه تغییر مقدار متغیر محیطی PATH'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_k.jpg)
-<span class="post-image-title">تصویر 8.K. – نحوه تغییر مقدار متغیر محیطی PATH</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-k.jpg" alt="تصویر8.K. – نحوه تغییر مقدار متغیر محیطی PATH" title="تصویر8.K. – نحوه تغییر مقدار متغیر محیطی PATH" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_l.jpg 362 146 "'تصویر8.L. – متغیر محیطی PATH پیش از تغییر'" "'تصویر8.L. – متغیر محیطی PATH پیش از تغییر'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_l.jpg)
-<span class="post-image-title">تصویر 8.L. – متغیر محیطی PATH پیش از تغییر</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-l.jpg" alt="تصویر8.L. – متغیر محیطی PATH پیش از تغییر" title="تصویر8.L. – متغیر محیطی PATH پیش از تغییر" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_m.jpg 362 146 "'تصویر8.M. – متغیر محیطی PATH پس از تغییر'" "'تصویر8.M. – متغیر محیطی PATH پس از تغییر'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_m.jpg)
-<span class="post-image-title">تصویر 8.M. – متغیر محیطی PATH پس از تغییر</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-m.jpg" alt="تصویر8.M. – متغیر محیطی PATH پس از تغییر" title="تصویر8.M. – متغیر محیطی PATH پس از تغییر" >}}
 
 پس از اصلاح مسیر بر روی  OK‌کلیک نمائید در پنجره بعدی باز هم بر روی OK‌ کلیک نمائید. به محض ورود مجدد به Workspace مشاهده می نمائید که اتفاقاتی در پنجره های Console و Project Explorer‌ در حال رخ دادن است. Eclipse بصورت خودکار اقدام به Build پروژه و تولید نسخه باینری آن می نماید. میزان پیشرفت این فعالیت ها در ناحیه سمت راست Status Bar نمایش داده می شود. پس از اتمام آن می توانید پروژه را اجرا نمائید.
 
 در اولین بار اجرای پروژه با کادر محاوره ای Launch Debug Configuration Selection مواجه می شوید. این کادر از شما می خواهد که تنظیمات مربوط به Debug پروژه را تعیین نمائید. MinGW gdb Debugger را انتخاب و بر روی OK‌ کلیک نمائید (مطابق با تصویر 8.N.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_n.jpg 326 381 "'تصویر8.N. – تعیین نوع Debugger'" "'تصویر8.N. – تعیین نوع Debugger'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_n.jpg) 
-<span class="post-image-title">تصویر 8.N. – تعیین نوع Debugger</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-n.jpg" alt="تصویر8.N. – تعیین نوع Debugger" title="تصویر8.N. – تعیین نوع Debugger" >}}
 
 پس از اجرای پروژه با پنجره ای خالی مواجه خواهید شد. خب٬ شاید اجرای پروژه آن قدر هم هیجان نداشت. این بدان دلیل است که خود Eclipse کد ایجاد پنجره را تولید نموده است. پنجره را ببندید تا به محیط Eclipse بازگردید. Project Explorer را به دنبال فایلی تحت عنوان qttest.ui جستجو نمائید. این فایل حاوی کدهای XML ی می باشد که ساختار و شکل ظاهری یک فرم را به همراه کنترل های آن توصیف می نماید (مشابه XAML در .NET) و توسط QtDesigner گشوده می شود. بر روی آن دابل کلیک نمائید. مشاهده می نمائید که فرم پروژه در زبانه ای جدید گشوده می شود (مطابق با تصویر 8.O.). از سمت چپ Workspace پنل Qt C++ Widget Box را فعال نمائید. چند کنترل را از این پنل بر روی فرم درگ نمائید. برای مثال یک Text Edit٬ یک Push Button٬ Radio Button٬ Check Box٬ Command Link Button و یا یک LCD Number یا حتی یک Calendar. همانطور که مشاهده می نمائید تعداد کنترل ها بسیار متنوع می باشد. همچنین می توانید از منوی QtDesigner و زیر منوی Preview in رابط کاربری را در برخی پلتفرم ها بصورت پیش نمایش مشاهده نمائید. فایل را Save و یک بار دیگر پروژه را اجرا نمائید.
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_o.jpg 1280 960 "'تصویر8.O. – نمائی از QtDesigner'" "'تصویر8.O. – نمائی از QtDesigner'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_o.jpg)
-<span class="post-image-title">تصویر 8.O. – نمائی از QtDesigner</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-o.jpg" alt="تصویر8.O. – نمائی از QtDesigner" title="تصویر8.O. – نمائی از QtDesigner" >}}
 
 طراحی یک رابط کاربری برای برنامه در C/C++‌ برای افرادی که تجربه کد نویسی با آن را داشته باشند به وضوح یک کابوس محسوب می شود. اما به لطف Qt و نرم افزارهای مشابه آن این امر بسیار آسان تر صورت می پذیرد.
 
 خب؛ قصد داریم یک برنامه Qt را که از یک Label بر روی یک فرم استفاده می نماید بدون استفاده از QtDesigner و فقط با استفاده از کد نویسی ایجاد و اجرا نمائیم. برای این کار به پروژه ای که ایجاد نمودیم باز می گردیم. سپس فایل main.cpp را بگشائید. آنگاه تمامی کدهای داخل آن را پاک نمائید سپس کد زیر را در فایل درج نمائید:
 
-{% codeblock lang:cpp %}
+{{< highlight csharp >}}
 #include <QApplication>
 #include <QLabel>
 
@@ -713,34 +651,29 @@ int main(int argc, char *argv[])
     label->show();
     return app.exec();
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 پس از اجرای کد٬ فرمی را به همراه عبارت محبوب Hello, World! مشاهده می نمائید (مطابق با تصویر 8.P.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_p.jpg 1024 768 "'تصویر8.P. – اجرای پروژه Qt'" "'تصویر8.P. – اجرای پروژه Qt'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_p.jpg)
-<span class="post-image-title">تصویر 8.P. – اجرای پروژه Qt</span>
- 
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-p.jpg" alt="تصویر8.P. – اجرای پروژه Qt" title="تصویر8.P. – اجرای پروژه Qt" >}}
+
 ### نکاتی در رابطه با Eclipse ###
 
 ۱. اولین نکته در کار با Eclipse این است که این نرم افزار بصورت همزمان توانائی کار با چندین پروژه را دارا می باشد. مثلا ممکن همزمان در حال کار بر روی یک پروژه C++ و یک پروژه Python باشید. از آنجا که ظاهر و چیدمان پنل ها و پنجره های Eclipse در کار با هر کدام از Plug-in ها و زبان های برنامه نویسی متفاوت است در Eclipse مفهومی با عنوان Perspective ایجاد شده است. هر زبان برنامه نویسی در Eclipse خود دارای یک Perspective جداگانه می باشد برای تغییر این Perspective در هر زمان می توانید از قسمت بالا و سمت راست پنجره Eclipse استفاده نمائید (مطابق با تصویر 8.Q.). همچنین می توانید از مسیر Window/Open Perspective/Other… اقدام به گشودن Perspective موردنظر نمائید (مطابق با تصویر 8.R.).
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_q.jpg 527 238 "'تصویر8.Q. – تغییر Perspective'" "'تصویر8.Q. – تغییر Perspective'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_q.jpg)
-<span class="post-image-title">تصویر 8.Q. – تغییر Perspective</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-q.jpg" alt="تصویر8.Q. – تغییر Perspective" title="تصویر8.Q. – تغییر Perspective" >}}
 
-[{% img post-image /blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_r.jpg 345 421 "'تصویر8.R. – مشاهده تمامی Perspective های موجود و تغییر آن'" "'تصویر8.R. – مشاهده تمامی Perspective های موجود و تغییر آن'" %}](/blog/2008/09/04/c-qt-development-using-eclipse/2008-09-04-c-qt-development-using-eclipse__008_r.jpg)
-<span class="post-image-title">تصویر 8.R. – مشاهده تمامی Perspective های موجود و تغییر آن</span>
+{{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-r.jpg" alt="تصویر8.R. – مشاهده تمامی Perspective های موجود و تغییر آن" title="تصویر8.R. – مشاهده تمامی Perspective های موجود و تغییر آن" >}}
 
 ۲. بصورت پیش فرض در نرم افزار Eclipse به هیچ وجه قادر به ذخیره فایل هائی که در آنها از کاراکترهای فارسی استفاده شده است نمی باشید. جهت ذخیره کاراکترهای فارسی در فایل هایتان  از یکی از مسیرهای زیر اقدام نمائید (مطابق با تصویر 9.A.):
 
-<div style="direction: ltr; text-align: left;">
-<pre>
-Windows: 
+```
+Windows:
     Window/Preferences/General/Workspace/Text file encoding/Other/UTF-8
 
 Mac OS X:
     Eclipse/Preferences/General/Workspace/Text file encoding/Other/UTF-8
-</pre>
-</div>
+```
 
 علاوه بر این برخی مفسرها مانند Python بصورت پیش فرض نمی توانند برنامه هائی را که از کاراکترهای فارسی استفاده نموده اند اجرا نمایند (به یاد داشته باشید که تنظیم یاد شده فقط برای ذخیره فایل ها است). البته برای مفسر Python چندین روش وجود دارد که بتوان چنین برنامه هائی را اجرا نمود. به عنوان نمونه استفاده از راهنماهای مفسر و یا استفاده از ماژول هائی خاص در برنامه و ... که تشریح آن در قالب چنین مقاله ای نمی گنجد.
 
