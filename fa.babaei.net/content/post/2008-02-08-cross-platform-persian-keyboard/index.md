@@ -30,7 +30,7 @@ aliases = [ "/blog/2008/02/08/cross-platform-persian-keyboard/" ]
 
 در هر صورت اقدام به اجرای فایل نمونه می نمائیم. در صورت نصب .NET FX و اجرای موفقیت آمیز فایل نمونه با پنجره ای مشابه آنچه كه در تصویر شماره 1 آمده است مواجه خواهید شد.
 
-[{% img post-image /blog/2008/02/08/cross-platform-persian-keyboard/2008-02-08-cross-platform-persian-keyboard__001.jpg 388 138 "'تصویر شماره 1 - شمای كلی برنامه نمونه'" "'تصویر شماره 1 - شمای كلی برنامه نمونه'" %}](/blog/2008/02/08/cross-platform-persian-keyboard/2008-02-08-cross-platform-persian-keyboard__001.jpg)<span class="post-image-title">تصویر شماره 1 - شمای كلی برنامه نمونه</span>
+{{< figure src="/blog/cross-platform-persian-keyboard/cross-platform-persian-keyboard.jpg" alt="تصویر شماره 1 - شمای كلی برنامه نمونه" caption="تصویر شماره 1 - شمای كلی برنامه نمونه" >}}
 
 بدون اینكه اقدام به تغییر زبان نمائید شروع به تایپ كلماتی در هر دو كادر Persian و English نمائید. مشاهده می نمائید كه كادر بالائی به صورت خودكار فارسی و كادر پائین بصورت خودكار انگلیسی تایپ می نماید. حال زبان را به فارسی یا هر زبان دیگری تغییر داده و مجددا در كادر Persian اقدام به تایپ نمائید بازهم مشاهده می نمائید كه متون بصورت فارسی وارد می شوند.
 
@@ -46,16 +46,16 @@ aliases = [ "/blog/2008/02/08/cross-platform-persian-keyboard/" ]
 
 بسیار خب، بر روی رخداد KeyPress دابل كلیك نمائید. در ادامه وارد قسمت كد نویسی فرم خواهید شد. با عمل دابل كلیك، شما باعث خلق تابعی به شكل زیر شده اید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 {
 
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 بسیار خب ما سه حرف از صفحه كلید را به عنوان نمونه جهت فارسی نویسی انتخاب می نمائیم. این سه حرف شامل كلیدهای H, T, M خواهند بود كه به ترتیب معادل با ‘ا’، ‘ف’، ‘ئ’، و در حالتی كه كلید Shift را فشرده اید معادل با ‘آ’، ‘،’، ‘ء’، می باشند. پس در ادامه كدهای زیر را درون تابع جدید تایپ نمائید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 {
     int pos = textBox1.SelectionStart;
@@ -79,24 +79,24 @@ private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 
     textBox1.Select(pos + 1, 0);
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 در ابتدای تابع متغیری به نام pos جهت بدست آوردن و نگهداری موقعیت فعلی اشاره گر در كادر متن تعریف نموده ایم. این بدان دلیل است كه در زمان عمل هندلینگ به صورت دستی، اشاره گر به ابتدای كادر متنی باز می گردد و قادر به حذف حروف جدید وارد شده با كلید BackSpace نخواهید بود. پس در ادامه هندلینگ كادر متنی را بدست می گیریم:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 int pos = textBox1.SelectionStart;
 e.Handled = true;
-{% endcodeblock %}
+{{< /highlight >}}
 
 دقت نمائید در صورتی كه اجازه دهیم هندلینگ بصورت خودكار انجام شود علاوه بر كاراكتر فارسی، كاراكتر انگلیسی نیز وارد خواهد شد. بنابراین از هندلینگ بصورت خودكار اجتناب نمائید. قبل از ادامه بهتر است نگاهی به ورودی های تابع جدید بیاندازیم:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-{% endcodeblock %}
+{{< /highlight >}}
 
 یكی از ورودی های تابع پارامتر e می باشد كه از نوع KeyPressEventArgs تعریف شده است. در زمان فشردن كلیدی توسط كاربر و اجرای تابع مربوط به رخداد، متغیر e، كلید فشرده شده توسط كاربر را به تابع می فرستد. در این لحظه شما قادر به تشخیص كلید فشرده شده خواهید بود. بنابراین توسط یك شرط Switch/Case به دنبال كلید های مورد نظر خواهیم بود.
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 switch (e.KeyChar.ToString().ToUpper())
 {
     case "H":
@@ -112,31 +112,31 @@ switch (e.KeyChar.ToString().ToUpper())
         e.Handled = false;
     break;
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 همانطور كه مشاهده می نمائید متغیر e داری خصوصیتی به نام KeyChar از نوع داده char می باشد. كه توسط متد ToString() و سپس ToUpper()، ابتدا به داده رشته ای و سپس به حروف بزرگ تبدیل شده است. این عمل بدین جهت صورت گرفته است كه در صورت روشن و یا خاموش بودن CapsLock باز هم بتوان فشرده شدن كلیدها را تشخیص داد. سپس در هریك از حالات( case)، رشته ذخیره شده داخل كادر متنی textBox1 را به علاوه ی یك كاراكتر یونیكد كه همان كاراكتر معادل فارسی است نموده ایم.
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 case "H":
     textBox1.Text += "\u0627";
     break;
-{% endcodeblock %}
+{{< /highlight >}}
 
 برای مثال برای كاراكتر H كد یونیكد 0627 كه كد حرف ‘ا’ فارسی در جدول یونیكد[^7] می باشد را وارد نموده ایم. با هر بار وارد شدن H بجای نمایش آن، حرف ‘ا’ نمایش داده خواهد شد. توجه داشته باشید در زبان C# برای ذخیره و یا نمایش یك كاراكتر یونیكد در یك رشته بایستی از فرمت \uXXXX استفاده نمائیدكه به جای هر علامت X یك عدد در مبنای Hex قرار می گیرد. برای مثال كد كاراكتر ‘ا’ در مبنای 10 عدد 1575 معادل با 0627  در مبنای Hex می باشد. كه در C# به شكل \u0627 بیان می شود. دقت نمائید كه كدها بصورت چهار رقمی وارد می شوند برای مثال 627 به شكل 0627 وارد شده است.
 
 بسیار خب. در ادامه ساختار Switch/Case بخش default برای سایر كلیدها در نظر گرفته شده است. این بدان دلیل است كه چنانچه كلیدی غیر از كلید های مورد نظر وارد شود بایستی هندلینگ به حالت نرمال باز گردد چرا كه در غیر اینصورت كاراكتر مورد نظر چاپ نخواهد شد. همچنین هندلینگ دستی باعث مختل شدن كلیدهای كنترلی نظیر كلید BackSpace یا Del خواهد شد كه در این بخش به منظور اجتناب از این مسئله، هندلینگ به حالت خودكار باز می گردد:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 default:
     e.Handled = false;
     break;
-{% endcodeblock %}
+{{< /highlight >}}
 
 در پایان اقدام به تعیین مكان درست اشاره گر بر اساس متغیر pos می نمائیم:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 textBox1.Select(pos + 1, 0);
-{% endcodeblock %}
+{{< /highlight >}}
 
 حال پروژه را با فشردن كلید F5 اجرا نمائید. یكی از كلیدهای موردنظر را امتحان نمائید، حال كلید دیگری را بفشارید. مراقب باشید استفاده از كلید BackSpace را فراموش نكنید.
 
@@ -144,28 +144,28 @@ textBox1.Select(pos + 1, 0);
 
 و اما چگونه می توان از فشرده شدن كلید Shift مطلع شد؟ بهترین پاسخ برای این سوال استفاده از رخداد PreviewKeyDown می باشد. اما قبل از این كه به سراغ این رخداد برویم اجازه دهید یك متغیر سراسری از نوع bool تعریف نمائیم. از این متغیر جهت تعیین و تشخیص فشرده شدن كلید Shift استفاده می نمائیم.
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 private bool shift = false;
-{% endcodeblock %}
+{{< /highlight >}}
 
 بسیار خب در فرم اصلی در حالت Design، كادر متن را انتخاب نمائید. سپس در پنل Properties رخداد PreviewKeyDown را انتخاب نمائید. این رخداد همانند رخداد KeyPress در حالت Categorized در دسته Key جای خواهد گرفت. در هر صورت بر روی PreviewKeyDown دابل كلیك نمائید. تا با تابع جدیدی به شكل ذیل مواجه شوید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 private void textBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
 {
 
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 در این حالت پارامتر e از نوع PreviewKeyDownEventArgs خواهد بود. این متغیر پارامترهای مختلفی نظیر كد كلیدهای فشرده شده و یا وضعیت كلیدهای كنترلی نظیر Shift را به تابع خواهد فرستاد. كد تابع را به شكل زیر اصلاح نمائید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 shift = e.Shift;
-{% endcodeblock %}
+{{< /highlight >}}
 
 همانطور كه مشاهده می نمائید این متغیر وضعیت كلید Shift را نگهداری می نماید. در ادامه جهت بررسی وضعیت كلید Shift نیازمند اعمال تغییراتی در تابع مربوط به رخداد KeyPress می باشیم:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 {
     int pos = textBox1.SelectionStart;
@@ -211,11 +211,11 @@ private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
 
     textBox1.Select(pos + 1, 0);
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 همانطور كه مشاهده می نمائید برای حالتی كه كلید Shift فشرده شده است یك دستور switch و در حالت عكس آن دستور switch دیگری به كار برده شده است. در كد تابع حاضر زمانی كه كلید Shift فشرده شده است دستورات قسمت else اجرا می شوند كه در این حالت از كدهای یونیكد مربوطه برای هر كلید استفاده شده است. شكل كلی:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 if (!shift)
 {
     // H -> ا
@@ -229,7 +229,7 @@ else
     // T -> ،
     shift = false;
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 همانطور كه مشاهده می نمائید قسمت if مربوط به حالت عادی صفحه كلید و قسمت else مربوط به حالتی است كه كلید shift همراه با كاراكتر موردنظر فشرده شده است. در این قسمت تنها دستور اضافه ای كه موجود می باشد مربوط به متغیر shift است كه هر بار به مقدار false باز می گردد.
 
@@ -251,21 +251,21 @@ else
 
 4: سپس در ناحیه using واقع در ابتدای كد و پس از آخرین اعلان using كد ذیل را وارد نمائید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 using CrossPlatformKeyboard;
-{% endcodeblock %}
+{{< /highlight >}}
 
 5: آنگاه، پیش از تابع سازنده كلاس Form1 كد زیر را وارد نمائید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 PersianKeyboard kb = new PersianKeyboard();
-{% endcodeblock %}
+{{< /highlight >}}
 
 6: كلاس حاضر بصورت پیش فرض از اعداد عربی به جای اعداد فارسی استفاده می نماید. چنانچه قصد استفاده از اعداد فارسی را دارید، در تابع سازنده كلاس Form1 و پس از InitializeComponent(); كد زیر را درج نمائید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 kb.usePersianNums = true;
-{% endcodeblock %}
+{{< /highlight >}}
 
 7: در Solution Explorer بر روی Form1.cs كلیك راست نموده و بر روی گزینه ی View Designer كلیك نمائید.
 
@@ -279,21 +279,21 @@ kb.usePersianNums = true;
 
 12: در تابع جدید كد ذیل را وارد نمائید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 kb.shiftPressed = e.Shift;
-{% endcodeblock %}
+{{< /highlight >}}
 
 13: مجددا مطابق آنچه كه قبلا گفته شد در حالت Design بر روی رخداد KeyPress مربوط به كادر متن دابل كلیك نمائید.
 
 14: آنگاه در تابع جدید كد ذیل را درج نمائید:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 kb.TransformInputChar(txtPersian, e);
-{% endcodeblock %}
+{{< /highlight >}}
 
 15: چنانچه مراحل قبل را بدرستی انجام داده اید، كدهای واقع در Form1 شبیه به آنچه كه در ذیل می آید به نظر می رسد:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 /// <summary>
 ///   (The MIT License)
 ///   
@@ -352,7 +352,7 @@ namespace CrossPlatformKeyboard
         }
     }
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 16: بسیار خب. با زدن كلید F5 پروژه را اجرا نمائید.
 
@@ -368,7 +368,7 @@ namespace CrossPlatformKeyboard
 [دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2008-02-08-cross-platform-persian-keyboard)
 
 
-{% codeblock PersianKeyboard.cs lang:csharp %}
+{{< codeblock lang="csharp" title="PersianKeyboard" >}}
 /// <summary>
 ///   (The MIT License)
 ///   
@@ -669,7 +669,7 @@ namespace CrossPlatformKeyboard
 
     }
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 
 #### منابع و ماخذ ####
