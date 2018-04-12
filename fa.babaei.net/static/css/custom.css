@@ -298,6 +298,11 @@ footer .copyright .license a {
     font-size: 36px;
 }
 
+.post-preview a,
+p a {
+    color: #111;
+}
+
 .codeblock .title {
     display: block;
     text-align: center;
