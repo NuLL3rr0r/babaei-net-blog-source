@@ -674,7 +674,6 @@ namespace CrossPlatformKeyboard
 
 #### منابع و ماخذ ####
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 <a href="http://msdn2.microsoft.com/en-us/vstudio/default.aspx" target="_blank">http://msdn2.microsoft.com/en-us/vstudio/default.aspx</a>
 <a href="http://www.codeplex.com/Wiki/View.aspx?ProjectName=MSBee" target="_blank">http://www.codeplex.com/Wiki/View.aspx?ProjectName=MSBee</a>
@@ -682,8 +681,8 @@ namespace CrossPlatformKeyboard
 <a href="http://www.microsoft.com/Downloads/details.aspx?FamilyID=e0d0776f-25c4-444a-a6b9-71d06826f5b4&displaylang=e" target="_blank">http://www.microsoft.com/Downloads/details.aspx?FamilyID=e0d0776f-25c4-444a-a6b9-71d06826f5b4&displaylang=e</a>
 <a href="http://msdn2.microsoft.com/en-us/vs2005/aa718347.aspx" target="_blank">http://msdn2.microsoft.com/en-us/vs2005/aa718347.aspx</a>
 </pre>
-</div>
 
+<br />
 
 [^1]: تمامی فایل ها و كدهای استفاده شده در این مقاله در انتهای مطلب در قالب یک فایل فشرده قابل دریافت می باشد. نام فایل نمونه demo.exe واقع در پوشه ی "CrossPlatformPersianKeyboard" می باشد.
 

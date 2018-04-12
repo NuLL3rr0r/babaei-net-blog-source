@@ -663,7 +663,6 @@ public partial class GooglebotDetector : System.Web.UI.Page
 
 #### منابع و ماخذ ####
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 <a href="http://www.scriptygoddess.com/archives/2003/07/16/get-an-email-when-google-visits/" target="_blank">http://www.scriptygoddess.com/archives/2003/07/16/get-an-email-when-google-visits/</a>
 <a href="http://www.codeproject.com/KB/cs/SendMailUsingGmailAccount.aspx" target="_blank">http://www.codeproject.com/KB/cs/SendMailUsingGmailAccount.aspx</a>
@@ -672,7 +671,8 @@ public partial class GooglebotDetector : System.Web.UI.Page
 <a href="http://lynx.browser.org/" target="_blank">http://lynx.browser.org/</a>
 <a href="https://mail.google.com/" target="_blank">https://mail.google.com/</a>
 </pre>
-</div>
+
+<br />
 
 
 [^1]: [http://www.google.com/webmasters/tools/](http://www.google.com/webmasters/tools/)

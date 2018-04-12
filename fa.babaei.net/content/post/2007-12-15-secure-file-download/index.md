@@ -16,13 +16,13 @@ aliases = [ "/blog/2007/12/15/secure-file-download/" ]
  
 <!--more-->
 
-<div style="font-style: oblique;">
+<p style="font-style: oblique; text-decoration: underline;">
 <br />
-هشدار!!
+<strong>هشدار!!</strong>
 <br />
 به جهت تسهیل فرآیند آموزش، نکته امنیتی مهمی در نگارش کدهای تشریح شده در این مقاله رعایت نشده است. بنابراین، یک نفوذگر ماهر اجازه دریافت فایل های حساس داخل سرور را خواهد داشت. به عنوان راهکار، در انتهای مقاله و در فایل سورس کامل، نسخه ای امن از کد Perl گنجانده شده است. امن نمودن کد ASP.NET بر اساس نمونه کد Perl به عهده مخاطب گذاره شده است.
 <br /><br /><br />
-</div>
+</p>
 
 #### مقدمه ####
 
@@ -395,11 +395,9 @@ Error(): از این تابع برای نمایش پیغام های خطا و خ
 Error('act', 'object')
 {{< /highlight >}}
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 Result: The server can't <strike>act</strike> the <strike>object</strike>: <strike>Cause</strike>.
 </pre>
-</div>
 
 مثال:
 
@@ -407,11 +405,9 @@ Result: The server can't <strike>act</strike> the <strike>object</strike>: <stri
 Error('open', 'mail program');
 {{< /highlight >}}
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 Result: The server can't <strike>open</strike> the <strike>mail program</strike>: <strike>The system cannot find the path specified</strike>.
 </pre>
-</div>
 
 ErrorH(): این تابع همانند تابع Error() عمل می نمایند با این تفاوت كه ابتدا اقدام به معرفی نوع سند خروجی به مرورگر می نماید. در واقع HTTP Header را تنظیم می نماید سپس پیغام خطا را نمایش می دهد.
 
@@ -1204,7 +1200,6 @@ sub ErrorH {
 
 #### منابع و ماخذ ####
 
-<div style="direction: ltr; text-align: left;">
 <pre>
 <a href="http://www.codeproject.com/KB/aspnet/SecureFileDownload.aspx" target="_blank">http://www.codeproject.com/KB/aspnet/SecureFileDownload.aspx</a>
 <a href="http://www.codeproject.com/KB/cs/SendMailUsingGmailAccount.aspx" target="_blank">http://www.codeproject.com/KB/cs/SendMailUsingGmailAccount.aspx</a>
@@ -1212,7 +1207,8 @@ sub ErrorH {
 <a href="http://www.webmaster-toolkit.com/mime-types.shtml" target="_blank">http://www.webmaster-toolkit.com/mime-types.shtml</a>
 <a href="https://mail.google.com/" target="_blank">https://mail.google.com/</a>
 </pre>
-</div>
+
+<br />
 
 
 [^1]: تمامی كدهای استفاده شده در این مقاله در انتهای مطلب در قالب یک فایل فشرده قابل دریافت می باشد.
