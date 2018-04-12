@@ -224,17 +224,17 @@ DirectX فناوریی است كه به سازندگان بازیها كمك م�
 
 GL با توابع سروكار دارد و با فراخوانی یك به یك توابع می توان به نتیجه نهایی دست یافت:
 
-{% codeblock OpenGL Sample Code lang:cpp %}
+{{< codeblock lang="cpp" title="OpenGL Sample Code" >}}
 glBegin (GL_TRIANGLES);
 glVertex (0,0,0);
 glVertex (1,1,0);
 glVertex (2,0,0);
 glEnd ();
-{% endcodeblock %}
+{{< /codeblock >}}
 
 و كد معادل در D3D:
 
-{% codeblock Equivalent DirectX Sample Code lang:cpp %}
+{{< codeblock lang="cpp" title="Equivalent DirectX Sample Code" >}}
 // pseudo code, and incomplete
 v = &buffer.vertexes[0];
 v->x = 0; v->y = 0; v->z = 0;
@@ -248,18 +248,16 @@ c->vertexes[0] = 0;
 c->vertexes[1] = 1;
 c->vertexes[2] = 2;
 IssueExecuteBuffer (buffer);
-{% endcodeblock %}
+{{< /codeblock >}}
 
 و اگر كد واقعی مربوط به D3D را ارائه می دادم شاید شما می گفتید كه عمدا، قصد بد جلوه دادن آنرا دارم!
 
 #### برنامه نویسی ####
 زبان های برنامه نویسی كه قابلیت بكارگیری هر یك از دو رابط ذكر شده را دارند در ذیل لیست شده اند:
 
-<div style="direction: ltr; text-align: left;">
-<pre>
+```
 VC++, C++ Builder, C#, Java, VB, Delphi
-</pre>
-</div>
+```
 
 و هر زبان برنامه نویسی تحت ویندوزی که توانایی به كارگیری و به اشتراک نهادن ویژگی های ویندوزی مانند COM[^16] را دارد.
 

@@ -41,17 +41,16 @@ aliases = [ "/blog/2007/12/23/get-an-email-when-google-visits-your-website/" ]
 
 در اين فايل كدي به زبان JavaScript بشرح ذيل قرار دارد:
 
-{% codeblock lang:html %}
+{{< highlight html >}}
 <script type="text/javascript">
     for (i in navigator)
         document.write(i + ": " + navigator[i] + "<br />");
 </script>
-{% endcodeblock %}
+{{< /highlight >}}
 
 توجه داشته باشيد كه اين كد در سمت Client اجرا خواهد شد و مستقيما از مرورگر اطلاعات موردنظر را استخراج مي نمايند. به هر حال در صورت اجراي آن، احتمالا با چيزي شبيه به آنچه كه در ادامه خواهد آمد مواجه خواهيد شد:
 
-<div style="direction: ltr; text-align: left;">
-<pre>
+```
 platform: Win32
 appCodeName: Mozilla
 appName: Netscape
@@ -74,8 +73,7 @@ buildID: 2007112718
 preference: function preference() { [native code] }
 registerContentHandler: function registerContentHandler() { [native code] }
 registerProtocolHandler: function registerProtocolHandler() { [native code] }
-</pre>
-</div>
+```
 
 در واقع اين ها اطلاعاتي است كه در ساختار DOM[^4] مرورگر وجود دارد و با JavaScript اقدام به استخراج آن نموديم. اما سوال اينجاست كه آيا مرورگر جهت بازديد هر صفحه تمامي اين اطلاعات را به وب سرور ارائه مي نمايند؟ قطعا پاسخي جز ‘خير’ براي آن وجود ندارد. تنها چيزي كه مرورگر براي وب سرور همراه با درخواست دريافت صفحه ارسال مي نمايد مقدار پارامتر userAgent مي باشد كه در خروجي مثال بالا مشاهده نموديد. اجازه دهيد مقدار اين پارامتر را در مرورگرهاي مختلف بررسي كنيم:
 
@@ -112,11 +110,9 @@ registerProtocolHandler: function registerProtocolHandler() { [native code] }
 
 اطلاعاتي كه در Googlebot userAgent يافت مي شوند به قرار زير مي باشد:
 
-<div style="direction: ltr; text-align: left;">
-<pre>
+```
 Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
-</pre>
-</div>
+```
 
 البته شما با JavaScript قادر به بدست آوردن اطلاعات فوق نخواهيد بود، بلكه قبل از ارسال پاسخ به سوي مرورگر، در وب سرور قادر به چك كردن اطلاعات ذخيره شده در متغيرهاي محيطي، جهت شناسائي نوع مرورگر خواهيد بود.
 
@@ -128,7 +124,7 @@ Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
 
 در كد index.pl خطوط زير را جستجو نمائيد:
 
-{% codeblock lang:perl %}
+{{< highlight perl >}}
 my $result;
 $result = qq(<table border="0" cellpadding="10">);
 foreach (keys %ENV) {
@@ -143,11 +139,11 @@ foreach (keys %ENV) {
 }
 $result .= qq(</table>);
 print "$result";
-{% endcodeblock %}
+{{< /highlight >}}
 
-و در كد index.aspx خطوط زير را جستجو نمائيد: 
+و در كد index.aspx خطوط زير را جستجو نمائيد:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 <%
     string[] server = Request.ServerVariables.AllKeys;
 
@@ -169,7 +165,7 @@ print "$result";
     str.Append("</table>");
     Response.Write(str);
 %>
-{% endcodeblock %}
+{{< /highlight >}}
 
 هر دو كد عمل يكساني را انجام مي دهند و آن چاپ متغيرهاي محيطي به همراه مقاديرشان، بصورت منظم و قالب بندي شده در صفحه ي وب مي باشد. بسيار خب، دست بكار شويد و كدها را در محيط وب سرور اجرا نمائيد.
 
@@ -194,7 +190,7 @@ print "$result";
 
 ابتدا اقدام به تعريف متغيرهاي اساسي برنامه و كسب مقادير مورد نياز برنامه از متغيرهاي محيطي مي نمائيم. براي اين كار متغيري به نام browser تعريف مي نمائيم و با استفاده از متغير محيطي HTTP_USER_AGENT اطلاعات مرورگر را بدست مي آوريم. سپس با استفاده از متغير محيطي REMOTE_ADDR آدرس IP بازديدكننده صفحه را بدست خواهيم آورد. در نهايت قصد بدست آوردن آدرس صفحه ي درخواست شده را داريم. اين صفحه ممكن است به شكل http://www.somedomain.com/example.aspx و يا http://www.somedomain.com/example.aspx?req=test&id=1 درخواست شده باشد. بنابراين نيازمند تركيب چند متغير محيطي مي باشيم. با استفاده از HTTP_HOST نام دامين، با استفاده از URL نام صفحه ي موردنظر، همچنين با استفاده از QUERY_STRING پارامترهاي ارسالي توسط متد GET را بدست خواهيم آورد، آنگاه تركيب آن ها را در متغيري با عنوان url ذخيره مي نمائيم.
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 string browser = Request.ServerVariables["HTTP_USER_AGENT"];
 string ip = Request.ServerVariables["REMOTE_ADDR"];
 string url = String.Concat("http://", Request.ServerVariables["HTTP_HOST"], Request.ServerVariables["URL"], "?", Request.ServerVariables["QUERY_STRING"]);
@@ -202,31 +198,31 @@ string url = String.Concat("http://", Request.ServerVariables["HTTP_HOST"], Requ
 * if IIS 7.0
 * string url = String.Concat("http://", Request.ServerVariables["HTTP_HOST"], Request.ServerVariables["HTTP_URL"]);
 */
-{% endcodeblock %}
+{{< /highlight >}}
 
 البته همانطور كه از توضيحات درون كدها به نظر مي رسد، چنانچه از IIS7.0 به عنوان وب سرور استفاده نمائيد اين مراحل اندكي ساده تر مي نمايند. در اين مورد شما با استفاده از HTTP_URL، قادر به بدست آوردن صفحه درخواست شده همراه با پارامترهاي ارسالي خواهيد بود. همچنين برخي مواقع روش هاي جايگزيني جهت طي نمودن فرآيندي خاص موجود مي باشد. براي مثال مي توان به جاي استفاده از HTTP_HOST از SERVER_NAME، به جاي URL از PATH_INFO و يا SCRIPT_NAME استفاده نمود.
 
 در خطوط بعدي برنامه اقدام به بدست آوردن زمان فعلي سرور مي نمائيم:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 DateTime dt = DateTime.Now;
 string date = dt.ToString();
-{% endcodeblock %}
+{{< /highlight >}}
 
 در نهايت ادامه اجراي كدها منوط به وجود كلمه ي Googlebot در رشته ي بدست آمده در متغير browser مي باشد:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 if (browser.Contains("Googlebot"))
 {
     // some code
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 چنانچه در رشته ي browser مقدار Googlebot موجود باشد، شك نكنيد كه در حال حاضر صفحه ي وب شما ميزبان موتور جستجوي گوگل است در غير اينصورت روال اجراي برنامه به فايل index.aspx باز مي گردد و متعاقبا محتويات صفحه به سوي مرورگر ارسال خواهد شد.
 
 چنانچه حضور Googlebot تشخيص داده شد، نوبت به مطلع نمودن مدير وب سايت از طريق ارسال ايميل مي رسد. ابتدا متغير هاي to، from، subject را از نوع رشته به ترتيب جهت ذخيره دريافت كننده، فرستنده و موضوع نامه تعريف و مقدار دهي مي نمائيم. سپس متغير body را بصورت يك كپي از كلاس StringBuilder تعريف مي نمائيم. مي خواهيم قالب نامه به صورت كدهاي HTML باشد، بنابراين شروع به توليد آن مي كنيم:
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 string to = "adminid@somedomain.com";
 string from = "someid@somedomain.com";
 string subject = "Googlebot Deteced";
@@ -241,17 +237,17 @@ body.Append("<br /><blockquote>{1}</blockquote>");
 
 body.Append("<br /><br /><strong>Crawl Date</strong>");
 body.Append("<br /><blockquote>{2}</blockquote>");
-{% endcodeblock %}
+{{< /highlight >}}
 
 دقت نمائيد كه در نهايت Place Holder هاي {0}، {1} و {2} به ترتيب با متغيرهاي url، ip و date جايگزين خواهند شد.
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 string msgBody = String.Format(body.ToString(), url, ip, date);
-{% endcodeblock %}
+{{< /highlight >}}
 
 متغير msgBody متن نهائي نامه ارسالي خواهد بود. بسيار خب، بايستي مقدمات ارسال ايميل را فراهم نمود. پيش از انجام هر كاري جهت جلوگيري از Crash نمودن اجراي صفحه با استفاده از ساختار try – catch – finally اقدام به كنترل  و مديريت خطاها مي نمائيم. بسته به نوع خطائي كه پيش مي آيد مي توان قسمت catch را جهت انجام تمهيداتي در نظر گرفت. و در پايان از قسمت finally براي اجراي دستوراتي خاص چه در زمان موفقيت برنامه، چه در زمان ايجاد خطا استفاده نمود.
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 try
 {
     // Send Mail Section
@@ -272,11 +268,11 @@ finally
 {
     // TODO: some statements
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 بسيار خب مي پردازيم به ارسال ايميل؛ در نظر داشته باشيد جهت ارسال ايميل در دنياي .NET شما نيازمند حق دسترسي به يك سرور SMTP مي باشيد. معمولا با خريد host، يك سرور SMTP در اختيار شما قرار خواهد گرفت. در هر صورت جهت يكپارچگي و كاربردي بودن كد تحت هر شرايطي – حتي در localhost – مي توان از يك اكانت Gmail بهره جست. پس قبل از ادامه، به فكر تهيه ي يك Gmail Account[^7] باشيد، در غير اينصورت قسمت پاياني كد قابل اجرا نخواهد بود (البته مزيت ديگر استفاده از Gmail اينست كه يك كپي از نامه هاي ارسالي توسط برنامه، در پوشه Sent اكانت مورد استفاده، آرشيو خواهد شد).
 
-{% codeblock lang:csharp %}
+{{< highlight csharp >}}
 using (MailMessage msg = new MailMessage(from, to, subject, msgBody))
 {
     msg.BodyEncoding = Encoding.UTF8;
@@ -289,7 +285,7 @@ using (MailMessage msg = new MailMessage(from, to, subject, msgBody))
     smtp.EnableSsl = true;
     smtp.Send(msg);
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 دقت نمائيد كه در شرايط معمول از پورت شماره 25 جهت ارسال ايميل استفاده مي شود. اما در Gmail مي توانيد از يكي از پورت هاي 587 و يا 465 استفاده نمائيد.
 
@@ -302,16 +298,16 @@ using (MailMessage msg = new MailMessage(from, to, subject, msgBody))
 
 در كد Perl جهت بدست آوردن نام صفحه درخواستي از SCRIPT_NAME استفاده مي شود. اما مي توان از REQUEST_URI جهت بدست آوردن نام صفحه به همراه پارامترهاي ارسالي با متد GET استفاده نمود.
 
-{% codeblock lang:perl %}
+{{< highlight perl >}}
 my $browser = $ENV{'HTTP_USER_AGENT'};
 my $ip = $ENV{'REMOTE_ADDR'};
 my $url = "http://" . $ENV{'HTTP_HOST'} . $ENV{'REQUEST_URI'};
 my $date = localtime(time);
-{% endcodeblock %}
+{{< /highlight >}}
 
 سپس اقدام به جستجو در رشته $browser به دنبال Googlebot مي نمائيم و در صورت تائيد، كد مربوط به ارسال ايميل به سوي مدير وب سايت، اجرا مي شود. در غير اينصورت صفحه روال عادي خود را طي خواهد نمود.
 
-{% codeblock lang:perl %}
+{{< highlight perl >}}
 if ($browser =~ m/Googlebot/) {
     my $to = qq("Admin Name" <adminid\@somedomain.com>);
     my $from =  qq("Your Name" <someid\@somedomain.com>);
@@ -335,13 +331,13 @@ if ($browser =~ m/Googlebot/) {
 
     close(MAIL);
 }
-{% endcodeblock %}
+{{< /highlight >}}
 
 تنها نكته اي كه بايستي در مورد كد Perl خاطر نشان شد اينست كه ممكن است مسير برنامه ارسال ايميل در سرور مورد نظر شما با آنچه كه در كد Perl آمده است متفاوت باشد كه بايستي اقدام به ويرايش آن نمائيد.
 
-{% codeblock lang:perl %}
+{{< highlight perl >}}
 |/usr/lib/sendmail -t
-{% endcodeblock %}
+{{< /highlight >}}
 
 #### جمع بندی ####
 
@@ -357,7 +353,7 @@ if ($browser =~ m/Googlebot/) {
 [دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2007-12-23-get-an-email-when-google-visited-your-website)
 
 
-{% codeblock index.html lang:html %}
+{{< codeblock lang="html" title="index.html" >}}
 <!--
   (The MIT License)
 
@@ -398,9 +394,9 @@ if ($browser =~ m/Googlebot/) {
 </script>
 </body>
 </html>
-{% endcodeblock %}
+{{< /codeblock >}}
 
-{% codeblock index.pl lang:perl %}
+{{< codeblock lang="perl" title="index.pl" >}}
 #!/usr/bin/perl
 
 #  (The MIT License)
@@ -440,14 +436,14 @@ if ($browser =~ m/Googlebot/) {
     my $from =  qq("Your Name" <someid\@somedomain.com>);
     my $subject =  "Googlebot Deteced";
     my $body;
-    
+
     $body .= "<br /><br /><br /><strong>Page Crawled By Googlebot</strong>";
     $body .= "<br /><blockquote>$url</blockquote>";
     $body .= "<br /><br /><strong>By Google Server At</strong>";
     $body .= "<br /><blockquote>$ip</blockquote>";
     $body .= "<br /><br /><strong>Crawl Date</strong>";
     $body .= "<br /><blockquote>$date</blockquote>";
-    
+
     open (MAIL, "|/usr/lib/sendmail -t");
 
     print MAIL "To: $to\n";
@@ -496,9 +492,9 @@ print "$result";
 print "</blockquote>";
 print "</body>";
 print "</html>";
-{% endcodeblock %}
+{{< /codeblock >}}
 
-{% codeblock index.aspx lang:csharp %}
+{{< codeblock lang="csharp" title="index.aspx" >}}
 <!--
   (The MIT License)
 
@@ -543,7 +539,7 @@ print "</html>";
     System.Text.StringBuilder str = new StringBuilder();
 
     str.Append("<table border=\"0\" cellpadding=\"10\">");
-    
+
     foreach (string i in server)
     {
         str.Append("<tr valign=\"top\">");
@@ -555,32 +551,32 @@ print "</html>";
         str.Append("</td>");
         str.Append("</tr>");
     }
-    
+
     str.Append("</table>");
-    
+
     Response.Write(str);
 %>
 </blockquote>
 </body>
 </html>
-{% endcodeblock %}
+{{< /codeblock >}}
 
-{% codeblock index.cs lang:csharp %}
+{{< codeblock lang="csharp" title="index.cs" >}}
 /// <summary>
 ///   (The MIT License)
-///   
+///
 ///   Copyright (c) 2007 Mohammad S. Babaei
-///   
+///
 ///   Permission is hereby granted, free of charge, to any person obtaining a copy
 ///   of this software and associated documentation files (the "Software"), to deal
 ///   in the Software without restriction, including without limitation the rights
 ///   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 ///   copies of the Software, and to permit persons to whom the Software is
 ///   furnished to do so, subject to the following conditions:
-///   
+///
 ///   The above copyright notice and this permission notice shall be included in
 ///   all copies or substantial portions of the Software.
-///   
+///
 ///   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 ///   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 ///   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -627,7 +623,7 @@ public partial class GooglebotDetector : System.Web.UI.Page
             body.Append("<br /><blockquote>{2}</blockquote>");
 
             string msgBody = String.Format(body.ToString(), url, ip, date);
-            
+
             try
             {
                 using (MailMessage msg = new MailMessage(from, to, subject, msgBody))
@@ -662,7 +658,7 @@ public partial class GooglebotDetector : System.Web.UI.Page
         }
     }
 }
-{% endcodeblock %}
+{{< /codeblock >}}
 
 
 #### منابع و ماخذ ####
