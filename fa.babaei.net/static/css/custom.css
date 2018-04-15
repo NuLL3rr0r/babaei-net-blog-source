@@ -298,23 +298,18 @@ footer .copyright .license a {
     font-size: 36px;
 }
 
-p a:link,
-li a:link,
-p a:visited,
-li a:visited{
+.post-preview p a:link,
+.post-preview p a:visited,
+.post-preview li a:link,
+.post-preview li a:visited {
    color: #808080;
 }
 
-p a:hover,
-li a:hover,
-p a:active,
-li a:active {
-   color: #111;
-   text-decoration: underline;
-}
-
-.post-preview a:hover,
-.post-preview a:active {
+.post-preview p a:hover,
+.post-preview p a:active,
+.post-preview li a:hover,
+.post-preview li a:active {
+    text-decoration: underline;
     color: #111;
 }
 
