@@ -308,7 +308,9 @@ footer .copyright .license a {
 .post-preview p a:hover,
 .post-preview p a:active,
 .post-preview li a:hover,
-.post-preview li a:active {
+.post-preview li a:active,
+footer a:hover,
+footer a:active {
     text-decoration: underline;
     color: #111;
 }
