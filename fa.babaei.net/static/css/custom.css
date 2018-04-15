@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6,
 .blog-archives .blog-archives-grouped-by-date .blog-archives-post .blog-archives-post-title,
 .blog-archives .blog-archives-grouped-by-date .blog-archives-post .blog-archives-post-title a,
 .portfolio .project .extra-info th {
-    font-family: 'Roboto Condensed', 'sans-serif';
+    font-family: 'Roboto Condensed', 'Roboto', 'sans-serif';
 }
 
 code, kbd, pre, samp {
@@ -113,7 +113,7 @@ iframe {
 }
 
 .intro-header {
-    margin-top: 275px;
+    margin-top: 285px;
 }
 
 @media (min-width: 768px) and (max-width: 1151px) {
@@ -290,7 +290,7 @@ footer .copyright .license a {
 }
 
 .post-preview .post-meta, .post-heading .post-meta-tags {
-    margin-top: 1.0em !important;
+    margin-top: 1.0em;
     text-align: justify;
 }
 
@@ -299,12 +299,16 @@ footer .copyright .license a {
 }
 
 p a:link,
-p a:visited {
+li a:link,
+p a:visited,
+li a:visited{
    color: #808080;
 }
 
 p a:hover,
-p a:active {
+li a:hover,
+p a:active,
+li a:active {
    color: #111;
    text-decoration: underline;
 }

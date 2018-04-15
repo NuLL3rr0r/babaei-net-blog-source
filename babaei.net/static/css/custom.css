@@ -299,12 +299,16 @@ footer .copyright .license a {
 }
 
 p a:link,
-p a:visited {
+li a:link,
+p a:visited,
+li a:visited{
    color: #808080;
 }
 
 p a:hover,
-p a:active {
+li a:hover,
+p a:active,
+li a:active {
    color: #111;
    text-decoration: underline;
 }
@@ -312,12 +316,6 @@ p a:active {
 .post-preview a:hover,
 .post-preview a:active {
     color: #111;
-}
-
-.post-preview a:link h,
-.post-preview a:visited h
-p a:link,
-p a:visited {
 }
 
 .codeblock .title {
