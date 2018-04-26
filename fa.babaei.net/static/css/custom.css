@@ -37,6 +37,43 @@ code, kbd, pre, samp {
     font-family: 'Roboto Mono', 'Roboto', 'sans-serif';
 }
 
+.navbar,
+.navbar-fixed-top,
+.navbar-collapse,
+.navbar-custom,
+.top-nav-expanded,
+.well,
+footer {
+    background: #fff;
+}
+
+.navbar,
+.navbar-fixed-top,
+.navbar-collapse,
+.navbar-custom,
+.top-nav-expanded,
+footer,
+.post-preview {
+    border-width: 0 !important;
+}
+
+.well {
+    border-width: 0;
+    border-radius: 0;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.pager li.previous a,
+.pager li.next a {
+    border-width: 0;
+}
+
+.pager li a:hover, .pager li a:focus {
+    background: #fff;
+    color: #0085a1;
+}
+
 h1, h2, h3, h4, h5, h6,
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a {
@@ -446,10 +483,8 @@ figcaption p {
 
 .related-content {
     font-family: 'Roboto Condensed', 'Roboto', 'sans-serif';
-    border: 1px solid #ccc;
-    border-radius: 8px;
     margin: 2.0em 0;
-    padding: 0 2.0em 1.0em 2.0em;
+    padding: 0.4em 2.0em 1.0em 2.0em;
     width: 100%;
 }
 

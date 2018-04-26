@@ -5,20 +5,6 @@
       <article role="main" class="blog-post">
         {{ .Content }}
 
-        {{ if ne .Type "page" }}
-          {{ $related := .Site.RegularPages.Related . | first 4 }}
-          {{ with $related }}
-            <div class="related-content">
-                <h3>بیشتر بخوانید</h3>
-                <ul>
-                  {{ range . }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                  {{ end }}
-                </ul>
-            </div>
-          {{ end }}
-        {{ end }}
-
         {{ if .Params.tags }}
           <div class="blog-tags">
             {{ range .Params.tags }}
@@ -28,7 +14,6 @@
         {{ end }}
 
         {{ if .Site.Params.socialShare }}
-            <hr/>
             <section id="social-share">
               <ul class="list-inline footer-links">
                 {{ partial "share-links" . }}
@@ -36,6 +21,20 @@
             </section>
         {{ end }}
       </article>
+
+      {{ if ne .Type "page" }}
+        {{ $related := .Site.RegularPages.Related . | first 4 }}
+        {{ with $related }}
+          <div class="related-content">
+              <h3>بیشتر بخوانید</h3>
+              <ul>
+                {{ range . }}
+                  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+          </div>
+        {{ end }}
+      {{ end }}
 
       {{ if ne .Type "page" }}
         <ul class="pager blog-pager">
