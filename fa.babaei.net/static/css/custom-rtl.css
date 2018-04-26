@@ -192,5 +192,6 @@ code, kbd, pre, samp {
 }
 
 .related-content {
+    direction: rtl;
     font-family: 'Vazir', 'Roboto Condensed', 'Roboto', 'Tahoma', 'sans-serif';
 }
