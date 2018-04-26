@@ -4,27 +4,27 @@
 - id: shortdateFormat
   translation: "Jan 2, 2006 15:04:05"
 - id: postedOnDate
-  translation: "پست شده در {{ .Count }}"
+  translation: "Posted on {{ .Count }}"
 - id: lastModified
-  translation: "(ویرایش شده در {{ .Count }})"
+  translation: "(Last modified on {{ .Count }})"
 - id: translationsLabel
   translation: "Other languages: "
 - id: translationsSeparator
   translation: ", "
 - id: readMore
-  translation: " ادامه مطلب... "
+  translation: " Read More... "
 - id: olderPosts
-  translation: "پست های قدیمی تر"
+  translation: "Older Posts"
 - id: newerPosts
-  translation: "پست های جدیدتر"
+  translation: "Newer Posts"
 - id: previousPost
-  translation: "پست قبلی"
+  translation: "Previous Post"
 - id: nextPost
-  translation: "پست بعدی"
+  translation: "Next Post"
 - id: readTime
-  translation: "دقیقه"
+  translation: "minutes"
 - id: words
-  translation: "کلمه"
+  translation: "words"
 
 
 # 404 page
