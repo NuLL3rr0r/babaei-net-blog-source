@@ -132,15 +132,15 @@ footer .copyright {
     float: left;
 }
 
-.post-preview .blog-tags:before {
+.blog-tags:before {
     content: "تگ ها: ";
 }
 
-.post-preview .blog-tags a:before {
+.blog-tags a:before {
     content: "";
 }
 
-.post-preview .blog-tags a {
+.blog-tags a {
     direction: initial;
 }
 

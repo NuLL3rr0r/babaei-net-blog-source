@@ -252,9 +252,7 @@ footer .copyright .license a {
     line-height: 2.0em;
 }
 
-/*.post-list, .post-title,*/
 .post-list, .post-entry,
-/*.post-heading,*/
 .blog-post {
     text-align: justify;
 }
@@ -291,15 +289,17 @@ footer .copyright .license a {
 }
 
 .post-preview .post-meta,
-.post-preview .blog-tags {
+.blog-tags {
     margin-top: 1.0em;
     text-align: justify;
 }
 
-.post-preview .blog-tags a {
+.blog-tags a {
     font-size: 15px;
     font-style: italic;
-    /*text-transform: lowercase;*/
+}
+
+.post-preview .blog-tags a {
     color: #404040;
 }
 
