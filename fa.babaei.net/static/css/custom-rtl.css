@@ -144,6 +144,10 @@ footer .copyright {
     direction: initial;
 }
 
+.blog-post .blog-tags {
+    text-align: left;
+}
+
 .posts-list .post-preview .post-entry {
     margin-top: 1.5em;
 }
@@ -189,6 +193,15 @@ code, kbd, pre, samp {
 
 .footnotes {
     direction: rtl;
+}
+
+#social-share {
+    text-align: right;
+}
+
+#social-share .list-inline {
+    margin-left: 0;
+    margin-right: -5px;
 }
 
 .related-content {

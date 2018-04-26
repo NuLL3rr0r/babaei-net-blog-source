@@ -22,8 +22,6 @@
         {{ end }}
       </article>
 
-      <hr />
-
       {{ if ne .Type "page" }}
         {{ $related := .Site.RegularPages.Related . | first 4 }}
         {{ with $related }}
