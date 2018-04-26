@@ -190,3 +190,7 @@ code, kbd, pre, samp {
 .footnotes {
     direction: rtl;
 }
+
+.related-content {
+    font-family: 'Vazir', 'Roboto Condensed', 'Roboto', 'Tahoma', 'sans-serif';
+}

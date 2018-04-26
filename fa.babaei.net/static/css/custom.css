@@ -442,3 +442,16 @@ figcaption p {
 .footnotes {
     word-wrap: break-word;
 }
+
+.related-content {
+    font-family: 'Roboto Condensed', 'Roboto', 'sans-serif';
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 2.0em 0;
+    padding: 0 2.0em 1.0em 2.0em;
+    width: 100%;
+}
+
+.related-content ul {
+    list-style-type: square;
+}
