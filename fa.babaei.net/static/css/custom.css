@@ -42,26 +42,16 @@ code, kbd, pre, samp {
 .navbar-collapse,
 .navbar-custom,
 .top-nav-expanded,
+.navbar-custom .nav .navlinks-container.show-children,
+.navbar-custom .nav .navlinks-container .navlinks-children a,
 .well,
 footer {
     background: #fff;
 }
 
-.navbar,
-.navbar-fixed-top,
-.navbar-collapse,
-.navbar-custom,
-.top-nav-expanded,
-footer,
-.post-preview {
-    border-width: 0 !important;
-}
-
 .well {
-    border-width: 0;
-    border-radius: 0;
-    border-top: 1px solid #e3e3e3;
-    border-bottom: 1px solid #e3e3e3;
+    border-left: 0;
+    border-right: 0;
 }
 
 .pager li.previous a,
@@ -331,6 +321,10 @@ footer .copyright .license a {
     text-align: justify;
 }
 
+.blog-tags:before {
+    color: #404040;
+}
+
 .blog-tags a {
     font-size: 15px;
     font-style: italic;
@@ -339,6 +333,10 @@ footer .copyright .license a {
 
 .post-preview .blog-tags a {
     color: #404040;
+}
+
+.blog-post .blog-tags {
+    margin: 0;
 }
 
 .intro-header .post-heading h1 {
@@ -471,10 +469,9 @@ figcaption p {
     border: 0 !important;
 }
 
-@media (min-width: 1152px) {
-    #social-share {
-        text-align: center;
-    }
+#social-share {
+    text-align: center;
+    margin: 2.4em 0;
 }
 
 .footnotes {
@@ -483,8 +480,8 @@ figcaption p {
 
 .related-content {
     font-family: 'Roboto Condensed', 'Roboto', 'sans-serif';
-    margin: 2.0em 0;
-    padding: 0.4em 2.0em 1.0em 2.0em;
+    margin: 1.0em 0;
+    padding: 0.4em 2.4em;
     width: 100%;
 }
 

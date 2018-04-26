@@ -5,14 +5,6 @@
       <article role="main" class="blog-post">
         {{ .Content }}
 
-        {{ if .Params.tags }}
-          <div class="blog-tags">
-            {{ range .Params.tags }}
-              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-            {{ end }}
-          </div>
-        {{ end }}
-
         {{ if .Site.Params.socialShare }}
             <section id="social-share">
               <ul class="list-inline footer-links">
@@ -20,7 +12,17 @@
               </ul>
             </section>
         {{ end }}
+
+        {{ if .Params.tags }}
+          <div class="blog-tags">
+            {{ range .Params.tags }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+          </div>
+        {{ end }}
       </article>
+
+      <hr />
 
       {{ if ne .Type "page" }}
         {{ $related := .Site.RegularPages.Related . | first 4 }}
