@@ -6,7 +6,6 @@ div.panel-body a.list-group-item,
 .navbar-custom,
 footer .copyright,
 .post-preview .post-entry,
-.blog-tags,
 .intro-header.big-img .img-desc,
 .pager li a {
     font-family: 'Roboto', 'sans-serif';
@@ -15,6 +14,8 @@ footer .copyright,
 h1, h2, h3, h4, h5, h6,
 .navbar-custom .navbar-brand,
 .navbar-custom #main-navbar .navbar-right li a,
+.blog-tags,
+.blog-tags a,
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading,
 .well, .intro-header .well p,
@@ -289,9 +290,21 @@ footer .copyright .license a {
     line-height: 2.0em;
 }
 
-.post-preview .post-meta, .post-heading .post-meta-tags {
+.post-preview .post-meta {
     margin-top: 1.0em;
     text-align: justify;
+}
+
+.post-preview .blog-tags {
+    margin-top: 1.0em;
+    text-align: justify;
+}
+
+.post-preview .blog-tags a {
+    font-size: 15px;
+    font-style: italic;
+    /*text-transform: lowercase;*/
+    color: #404040;
 }
 
 .intro-header .post-heading h1 {

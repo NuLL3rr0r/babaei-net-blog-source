@@ -6,7 +6,6 @@ div.panel-body a.list-group-item,
 .navbar-custom,
 footer .copyright,
 .post-preview .post-entry,
-.blog-tags,
 .intro-header.big-img .img-desc,
 .pager li a {
     font-family: 'Vazir', 'Roboto', 'Tahoma', 'sans-serif';
@@ -15,6 +14,8 @@ footer .copyright,
 h1, h2, h3, h4, h5, h6,
 .navbar-custom .navbar-brand,
 .navbar-custom #main-navbar .navbar-right li a,
+.blog-tags,
+.blog-tags a,
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading,
 .well, .intro-header .well p,
@@ -127,12 +128,21 @@ footer .copyright {
     font-size: 16px;
 }
 
-.post-preview .post-meta-tags {
+.post-preview .post-meta-tags,
+.post-preview .blog-tags {
     direction: initial;
 }
 
 .post-preview .post-read-more {
     float: left;
+}
+
+.post-preview .blog-tags:before {
+    content: "تگ ها: ";
+}
+
+.post-preview .blog-tags a {
+    direction: initial;
 }
 
 .posts-list .post-preview .post-entry {
