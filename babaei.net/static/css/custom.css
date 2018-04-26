@@ -290,11 +290,7 @@ footer .copyright .license a {
     line-height: 2.0em;
 }
 
-.post-preview .post-meta {
-    margin-top: 1.0em;
-    text-align: justify;
-}
-
+.post-preview .post-meta,
 .post-preview .blog-tags {
     margin-top: 1.0em;
     text-align: justify;

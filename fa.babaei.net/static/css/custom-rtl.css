@@ -128,17 +128,16 @@ footer .copyright {
     font-size: 16px;
 }
 
-.post-preview .post-meta-tags,
-.post-preview .blog-tags {
-    direction: initial;
-}
-
 .post-preview .post-read-more {
     float: left;
 }
 
 .post-preview .blog-tags:before {
     content: "تگ ها: ";
+}
+
+.post-preview .blog-tags a:before {
+    content: "";
 }
 
 .post-preview .blog-tags a {
