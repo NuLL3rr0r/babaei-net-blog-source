@@ -28,7 +28,7 @@
               <div class="post-entry">
                 {{ if .Truncated }}
                   {{ .Summary }}
-                  <a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
+                  <a href="{{ .Permalink }}" class="post-read-more">[ {{ i18n "readMore" }} ]</a>
                 {{ else }}
                   {{ .Content }}
                 {{ end }}
@@ -51,12 +51,12 @@
           <ul class="pager main-pager">
             {{ if .Paginator.HasPrev }}
               <li class="previous">
-                <a href="{{ .Paginator.Prev.URL | absURL }}">{{ i18n "newerPosts" }} &rarr;</a>
+                <a href="{{ .Paginator.Prev.URL | absURL }}">[ {{ i18n "newerPosts" }} &rarr; ]</a>
               </li>
             {{ end }}
             {{ if .Paginator.HasNext }}
               <li class="next">
-                <a href="{{ .Paginator.Next.URL | absURL }}">&larr; {{ i18n "olderPosts" }}</a>
+                <a href="{{ .Paginator.Next.URL | absURL }}">[ &larr; {{ i18n "olderPosts" }} ]</a>
               </li>
             {{ end }}
           </ul>
