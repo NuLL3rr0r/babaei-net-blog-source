@@ -1,7 +1,7 @@
 +++
 title = "Packt Essential IT Skills of 2015 and Challenges for 2016"
 slug = "packt-essential-it-skills-of-2015-and-challenges-for-2016"
-date = 2015-12-17T22:48:06Z
+date = 2015-12-17T22:48:06+03:30
 tags = [ "Advertising", "Packt Publishing" ]
 aliases = [ "/blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/" ]
 +++

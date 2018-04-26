@@ -1,7 +1,7 @@
 +++
 title = "Packt Free Learning Library"
 slug = "packt-free-learning-library"
-date = 2015-05-28T03:37:59Z
+date = 2015-05-28T03:37:59+04:30
 tags = [ "Advertising", "Packt Publishing" ]
 aliases = [ "/blog/2015/05/28/packt-free-learning-library/" ]
 +++

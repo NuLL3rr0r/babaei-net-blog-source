@@ -1,7 +1,7 @@
 +++
 title = "FreeBSD یا Linux مسئله این است؟"
 slug = "freebsd-vs-linux"
-date = 2016-03-07T22:41:11Z
+date = 2016-03-07T22:41:11+03:30
 tags = [ "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "UNIX" ]
 aliases = [ "/blog/2016/03/07/freebsd-vs-linux/" ]
 +++

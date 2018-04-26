@@ -1,7 +1,7 @@
 +++
 title = "چه زماني گوگل به وب سايت شما سركشي مي كند"
 slug = "get-an-email-when-google-visits-your-website"
-date = 2007-12-23T20:49:00Z
+date = 2007-12-23T20:49:00+03:30
 tags = [ ".NET", ".NET Framework", "ASP.NET", "C#", "FreeBSD", "GNU", "Google", "HTML", "Linux", "Mono", "Perl", "Unix" ]
 aliases = [ "/blog/2007/12/23/get-an-email-when-google-visits-your-website/" ]
 +++

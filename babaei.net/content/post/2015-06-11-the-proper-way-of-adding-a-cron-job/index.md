@@ -1,7 +1,7 @@
 +++
 title = "The Proper Way of Adding a Cron Job"
 slug = "the-proper-way-of-adding-a-cron-job"
-date = 2015-06-11T16:37:18Z
+date = 2015-06-11T16:37:18+04:30
 tags = [ "FreeBSD", "GNU", "Linux", "Unix" ]
 aliases = [ "/blog/2015/06/11/the-proper-way-of-adding-a-cron-job/" ]
 +++

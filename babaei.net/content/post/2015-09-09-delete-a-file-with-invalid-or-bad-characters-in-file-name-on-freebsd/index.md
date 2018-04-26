@@ -1,7 +1,7 @@
 +++
 title = "Delete a File With Invalid or Bad Characters in File Name on FreeBSD"
 slug = "delete-a-file-with-invalid-or-bad-characters-in-file-name-on-freebsd"
-date = 2015-09-09T12:54:08Z
+date = 2015-09-09T12:54:08+04:30
 tags = [ "FreeBSD", "Unix" ]
 aliases = [ "/blog/2015/09/09/delete-a-file-with-invalid-or-bad-characters-in-file-name-on-freebsd/" ]
 +++

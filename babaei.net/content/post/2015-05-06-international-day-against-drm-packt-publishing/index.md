@@ -1,7 +1,7 @@
 +++
 title = "International Day Against DRM at Packt Publishing"
 slug = "international-day-against-drm-packt-publishing"
-date = 2015-05-06T23:30:33Z
+date = 2015-05-06T23:30:33+04:30
 tags = [ "Advertising", "DRM", "Packt Publishing" ]
 aliases = [ "/blog/2015/05/06/international-day-against-drm-packt-publishing/" ]
 +++

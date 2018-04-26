@@ -1,7 +1,7 @@
 +++
 title = "مبهم سازی کد در .NET و Java"
 slug = "dotnet-java-code-obfuscation"
-date = 2009-03-14T00:00:00Z
+date = 2009-03-14T00:00:00+03:30
 tags = [ ".NET", ".NET Framework", "C", "C++", "C++/CLI", "GNU", "IronPython", "IronRuby", "Java", "JDK", "JVM", "Linux", "Mac OS X", "Mono", "Perl", "Python", "Ruby", "Ruby.NET", "Unix", "Visual Studio", "Windows", "Xcode" ]
 aliases = [ "/blog/2009/03/14/dotnet-java-code-obfuscation/" ]
 +++

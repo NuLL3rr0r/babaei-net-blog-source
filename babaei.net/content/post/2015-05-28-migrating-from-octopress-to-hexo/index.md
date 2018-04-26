@@ -1,7 +1,7 @@
 +++
 title = "Migrating From Octopress To Hexo"
 slug = "migrating-from-octopress-to-hexo"
-date = 2015-05-28T01:44:00Z
+date = 2015-05-28T01:44:00+04:30
 tags = [ "Hexo", "Octopress" ]
 aliases = [ "/blog/2015/05/28/migrating-from-octopress-to-hexo/" ]
 +++

@@ -1,7 +1,7 @@
 +++
 title = "شروعی دوباره"
 slug = "there-and-back-again"
-date = 2016-01-22T06:46:00Z
+date = 2016-01-22T06:46:00+03:30
 tags = [  ]
 aliases = [ "/blog/2016/01/22/there-and-back-again/" ]
 +++

@@ -1,7 +1,7 @@
 +++
 title = "توزیع شما نا امن است: اوبونتو"
 slug = "your-distro-is-insecure-ubuntu"
-date = 2009-05-03T00:00:00Z
+date = 2009-05-03T00:00:00+04:30
 tags = [ "GNU", "Linux", "Security", "Ubuntu" ]
 aliases = [ "/blog/2009/05/03/your-distro-is-insecure-ubuntu/" ]
 +++

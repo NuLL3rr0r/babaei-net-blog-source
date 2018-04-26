@@ -1,7 +1,7 @@
 +++
 title = "طراحی و بكارگیری كیبورد فارسی مستقل از سیستم عامل"
 slug = "cross-platform-persian-keyboard"
-date = 2008-02-08T00:00:00Z
+date = 2008-02-08T00:00:00+03:30
 tags = [ ".NET", ".NET Framework", "C#", "Cross Platform", "Mono", "Persian", "Windows" ]
 aliases = [ "/blog/2008/02/08/cross-platform-persian-keyboard/" ]
 +++

@@ -1,7 +1,7 @@
 +++
 title = "معرفی و بررسی پلاتفرم های ساخت بازی و انیمیشن کامپیوتری"
 slug = "opengl-and-directx-3d-game-programming"
-date = 2003-12-01T00:00:00Z
+date = 2003-12-01T00:00:00+03:30
 tags = [ "C", "C++", "C#", "DirectX", "gamedev", "Game Development", "Game Programming", "indiedev", "OpenGL", "Windows" ]
 aliases = [ "/blog/2003/12/01/opengl-and-directx-3d-game-programming/" ]
 +++

@@ -1,7 +1,7 @@
 +++
 title = "توسعه پروژه های C++ مبتنی بر Qt با استفاده از Eclipse"
 slug = "c-qt-development-using-eclipse"
-date = 2008-09-04T00:00:00Z
+date = 2008-09-04T00:00:00+04:30
 tags = [ ".NET", ".NET Framework", "C", "C++", "CDT", "Cygwin", "EPIC", "Eclipse", "FFmpeg", "GCC", "GNU", "IronPython", "IronRuby", "J2EE", "Java", "JDK", "JVM", "Jython", "Linux", "Mac OS X", "MinGW", "Mono", "Mozilla", "Perl", "PyDev", "Python", "Qt", "Qt Creator", "RDT", "Ruby", "Ruby on Rails", "Ruby.NET", "Smalltalk", "Unix", "Windows", "wxWidgets", "Xcode" ]
 aliases = [ "/blog/2008/09/04/c-qt-development-using-eclipse/" ]
 +++

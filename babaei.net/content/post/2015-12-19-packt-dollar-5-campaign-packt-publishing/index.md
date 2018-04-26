@@ -1,7 +1,7 @@
 +++
 title = "Packt $5 Campaign - Packt Publishing"
 slug = "packt-dollar-5-campaign-packt-publishing"
-date = 2015-12-19T10:47:34Z
+date = 2015-12-19T10:47:34+03:30
 tags = [ "Advertising", "Packt Publishing" ]
 aliases = [ "/blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/" ]
 +++

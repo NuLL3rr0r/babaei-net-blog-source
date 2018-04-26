@@ -1,7 +1,7 @@
 +++
 title = "FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBSD"
 slug = "what-is-freebsd-an-overview-of-freebsd-operating-system"
-date = 2016-01-29T04:25:36Z
+date = 2016-01-29T04:25:36+03:30
 tags = [ "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "UNIX" ]
 aliases = [ "/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/" ]
 +++

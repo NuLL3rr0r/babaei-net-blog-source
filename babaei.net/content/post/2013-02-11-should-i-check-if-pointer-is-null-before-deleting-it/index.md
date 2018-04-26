@@ -1,7 +1,7 @@
 +++
 title = "Should I Check if a Pointer Is NULL Before Deleting It?"
 slug = "should-i-check-if-pointer-is-null-before-deleting-it"
-date = 2013-02-11T01:52:00Z
+date = 2013-02-11T01:52:00+03:30
 tags = [ "C", "C++", "Clang", "G++", "GCC", "MSVC", "VC++", "Visual C++", "Visual Studio" ]
 aliases = [ "/blog/2013/02/11/should-i-check-if-pointer-is-null-before-deleting-it/" ]
 +++

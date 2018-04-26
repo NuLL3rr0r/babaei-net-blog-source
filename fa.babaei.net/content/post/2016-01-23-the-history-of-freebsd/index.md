@@ -1,7 +1,7 @@
 +++
 title = "تاریخچه FreeBSD"
 slug = "the-history-of-freebsd"
-date = 2016-01-23T13:25:06Z
+date = 2016-01-23T13:25:06+03:30
 tags = [ "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "UNIX" ]
 aliases = [ "/blog/2016/01/23/the-history-of-freebsd/" ]
 +++

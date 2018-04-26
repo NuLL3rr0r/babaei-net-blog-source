@@ -1,7 +1,7 @@
 +++
 title = "Windows 8, Install .NET Framework 2.0 - 3.5 Offline"
 slug = "windows-8-install-dot-net-framework-20-35-offline"
-date = 2013-02-10T17:31:00Z
+date = 2013-02-10T17:31:00+03:30
 tags = [ "C#", ".NET", ".NET Framework", "Mono", "Windows" ]
 aliases = [ "/blog/2013/02/10/windows-8-install-dot-net-framework-20-35-offline/" ]
 +++

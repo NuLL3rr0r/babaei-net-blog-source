@@ -1,7 +1,7 @@
 +++
 title = "Rapid Gulp Video Tutorial"
 slug = "rapid-gulp-video-tutorial"
-date = 2015-06-12T14:06:50Z
+date = 2015-06-12T14:06:50+04:30
 tags = [ "Advertising", "Gulp", "Packt Publishing", "Tutorial" ]
 aliases = [ "/blog/2015/06/12/rapid-gulp-video-tutorial/" ]
 +++

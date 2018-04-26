@@ -1,7 +1,7 @@
 +++
 title = "Migrating From Hexo To Hugo"
 slug = "migrating-from-hexo-to-hugo"
-date = 2018-04-05T19:43:10Z
+date = 2018-04-06T00:13:10Z
 tags = [ "Hexo", "Hugo", "Octopress" ]
 +++
 

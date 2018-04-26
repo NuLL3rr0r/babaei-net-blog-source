@@ -1,7 +1,7 @@
 +++
 title = "ساخت لینك های دانلود متفاوت برای كاربران سایت"
 slug = "secure-file-download"
-date = 2007-12-15T00:00:00Z
+date = 2007-12-15T00:00:00+03:30
 tags = [ ".NET", ".NET Framework", "ASP.NET", "C#", "FreeBSD", "GNU", "HTML", "Linux", "Mono", "Perl", "Security", "Unix" ]
 aliases = [ "/blog/2007/12/15/secure-file-download/" ]
 +++

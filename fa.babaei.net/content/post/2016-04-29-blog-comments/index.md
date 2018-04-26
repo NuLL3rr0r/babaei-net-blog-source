@@ -1,7 +1,7 @@
 +++
 title = "اضافه شدن بخش نظرات"
 slug = "blog-comments"
-date = 2016-04-29T08:11:45Z
+date = 2016-04-29T08:11:45+04:30
 tags = [  ]
 aliases = [ "/blog/2016/04/29/blog-comments/" ]
 +++

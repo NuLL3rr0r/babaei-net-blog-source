@@ -1,7 +1,7 @@
 +++
 title = "مقدمه ای بر موتور ساخت بازی Unreal Engine 4"
 slug = "unreal-engine-4-introduction"
-date = 2016-01-25T02:01:41Z
+date = 2016-01-25T02:01:41+03:30
 tags = [ "Blueprints", "Cross-platform", "Epic", "FLOSS", "gamedev", "Game Development", "Game Programming", "indiedev", "Kismet", "Open Source", "UDK", "UE4", "Unreal Engine", "UnrealScript" ]
 aliases = [ "/blog/2016/01/25/unreal-engine-4-introduction/" ]
 +++
