@@ -2,7 +2,7 @@
 title = "سری آموزشی توسعه بازی های کامپیوتری و C++"
 slug = "game-development-and-c-tutorials-series"
 date = 2016-01-23T16:35:33Z
-tags = [ "Android", "Blueprints", "C", "C++", "Clang", "Cocos2d-x", "Cross-platform", "Epic", "G++", "", "GCC", "GNU", "HTML5", "gamedev", "Game Development", "Game Programming", "indiedev", "iOS", "Kismet", "Linux", "Mac OS X", "MSVC", "UDK", "UE4", "Unreal Engine", "UnrealScript", "VC++", "Visual C++", "Visual Stuio", "Windows" ]
+tags = [ "Android", "Blueprints", "C", "C++", "Clang", "Cocos2d-x", "Cross-platform", "Epic", "G++", "GCC", "GNU", "HTML5", "gamedev", "Game Development", "Game Programming", "indiedev", "iOS", "Kismet", "Linux", "Mac OS X", "MSVC", "UDK", "UE4", "Unreal Engine", "UnrealScript", "VC++", "Visual C++", "Visual Stuio", "Windows" ]
 aliases = [ "/blog/2016/01/23/game-development-and-c-tutorials-series/" ]
 +++
 
