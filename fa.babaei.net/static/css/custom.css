@@ -37,6 +37,11 @@ code, kbd, pre, samp {
     font-family: 'Roboto Mono', 'Roboto', 'sans-serif';
 }
 
+.pager.blog-pager {
+    margin-top: 40px;
+}
+
+
 .pager li.previous a,
 .pager li.next a {
     border-width: 0;
