@@ -2,7 +2,7 @@
 title = "آموزش نحوه ی نصب Unreal Engine 4"
 slug = "unreal-engine-installation"
 date = 2016-02-07T17:27:57+03:30
-tags = [ "Epic", "gamedev", "Game Development", "Game Programming", "indiedev", "UE4", "Unreal Engine" ]
+tags = [ "Epic Games", "gamedev", "Game Development", "Game Programming", "indiedev", "UE4", "Unreal Engine" ]
 aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 +++
 
