@@ -331,6 +331,19 @@ footer .copyright .license a {
     text-align: right;
 }
 
+.blog-post .toc {
+    padding: 0.1em 0 0.5em;
+}
+
+.blog-post .toc #TableOfContents ul {
+    list-style-type: disc;
+}
+
+.blog-post .toc #TableOfContents > ul {
+    list-style-type: none !important;
+    padding: 0;
+}
+
 .post-preview .blog-tags a {
     color: #404040;
 }

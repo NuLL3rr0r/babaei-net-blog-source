@@ -3,7 +3,16 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        {{ .Content }}
+        {{ if .Params.toc }}
+          {{ .Summary }}
+          <div class="toc">
+              <h2>Table of Contents</h2>
+              {{ .TableOfContents }}
+          </div>
+          {{ replace .Content .Summary "" | safeHTML }}
+        {{ else }}
+          {{ .Content }}
+        {{ end }}
 
         {{ if .Site.Params.socialShare }}
             <section id="social-share">
