@@ -2,7 +2,7 @@
 title = "Get nFringe to Work with Visual Studio 2012"
 slug = "get-nfringe-to-work-with-visual-studio-2012"
 date = 2013-02-10T17:53:00+03:30
-tags = [ "Epic Games", "Game Development", "Game Programming", "nFringe", "UDK", "UE4", "Unreal Engine" "UnrealScript", "Visual Stuio", "Windows" ]
+tags = [ "Epic Games", "Game Development", "Game Programming", "nFringe", "UDK", "UE4", "Unreal Engine", "UnrealScript", "Visual Stuio", "Windows" ]
 aliases = [ "/blog/2013/02/10/get-nfringe-to-work-with-visual-studio-2012/" ]
 +++
 
