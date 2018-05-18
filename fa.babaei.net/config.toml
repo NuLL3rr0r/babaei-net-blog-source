@@ -7,6 +7,8 @@ theme = "beautifulhugo"
 Paginate = 8
 PaginatePath = "/blog/page"
 
+enableEmoji = true
+
 [permalinks]
     post = "/blog/:slug/"
 
