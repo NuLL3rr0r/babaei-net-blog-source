@@ -6,7 +6,7 @@
         {{ if .Params.toc }}
           {{ .Summary }}
           <div class="toc">
-              <h2>Table of Contents</h2>
+              <h2>فهرست مطالب</h2>
               {{ .TableOfContents }}
           </div>
           {{ replace .Content .Summary "" | safeHTML }}
