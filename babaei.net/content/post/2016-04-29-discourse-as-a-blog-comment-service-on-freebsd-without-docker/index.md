@@ -802,7 +802,7 @@ Now, after each reboot it will start automatically.
 
 I took the example Nginx configuration from <code>config/nginx.sample.conf</code> and adapt it to our example:
 
-{{< highlight lang="plaintext" >}}
+{{< highlight plaintext >}}
 # Discourse
 proxy_cache_path /usr/local/www/nginx/cache keys_zone=one:10m max_size=200m;
 

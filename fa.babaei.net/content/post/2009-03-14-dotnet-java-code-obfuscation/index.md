@@ -370,7 +370,7 @@ End Module
 
 ۴. در مرحله بعد با استفاده از دستورات داده شده اقدام به کامپایل تمامی کدها می نمائیم. نکته حائز اهمیت در این جا مسیر فایل های اجرائی هر یک از کامپایلرهای مورد نظر می باشد. سه کامپایلر مربوط به C#, JScript .NET, Visual Basic.NET به ترتیب به نام های csc.exe, jsc.exe, vbc.exe در مسیر نصب .NET Framework قرار دارند. همچنین کامپایلر مربوط به C++ به نام cl.exe فقط با نصب Visual Studio و یا Microsoft Windows SDK در سیستم شما نصب خواهد شد و بسته به نوع بسته نصب شده در مسیری متفاوت قرار خواهد گرفت. برای مثال مسیر کامپایلرها ممکن است به شرح ذیل باشد:
 
-{{< highlight lang="plaintext" >}}
+{{< highlight plaintext >}}
 C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\
 C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\
 {{< /highlight >}}
