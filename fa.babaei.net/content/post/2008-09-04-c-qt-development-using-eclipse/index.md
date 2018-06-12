@@ -608,7 +608,7 @@ puts "Hello, World!"
 
 جهت رفع خطا بر روی پوشه محتوی پروژه در پنل Project Explorer راست کلیک٬ سپس Properties را برگزینید. در کادر Properties for QtTest از ناحیه سمت چپ صحفه زبانه C/C++ Make Project را برگزینید. سپس وارد زبانهEnvironment  شوید. در ناحیه Environment variables to set متغیر PATH را انتخاب نمائید. همان طور که مشاهده می نمائید مقدار این متغیر محیطی چیزی مشابه C:\Qt\4.4.1\bin; ${env_var:PATH} می باشد (مطابق با تصویر 8.K.) که بایستی آن را به چیزی مانند آنچه در ذیل می آید تغییر دهید تا به مسیر کامپایلر اشاره نماید. با فرض نصب MinGW در شاخه پیش فرض با کلیک بر گزینه Edit آنرا به شکل زیر تغییر دهید (مطابق با تصاویر 8.L. و 8.M.):
 
-{{< highlight lang="" >}}
+{{< highlight lang="plaintext" >}}
 C:\Qt\4.4.1\bin;C:\MinGW\bin;${env_var:PATH}
 {{< /highlight >}}
 

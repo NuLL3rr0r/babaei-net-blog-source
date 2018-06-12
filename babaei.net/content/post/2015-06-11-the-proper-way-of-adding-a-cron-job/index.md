@@ -31,7 +31,7 @@ This should create the user crontab files inside <code>/var/cron/tabs/</code> (e
 
 This is a typical <code>root</code> user crontab file I use on one of my production servers (as you can see there is no who column since it's useless in user's own crontab file format):
 
-{{< highlight lang="" >}}
+{{< highlight lang="plaintext" >}}
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""

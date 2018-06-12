@@ -64,7 +64,7 @@ drwxr-xr-x 2 rmccarty rmccarty 4096 2009-04-13 09:40 rmccarty
 
 به علاوه٬ اطلاعات هر کاربر جدیدی که در آینده با دستور useradd ساخته شود به سبب این ورودی در فایل /etc/adduser.conf، برای همگان قابل خواندن است:
 
-{{< highlight lang="" >}}
+{{< highlight lang="plaintext" >}}
 DIR_MODE=0755
 {{< /highlight >}}
 
@@ -108,7 +108,7 @@ udp 0 0 *:bootpc *:*
 
 بررسی حساب های کاربری سیستمی اوبونتو نتیجه ای مشابه آنچه که درذیل می آید را نمایان می سازد:  
 
-{{< highlight lang="" >}}
+{{< highlight lang="plaintext" >}}
 daemon:x:1:1:daemon:/usr/sbin:/bin/sh
 bin:x:2:2:bin:/bin:/bin/sh
 sys:x:3:3:sys:/dev:/bin/sh
