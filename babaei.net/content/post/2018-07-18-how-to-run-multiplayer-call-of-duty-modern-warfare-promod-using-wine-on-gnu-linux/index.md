@@ -305,7 +305,7 @@ Available wine versions:
   [1]   wine-vanilla-3.11 *
 ```
 
-If you have installed multiple Wine installations, you can set one as the active working Wine using (replace 1 with any number the previous command lists):
+If you have installed multiple Wine installations, you can set one as the active working Wine using (replace 1 with the number or name of the desired variant listed by the previous command):
 
 ```
 $ eselect wine set 1
