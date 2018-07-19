@@ -1380,7 +1380,7 @@ $ crontab -e -u root
 
 Then add the backup cron job and make sure the <code>PATH</code> variable is present with the following values:
 
-{{< codeblock lang="json" title="config.json" >}}
+{{< codeblock lang="" title="config.json" >}}
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
