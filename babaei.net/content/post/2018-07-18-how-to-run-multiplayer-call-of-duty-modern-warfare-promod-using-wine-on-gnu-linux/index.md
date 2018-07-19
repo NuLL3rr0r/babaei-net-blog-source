@@ -2,38 +2,42 @@
 title = "How to Run Multiplayer Call of Duty 4: Modern Warefare (ProMod) using Wine on GNU/Linux"
 slug = "how-to-run-multiplayer-call-of-duty-modern-warfare-promod-using-wine-on-gnu-linux"
 date = 2018-07-18T18:39:00+04:30
-tags = [ "COD4", "Emulation", "Games", "GNU", "Linux", "Multiplayer", "ProMod", "Wine" ]
+tags = [ "COD4", "Emulation", "Games", "GNU", "Linux", "Multiplayer", "ProMod", "VMWare", "Wine" ]
 draft = true
 +++
 
 {{< figure src="/blog/how-to-run-multiplayer-call-of-duty-modern-warfare-promod-using-wine-on-gnu-linux/call-of-duty-modern-warfare.jpg" alt="Call of Duty 4: Modern Warfare" caption="Call of Duty 4: Modern Warfare" >}}
 
-Well, I haven't played a multiplayer game in ages until recently when my cool boss announced regular playtimes for all the employees in our company as a group activity in order to put the fun back work. Since I'm a die-hard COD4 fan and I used to play ProMod heavily with colleagues and friends, I proposed Call of Duty 4: ProMod and which happened to be favored by everybody, except there was one issue: everyone uses Microsoft Windows while I'm developing UE4 games on a single-boot [Funtoo Linux](https://funtoo.org/) system.
+Well, I haven't played a multiplayer game in ages until recently, when my cool boss announced regular playtimes for all the employees in our company as a group activity in order to put the fun back work. Since I'm a die-hard [COD4](https://www.callofduty.com/) fan and I used to play [ProMod](https://promod.github.io/) heavily with colleagues and friends, I proposed Call of Duty 4: ProMod which happened to be favored by everybody; except there was one issue: everyone uses Microsoft Windows while I'm developing [UE4](https://unrealengine.com/) games on a single-boot [Funtoo Linux](https://funtoo.org/) system.
 
-I tried running it inside a Windows 7 virtual machine under VMWare Workstation for Linux which tends to support Direct3D 10 API used by COD4. Unfortunately, the experience was very poor and painful with lots of unbearable stuttering on my decent hardware. The other option was running it under [Wine](https://www.winehq.org/). I used to happily run many Windows applications and games under Wine for many years. Though, throughout the years I distanced myself from traditional desktop environments such as [GNOME](https://www.gnome.org/), [KDE](https://www.kde.org/), [Xfce](https://xfce.org/), and [LXDE](https://lxde.org/). Furthermore, I replaced almost every Windows application with an equivalent or an alternative Linux application, until I stopped using Wine regularly. Finally, after some experimentation with window managers, I made up my mind and migrated to [i3wm](https://i3wm.org/) for good.
+Natrutally, my first attemp was running it inside a Windows 7 virtual machine under [VMWare Workstation for Linux](https://www.vmware.com/products/workstation-pro.html) which supports up to Direct3D 10 (the exact API used by COD4). Sadly, the experience was very poor and painful with lots of unbearable stuttering on my decent hardware. Thus, the last resort was running it under [Wine](https://www.winehq.org/) which I used to happily run many Windows applications and games under it for many years. Though, throughout the years I replaced almost every Windows application with an equivalent or an alternative Linux application, until I gradually stopped using it. In the meanwhile, I also distanced myself from traditional desktop environments such as [GNOME](https://www.gnome.org/), [KDE](https://www.kde.org/), [Xfce](https://xfce.org/), and [LXDE](https://lxde.org/), while experimenting with various window managers specially [i3wm](https://i3wm.org/), which caught my attention for many good reasons. So, I made up my mind and aliented myself from desktop environments once and for all.
 
-Unfortunately, running a fullscreen game such as COD4 under a Wine / i3 combination won't work out of the box. Hopefully, [as Wine FAQ states the fix is super easy](https://wiki.winehq.org/FAQ#How_do_I_get_Wine_to_launch_an_application_in_a_virtual_desktop.3F).
+Running a fully-fledged game engine such as [Unreal Engine 4](https://unrealengine.com/), I expected COD4, Wine, and i3 combination to work fine out of the box as it would under any other DE. Well, it turned out that I was too simple minded about running a fullscreen game such as COD4 under Wine/i3wm. Hopefully, [as Wine FAQ states the workaround is super easy](https://wiki.winehq.org/FAQ#How_do_I_get_Wine_to_launch_an_application_in_a_virtual_desktop.3F).
 
 Here is the full guide on running COD4 v1.7 with ProMod on GNU/Linux.
 
 <!--more-->
 
-Before we proceed any further, let us make it clear that running COD4 under Wine required disabling [PunkBuster](https://www.evenbalance.com/). If you don't have any idea what the heck is that, it's a computer program that is designed to detect software used for cheating in online games by scanning the memory contents of the local machine. Due to technical complexity it won't run under Wine and I'm sure it never will. Although, there is an official version of PunkBuster is available for Linux, I don't think it would be possible to make COD4 and the native Linux PunkBuster work together. To be honest, I haven't tried and really don't know if it works. The downside is if you are not running the server and someone else runs the server on Windows, they have to disable PunkBuster or anyone without PunkBuster -- including Wine instances -- will gets kicked from server automatically as soon as they connect to the server.
+Before we proceed any further, let me make this clear that running COD4 under Wine requires disabling [PunkBuster](https://www.evenbalance.com/). If you don't have any idea what the heck is that, it's a computer program that is designed to detect software used for cheating in online games by scanning the memory contents of the local machine. Due to numerous technical complexities, it won't run under Wine and I'm sure it never will. Although, there is an official version of PunkBuster available for Linux, I don't think it would be possible to make COD4 and the native Linux PunkBuster work together (to be honest, I haven't tried it and don't have any idea if it works).
 
-OK, as I mentioned I'm running Funtoo (a variant of [Gentoo Linux](https://gentoo.org/), run by Daniel Robbins, creator of Gentoo). So, if you follow this guide you need to know how to install packages on your Linux distribution.
+Note that there are two downsides to turning PunkBuster off:
 
-The first step is to install Wine which is not installed by default in most of the Linux distributions I'm aware of:
+1. If you are not running the server on your lan and instead connect to a server with turned PunkBuster turned on (running under Windows obviously), any COD4 client without PunkBuster -- including Wine instances -- will get kicked from that server automatically as soon as they connect. So, in order for this to work the PunkBuster on the server should be disabled.
 
-Gentoo -- consequently Funtoo -- provides various Wine ebuilds (kind of synonymous to packages on other distros) in order to allow running multiple variants of Wine with different patchsets in parallel. e.g:
+2. Anyone could easily run aimbots or other cheating software which often is not desired in multiplayer environments.
+
+OK, now we have cleared that, let's get back to our topic. As I mentioned I'm running Funtoo (a variant of [Gentoo Linux](https://gentoo.org/), run by Daniel Robbins, creator of Gentoo). So, if you follow this guide and you are running a different distro, you need to know how to install packages on your Linux distribution.
+
+The first requisite that needs to be present on your system is Wine. To my knowledge it is not installed by default in any Linux distribution I'm aware of. Gentoo and accordingly Funtoo provide various Wine ebuilds (kind of synonymous to packages on other distros) in order to allow running multiple variants of Wine with different patchsets in parallel. e.g:
 
 * app-emulation/wine-any: Free implementation of Windows(tm) on Unix, with optional external patchsets
 * app-emulation/wine-d3d9: Free implementation of Windows(tm) on Unix, with Gallium Nine patchset
 * app-emulation/wine-staging: Free implementation of Windows(tm) on Unix, with Wine-Staging patchset
 * app-emulation/wine-vanilla: Free implementation of Windows(tm) on Unix, without external patchsets
 
-Management of the default Wine installation will be handled with an eselect module. So, we are going to install the default install along the eselect module which is the preferred method. As you may now, Gentoo/Funtoo build packages from source by providing a feature called [USE flags](https://www.gentoo.org/support/use-flags/) which allows users to turn various features of a specific package on or off. USE flags can be switched off globally (for all packages) or individually (per package). I'm going to use app-emulation/wine-vanilla and turn on various USE flags (although the default USE flags should run COD4 just fine).
+On Gentoo or Funtoo, management of the default Wine installation will be handled with an eselect module. So, we are going to use the default install along the eselect module as the preferred method in this blog post. As you may now, Gentoo/Funtoo build packages from source by providing a feature called [USE flags](https://www.gentoo.org/support/use-flags/) which allows users to turn various features of a specific package on or off. USE flags can be switched on or off globally (for all packages) or individually (per package). I'm going to use app-emulation/wine-vanilla and turn on various USE flags (although the default USE flags should run COD4 just fine).
 
-OK, let's turn on Direct3D 12 support using Vulkan (not necessary for running COD4, can be skipped) for app-emulation/wine-vanilla package by modifying <code>/etc/portage/package.use</code>:
+OK, let's turn on Direct3D 12 support using Vulkan (not necessary for running COD4, this step can be skipped) for app-emulation/wine-vanilla package by modifying <code>/etc/portage/package.use</code>:
 
 {{< codeblock lang="" title="/etc/portage/package.use" >}}
 # Wine
@@ -47,7 +51,7 @@ If you need to turn a feature off you need to add a minus sign before the USE fl
 app-emulation/wine-vanilla -mono vkd3d vulkan
 {{< /codeblock >}}
 
-List of supported USE flags and their descriptions can be found [here](https://www.gentoo.org/support/use-flags/).
+A detailed list of supported USE flags and their descriptions can be found [here](https://www.gentoo.org/support/use-flags/).
 
 Now, let's install the required packages:
 
@@ -292,7 +296,7 @@ $ emerge -C virtual/wine app-eselect/eselect-wine
 $ emerge --depclean
 ```
 
-OK, let's see if eselect picks up Wine module and lists our Wine installation:
+OK, time to see if eselect picks up Wine module and lists our Wine installation:
 
 ```
 $ eselect wine list
@@ -301,7 +305,7 @@ Available wine versions:
   [1]   wine-vanilla-3.11 *
 ```
 
-If you have installed multiple Wine installations, you can set one as the active working Wine using (replace 1 with any number previous command lists):
+If you have installed multiple Wine installations, you can set one as the active working Wine using (replace 1 with any number the previous command lists):
 
 ```
 $ eselect wine set 1
@@ -367,4 +371,4 @@ Extra actions:
     --if-unset                Reuse currently selected version if it appears valid
 ```
 
-So far so good; time to install COD4.
+So far so good; with all the requisites out of the way, it's time to install COD4.
