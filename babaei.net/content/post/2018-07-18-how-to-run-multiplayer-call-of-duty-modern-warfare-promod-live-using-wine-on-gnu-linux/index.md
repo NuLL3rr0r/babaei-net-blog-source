@@ -2,33 +2,33 @@
 title = "How to Run Multiplayer Call of Duty 4: Modern Warefare (Promod LIVE) using Wine on GNU/Linux"
 slug = "how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux"
 date = 2018-07-18T18:39:00+04:30
-tags = [ "COD4", "Emulation", "Games", "GNU", "Linux", "Multiplayer", "Promod", "Promod LIVE", "VMWare", "Wine" ]
+tags = [ "COD4", "Emulation", "Games", "GNU", "Linux", "Multiplayer", "Promod", "Promod LIVE", "UE4", "Unreal Engine", "VMWare", "Wine" ]
 draft = true
 +++
 
 {{< figure src="/blog/how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux/call-of-duty-modern-warfare.jpg" alt="Call of Duty 4: Modern Warfare" caption="Call of Duty 4: Modern Warfare" >}}
 
-Well, I haven't played a multiplayer game in ages until recently, when my cool boss announced regular playtimes for all the employees in our company as a group activity in order to put the fun back work. Since I'm a die-hard [COD4](https://www.callofduty.com/) fan and I used to play [Promod LIVE](https://promod.github.io/) heavily with colleagues and friends, I proposed Call of Duty 4: Promod LIVE which happened to be favored by everybody; except there was one issue: everyone uses Microsoft Windows while I'm developing [UE4](https://unrealengine.com/) games on a single-boot [Funtoo Linux](https://funtoo.org/) system.
+Well, I haven't played a multiplayer game in ages until recently, when my cool boss announced regular playtimes for all the employees in our company as a group activity in order to put the fun back work. Since I'm a die-hard [COD4](https://www.callofduty.com/) fan and I used to play [Promod LIVE](https://promod.github.io/) heavily with colleagues and friends, I proposed Call of Duty 4: Promod LIVE 220 which happened to be favored by everybody; except there was one issue: everyone uses Microsoft Windows while I'm developing [UE4](https://unrealengine.com/) games on a single-boot [Funtoo Linux](https://funtoo.org/) system.
 
-Natrutally, my first attemp was running it inside a Windows 7 virtual machine under [VMWare Workstation for Linux](https://www.vmware.com/products/workstation-pro.html) which supports up to Direct3D 10 (the exact API used by COD4). Sadly, the experience was very poor and painful with lots of unbearable stuttering on my decent hardware. Thus, the last resort was running it under [Wine](https://www.winehq.org/) which I used to happily run many Windows applications and games under it for many years. Though, throughout the years I replaced almost every Windows application with an equivalent or an alternative Linux application, until I gradually stopped using it. In the meanwhile, I also distanced myself from traditional desktop environments such as [GNOME](https://www.gnome.org/), [KDE](https://www.kde.org/), [Xfce](https://xfce.org/), and [LXDE](https://lxde.org/), while experimenting with various window managers specially [i3wm](https://i3wm.org/), which caught my attention for many good reasons. So, I made up my mind and aliented myself from desktop environments once and for all.
+Naturally, my first attempt was running it inside a Windows 7 virtual machine under [VMWare Workstation for Linux](https://www.vmware.com/products/workstation-pro.html) which supports up to Direct3D 10 (the exact API used by COD4). Sadly, the experience was very poor and painful with lots of unbearable stuttering on my decent hardware. Thus, the last resort was running it under [Wine](https://www.winehq.org/) which for many years I used to happily run many Windows applications and games under it. Though, throughout those years I replaced almost every Windows application with an equivalent or an alternative Linux application until I gradually stopped using it. In the meanwhile, I also distanced myself from traditional desktop environments such as [GNOME](https://www.gnome.org/), [KDE](https://www.kde.org/), [Xfce](https://xfce.org/), and [LXDE](https://lxde.org/), while experimenting with various window managers specially [i3wm](https://i3wm.org/), which caught my attention for many good reasons. So, I made up my mind and alienated myself from desktop environments once and for all.
 
-Running a fully-fledged game engine such as [Unreal Engine 4](https://unrealengine.com/), I expected COD4, Wine, and i3 combination to work fine out of the box as it would under any other DE. Well, it turned out that I was too simple minded about running a fullscreen game such as COD4 under Wine/i3wm. Hopefully, [as Wine FAQ states the workaround is super easy](https://wiki.winehq.org/FAQ#How_do_I_get_Wine_to_launch_an_application_in_a_virtual_desktop.3F).
+Running a fully-fledged game engine such as [Unreal Engine 4](https://unrealengine.com/), I expected COD4, Wine, and i3 combination to work fine out of the box as it would under any other DE. Well, it turned out that I was too simple-minded about running a fullscreen game such as COD4 under Wine/i3wm. Hopefully, [as the Wine FAQ states the workaround is super easy](https://wiki.winehq.org/FAQ#How_do_I_get_Wine_to_launch_an_application_in_a_virtual_desktop.3F).
 
-Here is the full guide on running COD4 v1.7 with Promod LIVE on GNU/Linux.
+Here is the full guide on running COD4 v1.7 with Promod LIVE 2.20 on GNU/Linux.
 
 <!--more-->
 
-Before we proceed any further, let me make this clear that running COD4 under Wine requires disabling [PunkBuster](https://www.evenbalance.com/). If you don't have any idea what the heck is that, it's a computer program that is designed to detect software used for cheating in online games by scanning the memory contents of the local machine. Due to numerous technical complexities, it won't run under Wine and I'm sure it never will. Although, there is an official version of PunkBuster available for Linux, I don't think it would be possible to make COD4 and the native Linux PunkBuster work together (to be honest, I haven't tried it and don't have any idea if it works).
+Before we proceed any further, let me make this clear that running COD4 under Wine requires disabling [PunkBuster](https://www.evenbalance.com/). If you don't have any idea what the heck is that, it's a computer program that is designed to detect software used for cheating in online games by scanning the memory contents of the local machine. Due to numerous technical complexities, it won't run under Wine and I'm sure it never will. Although there is an official version of PunkBuster available for Linux, I don't think it would be possible to make COD4 and the native Linux PunkBuster work together (to be honest, I haven't tried it and don't have any idea if it works).
 
 Note that there are two downsides to turning PunkBuster off:
 
-1. If you are not running the server on your lan and instead connect to a server with turned PunkBuster turned on (running under Windows obviously), any COD4 client without PunkBuster -- including Wine instances -- will get kicked from that server automatically as soon as they connect. So, in order for this to work the PunkBuster on the server should be disabled.
+1. If you are not running the server on your LAN and instead connect to a server with turned PunkBuster turned on (running under Windows obviously), any COD4 client without PunkBuster -- including Wine instances -- will get kicked from that server automatically as soon as they connect. So, in order for this to work the PunkBuster on the server should be disabled.
 
 2. Anyone could easily run aimbots or other cheating software which often is not desired in multiplayer environments.
 
 OK, now we have cleared that, let's get back to our topic. As I mentioned I'm running Funtoo (a variant of [Gentoo Linux](https://gentoo.org/), run by Daniel Robbins, creator of Gentoo). So, if you follow this guide and you are running a different distro, you need to know how to install packages on your Linux distribution.
 
-The first requisite that needs to be present on your system is Wine. To my knowledge it is not installed by default in any Linux distribution I'm aware of. Gentoo and accordingly Funtoo provide various Wine ebuilds (kind of synonymous to packages on other distros) in order to allow running multiple variants of Wine with different patchsets in parallel. e.g:
+The first requisite that needs to be present on your system is Wine. To my knowledge, it is not installed by default in any Linux distribution I'm aware of. Gentoo and accordingly Funtoo provide various Wine ebuilds (kind of synonymous to packages on other distros) in order to allow running multiple variants of Wine with different patchsets in parallel. e.g:
 
 * app-emulation/wine-any: Free implementation of Windows(tm) on Unix, with optional external patchsets
 * app-emulation/wine-d3d9: Free implementation of Windows(tm) on Unix, with Gallium Nine patchset
@@ -383,9 +383,9 @@ __Step 3__: Install <code>Call of Duty 4 - Revive Kit\1. Getting Started\1. Patc
 
 __Step 4__: Install <code>Call of Duty 4 - Revive Kit\1. Getting Started\1. Patches\Call of Duty 4 Modern Warfare - v1.7 Patch.exe</code>.
 
-__Step 5__: The other steps suchs <code>2. Enable Stereo Mix</code> (fixes a Windows crash with various Realtek sound cards) and <code>3. Punkbuster Update Files [2017]</code> (we won't enable punkbuster anyway, remember?) are unnecessary to follow. So, ignore them.
+__Step 5__: The other steps such as <code>2. Enable Stereo Mix</code> (fixes a Windows crash with various Realtek sound cards) and <code>3. Punkbuster Update Files [2017]</code> (we won't enable PunkBuster anyway, remember?) are unnecessary to follow. So, ignore them.
 
-__Step 6__: Move the the installed COD4 directory to your Linux machine.
+__Step 6__: Move the installed COD4 directory to your Linux machine.
 
 __Step 7__: We can obtain Promod LIVE from <code>Call of Duty 4 - Revive Kit\2. Extras\Pro Mod Live v2.20</code> (I'm not sure which variant is that, but I guess it's the <code>EU</code> one) or from [the official website](https://promod.github.io/). The official website provides two variants: <code>Promod LIVE V2.20 EU</code> and <code>Promod LIVE V2.20 NE</code>. According to [the official GitHub repo](https://github.com/promod/promod4):
 
@@ -422,7 +422,7 @@ _Note 1_: I use aria2c as my download manager. If you don't have it use wget ins
 
 _Note 2_: It's possible to install both Mods simultaneously since the directory names differ from each other for <code>EU</code> and <code>NE</code> variants.
 
-__Step 8__: On Microsoft Windows I would use a batch script like this to start the server with PunkBuster turned on:
+__Step 8__: On Microsoft Windows, I would use a batch script like this to start the server with PunkBuster turned on:
 
 {{< codeblock lang="bat" title="server.cmd" >}}
 @echo off
@@ -521,7 +521,7 @@ Windows Registry Editor Version 5.00
 "codkey"="XXXXXXXXXXXXXXXXXXXX"
 {{< /codeblock >}}
 
-The format for COD4 key codes are <code>XXXX-XXXX-XXXX-XXXX-XXXX</code>. But, we have to transform it to <code>XXXXXXXXXXXXXXXXXXXX</code> and assign it to <code>codkey</code> variable in the above file. Also note that COD4 writes the key code in different places inside the registry depending on the Windows variant, whether it is 64-bit or 32-bit. COD4 detects Wine environment on my system as 32-bit Windows installation. But, to stay safe and keep things simple use both variables as it only takes up a few more bytes inside your registry.
+The format for COD4 key codes are <code>XXXX-XXXX-XXXX-XXXX-XXXX</code>. But, we have to transform it to <code>XXXXXXXXXXXXXXXXXXXX</code> and assign it to <code>codkey</code> variable in the above file. Also note that COD4 writes the key code in different places inside the registry depending on the Windows variant, whether it is 64-bit or 32-bit. COD4 detects Wine environment on my system as 32-bit Windows installation. But, to stay safe and keep things simple to use both variables as it only takes up a few more bytes inside your registry.
 
 __Step 11__: Fire up a terminal and run the following:
 
@@ -542,11 +542,11 @@ For running as the server:
 ```
 $ cd /path/to/COD4 && ./server.sh
 ```
-__Step 13__: If it fires up successfully, after the initial splash screen, a window which will asks for a profile name appears on the screen, otherwise you should be directed to the game's main menu.
+__Step 13__: If it fires up successfully, after the initial splash screen, a window which will ask for a profile name appears on the screen, otherwise you should be directed to the game's main menu.
 
-In order to connect to another Promod Live server, goto Join Game and on from top/center part of the screen set Source to Local, then Game Mode to All, and finally don't forget to set Mods to Yes by clicking on Filter Servers which is set to No by default. Click on Refresh List button multiple times and the server(s) will appear if there are any on your local network.
+In order to connect to another Promod Live server, go to Join Game and on from top/center part of the screen set Source to Local, then Game Mode to All, and finally, don't forget to set Mods to Yes by clicking on Filter Servers which is set to No by default. Click on Refresh List button multiple times and the server(s) will appear if there are any on your local network.
 
-Alternatively, if you are going to run the server as well as playing the game, from the main menu choose Start New Server. Then, set your desired options and choose a map to start. After your server starts you will be in Strat Mode. You will see it written on the upper right hand side of the screen which means your are in the Nadetraining mode. You can verify this by throwing a grenade. If you fly alongside the grenade to see where it hits your are in Nadetraining mode. Now in order to start the actual match mode (it doesn't make any difference if anyone has already joined the server or not), press the <code>`</code> tilde key (usually located on the top side of Tab Key and to the left of 1 Key) for the game console to show up on the screen. Type the following command and hit the Enter button on your keayboard; the match should restart in Standard Match mode by sending eveyone present in the map the Choose Team screen (anyone who hasn't joined yet, could join the game at this stage or even later in the middle of the game):
+Alternatively, if you are going to run the server as well as playing the game, from the main menu choose Start New Server. Then, set your desired options and choose a map to start. After your server starts you will be in Strat Mode. You will see it written on the upper right-hand side of the screen which means you are in the Nadetraining mode. You can verify this by throwing a grenade. If you fly alongside the grenade to see where it hits you are in Nadetraining mode. Now in order to start the actual match mode (it doesn't make any difference if anyone has already joined the server or not), press the <code>`</code> tilde key (usually located on the top side of Tab Key and to the left of 1 Key) for the game console to show up on the screen. Type the following command and hit the Enter button on your keyboard; the match should restart in Standard Match mode by sending everyone present in the map the Choose Team screen (anyone who hasn't joined yet, could join the game at this stage or even later in the middle of the game):
 
 ```
 /promod_mode match_pb
@@ -554,10 +554,10 @@ Alternatively, if you are going to run the server as well as playing the game, f
 
 Notic the <code>/</code> sign at the begining and the space between <code>/promod_mode</code> and <code>match_pb</code> parts of the command.
 
-On another note, in order to reduce typing in the midst of playing, you can always access the already typed commands by pressing the tilde button and then the up arrow afterwards for quick access to the previous commands, while the game is still open; so that you can reduce your amount of typing.
+On another note, in order to reduce typing in the midst of playing, you can always access the already typed commands by pressing the tilde button and then the up arrow afterward for quick access to the previous commands, while the game is still open; so that you can reduce your amount of typing.
 
-After choosing your team and your weapons of choice you will be spawned in the map alongside your teammates. The Strat Mode text on the right top corner should have been replaced by Match Standard PB: OFF which shows that eveything has just been setup correctly and everybody is good to go. A few lines beneath that you should see Status and it's value Not Ready in red. By pressing <code>F</code> key you can change that to Ready in green color. The first type F is pressed a dialog will appear for recording your gameplay. You can either choose to record or cancel it. By holding down the <code>TAB</code> key you can see who has joined or joining the game. Who is ready or not in order to remined them to press the <code>F</code> key (quite a challenge, believe me!). You can type messages which anyone on both sides can see by pressing the tilde key, typing your message and then hitting the enter key.
+After choosing your team and your weapons of choice you will be spawned on the map alongside your teammates. The Strat Mode text on the right top corner should have been replaced by Match Standard PB: OFF which shows that everything has just been set up correctly and everybody is good to go. A few lines beneath that you should see Status and its value Not Ready in red. By pressing <code>F</code> key you can change that to Ready in green color. The first type F is pressed a dialog will appear for recording your gameplay. You can either choose to record or cancel it. By holding down the <code>TAB</code> key you can see who has joined or joining the game. Who is ready or not in order to remind them to press the <code>F</code> key (quite a challenge, believe me!). You can type messages which anyone on both sides can see by pressing the tilde key, typing your message and then hitting the enter key.
 
-I hope this guide covered most if not everything to get you started.
+I hope this guide covered most if not everything to get you up and running.
 
 Enjoy! :)
