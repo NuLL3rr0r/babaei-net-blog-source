@@ -1,20 +1,20 @@
 +++
-title = "How to Run Multiplayer Call of Duty 4: Modern Warefare (ProMod) using Wine on GNU/Linux"
-slug = "how-to-run-multiplayer-call-of-duty-modern-warfare-promod-using-wine-on-gnu-linux"
+title = "How to Run Multiplayer Call of Duty 4: Modern Warefare (Promod LIVE) using Wine on GNU/Linux"
+slug = "how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux"
 date = 2018-07-18T18:39:00+04:30
-tags = [ "COD4", "Emulation", "Games", "GNU", "Linux", "Multiplayer", "ProMod", "VMWare", "Wine" ]
+tags = [ "COD4", "Emulation", "Games", "GNU", "Linux", "Multiplayer", "Promod", "Promod LIVE", "VMWare", "Wine" ]
 draft = true
 +++
 
-{{< figure src="/blog/how-to-run-multiplayer-call-of-duty-modern-warfare-promod-using-wine-on-gnu-linux/call-of-duty-modern-warfare.jpg" alt="Call of Duty 4: Modern Warfare" caption="Call of Duty 4: Modern Warfare" >}}
+{{< figure src="/blog/how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux/call-of-duty-modern-warfare.jpg" alt="Call of Duty 4: Modern Warfare" caption="Call of Duty 4: Modern Warfare" >}}
 
-Well, I haven't played a multiplayer game in ages until recently, when my cool boss announced regular playtimes for all the employees in our company as a group activity in order to put the fun back work. Since I'm a die-hard [COD4](https://www.callofduty.com/) fan and I used to play [ProMod](https://promod.github.io/) heavily with colleagues and friends, I proposed Call of Duty 4: ProMod which happened to be favored by everybody; except there was one issue: everyone uses Microsoft Windows while I'm developing [UE4](https://unrealengine.com/) games on a single-boot [Funtoo Linux](https://funtoo.org/) system.
+Well, I haven't played a multiplayer game in ages until recently, when my cool boss announced regular playtimes for all the employees in our company as a group activity in order to put the fun back work. Since I'm a die-hard [COD4](https://www.callofduty.com/) fan and I used to play [Promod LIVE](https://promod.github.io/) heavily with colleagues and friends, I proposed Call of Duty 4: Promod LIVE which happened to be favored by everybody; except there was one issue: everyone uses Microsoft Windows while I'm developing [UE4](https://unrealengine.com/) games on a single-boot [Funtoo Linux](https://funtoo.org/) system.
 
 Natrutally, my first attemp was running it inside a Windows 7 virtual machine under [VMWare Workstation for Linux](https://www.vmware.com/products/workstation-pro.html) which supports up to Direct3D 10 (the exact API used by COD4). Sadly, the experience was very poor and painful with lots of unbearable stuttering on my decent hardware. Thus, the last resort was running it under [Wine](https://www.winehq.org/) which I used to happily run many Windows applications and games under it for many years. Though, throughout the years I replaced almost every Windows application with an equivalent or an alternative Linux application, until I gradually stopped using it. In the meanwhile, I also distanced myself from traditional desktop environments such as [GNOME](https://www.gnome.org/), [KDE](https://www.kde.org/), [Xfce](https://xfce.org/), and [LXDE](https://lxde.org/), while experimenting with various window managers specially [i3wm](https://i3wm.org/), which caught my attention for many good reasons. So, I made up my mind and aliented myself from desktop environments once and for all.
 
 Running a fully-fledged game engine such as [Unreal Engine 4](https://unrealengine.com/), I expected COD4, Wine, and i3 combination to work fine out of the box as it would under any other DE. Well, it turned out that I was too simple minded about running a fullscreen game such as COD4 under Wine/i3wm. Hopefully, [as Wine FAQ states the workaround is super easy](https://wiki.winehq.org/FAQ#How_do_I_get_Wine_to_launch_an_application_in_a_virtual_desktop.3F).
 
-Here is the full guide on running COD4 v1.7 with ProMod on GNU/Linux.
+Here is the full guide on running COD4 v1.7 with Promod LIVE on GNU/Linux.
 
 <!--more-->
 
@@ -371,4 +371,193 @@ Extra actions:
     --if-unset                Reuse currently selected version if it appears valid
 ```
 
-So far so good; with all the requisites out of the way, it's time to install COD4.
+So far so good; with all the requisites out of the way, it's time to install COD4. We are going to use a Windows machine or a VM to install Call of Duty 4: Modern Warfare. You may try to install it under Wine. But, I prefer to keep things simple. So, I prefer to install it on a Windows installation along with all the latest patches and updates and then move it to my Linux-powered machine.
+
+So, let's continue with the following instructions on a Windows installation:
+
+__Step 1__: Install COD4 on Microsoft Windows to a short path without any extra spaces or any exotic character in the folder name (e.g. <code>C:\COD4</code>) using the serial number you've got. Keep or write down the serial number somewhere safe as we need it later.
+
+__Step 2__: Download [the latest CoD4 Revive Kit from r/CoD4Promod](https://www.reddit.com/r/CoD4Promod/comments/6doxj6/cod4_revive_kit_download/) (at the time of this writing v2.0) and extract it somewhere.
+
+__Step 3__: Install <code>Call of Duty 4 - Revive Kit\1. Getting Started\1. Patches\Call of Duty 4 Modern Warfare - v1.6 Patch.exe</code>.
+
+__Step 4__: Install <code>Call of Duty 4 - Revive Kit\1. Getting Started\1. Patches\Call of Duty 4 Modern Warfare - v1.7 Patch.exe</code>.
+
+__Step 5__: The other steps suchs <code>2. Enable Stereo Mix</code> (fixes a Windows crash with various Realtek sound cards) and <code>3. Punkbuster Update Files [2017]</code> (we won't enable punkbuster anyway, remember?) are unnecessary to follow. So, ignore them.
+
+__Step 6__: Move the the installed COD4 directory to your Linux machine.
+
+__Step 7__: We can obtain Promod LIVE from <code>Call of Duty 4 - Revive Kit\2. Extras\Pro Mod Live v2.20</code> (I'm not sure which variant is that, but I guess it's the <code>EU</code> one) or from [the official website](https://promod.github.io/). The official website provides two variants: <code>Promod LIVE V2.20 EU</code> and <code>Promod LIVE V2.20 NE</code>. According to [the official GitHub repo](https://github.com/promod/promod4):
+
+{{< blockquote author="promod" link="https://github.com/promod/promod4" title="What's the difference between the EU and NE version of Promod?" >}}
+Q: What's the difference between the EU and NE version of Promod?
+A: The NE version of Promod has rate and cl_maxpackets settings unlocked and radar does not display enemy indicators while shooting. NE stands for Non-Europe.
+{{< /blockquote >}}
+
+If you don't have any idea what does that even mean, just stick to the EU variant for a starter.
+
+If you go with the version prvided by Call of Duty 4 - Revive Kit copy over <code>Call of Duty 4 - Revive Kit\2. Extras\Pro Mod Live v2.20\pml220</code> and put it inside the Mods directory inside the root of your COD4 installation (e.g. <code>C:\COD4\Mods</code>, now you have <code>C:\COD4\Mods\pml220</code>). Otherwise, if you choose to go with the official website, on a Linux termnianl you would do this:
+
+For the <code>EU</code> variant:
+
+```
+$ aria2c -s 16 -x 16 https://promod.github.io/releases/promodlive220_eu.zip
+$ mkdir /var/tmp/promod-temp/
+$ unzip promodlive220_eu.zip -d /var/tmp/promod-temp/
+$ mv /var/tmp/promod-temp/pml220 /path/to/COD4/Mods/
+$ rm -rf /var/tmp/promod-temp
+```
+
+Or, the <code>NE</code> variant:
+
+```
+$ aria2c -s 16 -x 16 https://promod.github.io/releases/promodlive220_ne.zip
+$ mkdir /var/tmp/promod-temp/
+$ unzip promodlive220_ne.zip -d /var/tmp/promod-temp/
+$ mv /var/tmp/promod-temp/pml220_ne /path/to/COD4/Mods/
+$ rm -rf /var/tmp/promod-temp
+```
+
+_Note 1_: I use aria2c as my download manager. If you don't have it use wget instead.
+
+_Note 2_: It's possible to install both Mods simultaneously since the directory names differ from each other for <code>EU</code> and <code>NE</code> variants.
+
+__Step 8__: On Microsoft Windows I would use a batch script like this to start the server with PunkBuster turned on:
+
+{{< codeblock lang="bat" title="server.cmd" >}}
+@echo off
+
+iw3mp.exe +set dedicated 0 +set net_ip localhost +set net_port 28960 +set sv_punkbuster 1 +set fs_game mods/pml220 +set promod_mode match +set rcon_password some-random-password
+{{< /codeblock >}}
+
+Alternatively, if I'm going to turn off PunkBuster:
+
+{{< codeblock lang="bat" title="server.cmd" >}}
+@echo off
+
+iw3mp.exe +set dedicated 0 +set net_ip localhost +set net_port 28960 +set sv_punkbuster 0 +set fs_game mods/pml220 +set promod_mode match_pb +set rcon_password some-random-password
+{{< /codeblock >}}
+
+Notice <code>+set sv_punkbuster 0</code> or <code>+set sv_punkbuster 1</code> which disables or enables PunkBuster. You may have noticed for <code>+set sv_punkbuster 1</code> I did <code>+set promod_mode match</code> but for <code>+set sv_punkbuster 0</code> I also did <code>+set promod_mode match_pb</code>. If we simply <code>set sv_punkbuster</code> to 0 for disabling PunkBuster but won't change the <code>promod_mode</code> value accordingly we are going to get "Server Violation: Punkbuster Disabled" warning on the screen every other second while playing the game. You shoud add <code>_pb</code> to <code>promod_mode</code> values when PunkBuster is disabled (e.g. <code>promod_mode match</code> becomes <code>promod_mode match_pb</code>, or <code>promod_mode lan</code> becomes <code>promod_mode lan_pb</code>, and so on).
+
+As an extra note we use <code>+set fs_game mods/pml220</code> for activating the <code>EU</code> variant of Promod Live or <code>+set fs_game mods/pml220_ne</code> for activating the <code>NE</code> variant. You may also want to replace some-random-password with your desired password inside the <code>+set rcon_password some-random-password</code> part.
+
+We are going to create a shell script with similar settings in order to launch <code>iw3mp.exe</code> in a virtual desktop under Wine (simply launching iw3mp.exe inside i3wm causes trouble as soon as it goes fullscreen):
+
+{{< codeblock lang="sh" title="server.sh" >}}
+#!/usr/bin/env sh
+
+wine explorer /desktop=COD4,2560x1440 iw3mp.exe +set dedicated 0 +set net_ip localhost +set net_port 28960 +set sv_punkbuster 0 +set fs_game mods/pml220 +set promod_mode match_pb +set rcon_password some-random-password
+{{< /codeblock >}}
+
+Note that I use <code>/desktop=COD4,2560x1440</code> since my monitor's native resolution is QHD. You have to replace the <code>2560x1440</code> part with any supported resolution on your monitor. On Linux you can extract it using:
+
+```
+$ xrandr -q
+
+Screen 0: minimum 8 x 8, current 2560 x 1440, maximum 32767 x 32767
+DVI-D-0 disconnected primary (normal left inverted right x axis y axis)
+HDMI-0 disconnected (normal left inverted right x axis y axis)
+HDMI-1 disconnected (normal left inverted right x axis y axis)
+DP-0 connected 2560x1440+0+0 (normal left inverted right x axis y axis) 600mm x 340mm
+   2560x1440     59.95*+
+   1920x1080     60.00    59.94    50.00  
+   1680x1050     59.95  
+   1600x1200     60.00  
+   1440x900      59.89  
+   1280x1024     75.02    60.02  
+   1280x960      60.00  
+   1280x800      59.81  
+   1280x720      60.00    59.94    50.00  
+   1152x864      75.00  
+   1024x768      75.03    70.07    60.00  
+   800x600       75.00    72.19    60.32    56.25  
+   720x576       50.00  
+   720x480       59.94  
+   640x480       75.00    72.81    59.94    59.93  
+   624x464       59.95  
+DP-1 disconnected (normal left inverted right x axis y axis)
+DP-2 disconnected (normal left inverted right x axis y axis)
+DP-3 disconnected (normal left inverted right x axis y axis)
+```
+In case you are not going to run a server and just want to connect and play on another server:
+
+{{< codeblock lang="sh" title="iw3mp.sh" >}}
+#!/usr/bin/env sh
+
+wine explorer /desktop=COD4,2560x1440 iw3mp.exe
+{{< /codeblock >}}
+
+__Step 9__: Set the executable permission on the shell scripts:
+
+For the current user:
+
+```
+$ chmod u+x server.sh
+$ chmod u+x iw3mp.sh
+```
+
+Alternatively, make it executable by all users:
+
+```
+$ chmod a+x server.sh
+$ chmod a+x iw3mp.sh
+```
+__Step 10__: Despite the fact that we are ready to launch the COD4 multiplayer executable, we have another step to take before running the executable under Wine or we are going to experience issues due to invalid multiplayer key codes.
+
+COD4 writes the key code inside the Windows registry. So, we have to create and execute a <code>.reg</code> file in order to write our key code into Wine's registry.
+
+Create the following file somewhere on your hard drive:
+
+{{< codeblock lang="" title="cod4.reg" >}}
+Windows Registry Editor Version 5.00
+
+; x86 Windows
+[HKEY_LOCAL_MACHINE\SOFTWARE\Activision\Call of Duty 4]
+"codkey"="XXXXXXXXXXXXXXXXXXXX"
+
+; x64 Windows
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Activision\Call of Duty 4]
+"codkey"="XXXXXXXXXXXXXXXXXXXX"
+{{< /codeblock >}}
+
+The format for COD4 key codes are <code>XXXX-XXXX-XXXX-XXXX-XXXX</code>. But, we have to transform it to <code>XXXXXXXXXXXXXXXXXXXX</code> and assign it to <code>codkey</code> variable in the above file. Also note that COD4 writes the key code in different places inside the registry depending on the Windows variant, whether it is 64-bit or 32-bit. COD4 detects Wine environment on my system as 32-bit Windows installation. But, to stay safe and keep things simple use both variables as it only takes up a few more bytes inside your registry.
+
+__Step 11__: Fire up a terminal and run the following:
+
+```
+$ wine start regedit cod4.reg
+```
+
+__Step 12__: Congratulations! If you have followed the instructions correctly, you will have a working i3wm + Wine + COD4 + Promod Live 220 setup which should work on par with Windows. Let's try it.
+
+For running the client and connecting to another server, simply run:
+
+```
+$ cd /path/to/COD4 && ./iw3mp.sh
+```
+
+For running as the server:
+
+```
+$ cd /path/to/COD4 && ./server.sh
+```
+__Step 13__: If it fires up successfully, after the initial splash screen, a window which will asks for a profile name appears on the screen, otherwise you should be directed to the game's main menu.
+
+In order to connect to another Promod Live server, goto Join Game and on from top/center part of the screen set Source to Local, then Game Mode to All, and finally don't forget to set Mods to Yes by clicking on Filter Servers which is set to No by default. Click on Refresh List button multiple times and the server(s) will appear if there are any on your local network.
+
+Alternatively, if you are going to run the server as well as playing the game, from the main menu choose Start New Server. Then, set your desired options and choose a map to start. After your server starts you will be in Strat Mode. You will see it written on the upper right hand side of the screen which means your are in the Nadetraining mode. You can verify this by throwing a grenade. If you fly alongside the grenade to see where it hits your are in Nadetraining mode. Now in order to start the actual match mode (it doesn't make any difference if anyone has already joined the server or not), press the <code>`</code> tilde key (usually located on the top side of Tab Key and to the left of 1 Key) for the game console to show up on the screen. Type the following command and hit the Enter button on your keayboard; the match should restart in Standard Match mode by sending eveyone present in the map the Choose Team screen (anyone who hasn't joined yet, could join the game at this stage or even later in the middle of the game):
+
+```
+/promod_mode match_pb
+```
+
+Notic the <code>/</code> sign at the begining and the space between <code>/promod_mode</code> and <code>match_pb</code> parts of the command.
+
+On another note, in order to reduce typing in the midst of playing, you can always access the already typed commands by pressing the tilde button and then the up arrow afterwards for quick access to the previous commands, while the game is still open; so that you can reduce your amount of typing.
+
+After choosing your team and your weapons of choice you will be spawned in the map alongside your teammates. The Strat Mode text on the right top corner should have been replaced by Match Standard PB: OFF which shows that eveything has just been setup correctly and everybody is good to go. A few lines beneath that you should see Status and it's value Not Ready in red. By pressing <code>F</code> key you can change that to Ready in green color. The first type F is pressed a dialog will appear for recording your gameplay. You can either choose to record or cancel it. By holding down the <code>TAB</code> key you can see who has joined or joining the game. Who is ready or not in order to remined them to press the <code>F</code> key (quite a challenge, believe me!). You can type messages which anyone on both sides can see by pressing the tilde key, typing your message and then hitting the enter key.
+
+I hope this guide covered most if not everything to get you started.
+
+Enjoy! :)
