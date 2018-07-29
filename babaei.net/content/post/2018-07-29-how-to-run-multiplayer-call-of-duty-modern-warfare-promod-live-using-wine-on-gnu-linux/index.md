@@ -1,5 +1,5 @@
 +++
-title = "How to Run Multiplayer Call of Duty 4: Modern Warefare (Promod LIVE) using Wine on GNU/Linux"
+title = "How to Run Multiplayer Call of Duty 4: Modern Warfare (Promod LIVE) using Wine on GNU/Linux"
 slug = "how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux"
 date = 2018-07-29T18:39:00+04:30
 tags = [ "COD4", "Emulation", "Games", "GNU", "Linux", "Multiplayer", "Promod", "Promod LIVE", "UE4", "Unreal Engine", "VMWare", "Wine" ]
