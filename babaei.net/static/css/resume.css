@@ -142,7 +142,17 @@ h1 {
     }
 }
 
-@media print {
+@media only screen {
+    .display-visible {
+        display: inline !important;
+    }
+
+    .display-hidden {
+         display: none !important;
+    }
+}
+
+@media only print {
     body {
         padding: 0 1rem;
         margin: 0;
@@ -156,7 +166,11 @@ h1 {
         margin-bottom: 0;
     }
 
-    .print-resume {
-        display: none;
+    .print-visible {
+        display: inline !important;
+    }
+
+    .print-hidden {
+        display: none !important;
     }
 }
