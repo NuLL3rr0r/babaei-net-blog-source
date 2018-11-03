@@ -1,3 +1,12 @@
+/* font-face-vazir-black.css */
+@font-face {
+    font-family: 'Vazir';
+    font-weight: 900;
+    src: local('Vazir Black'), local('Vazir-Black'),
+         url('../fonts/vazir-black.woff2') format('woff2'),
+         url('../fonts/vazir-black.woff') format('woff');
+}
+
 /* font-face-vazir-bold.css */
 @font-face {
     font-family: 'Vazir';
