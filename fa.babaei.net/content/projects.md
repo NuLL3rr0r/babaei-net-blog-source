@@ -20,6 +20,8 @@ title = "پروژه ها"
                         <td>
                             Reminiscence / Voice of Generationsf
                         </td>
+                    </tr>
+                    <tr>
                         <th>
                             ژانر
                         </th>
