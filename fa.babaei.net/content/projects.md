@@ -18,7 +18,7 @@ title = "پروژه ها"
                             نام های دیگر
                         </th>
                         <td>
-                            Reminiscence / Voice of Generationsf
+                            Reminiscence / Voice of Generations
                         </td>
                     </tr>
                     <tr>
