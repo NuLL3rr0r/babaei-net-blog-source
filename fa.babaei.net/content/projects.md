@@ -15,6 +15,12 @@ title = "پروژه ها"
                 <tbody>
                     <tr>
                         <th>
+                            نام های دیگر
+                        </th>
+                        <td>
+                            Reminiscence / Voice of Generationsf
+                        </td>
+                        <th>
                             ژانر
                         </th>
                         <td>
