@@ -8,6 +8,7 @@ title = "پروژه ها"
             <h2>صدای نسل ها</h2>
         </div>
         <div class="trailer">
+        {{< vimeo 298723067 >}}
         </div>
         <div class="extra-info">
             <table class="table table-hover">
@@ -33,7 +34,7 @@ title = "پروژه ها"
                             سال
                         </th>
                         <td>
-                            ۲۰۱۷ - تاکنون
+                            ۲۰۱۷ - ۲۰۱۸
                         </td>
                     </tr>
                     <tr>

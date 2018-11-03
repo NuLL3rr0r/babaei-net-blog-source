@@ -8,6 +8,7 @@ title = "Projects"
             <h2>Reminiscence</h2>
         </div>
         <div class="trailer">
+        {{< vimeo 298723067 >}}
         </div>
         <div class="extra-info">
             <table class="table table-hover">
@@ -33,7 +34,7 @@ title = "Projects"
                             Year(s)
                         </th>
                         <td>
-                            Under active development since 2017
+                            2017 - 2018
                         </td>
                     </tr>
                     <tr>
