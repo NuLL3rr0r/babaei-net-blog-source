@@ -21,6 +21,7 @@ PaginatePath = "/blog/page"
     readingTime = true
     rss = true
     share_img = ""
+    showRelatedPosts = true
     socialShare = true
     subtitle = "C++ / Unreal Engine Developer"
     useChroma = true

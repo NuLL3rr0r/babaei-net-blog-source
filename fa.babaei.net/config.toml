@@ -23,6 +23,7 @@ enableEmoji = true
     readingTime = true
     rss = true
     share_img = ""
+    showRelatedPosts = true
     socialShare = true
     subtitle = "برنامه نویس C++ / Unreal Engine"
     useChroma = true

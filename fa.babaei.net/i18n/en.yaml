@@ -8,7 +8,7 @@
 - id: lastModified
   translation: "(ویرایش شده در {{ .Count }})"
 - id: translationsLabel
-  translation: "Other languages: "
+  translation: "زبان های دیگر: "
 - id: translationsSeparator
   translation: ", "
 - id: readMore
@@ -37,15 +37,15 @@
 
 # Navigation
 - id: toggleNavigation
-  translation: "Toggle navigation"
+  translation: "تعییر ناوبری"
 - id: languageSwitcherLabel
-  translation: "Language"
+  translation: "زبان"
 - id: gcseLabelShort
-  translation: "Search"
+  translation: "جستجو"
 - id: gcseLabelLong
-  translation: "Search {{ .Site.Title }}"
+  translation: "جستجوی {{ .Site.Title }}"
 - id: gcseClose
-  translation: "Close"
+  translation: "بستن"
 
 # Staticman
 - id: noComment
@@ -63,4 +63,12 @@
 - id: yourWebsite
   translation: "You website"
 
+# Delayed Disqus
+- id: show
+  translation: "Show"
+- id: comments
+  translation: "comments" 
 
+# Related posts
+- id: seeAlso
+  translation: "بیشتر بخوانید"

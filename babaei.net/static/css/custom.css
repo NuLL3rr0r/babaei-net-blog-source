@@ -327,7 +327,8 @@ footer .copyright .license a {
 }
 
 .blog-post .blog-tags {
-    margin-top: 1.6em;
+    margin-top: 3.0em;
+    margin-bottom: 3.0em;
     text-align: right;
 }
 
@@ -483,20 +484,18 @@ figcaption p {
 }
 
 #social-share {
-    margin-top: 1.4em;
+    padding-bottom: 1.4em;
     text-align: left;
-    padding-top: 1.4em;
-    border-top: 1px solid #eee;
 }
 
-.related-content {
+.see-also {
     font-family: 'Roboto Condensed', 'Roboto', 'sans-serif';
-    margin-top: 3.0em;
+    margin-top: 2.0em;
     padding: 0.4em 2.4em 1.0em;
     border: 1px #eee solid;
     border-radius: 8px;
 }
 
-.related-content ul {
+.see-also {
     list-style-type: square;
 }
