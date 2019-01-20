@@ -204,6 +204,10 @@ code, kbd, pre, samp {
     margin-right: -5px;
 }
 
+ul.share li:last-of-type {
+    margin-right: 5px;
+}
+
 .see-also {
     direction: rtl;
     font-family: 'Vazir', 'Roboto Condensed', 'Roboto', 'Tahoma', 'sans-serif';
