@@ -180,7 +180,7 @@ Release:
 
 **5.** Last but not least, copy all the __*.h__ files from the extracted Crypto++ source directory to __{your own include directory}/cryptopp__.
 
-_Note: When you're using static builds with VC++ on Windows you should always include __Windows.h__ before Crypto++ headers, or else, you'll have difficulties._
+*Note: When you're using static builds with VC++ on Windows you should always include __Windows.h__ before Crypto++ headers, or else, you'll have difficulties.*
 
 {{< highlight cpp >}}
 #if defined(WIN32)
