@@ -357,7 +357,7 @@ if ($browser =~ m/Googlebot/) {
 <!--
   (The MIT License)
 
-  Copyright (c) 2007 Mohammad S. Babaei
+  Copyright (c) 2007 Mamadou Babaei
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -401,7 +401,7 @@ if ($browser =~ m/Googlebot/) {
 
 #  (The MIT License)
 #
-#  Copyright (c) 2007 Mohammad S. Babaei
+#  Copyright (c) 2007 Mamadou Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -498,7 +498,7 @@ print "</html>";
 <!--
   (The MIT License)
 
-  Copyright (c) 2007 Mohammad S. Babaei
+  Copyright (c) 2007 Mamadou Babaei
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -565,7 +565,7 @@ print "</html>";
 /// <summary>
 ///   (The MIT License)
 ///
-///   Copyright (c) 2007 Mohammad S. Babaei
+///   Copyright (c) 2007 Mamadou Babaei
 ///
 ///   Permission is hereby granted, free of charge, to any person obtaining a copy
 ///   of this software and associated documentation files (the "Software"), to deal

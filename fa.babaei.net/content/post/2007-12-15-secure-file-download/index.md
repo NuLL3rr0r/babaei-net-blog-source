@@ -495,7 +495,7 @@ smtp.Credentials = new System.Net.NetworkCredential("some.id@gmail.com", "pw");
 <!--
   (The MIT License)
 
-  Copyright (c) 2007 Mohammad S. Babaei
+  Copyright (c) 2007 Mamadou Babaei
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -561,7 +561,7 @@ smtp.Credentials = new System.Net.NetworkCredential("some.id@gmail.com", "pw");
 
 #  (The MIT License)
 #
-#  Copyright (c) 2007 Mohammad S. Babaei
+#  Copyright (c) 2007 Mamadou Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -753,7 +753,7 @@ sub ErrorH {
 <!--
   (The MIT License)
 
-  Copyright (c) 2007 Mohammad S. Babaei
+  Copyright (c) 2007 Mamadou Babaei
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -997,7 +997,7 @@ sub ErrorH {
 
 #  (The MIT License)
 #
-#  Copyright (c) 2007 Mohammad S. Babaei
+#  Copyright (c) 2007 Mamadou Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal

@@ -1,6 +1,6 @@
 baseURL = "https://www.babaei.net/"
 languageCode = "en-us"
-title = "Mohammad S. Babaei"
+title = "Mamadou Babaei"
 
 theme = "beautifulhugo"
 #uglyurls = "true"
@@ -16,8 +16,8 @@ PaginatePath = "/blog/page"
     dateFormat = "January 2, 2006"
     favicon = "/favicon.ico"
 #    gcse = ""
-    homeTitle = "Mohammad S. Babaei"
-    logo = "/img/mohammad-s-babaei.png"
+    homeTitle = "Mamadou Babaei"
+    logo = "/img/mamadou-babaei.png"
     readingTime = true
     rss = true
     share_img = ""
@@ -32,7 +32,7 @@ PaginatePath = "/blog/page"
     id = "1"
 
 [Author]
-    name = "Mohammad S. Babaei"
+    name = "Mamadou Babaei"
     website = "https://www.babaei.net/"
 #    email = "youremail@domain.com"
 #    facebook = "username"

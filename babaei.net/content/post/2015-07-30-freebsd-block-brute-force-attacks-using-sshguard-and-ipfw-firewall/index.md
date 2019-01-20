@@ -90,7 +90,7 @@ Now, you may ask there is one little issue with configuring IPFW through <code>f
 
 #  (The MIT License)
 #
-#  Copyright (c) 2015 Mohammad S. Babaei
+#  Copyright (c) 2015 Mamadou Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal
@@ -255,7 +255,7 @@ So we have to modify our own script to adapt to the new situation:
 
 #  (The MIT License)
 #
-#  Copyright (c) 2015 Mohammad S. Babaei
+#  Copyright (c) 2015 Mamadou Babaei
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
 #  of this software and associated documentation files (the "Software"), to deal

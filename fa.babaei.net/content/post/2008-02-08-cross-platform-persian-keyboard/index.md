@@ -297,7 +297,7 @@ kb.TransformInputChar(txtPersian, e);
 /// <summary>
 ///   (The MIT License)
 ///   
-///   Copyright (c) 2008 Mohammad S. Babaei
+///   Copyright (c) 2008 Mamadou Babaei
 ///   
 ///   Permission is hereby granted, free of charge, to any person obtaining a copy
 ///   of this software and associated documentation files (the "Software"), to deal
@@ -372,7 +372,7 @@ namespace CrossPlatformKeyboard
 /// <summary>
 ///   (The MIT License)
 ///   
-///   Copyright (c) 2008 Mohammad S. Babaei
+///   Copyright (c) 2008 Mamadou Babaei
 ///   
 ///   Permission is hereby granted, free of charge, to any person obtaining a copy
 ///   of this software and associated documentation files (the "Software"), to deal

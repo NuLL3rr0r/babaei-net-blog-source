@@ -53,14 +53,14 @@ Since in contrast to <code>make_shared</code>, C++11 does not provide <code>make
 {{< codeblock lang="cpp" title="make_unique.hpp" >}}
 /**
 * @file
-* @author  Mohammad S. Babaei <info@babaei.net>
+* @author  Mamadou Babaei <info@babaei.net>
 * @version 0.1.0
 *
 * @section LICENSE
 *
 * (The MIT License)
 *
-* Copyright (c) 2016 Mohammad S. Babaei
+* Copyright (c) 2016 Mamadou Babaei
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -113,14 +113,14 @@ OK, here is the header file for the <code>PostProcess</code> class which we use 
 {{< codeblock lang="cpp" title="PostProcess.hpp" >}}
 /**
 * @file
-* @author  Mohammad S. Babaei <info@babaei.net>
+* @author  Mamadou Babaei <info@babaei.net>
 * @version 0.1.0
 *
 * @section LICENSE
 *
 * (The MIT License)
 *
-* Copyright (c) 2016 Mohammad S. Babaei
+* Copyright (c) 2016 Mamadou Babaei
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
@@ -186,14 +186,14 @@ Now let's get to the implementation:
 {{< codeblock lang="cpp" title="PostProcess.cpp" >}}
 /**
 * @file
-* @author  Mohammad S. Babaei <info@babaei.net>
+* @author  Mamadou Babaei <info@babaei.net>
 * @version 0.1.0
 *
 * @section LICENSE
 *
 * (The MIT License)
 *
-* Copyright (c) 2016 Mohammad S. Babaei
+* Copyright (c) 2016 Mamadou Babaei
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
