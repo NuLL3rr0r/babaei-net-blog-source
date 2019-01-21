@@ -1,6 +1,6 @@
 baseURL = "https://fa.babaei.net/"
 languageCode = "fa-ir"
-title = "ممدو بابائی"
+title = "ممدوو بابائی"
 
 theme = "beautifulhugo"
 #uglyurls = "true"
@@ -18,7 +18,7 @@ enableEmoji = true
     dateFormat = "January 2, 2006"
     favicon = "/favicon.ico"
 #    gcse = ""
-    homeTitle = "ممدو بابائی"
+    homeTitle = "ممدوو بابائی"
     logo = "/img/mamadou-babaei.png"
     readingTime = true
     rss = true
@@ -34,7 +34,7 @@ enableEmoji = true
     id = "1"
 
 [Author]
-    name = "ممدو بابائی"
+    name = "ممدوو بابائی"
     website = "https://www.babaei.net/"
 #    email = "youremail@domain.com"
 #    facebook = "username"
