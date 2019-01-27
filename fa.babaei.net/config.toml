@@ -29,10 +29,6 @@ enableEmoji = true
     useChroma = true
     useHLJS = false
 
-[Params.piwik]
-    server = "analytics.babaei.net"
-    id = "1"
-
 [Author]
     name = "ممدوو بابائی"
     website = "https://www.babaei.net/"

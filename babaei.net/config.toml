@@ -27,10 +27,6 @@ PaginatePath = "/blog/page"
     useChroma = true
     useHLJS = false
 
-[Params.piwik]
-    server = "analytics.babaei.net"
-    id = "1"
-
 [Author]
     name = "Mamadou Babaei"
     website = "https://www.babaei.net/"
