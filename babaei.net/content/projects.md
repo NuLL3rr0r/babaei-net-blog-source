@@ -4,6 +4,7 @@ title = "Projects"
 
 <div class="portfolio">
     <div class="project">
+        <a id="reminiscence" name="reminiscence"></a>
         <div class="title">
             <h2>Reminiscence</h2>
         </div>
@@ -74,6 +75,7 @@ title = "Projects"
         </div>
     </div>
     <div class="project">
+        <a id="resonance" name="resonance"></a>
         <div class="title">
             <h2>Resonance</h2>
         </div>
@@ -157,6 +159,7 @@ title = "Projects"
         </div>
     </div>
     <div class="project">
+        <a id="thrateon" name="thrateon"></a>
         <div class="title">
             <h2>Thrateon</h2>
         </div>
