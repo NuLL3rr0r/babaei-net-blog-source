@@ -4,6 +4,7 @@ title = "پروژه ها"
 
 <div class="portfolio">
     <div class="project">
+        <a id="reminiscence" name="reminiscence"></a>
         <div class="title">
             <h2>صدای نسل ها</h2>
         </div>
@@ -83,6 +84,7 @@ title = "پروژه ها"
         </div>
     </div>
     <div class="project">
+        <a id="resonance" name="resonance"></a>
         <div class="title">
             <h2>قلب سیمرغ</h2>
         </div>
@@ -164,6 +166,7 @@ title = "پروژه ها"
         </div>
     </div>
     <div class="project">
+        <a id="thrateon" name="thrateon"></a>
         <div class="title">
             <h2>عصر پهلوانان ۲</h2>
         </div>
