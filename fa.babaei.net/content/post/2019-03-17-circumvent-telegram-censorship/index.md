@@ -1,7 +1,7 @@
 +++
 title = "دسترسی آزاد به تلگرام"
 slug = "circumvent-telegram-censorship"
-date = 2018-05-18T09:07:46+04:30
+date = 2019-03-17T09:15:36+01:00
 tags = [ "Censorship", "REST", "RESTful", "Telegram", "WebSocket" ]
 toc = true
 draft = true
