@@ -494,8 +494,5 @@ figcaption p {
     padding: 0.4em 2.4em 1.0em;
     border: 1px #eee solid;
     border-radius: 8px;
-}
-
-.see-also {
     list-style-type: square;
 }
