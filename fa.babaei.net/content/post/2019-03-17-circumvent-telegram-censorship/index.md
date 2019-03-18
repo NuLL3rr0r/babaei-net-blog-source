@@ -4,7 +4,6 @@ slug = "circumvent-telegram-censorship"
 date = 2019-03-17T09:15:36+01:00
 tags = [ "Censorship", "REST", "RESTful", "Telegram", "WebSocket" ]
 toc = true
-draft = true
 +++
 
 {{< figure src="/blog/circumvent-telegram-censorship/telegram-logo.png" alt="تلگرام" >}}
