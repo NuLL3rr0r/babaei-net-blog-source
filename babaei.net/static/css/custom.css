@@ -411,6 +411,11 @@ figcaption p {
     color: #151515;
 }
 
+.gif-box {
+    margin: 2.0em auto;
+    text-align: center;
+}
+
 .blog-archives {
     margin-top: -2.0em;
 }
