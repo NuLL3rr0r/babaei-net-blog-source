@@ -2,7 +2,7 @@
 title = "سال ۲۵۷۸ مبارک! یادداشت سال نوی من"
 slug = "merry-nowruz-2578-note"
 date = 2019-03-20T14:01:13+01:00
-tags = [ "Motivation", "Notes", "Nowruz" ]
+tags = [ "Motivation", "Notes", "Nowruz", "Self-help" ]
 +++
 
 {{< figure src="/blog/merry-nowruz-2578-note/smiling-nowruz-grass.jpg" alt="سبزه سفره هفت سین" >}}
