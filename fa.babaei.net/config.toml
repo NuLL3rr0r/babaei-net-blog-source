@@ -157,8 +157,8 @@ enableEmoji = true
         disable = false
         simple = false
     [privacy.youtube]
-        disable = true
-        privacyEnhanced = true
+        disable = false
+        privacyEnhanced = false
 
 [services]
     [services.instagram]
