@@ -2,7 +2,7 @@
 title = "نقش فرقه تبهکار رجوی در نسل کشی انفال"
 slug = "mek-role-anfal-genocide"
 date = 2019-03-10T18:44:00+01:00
-tags = [ "al-anfal", "al-anfal-campaign", "anfal", "anfal-genocide", "crime-against-humanity", "desacralize", "genocide", "iran", "iraq", "islam", "islamic-republic-of-iran", "islamophobia", "kurd", "kurdish", "kurdistan", "left", "left-wing", "left-wing-politics", "leftist", "mek", "mko", "mojahedin", "mujahedin", "pmoi", "religion", "religion-criticism" ]
+tags = [ "Al Anfal", "Al Anfal Campaign", "Anfal", "Anfal Genocide", "Crime Against Humanity", "Desacralization", "Genocide", "Iran", "Iraq", "Islam", "Islamic Republic of Iran", "Islamophobia", "Kurd", "Kurdish", "Kurdistan", "Left", "Left Wing", "Left Wing Politics", "Leftist", "MEK", "MKO", "Mojahedin", "Mujahedin", "PMOI", "Religion", "Religion Criticism" ]
 +++
 
 {{< figure src="/blog/mek-role-anfal-genocide/kurdish-kids-iraq-iran-border-black-white.jpg" alt="کودکان کورد در مرز عراق و ایران" >}}

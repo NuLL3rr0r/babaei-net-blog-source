@@ -2,7 +2,7 @@
 title = "مسیح میمون"
 slug = "monkey-christ"
 date = 2019-03-06T15:34:00+01:00
-tags = [ "christianity", "desacralize", "islam", "islamic-republic-of-iran", "islamophobia", "religion", "religion-criticism" ]
+tags = [ "Christianity", "Desacralization", "Islam", "Islamic Republic of Iran", "Islamophobia", "Religion", "Religion Criticism" ]
 +++
 
 در راستای تقدس زدائی، حالا که تابلو فرش عمام علی و حسین تو این چند روز کل توئیتر و تلگرام رو گرفته:

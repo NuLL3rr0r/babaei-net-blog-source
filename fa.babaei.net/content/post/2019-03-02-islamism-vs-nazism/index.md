@@ -2,7 +2,7 @@
 title = "اسلام گرایی در قیاس با نازیسم"
 slug = "islamism-vs-nazism"
 date = 2019-03-02T00:00:00+01:00
-tags = [ "desacralize", "iran", "islam", "islamic-republic-of-iran", "islamophobia", "religion", "religion-criticism" ]
+tags = [ "Desacralization", "iran", "islam", "islamic-republic-of-iran", "islamophobia", "religion", "religion-criticism" ]
 +++
 
 {{< figure src="/blog/islamism-vs-nazism/twitter-profile-header-islamism-vs-nazism-1263x421.jpg" alt="اسلام گرایی در قیاس با نازیسم" caption="اسلام گرایی در قیاس با نازیسم" >}}
