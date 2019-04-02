@@ -1,17 +1,18 @@
 +++
-title = "سال ۲۵۷۸ مبارک! یادداشت سال نوی من"
-slug = "merry-nowruz-2578-note"
+title = "سال ۲۷۱۹ کوردی و ۲۵۷۸ شاهنشاهی مبارک! یادداشت سال نوی من"
+slug = "merry-nowruz-2719-note"
 date = 2019-03-20T14:01:13+01:00
 tags = [ "Iran", "Motivation", "Notes", "Nowruz", "Self-help" ]
+aliases = [ "/blog/merry-nowruz-2578-note" ]
 +++
 
-{{< figure src="/blog/merry-nowruz-2578-note/smiling-nowruz-grass.jpg" alt="سبزه سفره هفت سین" >}}
+{{< figure src="/blog/merry-nowruz-2719-note/smiling-nowruz-grass.jpg" alt="سبزه سفره هفت سین" >}}
 
 خب! حالا که کم کم داره سال نو می شه و همه درگیر تصمیماتی جدید برای سال نو هستیم و همونطوری که می دونیم، همه هم از بعد ۱۳ حتما شروع می کنیم و دنبال اهدافمون میریم :))، بزارید یک حقیقتی رو براتون عنوان کنم که یک تحقیق گسترده علمی هم پشتیبانیش می کنه.
 
 <!--more-->
 
-{{< figure src="/blog/merry-nowruz-2578-note/motivation-mt-everest.png" alt="انگیزه: هر جسدی در قله اورست زمانی شخصی پر انگیزه بوده است!" caption="انگیزه: هر جسدی در قله اورست زمانی شخصی پر انگیزه بوده است!" >}}
+{{< figure src="/blog/merry-nowruz-2719-note/motivation-mt-everest.png" alt="انگیزه: هر جسدی در قله اورست زمانی شخصی پر انگیزه بوده است!" caption="انگیزه: هر جسدی در قله اورست زمانی شخصی پر انگیزه بوده است!" >}}
 
 روانشناس ها در دهه ۸۰ و ۹۰ برای درک اینکه چه چیزی باعث خوشحالی مردم میشه، یک پیجر در اختیار افراد زیادی با پس زمینه های اجتماعی و شغلی متفاوت قرار می دن و از اون ها می خوان زمانی که پیجر به صدا در اومد، هر فرد ۲ تا چیز رو یادداشت کنه:
 
@@ -30,6 +31,6 @@ tags = [ "Iran", "Motivation", "Notes", "Nowruz", "Self-help" ]
 
 نوروز همگی مبارک! امیدوارم که همیشه شیرین کام باشید و عدد زندگیتون ۷!
 
-{{< gif poster="/blog/merry-nowruz-2578-note/wish-you-the-best.png" vp9="/blog/merry-nowruz-2578-note/wish-you-the-best.webm" h264="/blog/merry-nowruz-2578-note/wish-you-the-best.mp4" caption="آرزوی بهترین ها" >}}
+{{< gif poster="/blog/merry-nowruz-2719-note/wish-you-the-best.png" vp9="/blog/merry-nowruz-2719-note/wish-you-the-best.webm" h264="/blog/merry-nowruz-2719-note/wish-you-the-best.mp4" caption="آرزوی بهترین ها" >}}
 
 اقتباس و الهام گرفته از [مرض بیشتر نوشته مارک منسون](https://markmanson.net/disease-of-more).
