@@ -2,7 +2,7 @@
 title = "اسلام لیبرال در مقابل اسلام خشونت آمیز"
 slug = "liberal-islam-versus-violent-islam"
 date = 2019-03-03T06:11:00+01:00
-tags = [ "Desacralization", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Religion", "Religion Criticism" ]
+tags = [ "Desacralization", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Religion", "Religion Criticism", "Religious Superstition", "Religious Violence", "Superstition", "Violence" ]
 +++
 
 {{< figure src="/blog/liberal-islam-versus-violent-islam/liberal-islam-versus-violent-islam.jpg" alt="جوزف ارنست رنان" caption="جوزف ارنست رنان" >}}
