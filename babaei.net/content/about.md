@@ -10,4 +10,4 @@ My professional game development career began by joining one of the innovative a
 
 The last game that I did work on as technical lead and senior developer is [Reminiscence](/projects/#reminiscence), a first-person shooter (FPS) game in Unreal Engine 4 and C++ for Microsoft Windows by [Atitel game studio](http://atitel.com/).
 
-In addition to game development, I've been a \*nix enthusiast for as long as I can remember. Hence, contributing to [The FreeBSD Project](https://freebsd.org/) by [developing, porting, and maintaining various software as part of the official FreeBSD Ports Collection](https://freebsd.org/cgi/ports.cgi?query=info%40babaei.net&stype=maintainer).
+In addition to game development, I've been a \*nix enthusiast for as long as I can remember. Hence, contributing to [The FreeBSD Project](https://freebsd.org/) by [developing, porting, and maintaining various software as part of the official FreeBSD Ports Collection](https://freebsd.org/cgi/ports.cgi?query=info%40babaei.net&stype=maintainer). I also maintain [an unofficial Gentoo overlay of various ebuilds](https://gpo.zugaina.org/Overlays/NuLL3rr0r).
