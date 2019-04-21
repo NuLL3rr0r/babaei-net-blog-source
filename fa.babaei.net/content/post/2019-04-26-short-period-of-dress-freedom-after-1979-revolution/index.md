@@ -3,7 +3,6 @@ title = "تهران، سال ۱۳۵۸: یک سال پس از انقلاب - فی
 slug = "short-period-of-dress-freedom-after-1979-revolution"
 date = 2019-04-21T18:25:01+02:00
 tags = [ "Desacralization", "Hijab", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Religion", "Religion Criticism", "Religious Superstition", "Religious Violence", "Superstition", "Violence" ]
-draft = true
 +++
 
 امروز با ویدیوی کوتاه و جالبی برخورد کردم که گزیده ای از یک مستند آلمانی هست در مورد دوران کوتاه آزادی حجاب در ایران پس از انقلاب. 
