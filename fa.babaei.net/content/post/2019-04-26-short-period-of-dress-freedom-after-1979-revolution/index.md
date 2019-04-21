@@ -2,7 +2,7 @@
 title = "تهران، سال ۱۳۵۸: یک سال پس از انقلاب - فیلم فوق العاده جالبی از دوران کوتاه آزادی حجاب در ایران پس از انقلاب. برگرفته از یک مستند آلمانی"
 slug = "short-period-of-dress-freedom-after-1979-revolution"
 date = 2019-04-21T18:25:01+02:00
-tags = [ "Desacralization", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Religion", "Religion Criticism", "Religious Superstition", "Religious Violence", "Superstition", "Violence" ]
+tags = [ "Desacralization", "Hijab", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Religion", "Religion Criticism", "Religious Superstition", "Religious Violence", "Superstition", "Violence" ]
 draft = true
 +++
 
