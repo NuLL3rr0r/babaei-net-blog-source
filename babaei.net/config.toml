@@ -20,6 +20,7 @@ PaginatePath = "/blog/page"
     logo = "/img/mamadou-babaei.png"
     readingTime = true
     rss = true
+    selfHosted = true
     share_img = ""
     showRelatedPosts = true
     socialShare = true
