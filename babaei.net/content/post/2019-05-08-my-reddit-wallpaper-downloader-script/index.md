@@ -168,7 +168,7 @@ I have already wrote [a guide on how to properly add a cron job on *nix systems]
 $ sudo -u user -g group -H crontab -e
 {{< /highlight >}}
 
-In my case, the user and group for my account is <code>mamadou</code>; so it would be:
+In my case, the user and the group for my account is <code>mamadou</code>; so it would be:
 
 {{< highlight sh >}}
 $ sudo -u mamadou -g mamadou -H crontab -e
