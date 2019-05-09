@@ -370,6 +370,11 @@ footer a:active {
     color: #111;
 }
 
+.highlight pre {
+    overflow: auto;
+    overflow-y: hidden;
+}
+
 .codeblock .title {
     display: block;
     text-align: center;
