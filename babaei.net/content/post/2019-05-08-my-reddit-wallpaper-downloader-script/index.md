@@ -213,7 +213,7 @@ In the future releases, I may add various clean up options and strategies, but f
 
 ## Obtaining the Source Code
 
-In order to download the source code using <code>curl</code>, <code>aria2</code>, <code>wget</code> directly:
+The source code is available on both [GitHub](https://github.com/NuLL3rr0r/reddit-wallpaper/) and [GitLab](https://gitlab.com/NuLL3rr0r/reddit-wallpaper/) for the sake of convenience. In order to download the source code using <code>curl</code>, <code>aria2</code>, <code>wget</code> directly:
 
 {{< highlight sh >}}
 # GitHub
