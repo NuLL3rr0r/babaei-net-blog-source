@@ -3,12 +3,12 @@
     <span class="title">{{ .Get "title" }}</span>
     {{ end }}
     {{ if .Get "lang"}}
-    {{ highlight .Inner (.Get "lang") "hl_lines=true" }}
+    {{ highlight (trim .Inner "\n\r") (.Get "lang") "hl_lines=true" }}
     {{ else }}
     {{ if .Get "plain"}}
     <pre>{{ .Inner }}</pre>
     {{ else }}
-    {{ highlight .Inner "" "hl_lines=true" }}
+    {{ highlight (trim .Inner "\n\r") "" "hl_lines=true" }}
     {{ end }}
     {{ end }}
 </div>
