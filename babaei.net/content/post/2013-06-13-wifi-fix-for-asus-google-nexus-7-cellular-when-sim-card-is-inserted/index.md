@@ -2,7 +2,7 @@
 title = "Wifi Fix for Asus Google Nexus 7 Cellular, When SIM-Card Is Inserted"
 slug = "wifi-fix-for-asus-google-nexus-7-cellular-when-sim-card-is-inserted"
 date = 2013-06-13T03:39:00+04:30
-tags = [ "Android", "Nexus 7" ]
+tags = [ "Android", "FLOSS", "FOSS", "Nexus 7" ]
 aliases = [ "/blog/2013/06/13/wifi-fix-for-asus-google-nexus-7-cellular-when-sim-card-is-inserted/" ]
 +++
 

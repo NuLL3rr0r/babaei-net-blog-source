@@ -2,7 +2,7 @@
 title = "Migrating From Hexo To Hugo"
 slug = "migrating-from-hexo-to-hugo"
 date = 2018-04-06T00:13:10Z
-tags = [ "Hexo", "Hugo", "Octopress" ]
+tags = [ "FLOSS", "FOSS", "Hexo", "Hugo", "Octopress" ]
 +++
 
 Hexo was so perfect and fast that I thought I will live with it happily ever after forever. Shortly, after I migrated this blog from [Octopress 2.x](http://octopress.org/) to [Hexo](https://hexo.io/), I came across [Hugo](https://gohugo.io/) static generator with support for blogging. The idea of having a blazingly fast static generator written in a compiled native language seemed intriguing to me. I tried to migrate my blog to Hugo soon after multiple times which led to failure every single time due to [lack of a few features in Hugo](https://github.com/gohugoio/hugo/issues/1768).

@@ -2,7 +2,7 @@
 title = "Post-Processing Effects in Cocos2d-x"
 slug = "post-processing-effects-in-cocos2d-x"
 date = 2016-01-08T22:10:30+03:30
-tags = [ "C", "C++", "Cocos2d-x", "Game Development", "Game Programming", "OpenGL", "VC++", "Visual C++", "Visual Studio" ]
+tags = [ "C", "C++", "Cocos2d-x", "FLOSS", "FOSS", "Game Development", "Game Programming", "OpenGL", "VC++", "Visual C++", "Visual Studio" ]
 aliases = [ "/blog/2016/01/08/post-processing-effects-in-cocos2d-x/" ]
 +++
 

@@ -2,7 +2,7 @@
 title = "nano, Syntax Highlighting"
 slug = "nano-syntax-highlighting"
 date = 2013-02-17T01:27:00+03:30
-tags = [ "Console", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "nano", "Terminal", "Unix" ]
+tags = [ "Console", "FLOSS", "FOSS", "FreeBSD", "Funtoo", "Gentoo", "GNU", "Linux", "nano", "Terminal", "Unix" ]
 aliases = [ "/blog/2013/02/17/nano-syntax-highlighting/" ]
 +++
 

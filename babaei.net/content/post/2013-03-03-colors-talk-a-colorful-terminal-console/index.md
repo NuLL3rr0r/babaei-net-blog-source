@@ -2,7 +2,7 @@
 title = "Colors Talk: A Colorful Terminal / Console"
 slug = "colors-talk-a-colorful-terminal-console"
 date = 2013-03-03T05:10:00+03:30
-tags = [ "Bash", "Console", "csh", "FreeBSD", "Funtoo", "Gentoo", "GNOME", "GNU", "KDE", "Linux", "LXDE", "nano", "sh", "Terminal", "Unix", "XFCE" ]
+tags = [ "Bash", "Console", "csh", "FLOSS", "FOSS", "FreeBSD", "Funtoo", "Gentoo", "GNOME", "GNU", "KDE", "Linux", "LXDE", "nano", "sh", "Terminal", "Unix", "XFCE" ]
 aliases = [ "/blog/2013/03/03/colors-talk-a-colorful-terminal-console/" ]
 +++
 
