@@ -164,6 +164,10 @@ code, kbd, pre, samp {
     direction: initial;
 }
 
+.codeblock, .highlight {
+    direction: initial;
+}
+
 .box figure figcaption {
     text-align: center;
 }
