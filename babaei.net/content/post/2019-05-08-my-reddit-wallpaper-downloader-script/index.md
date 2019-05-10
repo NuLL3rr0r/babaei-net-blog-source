@@ -243,7 +243,7 @@ $ git clone \
 
 Lastly, for the sake of convenience, it can be copy-pasted directly from here, which is strongly discouraged due to [Pastejacking Exploitation Technique](https://github.com/dxa4481/Pastejacking):
 
-{{< codeblock lang="bash" title="reddit-wallpaper.sh" >}}
+{{< codeblock lang="bash" title="reddit-wallpaper.sh" line_numbers="true" >}}
 #!/usr/bin/env bash
 
 #  (The MIT License)
