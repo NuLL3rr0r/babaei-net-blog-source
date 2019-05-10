@@ -4,7 +4,6 @@ slug = "keep-crashing-daemons-running-on-freebsd"
 date = 2019-05-09T19:27:37+02:00
 tags = [ "FOSS", "FLOSS", "FreeBSD", "Unix" ]
 toc = true
-draft = true
 +++
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
@@ -153,14 +152,25 @@ As a final note, when we run the script as a cron job, there is one more thing t
 *   *   *   *   *   /usr/local/cron-scripts/daemon-keeper.sh -e "/usr/local/sbin/clamd" -s "clamav-clamd" -s "dovecot"
 {{< /highlight >}}
 
-When we run the script from a cron job, if you haven't noticed by now, we pass the <code>/usr/local/sbin/clamd</code> to the script and it is considered a running process when the output is caught by <code>grep</code> always adding one more line to the output. So we have to eliminate it like so, or the script thinks the process is running due to count being at least <code>1</code> all the times:
+When we run the script from a cron job, if you haven't noticed by now, we pass <code>/usr/local/sbin/clamd</code> to the script and it is considered a running process when the output is caught by <code>grep</code>, always adding one more line to the output. So we have to eliminate it like so, or the script thinks the process is running due to count being at least <code>1</code> all the times:
 
 {{< highlight sh >}}
-$ ps aux | grep -v grep \
+$ ps aux \
+    | grep -v grep \
     | grep -v "/usr/local/cron-scripts/daemon-keeper.sh" \
     | grep "/usr/local/sbin/clamd"
 {{< /highlight >}}
-I
+
+The last thing we have to do is passing <code>-c</code> argument to the last grep, in order to count the number of running process of the daemon (yes, it is possible for a daemon to spawn more processes than one).
+
+{{< highlight sh >}}
+$ ps aux \
+    | grep -v grep \
+    | grep -v "/usr/local/cron-scripts/daemon-keeper.sh" \
+    | grep -c "/usr/local/sbin/clamd"
+{{< /highlight >}}
+
+Which either returns <code>0</code> if the daemon is not running or any number <code>>0</code> if the daemon is already running.
 
 ## Obtaining the Source Code
 
