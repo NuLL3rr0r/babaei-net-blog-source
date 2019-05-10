@@ -50,7 +50,7 @@ Let's begin. So, in order to be able to apply post-processing effects to your ga
 
 Since in contrast to <code>make_shared</code>, C++11 does not provide <code>make_unique</code> and it's a C++14 feature, your compiler may not support it, so, you have to add the following file to your project, because the main code relies on it. Even if your compiler is C++14-enabled and does support it you have to still include it or your compiler stops with a file not found complain or something similar due to an include error at compile time. Do not worry, your compiler still uses its own version of <code>make_unique</code> and leaves this file out once it reaches the platform check - <code>#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID</code> - in this header file. I included this file for Android NDK which does not support C++14 at the time. In fact, my main development environment is Visual Studio 2013 Update 5 at the moment which supports <code>make_unique</code>. If your compiler does not support it you have to modify that platform check line and add your platform to that line to include this implementation of <code>make_unique</code>, or else the main code fails to build.
 
-{{< codeblock lang="cpp" title="make_unique.hpp" >}}
+{{< codeblock lang="cpp" title="make_unique.hpp" line_numbers="true" >}}
 /**
 * @file
 * @author  Mamadou Babaei <info@babaei.net>
@@ -110,7 +110,7 @@ namespace std {
 
 OK, here is the header file for the <code>PostProcess</code> class which we use to create one post-processing effect at a time inside our game:
 
-{{< codeblock lang="cpp" title="PostProcess.hpp" >}}
+{{< codeblock lang="cpp" title="PostProcess.hpp" line_numbers="true" >}}
 /**
 * @file
 * @author  Mamadou Babaei <info@babaei.net>
@@ -183,7 +183,7 @@ There is also an [opaque pointer](https://en.wikipedia.org/wiki/Opaque_pointer) 
 
 Now let's get to the implementation:
 
-{{< codeblock lang="cpp" title="PostProcess.cpp" >}}
+{{< codeblock lang="cpp" title="PostProcess.cpp" line_numbers="true" >}}
 /**
 * @file
 * @author  Mamadou Babaei <info@babaei.net>
@@ -382,7 +382,7 @@ After creating the project add <code>make_unique.hpp</code>, <code>PostProcess.h
 
 Now it's time to add the shaders. The shaders are not written by me. In fact, I've never written one or do not know how they work. But, as I promised you will receive a copy of those shaders along with this code [on my GitHub](http://github.com/NuLL3rr0r). I originally took these shaders from [here](http://discuss.cocos2d-x.org/t/how-to-use-opengl-shader-in-cocos2d-x3-0/12430) and [here](https://github.com/saeedafshari/ShaderLayer). Here are the shaders:
 
-{{< codeblock lang="c" title="generic.vert" >}}
+{{< codeblock lang="c" title="generic.vert" line_numbers="true" >}}
 attribute vec4 a_position;
 attribute vec2 a_texCoord;
 attribute vec4 a_color;
@@ -398,7 +398,7 @@ void main()
 }
 {{< /codeblock >}}
 
-{{< codeblock lang="c" title="color_transition.frag" >}}
+{{< codeblock lang="c" title="color_transition.frag" line_numbers="true" >}}
 varying vec4 v_fragmentColor;
 varying vec2 v_texCoord;
 //CC_Time[1] is time
@@ -411,7 +411,7 @@ void main()
 }
 {{< /codeblock >}}
 
-{{< codeblock lang="c" title="gray.frag" >}}
+{{< codeblock lang="c" title="gray.frag" line_numbers="true" >}}
 varying vec4 v_fragmentColor;
 varying vec2 v_texCoord;
 
@@ -427,7 +427,7 @@ Create a <code>shaders</code> folder inside your project's resources directory a
 
 Make the following changes inside <code>HelloWorldScene.h</code> (I made it easier by commenting the changes, look for those <code>+</code> and <code>-</code> at the beginning of the commented modified lines and a title comment equal to the title of this post):
 
-{{< codeblock lang="cpp" title="HelloWorldScene.h" >}}
+{{< codeblock lang="cpp" title="HelloWorldScene.h" line_numbers="true" >}}
 #ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
 
@@ -497,7 +497,7 @@ virtual void update(float delta) override;
 
 And, here are the changes to <code>HelloWorldScene.cpp</code> file:
 
-{{< codeblock lang="cpp" title="HelloWorldScene.cpp" >}}
+{{< codeblock lang="cpp" title="HelloWorldScene.cpp" line_numbers="true" >}}
 #include "HelloWorldScene.h"
 /*****************************************
 // Post-Processing Effects in Cocos2d-x //

@@ -3,6 +3,7 @@ title = "Discourse as a Blog Comment Service on FreeBSD without Docker"
 slug = "discourse-as-a-blog-comment-service-on-freebsd-without-docker"
 date = 2016-04-29T06:49:31+04:30
 tags = [ "Docker", "FLOSS", "FOSS", "FreeBSD", "GNU", "Hexo", "Linux", "Ruby", "Ruby on Rails", "Unix" ]
+toc = "true"
 aliases = [ "/blog/2016/04/29/discourse-as-a-blog-comment-service-on-freebsd-without-docker/" ]
 +++
 
@@ -13,8 +14,6 @@ __Update 2 [2016/09/30]:__ _A section has been added to the end of the article f
 __Update 3 [2016/09/30]:__ _A section has been added to the end of the article for installing Discourse under Ruby version managers which is required for dealing with newer versions of Discourse since the current system-wide version of Ruby on FreeBSD is <code>2.2.5p319</code>._
 
 __Update 4 [2016/10/06]:__ _I decided to get rid of Discourse on this blog for various reasons including negative feedback from my readers, performance issues, being a memory hog and not so easy on memory, difficult maintenance, dealing with building Ruby Gems which is a tedious task in case they fail to build and a bug that duplicates my posts and creates a new thread for each post which means it won't show previous comments. Last but not least, in my estimation it's too heavy for such a small task such as a comment system._ **_As a result, this guide won't be maintained anymore._**
-
-<br />
 
 {{< figure src="/blog/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png" alt="Figure 1. Discourse Logo" caption="Figure 1. Discourse Logo" >}}
 
@@ -43,11 +42,11 @@ Yes, I know Ruby and Rails are crap and deploying Ruby on Rails apps are pain in
 
 <!--more-->
 
-### Dependencies ###
+## Dependencies
 
 Assuming you have <code>ports-mgmt/pkg</code> (a.k.a pkgng) installed and initialized, we have to check for and install the missing Discourse dependencies:
 
-```
+{{< highlight sh >}}
 $ pkg info | grep bundler
 rubygem-bundler-1.11.2         Tool that manages gem dependencies for ruby applications
 
@@ -89,11 +88,11 @@ ruby-2.2.4,1                   Object-oriented interpreted scripting language
 
 $ pkg info | grep sudo
 sudo-1.8.16                    Allow others to run commands as root
-```
+{{</ highlight >}}
 
 In my case the only missing dependencies were <code>graphics/ImageMagick</code> and <code>graphics/gifsicle</code>. So if you want to install from source using Ports:
 
-```
+{{< highlight sh >}}
 $ cd /usr/ports/graphics/ImageMagick-nox11/
 $ make config-recursive
 $ make install clean
@@ -101,18 +100,18 @@ $ make install clean
 $ cd /usr/ports/graphics/gifsicle/
 $ make config-recursive
 $ make install clean
-```
+{{</ highlight >}}
 
 Or, alternatively install the binaries using pkgng:
 
-```
+{{< highlight sh >}}
 $ pkg install graphics/ImageMagick-nox11 graphics/gifsicle
-```
+{{</ highlight >}}
 
 Note that I choose graphics/ImageMagick-nox11 over graphics/ImageMagick since it pulls in less dependency.
 
 
-### Database ###
+## Database
 
 OK, after installing the required dependencies, it's time to initialize the database by creating a user name and a password. In addition to that we have to enable the required PostgreSQL extensions.
 
@@ -120,7 +119,7 @@ By default, Discourse chooses <code>discourse</code> for both database name and 
 
 If you are planing to run only one website / blog on Discourse:
 
-```
+{{< highlight sql >}}
 $ sudo -u pgsql psql -d template1
 template1=# CREATE USER discourse CREATEDB;
 template1=# CREATE DATABASE discourse_production WITH ENCODING='UTF8' OWNER discourse;
@@ -128,11 +127,11 @@ template1=# \l
 template1=# \c discourse_production
 discourse_production=# CREATE EXTENSION hstore;
 discourse_production=# CREATE EXTENSION pg_trgm;
-```
+{{</ highlight >}}
 
 If you plan for a multi-site install, in addition to the above commands:
 
-```
+{{< highlight sql >}}
 discourse_production=# CREATE DATABASE discourse_babaei_net_production WITH ENCODING='UTF8' OWNER discourse;
 discourse_production=# CREATE DATABASE discourse_fa_babaei_net_production WITH ENCODING='UTF8' OWNER discourse;
 discourse_production=# \l
@@ -142,21 +141,21 @@ discourse_babaei_net_production=# CREATE EXTENSION pg_trgm;
 discourse_babaei_net_production=# \c discourse_fa_babaei_net_production
 discourse_fa_babaei_net_production=# CREATE EXTENSION hstore;
 discourse_fa_babaei_net_production=# CREATE EXTENSION pg_trgm;
-```
+{{</ highlight >}}
 
 Finally exit PostgreSQL command line by issuing: <code>\q</code>.
 
 One more thing: it's possible to protect the user login with a password. In that case, instead of:
 
-```
+{{< highlight sql >}}
 template1=# CREATE USER discourse CREATEDB;
-```
+{{</ highlight >}}
 
 Create the user using this command:
 
-```
+{{< highlight sql >}}
 template1=# CREATE ROLE discourse LOGIN ENCRYPTED PASSWORD '${SECRET_PASSWORD}' NOINHERIT VALID UNTIL 'infinity';
-```
+{{</ highlight >}}
 
 Obviously instead of <code>${SECRET_PASSWORD}</code> you must put your own password. Since PostgreSQL by default do not listen for external connections and only accepts local requests, you may find it unnecessary to password-protect the user login unless you are running Discourse and PostgreSQL on different machines.
 
@@ -181,7 +180,7 @@ host    all             all             ::1/128                 trust
 The above default settings allow local connectons only.
 
 
-### System User and Group ###
+## System User and Group
 
 Now that we've initialized the database, we have to create the Discourse system user name and group. Note that the user name must be the same as the user name you chose at the previous step. We chose <code>discourse</code> user name at the time of database creation. We'll also go with <code>/home/discourse</code> as Discourse home directory. So:
 
@@ -192,21 +191,21 @@ $ pw usermod discourse -G redis
 So, We did create the user and its group. Moreover, we add the user to <code>redis</code> group.
 
 
-### Source Code ###
+## Source Code
 
 Now that we have the Discourse user added to the system:
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/
 $ sudo -u discourse -H git clone https://github.com/discourse/discourse.git
-```
+{{</ highlight >}}
 
 After cloning Discourse source code we have to find out the latest stable tag by issuing:
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/discourse/
 $ sudo -u discourse -H git tag -l
-```
+{{</ highlight >}}
 
 The output is something like this:
 
@@ -371,18 +370,18 @@ v1.6.0.beta2
 
 In the above output, the latest stable release is <code>v1.5.1</code> while <code>latest-release</code> tag is the latest beta, stable or whatever it is. So, I'll checkout <code>v1.5.1</code> tag by:
 
-```
+{{< highlight sh >}}
 $ sudo -u discourse -H git checkout tags/v1.5.1
-```
+{{</ highlight >}}
 
 
-### Configuration Files ###
+## Configuration Files
 
 Most RoR applications have a section named <code>production</code> in <code>&lt;project-root&gt;/config/database.yml</code> file.
 
 You'll only find the following comments inside <code>config/database.yml</code> for Discourse:
 
-{{< codeblock lang="plaintext" title="config/database.yml" >}}
+{{< codeblock lang="yaml" title="config/database.yml" line_numbers="true" >}}
 # You may be surprised production is not here, it is sourced from application.rb using a monkey patch
 # This is done for 2 reasons
 #
@@ -392,7 +391,7 @@ You'll only find the following comments inside <code>config/database.yml</code> 
 
 Discourse is a bit different. It has some defaults values which you will be able to override. The default configuration resides inside <code>config/discourse_defaults.conf</code>:
 
-{{< codeblock lang="plaintext" title="config/discourse_defaults.conf" >}}
+{{< codeblock lang="plaintext" title="config/discourse_defaults.conf" line_numbers="true" >}}
 #
 # DO NOT EDIT THIS FILE
 # If you need to make changes create a file called discourse.conf in this directory with your changes
@@ -546,7 +545,7 @@ message_bus_max_backlog_size = 100
 
 As the first line in that file suggests you must avoid touching this file. Instead create an empty file inside the same directory at <code>config/discourse.conf</code> which is <code>/home/discourse/discourse/config/discourse.conf</code> in our case and put the desired configuration there:
 
-{{< codeblock lang="plaintext" title="/home/discourse/discourse/config/discourse.conf" >}}
+{{< codeblock lang="plaintext" title="/home/discourse/discourse/config/discourse.conf" line_numbers="true" >}}
 # Database
 db_pool = 12
 db_name = discourse_production
@@ -578,7 +577,7 @@ Note that some of the above settings are imaginary and is provided as an example
 
 If you are running a multi-site setup you have to create another file named <code>config/multisite.yml</code>. First take a look at <code>config/multisite.yml.production-sample</code> to get an idea of what its contents look like:
 
-{{< codeblock lang="plaintext" title="config/multisite.yml.production-sample" >}}
+{{< codeblock lang="yaml" title="config/multisite.yml.production-sample" line_numbers="true" >}}
 mlp:
   adapter: postgresql
   database: discourse_mlp
@@ -613,7 +612,7 @@ drwho:
 
 So for our multi-site example I'll create the <code>/home/discourse/discourse/config/multisite.yml</code> with the following content:
 
-{{< codeblock lang="plaintext" title="/home/discourse/discourse/config/multisite.yml" >}}
+{{< codeblock lang="yaml" title="/home/discourse/discourse/config/multisite.yml" line_numbers="true" >}}
 babaei_net_production:
   adapter: postgresql
   database: discourse_babaei_net_production
@@ -646,68 +645,68 @@ fa_babaei_net_production:
 {{< /codeblock >}}
 
 
-### Install Gems ###
+## Install Gems
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/discourse/
 $ sudo -u discourse -H bundle install --deployment --without test --without development
-```
+{{</ highlight >}}
 
 Grab a cup of coffee! This may take a while.
 
 
-### Database Migration ###
+## Database Migration
 
 No matter if this is the first time you install Discourse or you are upgrading, this is a necessary part of the process.
 
 For single-site installations:
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/discourse/
 $ sudo -u discourse -H RAILS_ENV=production bundle exec rake db:migrate
-```
+{{</ highlight >}}
 
 For multi-site installations:
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/discourse/
 $ sudo -u discourse -H RAILS_ENV='production' bundle exec rake multisite:migrate
-```
+{{</ highlight >}}
 
 
-### Precompile Assets ###
+## Precompile Assets
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/discourse/
 $ sudo -u discourse -H RAILS_ENV=production bundle exec rake assets:precompile
-```
+{{</ highlight >}}
 
 This one should take some time to complete.
 
 
-### Startup Script ###
+## Startup Script
 
 Congratulations! If you made it so far you've probably setup Discourse successfully. But, before we run the Discourse application server let's write a small script to run it properly in a simple way.
 
 First, let's create the required directories, and set the current permissions:
 
-```
+{{< highlight sh >}}
 $ sudo -u discourse -H mkdir -p /home/discourse/cron/
 $ sudo -u discourse -H mkdir -p /home/discourse/log/
 $ chmod -R g-rxw,o-rxw /home/discourse/cron
 $ chmod -R g-rxw,o-rxw /home/discourse/log
 $ chown -R www:www /home/discourse/log
-```
+{{</ highlight >}}
 
 Then, to write the script in your default editor (of course you can choose another editor by replacing $EDITOR environment variable in the following command, directly with your preferred editor executable's name):
 
-```
+{{< highlight sh >}}
 $ sudo -u discourse -H $EDITOR /home/discourse/cron/server.sh
-```
+{{</ highlight >}}
 
 Now copy paste the following and [be wary not to break the lines inside your editor](/blog/nano-do-not-wrap-text/):
 
-{{< codeblock lang="plaintext" title="/home/discourse/cron/server.sh" >}}
+{{< codeblock lang="plaintext" title="/home/discourse/cron/server.sh" line_numbers="true" >}}
 #!/bin/sh
 
 cd /home/discourse/discourse/
@@ -719,33 +718,35 @@ I chose to go with [Thin](http://code.macournoyer.com/thin/) and Unix domain soc
 
 Alternatively it's possible to use TCP connections instead of Unix domain sockets (consider that Unix domain sockets can achieve better throughput than the TCP/IP loopback). To run Thin server and listen for connections on port <code>11011</code>, replace the last line of the script with:
 
-```
-$ sudo -u discourse -H RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 bundle exec thin start -p 11011 > /home/discourse/discourse/log/thin.log 2>&1&
-```
+{{< highlight sh >}}
+$ sudo -u discourse -H RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 \
+    bundle exec thin start -p 11011 > /home/discourse/discourse/log/thin.log 2>&1&
+{{</ highlight >}}
 
 To serve the application on default Rails server instead of Thin (definitely a bad decision since it's slower), replace the last line of the script with:
 
-```
-$ sudo -u discourse -H RAILS_ENV='production' RUBY_GC_MALLOC_LIMIT=90000000 bundle exec rails server /home/discourse/discourse/log/rails_server.log
-```
+{{< highlight sh >}}
+$ sudo -u discourse -H RAILS_ENV='production' RUBY_GC_MALLOC_LIMIT=90000000 \
+    bundle exec rails server /home/discourse/discourse/log/rails_server.log
+{{</ highlight >}}
 
 By the way, you can read about [what's the big deal about that bloody RUBY_GC_MALLOC_LIMIT=90000000 here](https://meta.discourse.org/t/tuning-ruby-and-rails-for-discourse/4126).
 
 Before running the script, set it executable for all users:
 
-```
+{{< highlight sh >}}
 $ chmod a+x /home/discourse/cron/server.sh
-```
+{{</ highlight >}}
 
 And then run the script if you wish:
 
-```
+{{< highlight sh >}}
 $ /home/discourse/cron/server.sh
-```
+{{</ highlight >}}
 
 To check if your Sidekiq instance and Thin server started successfully or not:
 
-```
+{{< highlight sh >}}
 $ ps auxw | grep ruby
 discourse    2573   0.0 12.9 1163352 178056  -  S    Mon01AM  128:25.44 ruby22: sidekiq 4.0.2 discourse [0 of 25 busy] (ruby22)
 discourse    2576   0.0 12.9  987464 177624  -  I    Mon01AM    6:58.57 ruby22: thin server (/home/discourse/discourse/tmp/sockets/thin.0.sock) (ruby22)
@@ -756,28 +757,28 @@ discourse    2587   0.0 13.6  983232 183451  -  I    Mon01AM    5:49.12 ruby22: 
 discourse    2589   0.0 13.6  977334 182345  -  I    Mon01AM    5:17.11 ruby22: thin server (/home/discourse/discourse/tmp/sockets/thin.5.sock) (ruby22)
 discourse    2590   0.0 12.9  983232 193454  -  I    Mon01AM    6:33.88 ruby22: thin server (/home/discourse/discourse/tmp/sockets/thin.6.sock) (ruby22)
 discourse    2591   0.0 13.1  983333 187443  -  I    Mon01AM    7:12.01 ruby22: thin server (/home/discourse/discourse/tmp/sockets/thin.7.sock) (ruby22)
-```
+{{</ highlight >}}
 
 To stop your Sidekiq or Thin instances I highly recommend sending <code>SIGTERM</code> instead of <code>SIGKILL</code> to their processes and give them some time to clean-up gracefully:
 
-```
+{{< highlight sh >}}
 $ kill -SIGTERM 2576
-```
+{{</ highlight >}}
 
 If you are looking for an easier way to stop and monitor your Thin and Sidekiq instances, <code>sysutils/htop</code> is an viable option.
 
 
-### Cron Job ###
+## Cron Job
 
 Well, I am sure we cannot afford to run the script manually after each reboot, so we have to [set it up as a cron job](/blog/the-proper-way-of-adding-a-cron-job/):
 
-```
+{{< highlight sh >}}
 $ crontab -e -u root
-```
+{{</ highlight >}}
 
 When your default editor appears, add this to the end of your cron jobs:
 
-{{< codeblock lang="plaintext" title="crontab -e -u root" >}}
+{{< codeblock lang="sh" title="crontab -e -u root" line_numbers="true" >}}
 # Discourse
 # At Boot
 @reboot     /home/discourse/cron/server.sh
@@ -785,24 +786,24 @@ When your default editor appears, add this to the end of your cron jobs:
 
 Now to check whether your cron job has been added successfully or not, enter the following command:
 
-```
+{{< highlight sh >}}
 $ crontab -l
-```
+{{</ highlight >}}
 
 For your cron job to take effect:
 
-```
+{{< highlight sh >}}
 $ service cron restart
-```
+{{</ highlight >}}
 
 Now, after each reboot it will start automatically.
 
 
-### Nginx Configuration ###
+## Nginx Configuration
 
 I took the example Nginx configuration from <code>config/nginx.sample.conf</code> and adapt it to our example:
 
-{{< highlight plaintext >}}
+{{< codeblock lang="nginx" line_numbers="true" >}}
 # Discourse
 proxy_cache_path /usr/local/www/nginx/cache keys_zone=one:10m max_size=200m;
 
@@ -1072,53 +1073,56 @@ server {
         root   /usr/local/www/nginx/error;
     }
 }
-{{< /highlight >}}
+{{< /codeblock >}}
 
 
-### Troubleshooting ###
+## Troubleshooting
 
 So, that's it. If you did setup everything right, you must see the Discourse home page by entering e.g. [discuss.babaei.net](http://discuss.babaei.net/) or [discuss.fa.babaei.net](http://discuss.fa.babaei.net/) inside your browser. Otherwise, the first place to check are the log files that reside inside <code>/home/discourse/log/</code> and <code>/home/discourse/discourse/log/</code>. If you still do not have any clue why it's not working, make sure to double check that you did follow the tutorial correctly. Other than that, you are always welcome to discuss it in the comments section below.
 
 
-### Major FreeBSD Upgrades ###
+## Major FreeBSD Upgrades
 
 Generally, after each major upgrade to FreeBSD there are version bumps and ABI changes to the shared libraries on the system which which will break most third-party applications. After a major version upgrade, all native gems need to be upgraded. So in order to survive the upgrade, simply run:
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/discourse/
 $ rm -rf vendor/bundle/ruby
 $ gem pristine --all
 $ sudo -u discourse -H bundle install --deployment --without test --without development
-```
+{{</ highlight >}}
 
 
-### Upgrading Discourse ###
+## Upgrading Discourse
 
 __1.__ First kill Sidekiq and Thin servers:
 
-```
+{{< highlight sh >}}
 $ ps | grep discourse | grep -v grep | awk '{print $1}' | xargs kill -9
-```
+{{</ highlight >}}
 
 __2.__ Then, take a backup from all your Discourse databases. In my case:
 
-```
+{{< highlight sh >}}
 $ mkdir -p ~/discourse-backups/
-$ sudo -u pgsql pg_dump discourse_babaei_net_production > ~/discourse-backups/discourse_babaei_net_production.sql
-$ sudo -u pgsql pg_dump discourse_fa_babaei_net_production > ~/discourse-backups/discourse_fa_babaei_net_production.sql
-$ sudo -u pgsql pg_dump discourse_production > ~/discourse-backups/discourse_production.sql
-```
+$ sudo -u pgsql pg_dump discourse_babaei_net_production \
+    > ~/discourse-backups/discourse_babaei_net_production.sql
+$ sudo -u pgsql pg_dump discourse_fa_babaei_net_production \
+    > ~/discourse-backups/discourse_fa_babaei_net_production.sql
+$ sudo -u pgsql pg_dump discourse_production \
+    > ~/discourse-backups/discourse_production.sql
+{{</ highlight >}}
 
 __3.__ Update the local Discourse git repository with the latest changes from its official GitHub repository:
 
-```
+{{< highlight sh >}}
 $ cd /home/discourse/discourse/
 $ sudo -u discourse -g discourse -H git pull
-```
+{{</ highlight >}}
 
 __4.__ Now, let's switch to desired version of Discourse:
 
-```
+{{< highlight sh >}}
 $ sudo -u discourse -g discourse -H git status
 HEAD detached at v1.5.1
 nothing to commit, working tree clean
@@ -1127,68 +1131,73 @@ $ sudo -u discourse -g discourse -H git reset --hard
 HEAD is now at 47e9321 Version bump to v1.5.1
 
 $ sudo -u discourse -g discourse -H git tag -l
-```
+{{</ highlight >}}
 
 The last command outputs a lengthy list of git tags as we saw earlier. Choose the latest stable tag or the one you desire and switch to the new tag (see the following note):
 
-```
+{{< highlight sh >}}
 $ sudo -u discourse -g discourse -H git checkout tags/v1.5.4
 Previous HEAD position was 47e9321... Version bump to v1.5.1
 HEAD is now at c8081af... Version bump to v1.5.4
-```
+{{</ highlight >}}
 
 __Note__: At the time of writing this note, the latest stable tag is <code>v1.6.4</code>. Bear in mind that the minimum required version of Ruby for this version is <code>2.3.x</code>. On the other hand, FreeBSD uses Ruby <code>2.2.x</code> by default. So, either stick to <code>1.5.x</code> or install a Ruby version manager to manage several Ruby binaries without dependency breaks. For the sake of simplicity, I'm not going to cover Ruby version managers in this section. Instead, a dedicated section on Ruby version managers can be found at the of the article.
 
 __5.__ Install the new gems:
 
-```
-$ sudo -u discourse -g discourse -H bundle install --deployment --without test --without development
-```
+{{< highlight sh >}}
+$ sudo -u discourse -g discourse -H bundle install \
+    --deployment --without test --without development
+{{</ highlight >}}
 
 __Note__: Installing or upgrading to <code>1.5.x</code> will fail at this stage on FreeBSD <code>11.0-RELEASE</code> due to build errors from libv8. What worked for me is this:
 
-```
+{{< highlight sh >}}
 $ pkg install v8
 $ sudo -u discourse -g discourse -H bundle config build.libv8 --with-system-v8
-$ sudo -u discourse -g discourse -H bundle install --deployment --without test --without development
-```
+$ sudo -u discourse -g discourse -H bundle install \
+    --deployment --without test --without development
+{{</ highlight >}}
 
 After that proceed to the next step.
 
 __6.__ It's time to migrate the database. For a single instant installation of Discourse:
 
-```
-$ sudo -u discourse -g discourse -H RAILS_ENV='production' bundle exec rake db:migrate
-```
+{{< highlight sh >}}
+$ sudo -u discourse -g discourse -H RAILS_ENV='production' \
+    bundle exec rake db:migrate
+{{</ highlight >}}
 
 If you are running a multi-site instance, run the following command instead of the previous one:
 
-```
-$ sudo -u discourse -g discourse -H RAILS_ENV='production' bundle exec rake multisite:migrate
-```
+{{< highlight sh >}}
+$ sudo -u discourse -g discourse -H RAILS_ENV='production' \
+    bundle exec rake multisite:migrate
+{{</ highlight >}}
 
 __7.__ Precompile the new assets:
 
-```
-$ sudo -u discourse -g discourse -H RAILS_ENV=production bundle exec rake assets:precompile
-```
+{{< highlight sh >}}
+$ sudo -u discourse -g discourse -H RAILS_ENV=production \
+    bundle exec rake assets:precompile
+{{</ highlight >}}
 
 __8.__ Finally run the script we wrote earlier to start Discourse:
 
-```
+{{< highlight sh >}}
 $  sh /home/discourse/cron/server.sh &
-```
+{{</ highlight >}}
 
 __9.__ Done! Check if everything is working fine through your browser.
 
 
-#### Things went south? ####
+### Things went south?
 
 Do not worry!
 
 __1.__ Restore the database (this can be safely skipped for patch versions, e.g. reverting 1.5.4 to 1.5.1, as they usually won't introduce any changes to the database structure, unless your actual data is corrupted):
 
-```
+{{< highlight sql >}}
 $ sudo -u pgsql psql -d template1
 template1=# DROP DATABASE discourse_production;
 template1=# DROP DATABASE discourse_babaei_net_production;
@@ -1207,33 +1216,36 @@ discourse_fa_babaei_net_production=# CREATE EXTENSION hstore;
 discourse_fa_babaei_net_production=# CREATE EXTENSION pg_trgm;
 discourse_fa_babaei_net_production=# \q
 
-$ sudo -u pgsql psql discourse_babaei_net_production < ~/discourse-backups/discourse_babaei_net_production.sql
-$ sudo -u pgsql psql discourse_fa_babaei_net_production < ~/discourse-backups/discourse_fa_babaei_net_production.sql
-$ sudo -u pgsql psql discourse_production < ~/discourse-backups/discourse_production.sql
-```
+$ sudo -u pgsql psql discourse_babaei_net_production \
+    < ~/discourse-backups/discourse_babaei_net_production.sql
+$ sudo -u pgsql psql discourse_fa_babaei_net_production \
+    < ~/discourse-backups/discourse_fa_babaei_net_production.sql
+$ sudo -u pgsql psql discourse_production \
+    < ~/discourse-backups/discourse_production.sql
+{{</ highlight >}}
 
 __2.__ Revert back to the old version:
 
-```
+{{< highlight sh >}}
 $ sudo -u discourse -g discourse -H git checkout tags/v1.5.1
-```
+{{</ highlight >}}
 
 __3.__ Run the script we wrote earlier to start Discourse:
 
-```
+{{< highlight sh >}}
 $ sh /home/discourse/cron/server.sh &
-```
+{{</ highlight >}}
 
 __4.__ Done! Check if everything is working fine through your browser.
 
 
-### Ruby Version Manager ###
+## Ruby Version Manager
 
 Ruby version managers are designed to manage multiple installations of Ruby at the same time on the same system. There are quite  [a few Ruby version managers](https://www.ruby-toolbox.com/categories/ruby_version_management) but the most notable ones are [RVM](https://rvm.io/), [rbenv](https://github.com/rbenv/rbenv) and [chruby](https://github.com/postmodern/chruby).
 
 Instead of RVM or rbenv I'll go with chruby (there are plenty of great tutorials on the topic out there. Just search for "FreeBSD RVM", "FreeBSD rbenv" or whatever):
 
-```
+{{< highlight sh >}}
 $ cd /usr/ports/devel/ruby-build/
 [ ] RBENV   Install rbenv for installation support
 $ make config-recursive
@@ -1242,38 +1254,38 @@ $ make install clean
 $ cd /usr/ports/devel/chruby/
 $ make config-recursive
 $ make install clean
-```
+{{</ highlight >}}
 
 Or if you are using pkgng:
 
-```
+{{< highlight sh >}}
 $ pkg install ruby-build chruby
-```
+{{</ highlight >}}
 
 Check whether you have Bash installed or not since it's required by chruby (chruby installation must automatically pulls in <code>shells/bash</code>):
 
-```
+{{< highlight sh >}}
 $ pkg info bash
-```
+{{</ highlight >}}
 
 It is recommended to run Ruby version managers as users instead of a system-wide configuration. So:
 
-```
+{{< highlight sh >}}
 $ sudo -u discourse -g discourse -H bash
 $ export PS1="(DISCOURSE) $PS1"
-```
+{{</ highlight >}}
 
 This will drop us in a bash command prompt as <code>discourse</code> user. Now, we have to import chruby environment variables to our shell by running:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ source /usr/local/share/chruby/chruby.sh
-```
+{{</ highlight >}}
 
 or (yes that is a dot and a space):
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ . /usr/local/share/chruby/chruby.sh
-```
+{{</ highlight >}}
 
 To make this permanent, add the following lines to <code>~/.bashrc</code> (equals to <code>/home/discourse/.bashrc</code> in our setup):
 
@@ -1284,7 +1296,7 @@ source /usr/local/share/chruby/chruby.sh
 
 OK, let's find out which version of Ruby is the latest stable <code>2.3.x</code>:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ ruby-build --definitions | grep -w '2.3'
   2.2.3
   2.3.0-dev
@@ -1294,17 +1306,18 @@ OK, let's find out which version of Ruby is the latest stable <code>2.3.x</code>
   2.3.1
   rbx-2.2.3
   rbx-2.3.0
-```
+{{</ highlight >}}
 
 At the moment <code>2.3.1</code> is the latest stable one. So, to install Ruby <code>2.3.1</code> (this takes some time):
 
-```
-(DISCOURSE) $ CC=clang RUBY_CONFIGURE_OPTS=--with-opt-dir=/usr/local ruby-build 2.3.1 ~/.rubies/ruby-2.3.1
+{{< highlight sh >}}
+(DISCOURSE) $ CC=clang RUBY_CONFIGURE_OPTS=--with-opt-dir=/usr/local \
+    ruby-build 2.3.1 ~/.rubies/ruby-2.3.1
 Downloading ruby-2.3.1.tar.bz2...
 -> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
 Installing ruby-2.3.1...
 Installed ruby-2.3.1 to /home/discourse/.rubies/ruby-2.3.1
-```
+{{</ highlight >}}
 
 __Note 1:__ I had <code>lang/gcc-4.8.5_2</code> installed on my system which caused a lot of trouble for me. Remove it before you install the new Ruby, or bundler spits out these errors while building native extensions such as libv8:
 
@@ -1325,32 +1338,32 @@ __Note 2:__ Looks like the new version of Discourse (<code>1.6.4</code>) pulls i
 
 After successful installation of the new Ruby, let's see if it gets picked up by chruby. After installing new Rubies, you must restart the shell before chruby can recognize them:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ exit
 $ sudo -u discourse -g discourse -H bash
 $ export PS1="(DISCOURSE) $PS1"
 (DISCOURSE) $ chruby
    ruby-2.3.1
-```
+{{</ highlight >}}
 
 Time to choose the new Ruby:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ chruby ruby-2.3.1
 (DISCOURSE) $ ruby --version
 ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-freebsd11.0]
-```
+{{</ highlight >}}
 
 To set default Ruby permanently, put the following line inside <code>~/.bashrc</code>:
 
-```
+{{< highlight sh >}}
 # Default Ruby Version
 chruby ruby-2.3.1
-```
+{{</ highlight >}}
 
 So, at the end your <code>~/.bashrc</code> must look like this (the order is important):
 
-{{< codeblock lang="bash" title="~/.bashrc" >}}
+{{< codeblock lang="bash" title="~/.bashrc" line_numbers="true" >}}
 # chruby
 source /usr/local/share/chruby/chruby.sh
 
@@ -1360,13 +1373,13 @@ chruby ruby-2.3.1
 
 The last step includes installing bundler inside the new environment for Discourse installation and update:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ gem install bundler
-```
+{{</ highlight >}}
 
 Before proceeding to Discourse installation or upgrade, I highly recommend to verify the new Ruby environment:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ echo $PATH
 /home/discourse/.gem/ruby/2.3.1/bin:/home/discourse/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/bin:/home/discourse/.rubies/ruby-2.3.1/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/root/bin
 
@@ -1389,13 +1402,13 @@ Environment
     GEM_HOME  /home/discourse/.gem/ruby/2.3.1
     GEM_PATH  /home/discourse/.gem/ruby/2.3.1:/home/discourse/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0
     Git       2.9.2
-```
+{{</ highlight >}}
 
 It is very important that the new Ruby path appears before any other path in the <code>$PATH</code> variable. And, for <code>ruby</code>, <code>gem</code> and <code>bundler</code> executables, the path must refer to the corresponding version inside <code>/home/discourse/</code>.
 
 As you can see my Ruby version is wrong. For me the easy fix was to reboot the system. After that eveything was fine:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ cd ~/discourse
 (DISCOURSE) $ bundle env
 Environment
@@ -1406,19 +1419,22 @@ Environment
     GEM_HOME  /home/discourse/.gem/ruby/2.3.1
     GEM_PATH  /home/discourse/.gem/ruby/2.3.1:/home/discourse/.rubies/ruby-2.3.1/lib/ruby/gems/2.3.0
     Git       2.9.2
-```
+{{</ highlight >}}
 
 OK, let's try the upgrade process to <code>v1.6.4</code> at once (note that we got rid of <code>sudo</code> since we are already running <code>bash</code> under <code>discourse</code> user, hence, any process that starts from this command line will run as user <code>discourse</code>):
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ ps | grep discourse | grep -v grep | awk '{print $1}' | xargs kill -9
 (DISCOURSE) $ ps | grep sidekiq | grep -v grep | awk '{print $1}' | xargs kill -9
 (DISCOURSE) $ ps | grep thin | grep -v grep | awk '{print $1}' | xargs kill -9
 
 (DISCOURSE) $ mkdir -p ~/db-backups/
-(DISCOURSE) $ sudo -u pgsql pg_dump discourse_babaei_net_production > ~/db-backups/discourse_babaei_net_production.sql
-(DISCOURSE) $ sudo -u pgsql pg_dump discourse_fa_babaei_net_production > ~/db-backups/discourse_fa_babaei_net_production.sql
-(DISCOURSE) $ sudo -u pgsql pg_dump discourse_production > ~/db-backups/discourse_production.sql
+(DISCOURSE) $ sudo -u pgsql pg_dump discourse_babaei_net_production \
+    > ~/db-backups/discourse_babaei_net_production.sql
+(DISCOURSE) $ sudo -u pgsql pg_dump discourse_fa_babaei_net_production \
+    > ~/db-backups/discourse_fa_babaei_net_production.sql
+(DISCOURSE) $ sudo -u pgsql pg_dump discourse_production \
+    > ~/db-backups/discourse_production.sql
 
 (DISCOURSE) $ cd ~/discourse/
 (DISCOURSE) $ git pull
@@ -1445,11 +1461,11 @@ HEAD is now at 4673295... Version bump to v1.6.4
 (DISCOURSE) $ RAILS_ENV='production' bundle exec rake multisite:migrate
 
 (DISCOURSE) $ RAILS_ENV=production bundle exec rake assets:precompile
-```
+{{</ highlight >}}
 
 Modify the shebang line of <code>/home/discourse/cron/server.sh</code> script and change it from <code>#!/bin/sh</code> to <code>#!/usr/bin/env bash</code>:
 
-{{< codeblock lang="bash" title="/home/discourse/cron/server.sh" >}}
+{{< codeblock lang="bash" title="/home/discourse/cron/server.sh" line_numbers="true" >}}
 #!/usr/bin/env bash
 
 source /usr/local/share/chruby/chruby.sh
@@ -1464,15 +1480,15 @@ RAILS_ENV=production RUBY_GC_MALLOC_LIMIT=90000000 nohup \
 
 Run the discourse server and check your discourse installation to see if everything works fine:
 
-```
+{{< highlight sh >}}
 (DISCOURSE) $ /home/discourse/cron/server.sh &
-```
+{{</ highlight >}}
 
 So far, so good. Now we have to remove the cron job we previously set up for <code>root</code> user:
 
-```
+{{< highlight sh >}}
 $ crontab -e -u root
-```
+{{</ highlight >}}
 
 Remove these lines:
 
@@ -1484,19 +1500,19 @@ Remove these lines:
 
 Then save and exit. Enter the following command to see if it has been removed:
 
-```
+{{< highlight sh >}}
 $ crontab -l
-```
+{{</ highlight >}}
 
 Now, we have to set up the cron job for <code>discourse</code> user:
 
-```
+{{< highlight sh >}}
 $ crontab -e -u discourse
-```
+{{</ highlight >}}
 
 Your list of cron jobs must be empty. Add the following lines ([read more on cron jobs](/blog/the-proper-way-of-adding-a-cron-job/)):
 
-{{< codeblock lang="plaintext" title="crontab -e -u discourse" >}}
+{{< codeblock lang="sh" title="crontab -e -u discourse" line_numbers="true" >}}
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
@@ -1508,9 +1524,8 @@ MAILTO=""
 
 Now to see whether your cron job has been added successfully or not, enter the following command:
 
-```
+{{< highlight sh >}}
 $ crontab -l -u discourse
-```
+{{</ highlight >}}
 
 Reboot your system to see if it start ups automatically.
-

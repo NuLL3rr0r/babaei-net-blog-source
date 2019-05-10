@@ -94,7 +94,7 @@ USB\VID_0BB4&PID_0EDD&MI_01
 
 _4_. In this step make a copy of your Google USB Driver that you've just downloaded or took from your Android SDK folder. There must be a file named _android_winusb.inf_ inside that folder. Open that up inside your favorite text editor. It utilizes [Windows INF format](https://en.wikipedia.org/wiki/INF_file). An untouched copy of that file looks like this:
 
-{{< codeblock lang="inf" title="android_winusb.inf" >}}
+{{< codeblock lang="inf" title="android_winusb.inf" line_numbers="true" >}}
 ;
 ; Android WinUsb driver installation.
 ;
@@ -268,7 +268,7 @@ ClassName                   = "Android Device"
 
 _5_. Look for _&#91;Google.NTx86&#93;_ and _&#91;Google.NTamd64&#93;_ sections inside the file. Remember the _Hardware Ids_ that we have just copied to clipboard? We have to add them to the end of these sections to be able to install the driver on both x86 and x64 versions of Windows. But the point is, you cannot simply paste them here. For each line of hardware ID we've got, we have to add _'%CompositeAdbInterface%     = USB_Install, '_ at the beginning of them. Optionally you can add comments starting with a semicolon _';'_ character for each device. OK, if this is all confusing, considering my previously provided list of _Hardware Ids_, the modified file looks like this (I'm sure it's self-explanatory if you look for my comments and compare them to both the original file and the list of _Hardware Ids_):
 
-{{< codeblock lang="inf" title="android_winusb.inf" >}}
+{{< codeblock lang="inf" title="android_winusb.inf" line_numbers="true" >}}
 ;
 ; Android WinUsb driver installation.
 ;

@@ -8,22 +8,22 @@ aliases = [ "/blog/2015/09/09/delete-a-file-with-invalid-or-bad-characters-in-fi
 
 There once was a time when I did the following inside my home directory:
 
-```
+{{< highlight sh >}}
 $ wget "some-url" -O "output-file.mp4"
-```
+{{</ highlight >}}
 
 I clearly remember copying the output file name from a web page. Unfortunately, the copied text has a new line at the beginning of it and I didn't notice that. That's because the <code>newline</code> or <code>carriage return</code> characters are control characters and have no visual representation. Anyway, when I listed files inside my home directory I noticed a strange file name on my list:
 
-```
+{{< highlight sh >}}
 $ ls
 ?output-file.mp4
-```
+{{</ highlight >}}
 
 <!--more-->
 
 I tried the following to remove the file without any success:
 
-```
+{{< highlight sh >}}
 $ rm "?output-file.mp4"
 rm: ?output-file.mp4: No such file or directory
 
@@ -35,27 +35,27 @@ rm: ./?output-file.mp4: No such file or directory
 
 $ rm *.mp4
 rm: *.mp4: No such file or directory
-```
+{{</ highlight >}}
 
 When I tried auto-completion by pressing <code>Tab</code> key a few times on <code>csh</code> it showed the file name as:
 
-```
+{{< highlight sh >}}
 output-file.mp4
-```
+{{</ highlight >}}
 
 On the other hand <code>bash</code> showed the following name:
 
-```
+{{< highlight sh >}}
     ^Joutput-file.mp4
-```
+{{</ highlight >}}
 
 I tried the above <code>rm</code> command with <code>^J</code> instead of <code>?</code> with no luck.
 
 In the next step, I tried:
 
-```
+{{< highlight sh >}}
 $ man rm
-```
+{{</ highlight >}}
 
 Then I came across <code>-i</code> flag inside <code>rm</code> man page:
 
@@ -68,13 +68,13 @@ Then I came across <code>-i</code> flag inside <code>rm</code> man page:
 
 So, I gave <code>rm -i</code> a go after changing to my home directory:
 
-```
+{{< highlight sh >}}
 $ cd ~
 $ rm -i *
 remove
 output-file.mp4 ? y
 remove some-other-file ? ^C
-```
+{{</ highlight >}}
 
 As it can be seen in the output, <code>rm</code> now considers the file and even prints the newline character in the output. So I entered <code>y</code> and it deleted the file with bad name. For, the other files on the list I simply pressed <code>Ctrl+C</code> to exit the list completely (Note: if Ctrl+C won't work for you, try <code>Ctrl+Z</code> or <code>Ctrl+D</code>).
 

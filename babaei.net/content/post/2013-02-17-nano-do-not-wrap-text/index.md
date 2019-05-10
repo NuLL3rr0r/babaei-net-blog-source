@@ -12,27 +12,20 @@ Hopefully, there are two simple ways to overcome this. By using either __-w__ co
 
 **1.** The temporary solution by using __-w__ command-line argument, which should be used each time you run nano:
 
-```
+{{< highlight sh >}}
 $ nano -w /path/to/file
-```
+{{</ highlight >}}
 
 **2.** The permanent solution by setting off automatic text wrapping using the configuration command __set nowrap__, in the __~/.nanorc__ file:
 
-{{< codeblock title="~/.nanorc" >}}
+{{< codeblock title="~/.nanorc" line_numbers="true" >}}
 set nowrap
 {{< /codeblock >}}
 
 Note: If the file doesn't exist, you should create it first:
 
-```
+{{< highlight sh >}}
 $ touch ~/.nanorc
-```
+{{</ highlight >}}
 
 <!--more-->
-
-<br/>
-
-### Related Articles ###
-
-[nano, Syntax Highlighting](/blog/nano-syntax-highlighting/)  
-[Colors Talk: A Colorful Terminal / Console](/blog/colors-talk-a-colorful-terminal-console/)

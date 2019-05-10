@@ -3,14 +3,13 @@ title = "OmniBackup: One Script to back them all up"
 slug = "omnibackup-one-script-to-back-them-all-up"
 date = 2015-08-08T03:23:23+04:30
 tags = [ "Backup", "FLOSS", "FOSS", "FreeBSD", "GNU", "Linux", "OmniBackup", "Unix" ]
+toc = "true"
 aliases = [ "/blog/2015/08/08/omnibackup-one-script-to-back-them-all-up/" ]
 +++
 
 __Update 1 [2016/09/23]:__ _OmniBackup now officially supports GNU/Linux. [More info](https://github.com/NuLL3rr0r/omnibackup#Requirements)..._
 
-__Update 2 [2016/09/23]:__ _[Official documentation](https://github.com/NuLL3rr0r/omnibackup) moved to GitHub._
-
-<br />
+__Update 2 [2016/09/23]:__ _[Official documentation](https://github.com/NuLL3rr0r/omnibackup) moved to GitHub which means this guide won't be maintained anymore and maybe out of date or inaccurate._
 
 A week ago was _[System Administrator Appreciation Day](http://sysadminday.com/)_. It is celebrated on the last _Friday_ in _July_ and it has been celebrated since _July 28, 2000_. But, system administrators know not all days are like that day. They face many hard times and struggles during their careers and the worse of them all is either a [security breech](/blog/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/) or data loss.
 
@@ -72,47 +71,7 @@ The rest of this post serves as a comprehensive guide on how to setup OmniBackup
 
 <!--more-->
 
-<br />
-
-### Contents ###
-
-* [Message Types and Their Meanings](#MessageTypes)  
-* [Requirements](#Requirements)  
-* [Installation](#Installation)  
-* [Configuring Temporary Directory](#ConfigTempDirectory)  
-* [Configuring Compression](#ConfigCompression)  
-* [Configuring Security](#ConfigSecurity)  
-* [Configuring Reports](#ConfigReports)  
-* [Configuring Remote Backup Servers](#ConfigRemoteBackupServers)  
-* [Configuring Backup Tasks](#ConfigBackupTasks)  
-* [Configuring Backup Priority and Order](#ConfigBackupPriorityOrder)  
-* [Configuring OpenLDAP Backups](#ConfigOpenLdapBackups)  
-* [Configuring Database Backups](#ConfigDatabaseBackups)  
-* [Configuring PostgreSQL Database Backups](#ConfigPostgreSqlBackups)  
-* [Configuring MariaDB and MySQL Databases Backups](#ConfigMariaDbMySqlBackups)  
-* [Configuring Filesystem Backups](#ConfigFilesystemBackups)  
-* [Configuring Other Backups](#ConfigMiscBackups)  
-* [3rd-party Commands status codes](#Config3rdPartyCommandsStatusCode)  
-* [Generating RSA Keys](#GeneratingRSAKeys)  
-* [Password-less SSH Login](#PasswordlessSshLogin)  
-* [SMTP Relay for Hosts with Private IPs](#SmtpRelay)  
-* [First Run](#FirstRun)  
-* [Crontab](#Crontab)  
-* [Restore](#Restore)  
-* [Restoring Encrypted Archives](#RestoringEncryptedArchives)  
-* [Restoring Archives](#RestoringArchives)  
-* [Restoring OpenLDAP Backups](#RestoringOpenLDAP)  
-* [Restoring PostgreSQL Backups](#RestoringPostgreSQL)  
-* [Restoring MariaDB or MySQL Backups](#RestoringMariaDbMySQL)  
-* [Staying Away From Disaster](#StayingAwayFromDisaster)  
-* [Source Code](#SourceCode)  
-* [Example Report](#ExampleReport)  
-
-
-<br />
-<a name="MessageTypes"></a>
-
-### Message Types and Their Meanings ###
+## Message Types and Their Meanings
 
 Before we go any further, you may want to know that other than regular logs there are different kinds of messages in OmniBackup which may appear on screen, system logs or mail reports:
 
@@ -125,10 +84,7 @@ Before we go any further, you may want to know that other than regular logs ther
 * <code>WARNING</code> indicates that a dangerous situation might happen or already happened which is not desired.
 
 
-<br />
-<a name="Requirements"></a>
-
-### Requirements ###
+## Requirements
 
 For now OmniBackup officially only supports [FreeBSD](https://www.freebsd.org/) since all my servers and desktop instances at both home and work are running FreeBSD. This does not mean official support for [GNU](http://www.gnu.org/)/[Linux](https://www.kernel.org/) won't arrive any time soon in the near future. In fact I used to be a heavy [Funtoo](http://www.funtoo.org/) user and even before that [Gentoo](https://www.gentoo.org/). These days I only have a [Slackware](http://www.slackware.com/) instance which I use for cross-compiling C++ libraries to [Android](https://www.android.com/). So, it's just a matter of time before official support arrives. In my estimation, the current code should work out of the box inside any GNU/Linux distribution since I tried my best to write it in a platform-independent manner by reading pile of man pages. I assume if it works on FreeBSD it should also work on other BSDs and GNU/Linuxes. But I'm only 99.99% sure and when it comes to programming computers 0.01% human error is really too much and risky. So, before I announce GNU/Linux support official, I must test it at least once. But until that moment comes, I really appreciate feedbacks and possible patches or pull-requests.
 
@@ -188,29 +144,25 @@ I should add, not all of the above dependencies are required in order for OmniBa
 Note that from the above list <code>flock</code> and [jq](http://stedolan.github.io/jq/) are only mandatory requirements unless based on OmniBackup configurations other dependencies get pulled in. The best way to determine dependencies is to ignore the list of dependencies and first configure your OmniBackup instance. When your done with that, run OmniBackup manually for the first time. If it won't complain about any dependency then you are good to go. However, if it does, then you should resolve the dependencies one by one until you are good to go.
 
 
-<br />
-<a name="Installation"></a>
-
-### Installation ###
+## Installation
 
 Installing OmniBackup is really easy. It consists of two files: a huge script file -- a little less than <code>105 KB</code> -- named <code>backup.sh</code> which looks for the second file at runtime named <code>config.json</code>. So, let's say I want to install OmniBackup inside <code>/usr/local/omnibackup</code>. In addition to that, I assume from now on you do everything as <code>root</code> user:
 
-    $ cd /usr/local/
-    $ git clone https://gitlab.com/NuLL3rr0r/omnibackup.git
-    $ cd omnibackup
-    $ cp config.json.sample config.json
-    $ chmod u+rx,go-r,a-w backup.sh
-    $ chmod u+rw,go-rw,a-x config.json
+{{< highlight sh >}}
+$ cd /usr/local/
+$ git clone https://gitlab.com/NuLL3rr0r/omnibackup.git
+$ cd omnibackup
+$ cp config.json.sample config.json
+$ chmod u+rx,go-r,a-w backup.sh
+$ chmod u+rw,go-rw,a-x config.json
+{{</ highlight >}}
 
 All we did was cloning the code from [GitLab](https://gitlab.com/), copying over the sample configuration file as a template and assigning the right permissions for both the script and configuration file. I prefer to make this files <code>root</code> accessible only, so no one else can read our configuration or modify it or even triggering the backup process.
 
 You should avoid running the backup script in this step. As I mentioned we just copied a sample file to get you up and running. So, you should only run it after the final configurations are done, since it pickups possible dependencies from the configuration file and it may baffles you with the wrong dependencies errors. So, for now open-up the configuration file in your favorite editor and take a look.
 
 
-<br />
-<a name="ConfigTempDirectory"></a>
-
-### Configuring Temporary Directory ###
+## Configuring Temporary Directory
 
 The first option inside <code>config.json</code> file is <code>.temp_dir</code> which specifes the temporary or working directory for OmniBackup. <code>/var/tmp</code> seems to be a reasonable place. Feel free to adopt it according to your needs. But, if you are going to change it to a path other than <code>/var/tmp/</code> or <code>/tmp/</code> choose an empty one. Note that each time you run OmniBackup it creates a log file inside <code>/var/tmp/</code> e.g. <code>/var/tmp/backup.2015-07-31.58471.log</code>. You cannot change the path for the log files due to technical limitations. Keep in mind that OmniBackup never removes its log files due to their small footprints. They may come handy when reports won't deliver to your email.
 
@@ -221,10 +173,7 @@ The first option inside <code>config.json</code> file is <code>.temp_dir</code> 
 {{< /codeblock >}}
 
 
-<br />
-<a name="ConfigCompression"></a>
-
-### Configuring Compression ###
+## Configuring Compression
 
 You've been given three options for compression:
 
@@ -246,10 +195,7 @@ You've been given three options for compression:
 <code>.compression.preserve_permissions</code> is self-explanatory, it preserve the archived files permissions inside the final archive file.
 
 
-<br />
-<a name="ConfigSecurity"></a>
-
-### Configuring Security ###
+## Configuring Security
 
 Security module provides many features that you may not notice at the first sight:
 
@@ -305,10 +251,7 @@ Please be wary, this module heavily relies on [OpenSSL](https://www.openssl.org/
 <code>.security.encryption.private_key</code> is a private key in PEM format used to sign the encrypted archive file so that anyone knows the file originated from you. Note it only accepts absolute path and relative paths starting from home folder (tilde <code>~</code>). Do not start paths relative to OmniBackup directory. Also, keep in mind that avoid space and exotic characters inside path. It's both sane and safe to only include <code>A-Z</code>, <code>a-z</code> and underscore <code>_</code> in path because I cannot guarantee its safety. We'll discuss [RSA key generation](#GeneratingRSAKeys) later on.
 
 
-<br />
-<a name="ConfigReports"></a>
-
-### Configuring Reports ###
+## Configuring Reports
 
 Reports module is here to allow you become aware of all the details of the events that happened during the backup process, through email:
 
@@ -356,10 +299,8 @@ Reports module is here to allow you become aware of all the details of the event
 
 <code>.reports.support_info</code> allows adding a customized support message to the end of the reports.
 
-<br />
-<a name="ConfigRemoteBackupServers"></a>
 
-### Configuring Remote Backup Servers ###
+## Configuring Remote Backup Servers
 
 Using the <code>.remote</code> section of the configuration file, you can configure as many as remote backup servers that you wish. If you plan to keep backup files locally, this section provides two possible ways to do that which we'll discuss later. Note that you also have to setup [password-less SSH login](#PasswordlessSshLogin) regardless of choosing a remote server or the current host as a backup server.
 
@@ -414,10 +355,7 @@ Using the <code>.remote</code> section of the configuration file, you can config
 * <code>public_key</code> is a public key in PEM format for encrypting passphrases. As you recall these passphrases are required to decrypt the archive files. If you do not specify a public key for a backup server, you do not have access to encrypted passphrases on that server. It is useful in case that you do not wish to keep the passphrases in the same place as your encrypted archive files, even the encrypted ones. I must warn and assure you, if you are using random passphrases and and you did not provide any public key here, your backups are good for nothing unless you chose to attach passphrases to at least one email in the reports section. In addition to everything, it's possible to only provide one pair of RSA keys instead of one private key and multiple public keys if you are the sole receiver of the backup files on those multiple servers. I'll describe [RSA key generation](#GeneratingRSAKeys) later.
 
 
-<br />
-<a name="ConfigBackupTasks"></a>
-
-### Configuring Backup Tasks ###
+## Configuring Backup Tasks
 
 <code>.backup</code> is the actual part of the configuration which determines what has to be backed up. I'll break it down into a few sections for the sake of simplicity.
 
@@ -437,10 +375,7 @@ Using the <code>.remote</code> section of the configuration file, you can config
 <code>2015-07-31</code>, <code>blog.babaei.net</code> and <code>openldap-babaei-net</code> are <code>{DATE}</code>, <code>{HOST_NAME}</code> and <code>{TAG}</code> in the archive file name, respectively.
 
 
-<br />
-<a name="ConfigBackupPriorityOrder"></a>
-
-### Configuring Backup Priority and Order ###
+## Configuring Backup Priority and Order
 
 One of the most important steps is to configure what should be backed up, in which order:
 
@@ -479,10 +414,7 @@ Let's consider an example if I need to only backup first database and then files
 {{< /codeblock >}}
 
 
-<br />
-<a name="ConfigOpenLdapBackups"></a>
-
-### Configuring OpenLDAP Backups ###
+## Configuring OpenLDAP Backups
 
 This is all we need to backup OpenLDAP objects and directories using <code>slapcat</code>:
 
@@ -510,10 +442,7 @@ This is all we need to backup OpenLDAP objects and directories using <code>slapc
 <code>.backup.openldap.flags</code> is used to pass arguments directly to <code>slapcat</code>. If you are OK with defaults or do not have any idea what is that, just leave it as it is.
 
 
-<br />
-<a name="ConfigDatabaseBackups"></a>
-
-### Configuring Database Backups ###
+## Configuring Database Backups
 
 Like the general backup configuration, database section also needs specifying the types of backup jobs and their order of running:
 
@@ -538,10 +467,7 @@ OmniBackup officially only recognizes two types of database to backup. PostgreSQ
 <code>.backup.database.priority_order</code> everything for <code>.backup.priority_order</code> also applies here.
 
 
-<br />
-<a name="ConfigPostgreSqlBackups"></a>
-
-### Configuring PostgreSQL Database Backups ###
+## Configuring PostgreSQL Database Backups
 
 Configuring PostgreSQL backups consists of two easy steps: first providing a user name with an optional group name and finally a list of databases to backup:
 
@@ -597,15 +523,15 @@ Configuring PostgreSQL backups consists of two easy steps: first providing a use
 
 <code>backup.database.postgres.user</code> is a system user's name which runs our PostgreSQL service. For example, on my FreeBSD system it is called <code>pgsql</code>. This user should be created by Ports, pkgng installation of PostgreSQL or whatever package manager your distro uses. It has different names on different platforms. You can figure it out by investigating <code>/etc/passwd</code> or <code>/etc/master.passwd</code>:
 
-```
+{{< highlight sh >}}
 $ cat /etc/passwd
-```
+{{</ highlight >}}
 
 or
 
-```
+{{< highlight sh >}}
 $ cat /etc/master.passwd
-```
+{{</ highlight >}}
 
 <code>backup.database.postgres.group</code> is a mandatory system group's name which runs our PostgreSQL service. This one is completely optional. You can figure this one out by investigating <code>/etc/group</code>.
 
@@ -618,10 +544,7 @@ $ cat /etc/master.passwd
 <code>backup.database.postgres.databases.comment</code> is used inside logs, syslogs and reports to refer to that database instead of name which is not always clear.
 
 
-<br />
-<a name="ConfigMariaDbMySqlBackups"></a>
-
-### Configuring MariaDB and MySQL Databases Backups ###
+## Configuring MariaDB and MySQL Databases Backups
 
 The same as PostgreSQL goes for configuring MariaDB or MySQL databases:
 
@@ -676,10 +599,7 @@ The same as PostgreSQL goes for configuring MariaDB or MySQL databases:
 <code>backup.database.mysql.databases.comment</code> serves the exact same purpose as <code>backup.database.postgres.databases.comment</code>.
 
 
-<br />
-<a name="ConfigFilesystemBackups"></a>
-
-### Configuring Filesystem Backups ###
+## Configuring Filesystem Backups
 
 Configuring filesystem backups are much easier since it's just a list of paths (files or directories) to backup:
 
@@ -751,10 +671,7 @@ Configuring filesystem backups are much easier since it's just a list of paths (
 <code>backup.filesystem.comment</code> serves the exact same purpose as <code>backup.database.postgres.databases.comment</code>.
 
 
-<br />
-<a name="ConfigMiscBackups"></a>
-
-### Configuring Other Backups ###
+## Configuring Other Backups
 
 Misc section allows plugging extra backup scripts to OmniBackup and capture their output as an archive. This one is also a JSON array:
 
@@ -793,10 +710,7 @@ Misc section allows plugging extra backup scripts to OmniBackup and capture thei
 <code>backup.misc.comment</code> serves the exact same purpose as <code>backup.database.postgres.databases.comment</code>.
 
 
-<br />
-<a name="Config3rdPartyCommandsStatusCode"></a>
-
-### 3rd-party Commands Status Codes ###
+## 3rd-party Commands Status Codes
 
 <code>.command</code> is a vital part of the configuration file and it should be present in order for OmniBackup to run properly. If its function is ambiguous to you, just leave it alone in the configuration file. That's why I put it at the end of the file, although the order does not matter in the configuration file. For two reasons OmniBackup needs this part:
 
@@ -1185,34 +1099,28 @@ For example look at the return codes for <code>jq</code>, <code>scp</code> and <
 {{< /codeblock >}}
 
 
-<br />
-<a name="GeneratingRSAKeys"></a>
-
-### Generating RSA Keys ###
+## Generating RSA Keys
 
 Generating a pair of RSA keys is fairly an easy task. Just make sure you have OpenSSL installed and then we are good to go. To generate a <code>4096-bit</code> private RSA key -- since I found it fair enough in terms of both security and performance -- :
 
-```
+{{< highlight sh >}}
 $ openssl genrsa -out private.pem 4096
-```
+{{</ highlight >}}
 
 To extract the public key from our private key:
 
-```
+{{< highlight sh >}}
 $ openssl rsa -in private.pem -out public.pem -outform PEM -pubout
-```
+{{</ highlight >}}
 
 
-<br />
-<a name="PasswordlessSshLogin"></a>
-
-### Password-less SSH Login ###
+## Password-less SSH Login
 
 Setting up a password-less SSH login is even easier than [Generating RSA Keys](#GeneratingRSAKeys). First, run the following command on the host which is going to run OmniBackup:
 
-```
+{{< highlight sh >}}
 $ ssh-keygen -t rsa -b 4096
-```
+{{</ highlight >}}
 
 When it starts asking questions, it's possible to choose the default answers by just pressing <code>Return</code> or <code>Enter</code> key on your keyboard:
 
@@ -1241,21 +1149,18 @@ The key's randomart image is:
 
 Then push the public key to every single remote backup server by issuing the following command, once for each server:
 
-```
+{{< highlight sh >}}
 $ cat ~/.ssh/id_rsa.pub | ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP} 'cat >> ~/.ssh/authorized_keys'
-```
+{{</ highlight >}}
 
 It asks for password the first time you run the above command per each server. After that, you should be able to login to the desired remote host without being asked for a password:
 
-```
+{{< highlight sh >}}
 $ ssh -p {SSH_PORT_NUMBER} {USER_NAME}@{HOST}
-```
+{{</ highlight >}}
 
 
-<br />
-<a name="SmtpRelay"></a>
-
-### SMTP Relay for Hosts with Private IPs ###
+## SMTP Relay for Hosts with Private IPs
 
 If you did not setup a mail server or your server does not have a public IP you have to use another mail server, either your own or public services such as [Gmail](https://mail.google.com/), [Yahoo Mail](https://mail.yahoo.com/), [Inbox.com](http://www.inbox.com/), [Outlook](https://www.microsoft.com/en-us/outlook-com/) or any other one as SMTP relay for outgoing messages. So that OmniBackup or any other program will be able to send email through a relay. [sSMTP](https://www.freebsd.org/doc/handbook/outgoing-only.html) is such a great tool to easlity allow that.
 
@@ -1270,24 +1175,24 @@ sendmail_msp_queue_enable="NO"
 
 Then we build and install <code>mail/ssmtp</code> from [Ports collection](https://www.freebsd.org/ports/):
 
-```
+{{< highlight sh >}}
 $ cd /usr/ports/mail/ssmtp/
 $ make config-recursive
 $ make install clean
-```
+{{</ highlight >}}
 
 Or, install the binary package from [pkgng](https://www.freebsd.org/doc/handbook/pkgng-intro.html):
 
-```
+{{< highlight sh >}}
 $ pkg install mail/ssmtp
-```
+{{</ highlight >}}
 
 To replace <code>sendmail</code> with <code>ssmtp</code>, either do the following:
 
-```
+{{< highlight sh >}}
 $ cd /usr/ports/mail/ssmtp/
 $ make replace
-```
+{{</ highlight >}}
 
 Or, change your <code>/etc/mail/mailer.conf</code> to:
 
@@ -1302,10 +1207,10 @@ purgestat       /usr/bin/true
 
 OK, before you can use the program, you should copy the files <code>revaliases.sample</code> and <code>ssmtp.conf.sample</code> in <code>/usr/local/etc/ssmtp</code> to <code>revaliases</code> and <code>ssmtp.conf</code> respectively, then edit them to suit your needs:
 
-```
+{{< highlight sh >}}
 $ cp /usr/local/etc/ssmtp/revaliases.sample /usr/local/etc/ssmtp/revaliases
 $ cp /usr/local/etc/ssmtp/ssmtp.conf.sample /usr/local/etc/ssmtp/ssmtp.conf
-```
+{{</ highlight >}}
 
 Let's assume, I have a running SMTP mail server on <code>mail.example.com</code> which allows SSL connections on port <code>465</code>. I have a working user account on this mail server called <code>email@example.com</code>.
 
@@ -1334,21 +1239,18 @@ There's also a security consideration in the above example. You should always ke
 
 If everything is done properly, you should be able to send an email from command line:
 
-```
+{{< highlight sh >}}
 $ cat /etc/motd | mail -v -s "Hello, World!" your.email@target.domain
-```
+{{</ highlight >}}
 
 
-<br />
-<a name="FirstRun"></a>
-
-### First Run ###
+## First Run
 
 OK, after taking the journey of configuring OmniBackup, now it's time to run it for the first time in order to verify it works properly.
 
-```
+{{< highlight sh >}}
 $ bash /usr/local/omnibackup/backup.sh
-```
+{{</ highlight >}}
 
 The run-time flow of OmniBackup is as follows:
 
@@ -1367,20 +1269,17 @@ Note that in any stage if a <code>FATAL</code> error happens it tries to first g
 Moreover, it's possible to interrupt or break the backup operation at any time using <code>Ctrl+C</code> or <code>SIGTERM</code>. In such a situation, OmniBackup tries to release it's lock gracefully, but you won't receive any mail reports.
 
 
-<br />
-<a name="Crontab"></a>
-
-### Crontab ###
+## Crontab
 
 It is highly recommended to [learn the fundamentals of configuring cron jobs](/blog/the-proper-way-of-adding-a-cron-job/) if you are not familiar with the topic. Anyway, to schedule a backup task as user <code>root</code>:
 
-```
+{{< highlight sh >}}
 $ crontab -e -u root
-```
+{{</ highlight >}}
 
 Then add the backup cron job and make sure the <code>PATH</code> variable is present with the following values:
 
-{{< codeblock lang="" title="config.json" >}}
+{{< codeblock lang="sh" title="crontab" line_numbers="true" >}}
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
@@ -1395,45 +1294,45 @@ MAILTO=""
 
 To see whether the cron job was added successfully or not, you can issue the following command:
 
-```
+{{< highlight sh >}}
 $ crontab -l -u root
-```
+{{</ highlight >}}
 
 In the above example I scheduled the backup task to run at <code>01:00 AM</code> and since the server timezone is UTC it will run at <code>01:00 AM UTC</code> each night. To verify whether the backup job runs properly as a cron job or not, it's possible to run OmniBackup with a limited set of environment variables:
 
-```
-$ env -i SHELL=/bin/sh PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin HOME=/root LOGNAME=Charlie /usr/local/omnibackup/backup.sh
-```
+{{< highlight sh >}}
+$ env -i SHELL=/bin/sh \
+    PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin \
+    HOME=/root LOGNAME=Charlie /usr/local/omnibackup/backup.sh
+{{</ highlight >}}
 
 
-<br />
-<a name="Restore"></a>
-
-### Restore ###
+## Restore
 
 In order to restore anything backed-up by OmniBackup, the initial step is to retrieve the intended archive file from one of the remote backup servers, there are many ways to do so. The easiest that I've found is using <code>scp</code> command:
 
-```
-$ scp -P {SSH_PORT_NUMBER} {USER_NAME}@{HOST_NAME_OR_IP}:{PATH_TO_FILE} {LOCAL_TEMPORATY_PATH}
-```
+{{< highlight sh >}}
+$ scp -P {SSH_PORT_NUMBER} \
+    {USER_NAME}@{HOST_NAME_OR_IP}:{PATH_TO_FILE} \
+    {LOCAL_TEMPORATY_PATH}
+{{</ highlight >}}
 
 e.g.
 
-```
+{{< highlight sh >}}
 $ mkdir -p /var/tmp/openldap-restore/
-$ scp -P 22 babaei@10.12.0.4:~/backups/blog.babaei.net/openldap-babaei-net/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.* /var/tmp/openldap-restore/
+$ scp -P 22 \
+    babaei@10.12.0.4:~/backups/blog.babaei.net/openldap-babaei-net/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.* \
+    /var/tmp/openldap-restore/
 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt            /var/tmp/openldap-restore   100%
 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret     /var/tmp/openldap-restore   100%
 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign       /var/tmp/openldap-restore   100%
-```
+{{</ highlight >}}
 
 The above example retrieves three files from the remote server <code>10.12.0.4</code> by using wildcard character *, into the directory <code>/var/tmp/openldap-restore</code>. Since I enabled encryption, I need all those files.
 
 
-<br />
-<a name="RestoringEncryptedArchives"></a>
-
-### Restoring Encrypted Archives ###
+## Restoring Encrypted Archives
 
 OK, depending on our encryption settings in OmniBackup's configuration file. This step may become a little bit longer or shorter.
 
@@ -1456,31 +1355,31 @@ The next step is to know whether our encrypted archive file is in binary or Base
 
 For example if it's Base64 encoded:
 
-```
+{{< highlight sh >}}
 $ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: ASCII text
-```
+{{</ highlight >}}
 
 If it's binary:
 
-```
+{{< highlight sh >}}
 $ file 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt: data
-```
+{{</ highlight >}}
 
 Now, it's time to verify our archive's integrity. If you get only <code>.crypt</code> and <code>.crypt.sum</code> files, you can verify the archive integrity this way:
 
-```
+{{< highlight sh >}}
 $ cat 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sum
 SHA512(/var/tmp/backup.2015-07-31.58471/2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
-```
+{{</ highlight >}}
 
 The contents of the <code>.sum</code> file is nothing more than a hash generated from the contents of our actual archive file. In the above example the chosen hash was SHA-512. So, we have to verify the hash this way:
 
-```
+{{< highlight sh >}}
 $ openssl dgst -sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
 SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
-```
+{{</ highlight >}}
 
 We've just reproduced the original hash and it looks exactly the same as the archived one which verifies the file integrity. But there is one flaw with encryption without a public key, we cannot be sure that someone else did not change the file and generate their own hash unless we locate the emailed report or log files and check the hash against them.
 
@@ -1502,10 +1401,10 @@ Anyway, OpenSSL has support for various hash algorithms through the following co
 
 In addition to that, there are alternative utilities than OpenSSL to regenerate the archive hash. For example, FreeBSD provides <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha512</code> and <code>rmd160</code>, while GNU/Linux provides <code>md5sum</code>, <code>sha1sum</code>, <code>sha224sum</code>, <code>sha256sum</code>, <code>sha384sum</code> and <code>sha512sum</code> utilities to do so. No matter which tool or program you use, the final results must be the same:
 
-```
+{{< highlight sh >}}
 $ sha512 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt
 SHA512 (2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt) = 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
-```
+{{</ highlight >}}
 
 OK, let's assume you did provide a public key for the remote backup server that you've just retrieved the archive file from. First, we have to verify the archive file's origin using the public key from OmniBackup's host (the current host). Note that this public key may not be the same as the public key provided by the remote backup server. It's a sibiling to private key in the <code>.security.encryption.private_key</code> option of OmniBackup configuration file. For the sake of simplicity, from now on I assume you only have a single pair of keys called <code>private.pem</code> and <code>public.pem</code> rather than having multiple pair of keys.
 
@@ -1513,17 +1412,21 @@ OK, the signature file for our example is <code>2015-07-31_blog.babaei.net_openl
 
 For binary format:
 
-```
-$ openssl rsautl -verify -inkey public.pem -pubin -keyform PEM -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
+{{< highlight sh >}}
+$ openssl rsautl -verify \
+    -inkey public.pem -pubin -keyform PEM \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign
 SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
-```
+{{</ highlight >}}
 
 For Base64 encoded format:
 
-```
-$ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign | openssl rsautl -verify -inkey public.pem -pubin -keyform PEM 
+{{< highlight sh >}}
+$ openssl base64 -d \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.sign \
+    | openssl rsautl -verify -inkey public.pem -pubin -keyform PEM 
 SHA512(2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt)= 94e4e827f9024df8b547aa48037bc5cef8a851702bb9b7853c8be570c2b6a97de3b0af2e5bca70c15fc94304c44810d747bce6d028f56535dd085e67d3341367
-```
+{{</ highlight >}}
 
 If it prints out the archive file checksum in whatever hash format you chose as archive's checksum, then the file origin is valid and OK. From here on, you can verify the archive's integrity as mentioned earlier.
 
@@ -1539,15 +1442,20 @@ For those archives that have the <code>.secret</code> file, there is another way
 
 For binary format:
 
-```
-$ openssl base64 -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret | openssl rsautl -decrypt -inkey private.pem -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
-```
+{{< highlight sh >}}
+$ openssl base64 -d \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret \
+    | openssl rsautl -decrypt -inkey private.pem \
+    -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
+{{</ highlight >}}
 
 For Base64 encoded format:
 
-```
-$ openssl rsautl -decrypt -inkey private.pem -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
-```
+{{< highlight sh >}}
+$ openssl rsautl -decrypt -inkey private.pem \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.secret \
+    -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd
+{{</ highlight >}}
 
 OK, what we did basically is decrypting and writing the passphrase to a file with <code>.pwd</code> extension called <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd</code>. We decided to write it to a file since it's a random set of characters and it may for example contain spaces at the end which is not distinguishable. However, If you would like to print it on screen instead of a file, it's possible to omit the <code>-out</code> parameter from <code>openssl</code> command line.
 
@@ -1555,35 +1463,46 @@ OK, if you recall your unique passphrase, extracted it from your email or decryp
 
 To decrypt it from binary format, and provide the password from command line
 
-```
-$ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
-```
+{{< highlight sh >}}
+$ openssl enc -aes-256-cbc -d \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt \
+    -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz \
+    -k {SECRET_PASSPHRASE} -md sha1
+{{</ highlight >}}
 
 To decrypt it from Base64 format, and provide the password from command line
 
-```
-$ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -k {SECRET_PASSPHRASE} -md sha1
-```
+{{< highlight sh >}}
+$ openssl enc -aes-256-cbc -d -a \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt \
+    -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz \
+    -k {SECRET_PASSPHRASE} -md sha1
+{{</ highlight >}}
 
 To decrypt it from binary format, and provide the password from a <code>.pwd</code> file:
 
-```
-$ openssl enc -aes-256-cbc -d -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
-```
+{{< highlight sh >}}
+$ openssl enc -aes-256-cbc -d \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt \
+    -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz \
+    -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" \
+    -md sha1
+{{</ highlight >}}
 
 To decrypt it from Base64 format, and provide the password from a <code>.pwd</code> file:
 
-```
-$ openssl enc -aes-256-cbc -d -a -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" -md sha1
-```
+{{< highlight sh >}}
+$ openssl enc -aes-256-cbc -d -a \
+    -in 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt \
+    -out 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz -pass \
+    file:"2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt.pwd" \
+    -md sha1
+{{</ highlight >}}
 
 Now we've got our achive file <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz.crypt</code> decrypted as <code>2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz</code>. For instructions on how to restore it, move to the next section.
 
 
-<br />
-<a name="RestoringArchives"></a>
-
-### Restoring Archives ###
+## Restoring Archives
 
 If you did not have encryption enabled, you should have a <code>.sum</code> file along with the archive file to verify archive integrity. Please refer to the previous section in order to find out how to do that.
 
@@ -1591,142 +1510,130 @@ Depending on how we configured <code>.compression.algorithm</code> in OmniBackup
 
 LZMA2:
 
-```
+{{< highlight sh >}}
 $ tar xvJf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
-```
+{{</ highlight >}}
 
 gzip:
 
-```
+{{< highlight sh >}}
 $ tar xvzf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
-```
+{{</ highlight >}}
 
 bzip2:
 
-```
+{{< highlight sh >}}
 $ tar xvjf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
-```
+{{</ highlight >}}
 
 No Compression:
 
-```
+{{< highlight sh >}}
 $ tar xvf 2015-07-31_blog.babaei.net_openldap-babaei-net..tar
-```
+{{</ highlight >}}
 
 And if you are required to restore the permissions from archive file:
 
 LZMA2:
 
-```
+{{< highlight sh >}}
 $ tar xvJpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
-```
+{{</ highlight >}}
 
 gzip
 
-```
+{{< highlight sh >}}
 $ tar xvzpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.xz
-```
+{{</ highlight >}}
 
 bzip2:
 
-```
+{{< highlight sh >}}
 $ tar xvjpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar.bz2
-```
+{{</ highlight >}}
 
 No Compression:
 
-```
+{{< highlight sh >}}
 $ tar xvpf 2015-07-31_blog.babaei.net_openldap-babaei-net.tar
-```
+{{</ highlight >}}
 
 If you would like to extract the archive file in a path other than the current directory:
 
-```
+{{< highlight sh >}}
 $ tar {OPTIONS} {ARCHIVE_FILE} -C /path/to/extract/to
-```
+{{</ highlight >}}
 
 
-<br />
-<a name="RestoringOpenLDAP"></a>
-
-### Restoring OpenLDAP ###
+## Restoring OpenLDAP
 
 After [extracting the OpenLDAP archive file](#RestoringArchives), restoring OpenLDAP database is a peace of cake. On my FreeBSD system I do the following (you may want to take a backup from <code>/var/db/openldap-data</code> first):
 
-```
+{{< highlight sh >}}
 $ service slapd stop
 $ rm -rf /var/db/openldap-data
 $ service slapd start
 $ cd 2015-07-31_blog.babaei.net_openldap-babaei-net
 $ slapadd -l openldap-babaei-net.ldif
 $ slapcat
-```
+{{</ highlight >}}
 
 Be advised that, <code>slapd</code> service or <code>/var/db/openldap-data</code> database may have different names or paths on other operating systems.
 
 
-<br />
-<a name="RestoringPostgreSQL"></a>
-
-### Restoring PostgreSQL ###
+## Restoring PostgreSQL
 
 After [extracting the PostgreSQL archive file](#RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file -- :
 
-```
+{{< highlight sh >}}
 $ cd 2015-07-31_blog.babaei.net_postgres
 $ sudo -u pgsql psql -f postgres.sql postgres
-```
+{{</ highlight >}}
 
 The overall format for restoring the entire database backup is as follows:
 
-```
+{{< highlight sh >}}
 $ sudo -u {PGSQL_SYSTEM_USER} psql -f {DUMPALL_FILE} postgres
-```
+{{</ highlight >}}
 
 If you would like to only restore one database for example named <code>gitlab</code>:
 
-```
+{{< highlight sh >}}
 $ cd 2015-07-31_blog.babaei.net_postgres-gitlab
 $ sudo -u pgsql psql gitlab < postgres-gitlab.sql
-```
+{{</ highlight >}}
 
 The overall format for restoring a single database is as follows:
 
-```
+{{< highlight sh >}}
 $ sudo -u {PGSQL_SYSTEM_USER} psql {DATABASE_NAME} < {DATABASE_DUMP_FILE}
-```
+{{</ highlight >}}
 
 
-<br />
-<a name="RestoringMariaDbMySQL"></a>
-
-### Restoring MariaDB or MySQL ###
+## Restoring MariaDB or MySQL
 
 After [extracting the MariaDB or MySQL archive file](#RestoringArchives), if you would like to restore your entire database backup -- named * in the configuration file -- :
 
-```
+{{< highlight sh >}}
 $ cd 2015-07-31_blog.babaei.net_mysql
 $ mysql -u root -p < mysql.sql
-```
+{{</ highlight >}}
 
 If you would like to only restore one database for example named <code>piwik</code>:
 
-```
+{{< highlight sh >}}
 $ cd cd 2015-07-31_blog.babaei.net_mysql-piwik
 $ mysql -u root -p
 MariaDB [(none)]> create database piwik;
 MariaDB [piwik]> use piwik;
 MariaDB [piwik]> source mysql-piwik.sql;
 MariaDB [piwik]> \q
-```
+{{</ highlight >}}
 
 Note that in the above examples, <code>root</code> is not a system user and it's a MariaDB / MySQL internal user who has enough privileges to restore a database.
 
 
-<br />
-<a name="StayingAwayFromDisaster"></a>
-
-### Staying Away From Disaster ###
+## Staying Away From Disaster
 
 {{< blockquote author="Grant Fritchey" link="https://www.simple-talk.com/sql/backup-and-recovery/backup-verification-tips-for-database-backup-testing/" title="Backup Verification: Tips for Database Backup Testing" >}}
 There’s an old saying “Your data is only as good as your last backup.” That’s very true. But, there’s a little known corollary to this: “Your backups are only as good as your last restore.” It’s great that you’re backing up your databases, but you need to do more. You need to test your backups.
@@ -1735,20 +1642,14 @@ The ultimate test for any backup is a restore to a server, ...
 {{< /blockquote >}}
 
 
-<br />
-<a name="SourceCode"></a>
-
-### Source Code ###
+## Source Code
 
 [Check out the source code on GitLab](https://gitlab.com/NuLL3rr0r/omnibackup/)
 
 [Check out the source code on GitHub](https://github.com/NuLL3rr0r/omnibackup/)
 
 
-<br />
-<a name="ExampleReport"></a>
-
-### Example Report ###
+## Example Report
 
 ```
 [Fri Jul 31 01:00:00 UTC 2015] 292 <== INFO 2076 <== This is OmniBackup v0.1.0.

@@ -22,32 +22,32 @@ OK! before we continue, let's say we have the user __babaei__ and the defualt __
 
 **1.** Before we proceed any further, we need to ensure that if we have __Bash__ installed:
 
-```
+{{< highlight sh >}}
 $ bash --version
-```
+{{</ highlight >}}
 
 If you already have __Bash__ installed , you should see something similar to the following on the command output:
 
-<pre>
+```
 GNU bash, version 4.2.42(0)-release (i386-portbld-freebsd9.1)
 Copyright (C) 2011 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
 
 This is free software; you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
-</pre>
+```
 
 If you don't have __Bash__ installed, you can install it from [Ports](http://www.freebsd.org/ports/) on __FreeBSD__ easily:
 
-```
+{{< highlight sh >}}
 $ cd /usr/ports/shells/bash
 $ make config-recursive
 $ make install clean
-```
+{{</ highlight >}}
 
 **2.** Create or replace both __~/.bashrc__ and __~/.dir_colors__ files with the following content, for both __babaei__ and __root__ users:
 
-{{< codeblock lang="sh" title="~/.bashrc" >}}
+{{< codeblock lang="sh" title="~/.bashrc" line_numbers="true" >}}
 # /etc/bash/bashrc
 #
 # This file is sourced by all *interactive* bash shells on startup,
@@ -133,7 +133,7 @@ fi
 unset use_color safe_term match_lhs
 {{< /codeblock >}}
 
-{{< codeblock lang="sh" title="~/.dir_colors" >}}
+{{< codeblock lang="sh" title="~/.dir_colors" line_numbers="true" >}}
 ########
 # Configuration file for dircolors, a utility to help you set the
 # LS_COLORS environment variable used by GNU ls with the --color option.
@@ -295,19 +295,11 @@ EXEC 01;32
 
 **3.** Finally, you need to make __Bash__ the defualt shell on your system for both __babaei__ and __root__ users:
 
-```
+{{< highlight sh >}}
 $ chsh -s /usr/local/bin/bash babaei
 $ chsh -s /usr/local/bin/bash root
-```
+{{</ highlight >}}
 
 **Note:** On __*BSD__ operating systems usually the path to __bash__ executable is __/usr/local/bin/bash__, due to not being part of the base system. Anyway, it may be different on different __Linux__ distributions, e.g., __/usr/bin/bash__ or __/bin/bash__.
 
 **4.** You need to run a new instance of __Bash__ to see the results (e.g. by logging in on a virtual console, opening a new terminal window or tab, or running the command __bash__).
-
-
-<br/>
-
-### Related Articles ###
-
-[nano, Do not wrap text](/blog/nano-do-not-wrap-text/)  
-[nano, Syntax Highlighting](/blog/nano-syntax-highlighting/)

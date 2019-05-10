@@ -3,6 +3,7 @@ title = "Write Your Own Cross-Platform Cryptographic Library"
 slug = "write-your-own-cross-platform-cryptographic-library"
 date = 2013-02-15T08:11:00+03:30
 tags = [ "C", "C++", "Clang", "CMake", "Cross-platform", "Crypto++", "Cryptography", "FLOSS", "FOSS", "FreeBSD", "G++", "GCC", "GNU", "iOS", "Linux", "Mac OS X", "MSVC", "QMake", "Qt Creator", "Security", "Unix", "VC++", "Visual C++", "Visual Studio", "Windows" ]
+toc = "true"
 aliases = [ "/blog/2013/02/15/write-your-own-cross-platform-cryptographic-library/" ]
 +++
 
@@ -14,7 +15,7 @@ Before you proceed, you have to build the Crypto++ library as I mentioned earlie
 
 <!--more-->
 
-### API ###
+## API
 
 I'm not going through the details and I won't describe the code that I've written for this blog post. The code itself should be very legible, therefore I'll leave this task up to you. But I'm going to represent the API, and the way of using it.
 
@@ -40,7 +41,7 @@ The __Encrypt__ and __Decrypt__ functions are using __AES (Advanced Encryption S
 
 This is the full example of what we've discussed so far:
 
-{{< codeblock lang="cpp" title="main.cpp" >}}
+{{< codeblock lang="cpp" title="main.cpp" line_numbers="true" >}}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mamadou Babaei
@@ -144,11 +145,11 @@ Press enter to exit, please.
 ```
 
 
-### Building and Running on FreeBSD / *nix ###
+## Building and Running on FreeBSD / *nix
 
 I suppose you've already built the library the way that I've described for FreeBSD. So, I wrote a small CMake script which consists of 3 files, to take care of building the release version of the example application and our Crypto library:
 
-{{< codeblock lang="cmake" title="_src.cmake" >}}
+{{< codeblock lang="cmake" title="_src.cmake" line_numbers="true" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mamadou Babaei
@@ -179,7 +180,7 @@ SET ( CRYPTOTEST_SOURCE_FILES
 )
 {{< /codeblock >}}
 
-{{< codeblock lang="cmake" title="dep-config.cmake" >}}
+{{< codeblock lang="cmake" title="dep-config.cmake" line_numbers="true" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mamadou Babaei
@@ -208,7 +209,7 @@ SET ( CRYPTOPP_FIND_REQUIRED TRUE )
 
 
 
-### Crypto++ ###
+## Crypto++
 
 FIND_PATH ( CRYPTOPP_INCLUDE_DIR NAMES cryptopp PATHS /usr/include/ /usr/local/include/ )
 FIND_LIBRARY ( CRYPTOPP_LIBRARY NAMES cryptopp PATHS /usr/lib /usr/local/lib )
@@ -233,7 +234,7 @@ ELSE ( CRYPTOPP_FOUND )
 ENDIF ( CRYPTOPP_FOUND )
 {{< /codeblock >}}
 
-{{< codeblock lang="cmake" title="CMakeLists.txt" >}}
+{{< codeblock lang="cmake" title="CMakeLists.txt" line_numbers="true" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mamadou Babaei
@@ -317,21 +318,22 @@ ENDIF ( DEP_FOUND )
 
 **1.** To build the project change the current path to the source code directory that you've just downloaded, then run the following command:
 
-```
+{{< highlight sh >}}
 $ mkdir build && cd build
-```
+{{</ highlight >}}
 
 **2.** If you've built Crypto++ with GCC 4.4+ (e.g. 4.6), then issue something like the following command:
 
-```
-$ cmake -DCMAKE_C_COMPILER=/usr/local/bin/gcc46 -DCMAKE_CXX_COMPILER=/usr/local/bin/g++46 ../
-```
+{{< highlight sh >}}
+$ cmake -DCMAKE_C_COMPILER=/usr/local/bin/gcc46 \
+    -DCMAKE_CXX_COMPILER=/usr/local/bin/g++46 ../
+{{</ highlight >}}
 
 Otherwise:
 
-```
+{{< highlight sh >}}
 $ cmake ../
-```
+{{</ highlight >}}
 
 If it all goes well, you'll see something like this:
 
@@ -356,20 +358,20 @@ If it all goes well, you'll see something like this:
 
 **3.** To start the build process, enter the following command:
 
-```
+{{< highlight sh >}}
 $ make install
-```
+{{</ highlight >}}
 
 **4.** Now you should have a copy of __CryptoTest__ executable in the __release__ directory of your source directory. There's also another one in the current directory (temporary __build__ directory) which is identical to the other one in the __release__ directory.
 
 
-### Building and Running on Qt Creator using VC++ compiler ###
+## Building and Running on Qt Creator using VC++ compiler
 
 I suppose you've already built the static version of Crypto++, the way that I've described on Windows and MSVC compiler. And, you've already put debug/release versions in {source directory}/win_deps/lib and header files in {source directory}/win_deps/include/cryptopp.
 
 **1.** The only thing along with __main.cpp__ (Exmple application), __crypto.hpp__ and __crypto.cpp__ that you need, in order to build the project is a __qmake__ __.pro__ file with the correct settings:
 
-{{< codeblock lang="make" title="CryptoTest.pro" >}}
+{{< codeblock lang="make" title="CryptoTest.pro" line_numbers="true" >}}
 #  (The MIT License)
 #
 #  Copyright (c) 2013 Mamadou Babaei
@@ -422,7 +424,7 @@ HEADERS  += crypto.hpp
 **2.** Open up the CryptoTest.pro file in Qt Creator, then build and run both debug/release versions of your application. Peace of cake! Isn't it?
 
 
-### Microsoft Visual C++ ###
+## Microsoft Visual C++
 
 As for __Qt Creator + VC++__ (previous section), I suppose you have the dependencies in your __win_deps__ directory already.
 
@@ -449,22 +451,13 @@ Release:
 ```
 
 
-<br/>
-
-### Related Articles ###
-
-[How to build C++ cryptographic library, Crypto++](/blog/how-to-build-cpp-cryptographic-library-cryptopp/)
-
-
-<br/>
-
-### Source Code ###
+## Source Code
 
 [Check out the source code on GitLab](https://gitlab.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
 [Check out the source code on GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2013-02-15-write-your-own-cross-platform-cryptographic-library)
 
-{{< codeblock lang="cpp" title="crypto.hpp" >}}
+{{< codeblock lang="cpp" title="crypto.hpp" line_numbers="true" >}}
 ///  (The MIT License)
 ///
 ///  Copyright (c) 2013 Mamadou Babaei

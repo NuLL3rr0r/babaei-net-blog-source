@@ -8,7 +8,7 @@ aliases = [ "/blog/2013/02/17/nano-syntax-highlighting/" ]
 
 [GNU nano](http://www.nano-editor.org/) is my favorite text editor while I'm on console. Although, it doesn't offer syntax highlighting by default, it comes with a decent set of syntax highlighting files. Usually, these files are exist in __/usr/local/share/nano__ or __/usr/share/nano__, depending on your distro's preference. You can enable syntax highlighting for your prefered language(s) by including related file(s) with __.nanorc__ extension in your __~/.nanorc__ file.
 
-{{< codeblock title="~/.nanorc - FreeBSD" >}}
+{{< codeblock title="~/.nanorc - FreeBSD" line_numbers="true" >}}
 include "/usr/local/share/nano/asm.nanorc"
 include "/usr/local/share/nano/awk.nanorc"
 include "/usr/local/share/nano/c.nanorc"
@@ -39,7 +39,7 @@ include "/usr/local/share/nano/tex.nanorc"
 include "/usr/local/share/nano/xml.nanorc"
 {{< /codeblock >}}
 
-{{< codeblock title="~/.nanorc - Funtoo or Gentoo" >}}
+{{< codeblock title="~/.nanorc - Funtoo or Gentoo" line_numbers="true" >}}
 include "/usr/share/nano/asm.nanorc"
 include "/usr/share/nano/awk.nanorc"
 include "/usr/share/nano/c.nanorc"
@@ -72,27 +72,22 @@ include "/usr/share/nano/xml.nanorc"
 
 Note: If the file doesn't exist, you should create it first:
 
-```
+{{< highlight sh >}}
 $ touch ~/.nanorc
-```
+{{</ highlight >}}
 
 <!--more-->
 
-<br/>
-
 **UPDATE:** I usually get the list of all <code>.nanorc</code> files on my system and write them to my <code>~/.nanorc</code> using the following one liner set of commands. It should work on both <code>bash</code> and <code>csh</code>. Moreover, [it disables text-wrapping](/blog/nano-do-not-wrap-text/) which you can enable by cutting it off from the begging of it. _Just be warned it generates a new <code>~/.nanorc</code> file for the current user and wipes out all of your old settings._
 
-{{< codeblock title="*BSD" plain="true" >}}
-$ printf 'set nowrap\n\n' > ~/.nanorc && find /usr/local/share/nano/ -iname '*.nanorc' | xargs printf 'include "%s"\n' >> ~/.nanorc && cat ~/.nanorc
+{{< codeblock lang="sh" title="*BSD" >}}
+$ printf 'set nowrap\n\n' > ~/.nanorc \
+    && find /usr/local/share/nano/ -iname '*.nanorc' \
+    | xargs printf 'include "%s"\n' >> ~/.nanorc && cat ~/.nanorc
 {{< /codeblock >}}
 
-{{< codeblock title="GNU/Linux" plain="true" >}}
-$ printf 'set nowrap\n\n' > ~/.nanorc && find /usr/share/nano/ -iname '*.nanorc' | xargs printf 'include "%s"\n' >> ~/.nanorc && cat ~/.nanorc
+{{< codeblock lang="sh" title="GNU/Linux" >}}
+$ printf 'set nowrap\n\n' > ~/.nanorc \
+    && find /usr/share/nano/ -iname '*.nanorc' \
+    | xargs printf 'include "%s"\n' >> ~/.nanorc && cat ~/.nanorc
 {{< /codeblock >}}
-
-<br/>
-
-### Related Articles ###
-
-[nano, Do not wrap text](/blog/nano-do-not-wrap-text/)  
-[Colors Talk: A Colorful Terminal / Console](/blog/colors-talk-a-colorful-terminal-console/)

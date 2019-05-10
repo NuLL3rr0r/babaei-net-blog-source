@@ -120,14 +120,14 @@ Here is the detailed explanation for the rest of the options:
 
 * <code>-s</code>: Specifies the Reddit's sort algorithm for the chosen subreddit(s). The valid values for this parameter are <code>hot</code>, <code>new</code>, <code>controversial</code>, <code>top</code>, and <code>rising</code>. Reddit's default is <code>hot</code>. So, if not specified by the user, the script chooses <code>hot</code> as the default for for <code>-s</code> parameter. This is important since the script chooses the first wallpaper from the sorted list. As an example, if someone goes with <code>top</code> option, the wallpaper they get may not change for days or even months, even if they run the script one million times. Or, if the <code>new</code> option is chosen you may get a different wallpaper on each run of the script as it fetches the latest uploaded images by redditors, but it might not be much of an interesting image.
 
-```
+{{< highlight bash >}}
 readonly SUBREDDIT_CATEGORY_ANIMALS="AnimalsBeingBros+AnimalsBeingDerps+AnimalsBeingJerks+aww+Eyebleach+likeus+rarepuppers"
 readonly SUBREDDIT_CATEGORY_ART="Art+ArtPorn+Cinemagraphs+ExposurePorn+Graffiti+ImaginaryLandscapes+itookapicture"
 readonly SUBREDDIT_CATEGORY_FOOD="Breadit+eatsandwiches+food+FoodPorn+grilledcheese+Pizza+slowcooking"
 readonly SUBREDDIT_CATEGORY_IMAGINARY="ImaginaryBehemoths+ImaginaryCharacters+ImaginaryLandscapes+ImaginaryLeviathans+ImaginaryMindscapes+ImaginaryMonsters+ImaginaryTechnology"
 readonly SUBREDDIT_CATEGORY_MAN_MADE="AbandonedPorn+carporn+CityPorn+CozyPlaces+DesignPorn+powerwashingporn+RoomPorn"
 readonly SUBREDDIT_CATEGORY_NATURE="chemicalreactiongifs+EarthPorn+MacroPorn+physicsgifs+spaceporn+waterporn+WeatherGifs"
-```
+{{</ highlight >}}
 
 * <code>-n</code>: The script won't download any <code>NSFW (Not Safe For Work)</code> image by default unless this flag is passed in the parameter list.
 
@@ -176,7 +176,7 @@ $ sudo -u mamadou -g mamadou -H crontab -e
 
 I am running the script every <code>4</code> hours:
 
-{{< highlight cron >}}
+{{< highlight sh >}}
 # At minute 0 past every 4th hour
 0   */4   *   *   *   export DISPLAY=:0; /path/to/reddit-wallpaper.sh > /dev/null 2>&1
 {{< /highlight >}}

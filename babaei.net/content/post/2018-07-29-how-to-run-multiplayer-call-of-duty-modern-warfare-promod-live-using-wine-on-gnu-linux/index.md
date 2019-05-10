@@ -38,14 +38,14 @@ On Gentoo or Funtoo, management of the default Wine installation will be handled
 
 OK, let's turn on Direct3D 12 support using Vulkan (not necessary for running COD4, this step can be skipped) for <code>app-emulation/wine-vanilla</code> package by modifying <code>/etc/portage/package.use</code>:
 
-{{< codeblock lang="" title="/etc/portage/package.use" >}}
+{{< codeblock lang="" title="/etc/portage/package.use" line_numbers="true" >}}
 # Wine
 app-emulation/wine-vanilla vkd3d vulkan
 {{< /codeblock >}}
 
 If you need to turn a feature off you need to add a minus sign before the USE flags; e.g, turning on Direct3D 12 and Vulkan support while turning off Mono/.NET runtime support:
 
-{{< codeblock lang="" title="/etc/portage/package.use" >}}
+{{< codeblock lang="" title="/etc/portage/package.use" line_numbers="true" >}}
 # Wine
 app-emulation/wine-vanilla -mono vkd3d vulkan
 {{< /codeblock >}}
@@ -54,7 +54,7 @@ A detailed list of supported USE flags and their descriptions can be found [here
 
 Now, let's install the required packages:
 
-```
+{{< highlight sh >}}
 $ emerge -atuv virtual/wine app-eselect/eselect-wine
 
 These are the packages that would be merged, in reverse order:
@@ -171,11 +171,11 @@ Autounmask changes successfully written.
  * due to the above autounmask change(s). The --autounmask-backtrack=y
  * option can be used to force further backtracking, but there is no
  * guarantee that it will produce a solution.
-```
+{{</ highlight >}}
 
 As it can be seen there is an error due to two conflicting packages which cannot be installed at the same time. Just choose <code>y</code> and then run <code>etc-update</code> so that the conflict should get resolved automatically:
 
-```
+{{< highlight sh >}}
 $ etc-update
 
 Scanning Configuration files...
@@ -191,11 +191,11 @@ Please select a file to edit by entering the corresponding number.
 Replacing /etc/portage/package.use with /etc/portage/._cfg0000_package.use
 mv: overwrite ‘/etc/portage/package.use’? y
 Exiting: Nothing left to do; exiting. :)
-```
+{{</ highlight >}}
 
 OK, let's try another go after merging the required changes using <code>etc-update</code>:
 
-```
+{{< highlight sh >}}
 $ emerge -atuv virtual/wine app-eselect/eselect-wine
 
 These are the packages that would be merged, in reverse order:
@@ -284,35 +284,35 @@ Would you like to merge these packages? [Yes/No] y
 >>> No outdated packages were found on your system.
 
  * GNU info directory index is up-to-date.
-```
+{{</ highlight >}}
 
 All good! Now we have all the required packages in order to run COD4 under Wine.
 
 Note that the installed Wine packages could be uninstalled at any time by running:
 
-```
+{{< highlight sh >}}
 $ emerge -C virtual/wine app-eselect/eselect-wine
 $ emerge --depclean
-```
+{{</ highlight >}}
 
 OK, time to see if eselect picks up Wine module and lists our Wine installation:
 
-```
+{{< highlight sh >}}
 $ eselect wine list
 
 Available wine versions:
   [1]   wine-vanilla-3.11 *
-```
+{{</ highlight >}}
 
 In the above commands output -- in spite of the fact that we only have one variant of Wine installed -- the Wine variant with the star sign on the right side is the the active Wine. If you have installed multiple Wine installations, you can set one of them as the active working Wine using (replace 1 with the number or name of the desired variant listed by the previous command):
 
-```
+{{< highlight sh >}}
 $ eselect wine set 1
-```
+{{</ highlight >}}
 
 For a list of available eselect options run:
 
-```
+{{< highlight sh >}}
 $ eselect wine help
 
 Manage active wine version
@@ -368,7 +368,7 @@ Extra actions:
     --any                     Update the 'wine-any' symlinks
     --all                     Update main active wine and all variants
     --if-unset                Reuse currently selected version if it appears valid
-```
+{{</ highlight >}}
 
 So far so good; with all the requisites in place, it's time to install COD4. Since, I prefer to keep things simple we are going to use a Windows machine or a VM to install Call of Duty 4: Modern Warfare. You may try to install it under Wine (to be honest I'm not even sure if its going to work or not). Thus, my preference is to install it on a Windows installation along with all the latest patches and updates and then move it to my Linux-powered machine.
 
@@ -399,23 +399,23 @@ If you go with the version provided by Call of Duty 4 Revive Kit, copy over <cod
 
 For the <code>EU</code> variant:
 
-```
+{{< highlight sh >}}
 $ aria2c -s 16 -x 16 https://promod.github.io/releases/promodlive220_eu.zip
 $ mkdir /var/tmp/promod-temp/
 $ unzip promodlive220_eu.zip -d /var/tmp/promod-temp/
 $ mv /var/tmp/promod-temp/pml220 /path/to/COD4/Mods/
 $ rm -rf /var/tmp/promod-temp
-```
+{{</ highlight >}}
 
 Or, the <code>NE</code> variant:
 
-```
+{{< highlight sh >}}
 $ aria2c -s 16 -x 16 https://promod.github.io/releases/promodlive220_ne.zip
 $ mkdir /var/tmp/promod-temp/
 $ unzip promodlive220_ne.zip -d /var/tmp/promod-temp/
 $ mv /var/tmp/promod-temp/pml220_ne /path/to/COD4/Mods/
 $ rm -rf /var/tmp/promod-temp
-```
+{{</ highlight >}}
 
 _Note 1_: I use <code>aria2c</code> as my download manager. If you don't have it use <code>wget</code> instead.
 
@@ -423,7 +423,7 @@ _Note 2_: Since the directory names differ from each other for <code>EU</code> a
 
 __Step 8__: On Microsoft Windows, I would use a batch script like this to start the server with PunkBuster turned on:
 
-{{< codeblock lang="bat" title="server.cmd" >}}
+{{< codeblock lang="bat" title="server.cmd" line_numbers="true" >}}
 @echo off
 
 iw3mp.exe +set dedicated 0 +set net_ip localhost +set net_port 28960 +set sv_punkbuster 1 +set fs_game mods/pml220 +set promod_mode match +set rcon_password some-random-password
@@ -431,7 +431,7 @@ iw3mp.exe +set dedicated 0 +set net_ip localhost +set net_port 28960 +set sv_pun
 
 Alternatively, if I'm going to turn off PunkBuster:
 
-{{< codeblock lang="bat" title="server.cmd" >}}
+{{< codeblock lang="bat" title="server.cmd" line_numbers="true" >}}
 @echo off
 
 iw3mp.exe +set dedicated 0 +set net_ip localhost +set net_port 28960 +set sv_punkbuster 0 +set fs_game mods/pml220 +set promod_mode match_pb +set rcon_password some-random-password
@@ -443,7 +443,7 @@ As an extra note, we use <code>+set fs_game mods/pml220</code> for activating th
 
 Well, time to create a shell script with similar settings in order to launch <code>iw3mp.exe</code> under Wine. Note that simply launching <code>iw3mp.exe</code> inside i3wm causes trouble, as soon as it goes fullscreen. The workaround suggested by Wine FAQ is to run the game inside a virtual desktop. Therefore:
 
-{{< codeblock lang="sh" title="server.sh" >}}
+{{< codeblock lang="sh" title="server.sh" line_numbers="true" >}}
 #!/usr/bin/env sh
 
 wine explorer /desktop=COD4,2560x1440 iw3mp.exe +set dedicated 0 +set net_ip localhost +set net_port 28960 +set sv_punkbuster 0 +set fs_game mods/pml220 +set promod_mode match_pb +set rcon_password some-random-password
@@ -481,7 +481,7 @@ DP-3 disconnected (normal left inverted right x axis y axis)
 ```
 In case you are not going to run a server and just want to connect and play on another server:
 
-{{< codeblock lang="sh" title="iw3mp.sh" >}}
+{{< codeblock lang="sh" title="iw3mp.sh" line_numbers="true" >}}
 #!/usr/bin/env sh
 
 wine explorer /desktop=COD4,2560x1440 iw3mp.exe
@@ -489,24 +489,25 @@ wine explorer /desktop=COD4,2560x1440 iw3mp.exe
 
 __Step 9__: Set the executable permission on the shell scripts for the current user:
 
-```
+{{< highlight sh >}}
 $ chmod u+x server.sh
 $ chmod u+x iw3mp.sh
-```
+{{</ highlight >}}
 
 Alternatively, you can make it executable by all users:
 
-```
+{{< highlight sh >}}
 $ chmod a+x server.sh
 $ chmod a+x iw3mp.sh
-```
+{{</ highlight >}}
+
 __Step 10__: Despite the fact that we are ready to launch the COD4 multiplayer executable, we have another step to take before running the executable under Wine or we are going to experience issues due to invalid multiplayer key codes.
 
 COD4 and its installer write their key code inside the Windows registry. So, we have to create and execute a <code>.reg</code> file in order to write our key code into Wine's registry. Normally, under Windows this is not an issue as the installer does this for us.
 
 Create the following file somewhere on your hard drive:
 
-{{< codeblock lang="" title="cod4.reg" >}}
+{{< codeblock lang="" title="cod4.reg" line_numbers="true" >}}
 Windows Registry Editor Version 5.00
 
 ; x86 Windows
@@ -522,32 +523,33 @@ The format for COD4 key codes are <code>XXXX-XXXX-XXXX-XXXX-XXXX</code>. Before 
 
 __Step 11__: Fire up a terminal and run the following:
 
-```
+{{< highlight sh >}}
 $ wine start regedit cod4.reg
-```
+{{</ highlight >}}
 
 __Step 12__: Congratulations! If you have followed the instructions correctly, you will have a working i3wm + Wine + COD4 + Promod Live 220 setup which should work on par with Windows. Let's try it!
 
 For running the client and connecting to another server, simply run:
 
-```
+{{< highlight sh >}}
 $ cd /path/to/COD4 && ./iw3mp.sh
-```
+{{</ highlight >}}
 
 For running as server:
 
-```
+{{< highlight sh >}}
 $ cd /path/to/COD4 && ./server.sh
-```
+{{</ highlight >}}
+
 __Step 13__: If it fires up successfully, after the initial splash screen, a window which will ask for a profile name appears on the screen. This is one time only, and on the next run you should be directed to the game's main menu.
 
 In order to connect to another Promod Live server, go to Join Game and from top/center part of the screen set Source to Local, then Game Mode to All, and finally, don't forget to set Mods to Yes by clicking on Filter Servers which is set to No by default. Click on Refresh List button multiple times and the server(s) will appear if there are any on your local network.
 
 Alternatively, if you are going to run the server as well as playing the game, from the main menu choose Start New Server. Then, set your desired options and choose a map to start. After your server starts, you will be in Strat Mode. You will see it written on the upper right-hand side of the screen which means you are in the Nadetraining mode. You can verify this by throwing a grenade. If you fly along with the grenade to see where it hits, you are in Nadetraining mode. Now, in order to start the actual match mode (it doesn't make any difference if anyone has already joined the server or not), press the <code>`</code> tilde key on your keyboard (usually located on the top side of <code>Tab</code> key and to the left of <code>1</code> key) for the game console to show up on the screen. Type the following command and hit the <code>Enter</code> key on your keyboard; the match should restart in Standard Match mode by sending everyone present in the map to the Choose Team screen (anyone who hasn't joined yet, could join the game at this stage or even later in the middle of the game):
 
-```
-/promod_mode match_pb
-```
+{{< highlight sh >}}
+> /promod_mode match_pb
+{{</ highlight >}}
 
 Notic the <code>/</code> sign at the begining and the space between <code>/promod_mode</code> and <code>match_pb</code> parts of the command.
 
@@ -559,16 +561,16 @@ Furthermore, by holding down the <code>TAB</code> key you can see who has joined
 
 In the end, if you need to redistribute your installation to other machines, first remove <code>COD4/players</code> directory (COD4 keeps user profiles and their settings inside that directory, so removing it equals a fresh install) and then compress it using:
 
-```
+{{< highlight sh >}}
 $ cd /COD4/installation/parent/directory
 $ tar cvf COD4.tar COD4
-```
+{{</ highlight >}}
 
 And then on the target machine:
 
-```
+{{< highlight sh >}}
 $ tar xvf COD4.tar -C /path/to/extract/it
-```
+{{</ highlight >}}
 
 I hope this guide covered most if not everything to get you up and running.
 
