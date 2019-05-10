@@ -226,7 +226,7 @@ DirectX فناوریی است كه به سازندگان بازیها كمك م�
 
 GL با توابع سروكار دارد و با فراخوانی یك به یك توابع می توان به نتیجه نهایی دست یافت:
 
-{{< codeblock lang="cpp" title="OpenGL Sample Code" >}}
+{{< codeblock lang="cpp" title="OpenGL Sample Code" line_numbers="true" >}}
 glBegin (GL_TRIANGLES);
 glVertex (0,0,0);
 glVertex (1,1,0);
@@ -236,7 +236,7 @@ glEnd ();
 
 و كد معادل در D3D:
 
-{{< codeblock lang="cpp" title="Equivalent DirectX Sample Code" >}}
+{{< codeblock lang="cpp" title="Equivalent DirectX Sample Code" line_numbers="true" >}}
 // pseudo code, and incomplete
 v = &buffer.vertexes[0];
 v->x = 0; v->y = 0; v->z = 0;

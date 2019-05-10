@@ -249,12 +249,12 @@ Mac OS X:
 
 در نهایت پس از پشت سر گذاشتن تمامی مراحل یاد شده با ناحیه سفید رنگی مواجه خواهید شد که کدهای ذیل در آن درج شده است:
 
-{{< highlight java >}}
+{{< codeblock lang="java" line_numbers="true" >}}
 package test;
 
 public class Hello {
 }
-{{< /highlight >}}
+{{< /codeblock >}}
 
 چنانچه ناحیه سفید رنگ (ناحیه کدها) جای کمی برای نمایش کدها دارد می توانید پنل Welcome در سمت راست صفحه نمایش را ببندید٬ به این دلیل که معمولا بدان نیازی ندارید. همچینین اگر نیاز دارید سایز یا نوع قلم مربوط به کدها را تغییر دهید می توانید از مسیر زیر اقدام نمائید:
 
@@ -270,7 +270,7 @@ Mac OS X:
 
 به هر صورت کد کلاس Hello را به شکل ذیل تصحیح نمائید:
 
-{{< highlight java >}}
+{{< codeblock lang="java" line_numbers="true" >}}
 package test;
 
 public class Hello {
@@ -278,7 +278,7 @@ public class Hello {
         System.out.println(“Hello, World!”);
     }
 }
-{{< /highlight >}}
+{{< /codeblock >}}
 
 حال جهت اجرای کد در ویندوز کلید Ctrl+F11 و در Mac OS X کلیدهای Shift+Command+F11 را بفشارید. همچنین می توانید از منوی Run دستور Run را صادر نمائید و یا بر روی آیکن Run در نوار ابزار کلیک نمائید (مطابق با تصویر 3.J.).
 
@@ -425,14 +425,14 @@ Ruby on Rails
 
 ابتدا از Applications/Utilities/ برنامه Terminal را اجرا نمائید. سپس دستوارت زیر را اجرا نمائید:
 
-```
+{{< highlight sh >}}
 $ perl –v
 
 $ ruby –v
 
 $ python
 >>> raise SystemExit
-```
+{{</ highlight >}}
 
 {{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-006-a.jpg" alt="تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby" caption="تصویر6.A. – دستورات لازم جهت آگاهی از نسخه مفسرهای Perl, Python, Ruby" >}}
 
@@ -547,7 +547,7 @@ $ python
 
 حال کد زیر را در فایل ایجاد شده درج نمائید:
 
-{{< highlight cpp >}}
+{{< codeblock lang="cpp" line_numbers="true" >}}
 #include <iostream>
 
 using namespace std;
@@ -556,7 +556,7 @@ int main() {
     cout << "Hello, World!";
     return 0;
 }
-{{< /highlight >}}
+{{< /codeblock >}}
 
 اکنون نوبت اجرای کد می باشد؛ پس کد را اجرا نمائید.  به احتمال زیاد با پیام خطائی تحت عنوان Launch faild. Binary not found. از سوی Application Launcher مواجه خواهید شد (مطابق با تصویر 8.C.).
 
@@ -568,9 +568,9 @@ int main() {
 
 هم اکنون نوبت تست EPIC برای Perl می باشد. از مسیر File/New/Project…/Perl/Perl Project‌ اقدام به ایجاد یک پروژه جدید نمائید. سپس در پنل Project Explorer با کلیک بر روی پوشه پروژه از منوی New گزینه Other… را برگزینید. سپس از کادر New دستور Perl File را از پوشه Perl برگزینید. در صفحه بعد نام پروژه را با پسوند .pl تعیین نمائید. آنگاه در فایل جدید کد ذیل را درج نمائید:
 
-{{< highlight perl >}}
+{{< codeblock lang="perl" line_numbers="true" >}}
 print "Hello, World!";
-{{< /highlight >}}
+{{< /codeblock >}}
 
 حال نوبت اجرای کد است؛ کد را اجرا نمائید (مطابق با تصویر 8.E.).
 
@@ -582,9 +582,9 @@ print "Hello, World!";
 
 پس از ایجاد پروژه جدید با کلیک راست بر روی پوشه src واقع در پوشه پروژه از منوی New دستور Pydev Package را صادر نمائید. پس از تعیین نام Package٬ یک فایل تحت عنوان __init__.py در آن ایجاد می شود. محتویات فایل را به شکل زیر تغییر دهید:
 
-{{< highlight python >}}
+{{< codeblock lang="python" line_numbers="true" >}}
 print "Hello, World!"
-{{< /highlight >}}
+{{< /codeblock >}}
 
 کد را اجرا نمائید (مطابق با تصویر 8.G.).
 
@@ -592,9 +592,9 @@ print "Hello, World!"
 
 جهت تست RDT و Ruby نیز از مسیر File/New/Project…/Ruby گزینه Ruby Project را برگزینید. پس از تعیین نام پروژه با کلیک بر پوشه حاوی پروژه دستور Ruby File را از منوی New برگزینید. سپس فایلی با پسوند .rb ایجاد نمائید. کد HW مربوط به Ruby بسیار ساده می باشد:
 
-{{< highlight ruby >}}
+{{< codeblock lang="ruby" line_numbers="true" >}}
 puts "Hello, World!"
-{{< /highlight >}}
+{{< /codeblock >}}
 
 پس از تست موفقیت آمیز سایر Plug-in ها حال نوبت تست Qt/MinGW/QtEI می باشد. متاسفانه بدلیل این که QtEI هنوز در آغاز راه می باشد تعداد بسیار زیادی Bug در نسخه های متعدد آن موجود می باشد. احتمالا با ایجاد یک پروژه Qt هرگز موفق به اجرای آن نخواهید شد. پس با دقت تمامی مراحل را دنبال نمائید:
 
@@ -608,9 +608,9 @@ puts "Hello, World!"
 
 جهت رفع خطا بر روی پوشه محتوی پروژه در پنل Project Explorer راست کلیک٬ سپس Properties را برگزینید. در کادر Properties for QtTest از ناحیه سمت چپ صحفه زبانه C/C++ Make Project را برگزینید. سپس وارد زبانهEnvironment  شوید. در ناحیه Environment variables to set متغیر PATH را انتخاب نمائید. همان طور که مشاهده می نمائید مقدار این متغیر محیطی چیزی مشابه C:\Qt\4.4.1\bin; ${env_var:PATH} می باشد (مطابق با تصویر 8.K.) که بایستی آن را به چیزی مانند آنچه در ذیل می آید تغییر دهید تا به مسیر کامپایلر اشاره نماید. با فرض نصب MinGW در شاخه پیش فرض با کلیک بر گزینه Edit آنرا به شکل زیر تغییر دهید (مطابق با تصاویر 8.L. و 8.M.):
 
-{{< highlight plaintext >}}
+```
 C:\Qt\4.4.1\bin;C:\MinGW\bin;${env_var:PATH}
-{{< /highlight >}}
+```
 
 {{< figure src="/blog/c-qt-development-using-eclipse/c-qt-development-using-eclipse-008-k.jpg" alt="تصویر8.K. – نحوه تغییر مقدار متغیر محیطی PATH" caption="تصویر8.K. – نحوه تغییر مقدار متغیر محیطی PATH" >}}
 
@@ -632,7 +632,7 @@ C:\Qt\4.4.1\bin;C:\MinGW\bin;${env_var:PATH}
 
 خب؛ قصد داریم یک برنامه Qt را که از یک Label بر روی یک فرم استفاده می نماید بدون استفاده از QtDesigner و فقط با استفاده از کد نویسی ایجاد و اجرا نمائیم. برای این کار به پروژه ای که ایجاد نمودیم باز می گردیم. سپس فایل main.cpp را بگشائید. آنگاه تمامی کدهای داخل آن را پاک نمائید سپس کد زیر را در فایل درج نمائید:
 
-{{< highlight csharp >}}
+{{< codeblock lang="cpp" line_numbers="true" >}}
 #include <QApplication>
 #include <QLabel>
 
@@ -643,7 +643,7 @@ int main(int argc, char *argv[])
     label->show();
     return app.exec();
 }
-{{< /highlight >}}
+{{< /codeblock >}}
 
 پس از اجرای کد٬ فرمی را به همراه عبارت محبوب Hello, World! مشاهده می نمائید (مطابق با تصویر 8.P.).
 

@@ -172,7 +172,7 @@ CLR نه تنها قلب تپنده .NET FX می باشد بلکه هر برنا
     </table>
 </div>
 
-{{< codeblock lang="csharp" title="hello_cs.cs" >}}
+{{< codeblock lang="csharp" title="hello_cs.cs" line_numbers="true" >}}
 /// <summary>
 ///   (C) Snoop-Security.com
 /// </summary>
@@ -223,7 +223,7 @@ class Hello
     </table>
 </div>
 
-{{< codeblock lang="cpp" title="hello_cpp_cli.cpp" >}}
+{{< codeblock lang="cpp" title="hello_cpp_cli.cpp" line_numbers="true" >}}
 /// <summary>
 ///   (C) Snoop-Security.com
 /// </summary>
@@ -267,7 +267,7 @@ void main()
     </table>
 </div>
 
-{{< codeblock lang="cpp" title="hello_cpp_managed.cpp" >}}
+{{< codeblock lang="cpp" title="hello_cpp_managed.cpp" line_numbers="true" >}}
 /// <summary>
 ///   (C) Snoop-Security.com
 /// </summary>
@@ -313,7 +313,7 @@ void main()
     </table>
 </div>
 
-{{< codeblock lang="javascript" title="hello_js.js" >}}
+{{< codeblock lang="javascript" title="hello_js.js" line_numbers="true" >}}
 /// <summary>
 ///   (C) Snoop-Security.com
 /// </summary>
@@ -354,7 +354,7 @@ Console.WriteLine("Hello, World!");
     </table>
 </div>
 
-{{< codeblock lang="basic" title=" hello_vb.vb " >}}
+{{< codeblock lang="basic" title="hello_vb.vb" line_numbers="true" >}}
 '@ <summary>
 '@   (C) Snoop-Security.com
 '@ </summary>
@@ -370,10 +370,10 @@ End Module
 
 ۴. در مرحله بعد با استفاده از دستورات داده شده اقدام به کامپایل تمامی کدها می نمائیم. نکته حائز اهمیت در این جا مسیر فایل های اجرائی هر یک از کامپایلرهای مورد نظر می باشد. سه کامپایلر مربوط به C#, JScript .NET, Visual Basic.NET به ترتیب به نام های csc.exe, jsc.exe, vbc.exe در مسیر نصب .NET Framework قرار دارند. همچنین کامپایلر مربوط به C++ به نام cl.exe فقط با نصب Visual Studio و یا Microsoft Windows SDK در سیستم شما نصب خواهد شد و بسته به نوع بسته نصب شده در مسیری متفاوت قرار خواهد گرفت. برای مثال مسیر کامپایلرها ممکن است به شرح ذیل باشد:
 
-{{< highlight plaintext >}}
+```
 C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\
 C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\
-{{< /highlight >}}
+```
 
 در این مرحله می توان جهت جلوگیری از تایپ مسیرهای طولانی در صورت نصب Visual Studio از Visual Studio Command Prompt استفاده نمود (تصویر 3.C.).
 
@@ -525,21 +525,21 @@ Obfuscation در یک جمله عملی است در جهت ناخوانا و م�
 
 سورس کد اصلی:
 
-{{< highlight javascript >}}
+{{< codeblock lang="javascript" line_numbers="true" >}}
 <script language="javascript">
     // (C) Snoop-Security.com
     for (i in navigator)
         document.write(i + ": " + navigator[i] + "<br />");
 </script>
-{{< /highlight >}}
+{{< /codeblock >}}
 
 سورس کد ناخوانا و مبهم٬ اما قابل اجرا:
 
-{{< highlight javascript >}}
+{{< codeblock lang="javascript" line_numbers="true" >}}
 <script language="javascript">
 eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('2(0 3 1)4.5(0+": "+1[0]+"<6 />");',7,7,'i|navigator|for|in|document|write|br'.split('|'),0,{}))
 </script>
-{{< /highlight >}}
+{{< /codeblock >}}
 
 این که چگونه این سورس کد ناخوانا به خوبی و بدون کوچکترین اشکالی در مرورگر اجرا می شود بحث مفصلی است که خود نیازمند مقاله جداگانه ایست. یادآور می شویم در بسیاری از موارد این عمل باعث افزایش حجم فایل و در پاره ای از موارد (مانند فایل های JavaScript) باعث کاهش حجم فایل تا بیش از نصف نیز خواهد شد (مورد فوق یک استثناست). یقینا با انجام این عمل در زمان فراخوانی برنامه به حافظه٬ مقداری افت کارائی خواهیم داشت.
 
@@ -651,7 +651,7 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 [دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/dotnet-java-code-obfuscation)
 
 
-{{< codeblock lang="csharp" title="snooplogin.cs" >}}
+{{< codeblock lang="csharp" title="snooplogin.cs" line_numbers="true" >}}
 /// <summary>
 ///   (The MIT License)
 ///   

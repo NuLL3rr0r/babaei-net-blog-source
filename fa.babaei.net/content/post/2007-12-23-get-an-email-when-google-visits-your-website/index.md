@@ -353,7 +353,7 @@ if ($browser =~ m/Googlebot/) {
 [دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2007-12-23-get-an-email-when-google-visited-your-website)
 
 
-{{< codeblock lang="html" title="index.html" >}}
+{{< codeblock lang="html" title="index.html" line_numbers="true" >}}
 <!--
   (The MIT License)
 
@@ -396,7 +396,7 @@ if ($browser =~ m/Googlebot/) {
 </html>
 {{< /codeblock >}}
 
-{{< codeblock lang="perl" title="index.pl" >}}
+{{< codeblock lang="perl" title="index.pl" line_numbers="true" >}}
 #!/usr/bin/perl
 
 #  (The MIT License)
@@ -494,7 +494,7 @@ print "</body>";
 print "</html>";
 {{< /codeblock >}}
 
-{{< codeblock lang="csharp" title="index.aspx" >}}
+{{< codeblock lang="csharp" title="index.aspx" line_numbers="true" >}}
 <!--
   (The MIT License)
 
@@ -561,7 +561,7 @@ print "</html>";
 </html>
 {{< /codeblock >}}
 
-{{< codeblock lang="csharp" title="index.cs" >}}
+{{< codeblock lang="csharp" title="index.cs" line_numbers="true" >}}
 /// <summary>
 ///   (The MIT License)
 ///

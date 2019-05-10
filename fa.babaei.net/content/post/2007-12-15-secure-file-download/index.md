@@ -491,7 +491,7 @@ smtp.Credentials = new System.Net.NetworkCredential("some.id@gmail.com", "pw");
 [دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2007-12-15-secure-file-download)
 
 
-{{< codeblock lang="html" title="securedown.html" >}}
+{{< codeblock lang="html" title="securedown.html" line_numbers="true" >}}
 <!--
   (The MIT License)
 
@@ -556,7 +556,7 @@ smtp.Credentials = new System.Net.NetworkCredential("some.id@gmail.com", "pw");
 </html>
 {{< /codeblock >}}
 
-{{< codeblock lang="perl" title="securedown.pl" >}}
+{{< codeblock lang="perl" title="securedown.pl" line_numbers="true" >}}
 #!/usr/bin/perl
 
 #  (The MIT License)
@@ -749,7 +749,7 @@ sub ErrorH {
 }
 {{< /codeblock >}}
 
-{{< codeblock lang="csharp" title="securedown.aspx" >}}
+{{< codeblock lang="csharp" title="securedown.aspx" line_numbers="true" >}}
 <!--
   (The MIT License)
 
@@ -992,7 +992,7 @@ sub ErrorH {
 %>
 {{< /codeblock >}}
 
-{{< codeblock lang="perl" title="securedown-patched.pl" >}}
+{{< codeblock lang="perl" title="securedown-patched.pl" line_numbers="true" >}}
 #!/usr/bin/perl
 
 #  (The MIT License)

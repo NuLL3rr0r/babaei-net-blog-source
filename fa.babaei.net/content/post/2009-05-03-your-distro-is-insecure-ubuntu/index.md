@@ -64,7 +64,7 @@ drwxr-xr-x 2 rmccarty rmccarty 4096 2009-04-13 09:40 rmccarty
 
 به علاوه٬ اطلاعات هر کاربر جدیدی که در آینده با دستور useradd ساخته شود به سبب این ورودی در فایل /etc/adduser.conf، برای همگان قابل خواندن است:
 
-{{< highlight plaintext >}}
+{{< highlight sh >}}
 DIR_MODE=0755
 {{< /highlight >}}
 
@@ -86,7 +86,7 @@ DNS Server, LAMP server, mail server, OpenSSH server, and the Virtual Machine ho
 
 اوبونتو اجازه انتخاب مجموعه نرم افزارهائی را می دهد که مدیر سیستم قصد استفاده از آن ها را دارد. با این وجود٬ نگاهی عمیق تر به نسخه محدود شده netstat سرویس هائی را نشان می دهد که اصلا نیاز نیستند یا توسط مدیر سیستم درخواست نشده اند:
 
-```
+{{< highlight sh >}}
 root@sparky:~# netstat -l
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address Foreign Address State
@@ -94,7 +94,7 @@ tcp 0 0 *:pop3 *:* LISTEN
 tcp 0 0 *:imap2 *:* LISTEN
 udp 0 0 *:bootps *:*
 udp 0 0 *:bootpc *:*
-```
+{{< /highlight >}}
 
 جالب است! دو ورودی اول: The Post Office Protocol Version 3 (pop3) و The Internet Message Access Protocol Version 2 (imap2) نصب شده و در حال اجرا می باشند با وجود اینکه اوبونتو در حال حاضر نسخه های ایمن تری از آن ها را نصب شده و دارا می باشد. هر دوی این دو پروتکل قدیمی سال ها پیش جهت همکاری و ارتباط با برنامه های قدیمی ایمیل نیاز بودند٬ اما در حال حاضر عمده نرم افزارهای ایمیل از نسخ جدیدتر و ایمن تر آن استفاده می نمایند. (بزرگترین مسئله با این سرویس های قدیمی مسئله کشف متن کلمات عبور می باشد٬ به هرحال سرورهای POP2 در مقابل مصالحه root آسیب پذیر می باشند.)
 

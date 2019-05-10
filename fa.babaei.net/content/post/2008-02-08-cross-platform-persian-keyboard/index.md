@@ -293,7 +293,7 @@ kb.TransformInputChar(txtPersian, e);
 
 15: چنانچه مراحل قبل را بدرستی انجام داده اید، كدهای واقع در Form1 شبیه به آنچه كه در ذیل می آید به نظر می رسد:
 
-{{< highlight csharp >}}
+{{< codeblock lang="csharp" line_numbers="true" >}}
 /// <summary>
 ///   (The MIT License)
 ///   
@@ -352,7 +352,7 @@ namespace CrossPlatformKeyboard
         }
     }
 }
-{{< /highlight >}}
+{{< /codeblock >}}
 
 16: بسیار خب. با زدن كلید F5 پروژه را اجرا نمائید.
 
@@ -368,7 +368,7 @@ namespace CrossPlatformKeyboard
 [دریافت سورس کد کامل از GitHub](https://github.com/NuLL3rr0r/babaei.net/tree/master/2008-02-08-cross-platform-persian-keyboard)
 
 
-{{< codeblock lang="csharp" title="PersianKeyboard" >}}
+{{< codeblock lang="csharp" title="PersianKeyboard" line_numbers="true" >}}
 /// <summary>
 ///   (The MIT License)
 ///   
