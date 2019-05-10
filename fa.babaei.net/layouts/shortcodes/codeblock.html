@@ -1,11 +1,11 @@
 <div class="codeblock">
-    {{ if .Get "title"}}
+    {{ if .Get "title" }}
     <span class="title">{{ .Get "title" }}</span>
     {{ end }}
-    {{ if .Get "lang"}}
+    {{ if .Get "lang" }}
     {{ highlight (trim .Inner "\n\r") (.Get "lang") "linenos=table" }}
     {{ else }}
-    {{ if .Get "plain"}}
+    {{ if .Get "plain" }}
     <pre>{{ .Inner }}</pre>
     {{ else }}
     {{ highlight (trim .Inner "\n\r") "" "linenos=table" }}
