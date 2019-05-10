@@ -8,9 +8,9 @@ toc = true
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
 
-At first, I did not take it seriously. Just rebooted the server and prayed to the gods that it won't happen again. It was a quick fix and it seemed to work. Until, after a few days I noticed that it happened again. This time I prayed to the gods - both the old ones and the new ones - even harder and rebuilt every install ports all over again in order to make sure I did not miss anything. I went for another reboot and, ops! There it was again, laughing at me. Thus, losing all faith in the gods, which led me to [take up responsibility and investigate more on this or ask the experts on the FreeBSD forums](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/).
+At first, I did not take it seriously. Just rebooted the server and prayed to the gods that it won't happen again. It was a quick fix and it seemed to work. Until after a few days, I noticed that it happened again. This time I prayed to the gods even harder - both the old ones and the new ones ¯\\\_(ツ)_/¯ - and rebuilt every installed ports all over again in order to make sure I did not miss anything. I went for another reboot and, ops! There it was again laughing at me. Thus, losing all faith in the gods, which led me to [take up responsibility and investigate more on this issue or ask the experts on the FreeBSD forums](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/).
 
-After messing around with it, it turned out that the culprit is <code>clamav-clamd</code> service crashing without any apparent reason. According to [this Stack Exchange answer](https://unix.stackexchange.com/a/278110):
+After messing around with it, it turned out that the culprit is <code>clamav-clamd</code> service crashing without any apparent reason at first. I fired up <code>htop</code> after restarting <code>clamav-clamd</code> and figured even at idle times it devours around ~ <code>30%</code> of the available memory. According to [this Stack Exchange answer](https://unix.stackexchange.com/a/278110):
 
 {{< blockquote author="vk5tu" link="https://unix.stackexchange.com/a/278110" title="How to reduce ClamAV memory usage?" >}}
 ClamAV holds the search strings using the classic string (Boyer Moore) and regular expression (Aho Corasick) algorithms. Being algorithms from the 1970s they are extemely memory efficient.
@@ -24,13 +24,13 @@ The datastructures are needed if you are scanning from the command line or scann
 You can't use just a portion of the virus signatures, as you don't get to choose which viruses you will be sent, and thus can't tell which signatures you will need.
 {{< /blockquote >}}
 
-I guess due to some arcane changes in <code>12.0-RELEASE</code>, FreeBSD kills memory hogs such as <code>clamav-clamd</code> daemon (don't take my word for it. it is just a poor man's guess). I even tried to [lower the memory usage](https://forum.directadmin.com/showthread.php?t=55146) without much of a success. At the end, there were not too many choices or workarounds around the corner:
+I guess due to some arcane changes in <code>12.0-RELEASE</code>, FreeBSD kills memory hogs such as <code>clamav-clamd</code> daemon (don't take my word for it; it is just a poor man's guess). I even tried to [lower the memory usage](https://forum.directadmin.com/showthread.php?t=55146) without much of a success. At the end, there were not too many choices or workarounds around the corner:
 
 <code>A</code>. Pray to the gods that it go away by itself, which I deemed impractical
 
 <code>B</code>. Put aside laziness, and replace <code>security/clamsmtp</code> with <code>security/amavisd-new</code> in order to be able to [run ClamAV on-demand which has its own pros and cons](ClamAV)
 
-<code>C</code>. Write a quick POSIX-shell script to scan for a running <code>clamav-clamd</code> process using <code>ps aux | grep clamd</code>, set it up as a cron job with X-minute(s) interval, and then start the server if it cannot be found running
+<code>C</code>. Write a quick POSIX-shell script to scan for a running <code>clamav-clamd</code> process using <code>ps aux | grep clamd</code>, set it up as a cron job with X-minute(s) interval, and then start the server if it cannot be found running, and be done with it for the time being.
 
 For the sake of slothfulness, I opted to go with option <code>C</code>. As a consequence, I came up with a generic simple script that is able to not only monitor and restart the <code>clamav-clamd</code> service but also is able to keep any other crashing services running on FreeBSD.
 
@@ -53,6 +53,8 @@ readonly TR="/usr/bin/tr"
 
 All the dependencies in this list are either internal shell commands or are already present in the FreeBSD base system. So, for running the script, nothing extra is required.
 
+Furthermore, I did not want to rely anything more than standard POSIX shell for such a simple task, despite the fact that I prefer Bash over anything else for more complex tasks ([OmniBackup: One Script to back them all up](OmniBackup: One Script to back them all up) available through FreeBSD Ports as [sysutils/omnibackup](https://www.freebsd.org/cgi/ports.cgi?query=omnibackup&stype=name&sektion=all); or, [Reddit wallpaper downloader script](/blog/my-reddit-wallpaper-downloader-script/)).
+
 ## Usage Syntax
 
 ## Running through a Cron Job
@@ -63,7 +65,7 @@ I have already wrote [a guide on how to properly add a cron job on *nix systems]
 $ sudo -u root -g root -H crontab -e
 {{< /highlight >}}
 
-I prefer to detect a crash as immediately as possible and then restart the service instantaneously. Therefore, I am running the script every <code>1</code> minute:
+I prefer to detect a crash as immediately as possible and then restart the service instantaneously. Therefore, I am running the script at a <code>1</code> minute interval:
 
 {{< highlight cron >}}
 *   *   *   *   *   /usr/local/cron-scripts/daemon-keeper.sh -e "/usr/local/sbin/clamd" -s "clamav-clamd" -s "dovecot"
@@ -71,7 +73,7 @@ I prefer to detect a crash as immediately as possible and then restart the servi
 
 If you are not familiar with the <code>crontab</code> syntax, [crontab.guru is a great visual aid](https://crontab.guru/).
 
-On another note, due to the fact that this script is designed to run as a cron job, in addition to <code>stdout</code> and <code>stderr</code>, the scripts logs are getting passed through to the system's log file. On FreeBSD this file is located at <code>/var/log/messages</code>. This portion of the system log output is the result of the script running as a cron job:
+On another note, due to the fact that this script is designed to run as a cron job, in addition to <code>stdout</code> and <code>stderr</code>, the scripts logs are getting passed through to the system's log file. On FreeBSD this file is located at <code>/var/log/messages</code>. This portion of the system's log output is the result of the script running as a cron job:
 
 {{< highlight sh >}}
 $ tail -f /var/log/messages
@@ -90,7 +92,7 @@ May  9 20:50:00 3rr0r DAEMON-KEEPER[94832]: INFO No action is required!
 
 ## How it Works
 
-Do not let <code>~200</code> lines of shell script code fool you. In fact, there is only one line of code (broken into multiple lines for the purpose of readability) in the script that does all the work:
+Do not let <code>~200</code> lines of shell script code fool you. In fact, there is only one line of code in the script (broken into multiple lines for the purpose of readability) that does all the work:
 
 {{< highlight sh >}}
 readonly DAEMON_PROCESS_COUNT=$(${PS} aux \
@@ -99,9 +101,9 @@ readonly DAEMON_PROCESS_COUNT=$(${PS} aux \
     | ${GREP} -c "${DAEMON}")
 {{< /highlight >}}
 
-Technically what it does is, listing all the running processes from all the users on the system, then looking for the target daemon it leaves out all the other processes, afterwards counting the number of running processes. If the daemon is not running, then the process counts is simply zero. As simple as that.
+Technically. what it does is listing to all the running processes from all users on the system, then looking for the target daemon, it leaves out all the other processes, afterwards counting the number of running processes. If the daemon is not running, then the process count is simply zero. As simple as that.
 
-Leaving out the <code>${GREP} -v "${SCRIPT}"</code> part (we will be attending this one in a moment) and the variable assignment, it will be basically translated to something similar to:
+Leaving out the <code>${GREP} -v "${SCRIPT}"</code> part (we will be attending to this one in a moment) and the variable assignment, it will basically gets translated to something similar to:
 
 {{< highlight sh >}}
 $ ps aux | grep -v grep | grep -c /usr/local/sbin/clamd
@@ -113,14 +115,14 @@ If <code>clamd</code> is running, the result of running the above command would 
 $ ps aux
 
 # SORRY!
-# I WON'T BE SHARING THE OUTPUT OF THIS COMMAND AS IT IS TOO DANGEROUS SINCE
-# ONE CAN GET TO KNOW WHAT EXACTLY I AM RUNNING ON THIS SERVER FOR A POTENTIAL
-# EXPLOIT.
-# INSTEAD, IF YOU WOULD LIKE TO, YOU CAN RUN IT ON YOUR OWN *NIX DISTRO, AND
-# SEE FOR YOURSELF WHAT IT DOES.
+# I WON'T BE SHARING THE OUTPUT OF THIS COMMAND AS IT IS TOO DANGEROUS TO BE
+# SHARED, SINCE ONE CAN GET TO KNOW WHAT EXACTLY I AM RUNNING ON THIS SERVER FOR
+# A POTENTIAL EXPLOIT.
+# INSTEAD, IF YOU WOULD LIKE TO, YOU CAN RUN IT ON YOUR OWN *NIX DISTRO, AND SEE
+# FOR YOURSELF WHAT IT ACTUALLY DOES.
 {{< /highlight >}}
 
-What does <code>pas aux</code> is essentially do, shows all the processes for all users (for our purpose the <code>ax</code> flags would suffice and the <code>u</code> can be omitted, nonetheless as a habit I keep it). Please [consult the ps man page](https://www.freebsd.org/cgi/man.cgi?ps(1)) for more information.
+What does <code>ps aux</code> is essentially doing is showing all the processes for all users (for our purpose the <code>ax</code> flags would suffice and the <code>u</code> can be omitted, nonetheless as a habit I keep it). Please [consult the ps man page](https://www.freebsd.org/cgi/man.cgi?ps(1)) for more information.
 
 Now try the following:
 
@@ -139,7 +141,7 @@ $ ps aux | grep /usr/local/sbin/clamd
 root      34001   0.0  0.2   11492   2768  0  S+   22:27     0:00.00 grep /usr/local/sbin/clamd
 {{< /highlight >}}
 
-So, always the grep command gets counted as one line since it is a running process at the moment the output of <code>ps aux</code> from the left side of pipe is getting piped to the second part of the command. Using one more pipe we try to eliminate any <code>grep</code> processes from the results before feeding the output to the last <code>grep</code>. This is what <code>grep -v grep</code> does in the following command</code>. So, if it finds the clamd process it returns the following output, or else nothing at all (which signifies the daemon is not running):
+So, the <code>grep</code> command will always gets counted as one line since it is a running process at the moment the output of <code>ps aux</code> from the left side of pipe is getting piped to the second part of the command. Using one more pipe we try to eliminate any <code>grep</code> processes from the results before feeding the output to the last <code>grep</code>. This is what <code>grep -v grep</code> does in the following command</code>. So, if it finds the <code>clamd</code> process it returns the following output, or else nothing at all (which signifies the daemon is not running):
 
 {{< highlight sh >}}
 $ ps aux | grep -v grep | grep /usr/local/sbin/clamd
@@ -154,25 +156,25 @@ As a final note, when we run the script as a cron job, there is one more thing t
 *   *   *   *   *   /usr/local/cron-scripts/daemon-keeper.sh -e "/usr/local/sbin/clamd" -s "clamav-clamd" -s "dovecot"
 {{< /highlight >}}
 
-When we run the script from a cron job, if you haven't noticed by now, we pass <code>/usr/local/sbin/clamd</code> to the script and it is considered a running process when the output is caught by <code>grep</code>, always adding one more line to the output. So we have to eliminate it like so, or the script thinks the process is running due to count being at least <code>1</code> all the times:
+When we run the script from a cron job, if you haven't noticed by now, we pass <code>/usr/local/sbin/clamd</code> to the script and it is considered a running process when the output is caught by <code>grep</code>, always adding one more line to the output. So we have to eliminate this one, too; or the script thinks the process is running due to the count being at least <code>1</code> all the times:
 
 {{< highlight sh >}}
 $ ps aux \
-    | grep -v grep \
+    | grep -v "grep" \
     | grep -v "/usr/local/cron-scripts/daemon-keeper.sh" \
     | grep "/usr/local/sbin/clamd"
 {{< /highlight >}}
 
-The last thing we have to do is passing <code>-c</code> argument to the last grep, in order to count the number of running process of the daemon (yes, it is possible for a daemon to spawn more processes than one).
+In order to count the number of running process of the daemon (yes, it is possible for a daemon to spawn more processes than one), the last thing we have to do is passing <code>-c</code> argument to the last <code>grep</code> command:
 
 {{< highlight sh >}}
 $ ps aux \
-    | grep -v grep \
+    | grep -v "grep" \
     | grep -v "/usr/local/cron-scripts/daemon-keeper.sh" \
     | grep -c "/usr/local/sbin/clamd"
 {{< /highlight >}}
 
-Which either returns <code>0</code> if the daemon is not running or any number <code>>0</code> if the daemon is already running.
+Which either returns <code>0</code> if the daemon is not running, or any number <code>>0</code> if the daemon is already running.
 
 ## Obtaining the Source Code
 
@@ -204,7 +206,7 @@ $ git clone \
     /path/to/clone/freebsd-daemon-keeper
 {{< /highlight >}}
 
-Lastly, for the sake of convenience, it can be copy-pasted directly from here, which is strongly discouraged due to [Pastejacking Exploitation Technique](https://github.com/dxa4481/Pastejacking):
+Alternatively, it can be copy-pasted directly from here, which is strongly discouraged due to [Pastejacking Exploitation Technique](https://github.com/dxa4481/Pastejacking):
 
 {{< codeblock lang="sh" title="daemon-keeper.sh" line_numbers="true" >}}
 #!/usr/bin/env sh
