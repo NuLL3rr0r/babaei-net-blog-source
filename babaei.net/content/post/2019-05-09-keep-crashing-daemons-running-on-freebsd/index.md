@@ -40,7 +40,7 @@ For the sake of slothfulness, I opted to go with option <code>C</code>. As a con
 
 Taking a look [at the source code](#obtaining-the-source-code) reveals the necessitas for running the script successfully:
 
-{{< highlight bash >}}
+{{< highlight sh >}}
 readonly BASENAME="basename"
 readonly CUT="/usr/bin/cut"
 readonly ECHO="echo -e"
@@ -56,6 +56,65 @@ All the dependencies in this list are either internal shell commands or are alre
 Furthermore, I did not want to rely anything more than standard POSIX shell for such a simple task, despite the fact that I prefer Bash over anything else for more complex tasks ([OmniBackup: One Script to back them all up](OmniBackup: One Script to back them all up) available through FreeBSD Ports as [sysutils/omnibackup](https://www.freebsd.org/cgi/ports.cgi?query=omnibackup&stype=name&sektion=all); or, [Reddit wallpaper downloader script](/blog/my-reddit-wallpaper-downloader-script/)).
 
 ## Usage Syntax
+
+Before running the script, please note that it must has the executable permission set on it. If not, in order to grant executable permission for all users:
+
+{{< highlight sh >}}
+$ chmod a+x /path/to/daemon-keeper.sh
+{{< /highlight >}}
+
+Or, only the current user (the user who owns the file):
+
+{{< highlight sh >}}
+$ chmod u+x /path/to/daemon-keeper.sh
+{{< /highlight >}}
+
+Or, the users under the group who owns the file:
+
+{{< highlight sh >}}
+$ chmod g+x /path/to/daemon-keeper.sh
+{{< /highlight >}}
+
+Getting away from the basics, one can simply run the script by issuing the following command and it outputs the correct usage syntax for you:
+
+```
+Correct usage:
+
+    daemon-keeper.sh -e {executable full path} -s {service name to (re)start} [-s {another service name to (re)start}] [... even more -s and service names to (re)start]
+```
+
+Here is the detailed explanation for the available options:
+
+* <code>-e</code>: Expects the executable's full path. For example in my case, <code>clamav-clamd</code> service, which is located at <code>/usr/local/etc/rc.d/clamav-clamd</code>, the executable path is <code>/usr/local/sbin/clamd</code>. "How do I know the name and path to the underlying executable?", you may ask. Well, then answer is, by taking a look at the <code>/usr/local/etc/rc.d/clamav-clamd</code> content:
+
+{{< highlight sh >}}
+command=/usr/local/sbin/clamd
+{{< /highlight >}}
+
+* <code>-s</code>: The service name to restart in case of a possible crash. Hmm, why passing more than one service name by specifying <code>-s</code> is allowed? Very good question indeed. Sometimes you may be required to restart multiple services in case of a crash. For me, I had to also restart the <code>dovecot</code> service in addition to <code>clamav-clamd</code> service; if not, my mail server refused to receive any new emails even after starting the <code>clamav-clamd</code> service. The solution was to restart <code>dovecot</code> after starting up the crashed <code>clamav-clamd</code> service.
+
+For the convenience of description, the following example is enough to take care of my mail server (monitoring the <code>clamav-clamd</code> service and watching out for crashes; then restarting the <code>clamav-clamd</code> and <code>dovecot</code> services if a crash happens):
+
+{{< highlight sh >}}
+$ /usr/local/cron-scripts/daemon-keeper.sh \
+    -e "/usr/local/sbin/clamd" -s "clamav-clamd" -s "dovecot"
+
+[WARNING] '/usr/local/sbin/clamd' is not running!
+[INFO] Stopping the service 'clamav-clamd'...
+[ERROR] Failed to stop the 'clamav-clamd' service!
+[INFO] Starting the service 'clamav-clamd'...
+[INFO] The 'clamav-clamd' service has been started successfully!
+[INFO] Stopping the service 'dovecot'...
+[INFO] The 'dovecot' service has been stopped successfully!
+[INFO] Starting the service 'dovecot'...
+[INFO] The 'dovecot' service has been started successfully!
+
+$ /usr/local/cron-scripts/daemon-keeper.sh \
+    -e "/usr/local/sbin/clamd" -s "clamav-clamd" -s "dovecot"
+
+[INFO] '/usr/local/sbin/clamd' is running!
+[INFO] No action is required!
+{{< /highlight >}}
 
 ## Running through a Cron Job
 
