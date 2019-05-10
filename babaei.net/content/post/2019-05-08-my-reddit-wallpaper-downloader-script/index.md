@@ -12,7 +12,7 @@ toc = true
 
 Well, I am really fascinated by [Reddit](https://www.reddit.com/) art and [genuine creative ideas such as Scrolller](https://scrolller.com/art) which [was made possible thanks to gazillions of art pieces scattered throughout various art subreddits](https://www.reddit.com/r/web_design/comments/6eoa78/i_made_a_simple_website_filled_with_random_nsfw/). I am also fascinated by [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) and have been a *nix enthusiast for as long as I can remember. In addition to all this, the discovery of [r/unixporn](https://www.reddit.com/r/unixporn/) - realizing I am not the only one who cares about aesthetics of their Unix box - was a huge blow for me; to the point that studying the GitHub dotfiles posted along the screenshots on r/unixporn by fellow nix-enthusiast redditors felt like a day to day hubby for me.
 
-All the while, I had a successful experiment with writing [a complex piece of real-world software in pure Bash with an amazingly wide range of features for around 3.5K lines of code](https://github.com/NuLL3rr0r/omnibackup). The real excitement came when it made to [the official FreeBSD Ports Tree](https://www.freebsd.org/cgi/ports.cgi?query=omnibackup&stype=all). In spite of the fact that many people find Bash syntax annoyingly ugly and unmaintainable and [often wonder why do people still write shell scripts by asking it on Quora](https://www.quora.com/Why-do-people-still-write-shell-scripts), since MS-DOS 6.22 era, I did develop a certain love–hate relationship with shell scripting languages such as Batch Files, Bash, etc. Thus, still [I do automate almost everything with these ancient technologies](https://gitlab.com/SeditiousGames/GodsOfDeceit/tree/master/Scripts).
+All the while, I had a successful experiment with writing [a complex piece of real-world software in pure Bash with an amazingly wide range of features for around 3.5K lines of code](https://github.com/NuLL3rr0r/omnibackup). The real excitement came when it made to [the official FreeBSD Ports Tree](https://www.freebsd.org/cgi/ports.cgi?query=omnibackup&stype=name&sektion=all). In spite of the fact that many people find Bash syntax annoyingly ugly and unmaintainable and [often wonder why do people still write shell scripts by asking it on Quora](https://www.quora.com/Why-do-people-still-write-shell-scripts), since MS-DOS 6.22 era, I did develop a certain love–hate relationship with shell scripting languages such as Batch Files, Bash, etc. Thus, still [I do automate almost everything with these ancient technologies](https://gitlab.com/SeditiousGames/GodsOfDeceit/tree/master/Scripts).
 
 So, here is my [fully-configurable wallpaper changer software written in bash which automagically fetches and display wallpapers from your favorite subs](https://github.com/NuLL3rr0r/reddit-wallpaper). It has been powering and brightening up my i3wm setup for the past eight months which led me to the conclusion that it deserves a proper introduction.
 
@@ -241,7 +241,7 @@ $ git clone \
     /path/to/clone/reddit-wallpaper
 {{< /highlight >}}
 
-Lastly, for the sake of convenience, it can be copy-pasted directly from here, which is strongly discouraged due to [Pastejacking Exploitation Technique](https://github.com/dxa4481/Pastejacking):
+Alternatively, it can be copy-pasted directly from here, which is strongly discouraged due to [Pastejacking Exploitation Technique](https://github.com/dxa4481/Pastejacking):
 
 {{< codeblock lang="bash" title="reddit-wallpaper.sh" line_numbers="true" >}}
 #!/usr/bin/env bash
