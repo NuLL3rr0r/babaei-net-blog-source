@@ -3,6 +3,7 @@ title = "آموزش نحوه ی نصب Unreal Engine 4"
 slug = "unreal-engine-installation"
 date = 2016-02-07T17:27:57+03:30
 tags = [ "Epic Games", "gamedev", "Game Development", "Game Programming", "indiedev", "UE4", "Unreal Engine" ]
+toc = true
 aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 +++
 
@@ -21,40 +22,12 @@ aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 <!--more-->
 
 
-<br />
-
-### فهرست ###
-
-* [پیش نیازهای نصب و اجرای Unreal Engine 4](#ue4-prerequisites)
-    * [سخت افزار پیشنهادی](#recommended-hardware)
-    * [حداقل پیش نیازهای نرم افزاری](#minimum-software-requirements)
-        * [نیازمندی های اجرای UE4](#minimum-software-requirements-for-running-the-engine)
-        * [نیازمندی های توسعه با UE4](#minimum-software-requirements-for-developing-with-the-engine)
-* [نکاتی پیش از نصب](#notes-before-you-begin)
-* [نصب](#ue4-installation)
-    * [ایجاد حساب کاربری Epic](#creating-an-epic-account)
-    * [دریافت و اجرای برنامه نصب](#downloading-and-running-the-installer)
-        * [Windows](#downloading-and-running-the-installer-windows)
-        * [Mac OS X](#downloading-and-running-the-installer-mac-os-x)
-        * [GNU/Linux](#downloading-and-running-the-installer-gnu-linux)
-    * [ورود به Epic Games Launcher](#signing-into-the-epic-launcher)
-    * [نصب Unreal Engine](#installing-unreal-engine)
-* [اجرای Unreal Engine](#launching-unreal-engine)
-* [راه حل مشکلات کندی اینترنت و تحریم ها](#windows-vps)
-
-
-<br />
-<a name="ue4-prerequisites"></a>
-
-### پیش نیازهای نصب و اجرای Unreal Engine 4 ###
+## پیش نیازهای نصب و اجرای Unreal Engine 4 ###
 
 جهت اجرا و یا توسعه بازی های مبتنی بر Unreal Engine 4 و یا اجرای Editor آن، نیاز به پیش نیازهای سخت افزاری و نرم افزاری خاصی می باشد که در ادامه بدان خواهیم پرداخت.
 
 
-<br />
-<a name="recommended-hardware"></a>
-
-#### سخت افزار پیشنهادی ####
+### سخت افزار پیشنهادی
 
 سخت افزار پیشنهادی جهت اجرای Unreal Engine به شرح ذیل می باشد:
 
@@ -132,18 +105,12 @@ aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 </div>
 
 
-<br />
-<a name="minimum-software-requirements"></a>
-
-#### حداقل پیش نیازهای نرم افزاری ####
+### حداقل پیش نیازهای نرم افزاری
 
 این لیست به دو بخش تقسیم می شود: اجرای Engine و توسعه با Engine.
 
 
-<br />
-<a name="minimum-software-requirements-for-running-the-engine"></a>
-
-##### نیازمندی های اجرای UE4 #####
+#### نیازمندی های اجرای UE4#
 
 لیست ذیل شامل حداقل نیازمندی ها جهت اجرای Engine و یا Editor می باشد:
 
@@ -221,10 +188,7 @@ aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 </div>
 
 
-<br />
-<a name="minimum-software-requirements-for-developing-with-the-engine"></a>
-
-##### نیازمندی های توسعه با UE4 #####
+#### نیازمندی های توسعه با UE4
 نیازمندی های توسعه با Unreal Engine 4 به شرح ذیل می باشد:
 
 <div style="direction: ltr !important;">
@@ -288,10 +252,7 @@ aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 </div>
 
 
-<br />
-<a name="notes-before-you-begin"></a>
-
-### نکاتی پیش از نصب ###
+## نکاتی پیش از نصب
 
 با توجه به تحریم های بین المللی، در تمامی مراحل این آموزش فرض بر این است که شما به هیچ وجه از IP ایران استفاده نمی نمائید. در غیر اینصورت امکان طی نمودن هیچ یک از این مراحل وجود نخواهد داشت.
 
@@ -302,17 +263,12 @@ aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 __توجه__: چنانچه پیش از این مراحل تهیه حساب کاربری را طی نموده اید، می توانید مستقیما به بخش [دریافت و اجرای برنامه نصب](#downloading-and-running-the-installer) مراجعه نمائید.
 
 
-<br />
-<a name="ue4-installation"></a>
-
-### نصب ###
+## نصب
 
 نصب UE4 شامل چندین مرحله می باشد که در ادامه بدان می پردازیم.
 
-<br />
-<a name="creating-an-epic-account"></a>
 
-#### ایجاد حساب کاربری Epic ####
+### ایجاد حساب کاربری Epic
 
 جهت نصب Epic Games Launcher، به یک حساب کاربری Epic Games نیاز خواهید داشت.
 
@@ -337,18 +293,13 @@ __توجه__: در صورت بروز سوالات بیشتر در مورد EULA 
 
 شایان ذکر است که این حساب کاربری علاوه بر Epic Games Launcher، در [انجمن Unreal Engine](https://forums.unrealengine.com/) هم معتبر و قابل استفاده بوده و توسط آن می توان به این انجمن نیز دسترسی داشت.
 
-<br />
-<a name="downloading-and-running-the-installer"></a>
 
-#### دریافت و اجرای برنامه نصب ####
+### دریافت و اجرای برنامه نصب
 
 با داشتن یک حساب کاربری معتبر Epic Games، قادر به دریافت برنامه نصب به نام Epic Games Launcher خواهید بود.
 
 
-<br />
-<a name="downloading-and-running-the-installer-windows"></a>
-
-##### Windows #####
+#### Windows
 
 1. با کلیک بر روی دکمه دانلود اقدام به دریافت برنامه نصب نمائید.
 
@@ -363,10 +314,7 @@ __توجه__: در صورت بروز سوالات بیشتر در مورد EULA 
 {{< figure src="/blog/unreal-engine-installation/run-epic-launcher-setup.jpg" alt="تصویر 7. برنامه نصب Epic Games Launcher" caption="تصویر 7. برنامه نصب Epic Games Launcher" >}}
 
 
-<br />
-<a name="downloading-and-running-the-installer-mac-os-x"></a>
-
-##### Mac OS X #####
+#### Mac OS X
 
 1. با کلیک بر روی دکمه دانلود اقدام به دریافت برنامه نصب نمائید (تصویر 5.).
 2. بر روی فایل دریافت شده با نام <code>EpicGamesLauncher.dmg</code> دابل کلیک نمائید تا محتویات آن در پنجره Finder نمایش داده شود.
@@ -375,30 +323,21 @@ __توجه__: در صورت بروز سوالات بیشتر در مورد EULA 
 {{< figure src="/blog/unreal-engine-installation/install-epic-laucher-mac.jpg" alt="تصویر 8. برنامه نصب Epic Games Launcher در سیستم عامل Mac OS X" caption="تصویر 8. برنامه نصب Epic Games Launcher در سیستم عامل Mac OS X" >}}
 
 
-<br />
-<a name="downloading-and-running-the-installer-gnu-linux"></a>
-
-##### GNU/Linux #####
+#### GNU/Linux
 
 متاسفانه در حال حاضر برنامه نصب Unreal Engine برای گنو لینوکس به شکل باینری عرضه نمی شود.
 
 __نکته__: در حال حاضر کاربران GNU/Linux می توانند با استفاده از [سورس کد Unreal Engine بر روی GitHub](https://github.com/EpicGames/UnrealEngine) اقدام به کامپایل و نصب آن نمایند. در مقاله ای دیگر به این موضوع خواهیم پرداخت.
 
 
-<br />
-<a name="signing-into-the-epic-launcher"></a>
-
-#### ورود به Epic Games Launcher ####
+### ورود به Epic Games Launcher
 
 پس از آنکه برنامه نصب،  Epic Games Launcher بر روی دستگاه شما نصب نمود، با اجرا نمودن آن و سپس استفاده از اطلاعات حساب کاربری خود به داخل Epic Games Launcher لاگین نمائید.
 
 {{< figure src="/blog/unreal-engine-installation/epic-sign-in.jpg" alt="تصویر 9. ورود به حساب کاربری Epic از داخل Launcher" caption="تصویر 9. ورود به حساب کاربری Epic از داخل Launcher" >}}
 
 
-<br />
-<a name="installing-unreal-engine"></a>
-
-#### نصب Unreal Engine ####
+### نصب Unreal Engine
 
 بسیار خب، اکنون پس از ورود به Epic Games Launcher شما قادر به نصب UE4 خواهید بود.
 
@@ -427,10 +366,7 @@ __نکته__: در حال حاضر کاربران GNU/Linux می توانند ب
 {{< figure src="/blog/unreal-engine-installation/downloading-engine.jpg" alt="تصویر 13. دریافت Engine" caption="تصویر 13. دریافت Engine" >}}
 
 
-<br />
-<a name="launching-unreal-engine"></a>
-
-### اجرای Unreal Engine ###
+## اجرای Unreal Engine
 
 پس از آنکه Unreal Engine توسط Epic Games Launcher با موفقیت دریافت شد، با کلیک بر روی دکمه Launch می توانید UE4 را اجرا نمائید.
 
@@ -445,11 +381,7 @@ __نکته__: در حال حاضر کاربران GNU/Linux می توانند ب
 * Unreal Engine را اجرا نمائید
 
 
-
-<br />
-<a name="windows-vps"></a>
-
-### راه حل مشکلات کندی اینترنت و تحریم ها ###
+## راه حل مشکلات کندی اینترنت و تحریم ها
 
 جهت غلبه بر مسایلی از این دست راه های متفاوت زیادی وجود دارد. اما Foolproof ترین راه ممکن خرید یک سرور مجازی ویندوزی (Windows VPS) می باشد. جهت اتصال به سرور های ویندوزی می توان از <code>mstsc</code> که به همراه Microsoft Windows عرضه می شود، استفاده نمود. کافیست پنجره Run را با فشردن کلید میانبر <code>Windows+R</code>  بر روی صفجه کلید، باز نموده و دستور <code>mstsc</code> را تایپ و اجرا نمود (تصویر 15.):
 
@@ -466,21 +398,10 @@ __نکته__: در حال حاضر کاربران GNU/Linux می توانند ب
 
 لازم به ذکر است که اگر قصد توسعه بازی های مبتنی بر Android با UE4 را داشته باشید به [مجموعه کیت توسعه نرم افزار  NVPack از سوی شرکت NVidia](https://developer.nvidia.com/codeworks-android) نیاز خواهید داشت (در مقاله ای دیگر نصب و راه اندازی آن جهت توسعه Game های مبتنی بر Android را به تفصیل شرح خواهیم داد) که متاسفانه دسترسی به این کیت توسعه هم برای کاربران ایرانی مسدود شده است. لذا جهت توسعه بازی با استفاده از Unreal Engine 4 و NVPack، برای اکثر کاربران ایرانی استفاده از یک VPS ویندوزی تقریبا اجتناب ناپذیر می نماید.
 
-<br />
-
 در مقاله بعدی به روش دیگر نصب UE4 که شامل دریافت سورس کد آن از GitHub و کامپایل نمودن از سورس می باشد، می پردازیم.
 
 
-<br />
-
-### منابع ###
+## منابع
 
 * [Unreal Engine 4 Hardware & Software Specifications](https://docs.unrealengine.com/latest/INT/GettingStarted/RecommendedSpecifications/index.html)
 * [Installing Unreal Engine](https://docs.unrealengine.com/latest/INT/GettingStarted/Installation/index.html)
-
-
-<br />
-
-### مقالات مرتبط ###
-
-* [مقدمه ای بر موتور ساخت بازی Unreal Engine 4](/blog/2016/01/25/unreal-engine-4-introduction/)

@@ -3,6 +3,7 @@ title = "تاریخچه FreeBSD"
 slug = "the-history-of-freebsd"
 date = 2016-01-23T13:25:06+03:30
 tags = [ "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "UNIX" ]
+toc = true
 aliases = [ "/blog/2016/01/23/the-history-of-freebsd/" ]
 +++
 
@@ -14,23 +15,7 @@ aliases = [ "/blog/2016/01/23/the-history-of-freebsd/" ]
 
 <!--more-->
 
-
-<br />
-
-### فهرست ###
-
-* [BSD](#bsd-history)
-* [GNU/Linux](#gnu-linux)
-* [FreeBSD](#freebsd-history)
-* [دلایل عدم اقبال عموم به BSD](#lack-of-public-interest-in-bsd)
-* [میراث BSD](#bsd-legacy)
-* [منابع](#references)
-
-
-<br />
-<a name="bsd-history"></a>
-
-### BSD ###
+## BSD
 
 درک BSD نیازمند کاوش تاریخچه آن و بازگشت به عقب تا مبدا آن یعنی [UNIX](http://www.unix.org/) می باشد. سیستم عاملی که اولین بار در سال 1969 توسط [AT&T Bell Labs](https://en.wikipedia.org/wiki/Bell_Labs) منتشر شد. در سال 1969 [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson) و [Denise Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)  کار را بر روی سیستم عاملی بی نام که بعدها UNIX  نامیده شد در AT&T Bell Labs آغاز نمودند. در ابتدا این سیستم عامل بر روی یک [DEC PDP-7](https://en.wikipedia.org/wiki/PDP-7) که یک مینی کامپیوتر بود توسعه و اجرا می شد. برای قریب یک دهه توسعه UNIX [تحت نام هائی که با عدد شناخته می شد](https://en.wikipedia.org/wiki/List_of_Unix_systems) در [AT&T](https://www.att.com/) انجام می گرفت. V4 (1974) به شکل کامل در [C](https://en.wikipedia.org/wiki/C_%28programming_language%29)  بازنویسی شد که گام بزرگی جهت پرتابل نمودن این سیستم عامل در دستگاه های مختلف تلقی می شد. V6 (1975) اولین نسخه از این سیستم عامل بود که در خارج از [Bell Labs](http://www.belllabs.com/)  در دسترس قرار گرفت و اولین UNIX در [دانشگاه برکلی](http://www.berkeley.edu/)  بر مبنای آن توسعه داده شد. در آغاز BSD حیات خود را به عنوان گونه ای از UNIX توسط گروهی از دانشجویان در دانشگاه برکلی کالیفرنیا که در آغاز توسط [Bill Joy](https://en.wikipedia.org/wiki/Bill_Joy) –   موسس شرکت [Sun Microsystems](https://en.wikipedia.org/wiki/Sun_Microsystems)  که بعدها توسط [Oracle](https://www.oracle.com/)  خریداری شد - رهبری می شدند آغاز کرد.
 
@@ -41,20 +26,14 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 از آنجائی که Net/2 BSD تحت لیسانس بسیار دست و دلبازانه ای عرضه می شد و به همگان اجازه استفاده، مطالعه، تغییر و حتی ایجاد یک سیستم عامل جدید بر اساس سورس کدش را می داد به یقین اولین سیستم عامل Open Source متن باز محسوب می شود. با وجود این که در آن زمان عبارت Open Source وجود نداشت و Net/2 هیچگاه مورد تائید [Free Software Foundation یا به اختصار FSF (بنیاد نرم افزارهای آزاد)](http://www.fsf.org/)  قرار نگرفت این سیستم عامل هنوز هم یک گام رو به جلوی بزرگ برای جامعه نرم افزارهای آزاد محسوب می شد چرا که ثابت نمود توسعه نسخه ای آزاد از UNIX امکان پذیر است.
 
 
-<br />
-<a name="gnu-linux"></a>
-
-### GNU/Linux ###
+## GNU/Linux
 
 البته BSD تنها تلاش جهت توسعه و عرضه یک UNIX آزاد نبود. [Richard Stallman](https://en.wikipedia.org/wiki/Richard_Stallman)  در سال 1983  در [انستیتو تکنولوژی دانشگاه Massachusetts یا به اختصارMIT](http://mit.edu/)، پروژه [GNU](http://www.gnu.org/) را معرفی و در سال 1984 کار بر روی آن را آغاز نمود. GNU مخفف عبارت GNU’s Not UNIX می باشد. تا اوایل دهه 90 میلادی بخش عمده ای از این سیستم عامل آزاد تحت نظارت FSF که Stallman موسس آن بود شامل [GNU C Library](https://www.gnu.org/software/libc/) همچنین [Bourne Again Shell یا به اختصار BASH](https://www.gnu.org/software/bash/) و [GNU C Compiler یا به اختصار GCC](https://gcc.gnu.org/) می شد با موفقیت توسعه داده شد، جز یک بخش آن: کرنل. در اوایل دهه 90 میلادی کار بر روی [GNU Hurd](https://www.gnu.org/software/hurd/)  که هسته این سیستم عامل بود آغاز شد. از آنجا که با تصمیم Stallman معماری هسته این سیستم عامل [Microkernel](https://www.gnu.org/software/hurd/faq/multiserver_microkernel.html)  در نظر گرفته شد توسعه آن به دلیل پیچیدگی های فراوان با سرعت بسیار پائینی صورت می گرفت.
 
 در پائیز سال 1991 در دانشگاه Helsinki فنلاند دانشجوئی به نام [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) با الهام از سیستم عاملی به نام [MINIX](http://www.minix3.org/) که[Andrew S. Tanenbaum](https://en.wikipedia.org/wiki/Andrew_S._Tanenbaum) جهت آموزش مفاهیم سیستم عامل به دانشجویان در کتاب خود، توسعه داده بود، کار توسعه هسته Linux را آغاز نمود. این نسخه از MINIX شامل 12,000 خط کد C بود و برای کامپیوترهای شخصی [IBM](http://www.ibm.com/) توسعه داده شده بود. در نهایت رویای Stallman با قرار گرفتن هسته Linux در کنار GNU به واقعیت پیوست و در سال 1994  نسخه 1.0 از Linux منتشر شد. بسیاری این سیستم عامل را به نام Linux می شناسند، هرچند از آن جا که Linux فقط یک هسته است [ترجیح Stallman این است که این سیستم عامل GNU/Linux نامیده شود.](http://www.gnu.org/gnu/linux-and-gnu.en.html)
 
 
-<br />
-<a name="freebsd-history"></a>
-
-### FreeBSD ###
+## FreeBSD
 
 از آنجائی که توسعه 386BSD بسیار کند پیش می رفت، گروهی از کاربران آن از جمله Nate Williams, Rod Grimes و [Jordan Hubbard](https://en.wikipedia.org/wiki/Jordan_Hubbard) تصمیم به ایجاد سیستم عامل دیگری بر اساس کد 4.3BSD-Lite (Net/2) (که توسط دانشگاه برکلی ارایه شده بود) به همراه بهبودهائی که از طریق 386BSD حاصل شده بود نمودند. همچنین این سیستم عامل بخش هائی از پروژه GNU که توسط FSF ارایه شده بود را به همراه داشت. نام [FreeBSD](https://www.freebsd.org/) توسط David Greenman پیشنهاد شد. Hubbard جهت منتشر نمودن این سیستم عامل به سراغ کمپانی [Walnut Creek CDROM](https://en.wikipedia.org/wiki/Walnut_Creek_CDROM) رفت. سرانجام FreeBSD 1.0 در نوامبر 1993 منتشر شد. این کمپانی علاوه بر انتشار FreeBSD بر روی CD برای افرادی که به اینترنت دسترسی نداشتند، یک دستگاه کامپیوتر قدرتمند و یک خط اینترنت پرسرعت را در اختیار پروژه قرار داد. تا سال 1997، FreeBSD موفق ترین محصول این کمپانی شناخته شد. در سال 2000 این کمپانی با [BSDI]( https://en.wikipedia.org/wiki/Berkeley_Software_Design) که خود توسط یکی از کلیدی ترین چهره های دنیای اینترنت [Rick Adams](https://en.wikipedia.org/wiki/Rick_Adams_(Internet_pioneer))  و چهره های کلیدی دنیای BSD از گروه [Computer Systems Research Group یا به اختصار CSRG](https://en.wikipedia.org/wiki/Berkeley_Software_Design) شامل [Marshall Kirk McKusick](https://en.wikipedia.org/wiki/Marshall_Kirk_McKusick), Keith Bostic, [Mike Karels](https://en.wikipedia.org/wiki/Michael_J._Karels), Bill Jolitz و Donn Seeley می شد، تلفیق شد. در سال 2001 تمامی متعلقات نرم افزاری BSDI شامل FreeBSD, [Slackware Linux]( http://www.slackware.com/) و [BSD/OS]( https://en.wikipedia.org/wiki/BSD/OS) توسط شرکت [Wind River Systems](https://en.wikipedia.org/wiki/Wind_River_Systems) خریداری شد و مابقی شرکت با تمرکز بر سخت افزار به [iXsystems](https://en.wikipedia.org/wiki/IXsystems) تغییر نام داد. پس از آن Wind River Systems به پشتیبانی از Slackware Linux خاتمه داد در حالیکه بخش FreeBSD به عنوان یک واحد مستقل تحت نام [FreeBSD Mall, Inc.]( https://www.freebsdmall.com/) به کار خود ادامه داد. تا به امروز iXsystems و FreeBSD Mall از اصلی ترین حامیان FreeBSD محسوب می شوند.
 
@@ -65,10 +44,7 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 شایان ذکر است که از سال 2001 به بعد پروژه FreeBSD تحت نظر The FreeBSD Foundation[ یا بنیاد FreeBSD](https://www.freebsdfoundation.org/) اداره می شود.
 
 
-<br />
-<a name="lack-of-public-interest-in-bsd"></a>
-
-### دلایل عدم اقبال عموم به BSD ###
+## دلایل عدم اقبال عموم به BSD
 
 خب! سوال اصلی اینجاست که اگر BSD Net/2 اولین سیستم عامل کدباز بود، پس چرا فرصت درخشش در نزد عموم نصیب GNU/Linux شد؟ دلایل این موضوع را می توان در موارد ذیل خلاصه نمود:
 
@@ -77,10 +53,7 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 * مدل توسعه: به شکل سنتی مدل توسعه BSD آنچه که [Eric S. Raymond](https://en.wikipedia.org/wiki/Eric_S._Raymond)  افسانه ای در کتاب خود [The Cathedral and the Bazaar](https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar)  مدل Cathedral می نامد، می باشد. کار توسعه BSD توسط یک تیم آکادمیک و حرفه ای اما کوچک و متمرکز از توسعه دهندگان که استاد برنامه نویسی می باشند، انجام می شود. این در حالیست که Linux توسط Linus Torvalds به شکل غیر متمرکز، با همکاری شبکه ای از برنامه نویسان بدون ساختار مشخص در سرتاسر اینترنت که تنها نیازمندی جهت تائید صلاحیتشان قابلیت به ثمر رساندن وظیفه محول شده می باشد توسعه می یابد. این چیزی است که Raymond مدل Bazaar می نامد. هر چند که کد هسته سیستم عامل های خانواده BSD بسیار تمیزتر و خواناتر از Linux می باشد، اما برگ برنده Linux که منجر به نوآوری سریع آن در سال های آغازین توسعه و در نتیجه شهرت آن شده است دقیقا همین مدل توسعه می باشد. مدل  توسعه بسیار کارائی که خانواده BSD هیچ وقت به چشم ندیده است. چیزی که Linus Torvalds بر حسب اتفاق کشف نمود. جالب آنکه مدل توسعه GNU هم در 15 سال اول توسعه اش به مانند BSD همان مدل Cathedral بوده است.
 
 
-<br />
-<a name="bsd-legacy"></a>
-
-### میراث BSD ###
+## میراث BSD
 
 البته با به شهرت رسیدن Linux در اواسط دهه 90  میلادی، [BSD  هیچ گاه منقرض](http://lists.freebsd.org/pipermail/freebsd-questions/2003-July/012219.html) نشد. در مقابل سیستم عامل های متعددی از جمله [FreeBSD](https://www.freebsd.org), [OpenBSD](http://www.openbsd.org/), [NetBSD](https://www.netbsd.org/), [DragonFly BSD](https://www.dragonflybsd.org/), [PC-BSD](http://www.pcbsd.org/), [GhostBSD](http://www.ghostbsd.org/), [MidnightBSD](http://www.midnightbsd.org/), [PureDarwin](http://www.puredarwin.org/)  و ... با انجمن ها و گروه های کاربری محدود، اما مشتاق و سرزنده به حیات خود ادامه می دهند. حتی محصولات متعددی مانند  [FreeNAS](http://www.freenas.org/), [pfSense](https://www.pfsense.org/), [BSD Router Project](http://bsdrp.net/), [m0n0wall](http://m0n0.ch/wall/index.php)   و ... به شکل مستمر براساس آن ها توسعه داده می شود. از آن جالب تر این که Distro های خوش نام دنیای Linux مانند [Debian](https://www.debian.org/) یا [Gentoo](https://www.gentoo.org/)  اقدام به عرضه همزمان توزیع های خود با هسته BSD به جای Linux هم نموده اند. از قبیل: [Debian GNU/kFreeBSD](https://www.debian.org/ports/kfreebsd-gnu/), [Gentoo/FreeBSD](https://wiki.gentoo.org/wiki/Gentoo_FreeBSD), [Gentoo/NetBSD](https://wiki.gentoo.org/wiki/Project:NetBSD), [Gentoo/OpenBSD](https://wiki.gentoo.org/wiki/Project:OpenBSD), [Gentoo/DragonFlyBSD](https://github.com/naota/gentoo-dragonflybsd)  و ...
 
@@ -95,10 +68,7 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 [در مقاله بعدی به تشریح ماهیت، مفاهیم، ویژگی ها و اهداف FreeBSD خواهیم پرداخت](http://127.0.0.1:13001/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/).
 
 
-<br />
-<a name="references"></a>
-
-### منابع ###
+## منابع
 
 * [Open Sources: Voices from the Open Source Revolution](http://www.oreilly.com/openbook/opensources/book/kirkmck.html)
 * [Open Source History: Why Didn't BSD Beat Out GNU and Linux](http://thevarguy.com/open-source-application-software-companies/062615/open-source-history-why-didnt-bsd-beat-out-gnu-and-linux)
@@ -106,11 +76,3 @@ Bell Labs همچنان کار بر روی UNIX تا دهه 80 میلادی را 
 * [About the FreeBSD Project](https://www.freebsd.org/doc/handbook/history.html)
 * [FreeBSD Mall, Company History]( https://www.freebsdmall.com/cgi-bin/fm/history.html)
 * [Linux Today - Report from Comdex--Walnut Creek CDROM, FreeBSD and Slackware](http://www.linuxtoday.com/infrastructure/1998112000105OP)
-
-
-<br />
-
-### مقالات مرتبط ###
-
-* [FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBSD](/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/)
-* [FreeBSD یا Linux مسئله این است؟](/blog/2016/03/07/freebsd-vs-linux/)

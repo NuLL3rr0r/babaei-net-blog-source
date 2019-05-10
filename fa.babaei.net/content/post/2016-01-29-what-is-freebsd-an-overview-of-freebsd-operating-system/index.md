@@ -3,6 +3,7 @@ title = "FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBS
 slug = "what-is-freebsd-an-overview-of-freebsd-operating-system"
 date = 2016-01-29T04:25:36+03:30
 tags = [ "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "UNIX" ]
+toc = true
 aliases = [ "/blog/2016/01/29/what-is-freebsd-an-overview-of-freebsd-operating-system/" ]
 +++
 
@@ -15,35 +16,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 <!--more-->
 
 
-<br />
-
-### فهرست ###
-
-* [BSD چیست؟](#what-is-bsd)
-* [آیا BSD یک UNIX واقعی است؟](#is-bsd-a-real-unix)
-* [چرا BSD در نزد عموم شناخته شده نیست؟](#why-bsd-is-not-better-known)
-* [هدف پروژه FreeBSD چیست؟](#what-is-the-goal-of-freebsd-project)
-* [آیا لیسانس FreeBSD محدودیتی هم دارد؟](#does-the-freebsd-license-have-any-restrictions)
-* [آیا FreeBSD می تواند جایگزین سیستم عامل فعلی من باشد؟](#can-freebsd-replace-my-current-operating-system)
-* [چرا FreeBSD نامیده می شود؟](#why-is-it-called-freebsd)
-* [چه تفاوت هائی میان سیستم عامل های FreeBSD, NetBSD, OpenBSD و سایر نسخ کد باز BSD وجود دارد؟](#what-are-the-differences-between-freebsd-and-netbsd-openbsd-and-other-open-source-bsd-operating-systems)
-* [آخرین نسخه FreeBSD کدام است؟](#what-is-the-latest-version-of-freebsd)
-* [FreeBSD-CURRENT چیست؟](#what-is-freebsd-current)
-* [هدف از FreeBSD-STABLE چیست؟](#what-is-the-stable-freebsd-concept)
-* [چه زمانی نسخ Release از FreeBSD عرضه می شوند؟](#when-are-freebsd-releases-made)
-* [چه تعداد نرم افزار قابل اجرا بر روی FreeBSD در دسترس است؟](#how-many-softwares-are-available-for-freebsd)
-* [آیا FreeBSD مانند GNU/Linux نرم افزار مدیریت بسته هم دارد؟](#does-freebsd-has-any-package-manager-like-its-counterpart-gnu-linux)
-* [چه کسی یا کسانی عهده دار FreeBSD هستند؟](#who-is-responsible-for-freebsd)
-* [از کجا می توانم FreeBSD را دریافت نمایم؟](#where-can-i-get-freebsd)
-* [چگونه می توانم به پایگاه داده گزارش اشکالات دسترسی داشته باشم؟](#how-can-i-access-the-problem-report-database)
-* [آیا منابع آموزشی کافی برای FreeBSD وجود دارد؟ در این صورت از کجا می توان آن ها را تهیه نمود؟](#is-there-enough-learning-resources-for-freebsd-if-so-where-to-get-them)
-* [چیز دیگری هست که باید بدانم؟](#what-else-should-i-know)
-
-
-<br />
-<a name="what-is-bsd"></a>
-
-### BSD چیست؟ ###
+## BSD چیست؟
 
 [BSD سرنام عبارت Berkeley Software Distribution](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution) می باشد و به توزیع های منشعب شده از سورس کدی که در اصل در [دانشگاه برکلی کالیفرنیا](https://en.wikipedia.org/wiki/University_of_California,_Berkeley) توسعه یافته، اتلاق می شود. این سورس کد در آغاز تنها ضمیمه ای بر روی کد سیستم عامل [AT&T Research UNIX](https://en.wikipedia.org/wiki/Research_Unix) بود. در حال حاضر چندین سیستم عامل بر اساس نسخه ای از این کد، که تحت عنوان [BSD-4.4-Lite](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution#4.4BSD_and_descendants)  شناخته می شود، در دسترس قرار دارند. علاوه بر آن، این سیستم عامل ها بخش هائی از کد سایر پروژه های کدباز را شامل می شوند، که مهم ترین آن ها [GNU](https://en.wikipedia.org/wiki/GNU) می باشد. بصورت کلی این سیستم عامل ها شامل بخش های ذیل می باشند:
 
@@ -54,10 +27,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 * در نهایت بسیاری برنامه و ابزارهای دیگر.
 
 
-<br />
-<a name="is-bsd-a-real-unix"></a>
-
-### آیا BSD یک UNIX واقعی است؟ ###
+## آیا BSD یک UNIX واقعی است؟
 
 سیستم عامل های BSD نسخه های کپی برداری شده از UNIX نیستند. در واقع آن ها منشعب شده از AT&T Research UNIX می باشند که نیای UNIX مدرن نسخه [System V](https://en.wikipedia.org/wiki/UNIX_System_V) هم می باشد. شاید باعث سورپرایز شما شود، که اگر [AT&T](https://en.wikipedia.org/wiki/AT%26T) هیچ وقت سورس کد خود را در قالب کدباز ارایه ننموده است، چطور همچین چیزی ممکن است؟
 
@@ -72,10 +42,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 386BSD هیچگاه یک سیستم عامل پایدار نشد. اما در سال 1993، از خاکستر آن دو سیستم عامل دیگر به نام های FreeBSD و [NetBSD](https://en.wikipedia.org/wiki/NetBSD) سربرآوردند. در اصل، هردوی این سیستم عامل ها به خاطر کندی پیشرفت 386BSD از آن منشعب شدند. افراد پشت پروژه NetBSD ابتدای همان سال پروژه خود را آغاز نمودند در حالیکه اولین نسخه از FreeBSD تا پایان همان سال به طول انجامید. در نهایت، به دلیل تفاوت زیاد کدهای توسعه یافته در هر دو پروژه، امکان تلفیق آن ها هیچگاه میسر نشد. علاوه بر آن هر کدام از این پروژه ها اهداف خاص خود را دنبال می نموند که مانع از این امر می شد. در سال 1996، سیستم عامل [OpenBSD](https://en.wikipedia.org/wiki/OpenBSD) از NetBSD منشعب شد و در سال 2003 پروژه [DragonFly BSD](https://en.wikipedia.org/wiki/DragonFly_BSD) از FreeBSD.
 
 
-<br />
-<a name="why-bsd-is-not-better-known"></a>
-
-### چرا BSD در نزد عموم شناخته شده نیست؟ ###
+## چرا BSD در نزد عموم شناخته شده نیست؟
 
 بنا به دلایل متعددی، BSD نسبتا ناشناخته است:
 
@@ -87,18 +54,12 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 پیامد آن دعوای حقوقی، تصریح نکته ای در مورد نام BSD بود: در سال های دهه 80، BSD به نام BSD UNIX شناخته می شد که با حذف آخرین ردپاهای کد AT&T از BSD، این سیستم عامل حق استفاده از نام UNIX به شکل رسمی را از دست داد. برای مثال در عناوین کتاب ها: از The 4.3BSD UNIX® Operating System به The 4.4BSD Operating System تغییر یافت.
 
 
-<br />
-<a name="what-is-the-goal-of-freebsd-project"></a>
-
-### هدف پروژه FreeBSD چیست؟ ###
+## هدف پروژه FreeBSD چیست؟
 
 هدف FreeBSD ارائه سیستم عاملی همه منظوره، پایدار، سریع با کارائی بالا، سادگی استفاده به هر منظوری، عاری از هرگونه قید و شرط می باشد. معمولا انتخاب اول سرویس دهنده های وب در میان سایر BSD هاست که اتفاقا [ از بیشترین میزان استفاده در میان BSD ها برخوردار می باشد](https://en.wikipedia.org/wiki/Comparison_of_BSD_operating_systems#Popularity).
 
 
-<br />
-<a name="does-the-freebsd-license-have-any-restrictions"></a>
-
-### آیا لیسانس FreeBSD محدودیتی هم دارد؟ ###
+## آیا لیسانس FreeBSD محدودیتی هم دارد؟
 
 بله. این محدودیت ها شامل چگونگی استفاده از کدهای آن نمی باشد، بلکه این محدودیت ها نحوه برخورد با پروژه FreeBSD را مشخص می سازد. [این لیسانس](http://www.freebsd.org/copyright/freebsd-license.html) و محدودیت های آن را می توان به شرح ذیل خلاصه نمود:
 
@@ -109,10 +70,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 علاوه بر آن به دلیل استفاده FreeBSD از بخش هائی از پروژه GNU، قسمت هائی از کد آن مبتنی بر لیسانس های GNU [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License) / [LGPL](https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License) می باشد که می بایستی مطابق با محدودیت های آن ها عمل شود. به عنوان مثال استفاده از کدهای مبتنی بر GPL / LGPL در نرم افزارهای کد بسته محدودیت هائی را شامل می شود که ممکن است منجر به پیگیری قضائی از سوی نویسنده اصلی آن پروژه ها شود. البته پروژه FreeBSD در تلاش است تا هرچه بیشتر کدهای مبتنی بر لیسانس های GPL / LGPL را با کد تحت لیسانس BSD یا مشابه آن جایگزین نماید. برای مثال پس از تغییر لیسانس [GNU Toolchain](https://en.wikipedia.org/wiki/GNU_toolchain) از [GPLv2](https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_2) به [GPLv3](https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3)، به دلیل محدودیت های بیشتر آن، با [LLVM](https://en.wikipedia.org/wiki/LLVM) که لیسانس دست و دلبازانه تری دارد، جایگزین شد.
 
 
-<br />
-<a name="can-freebsd-replace-my-current-operating-system"></a>
-
-### آیا FreeBSD می تواند جایگزین سیستم عامل فعلی من باشد؟ ###
+## آیا FreeBSD می تواند جایگزین سیستم عامل فعلی من باشد؟
 
 برای بسیاری از افراد، بله. اجازه بدهید مقداری توضیح دهم.
 
@@ -123,10 +81,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 کاربرانی که از یک سیستم عامل شبه UNIX به FreeBSD مهاجرت می نمایند تشابهات بسیاری را در آن خواهند یافت. کاربرانی که از Windows یا Mac OS X قصد مهاجرت به FreeBSD را دارند، شاید بهتر باشد دیگر توزیع های تحت دسکتاپ مبتنی بر FreeBSD مانند PC-BSD و یا [GhostBSD](https://en.wikipedia.org/wiki/GhostBSD) را امتحان نمایند. کاربرانی که UNIX یا سیستم های مشابه آن را تجربه ننموده اند احتمالا نیازمند یادگیری کارها به روش UNIX خواهند بود.
 
 
-<br />
-<a name="why-is-it-called-freebsd"></a>
-
-### چرا FreeBSD نامیده می شود؟ ###
+## چرا FreeBSD نامیده می شود؟
 * می تواند به رایگان استفاده شود، حتی توسط کاربران تجاری.
 * سورس کد کامل سیستم عامل با کمترین محدودیت های ممکن در نحوه استفاده از آن، به شکل آزادانه در دسترس می باشد. حتی اگر قصد تغییر آن را برای مقاصد تجاری یا غیر تجاری داشته باشید.
 * هر کسی می تواند بهبودها یا رفع اشکالات خود را با رعایت پیش نیازها و قوانین آن به سورس کد اصلی FreeBSD اضافه نماید.
@@ -134,10 +89,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 قابل ذکر است که کلمه Free به دو معنا می باشد: اول "بدون هیچ بهائی"، دوم "هر کاری که می خواهید بکنید". البته بجز یک یا دو کار که شما با کد آن نمی توانید بکنید؛ مثلا ادعا کنید آن را نوشته اید، به معنای واقعی کلمه می توانید هر کاری که می خواهید بکنید.
 
 
-<br />
-<a name="what-are-the-differences-between-freebsd-and-netbsd-openbsd-and-other-open-source-bsd-operating-systems"></a>
-
-### چه تفاوت هائی میان سیستم عامل های FreeBSD, NetBSD, OpenBSD و سایر نسخ کد باز BSD وجود دارد؟ ###
+## چه تفاوت هائی میان سیستم عامل های FreeBSD, NetBSD, OpenBSD و سایر نسخ کد باز BSD وجود دارد؟
 
 [James Howard](https://jameshoward.us/) توضیحات دقیق و بسیار خوبی راجع به تاریخچه و تفاوت های هر یک از این پروژه ها به نام [The BSD Family Tree](http://www.freebsdworld.gr/freebsd/bsd-family-tree.html) به رشته تحریر درآورده است که پاسخ جامع این سوال را در خود دارد. برخی از اطلاعات آن دیگر به روز نیست؛ اما مثلا قسمت تاریخچه آن کاملا دقیق است.
 
@@ -150,10 +102,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 * GhostBSD: درست مانند PC-BSD کاربران Desktop را هدف قرار داده است، با این تفاوت که پروژه کوچکتر و جوان تری می باشد.
 
 
-<br />
-<a name="what-is-the-latest-version-of-freebsd"></a>
-
-### آخرین نسخه FreeBSD کدام است؟ ###
+## آخرین نسخه FreeBSD کدام است؟
 
 در طول توسعه FreeBSD در هر نقطه ای از زمان، ممکن است [Branch](https://en.wikipedia.org/wiki/Branching_%28version_control%29) های موازی متعددی از آن در دسترس باشد. برای مثال نسخه های Release سری <code>10.x</code>  از Branch ی به نام <code>10-STABLE</code> ساخته می شوند و نسخه های  Release سری <code>9.x</code> از Brnach ی دیگر به نام <code>9-STABLE</code>.
 
@@ -166,10 +115,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 اطلاعات بیشتر راجع به نسخه های Release سیستم عامل FreeBSD را می توان از صفحات [Release Engineering page](http://www.freebsd.org/releng/index.html#release-build) و [release(7)](http://www.freebsd.org/cgi/man.cgi?query=release&sektion=7) کسب نمود.
 
 
-<br />
-<a name="what-is-freebsd-current"></a>
-
-### FreeBSD-CURRENT چیست؟ ###
+## FreeBSD-CURRENT چیست؟
 
 [FreeBSD-CURRENT](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/current-stable.html#current) نسخه همیشه در دست توسعه این سیستم عامل است که در زمان مقتضی تبدیل به <code>FreeBSD-STABLE</code> خواهد شد. بنابراین، این نسخه بیشتر مورد علاقه توسعه دهندگان، گیک ها و علاقمندان سینه چاک آن ست.
 
@@ -186,10 +132,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 نسخه های Snapshot رسمی برای تمام Branch های فعال در دست توسعه، [به شکل منظم ساخته شده و مستقیما در دسترس قرار می گیرند](https://www.freebsd.org/snapshots/).
 
 
-<br />
-<a name="what-is-the-stable-freebsd-concept"></a>
-
-### هدف از FreeBSD-STABLE چیست؟ ###
+## هدف از FreeBSD-STABLE چیست؟
 
 زمانی که <code>FreeBSD 2.0.5</code> عرضه شد، توسعه FreeBSD به دو شاخه تقسیم شد. یکی از آن ها <code>-STABLE</code> و دیگری <code>-CURRENT</code> نامیده شد. [FreeBSD-STABLE](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/current-stable.html#stable) یک Branch دائما در حال توسعه است که نسخه های اصلی Release از روی آن ساخته می شوند. تغییرات با گام کندتری در این Branch اعمال می شوند آن هم با این فرض که این تغییرات ابتدا به خوبی در <code>-CURRENT</code> تست شده اند. گرچه، در هر زمانی، ممکن است <code>FreeBSD-STABLE</code> برای استفاده عموم مناسب یا نامناسب باشد. دلیل آن این است که گاها ممکن است اشکالاتی در آن نمایان شود که در <code>-CURRENT</code> از دید پنهان مانده است. کاربرانی که علاقه یا منابع کافی جهت تست را ندارند بایستی از آخرین نسخ Release استفاده نمایند.
 
@@ -198,10 +141,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 در حال حاضر،<code>10.2-STABLE</code>  فعال ترین Branch در دست توسعه از <code>-STABLE</code> می باشد. آخرین نسخه Release  انتشار یافته از <code>10.2-STABLE</code> نسخه <code>10.2-RELEASE</code> می باشد که در آگوست 2015 در دسترس قرار گرفته است. همچنین<code>11-CURRENT</code>  فعال ترین Branch در دست توسعه از <code>-CURRENT</code> می باشد که نسل بعدی FreeBSD را هدف قرار داده است.
 
 
-<br />
-<a name="when-are-freebsd-releases-made"></a>
-
-### چه زمانی نسخ Release از FreeBSD عرضه می شوند؟ ###
+## چه زمانی نسخ Release از FreeBSD عرضه می شوند؟
 
 [تیم مهندسی توسعه FreeBSD](mailto:re@FreeBSD.org) به طور میانگین هر 18 ماه یکبار دست به انتشار نسخ اصلی (Major) و هر 8 ماه یکبار نسخ فرعی (Minor) می زند. تاریخ های انتشار از پیش کاملا مشخص و اعلام می شوند تا هر یک از تیم های در حال کار بر روی FreeBSD زمانبندی خود جهت خاتمه توسعه و سپس تست آن را انجام دهد. جهت اطمینان از این که ویژگی های جدید اضافه شده پایداری سیستم را در معرض خطر قرار نمی دهد، به هر انتشار یک مدت زمان تست اضافه می شود. در واقع بسیاری از کاربران این احتیاط را جزو بهترین های FreeBSD می دانند، هرچند که منتظر ماندن برای رسیدن ویژگی های جدید به <code>-STABLE</code> ممکن است کمی خسته کننده باشد.
 
@@ -210,10 +150,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 برای افرادی که اهل ماجراجوئی هستند و نمی توانند تا زمان انتشار نسخه بعد منتظر بمانند - همانطور که قبلا توضیح داده شد – [نسخه های Binary به شکل هفتگی](https://www.freebsd.org/snapshots/) در دسترس می باشد.
 
 
-<br />
-<a name="how-many-softwares-are-available-for-freebsd"></a>
-
-### چه تعداد نرم افزار قابل اجرا بر روی FreeBSD در دسترس است؟ ###
+## چه تعداد نرم افزار قابل اجرا بر روی FreeBSD در دسترس است؟
 
 با استناد به [رابط کاربری تحت وب سیستم Ports](https://www.freebsd.org/ports/)، در حال حاضر تعداد __25,674__ عدد برنامه به شکل رسمی از سوی پروژه FreeBSD به منظور اجرا بر روی این سیستم عامل عرضه می شود، که باعث شده این سیستم عامل در میان تمامی BSD ها بیشترین میزان برنامه را داشته باشد.
 
@@ -226,10 +163,7 @@ __FreeBSD چیست؟__ پاسخ کوتاه: [FreeBSD](https://www.freebsd.org/) 
 FreeBSD با پیاده سازی بخشی از رابط های [NDIS](https://en.wikipedia.org/wiki/Network_Driver_Interface_Specification) در هسته خود قابلیت اجرا نمودن درایورهای مختص ویندوز برای کارت های شبکه و WiFi را میسر نموده است.
 
 
-<br />
-<a name="does-freebsd-has-any-package-manager-like-its-counterpart-gnu-linux"></a>
-
-### آیا FreeBSD مانند GNU/Linux نرم افزار مدیریت بسته هم دارد؟ ###
+## آیا FreeBSD مانند GNU/Linux نرم افزار مدیریت بسته هم دارد؟
 
 نام آن [Ports Collection](https://www.freebsd.org/ports/) می باشد که به اختصار آن را Ports می نامند. Ports روش بسیار ساده و کارائی را به همراه ابزارهای مختلفی جهت مدیریت، کامپایل و نصب برنامه ها ارائه می نماید. هر یک از برنامه های قابل نصب در سیستم Ports یک Port نامیده می شود. این سیستم به شما اجازه تعیین این که چه قابلیت هائی از یک برنامه کامپایل و نصب شوند را می دهد، که در نوع خود بی نظیر است. تصور کنید که قابلیت هائی را که نمی خواهید خاموش می کنید: 1. باعث کم شدن حجم باینری ها، در نتیجه بارگذاری سریعتر، در نهایت اجرای سریعتر آن ها خواهد شد. 2. کد کمتر یعنی آسیب پذیری کمتر در نتیجه امنیت بیشتر! علاوه بر آن ها Ports به شما قابلیت بهینه سازی کد کامپایل شده برای CPU تان را خواهد داد که در دیستروهای باینری تقریبا غیرممکن می نماید.
 
@@ -238,18 +172,12 @@ FreeBSD با پیاده سازی بخشی از رابط های [NDIS](https://en
 لازم به ذکر است که سیستم [Portage](https://en.wikipedia.org/wiki/Portage_(software)) در لینوکس های [Gentoo](https://en.wikipedia.org/wiki/Gentoo_Linux) و [Funtoo](https://en.wikipedia.org/wiki/Funtoo_Linux) از Ports [کپی برداری](http://www.funtoo.org/Making_the_Distribution,_Part_3) شده اند. همچنین [نرم افزار مدیریت بسته NetBSD به نام pkgsrc](https://en.wikipedia.org/wiki/Pkgsrc)  و مجموعه [Ports در OpenBSD](https://en.wikipedia.org/wiki/Ports_collection#OpenBSD_ports) ریشه در همین [Package Manager](https://en.wikipedia.org/wiki/Package_Manager) دارند.
 
 
-<br />
-<a name="who-is-responsible-for-freebsd"></a>
-
-### چه کسی یا کسانی عهده دار FreeBSD هستند؟ ###
+## چه کسی یا کسانی عهده دار FreeBSD هستند؟
 
 تمامی تصمیمات مهم در مورد پروژه FreeBSD، مانند مسیر کلی آن و اینکه چه کسانی حق اضافه نمودن کد به کد اصلی آن را دارند توسط یک تیم 9 نفره که تیم هسته یا Core نامیده می شود، گرفته می شود. یک تیم بزرگتر هم متشکل از 350 نفر به نام Committers وجود دارند که حق مستقیم اعمال تغییرات بر روی کد اصلی FreeBSD را دارند. گرچه، بیشتر تغییرات غیرحیاتی از پیش در Mailing Lists مورد بحث و گفتگو قرار گرفته و هیچ محدودیتی برای افراد دیگر برای شرکت در آن در نظر گرفته نمی شود.
 
 
-<br />
-<a name="where-can-i-get-freebsd"></a>
-
-### از کجا می توانم FreeBSD را دریافت نمایم؟ ###
+## از کجا می توانم FreeBSD را دریافت نمایم؟
 
 تمامی نسخه های قابل توجه FreeBSD از طریق [anonymous FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol#Anonymous_FTP) در [سایت FTP پروژه FreeBSD](ftp://ftp.freebsd.org/pub/FreeBSD/) در دسترس می باشد:
 
@@ -260,20 +188,14 @@ FreeBSD با پیاده سازی بخشی از رابط های [NDIS](https://en
 اطلاعات لازم جهت دریافت نمودن نسخه های CD, DVD و سایر رسانه ها مانند حافظه های Flash در [این قسمت از Handbook فری بی اس دی](https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/mirrors.html) ارائه می شود.
 
 
-<br />
-<a name="how-can-i-access-the-problem-report-database"></a>
-
-### چگونه می توانم به پایگاه داده گزارش اشکالات دسترسی داشته باشم؟ ###
+## چگونه می توانم به پایگاه داده گزارش اشکالات دسترسی داشته باشم؟
 
 پایگاه داده Problem Report یا به اختصار PR برای تمامی تغییرات درخواست شده از سوی کاربران [جهت جست و جو از اینجا قابل دسترس می باشد](https://bugs.freebsd.org/search/).  از طریق [رابط کاربری تحت وب ارسال PR](https://www.freebsd.org/support/bugreports.html) می توان اقدام به ارسال گزارش ایرادات، توسط مرورگرهای وب نمود.
 
 قبل از ارسال هرگونه PR بهتر است مقاله [Writing FreeBSD Problem Reports](https://www.freebsd.org/doc/en_US.ISO8859-1/articles/problem-reports/article.html) را در رابطه با چگونگی نوشتن یک PR خوب، مطالعه نمود.
 
 
-<br />
-<a name="is-there-enough-learning-resources-for-freebsd-if-so-where-to-get-them"></a>
-
-### آیا منابع آموزشی کافی برای FreeBSD وجود دارد؟ در این صورت از کجا می توان آن ها را تهیه نمود؟ ###
+## آیا منابع آموزشی کافی برای FreeBSD وجود دارد؟ در این صورت از کجا می توان آن ها را تهیه نمود؟
 
 بله! خوشبختانه FreeBSD کاملترین راهنما در میان تمامی سیستم عامل های کدباز را دارد. تفاوتی نمی کند که دنبال مطالب ساده باشید یا مفاهیم و مستندات پیشرفته، [Handbook](https://www.freebsd.org/doc/handbook/) آن تقریبا شما را از هر منبع دیگری بی نیاز می سازد. همچنین [نسخه ی رسمی PDF این کتابچه راهنما](ftp://ftp.freebsd.org/pub/FreeBSD/doc/en/books/handbook/book.pdf.zip) که مرتبا به روزرسانی می شود به [چندین زبان مختلف](ftp://ftp.freebsd.org/pub/FreeBSD/doc/) در دسترس می باشد.
 
@@ -282,10 +204,7 @@ FreeBSD با پیاده سازی بخشی از رابط های [NDIS](https://en
 قطعا به عنوان یک فرد تازه وارد چیزهای زیادی باید بیآموزید و یا سوالات زیادی ذهن شما را به خود مشغول خواهد نمود. باور داشته بشید یا نه، با دنبال نمودن این Handbook ها به یک استاد تمام معنا در FreeBSD تبدیل خواهید شد. برای مثال نگارنده این مطلب، فقط با دنبال نمودن این Handbook، سیستم عامل FreeBSD را آموخته و در منزل، محیط کار و یا به عنوان سرور جهت راه اندازی این وب سایت به کار بسته است. علاوه بر آن با مطالعه Handbook مختص Porter ها، یک کتابخانه Cross-Database به نام [CppDB](http://cppcms.com/sql/cppdb/) را [به این سیستم عامل Port نموده است](https://www.freebsd.org/cgi/ports.cgi?query=cppdb&stype=name). در واقع، مثلا به منظور پورت نمودن نرم افزار اطلاعات دسته اولی وجود دارند که در هیچ منبع یا کتابی غیر از [راهنما](https://www.freebsd.org/doc/en/books/porters-handbook/dads-avoiding-linuxisms.html) یا [مستندات](https://wiki.freebsd.org/AvoidingLinuxisms) آن یافت نمی شوند. دلیل تاکید من بر Handbook فری بی اس دی به عنوان مرجع همین است.
 
 
-<br />
-<a name="what-else-should-i-know"></a>
-
-###  چیز دیگری هست که باید بدانم؟ ###
+##  چیز دیگری هست که باید بدانم؟
 
 FAQ حاضر فقط به منظور پاسخ به سوالات افراد تازه وارد به دنیای BSD و البته به طور خاص FreeBSD تهیه شده است. لذا از معرفی مفاهیم پیشرفته دیگری که مختص FreeBSD می باشد (مانند [Jails](https://en.wikipedia.org/wiki/FreeBSD_jail) که از نسخه 4 به بعد برای سال ها در FreeBSD حضور داشته که بعدها توسط [LXC](https://en.wikipedia.org/wiki/LXC) و [Docker](https://en.wikipedia.org/wiki/Docker_(software)) به لینوکس معرفی شد) پرهیز نمودیم. در زمان مقتضی به هریک از این مفاهیم و تکنولوژی ها خواهیم پرداخت.
 
@@ -294,17 +213,7 @@ FAQ حاضر فقط به منظور پاسخ به سوالات افراد تاز
 [چنانچه قسمت اول از این سری مقالات](/blog/2016/01/23/the-history-of-freebsd) را مطالعه ننموده اید، توصیه می شود که آن را مطالعه نمائید. پس از مقاله بعدی که به اختصار به مقایسه GNU/Linux و FreeBSD خواهد پرداخت، در سلسله ای از مقالات، به نصب و پیکربندی این سیستم عامل و سرویس های آن، از مبتدی تا پیشرفته خواهیم پرداخت.
 
 
-<br />
-
-### منابع ###
+## منابع
 
 * [Explaining BSD](https://www.freebsd.org/doc/en/articles/explaining-bsd/article.html)
 * [The FreeBSD Handbook / Introduction](https://www.freebsd.org/doc/faq/introduction.html)
-
-
-<br />
-
-### مقالات مرتبط ###
-
-* [تاریخچه FreeBSD](/blog/2016/01/23/the-history-of-freebsd/)
-* [FreeBSD یا Linux مسئله این است؟](/blog/2016/03/07/freebsd-vs-linux/)
