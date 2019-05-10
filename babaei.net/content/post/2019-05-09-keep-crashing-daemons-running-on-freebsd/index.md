@@ -99,7 +99,7 @@ readonly DAEMON_PROCESS_COUNT=$(${PS} aux \
     | ${GREP} -c "${DAEMON}")
 {{< /highlight >}}
 
-Technically what it does is, listing all the running processes from all the users on the system, then looking for the target daemon it leaves out all the other processes, afterwards counting the number of running processes. If the dameon is not running, then the process counts is simply zero. As simple as that.
+Technically what it does is, listing all the running processes from all the users on the system, then looking for the target daemon it leaves out all the other processes, afterwards counting the number of running processes. If the daemon is not running, then the process counts is simply zero. As simple as that.
 
 Leaving out the <code>${GREP} -v "${SCRIPT}"</code> part (we will be attending this one in a moment) and the variable assignment, it will be basically translated to something similar to:
 
@@ -120,7 +120,9 @@ $ ps aux
 # SEE FOR YOURSELF WHAT IT DOES.
 {{< /highlight >}}
 
-What does <code>pas aux</code> is essentially do, shows all the processes for all users (for our purpose the <code>ax</code> flags would suffice and the <code>u</code> can be omitted, nonetheless as a habit I keep it). Now try the following:
+What does <code>pas aux</code> is essentially do, shows all the processes for all users (for our purpose the <code>ax</code> flags would suffice and the <code>u</code> can be omitted, nonetheless as a habit I keep it). Please [consult the ps man page](https://www.freebsd.org/cgi/man.cgi?ps(1)) for more information.
+
+Now try the following:
 
 {{< highlight sh >}}
 $ ps aux | grep /usr/local/sbin/clamd
