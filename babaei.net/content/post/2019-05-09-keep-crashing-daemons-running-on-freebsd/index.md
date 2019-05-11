@@ -121,7 +121,7 @@ $ /usr/local/cron-scripts/daemon-keeper.sh \
 I have already wrote [a guide on how to properly add a cron job on *nix systems](https://crontab.guru/), so I won't go through this in details. Fire up the root's <code>crontab</code> file in your favorite editor by issuing:
 
 {{< highlight sh >}}
-$ sudo -u root -g root -H crontab -e
+$ sudo -u root -g wheel -H crontab -e
 {{< /highlight >}}
 
 I prefer to detect a crash as immediately as possible and then restart the service instantaneously. Therefore, I am running the script at a <code>1</code> minute interval:
