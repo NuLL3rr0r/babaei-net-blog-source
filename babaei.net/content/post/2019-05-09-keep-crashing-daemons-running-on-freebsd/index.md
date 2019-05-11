@@ -28,6 +28,14 @@ $ sudo -u root -g wheel crontab -l
 {{< /highlight >}}
 
 **UPDATE 2 [2019/05/11]**: Another thanks to [@mirrorbox](https://www.reddit.com/user/mirrorbox) for mentioning <code>sysutils/daemontools</code> which seems a proven solution for restarting a crashing daemon. It makes this hack redundant.
+
+```
+Daemontools is a small set of /very/ useful utilities, from Dan
+Bernstein.  They are mainly used for controlling processes, and
+maintaining logfiles.
+
+WWW: http://cr.yp.to/daemontools.html
+```
 <hr />
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
