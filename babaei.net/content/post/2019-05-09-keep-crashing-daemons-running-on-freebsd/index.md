@@ -7,7 +7,7 @@ tags = [ "FOSS", "FLOSS", "FreeBSD", "Unix" ]
 
 <hr />
 
-**UPDATE [2019/05/11]**: _Thanks to [@mirrorbox](https://www.reddit.com/user/mirrorbox)'s suggestion, I refactored the script to use <code>service status</code> instead of <code>ps aux | grep</code> which makes the script even more simple. As a result, the syntax has changed. Since I keep the article untouched, for the updated code visit either the [GitHub](https://github.com/NuLL3rr0r/freebsd-daemon-keeper) or [GitLab](https://gitlab.com/NuLL3rr0r/freebsd-daemon-keeper) repositories. The new syntax is as follows:_
+**UPDATE 1 [2019/05/11]**: _Thanks to [@mirrorbox](https://www.reddit.com/user/mirrorbox)'s suggestion, I refactored the script to use <code>service status</code> instead of <code>ps aux | grep</code> which makes the script even more simple. As a result, the syntax has changed. Since I keep the article untouched, for the updated code visit either the [GitHub](https://github.com/NuLL3rr0r/freebsd-daemon-keeper) or [GitLab](https://gitlab.com/NuLL3rr0r/freebsd-daemon-keeper) repositories. The new syntax is as follows:_
 
 {{< highlight sh >}}
 # Syntax
@@ -27,6 +27,7 @@ $ sudo -u root -g wheel crontab -l
 *   *   *   *   *   /usr/local/cron-scripts/daemon-keeper.sh -d "clamav-clamd" -e "dovecot"
 {{< /highlight >}}
 
+**UPDATE 2 [2019/05/11]**: Another thanks to [@mirrorbox](https://www.reddit.com/user/mirrorbox) for mentioning <code>sysutils/daemontools</code> which seems a proven solution for restarting a crashing daemon. It makes this hack redundant.
 <hr />
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
