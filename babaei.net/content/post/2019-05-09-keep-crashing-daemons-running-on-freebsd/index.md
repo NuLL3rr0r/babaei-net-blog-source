@@ -127,6 +127,7 @@ $ sudo -u root -g wheel -H crontab -e
 I prefer to detect a crash as immediately as possible and then restart the service instantaneously. Therefore, I am running the script at a <code>1</code> minute interval:
 
 {{< highlight cron >}}
+# At every minute
 *   *   *   *   *   /usr/local/cron-scripts/daemon-keeper.sh -e "/usr/local/sbin/clamd" -s "clamav-clamd" -s "dovecot"
 {{< /highlight >}}
 
