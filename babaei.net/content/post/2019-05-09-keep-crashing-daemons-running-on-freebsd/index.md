@@ -47,6 +47,7 @@ readonly GREP="/usr/bin/grep"
 readonly LOGGER="/usr/bin/logger"
 readonly PS="/bin/ps"
 readonly REV="/usr/bin/rev"
+readonly SERVICE="/usr/sbin/service"
 readonly TR="/usr/bin/tr"
 {{< /highlight >}}
 
@@ -301,6 +302,7 @@ readonly GREP="/usr/bin/grep"
 readonly LOGGER="/usr/bin/logger"
 readonly PS="/bin/ps"
 readonly REV="/usr/bin/rev"
+readonly SERVICE="/usr/sbin/service"
 readonly TR="/usr/bin/tr"
 
 readonly FMT_OFF='\e[0m'
