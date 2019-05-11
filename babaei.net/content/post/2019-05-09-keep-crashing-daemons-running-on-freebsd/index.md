@@ -36,6 +36,23 @@ maintaining logfiles.
 
 WWW: http://cr.yp.to/daemontools.html
 ```
+
+**UPDATE 3 [2019/05/11]**: Thanks to [@dlangille](https://www.reddit.com/user/dlangille) for mentioning <code>sysutils/py-supervisor</code>, which seems to be a viable alternative to <code>sysutils/daemontools</code>.
+
+```
+Supervisor is a client/server system that allows its users
+to monitor and control a number of processes on UNIX-like
+operating systems.
+
+It shares some of the same goals of programs like launchd,
+daemontools, and runit. Unlike some of these programs, it is
+not meant to be run as a substitute for init as "process id 1".
+Instead it is meant to be used to control processes related to
+a project or a customer, and is meant to start like any
+other program at boot time.
+
+WWW: http://supervisord.org/
+```
 <hr />
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
