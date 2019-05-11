@@ -5,6 +5,30 @@ date = 2019-05-09T19:27:37+02:00
 tags = [ "FOSS", "FLOSS", "FreeBSD", "Unix" ]
 +++
 
+<hr />
+
+**UPDATE [2019/05/11]**: _Thanks to [@mirrorbox](https://www.reddit.com/user/mirrorbox)'s suggestion, I refactored the script to use <code>service status</code> instead of <code>ps aux | grep</code> which makes the script even more simple. As a result, the syntax has changed. Since I keep the article untouched, for the updated code visit either the [GitHub](https://github.com/NuLL3rr0r/freebsd-daemon-keeper) or [GitLab](https://gitlab.com/NuLL3rr0r/freebsd-daemon-keeper) repositories. The new syntax is as follows:_
+
+{{< highlight sh >}}
+# Syntax
+$ /path/to/daemon-keeper.sh
+
+Correct usage:
+
+    daemon-keeper.sh -d {daemon} -e {extra daemon to (re)start} [-e {another extra daemon to (re)start}] [... even more -e and extra daemons to (re)start]
+
+# Example
+$ /path/to/daemon-keeper.sh -d "clamav-clamd" -e "dovecot"
+
+# Crontab
+$ sudo -u root -g wheel crontab -l
+
+# At every minute
+*   *   *   *   *   /usr/local/cron-scripts/daemon-keeper.sh -d "clamav-clamd" -e "dovecot"
+{{< /highlight >}}
+
+<hr />
+
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
 
 At first, I did not take it seriously. Just rebooted the server and prayed to the gods that it won't happen again. It was a quick fix and it seemed to work. Until after a few days, I noticed that it happened again. This time I prayed to the gods even harder - both the old ones and the new ones ¯\\\_(ツ)_/¯ - and rebuilt every installed ports all over again in order to make sure I did not miss anything. I went for another reboot and, ops! There it was again laughing at me. Thus, losing all faith in the gods, which led me to [take up responsibility and investigate more on this issue or ask the experts on the FreeBSD forums](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/).
