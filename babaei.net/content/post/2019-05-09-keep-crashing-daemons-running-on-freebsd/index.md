@@ -63,6 +63,8 @@ servers.  The core functionality is a daemon (fscd)
 which is interfaced with using fscadm.  See manual pages
 for more information.
 ```
+
+**UPDATE 5 [2019/05/13]**: Thanks to [@jcigar](https://www.reddit.com/user/jcigar) for bringing [daemon(8)](https://www.freebsd.org/cgi/man.cgi?query=daemon&sektion=8) to my attention, which is available in the base system and it seems perfectly capable of doing what I was going to achieve in my script and more.
 <hr />
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
