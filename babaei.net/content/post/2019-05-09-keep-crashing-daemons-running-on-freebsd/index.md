@@ -53,6 +53,16 @@ other program at boot time.
 
 WWW: http://supervisord.org/
 ```
+
+**UPDATE 4 [2019/05/13]**: Thanks to [@olevole](https://www.reddit.com/user/olevole) for mentioning <code>sysutils/fsc</code>. It is minimalistic, dependency free and designed for FreeBSD:
+
+```
+The FreeBSD Services Control software provides service
+monitoring, restarting, and event logging for FreeBSD
+servers.  The core functionality is a daemon (fscd)
+which is interfaced with using fscadm.  See manual pages
+for more information.
+```
 <hr />
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.
