@@ -1,5 +1,5 @@
 +++
-title = "قاعده توییتری «نقطه پیش از نام کاربری»، چیزی که احتمالا نمی دانید!"
+title = "قاعده توییتری «نقطه پیش از نام کاربری»"
 slug = "twitter-broken-replies-period-before-username-rule"
 date = 2019-06-01T15:00:00+02:00
 tags = [ "Social Media", "Twitter", "Twitterstorm" ]
