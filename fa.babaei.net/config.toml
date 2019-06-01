@@ -87,7 +87,7 @@ enableEmoji = true
 [[menu.main]]
     parent = "subscribe"
     name = "ایمیل"
-    url = "http://subscribe.babaei.net/?lang=fa&subscription=en"
+    url = "http://subscribe.babaei.net/?lang=fa&subscription=fa"
     weight = 1
 
 [[menu.main]]
