@@ -2,7 +2,7 @@
 title = "چرا عرازشه و سایبری ها با پروپاگاندای هدایت شده، هم در داخل هم خارج از ایران، از براندازان جلوتر هستند؟"
 slug = "iri-regime-propaganda-reddit"
 date = 2019-05-23T22:10:01+02:00
-tags = [ "Barandazan", "Censorship", "Iran", "Islamic Republic Of Iran", "Reddit", "Telegram", "Twitter" ]
+tags = [ "Barandazan", "Censorship", "Iran", "Islamic Republic Of Iran", "Reddit", "Social Media", "Telegram", "Twitter" ]
 +++
 
 به دلیل ماهیت متفاوت آن، ردیت، شبکه اجتماعی مورد علاقه من می باشد که برخلاف اقبال عمومی در جهان، در ایران از آن استقبال گسترده ای صورت نگرفته است و به جز قشر خاص گیک ها عموم مردم از آن استفاده نمی کنند. اما Reddit چیست و چرا ماهیت آن با سایر شبکه های اجتماعی متفاوت است؟
