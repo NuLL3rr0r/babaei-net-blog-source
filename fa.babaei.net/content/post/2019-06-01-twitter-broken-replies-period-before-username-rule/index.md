@@ -73,10 +73,10 @@ toc = "true"
                 نحوه نوشتن توییت
             </th>
             <th valign="middle" style="text-align: center !important; vertical-align: middle;">
-               افرادی که توییت شما را مشاهده می نمایند
+                مخاطبان
             </th>
             <th valign="middle" style="text-align: center !important; vertical-align: middle;">
-               تعداد مخاطبان
+                تعداد مخاطبان ثالث
             </th>
         </tr>
         <tr>
