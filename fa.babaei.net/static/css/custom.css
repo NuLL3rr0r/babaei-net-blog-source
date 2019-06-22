@@ -506,3 +506,13 @@ figcaption p {
     border-radius: 8px;
     list-style-type: square;
 }
+
+.dedication {
+    margin: 3.0em;
+    padding: 2.0em 3.0em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    line-height: 3.0em;
+    font-style: italic;
+    text-align: justify;
+}
