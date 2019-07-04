@@ -1,10 +1,9 @@
 +++
 title = "امنیت سایبری ۱۰۱ ویژه فعالان حقوق بشر، فعالان مدنی، فعالان سیاسی، روزنامه نگاران و براندازان: آیا تلگرام امن است؟ و آیا امکان جاسوسی و شنود داده های کاربران تلگرام توسط نهادهای امنیتی رژیم جمهوری اسلامی وجود دارد؟"
 slug = "cybersecurity-101-for-barandazan-is-telegram-really-secure"
-date = 2019-07-04T10:00:00+02:00
+date = 2019-07-04T11:36:00+02:00
 tags = [ "Aenigma", "Allo", "Android", "Apple", "Assembly", "Barandazan", "Briar", "BSD", "C", "C++", "CDN", "Censorship", "ChatSecure", "CIA", "Citizenfour", "Conversations", "Crypto", "Cryptography", "Cybersecurity", "DOS", "E2E", "Edward Snowden", "Facebook", "Facebook Messenger", "FBI", "Five Eyes", "FLOSS", "FOSS", "FreeBSD", "Funtoo", "FVEY", "Gajim", "Gentoo", "GitHub", "GitLab", "GNU", "Google", "Guardian", "Haiku", "Instant Messaging", "iOS", "Iran", "Islamic Republic Of Iran", "Jami", "Keybase", "Kontalk", "Lavabit", "LFS", "Line", "LINUX", "Manyverse", "Metadata", "Microsoft", "Mikko Hyppönen", "Monal", "MS-DOS", "MTProto", "NetBSD", "Netflix", "NSA", "OMEMO", "Open Source", "Open Whisper Systems", "OpenBSD", "OTR", "Prism", "Privacy", "Psi+", "RetroShare", "Richard Stallman", "Ricochet", "Riot.im", "Rocket.Chat", "Reuters", "Security", "Signal", "Silence", "Skype", "Social Media", "Status", "Telegram", "Tox", "Twitter", "Unix", "WhatsApp", "Wickr", "Windows", "Wire", "XMPP" ]
 toc = true
-draft = true
 +++
 
 {{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/cybersecurity-101-for-barandazan.jpg" >}}
