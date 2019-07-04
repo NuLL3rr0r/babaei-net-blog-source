@@ -16,6 +16,8 @@ toc = true
 
 پیشنهاد می کنم قبل از شروع مطالعه مقاله، یک فنجان چایی، قهوه، یا نوشنیدنی مورد علاقه خود را تهیه نمایید؛ به من اعتماد کنید، به آن نیاز خواهید داشت ؛)
 
+[دریافت نسخه PDF جهت به اشتراک گذاری در شبکه های اجتماعی و پیام رسان ها](/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/cybersecurity_101_is_telegram_really_secure.pdf).
+
 {{< dedicate >}}
 تقدیم به تو دوست شجاع و آزادی خواه، برادر عزیزم <a href="https://twitter.com/DarabiAliashraf" title="علی اشرف دارابی">علی اشرف دارابی</a>، که به نام آزادی و برای ایران عزیزمان، ۵۹۱ شبانه روز حبس در زندان های <a href="https://twitter.com/hashtag/%D9%81%D8%B1%D9%82%D9%87_%D8%AA%D8%A8%D9%87%DA%A9%D8%A7%D8%B1?src=hash">#فرقه_تبهکار</a> را  به جان خریدی.
 <br />
