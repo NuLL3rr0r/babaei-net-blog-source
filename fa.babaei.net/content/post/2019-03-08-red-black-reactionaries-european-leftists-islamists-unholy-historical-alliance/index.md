@@ -23,6 +23,4 @@ tags = [ "Desacralization", "Europe", "Iran", "Islam", "Islamic Republic of Iran
 
 به همین علت است که جناح چپ سیاست خارجی اتحادیه اروپا، نقض دموکراسی و حقوق بشر در میانمار را محکوم می کند، اما با وجود درخواست های مکرر فعالان حقوق بشر، زمانی که از تهران دیدن می کند این امر را نادیده می گرد.
 
-علاوه بر [مقاله eureporter که در بالا ذکر نمودم](https://www.eureporter.co/frontpage/2019/02/20/the-historical-alliance-between-european-leftists-and-islamists/)، جهت درک بهتر این پیوند شوم، شما را به خواندن [مقاله ای از دویچه وله فارسی به قلم فرویدون احمدی، تحت عنوان: آیا انقلاب ۵۷ ربوده و "ملاخور" شد؟](https://www.dw.com/fa-ir/opinion/a-47555990)، دعوت می نمایم.
-
 <!--more-->
