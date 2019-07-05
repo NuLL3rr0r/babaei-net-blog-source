@@ -157,6 +157,8 @@ toc = false
 
 {{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-anousheh-ansari-niac-mission.png" alt="نایاک را می شناسم. ماموریتش تسهیل سیاست های دوستانه برای آمریکایی ایرانی هاست که چیز خوبی است." title="نایاک را می شناسم. ماموریتش تسهیل سیاست های دوستانه برای آمریکایی ایرانی هاست که چیز خوبی است" >}}
 
+و یا [از مردم می خواهد که با جمع آوری کمک مالی از نایاک پشتیبانی نمایند](https://web.archive.org/web/20190705184722/https://www.facebook.com/NIACouncil/posts/anousheh-ansari-endorses-niacs-work-and-kicks-off-our-fundraising-month/228120963866510/):
+
 {{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/facebook-anousheh-ansari-support-niac.png" alt="انوشه انصاری: نایاک را پشتیبانی کنید!" title="انوشه انصاری: نایاک را پشتیبانی کنید!" >}}
 
 [انوشه انصاری](https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D9%88%D8%B4%D9%87_%D8%A7%D9%86%D8%B5%D8%A7%D8%B1%DB%8C)، سه سخنرای تدکس به ترتیب ۹، ۸، و ۲ سال پیش، تحت عناوین [آیا شما می توانید همه چیز را تغییر دهید](https://www.youtube.com/watch?v=naSNBpcPQzQ) و [چرا کاوش؟](https://www.youtube.com/watch?v=ykXaOLJIk78) و [تنها به همان اندازه که آرزو داریم می توانیم باشیم](https://www.youtube.com/watch?v=fa4Ure_-5l4) دارد که حدودا به ترتیب <code>۶۹۵,۰۰۰</code> و <code>۷۵۵,۰۰۰</code> و <code>۱۰,۰۰۰</code> بار تا لحظه فعلی دیده شده اند:
