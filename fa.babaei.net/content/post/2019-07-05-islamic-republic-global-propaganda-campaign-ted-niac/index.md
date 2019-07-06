@@ -8,7 +8,7 @@ toc = false
 
 {{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/ted-talks-niac-propaganda-tool.jpg" alt="آیا سخنرانی های تد ابزاری برای پروپاگاندای نایاک و جمهوری اسلامی است؟" title="آیا سخنرانی های تد ابزاری برای پروپاگاندای نایاک و جمهوری اسلامی است؟" >}}
 
-**به روز رسانی [۱۵ تیرماه ۱۳۹۸]:** ضمن سپاس از جناب [امیر اعتمادی](https://twitter.com/amiretemadi) عضو [فرشگرد](https://iranrevival.com/) بابت [ذکر این نکته](https://web.archive.org/save/https://twitter.com/amiretemadi/status/1147268526207655938) گویا [تدکس کیش توسط لیلی صرافان عضو هیات مدیره نایاک راه اندازی شده است](https://web.archive.org/web/20170711144000/https://www.niacouncil.org/tedxkish-2015-tipping-point/).
+**به روز رسانی [۱۵ تیرماه ۱۳۹۸]:** ضمن سپاس از جناب [امیر اعتمادی](https://twitter.com/amiretemadi) عضو [فرشگرد](https://iranrevival.com/) بابت [ذکر این نکته](https://web.archive.org/save/https://twitter.com/amiretemadi/status/1147268526207655938)، گویا [تدکس کیش توسط لیلی صرافان عضو هیات مدیره نایاک راه اندازی شده است](https://web.archive.org/web/20170711144000/https://www.niacouncil.org/tedxkish-2015-tipping-point/).
 
 قبلا یک [#رشته_توییت](https://twitter.com/mamadou_babaei/status/1131631103025004544) نوشته بودم مبنی بر این که ["چرا عرازشه و سایبری ها با پروپاگاندای هدایت شده، هم در داخل هم خارج از ایران، از براندازان جلوتر هستند؟"](/blog/iri-regime-propaganda-reddit/). از طرفی همزمان با اعلام نمودن تمرکز بر مقوله [#امنیت_سایبری_۱۰۱](https://twitter.com/hashtag/%D8%A7%D9%85%D9%86%DB%8C%D8%AA_%D8%B3%D8%A7%DB%8C%D8%A8%D8%B1%DB%8C_%DB%B1%DB%B0%DB%B1?src=hash)، وعده دیگری داده بودم در مورد [نوشتن در مقوله جدید دیگری که خلا آن در فضای براندازانه به شدت احساس می شود](https://twitter.com/mamadou_babaei/status/1143542161037766661).
 
@@ -62,7 +62,7 @@ toc = false
 <div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/lang/fa/negin_farsad_a_highly_scientific_taxonomy_of_haters" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
 </div>
 
-ایشان ابایی از [حمل نمودن کیف خود با نام و نشان و‌ آدرس وب سایت نایاک](https://web.archive.org/web/20171103011010/https://twitter.com/NeginFarsad/status/825403662897799168) نداشته و حتی به آن افتخار هم می نماید:
+او ابایی از [حمل نمودن کیف خود با نام و نشان و‌ آدرس وب سایت نایاک](https://web.archive.org/web/20171103011010/https://twitter.com/NeginFarsad/status/825403662897799168) نداشته و حتی به آن افتخار هم می نماید:
 
 {{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-negin-farsad-niacaction.png" alt="نگین فرساد و توییت او خطاب به @NIACAction" title="نگین فرساد و توییت او خطاب به @NIACAction" >}}
 
