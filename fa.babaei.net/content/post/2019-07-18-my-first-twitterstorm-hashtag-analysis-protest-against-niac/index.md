@@ -45,6 +45,6 @@ toc = false
 
 حالا، پس از اشاره کلی به مراحل و چالش‌های فنی انجام این کار، اجازه دهید رازی را برایتان افشا سازم. به منظور رسیدن به گراف فوق حتی نیاز به طی این مراحل نیز نخواهید داشت. به عنوان نمونه، یک قالب برای نرم افزار اکسل مایکروسافت به نام [NodeXL](https://www.smrfoundation.org/nodexl/) وجود دارد که پس از نصب آن بر روی اکسل، فقط با یک کلیک می‌توانید کل توییت‌های مربوط به یک هشتگ را دریافت نموده، سپس با یک کلیک دیگر آن را در قالب GML برای استفاده در Gephi یا Cytoscape صادر نمایید (البته در نسخه رایگان تعداد توییت ها محدود است و امکان خروجی گرفتن به GML را ندارند). تبریک! شما بدون حتی یک خط کد نوشتن می‌توانید خود را دانشمند بیگ دیتا بنامید!
 
-در پایان فایل با کیفیت آنالیز انجام شده برای هشتگ و طوفان توییتری [#ProtestAgainstNIAC](https://twitter.com/hashtag/ProtestAgainstNIAC?src=hash) را دریافت نمایید:
+در پایان می توانید فایل با کیفیت آنالیز انجام شده برای هشتگ و طوفان توییتری [#ProtestAgainstNIAC](https://twitter.com/hashtag/ProtestAgainstNIAC?src=hash) را دریافت نمایید:
 
 {{< figure src="/blog/my-first-twitterstorm-hashtag-analysis-protest-against-niac/protest-against-niac-twitterstorm-hashtag-analysis.png" alt="نسخه بسیار با کیفیت تر از اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" title="نسخه بسیار با کیفیت تر از اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" >}}
