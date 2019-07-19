@@ -2,7 +2,7 @@
 title = "اولین آنالیز طوفان توییتری و هشتگ توسط من و توسعه نرم افزار Barandazstorm"
 slug = "my-first-twitterstorm-hashtag-analysis-protest-against-niac"
 date = 2019-07-18T09:01:00+02:00
-tags = [ "Barandazan", "Big Data", "Iran", "Islamic Republic Of Iran", "NIAC", "Social Media", "Twitter" ]
+tags = [ "Barandazan", "Big Data", "Iran", "Islamic Republic Of Iran", "NIAC", "Social Media", "Twitter", "Twitterstorm" ]
 toc = false
 +++
 
