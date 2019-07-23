@@ -421,6 +421,11 @@ figcaption p {
     text-align: center;
 }
 
+.gif-box video {
+    max-width: 100%;
+    height: auto;
+}
+
 .blog-archives {
     margin-top: -2.0em;
 }
