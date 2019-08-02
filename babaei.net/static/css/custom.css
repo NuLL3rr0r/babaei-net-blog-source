@@ -426,6 +426,16 @@ figcaption p {
     height: auto;
 }
 
+.hashtag-analysis-box {
+    margin: 2.0em auto;
+    text-align: center;
+}
+
+.hashtag-analysis-box table {
+    margin: 0 auto;
+    margin-bottom: 1.0em;
+}
+
 .blog-archives {
     margin-top: -2.0em;
 }
@@ -510,4 +520,14 @@ figcaption p {
     border: 1px #eee solid;
     border-radius: 8px;
     list-style-type: square;
+}
+
+.dedication {
+    margin: 3.0em;
+    padding: 2.0em 3.0em;
+    border: 1px solid #000;
+    border-radius: 5px;
+    line-height: 3.0em;
+    font-style: italic;
+    text-align: justify;
 }

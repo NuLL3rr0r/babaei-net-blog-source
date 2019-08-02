@@ -1,0 +1,49 @@
+<div class="hashtag-analysis-box">
+    <table>
+        <tr>
+            <td style="text-align: center;">
+                تعداد توییت
+            </td>
+            <td style="text-align: center;">
+                {{ if .Get "tweet-count" }}{{ .Get "tweet-count" }}{{ end }}
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                تعداد کاربران شرکت کننده
+            </td>
+            <td style="text-align: center;">
+                {{ if .Get "participant-accounts" }}{{ .Get "participant-accounts" }}{{ end }}
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                تعداد کاربران درگیر
+            </td>
+            <td style="text-align: center;">
+                {{ if .Get "involved-accounts" }}{{ .Get "involved-accounts" }}{{ end }}
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                تعداد هشتگ‌های مستقیما مرتبط
+            </td>
+            <td style="text-align: center;">
+                {{ if .Get "directly-related-hashtags" }}{{ .Get "directly-related-hashtags" }}{{ end }}
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                کل هشتگ‌های مرتبط
+            </td>
+            <td style="text-align: center;">
+                {{ if .Get "all-related-hashtags" }}{{ .Get "all-related-hashtags" }}{{ end }}
+            </td>
+        </tr>
+    </table>
+    <figcaption>
+        <p>
+            آمار و ارقام شبکه هشتگ {{ if .Get "hashtag" }}{{ .Get "hashtag" }}{{ end }}
+        </p>
+    </figcaption>
+</div>

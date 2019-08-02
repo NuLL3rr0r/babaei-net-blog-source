@@ -426,6 +426,16 @@ figcaption p {
     height: auto;
 }
 
+.hashtag-analysis-box {
+    margin: 2.0em auto;
+    text-align: center;
+}
+
+.hashtag-analysis-box table {
+    margin: 0 auto;
+    margin-bottom: 1.0em;
+}
+
 .blog-archives {
     margin-top: -2.0em;
 }
