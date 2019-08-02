@@ -1,5 +1,5 @@
 <div class="gif-box">
-    <video {{ if .Get "poster"}}poster="{{ .Get "poster" }}" {{ end }}autoplay loop muted>
+    <video {{ if .Get "poster" }}poster="{{ .Get "poster" }}" {{ end }}autoplay loop muted>
     {{ if .Get "vp9"}}
         <source type="video/webm; codecs=vp9,vorbis"  src="{{ .Get "vp9" }}">
     {{ end }}
