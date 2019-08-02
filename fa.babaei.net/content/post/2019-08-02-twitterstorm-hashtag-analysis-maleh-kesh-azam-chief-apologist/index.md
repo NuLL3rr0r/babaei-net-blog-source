@@ -1,5 +1,5 @@
 +++
-title = "آنالیز و شبکه هشتگ #ماله_کش_اعظم + به روز رسانی عمده  Barandazstorm و پشتیبانی از Unicode Normalization"
+title = "آنالیز شبکه هشتگ #ماله_کش_اعظم + به روز رسانی عمده  Barandazstorm و پشتیبانی از Unicode Normalization"
 slug = "twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist"
 date = 2019-08-02T14:04:00+02:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]
