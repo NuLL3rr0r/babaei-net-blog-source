@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.jpg" alt="گراف شبکه کاربران هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف شبکه کاربران هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.jpg" alt="گراف‌های شبکه هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌های شبکه هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز شبکه هشتگ [#ماله_کش_اعظم](https://twitter.com/hashtag/%D9%85%D8%A7%D9%84%D9%87_%DA%A9%D8%B4_%D8%A7%D8%B9%D8%B8%D9%85?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -138,4 +138,4 @@ toc = true
 
 در پایان می توانید گراف‌های با کیفیت آنالیز شبکه هشتگ [#ماله_کش_اعظم](https://twitter.com/hashtag/%D9%85%D8%A7%D9%84%D9%87_%DA%A9%D8%B4_%D8%A7%D8%B9%D8%B8%D9%85?src=hash) را دریافت نمایید:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.png" alt="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده با الگوریتم Eigenvector Centrality توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده با الگوریتم Eigenvector Centrality توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.png" alt="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
