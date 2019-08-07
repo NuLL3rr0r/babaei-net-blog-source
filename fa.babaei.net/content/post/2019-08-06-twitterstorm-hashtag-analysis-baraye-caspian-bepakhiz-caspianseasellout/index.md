@@ -14,6 +14,7 @@ toc = true
 
 ## آنالیز
 
+با توجه به همزمانی هر دو طوفان، آمار و ارقام، و گراف شبکه هر هشتگ می‌توان نتیجه گرفت که اکثر کاربران طوفان بی‌نظیر و گسترده [#برای_کاسپین_بپاخیز](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash) همزمان در ترند شدن هشتگ [#CaspianSeaSellOut](https://twitter.com/hashtag/CaspianSeaSellOut?src=hash) نقش عمده‌ای بازی نموده‌اند. به عنوان یک شاخص جالب [@mamadou_babaei](https://twitter.com/mamadou_babaei) دو توییت، یک پاسخ و یک کوت همزمان با هردو هشتگ داشته که در شبکه [#CaspianSeaSellOut](https://twitter.com/hashtag/CaspianSeaSellOut?src=hash) در جایگاه <code>۲۱</code> قرار گرفته اما در شبکه [#برای_کاسپین_بپاخیز](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash) با همان توییت‌ها در جایگاه <code>۶۲۶</code> قرار گرفته است!
 
 ### آمار و ارقام
 
