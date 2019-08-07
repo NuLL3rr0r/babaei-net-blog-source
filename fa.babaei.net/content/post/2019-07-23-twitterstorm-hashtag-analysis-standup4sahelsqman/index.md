@@ -70,7 +70,7 @@ toc = true
 40. [@JZarif](https://twitter.com/JZarif)
 41. [@Rezamehregan1](https://twitter.com/Rezamehregan1)
 42. [@Elham_984](https://twitter.com/Elham_984)
-43. [@____mania____](https://twitter.com/____mania____)
+43. [@\_\_\_\_mania\_\_\_\_](https://twitter.com/____mania____)
 44. [@AmnestyIran](https://twitter.com/AmnestyIran)
 45. [@AzinBlueBird](https://twitter.com/AzinBlueBird)
 46. [@Mori_delbari_2](https://twitter.com/Mori_delbari_2)
