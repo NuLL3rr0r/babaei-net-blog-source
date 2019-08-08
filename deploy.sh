@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-BASE_DIRECTORY=`$(dirname $(realpath "$0"))`
+BASE_DIRECTORY=$(dirname $(realpath "$0"))
 
 killall -9 hugo
 
