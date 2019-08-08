@@ -1,0 +1,21 @@
+<!-- Yandex Verification -->
+<meta name="yandex-verification" content="fa87869bf4989269" />
+
+{{ $custom_styles := resources.Get "css/custom.css" }}
+{{ $font_face_roboto_styles := resources.Get "css/font-face-roboto.css" }}
+{{ $font_face_roboto_condensed_styles := resources.Get "css/font-face-roboto-condensed.css" }}
+{{ $font_face_roboto_mono_styles := resources.Get "css/font-face-roboto-mono.css" }}
+{{ $font_face_vazir_styles := resources.Get "css/font-face-vazir.css" }}
+
+{{ if eq .Lang "fa" }}
+
+{{ $custom_rtl_styles := resources.Get "css/custom-rtl.css" }}
+{{ $styles_bundle := slice $custom_styles $custom_rtl_styles $custom_rtl_styles $font_face_roboto_styles $font_face_roboto_condensed_styles $font_face_roboto_mono_styles $font_face_vazir_styles | resources.Concat "css/custom-rtl-bundle.css" | minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $styles_bundle.Permalink }}" integrity="{{ $styles_bundle.Data.Integrity }}">
+
+{{ else }}
+
+{{ $styles_bundle := slice $custom_styles $font_face_roboto_styles $font_face_roboto_condensed_styles $font_face_roboto_mono_styles $font_face_vazir_styles | resources.Concat "css/custom-bundle.css" | minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $styles_bundle.Permalink }}" integrity="{{ $styles_bundle.Data.Integrity }}">
+
+{{ end }}

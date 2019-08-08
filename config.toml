@@ -1,0 +1,245 @@
+DefaultContentLanguage = "en"
+disableLanguages = ""
+enableEmoji = true
+Paginate = 8
+PaginatePath = "/blog/page"
+theme = "beautifulhugo"
+
+[languages]
+
+    [languages.en]
+        baseURL = "https://www.babaei.net/"
+        contentDir = "content/en"
+        languageCode = "en-us"
+        languageName = "English"
+        title = "Mamadou Babaei"
+        weight = 10
+
+        [languages.en.author]
+            name = "Mamadou Babaei"
+            github = "NuLL3rr0r"
+            gitlab = "NuLL3rr0r"
+            telegram = "babaei_net"
+            twitter = "NuLL3rr0r"
+            website = "https://www.babaei.net/"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+                name = "Blog"
+                url = ""
+                weight = 1
+
+            [[languages.en.menu.main]]
+                name = "Archives"
+                url = "/blog/archives/"
+                weight = 2
+
+            [[languages.en.menu.main]]
+                name = "Resume"
+                url = "/resume/"
+                weight = 3
+
+            [[languages.en.menu.main]]
+                name = "Projects"
+                url = "/projects/"
+                weight = 4
+
+            [[languages.en.menu.main]]
+                name = "About"
+                url = "/about/"
+                weight = 5
+
+            [[languages.en.menu.main]]
+                identifier = "subscribe"
+                name = "Subscribe"
+                weight = 6
+
+            [[languages.en.menu.main]]
+                parent = "subscribe"
+                name = "Subscribe via Email"
+                url = "http://subscribe.babaei.net/?lang=en&subscription=en"
+                weight = 1
+
+            [[languages.en.menu.main]]
+                parent = "subscribe"
+                name = "Subscribe via RSS"
+                url = "/index.xml"
+                weight = 2
+
+            [[languages.en.menu.main]]
+                parent = "subscribe"
+                name = "Subscribe via Telegram"
+                url = "https://telegram.me/babaei_net"
+                weight = 3
+
+            [[languages.en.menu.main]]
+                name = "Contact"
+                url = "http://subscribe.babaei.net/?lang=en&contact-form"
+                weight = 7
+
+            [[languages.en.menu.main]]
+                name = "Search"
+                url = "/search/"
+                weight = 8
+
+            [[languages.en.menu.main]]
+                name = "وبلاگ فارسی"
+                url = "https://fa.babaei.net/"
+                weight = 9
+
+        [languages.en.params]
+            homeTitle = "Mamadou Babaei"
+            subtitle = "C++ / Unreal Engine Developer"
+
+    [languages.fa]
+        baseURL = "https://fa.babaei.net/"
+        contentDir = "content/fa"
+        languageCode = "fa-ir"
+        languageName = "فارسی"
+        title = "ممدوو بابائی"
+        weight = 20
+
+        [languages.fa.author]
+            name = "ممدوو بابائی"
+            github = "NuLL3rr0r"
+            gitlab = "NuLL3rr0r"
+            telegram = "babaei_net"
+            twitter = "mamadou_babaei"
+            website = "https://fa.babaei.net/"
+
+        [languages.fa.menu]
+            [[languages.fa.menu.main]]
+                name = "وبلاگ"
+                url = ""
+                weight = 1
+
+            [[languages.fa.menu.main]]
+                name = "آرشیو"
+                url = "/blog/archives/"
+                weight = 2
+
+            [[languages.fa.menu.main]]
+                name = "رزومه"
+                url = "/resume/"
+                weight = 3
+
+            [[languages.fa.menu.main]]
+                name = "پروژه ها"
+                url = "/projects/"
+                weight = 4
+
+            [[languages.fa.menu.main]]
+                name = "درباره"
+                url = "/about/"
+                weight = 5
+
+            [[languages.fa.menu.main]]
+                identifier = "subscribe"
+                name = "اشتراک"
+                weight = 6
+
+            [[languages.fa.menu.main]]
+                parent = "subscribe"
+                name = "ایمیل"
+                url = "http://subscribe.babaei.net/?lang=fa&subscription=fa"
+                weight = 1
+
+            [[languages.fa.menu.main]]
+                parent = "subscribe"
+                name = "فید"
+                url = "/index.xml"
+                weight = 2
+
+            [[languages.fa.menu.main]]
+                parent = "subscribe"
+                name = "تلگرام"
+                url = "https://telegram.me/babaei_net"
+                weight = 3
+
+            [[languages.fa.menu.main]]
+                name = "تماس"
+                url = "http://subscribe.babaei.net/?lang=fa&contact-form"
+                weight = 7
+
+            [[languages.fa.menu.main]]
+                name = "جستجو"
+                url = "/search/"
+                weight = 8
+
+            [[languages.fa.menu.main]]
+                name = "English Blog"
+                url = "https://www.babaei.net/"
+                weight = 9
+
+        [languages.fa.params]
+            homeTitle = "ممدوو بابائی"
+            subtitle = "برنامه نویس C++ / Unreal Engine"
+
+[params]
+    comments = true
+    commit = "https://github.com/NuLL3rr0r/babaei-net-blog-source/tree/"
+    dateFormat = "January 2, 2006"
+    favicon = "/favicon.ico"
+    logo = "/img/mamadou-babaei.png"
+    readingTime = true
+    rss = true
+    selfHosted = true
+    share_img = ""
+    showRelatedPosts = true
+    socialShare = true
+    useChroma = true
+    useHLJS = false
+
+[permalinks]
+    post = "/blog/:slug/"
+
+[privacy]
+    [privacy.disqus]
+        disable = true
+    [privacy.googleAnalytics]
+        anonymizeIP = true
+        disable = true
+        respectDoNotTrack = true
+        useSessionStorage = true
+    [privacy.instagram]
+        disable = true
+    [privacy.twitter]
+        disable = true
+        enableDNT = true
+        simple = true
+    [privacy.vimeo]
+        disable = false
+        simple = false
+    [privacy.youtube]
+        disable = false
+        privacyEnhanced = false
+
+[related]
+    threshold = 100
+    includeNewer = true
+    toLower = true
+
+[[related.indices]]
+    name  = "author"
+    toLower = true
+    weight = 30
+
+[[related.indices]]
+    name  = "date"
+    weight = 10
+    pattern = "2006"
+
+[[related.indices]]
+    name = "keywords"
+    weight = 150
+
+[[related.indices]]
+    name  = "tags"
+    weight = 100
+
+[services]
+    [services.instagram]
+        disableInlineCSS = true
+    [services.twitter]
+        disableInlineCSS = true

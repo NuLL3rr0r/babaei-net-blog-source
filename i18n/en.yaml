@@ -1,0 +1,112 @@
+# Content
+- id: dateFormat
+  translation: "January 2, 2006"
+- id: shortdateFormat
+  translation: "Jan 2, 2006 15:04:05"
+- id: postedOnDate
+  translation: "Posted on {{ .Count }}"
+- id: lastModified
+  translation: "(Last modified on {{ .Count }})"
+- id: translationsLabel
+  translation: "Other languages: "
+- id: translationsSeparator
+  translation: ", "
+- id: readMore
+  translation: "Read More..."
+- id: olderPosts
+  translation: "Older Posts"
+- id: newerPosts
+  translation: "Newer Posts"
+- id: previousPost
+  translation: "Previous Post"
+- id: nextPost
+  translation: "Next Post"
+- id: readTime
+  translation: "minutes"
+- id: words
+  translation: "words"
+
+
+# 404 page
+- id: pageNotFound
+  translation: "Whoops, this page doesn't exist. Move along. (404 error)"
+
+# Footer
+- id: license # Accepts HTML
+  translation: 'All content on this website is licensed under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. All source code published here is licensed under the <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> unless explicitly stated otherwise. The content is provided for educational and informational purposes only without any warranties, guarantees or conditions, of any kind, and may not be accurate, up to date or complete. Any use or reliance on any content or materials published, mentioned or linked here is at your own risk and the author/authors accept no liability or responsibility for.'
+- id: poweredBy # Accepts HTML
+  translation: 'Powered by <a href="https://freebsd.org/" target="_blank">FreeBSD</a> | <a href="https://nginx.org/" target="_blank">nginx</a> | <a href="https://gohugo.io/" target="_blank">Hugo v{{ .Hugo.Version }}</a>'
+- id: themeBy # Accepts HTML
+  translation: 'Theme by <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+- id: revision
+  translation: 'Revision'
+
+# Navigation
+- id: toggleNavigation
+  translation: "Toggle navigation"
+- id: languageSwitcherLabel
+  translation: "Language"
+- id: gcseLabelShort
+  translation: "Search"
+- id: gcseLabelLong
+  translation: "Search {{ .Site.Title }}"
+- id: gcseClose
+  translation: "Close"
+
+# Staticman
+- id: noComment
+  translation: "No comment"
+- id: oneComment
+  translation: "comment"
+- id: moreComment
+  translation: "comments"
+- id: useMarkdown
+  translation: "You can use Markdown syntax"
+- id: yourName
+  translation: "Your name"
+- id: yourEmail
+  translation: "Your email address"
+- id: yourWebsite
+  translation: "You website"
+
+# Delayed Disqus
+- id: show
+  translation: "Show"
+- id: comments
+  translation: "comments" 
+
+# Footer links
+- id: subscribeEmail
+  translation: "Subscribe via Email"
+- id: subscribeEmailUrl
+  translation: "http://subscribe.babaei.net/?lang=en&subscription=en"
+- id: subscribeRSS
+  translation: "Subscribe via RSS"
+- id: contactMe
+  translation: "Send me a message"
+- id: contactMeUrl
+  translation: "http://subscribe.babaei.net/?lang=en&contact-form"
+
+# Table of contents
+- id: tableOfContents
+  translation: "Table of Contents"
+
+# Related posts
+- id: seeAlso
+  translation: "See also"
+
+# Share links
+- id: shareTwitter
+  translation: "Share on Twitter"
+- id: shareGooglePlus
+  translation: "Share on Google Plus"
+- id: shareFacebook
+  translation: "Share on Facebook"
+- id: shareReddit
+  translation: "Share on Reddit"
+- id: shareLinkedIn
+  translation: "Share on LinkedIn"
+- id: shareStumbleUpon
+  translation: "Share on StumbleUpon"
+- id: sharePinterest
+  translation: "Share on Pinterest"
