@@ -2,7 +2,7 @@
 title = "کمپین پروپاگاندای جمهوری اسلامی: آیا تد ابزاری جهت پیشبرد اهداف جمهوری اسلامی توسط نایاک است؟"
 slug = "islamic-republic-global-propaganda-campaign-ted-niac"
 date = 2019-07-05T17:08:00+02:00
-tags = [ "Barandazan", "Censorship", "Cybersecurity", "Iran", "Islamic Republic Of Iran", "NIAC", "Reddit", "Social Media", "TED", "TED Talks", "TEDx", "Telegram", "Twitter" ]
+tags = [ "Barandazan", "Iran", "Islamic Republic Of Iran", "NIAC", "Reddit", "Social Media", "TED", "TED Talks", "TEDx", "Telegram", "Twitter" ]
 toc = false
 +++
 
