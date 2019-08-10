@@ -18,6 +18,7 @@ tags = [ "Barandazan", "Cybersecurity","Fake", "Iran", "Islamic Republic Of Iran
 {{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-group-chat-islamic-rebulic-p2.png" alt="چت گروهی باند توییتری جمهوری اسلامی بخش دوم" title="چت گروهی باند توییتری جمهوری اسلامی بخش دوم" >}}
 
 همانطور که در ویدیو مشاهده می‌نمایید، ابدا قصد مزاح نمودن ندارم و اسکرین‌شات‌ها اصل می باشد:
+
 <br />
 
 {{< youtube Q9n6Gsk0lAQ >}}
