@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-khazar-foroushi-nist-khak-mikhorim-khak-nemidahim/khazar-foroushi-nist_khak_mikhorim_khak_nemidahim-twitterstorms-hashtags-analysis.jpg" alt="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #خزر_فروشی_نیست و #خاک_میخوریم_خاک_نمیدهیم آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #خزر_فروشی_نیست و #خاک_میخوریم_خاک_نمیدهیم آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-khazar-foroushi-nist-khak-mikhorim-khak-nemidahim/khazar-foroushi-nist-khak-mikhorim-khak-nemidahim-twitterstorms-hashtags-analysis.jpg" alt="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #خزر_فروشی_نیست و #خاک_میخوریم_خاک_نمیدهیم آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #خزر_فروشی_نیست و #خاک_میخوریم_خاک_نمیدهیم آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان‌های توییتری و شبکه هشتگ‌های [#خزر_فروشی_نیست](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash) و [#خاک_میخوریم_خاک_نمیدهیم](https://twitter.com/hashtag/%D8%AE%D8%A7%DA%A9_%D9%85%DB%8C%D8%AE%D9%88%D8%B1%DB%8C%D9%85_%D8%AE%D8%A7%DA%A9_%D9%86%D9%85%DB%8C%D8%AF%D9%87%DB%8C%D9%85?src=hash) به ادامه مطلب مراجعه نمایید.
 
