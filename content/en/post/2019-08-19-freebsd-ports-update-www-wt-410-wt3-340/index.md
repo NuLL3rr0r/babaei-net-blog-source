@@ -1,6 +1,6 @@
 +++
 title = "The long awaited FreeBSD www/wt and www/wt3 ports updates"
-slug = "-freebsd-ports-update-www-wt-410-wt3-340"
+slug = "freebsd-ports-update-www-wt-410-wt3-340"
 date = 2019-08-19T01:49:00+02:00
 tags = [ "C++", "CPP", "FOSS", "FLOSS", "FreeBSD", "FreeBSD Ports", "Ports", "Unix", "Witty", "Wt" ]
 +++
