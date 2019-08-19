@@ -189,10 +189,10 @@ toc = true
 
 ## دریافت گراف‌های با کیفیت
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash):
-
-{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
-
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash):
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+
+دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash):
+
+{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
