@@ -1,5 +1,5 @@
 +++
-title = "A workaround for udevd 100% cpu usage and blank screen freeze on Gentoo GNU/Linux with recent NVIDIA drivers"
+title = "A workaround for udevd 100% CPU usage and blank screen freeze on Gentoo GNU/Linux with recent NVIDIA drivers"
 slug = "gentoo-nvidia-udevd-x-blank-screen-freeze-100-percent-cpu-usage"
 date = 2019-08-19T02:37:00+02:00
 tags = [ "FOSS", "FLOSS", "Funtoo", "Gentoo", "GNU", "Linux", "Unix" ]
