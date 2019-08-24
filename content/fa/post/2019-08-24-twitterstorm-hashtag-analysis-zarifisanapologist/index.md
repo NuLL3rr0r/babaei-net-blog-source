@@ -134,7 +134,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#ZarifIsAnApologist](https://twitter.com/hashtagZarifIsAnApologistsrc=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #ZarifIsAnApologist با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #ZarifIsAnApologist با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #ZarifIsAnApologist با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #ZarifIsAnApologist با بیشترین تعداد توییت" >}}
 
 1. [@0x__dead](https://twitter.com/0x__dead)
 2. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
