@@ -8,7 +8,7 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری و شبکه‌ هشتگ #ZarifIsAnApologist آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری و شبکه‌ هشتگ #ZarifIsAnApologist آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtagZarifIsAnApologistsrc=hash) به ادامه مطلب مراجعه نمایید.
+جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtag/ZarifIsAnApologist?src=hash) به ادامه مطلب مراجعه نمایید.
 
 <!--more-->
 
@@ -22,7 +22,7 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #ZarifIsAnApologist" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #ZarifIsAnApologist" >}}
 
-1. [#ZarifIsAnApologist](https://twitter.com/hashtagZarifIsAnApologistsrc=hash)
+1. [#ZarifIsAnApologist](https://twitter.com/hashtag/ZarifIsAnApologist?src=hash)
 2. [#ماله_کش_اعظم](https://twitter.com/hashtag/ماله_کش_اعظم?src=hash)
 3. [#shameonsweden](https://twitter.com/hashtag/shameonsweden?src=hash)
 4. [#ظریف](https://twitter.com/hashtag/ظریف?src=hash)
@@ -75,7 +75,7 @@ toc = true
 
 ### سرشناس‌ترین اکانت‌های شبکه هشتگ #ZarifIsAnApologist
 
-سرشناس‌ترین اکانت‌های شبکه هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtagZarifIsAnApologistsrc=hash) به ترتیب به شرح ذیل می باشند:
+سرشناس‌ترین اکانت‌های شبکه هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtag/ZarifIsAnApologist?src=hash) به ترتیب به شرح ذیل می باشند:
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #ZarifIsAnApologist" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #ZarifIsAnApologist" >}}
 
@@ -132,7 +132,7 @@ toc = true
 
 ### کاربران ترند کننده شبکه هشتگ #ZarifIsAnApologist با بیشترین تعداد توییت
 
-کاربران ترند کننده شبکه هشتگ  [#ZarifIsAnApologist](https://twitter.com/hashtagZarifIsAnApologistsrc=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
+کاربران ترند کننده شبکه هشتگ  [#ZarifIsAnApologist](https://twitter.com/hashtag/ZarifIsAnApologist?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #ZarifIsAnApologist با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #ZarifIsAnApologist با بیشترین تعداد توییت" >}}
 
@@ -189,10 +189,10 @@ toc = true
 
 ## دریافت گراف‌های با کیفیت
 
-دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtagZarifIsAnApologistsrc=hash):
+دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtag/ZarifIsAnApologist?src=hash):
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #ZarifIsAnApologist، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #ZarifIsAnApologist، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtagZarifIsAnApologistsrc=hash):
+دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#ZarifIsAnApologist](https://twitter.com/hashtag/ZarifIsAnApologist?src=hash):
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-zarifisanapologist/zarifisanapologist-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #ZarifIsAnApologist، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #ZarifIsAnApologist، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
