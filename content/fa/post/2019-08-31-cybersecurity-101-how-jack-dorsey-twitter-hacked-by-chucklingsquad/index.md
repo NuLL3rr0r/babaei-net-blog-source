@@ -8,7 +8,7 @@ toc = true
 
 {{< figure src="/blog/cybersecurity-101-cybersecurity-101-how-jack-dorsey-twitter-hacked-by-chucklingsquad/jack-dorsey-twitter-hacked-by-chucklingsquad.jpg" alt="هک شدن حساب کاربری جک دورسی موسس و مدیرعامل توییتر توسط گروهی با نام Chuckling Squad" title="هک شدن حساب کاربری جک دورسی موسس و مدیرعامل توییتر توسط گروهی با نام Chuckling Squad" >}}
 
-اگر فعال سیاسی و یا کاربر سرشناس توییتری داخل کشور هستید به هیچ‌وجه ادامه این مطلب را از دست ندهید.
+اگر یک فعال سیاسی و یا کاربر سرشناس توییتری داخل کشور هستید به هیچ‌وجه ادامه این مطلب را از دست ندهید.
 
 <!--more-->
 
@@ -24,7 +24,7 @@ toc = true
 
 در مدت چند هفته گذشته، حساب‌های کاربری تعدادی از اینفلونسری‌های شبکه‌های اجتماعی نظیر [Shane Dawson](https://twitter.com/shanedawson)، [James Charles](https://twitter.com/jamescharles)، [zane](https://twitter.com/zane)، [Shroud](https://twitter.com/shroud)، [King Bach](https://twitter.com/KingBach)، [Amanda Cerny](https://twitter.com/AmandaCerny)، و بسیاری دیگر در شبکه‌ اجتماعی [توییتر](https://twitter.com/) و سرویس پخش زنده [توییچ.تی‌وی](https://www.twitch.tv/) توسط گروهی به نام [#ChucklingSquad](https://twitter.com/hashtag/ChucklingSquad?src=hash) هک شده است. گویا حساب کاربری جک دورسی هم توسط این گروه و به رهبری شخصی با نام مستعار Aqua هک شده است.
 
-اما این حساب‌ها با چه روشی هک شده‌اند؟ بنابر اظهارات [Keemstar](https://twitter.com/KEEMSTAR)، King Bach و Amanda Cerny گویا این هک‌ها با سواستفاده از یک خطای انسانی در سرویس دهنده چندملیتی و مشهور AT&T افتاده است. ظاهرا در این روش هکر‌ها با AT&T تماس گرفته و به اپراتور انسانی می‌گویند که کلمه‌عبور خود را گم کرده‌اند. سپس اپراتور، شماره سیم کارت را از تلفن قربانی به تلفن هکر منتقل می‌نماید. به همین سادگی هکر کنترل حساب‌های کاربری مرتبط با آن شماره تلفن را در اختیار خواهد گرفت. [آماندا سرنی اظهار نموده که](https://web.archive.org/save/https://twitter.com/AmandaCerny/status/1164903843118768130):
+اما این حساب‌ها با چه روشی هک شده‌اند؟ بنابر اظهارات [Keemstar](https://twitter.com/KEEMSTAR)، King Bach و Amanda Cerny گویا این هک‌ها با سواستفاده از یک خطای انسانی در سرویس‌دهنده چندملیتی و مشهور AT&T افتاده است. ظاهرا در این روش هکر‌ها با AT&T تماس گرفته و به اپراتور انسانی می‌گویند که کلمه‌عبور خود را گم کرده‌اند. سپس اپراتور، شماره سیم کارت را از تلفن قربانی به تلفن هکر منتقل می‌نماید. به همین سادگی هکر کنترل حساب‌های کاربری مرتبط با آن شماره تلفن را در اختیار خواهد گرفت. [آماندا سرنی اظهار نموده که](https://web.archive.org/save/https://twitter.com/AmandaCerny/status/1164903843118768130):
 
 {{< figure src="/blog/cybersecurity-101-cybersecurity-101-how-jack-dorsey-twitter-hacked-by-chucklingsquad/amanda-cerny-tweet-att-phone-number-compromised.png" alt="آماندا سرنی: بار دوم شماره تلفن من به دلیل خطای انسانی در شرکت AT&T هک شد؟! تمام مراحل ممکن برای تأیید را بعد از اولین بار دوباره اضافه کردم و حساب من هنوز به خطر افتاده است... زمان تعویض اپراتور همراه رسیده است. همگی مراقب باشید." title="آماندا سرنی: بار دوم شماره تلفن من به دلیل خطای انسانی در شرکت AT&T هک شد؟! تمام مراحل ممکن برای تأیید را بعد از اولین بار دوباره اضافه کردم و حساب من هنوز به خطر افتاده است... زمان تعویض اپراتور همراه رسیده است. همگی مراقب باشید." >}}
 
