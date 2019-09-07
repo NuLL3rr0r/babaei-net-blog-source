@@ -16,11 +16,6 @@ toc = true
 
 ### آمار و ارقام
 
-56823
-84920
-6115
-
-
 {{< hashtag-analysis hashtag="#DelaramNeedsACureASAP" tweet-count="۵۶,۸۲۳" hashtag-usage-count="۸۴,۹۲۰" participant-accounts="۶,۱۱۵" involved-accounts="۶,۸۱۳" directly-related-hashtags="۲۰۹" all-related-hashtags="۲۳۶">}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #DelaramNeedsACureASAP
