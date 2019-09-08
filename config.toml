@@ -215,10 +215,10 @@ theme = "beautifulhugo"
         simple = true
     [privacy.vimeo]
         disable = false
-        simple = false
+        simple = true
     [privacy.youtube]
         disable = false
-        privacyEnhanced = false
+        privacyEnhanced = true
 
 [related]
     threshold = 100
