@@ -1,6 +1,6 @@
 +++
 title = "نسخه کامل مصاحبه من با شبکه آزادی با مقوله امنیت سایبری"
-slug = "cybersecurity-101-otp-one-time-password"
+slug = "cybersecurity-101-my-interview-with-azadi-tv"
 date = 2019-09-03T11:34:00+02:00
 tags = [ "Azadi TV", "Barandazan", "Cybersecurity", "Interview", "Iran", "Islamic Republic Of Iran", "Security" ]
 toc = true
