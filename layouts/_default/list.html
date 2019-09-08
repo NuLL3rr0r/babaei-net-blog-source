@@ -48,18 +48,18 @@
             {{ if .Paginator.HasPrev }}
               <li class="previous">
                 {{ if eq .Lang "fa" }}
-                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">{{ i18n "newerPosts" }} &rarr;</a>
+                <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">{{ i18n "newerPosts" }} &rarr;</a>
                 {{ else }}
-                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+                <a href="{{ .Permalink }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
                 {{ end }}
               </li>
             {{ end }}
             {{ if .Paginator.HasNext }}
               <li class="next">
                 {{ if eq .Lang "fa" }}
-                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">&larr; {{ i18n "olderPosts" }}</a>
+                <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">&larr; {{ i18n "olderPosts" }}</a>
                 {{ else }}
-                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+                <a href="{{ .Permalink }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
                 {{ end }}
               </li>
             {{ end }}

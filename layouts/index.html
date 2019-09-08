@@ -9,7 +9,7 @@
         {{ end }}
 
         <div class="posts-list">
-          {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
+          {{ $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
           {{ range $pag.Pages }}
             <article class="post-preview">
               <a href="{{ .Permalink }}">
@@ -21,6 +21,9 @@
                 {{ end }}
                 {{ if .Params.image }}
                 <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" />
+                {{ end }}
+                {{ if .Params.video }}
+                <video src="{{ .Params.video }}" loop autoplay muted playsinline class="img-title" />
                 {{ end }}
               </a>
 
@@ -49,24 +52,24 @@
 
         {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
           <ul class="pager main-pager">
-            {{ if .Paginator.HasPrev }}
-              <li class="previous">
-                {{ if eq .Lang "fa" }}
+             {{ if .Paginator.HasPrev }}
+               <li class="previous">
+                 {{ if eq .Lang "fa" }}
                 <a href="{{ .Paginator.Prev.URL | absURL }}">[ {{ i18n "newerPosts" }} &rarr; ]</a>
-                {{ else }}
+                 {{ else }}
                 <a href="{{ .Paginator.Prev.URL | absURL }}">[ &larr; {{ i18n "newerPosts" }} ]</a>
-                {{ end }}
-              </li>
-            {{ end }}
-            {{ if .Paginator.HasNext }}
-              <li class="next">
-                {{ if eq .Lang "fa" }}
+                 {{ end }}
+               </li>
+             {{ end }}
+             {{ if .Paginator.HasNext }}
+               <li class="next">
+                 {{ if eq .Lang "fa" }}
                 <a href="{{ .Paginator.Next.URL | absURL }}">[ &larr; {{ i18n "olderPosts" }} ]</a>
-                {{ else }}
+                 {{ else }}
                 <a href="{{ .Paginator.Next.URL | absURL }}">[ {{ i18n "olderPosts" }} &rarr; ]</a>
-                {{ end }}
-              </li>
-            {{ end }}
+                 {{ end }}
+               </li>
+             {{ end }}
           </ul>
         {{ end }}
       </div>

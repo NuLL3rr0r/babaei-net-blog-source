@@ -3,8 +3,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
-          {{ $data := index .Site.Data .Site.Language.Lang }}
-          {{ range $data.beautifulhugo.social.social_icons }}
+          {{ range .Site.Data.beautifulhugo.social.social_icons }}
             {{- if isset $.Site.Author .id }}
               <li>
                 <a href="{{ printf .url (index $.Site.Author .id) }}" title="{{ .title }}">
@@ -26,11 +25,7 @@
           </li>
           {{ if .Site.Params.rss }}
           <li>
-            {{ if .RSSLink }}
-            <a href="{{ .RSSLink }}" title="{{ i18n "subscribeRSS" }}">
-            {{ else }}
-            <a href="{{ .Site.RSSLink }}" title="{{ i18n "subscribeRSS" }}">
-            {{ end }}
+            <a href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
@@ -66,7 +61,7 @@
                     {{ i18n "themeBy" . | safeHTML }}
                 </span>
                 <br />
-                {{ with .Site.Params.commit }}
+                -                {{ with .Site.Params.commit }}
                 {{ i18n "revision" }} <a href="{{.}}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>
                 {{ end }}
             </p>
