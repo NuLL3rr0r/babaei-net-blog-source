@@ -1,5 +1,5 @@
 +++
-title = "نسخه کامل مصاحبه من با شبکه آزادی با مقوله امنیت سایبری"
+title = "نسخه کامل مصاحبه دوم من با شبکه آزادی با مقوله امنیت سایبری"
 slug = "cybersecurity-101-my-2nd-interview-with-azadi-tv"
 date = 2019-09-11T20:52:00+02:00
 tags = [ "Azadi TV", "Barandazan", "Cybersecurity", "Instagram", "Interview", "Iran", "Islamic Republic Of Iran", "Security", "Shadowsocks", "ShadowsocksR", "Social Engineering", "V2Ray", "VPN" ]
