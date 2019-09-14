@@ -1,5 +1,5 @@
 +++
-title = "آنالیز طوفان توییتری و شبکه هشتگ #FifaStandUp4Sahar"
+title = "آنالیز پرشرکت‌کننده‌ترین طوفان توییتری چند وقت اخیر و شبکه هشتگ #FifaStandUp4Sahar + افزوده شدن یک ویژگی منحصربفرد به Barandazstorm"
 slug = "twitterstorm-hashtag-analysis-fifastandup4sahar"
 date = 2019-09-14T03:04:00+02:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]
@@ -8,11 +8,25 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #FifaStandUp4Sahar آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #FifaStandUp4Sahar آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
+ضمن سپاس ویژه از سایبری‌های خستگی‌ناپذیر در امر خیانت به ملت ایران که با فراهم نمودن موجبات اشتباه بنده منجر به افزوده شدن یک ویژگی منحصربفرد به [@Barandazstorm](https://twitter.com/Barandazstorm) شدند.
+
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) به ادامه مطلب مراجعه نمایید.
 
 <!--more-->
 
 ## آنالیز
+
+روز پس از طوفان، توییتی از گوشی تلفن همراه منتشر نمودم که بدلیل عدم حوصله و صرف دقت کافی در تایپ هشتگ، هشتگ اشتباه پیشنهادی توسط توییتر یعنی [#FifaStandUp4Shahar](https://twitter.com/hashtag/FifaStandUp4Shahar?src=hash) را انتخاب نمودم. با توجه به اینکه این اشتباه در اوج طوفان رخ نداد، خوشبختانه تاثیر چندانی بر روی شبکه هشتگ نداشت.
+
+از دیگر کاربران سرشناس شبکه هشتگ #FifaStandUp4Sahar که قربانی حملات ربودن هشتگ شده @AlinejadMasih بوده که توییتی با هشتگ اشتباه #FifaStand4Sahar منتشر نموده.
+
+لذا بر آن شدم که قابلیت ادغام هشتگ‌های موازی را به ۲ دلیل به @Barandazstorm اضافه نمایم:
+
+دلیل اول) مقابله با زخمی شدن طوفان‌ها توسط سایبری‌ها.
+
+دلیل دوم) تجزیه و تحلیل میزان صدماتی که سایبری‌ها یا اشتباهات و سهل‌انگاری کاربران می‌تواند بر روی میزان ترند شدن هشتگ‌ها داشته باشد که بسیار مفید می‌باشد.
+
+بنابراین آنالیز شبکه هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) با/بدون لحاظ نمودن هشتگ‌های موازی عرضه خواهد شد. 
 
 ### برخی از هشتگ‌های موازی با #FifaStandUp4Sahar
 
@@ -31,17 +45,19 @@ toc = true
 13. [#FifaStandUpForSara](https://twitter.com/hashtag/FifaStandUpForSara?src=hash)
 14. [#FifaStsndUp4Sahar](https://twitter.com/hashtag/FifaStsndUp4Sahar?src=hash)
 
-### آمار و ارقام
+البته تحلیل این هشتگ‌ها مشخص می‌نماید که تمامی هشتگ‌های موازی حاصل فعالیت سایبری‌ها نمی‌باشد و گاها اشتباهات کاربران در آن موثر است. گاهی هم توضیح خاصی جز گمانه‌زنی نمی‌توان یافت. برای مثال [#wewillstandup4saharهستم](https://twitter.com/hashtag/wewillstandup4saharهستم?src=hash) که مشخص نیست هدف کاربری که این هشتگ را زده چه بوده <span dir="ltr">¯\\\_(ツ)_/¯</span>.
+
+### آمار و ارقام #FifaStandUp4Sahar بدون احتساب هشتگ‌های موازی
 
 {{< hashtag-analysis hashtag="#FifaStandUp4Sahar" tweet-count="۱۷۱,۹۷۷" hashtag-usage-count="۲۴۲,۸۱۵" participant-accounts="۱۳,۹۰۶" involved-accounts="۱۵,۳۲۳" directly-related-hashtags="۱,۴۵۵" all-related-hashtags="۱,۶۴۰">}}
 
-### آمار و ارقام با احتساب هشتگ‌های موازی
+### آمار و ارقام #FifaStandUp4Sahar با احتساب هشتگ‌های موازی
 
 {{< hashtag-analysis hashtag="#FifaStandUp4Sahar" tweet-count="۱۷۳,۹۲۶" hashtag-usage-count="۲۴۵,۴۹۷" participant-accounts="۱۴,۰۸۹" involved-accounts="۱۵,۵۳۵" directly-related-hashtags="۱,۴۶۹" all-related-hashtags="۱,۶۴۸">}}
 
-### مرتبط‌ترین هشتگ‌های شبکه هشتگ #FifaStandUp4Sahar
+### مرتبط‌ترین هشتگ‌های شبکه هشتگ #FifaStandUp4Sahar بدون احتساب هشتگ‌های موازی
 
-مرتبط‌ترین هشتگ‌های مرتبط با هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) به ترتیب اهمیت به شرح ذیل می باشند:
+مرتبط‌ترین هشتگ‌های مرتبط با هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) بدون احتساب هشتگ‌های موازی به ترتیب اهمیت به شرح ذیل می باشند:
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #FifaStandUp4Sahar" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #FifaStandUp4Sahar" >}}
 
@@ -253,9 +269,9 @@ toc = true
 99. [#رائفی_پور](https://twitter.com/hashtag/رائفی_پور?src=hash)
 100. [#موج_ضد_روسی_بسازید](https://twitter.com/hashtag/موج_ضد_روسی_بسازید?src=hash)
 
-### سرشناس‌ترین اکانت‌های شبکه هشتگ #FifaStandUp4Sahar
+### سرشناس‌ترین اکانت‌های شبکه هشتگ #FifaStandUp4Sahar بدون احتساب هشتگ‌های موازی
 
-سرشناس‌ترین اکانت‌های شبکه هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) به ترتیب به شرح ذیل می باشند:
+سرشناس‌ترین اکانت‌های شبکه هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) بدون احتساب هشتگ‌های موازی به ترتیب به شرح ذیل می باشند:
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #FifaStandUp4Sahar" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #FifaStandUp4Sahar" >}}
 
@@ -467,9 +483,9 @@ toc = true
 99. [@metalmilitia124](https://twitter.com/metalmilitia124)
 100. [@DoctorOLALA](https://twitter.com/DoctorOLALA)
 
-### کاربران ترند کننده شبکه هشتگ #FifaStandUp4Sahar با بیشترین تعداد توییت
+### کاربران ترند کننده شبکه هشتگ #FifaStandUp4Sahar با بیشترین تعداد توییت بدون احتساب هشتگ‌های موازی
 
-کاربران ترند کننده شبکه هشتگ  [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
+کاربران ترند کننده شبکه هشتگ  [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) با بیشترین تعداد توییت، احتساب هشتگ‌های موازی به ترتیب به شرح ذیل می باشند:
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #FifaStandUp4Sahar با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #FifaStandUp4Sahar با بیشترین تعداد توییت" >}}
 
@@ -592,16 +608,16 @@ toc = true
 10. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 11. [@Persian_kingg](https://twitter.com/Persian_kingg)
 12. [@RJDI2018](https://twitter.com/RJDI2018)
-13. [@habbe_angooor](https://twitter.com/habbe_angooor)
-14. [@Banuyetehrani](https://twitter.com/Banuyetehrani)
+13. [@Banuyetehrani](https://twitter.com/Banuyetehrani)
+14. [@habbe_angooor](https://twitter.com/habbe_angooor)
 15. [@KiMo41742338](https://twitter.com/KiMo41742338)
-16. [@Lalehzaar](https://twitter.com/Lalehzaar)
-17. [@Farahna52419347](https://twitter.com/Farahna52419347)
+16. [@Farahna52419347](https://twitter.com/Farahna52419347)
+17. [@Lalehzaar](https://twitter.com/Lalehzaar)
 18. [@Mahmoud55791825](https://twitter.com/Mahmoud55791825)
 19. [@am70561791](https://twitter.com/am70561791)
-20. [@Alialav70529956](https://twitter.com/Alialav70529956)
-21. [@Parisa70596914](https://twitter.com/Parisa70596914)
-22. [@smf1359](https://twitter.com/smf1359)
+20. [@Parisa70596914](https://twitter.com/Parisa70596914)
+21. [@smf1359](https://twitter.com/smf1359)
+22. [@Alialav70529956](https://twitter.com/Alialav70529956)
 23. [@siya1978siya](https://twitter.com/siya1978siya)
 24. [@saiedeh10](https://twitter.com/saiedeh10)
 25. [@sundew_thy](https://twitter.com/sundew_thy)
@@ -612,74 +628,78 @@ toc = true
 30. [@inoue81377457](https://twitter.com/inoue81377457)
 31. [@Greenmov3ment](https://twitter.com/Greenmov3ment)
 32. [@iman02007422](https://twitter.com/iman02007422)
-33. [@ghamoshadi](https://twitter.com/ghamoshadi)
-34. [@Babakg1989](https://twitter.com/Babakg1989)
+33. [@Babakg1989](https://twitter.com/Babakg1989)
+34. [@ghamoshadi](https://twitter.com/ghamoshadi)
 35. [@motlagh12](https://twitter.com/motlagh12)
 36. [@FFighter1987](https://twitter.com/FFighter1987)
 37. [@piyabad](https://twitter.com/piyabad)
 38. [@shina_ghasemi](https://twitter.com/shina_ghasemi)
 39. [@AzadProtest](https://twitter.com/AzadProtest)
-40. [@renehossein](https://twitter.com/renehossein)
-41. [@HTeymouri1](https://twitter.com/HTeymouri1)
-42. [@Nafiseh87419994](https://twitter.com/Nafiseh87419994)
-43. [@sheykhpinok](https://twitter.com/sheykhpinok)
+40. [@HTeymouri1](https://twitter.com/HTeymouri1)
+41. [@renehossein](https://twitter.com/renehossein)
+42. [@sheykhpinok](https://twitter.com/sheykhpinok)
+43. [@Nafiseh87419994](https://twitter.com/Nafiseh87419994)
 44. [@Azad77919645](https://twitter.com/Azad77919645)
-45. [@phoenixINCH](https://twitter.com/phoenixINCH)
-46. [@Uran982](https://twitter.com/Uran982)
+45. [@Uran982](https://twitter.com/Uran982)
+46. [@phoenixINCH](https://twitter.com/phoenixINCH)
 47. [@wake2up4life](https://twitter.com/wake2up4life)
-48. [@arashasgari3](https://twitter.com/arashasgari3)
-49. [@hashemasa](https://twitter.com/hashemasa)
-50. [@S_Sara60](https://twitter.com/S_Sara60)
-51. [@RobotNo297](https://twitter.com/RobotNo297)
-52. [@phalange1981](https://twitter.com/phalange1981)
+48. [@hashemasa](https://twitter.com/hashemasa)
+49. [@arashasgari3](https://twitter.com/arashasgari3)
+50. [@phalange1981](https://twitter.com/phalange1981)
+51. [@S_Sara60](https://twitter.com/S_Sara60)
+52. [@RobotNo297](https://twitter.com/RobotNo297)
 53. [@hichmapich](https://twitter.com/hichmapich)
 54. [@ankakalk](https://twitter.com/ankakalk)
 55. [@sholokhof](https://twitter.com/sholokhof)
 56. [@khazaei_parviz](https://twitter.com/khazaei_parviz)
 57. [@_H_a_n_a_7_](https://twitter.com/_H_a_n_a_7_)
 58. [@hamedimhsi](https://twitter.com/hamedimhsi)
-59. [@zortema2](https://twitter.com/zortema2)
-60. [@akooooooomi](https://twitter.com/akooooooomi)
+59. [@akooooooomi](https://twitter.com/akooooooomi)
+60. [@zortema2](https://twitter.com/zortema2)
 61. [@behrooz3x](https://twitter.com/behrooz3x)
 62. [@UBJioPzkifoiEFf](https://twitter.com/UBJioPzkifoiEFf)
 63. [@Shirin1023](https://twitter.com/Shirin1023)
-64. [@Hasanzadeh17](https://twitter.com/Hasanzadeh17)
-65. [@esrota1343](https://twitter.com/esrota1343)
-66. [@khorshidchehr](https://twitter.com/khorshidchehr)
-67. [@baran4626](https://twitter.com/baran4626)
+64. [@baran4626](https://twitter.com/baran4626)
+65. [@Hasanzadeh17](https://twitter.com/Hasanzadeh17)
+66. [@esrota1343](https://twitter.com/esrota1343)
+67. [@khorshidchehr](https://twitter.com/khorshidchehr)
 68. [@1989lukashood](https://twitter.com/1989lukashood)
 69. [@ParsaRosha](https://twitter.com/ParsaRosha)
 70. [@kohbano](https://twitter.com/kohbano)
 71. [@VenusBarcaee](https://twitter.com/VenusBarcaee)
 72. [@Hamid78343523](https://twitter.com/Hamid78343523)
 73. [@abo_karikot](https://twitter.com/abo_karikot)
-74. [@Xtw99Tpc8WrCd3d](https://twitter.com/Xtw99Tpc8WrCd3d)
-75. [@Behrooz42345368](https://twitter.com/Behrooz42345368)
-76. [@Zoro21936890](https://twitter.com/Zoro21936890)
-77. [@makeyourselfno1](https://twitter.com/makeyourselfno1)
+74. [@makeyourselfno1](https://twitter.com/makeyourselfno1)
+75. [@Xtw99Tpc8WrCd3d](https://twitter.com/Xtw99Tpc8WrCd3d)
+76. [@Behrooz42345368](https://twitter.com/Behrooz42345368)
+77. [@Zoro21936890](https://twitter.com/Zoro21936890)
 78. [@hana46914628](https://twitter.com/hana46914628)
-79. [@ParisaTaheri777](https://twitter.com/ParisaTaheri777)
+79. [@AlitaaAngel](https://twitter.com/AlitaaAngel)
 80. [@Maryam05236104](https://twitter.com/Maryam05236104)
-81. [@AlitaaAngel](https://twitter.com/AlitaaAngel)
-82. [@arashkamangir24](https://twitter.com/arashkamangir24)
-83. [@chashmin](https://twitter.com/chashmin)
-84. [@zhandark49](https://twitter.com/zhandark49)
-85. [@capricornah1](https://twitter.com/capricornah1)
-86. [@alireza_areff](https://twitter.com/alireza_areff)
-87. [@feri84050387](https://twitter.com/feri84050387)
-88. [@gharibe_ashnaa](https://twitter.com/gharibe_ashnaa)
+81. [@feri84050387](https://twitter.com/feri84050387)
+82. [@ParisaTaheri777](https://twitter.com/ParisaTaheri777)
+83. [@arashkamangir24](https://twitter.com/arashkamangir24)
+84. [@chashmin](https://twitter.com/chashmin)
+85. [@mamadou_babaei](https://twitter.com/mamadou_babaei)
+86. [@zhandark49](https://twitter.com/zhandark49)
+87. [@alireza_areff](https://twitter.com/alireza_areff)
+88. [@capricornah1](https://twitter.com/capricornah1)
 89. [@amir_tarom](https://twitter.com/amir_tarom)
-90. [@Aryan_Son_](https://twitter.com/Aryan_Son_)
-91. [@mamadou_babaei](https://twitter.com/mamadou_babaei)
-92. [@abtin90](https://twitter.com/abtin90)
-93. [@BabakKhorramd12](https://twitter.com/BabakKhorramd12)
-94. [@sherlock1358](https://twitter.com/sherlock1358)
+90. [@gharibe_ashnaa](https://twitter.com/gharibe_ashnaa)
+91. [@sherlock1358](https://twitter.com/sherlock1358)
+92. [@Aryan_Son_](https://twitter.com/Aryan_Son_)
+93. [@abtin90](https://twitter.com/abtin90)
+94. [@BabakKhorramd12](https://twitter.com/BabakKhorramd12)
 95. [@Rebel29388](https://twitter.com/Rebel29388)
-96. [@zamanmast](https://twitter.com/zamanmast)
-97. [@Shayan57417095](https://twitter.com/Shayan57417095)
-98. [@Poirotoo](https://twitter.com/Poirotoo)
-99. [@mehdi28498546](https://twitter.com/mehdi28498546)
-100. [@shahrokz1](https://twitter.com/shahrokz1)
+96. [@shahrokz1](https://twitter.com/shahrokz1)
+97. [@zamanmast](https://twitter.com/zamanmast)
+98. [@mehdi28498546](https://twitter.com/mehdi28498546)
+99. [@Shayan57417095](https://twitter.com/Shayan57417095)
+100. [@Poirotoo](https://twitter.com/Poirotoo)
+
+### نتیجه‌گیری
+
+علیرغم به اشتباه افتادن کاربر شماره <code>۴</code> [@AlinejadMasih](https://twitter.com/AlinejadMasih) و شماره <code>۵</code> [@mamadou_babaei](https://twitter.com/mamadou_babaei) در لیست کاربران سرشناس در میان <code>۱۵,۵۳۵</code> کاربر (که حاکی از وسعت بی‌سابقه طوفان [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) در میان طوفان‌های اخیر می‌باشد) همانطور که مشاهده می‌شود تمام تلاش‌های سایبری‌ها جهت زخمی نمودن طوفان [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) در بهترین حالت ممکن ختم به یک خراش سطحی شده است.
 
 ## دریافت گراف‌ با کیفیت
 
