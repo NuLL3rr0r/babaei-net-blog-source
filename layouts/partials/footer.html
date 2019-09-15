@@ -61,7 +61,7 @@
                     {{ i18n "themeBy" . | safeHTML }}
                 </span>
                 <br />
-                -                {{ with .Site.Params.commit }}
+                {{ with .Site.Params.commit }}
                 {{ i18n "revision" }} <a href="{{.}}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>
                 {{ end }}
             </p>
