@@ -1,7 +1,7 @@
 +++
 title = "آنالیز طوفان توییتری و شبکه هشتگ #VoiceOfIranianPrisoners"
 slug = "twitterstorm-hashtag-analysis-voiceofiranianprisoners"
-date = 2019-09-19T03:04:00+02:00
+date = 2019-09-19T15:04:00+02:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
 +++
