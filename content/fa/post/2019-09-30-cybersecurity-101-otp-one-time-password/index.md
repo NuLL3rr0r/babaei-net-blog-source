@@ -4,10 +4,11 @@ slug = "cybersecurity-101-otp-one-time-password"
 date = 2019-09-30T00:00:00+02:00
 tags = [ "Barandazan", "Cybersecurity", "Iran", "Islamic Republic Of Iran", "OTP", "Security", "Twitter" ]
 toc = true
-draft = true
 +++
 
 {{< figure src="/blog/cybersecurity-101-otp-one-time-password/offline-otp-one-time-password.jpg" alt="رمز یکبار مصرف آفلاین" title="رمز یکبار مصرف آفلاین" >}}
+
+بیش از ۲ ماه پیش ۹۵٪ این مطلب را تهیه نموده بودم که بدلیل حساسیت آن و محدودیت زمانی، ویرایش نهایی و انتشار آن تا به امروز میسر نشد. فارغ از نوع فعالیت، خواندن این مطلب را جهت سخت‌تر و غیرقابل نفوذ نمودن حساب‌های کاربری‌تان در تمامی سرویس‌های اینترنتی توصیه می‌نمایم.
 
 <!--more-->
 
