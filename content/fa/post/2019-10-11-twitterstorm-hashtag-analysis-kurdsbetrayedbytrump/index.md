@@ -2,7 +2,7 @@
 title = "آنالیز ابر طوفان توییتری و شبکه هشتگ #KurdsBetrayedByTrump"
 slug = "twitterstorm-hashtag-analysis-kurdsbetrayedbytrump"
 date = 2019-10-11T14:01:00+02:00
-tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Kurd", "Kurdish", "Kurdistan", "Kurds", "Social Media", "Twitter", "Twitterstorm" ]
+tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Kurd", "Kurdish", "Kurdistan", "Kurds", "Social Media", "Turkey", "Twitter", "Twitterstorm", "United States", "United States of America", "US" ]
 toc = true
 +++
 
