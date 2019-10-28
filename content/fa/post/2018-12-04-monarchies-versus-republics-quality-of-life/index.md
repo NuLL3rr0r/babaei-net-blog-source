@@ -2,7 +2,7 @@
 title = "کیفیت زندگی در پادشاهی های مشروطه در مقایسه با جمهوری ها"
 slug = "monarchies-versus-republics-quality-of-life"
 date = 2018-12-04T12:14:00+01:00
-tags = [ "Iran", "Islamic Republic of Iran", "Monarchy", "Mohammad Reza Shah", "Pahlavi", "Prosperity Index", "Republics", "Shah", "Shah of Iran" ]
+tags = [ "Constitutional Monarchy", "Iran", "Islamic Republic of Iran", "Mohammad Reza Shah", "Monarchy", "Pahlavi", "Prosperity Index", "Republics", "Reza Shah", "Shah", "Shah of Iran" ]
 +++
 
 {{< figure src="/blog/monarchies-versus-republics-quality-of-life/farah-pahlavi-controversial-tweet.jpg" alt="#والاحضرت_ياسمين" >}}

@@ -2,7 +2,7 @@
 title = "آنالیز طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat + به روز رسانی عمده  Barandazstorm"
 slug = "twitterstorm-hashtag-analysis-pahlavimadeirangreat"
 date = 2019-07-29T13:49:00+02:00
-tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Mohammad Reza Shah", "Pahlavi", "Reza Shah", "Shah", "Shah of Iran", "Social Media", "Twitter", "Twitterstorm" ]
+tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Constitutional Monarchy", "Islamic Republic Of Iran", "Mohammad Reza Shah", "Monarchy", "Pahlavi", "Reza Shah", "Shah", "Shah of Iran", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
 +++
 

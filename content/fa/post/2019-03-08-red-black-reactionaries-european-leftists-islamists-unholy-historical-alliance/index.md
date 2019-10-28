@@ -2,7 +2,7 @@
 title = "پیوند چپول های اروپا و اسلامگراها، چیزی که شاه ایران به حق ارتجاع سرخ و سیاه می نامید!"
 slug = "red-black-reactionaries-european-leftists-islamists-unholy-historical-alliance"
 date = 2019-03-08T19:17:00+01:00
-tags = [ "Desacralization", "Europe", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Left", "Left Wing", "Left Wing Politics", "Leftist", "Mohammad Reza Shah", "Pahlavi", "Religion", "Religion Criticism", "Religious Superstition", "Religious Violence", "Shah", "Shah of Iran", "Superstition", "Violence" ]
+tags = [ "Constitutional Monarchy", "Desacralization", "Europe", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Left", "Left Wing", "Left Wing Politics", "Leftist", "Mohammad Reza Shah", "Monarchy", "Pahlavi", "Religion", "Reza Shah", "Religion Criticism", "Religious Superstition", "Religious Violence", "Shah", "Shah of Iran", "Superstition", "Violence" ]
 +++
 
 {{< figure src="/blog/red-black-reactionaries-european-leftists-islamists-unholy-historical-alliance/red-black-reactionaries-unholy-alliance.jpg" alt="پیوند شوم: ارتجاع سرخ و سیاه" caption="پیوند شوم: ارتجاع سرخ و سیاه" >}}
