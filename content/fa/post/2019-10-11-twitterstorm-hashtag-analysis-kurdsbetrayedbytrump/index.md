@@ -234,6 +234,6 @@ toc = true
 
 ## دریافت گراف‌ با کیفیت
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#KurdsBetrayedByTrump](https://twitter.com/hashtag/KurdsBetrayedByTrump?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#KurdsBetrayedByTrump](https://twitter.com/hashtag/KurdsBetrayedByTrump?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

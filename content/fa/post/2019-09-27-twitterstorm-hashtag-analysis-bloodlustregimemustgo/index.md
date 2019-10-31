@@ -343,6 +343,6 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

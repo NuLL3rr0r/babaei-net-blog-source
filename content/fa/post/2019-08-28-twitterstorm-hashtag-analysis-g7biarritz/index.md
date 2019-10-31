@@ -195,9 +195,9 @@ toc = true
 
 ## دریافت گراف‌ با کیفیت
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 ## ابداع گونه جدیدی از طوفان‌های توییتری مختص براندازان
 

@@ -341,8 +341,8 @@ toc = true
 
 ## دریافت گراف‌ با کیفیت
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#HappyShah100thBirthday](https://twitter.com/hashtag/HappyShah100thBirthday?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#HappyShah100thBirthday](https://twitter.com/hashtag/HappyShah100thBirthday?src=hash):
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-happyshah100thbirthday/happyshah100thbirthday-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #HappyShah100thBirthday، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #HappyShah100thBirthday، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-happyshah100thbirthday/happyshah100thbirthday-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #HappyShah100thBirthday، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #HappyShah100thBirthday، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-happyshah100thbirthday/happyshah100thbirthday-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #HappyShah100thBirthday، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #HappyShah100thBirthday، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

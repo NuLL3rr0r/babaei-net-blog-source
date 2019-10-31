@@ -193,6 +193,6 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

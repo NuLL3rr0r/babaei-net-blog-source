@@ -711,10 +711,10 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-parallel-merged-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #FifaStandUp4Sahar با احتساب هشتگ‌های موازی، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #FifaStandUp4Sahar با احتساب هشتگ‌های موازی، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) با احتساب هشتگ‌های موازی:
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#FifaStandUp4Sahar](https://twitter.com/hashtag/FifaStandUp4Sahar?src=hash) با احتساب هشتگ‌های موازی:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-parallel-merged-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm با احتساب هشتگ‌های موازی" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm با احتساب هشتگ‌های موازی" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-fifastandup4sahar/fifastandup4sahar-parallel-merged-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm با احتساب هشتگ‌های موازی" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FifaStandUp4Sahar، آنالیز شده توسط نرم‌افزار Barandazstorm با احتساب هشتگ‌های موازی" >}}

@@ -344,6 +344,6 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

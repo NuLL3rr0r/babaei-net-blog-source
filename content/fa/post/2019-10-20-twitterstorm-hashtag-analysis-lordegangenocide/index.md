@@ -339,8 +339,8 @@ toc = true
 
 ## دریافت گراف‌ با کیفیت
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#LordeganGenocide](https://twitter.com/hashtag/LordeganGenocide?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#LordeganGenocide](https://twitter.com/hashtag/LordeganGenocide?src=hash):
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

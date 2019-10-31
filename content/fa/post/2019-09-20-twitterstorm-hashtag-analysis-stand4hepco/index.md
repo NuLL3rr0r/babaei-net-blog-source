@@ -344,6 +344,6 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

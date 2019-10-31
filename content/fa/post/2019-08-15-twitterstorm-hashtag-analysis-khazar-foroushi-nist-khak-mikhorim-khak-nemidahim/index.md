@@ -360,17 +360,17 @@ toc = true
 
 ## دریافت گراف‌های با کیفیت
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#خزر_فروشی_نیست](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#خزر_فروشی_نیست](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-khazar-foroushi-nist-khak-mikhorim-khak-nemidahim/khazar-foroushi-nist-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #خزر_فروشی_نیست، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #خزر_فروشی_نیست، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-khazar-foroushi-nist-khak-mikhorim-khak-nemidahim/khazar-foroushi-nist-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #خزر_فروشی_نیست، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #خزر_فروشی_نیست، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#خزر_فروشی_نیست](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash):
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-khazar-foroushi-nist-khak-mikhorim-khak-nemidahim/khazar-foroushi-nist-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #خزر_فروشی_نیست، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #خزر_فروشی_نیست، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-دریافت گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ [#خاک_میخوریم_خاک_نمیدهیم](https://twitter.com/hashtag/%D8%AE%D8%A7%DA%A9_%D9%85%DB%8C%D8%AE%D9%88%D8%B1%DB%8C%D9%85_%D8%AE%D8%A7%DA%A9_%D9%86%D9%85%DB%8C%D8%AF%D9%87%DB%8C%D9%85?src=hash):
+دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#خاک_میخوریم_خاک_نمیدهیم](https://twitter.com/hashtag/%D8%AE%D8%A7%DA%A9_%D9%85%DB%8C%D8%AE%D9%88%D8%B1%DB%8C%D9%85_%D8%AE%D8%A7%DA%A9_%D9%86%D9%85%DB%8C%D8%AF%D9%87%DB%8C%D9%85?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-khazar-foroushi-nist-khak-mikhorim-khak-nemidahim/khak-mikhorim-khak-nemidahim-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #خاک_میخوریم_خاک_نمیدهیم، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌های طوفان توییتری و هشتگ #خاک_میخوریم_خاک_نمیدهیم، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-khazar-foroushi-nist-khak-mikhorim-khak-nemidahim/khak-mikhorim-khak-nemidahim-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #خاک_میخوریم_خاک_نمیدهیم، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #خاک_میخوریم_خاک_نمیدهیم، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#خاک_میخوریم_خاک_نمیدهیم](https://twitter.com/hashtag/%D8%AE%D8%A7%DA%A9_%D9%85%DB%8C%D8%AE%D9%88%D8%B1%DB%8C%D9%85_%D8%AE%D8%A7%DA%A9_%D9%86%D9%85%DB%8C%D8%AF%D9%87%DB%8C%D9%85?src=hash):
 
