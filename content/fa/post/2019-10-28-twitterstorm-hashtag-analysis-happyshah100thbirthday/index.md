@@ -2,7 +2,7 @@
 title = "آنالیز شبکه هشتگ #HappyShah100thBirthday"
 slug = "twitterstorm-hashtag-analysis-happyshah100thbirthday"
 date = 2019-10-28T18:34:00+02:00
-tags = [ "Constitutional Monarchy", "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Monarchy", "Pahlavi", "Reza Shah", "Shah", "Shah of Iran", "Social Media", "Twitter", "Twitterstorm" ]
+tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Constitutional Monarchy", "Islamic Republic Of Iran", "Monarchy", "Pahlavi", "Reza Shah", "Shah", "Shah of Iran", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
 +++
 
