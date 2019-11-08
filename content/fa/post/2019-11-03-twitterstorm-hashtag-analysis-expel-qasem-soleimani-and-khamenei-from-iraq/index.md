@@ -1,7 +1,7 @@
 +++
 title = "آنالیز طوفان توییتری و شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق"
 slug = "twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq"
-date = 2019-11-03T21:34:00+02:00
+date = 2019-11-03T21:34:00+01:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Iraq", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
 +++

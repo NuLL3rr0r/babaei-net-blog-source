@@ -1,7 +1,7 @@
 +++
 title = "آنالیز هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر در ایران + افزوده شدن ویژگی آنالیز گروهی هشتگ‌ها به Barandazstorm"
 slug = "twitterstorm-hashtag-analysis-cyrus-the-great-day"
-date = 2019-10-31T13:53:00+02:00
+date = 2019-10-31T13:53:00+01:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Constitutional Monarchy", "Cyrus", "Iran", "Islamic Republic Of Iran", "Monarchy", "Pahlavi", "Reza Shah", "Shah", "Shah of Iran", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
 +++
