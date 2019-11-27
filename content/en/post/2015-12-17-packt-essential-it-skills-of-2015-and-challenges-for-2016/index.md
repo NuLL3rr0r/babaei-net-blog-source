@@ -6,7 +6,7 @@ tags = [ "Advertising", "Packt Publishing" ]
 aliases = [ "/blog/2015/12/17/packt-essential-it-skills-of-2015-and-challenges-for-2016/" ]
 +++
 
-{{< figure src="/blog/packt-essential-it-skills-of-2015-and-challenges-for-2016/packt-essential-it-skills-of-2015-and-challenges-for-2016.png" alt="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" caption="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" >}}
+{{< figure src="/blog/packt-essential-it-skills-of-2015-and-challenges-for-2016/packt-essential-it-skills-of-2015-and-challenges-for-2016.webp" alt="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" caption="Join Packt and Prepare for Tech in 2016 - Take Packt’s Year in Review survey and get any eBook or video for just $5!" >}}
 
 At a time of rapid development and innovation, tech skills have never been more valuable. The right skills and cutting-edge knowledge can bring huge rewards.
 
@@ -24,6 +24,6 @@ __Find out more [here](http://bit.ly/1HScEds).__
 
 **_Update_**:
 
-{{< figure src="/blog/packt-dollar-5-campaign-packt-publishing/packt-dollar-5-campaign-packt-publishing.png" alt="Packt $5 Campaign - Packt Publishing" caption="Packt $5 Campaign - Packt Publishing" >}}
+{{< figure src="/blog/packt-dollar-5-campaign-packt-publishing/packt-dollar-5-campaign-packt-publishing.webp" alt="Packt $5 Campaign - Packt Publishing" caption="Packt $5 Campaign - Packt Publishing" >}}
 
 From the 17th December 2015 into the New Year, Packt Publishing is inviting the tech world to [explore its extensive library of eBooks and Video courses for one amazing price](https://www.packtpub.com/?utm_source=JK-babaei&utm_medium=referral&utm_campaign=OME5D2015). Every single eBook and Video course Packt has ever created [will be available on packtpub.com for just $5](https://www.packtpub.com/?utm_source=JK-babaei&utm_medium=referral&utm_campaign=OME5D2015)!

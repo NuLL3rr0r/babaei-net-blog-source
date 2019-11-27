@@ -9,13 +9,13 @@ tags = [ "Barandazan", "Cybersecurity","Fake", "Iran", "Islamic Republic Of Iran
 
 <!--more-->
 
-{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-jzarif-p1.png" alt="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش اول" title="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش اول" >}}
+{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-jzarif-p1.webp" alt="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش اول" title="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش اول" >}}
 
-{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-jzarif-p2.png" alt="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش دوم" title="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش دوم" >}}
+{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-jzarif-p2.webp" alt="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش دوم" title="پیام خصوصی در دایرکت توییتر ارسال شده از سوی محمد جواد ظریف به ممدوو بابائی - بخش دوم" >}}
 
-{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-group-chat-islamic-rebulic-p1.png" alt="چت گروهی باند توییتری جمهوری اسلامی بخش اول" title="چت گروهی باند توییتری جمهوری اسلامی بخش اول" >}}
+{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-group-chat-islamic-rebulic-p1.webp" alt="چت گروهی باند توییتری جمهوری اسلامی بخش اول" title="چت گروهی باند توییتری جمهوری اسلامی بخش اول" >}}
 
-{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-group-chat-islamic-rebulic-p2.png" alt="چت گروهی باند توییتری جمهوری اسلامی بخش دوم" title="چت گروهی باند توییتری جمهوری اسلامی بخش دوم" >}}
+{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-group-chat-islamic-rebulic-p2.webp" alt="چت گروهی باند توییتری جمهوری اسلامی بخش دوم" title="چت گروهی باند توییتری جمهوری اسلامی بخش دوم" >}}
 
 همانطور که در ویدیو مشاهده می‌نمایید، ابدا قصد مزاح نمودن ندارم و اسکرین‌شات‌ها اصل می باشد:
 
@@ -31,6 +31,6 @@ tags = [ "Barandazan", "Cybersecurity","Fake", "Iran", "Islamic Republic Of Iran
 
 لازم بذکر است که استفاده از نام اکانت‌های [دونالد ترامپ](https://twitter.com/realDonaldTrump)، [جک‌ دورسی](https://twitter.com/jack) و [@tanasoli](https://twitter.com/tanasoli) تنها به منظور فان و جذاب‌تر نمودن اسکرین‌شات‌ها بوده و من هیچ‌گونه پیامی از سوی این افراد دریافت ننموده‌ام.
 
-{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-realdonaldtrump.png" alt="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی رئیس جمهور آمریکا دونالد ترامپ به ممدوو بابائی" title="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی دونالد ترامپ رئیس جمهور آمریکا به ممدوو بابائی" >}}
+{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-realdonaldtrump.webp" alt="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی رئیس جمهور آمریکا دونالد ترامپ به ممدوو بابائی" title="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی دونالد ترامپ رئیس جمهور آمریکا به ممدوو بابائی" >}}
 
-{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-jack.png" alt="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی جک دورسی موسس و مدیرعامل توییتر به ممدوو بابائی" title="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی جک دورسی موسس و مدیرعامل توییتر به ممدوو بابائی" >}}
+{{< figure src="/blog/cybersecurity-101-islamic-republic-global-propaganda-campaign-fake-twitter-direct-messages-proof-of-concept/fake-twitter-direct-message-jack.webp" alt="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی جک دورسی موسس و مدیرعامل توییتر به ممدوو بابائی" title="پیام جعلی خصوصی در دایرکت توییتر ارسال شده از سوی جک دورسی موسس و مدیرعامل توییتر به ممدوو بابائی" >}}

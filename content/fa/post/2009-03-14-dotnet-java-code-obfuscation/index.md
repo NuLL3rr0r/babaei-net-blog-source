@@ -33,7 +33,7 @@ aliases = [ "/blog/2009/03/14/dotnet-java-code-obfuscation/" ]
 
 اجازه دهید پیش از بررسی فرآیند اجرای کدها در .NET/Java به بررسی فرآیند تولید و اجرای یک نرم افزار در زبان های سنتی مانند C/C++ بپردازیم.
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-001-a.jpg" alt="تصویر1.A. – شمای کلی یک برنامه مدیریت نشده" caption="تصویر1.A. – شمای کلی یک برنامه مدیریت نشده" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-001-a.webp" alt="تصویر1.A. – شمای کلی یک برنامه مدیریت نشده" caption="تصویر1.A. – شمای کلی یک برنامه مدیریت نشده" >}}
 
 همانطور که مشاهده می نمائید (تصویر 1.A.) شمای کلی تولید و اجرای یک محصول نرم افزاری عبارتست از:
 
@@ -57,9 +57,9 @@ aliases = [ "/blog/2009/03/14/dotnet-java-code-obfuscation/" ]
 
 در این قسمت از توضیح ماشین مجازی Java خودداری نموده٬ در عوض به دلیل تسلط نگارنده بر .NET به توضیح ساختار ماشین مجازی آن می پردازیم (یادآور می شویم که در واقع بسیاری از تکنیک های بکار رفته در تکنولوژی .NET و .NET Framework (به اختصار .NET FX) اقتباسی از Java و Java Virtual Machine (به اختصار JVM) می باشد٬ پس بسیاری از مطالبی که در ادامه می آید در مورد Java نیز صادق است).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-a.jpg" alt="تصویر2.A. – شمای کلی یک برنامه مدیریت شده" caption="تصویر2.A. – شمای کلی یک برنامه مدیریت شده" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-a.webp" alt="تصویر2.A. – شمای کلی یک برنامه مدیریت شده" caption="تصویر2.A. – شمای کلی یک برنامه مدیریت شده" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-b.jpg" alt="تصویر2.B. – ساختار کلی .NET FX" caption="تصویر2.B. – ساختار کلی .NET FX" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-b.webp" alt="تصویر2.B. – ساختار کلی .NET FX" caption="تصویر2.B. – ساختار کلی .NET FX" >}}
 
 همانطور که از تصاویر پیداست (تصاویر 2.A. و 2.B.) پروسه تولید Native Code یا همان کد محلی و اجرای آن در سیستم در تکنولوژی هائی مانند .NET یا Java به مراتب پیچیده تر است.
 
@@ -94,7 +94,7 @@ CLR نه تنها قلب تپنده .NET FX می باشد بلکه هر برنا
 
 همانطور که تاکید شد با کامپایل اولیه کدی که مبتنی بر .NET نوشته شده است٬ Native Code تولید نخواهد شد بلکه کد برنامه به کدی با نام CIL[^12] و یا MSIL[^13] – به معنای زبان میانی – ترجمه و در یک فایل اسمبلی ذخیره خواهد شد[^14]. این فایل اسمبلی با وجود این که – بسته به نوع پروژه – دارای پسوند .exe یا .dll می باشد به هیچ وجه قابل اجرا نخواهد بود. چنانچه برنامه در سیستمی اجرا شود که فاقد .NET FX باشد با وجود حضور Header یک فایل اجرائی در ابتدای فایل با پیغام خطای ذیل مواجه خواهیم شد (تصویر 2.C.):
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-c.jpg" alt="تصویر2.C. – اجرای یک برنامه مبتنی بر .NET بدون حضور .NET FX" caption="تصویر2.C. – اجرای یک برنامه مبتنی بر .NET بدون حضور .NET FX" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-c.webp" alt="تصویر2.C. – اجرای یک برنامه مبتنی بر .NET بدون حضور .NET FX" caption="تصویر2.C. – اجرای یک برنامه مبتنی بر .NET بدون حضور .NET FX" >}}
 
 در پاره ای از موارد نیز ممکن است با پیام Inavalid Win32 application مواجه شویم. این بدان دلیل است که محتویات فایل اسمبلی فقط برای CLR قابل فهم می باشد و در فقدان آن کامپیوتر هرگز به منظور کدهای ذخیره شده در فایل پی نخواهد برد.
 
@@ -104,7 +104,7 @@ CLR نه تنها قلب تپنده .NET FX می باشد بلکه هر برنا
 
 اسمبلی ها به صورت خصوصی و اشتراکی مورد استفاده قرار می گیرند. اسمبلی های خصوصی معمولا در پوشه ی برنامه و یا زیر پوشه های آن قرار می گیرند. از سوی دیگر اسمبلی های اشتراکی که توسط برنامه های متعددی مورد استفاده قرار می گیرند در مکانی تحت عنوان GAC[^15] نگهداری می شوند. GAC در واقع چیزی بیش از یک پوشه مجازی که آدرس٬ مشخصات و ساختار اطلاعاتی اسمبلی های مشترک میان برنامه های CLR را نگهداری و ارائه می کند نیست. در ضمن تمامی فضاهای نام .NET در قالب .dll به علاوه BCL که در فایل mscorlib.dll می باشد در این مکان قرار گرفته اند (تصویر 2.D.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-d.jpg" alt="تصویر2.D. – پوشه GAC و محتویات آن" caption="تصویر2.D. – پوشه GAC و محتویات آن" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-002-d.webp" alt="تصویر2.D. – پوشه GAC و محتویات آن" caption="تصویر2.D. – پوشه GAC و محتویات آن" >}}
 
 در واقع فایل های داخل این پوشه در مسیرهای دیگری از هاردیسک ذخیره شده اند اما توسط این پوشه مورد دسترسی قرار می گیرند. یکی از خصوصیات ارزشمند GAC قابلیت ذخیره اسمبلی های هم نام با نگارش های مختلف می باشد. چنانچه قصد مقیم نمودن اسمبلی خاصی را در این مکان دارید بایستی از یکی از ابزارهای .NET FX به نام gacutil.exe استفاده نمائید.
 
@@ -134,9 +134,9 @@ CLR نه تنها قلب تپنده .NET FX می باشد بلکه هر برنا
 
 ۱. ابتدا وارد کادر Run ویندوز می شویم. سپس دستور cmd را جهت ورد به Command Prompt ویندوز وارد می نمائیم. پس از ورد به پنجره آن مطابق تصویر مراحل را دنبال می نمائیم (تصاویر 3.A. و 3.B.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-a.jpg" alt="تصویر3.A. – کامپایل و اجرای برنامه های Hello, World!" caption="تصویر3.A. – کامپایل و اجرای برنامه های Hello, World!" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-a.webp" alt="تصویر3.A. – کامپایل و اجرای برنامه های Hello, World!" caption="تصویر3.A. – کامپایل و اجرای برنامه های Hello, World!" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-b.jpg" alt="تصویر3.B. – کامپایل و اجرای برنامه های Hello, World!" caption="تصویر 3.B. – کامپایل و اجرای برنامه های Hello, World!" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-b.webp" alt="تصویر3.B. – کامپایل و اجرای برنامه های Hello, World!" caption="تصویر 3.B. – کامپایل و اجرای برنامه های Hello, World!" >}}
 
 ۲. پوشه ای با نام دلخواه در درایو مورد نظرمان ایجاد نموده سپس به آنجا مراجعه می نمائیم. برای اطمینان از خالی بودن پوشه می توانیم از آن لیست بگیریم.
 
@@ -378,11 +378,11 @@ C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\
 
 در این مرحله می توان جهت جلوگیری از تایپ مسیرهای طولانی در صورت نصب Visual Studio از Visual Studio Command Prompt استفاده نمود (تصویر 3.C.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-c.jpg" alt="تصویر3.C. – مسیر اجرای Visual Studio Command Prompt" caption="تصویر3.C. – مسیر اجرای Visual Studio Command Prompt" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-c.webp" alt="تصویر3.C. – مسیر اجرای Visual Studio Command Prompt" caption="تصویر3.C. – مسیر اجرای Visual Studio Command Prompt" >}}
 
 مزیت استفاده از این ابزار نسبت به Command Prompt ویندوز در این است که تمامی متغیرهای محیطی مورد نیاز جهت کار با کامپایلرها به دقت تنظیم شده اند (البته این ابزار چیزی بیش از مجموعه ای از چند Batch File نیست که با استفاده از دستورات Command Prompt ویندوز تمامی متغیرهای محیطی آن را تنظیم می نماید. تصویر 3.D.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-d.jpg" alt="تصویر3.D. – Visual Studio Command Prompt به همراه نمایشی از متغیرهای محیطی آن" caption="تصویر3.D. – Visual Studio Command Prompt به همراه نمایشی از متغیرهای محیطی آن" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-d.webp" alt="تصویر3.D. – Visual Studio Command Prompt به همراه نمایشی از متغیرهای محیطی آن" caption="تصویر3.D. – Visual Studio Command Prompt به همراه نمایشی از متغیرهای محیطی آن" >}}
 
 مطابق با تصاویر 3.A. و 3.B.٬ به جای استفاده از این ابزار در محیط Command Prompt با استفاده از دستور Set متغیر محیطی Path را جهت ردیابی خودکار فایل های موردنیاز تنطیم می نمائیم.
 
@@ -400,27 +400,27 @@ C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\
 
 ۶. اولین مقایسه ای که انجام می دهیم مربوط به حجم فایل های تولیدی است (تصویر 3.E.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-e.jpg" alt="تصویر3.E. – اختلاف قابل توجه کد CIL تولید شده توسط کامپایلرهای مختلف" caption="تصویر3.E. – اختلاف قابل توجه کد CIL تولید شده توسط کامپایلرهای مختلف" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-e.webp" alt="تصویر3.E. – اختلاف قابل توجه کد CIL تولید شده توسط کامپایلرهای مختلف" caption="تصویر3.E. – اختلاف قابل توجه کد CIL تولید شده توسط کامپایلرهای مختلف" >}}
 
 ۷. با در نظر گرفتن اختلاف حجم قابل توجه میان اسمبلی ها٬ حال نوبت مشاهده کد CIL می باشد. با استفاده از ابزاری به نام IL Disassembler (ildasm.exe) که با نصب Microsoft Windows SDK بر روی سیستم نصب می شود می توان کد CIL را مشاهده و بررسی نمود (تصویر 3.F.). این ابزار در نسخ قدیمی تر Visual Studio برای مثال 8.0 با نصب Microsoft .NET Framework SDK به نام MSIL Disassembler بر روی سیستم نصب می شود.
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-f.jpg" alt="تصویر3.F. – اجرای IL Disassembler" caption="تصویر3.F. – اجرای IL Disassembler" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-f.webp" alt="تصویر3.F. – اجرای IL Disassembler" caption="تصویر3.F. – اجرای IL Disassembler" >}}
 
 جهت مشاهده ساختار فایل اسمبلی به همراه فضاهای نامی٬ کلاس ها و کد IL به علاوه سایر اطلاعات آن کافی است فایل اسمبلی را داخل پنجره این ابزار کشیده و رها نمائید (تصاویر 3.G. تا 3.M.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-g.jpg" alt="تصویر3.G. – کد CIL تولید شده توسط کامپایلر C#" caption="تصویر3.G. – کد CIL تولید شده توسط کامپایلر C#" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-g.webp" alt="تصویر3.G. – کد CIL تولید شده توسط کامپایلر C#" caption="تصویر3.G. – کد CIL تولید شده توسط کامپایلر C#" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-h.jpg" alt="تصویر3.H. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr" caption="تصویر3.H. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-h.webp" alt="تصویر3.H. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr" caption="تصویر3.H. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-i.jpg" alt="تصویر3.I. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:pure" caption="تصویر3.I. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:pure" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-i.webp" alt="تصویر3.I. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:pure" caption="تصویر3.I. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:pure" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-j.jpg" alt="تصویر3.J. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:safe" caption="تصویر3.J. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:safe" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-j.webp" alt="تصویر3.J. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:safe" caption="تصویر3.J. – کد CIL تولید شده توسط کامپایلر C++ CLI با سوئیچ clr:safe" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-k.jpg" alt="تصویر3.K. – کد CIL تولید شده توسط کامپایلر Managed C++ با سوئیچ clr:oldSyntax" caption="تصویر3.K. – کد CIL تولید شده توسط کامپایلر Managed C++ با سوئیچ clr:oldSyntax" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-k.webp" alt="تصویر3.K. – کد CIL تولید شده توسط کامپایلر Managed C++ با سوئیچ clr:oldSyntax" caption="تصویر3.K. – کد CIL تولید شده توسط کامپایلر Managed C++ با سوئیچ clr:oldSyntax" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-l.jpg" alt="تصویر3.L. – کد CIL تولید شده توسط کامپایلر JScript .NET" caption="تصویر3.L. – کد CIL تولید شده توسط کامپایلر JScript .NET" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-l.webp" alt="تصویر3.L. – کد CIL تولید شده توسط کامپایلر JScript .NET" caption="تصویر3.L. – کد CIL تولید شده توسط کامپایلر JScript .NET" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-m.jpg" alt="تصویر3.M. – کد CIL تولید شده توسط کامپایلر Visual Basic .NET" caption="تصویر3.M. – کد CIL تولید شده توسط کامپایلر Visual Basic .NET" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-003-m.webp" alt="تصویر3.M. – کد CIL تولید شده توسط کامپایلر Visual Basic .NET" caption="تصویر3.M. – کد CIL تولید شده توسط کامپایلر Visual Basic .NET" >}}
 
 همانطور که از تصاویر پیداست کد C# و C++/CLI با سوئیچ /clr:safe بهینه ترین کد ممکن را تولید نموده اند. به علاوه٬ اولین نکته ای که از تصاویر دریافت می شود نمایش صریح عبارت Hello, World! می باشد.
 
@@ -432,13 +432,13 @@ C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\
 
 کد نسبتا پیچیده ای که در این بخش جهت تشریح هر چه بهتر مقاله به کار گرفته می شود برنامه کنسولی می باشد که کاربر از طریق خط فرمان و وارد نمودن نام کاربری و کلمه عبور به همراه سوئیچ هائی به خط فرمان آن وارد می شود. کاربر از طریق این برنامه می تواند مانند یک سیستم عامل (یا بهتر بگوئیم محیط عامل) عملیات هائی نظیر اجرای یک برنامه٬ تغییر درصد استفاده از پردازنده٬ دانلود یک فایل یا صفحه وب٬ استخراج اطلاعاتی در مورد سیستم عامل (شامل مدت زمان بوت٬ نسخه .NET FX٬ کشف مشخصات پردازنده٬ سایر اطلاعات سیستم عامل به خصوص ویستا و اطلاعاتی از پیکربندی کارت شبکه)٬ رمزنگاری و گشودن یک متن یا فایل٬ فشردن و باز کردن فایل ها٬ تعمیر و فشرده سازی یک فایل پایگاه داده اکسس و در نهایت تبدیل فرمت و تغییر سایز انواع فرمت های تصویر به علاوه درج نشان اختصاصی یا واترمارک بر روی تصویر می باشد. تمامی این قابلیت ها در کدی که کامپایل کردیم گنجانده شده است. در تهیه این برنامه کوشش بر آن بوده است که از بسیاری از کلاس های .NET استفاده شود. البته از برخی کلاس های پر استفاده نظیر کلاس کار با پایگاه داده و وب سرویس ها به دلیل نیاز به منابع بیش تر صرفنظر نموده اما نتایج حاصل از استفاده از آن ها را نیز تشریح می نمائیم. دلیل انتخاب این کد پیچیده و استفاده از بسیاری از قابلیت های .NET در ازای استفاده از یک کد ساده تر را در ادامه مقاله متوجه خواهیم شد. همچنین در این اسمبلی مدیریت شده دست به استفاده از COM Marshaling و استفاده از حافظه بصورت مدیریت نشده زده ایم. نکته ای که ذکر آن ضروری به نظر می رسد این است که در زمان کامپایل برنامه یقینا با هشداری مواجه خواهید شد. دلیل هشدار کامپایلر استفاده از متغیری است که از نظر کامپایلر در طول اجرای برنامه هیچ کاربردی ندارد. جای هیچ گونه نگرانی وجود ندارد و برنامه به خوبی کامپایل و اجرا می شود. این متغیر را جهت مصارف آموزشی در سطح CIL نیاز خواهیم داشت. (تصویر 4.A.)
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-a.jpg" alt="تصویر4.A. – کامپایل و اجرای برنامه" caption="تصویر4.A. – کامپایل و اجرای برنامه" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-a.webp" alt="تصویر4.A. – کامپایل و اجرای برنامه" caption="تصویر4.A. – کامپایل و اجرای برنامه" >}}
 
 همان گونه که از تصویر پیداست برنامه با اجرا شدن خطائی را با عنوان این که قصد استفاده از ابعادی بیش از ابعاد یک آرایه را داشته ایم گزارش نموده و پس از آن نحوه استفاده صحیح از برنامه را گوش زد نموده است. دلیل ایجاد این خطا این است که در کد برنامه قصد دسترسی به آرایه ای را داشته ایم که پارامترهای خط فرمان در آن ذخیره می شود و از آنجائی که هیچ پارامتری در خط فرمان وارد نشده است این خطا ایجاد می شود. البته چون قصد آموزش را داریم در تمامی قسمت های برنامه هرگونه خطائی را بر روی خروجي گزارش می نمائیم.
 
 فرض کنید به عنوان کسی که هیچ گونه دسترسی به کد برنامه نداشته است قصد ورود به سیستم را داریم. پس بار دیگر به بررسی پارامترهای اعلام شده می پردازیم. برای برنامه همانطور که خود اعلام می کند دو حالت فراخوانی تجسم شده است. حالت اول وارد نمودن نام کاربری به همراه کلمه عبور به علاوه انتخاب نحوه ایجاد اتصال می باشد. حالت دوم پارامتری برای ورود مهمان بدون ورود نام کاربری و کلمه عبور می باشد. پس نزدیک ترین راه حل حالت دوم است٬ امتحان می کنیم (تصویر 4.B.). گویا ورود کاربران مهمان در حال حاضر توسط مدیر سیستم ملغی شده است. پس یک نام کاربری دلخواه را امتحان می نمائیم (تصویر 4.B.):
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-b.jpg" alt="تصویر4.B. – تست ورود به برنامه برای اولین بار" caption="تصویر4.B. – تست ورود به برنامه برای اولین بار" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-b.webp" alt="تصویر4.B. – تست ورود به برنامه برای اولین بار" caption="تصویر4.B. – تست ورود به برنامه برای اولین بار" >}}
 
 متاسفانه ورود امکان پذیر نیست؛ پس راهی جز مقداری شیطنت باقی نمانده است!
 
@@ -450,39 +450,39 @@ C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\
 
 برنامه نویس از هر کدام از حالات بالا استفاده نموده باشد سرنخ اصلی در کد برنامه نهفته است (برای مثال کلمات عبور خود پایگاه داده یا مسیر کلید رجیستری موردنظر و یا نام فایل تنظیمات و ....). بنابر این با توجه به دانشی که در بخش های قبل بدست آورده ایم به سراغ IL Disassembler می رویم (تصویر 4.C.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-c.jpg" alt="تصویر4.C. – مشاهده نام کلاس ها و فضای نام برنامه در IL Disassembler" caption="تصویر4.C. – مشاهده نام کلاس ها و فضای نام برنامه در IL Disassembler" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-c.webp" alt="تصویر4.C. – مشاهده نام کلاس ها و فضای نام برنامه در IL Disassembler" caption="تصویر4.C. – مشاهده نام کلاس ها و فضای نام برنامه در IL Disassembler" >}}
 
 خب در این مرحله اسامی تمامی کلاس ها به علاوه فضای نام اصلی قابل رویت می باشد. با وجود شلوغی و تعداد زیاد کلاس ها٬ در این میان اسامی چند کلاس بخصوص Boot و Login بیشتر از همه جلب توجه می نماید. با فرض این که اول Boot اتفاق می افتد و سپس Login به سراغ این دو کلاس می رویم تا نگاهی عمیق تر به این دو داشته باشیم (تصویر 4.D.).  
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-d.jpg" alt="تصویر4.D. – ساختار کلاس های Boot و Login" caption="تصویر4.D. – ساختار کلاس های Boot و Login" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-d.webp" alt="تصویر4.D. – ساختار کلاس های Boot و Login" caption="تصویر4.D. – ساختار کلاس های Boot و Login" >}}
 
 بسیار عالی! کلاس اصلی برنامه کشف شد. کلاس Boot کلاسی است که تابع Main٬ تابع اصلی برنامه در C# را دارا می باشد. این تابع یک ورودی آرایه از نوع string دارد که همانطور که مشخص است کار انتقال پارامترهای خط فرمان به برنامه را انجام می دهد (این یک قانون کلی برای برنامه های C# است). در کلاس Login نیز تمامی خصوصیات٬ توابع و متغیرهای عمومی آن بخوبی مشخص می باشند. اما چند تابع دیگر اینجا با اسامی نامانوس از جمله .cctor به - همراه نشان S - جلب توجه می نماید. حس کنجکاوی باعث می شود این تابع را بررسی بنمائیم (تصویر 4.E.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-e.jpg" alt="تصویر4.E. – کشف محل ذخیره متغیرهای عمومی به همراه مقادیر آن ها" caption="تصویر4.E. – کشف محل ذخیره متغیرهای عمومی به همراه مقادیر آن ها" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-e.webp" alt="تصویر4.E. – کشف محل ذخیره متغیرهای عمومی به همراه مقادیر آن ها" caption="تصویر4.E. – کشف محل ذخیره متغیرهای عمومی به همراه مقادیر آن ها" >}}
 
 در اینجا جمله The quick brown fox jumps over the lazy dog. را مشاهده می نمائیم. علاوه بر این جمله نام متغیر آن یعنی pangram نیز قابل رويت می باشد. این همان متغیری است که در زمان کامپایل برنامه هشداری را از سوی کامپایلر C# مبنی بر عدم استفاده از آن در منطق برنامه را مشاهده نمودیم. این متغیر یک متغیر عمومی است. گویا CIL متغیرهای عمومی که سریعا پس از تعریف مقداردهی می شوند را توسط این تابع مقدار دهی می نماید (هشدار امنیتی: اکثر برنامه نویسان معمولا کلمات عبور پایگاه داده را در متغیرهای عمومی ذخیره می نمایند تا توسط توابع مختلف برنامه در دسترس باشد. پس کلمات عبوری که با این روش درون کد برنامه نگهداری می شوند همیشه در این ناحیه قابل دسترسی است).
 
 در این میان تابع Verify از کلاس Login با توجه به نام آن اولین چیزی است که نگاهمان را می رباید. اما ترجیح می دهیم با تابع Main کلاس Boot شروع کنیم چرا که قصد داریم کد برنامه را از ابتدا زیر نظر داشته باشیم. پس نگاهی به کد آن می اندازیم. (تصویر 4.F.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-f.jpg" alt="تصویر4.F. – کشف سوئیچ های خط فرمان" caption="تصویر4.F. – کشف سوئیچ های خط فرمان" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-f.webp" alt="تصویر4.F. – کشف سوئیچ های خط فرمان" caption="تصویر4.F. – کشف سوئیچ های خط فرمان" >}}
 
 اولین چیزی که کشف می نمائیم سوئیچ های اعلام شده توسط خود برنامه است. به علاوه آن دو سوئیچ دیگر را نیز یافته ایم که مقداری عجیب به نظر می رسند. فعلا قصد امتحان آن ها را نداریم پس ادامه می دهیم. به نظر دو نام کاربری دیگر را با کلمات عبورشان کشف نموده ایم (تصویر 4.G.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-g.jpg" alt="تصویر4.G. – کشف کلمات عبور" caption="تصویر4.G. – کشف کلمات عبور" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-g.webp" alt="تصویر4.G. – کشف کلمات عبور" caption="تصویر4.G. – کشف کلمات عبور" >}}
 
 تا اینجا به نظر عالی بود. در ادامه به سراغ تابع وسوسه انگیز Verify می رویم. به نظر سه کاربر و کلمه عبور را کشف نموده ایم که دو نمونه آن در تائید یافته های قبلی موثر است. در واقع آن دو٬ کاربران ویژه هستند root و guest. (تصاویر 4.H. و 4.I. و 4.J.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-h.jpg" alt="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" caption="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-h.webp" alt="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" caption="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-i.jpg" alt="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" caption="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-i.webp" alt="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" caption="تصویر4.H. – کشف تمامی کلمات عبور در کلاس Login" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-j.jpg" alt="تصویر4.J. – کشف تمامی کلمات عبور در کلاس Login" caption="تصویر4.J. – کشف تمامی کلمات عبور در کلاس Login" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-j.webp" alt="تصویر4.J. – کشف تمامی کلمات عبور در کلاس Login" caption="تصویر4.J. – کشف تمامی کلمات عبور در کلاس Login" >}}
 
 در این میان پیغام خطای مربوط به guest را که در زمان اجرا دریافت نمودیم نیز یافته ایم. اگر به جستجو ادامه دهیم پیغام های دیگر برای تمامی حالات را به علاوه نکاتی دیگر درمی یابیم. جالب تر این که ساختارهای try-catch-finally به خوبی در CIL قابل رويت هست. حتی انواع داده ای به راحتی یافت می شوند. در واقع CIL به دلیل شباهت آن به اسمبلی زبانی است هر چند سطح پائین اما قابل درک و یادگیری. با کمی تحقیق و تمرین به خوبی توانائی چیره شدن بر دستورات و ساختار آن را نیز خواهید داشت.
 
 به نظر کشفیات مان جهت نفوذ به برنامه کافی به نظر می رسد. نمونه ای از تجربه کاربر نفوذگر٬ در استفاده از برنامه را مشاهده می نمائید (تصویر 4.K.):
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-k.jpg" alt="تصویر4.K. – نفوذ موفقیت آمیز به برنامه" caption="تصویر4.K. – نفوذ موفقیت آمیز به برنامه" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-k.webp" alt="تصویر4.K. – نفوذ موفقیت آمیز به برنامه" caption="تصویر4.K. – نفوذ موفقیت آمیز به برنامه" >}}
 
 خب همانطور که مشاهده می نمائید عمل نفوذ به جز برای کاربر guest – به دلیل غیر فعال بودن– در مابقی موارد بسیار موفقیت آمیز صورت گرفته است. همچنین مشخص شد برنامه نویس این کد٬ دو سوئیچ را به عنوان Backdoor جهت مواقع اضطراری در نظر گرفته است (دو سوئیچی که در کنار سایر سوئیچ ها در کد CIL یافته بودیم).
 
@@ -494,15 +494,15 @@ C:\Program Files\Microsoft Visual Studio 9.0\VC\bin\
 
 به Dis#[^20] سلام کنید! این نرم افزار که قیمت آن نیز نسبتا بالاست به زبان C# (!!!) نوشته شده است (تصویر 4.L.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-l.jpg" alt="تصویر4.L. – Decompile اسمبلی snooplogin.exe در Dis#" caption="تصویر 4.L. – Decompile اسمبلی snooplogin.exe در Dis#" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-l.webp" alt="تصویر4.L. – Decompile اسمبلی snooplogin.exe در Dis#" caption="تصویر 4.L. – Decompile اسمبلی snooplogin.exe در Dis#" >}}
 
 .NET Reflector[^21] این ابزار رایگان اما قدرتمند توسط تولید کننده نرم افزار مشهور  ANTS Profiler[^22] تولید شده است. این ابزار نیز بر اساس C# توسعه داده شده است (تصویر 4.M.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-m.jpg" alt="تصویر4.M. – Decompile اسمبلی snooplogin.exe در .NET Reflector" caption="تصویر4.M. – Decompile اسمبلی snooplogin.exe در .NET Reflector" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-m.webp" alt="تصویر4.M. – Decompile اسمبلی snooplogin.exe در .NET Reflector" caption="تصویر4.M. – Decompile اسمبلی snooplogin.exe در .NET Reflector" >}}
 
 بازهم C#! Decompiler.NET که گرانقیمت تر نیز هست توسط C# نوشته شده است. علاوه برآن این ابزار به نحو هوشمندانه تری قابلیت تشخیص ساختار switch/case را داشته است (تصویر 4.N.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-n.jpg" alt="تصویر4.N. – Decompile اسمبلی snooplogin.exe در Decompiler.NET" caption="تصویر4.N. – Decompile اسمبلی snooplogin.exe در Decompiler.NET" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-004-n.webp" alt="تصویر4.N. – Decompile اسمبلی snooplogin.exe در Decompiler.NET" caption="تصویر4.N. – Decompile اسمبلی snooplogin.exe در Decompiler.NET" >}}
 
 تلخ تر از همه مسائل این است که سورس کد اسمبلی های خود .NET نیز به همین روش قابل دستیابی است!
 
@@ -550,13 +550,13 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 
 البته همراه Visual Studio ابزاری با نام Dotfuscator محصول کمپانی PreEmptive Solutions[^24] از سوی Microsoft گنجانده شده است. این ابزار در سه نسخه بر حسب قیمت و امکانات عرضه می شود که در Visual Studio٬ ارزان ترین و ساده ترین نسخه آن یعنی Community Edition گنجانده شده است (تصاویر 5.A. و 5.B.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-a.jpg" alt="تصویر5.A. – نصب نسخه محدودی از Dotfuscator در زمان نصب Visual Studio" caption="تصویر5.A. – نصب نسخه محدودی از Dotfuscator در زمان نصب Visual Studio" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-a.webp" alt="تصویر5.A. – نصب نسخه محدودی از Dotfuscator در زمان نصب Visual Studio" caption="تصویر5.A. – نصب نسخه محدودی از Dotfuscator در زمان نصب Visual Studio" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-b.jpg" alt="تصویر5.B. – اجرای Dotfuscator" caption="تصویر5.B. – اجرای Dotfuscator" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-b.webp" alt="تصویر5.B. – اجرای Dotfuscator" caption="تصویر5.B. – اجرای Dotfuscator" >}}
 
 در این مقاله قصد پرداختن به این ابزار را نداریم. در عوض قصد داریم به ابزاری بسیار قدرتمند به نام Xenocode Postbuild Professional[^25] بپردازیم. علاوه بر این ابزار کمپانی Code Systems محصولات قدرتمندی همانند Virtual Application Studio[^26] (قبلا Virtual Appliances) جهت پرتابل نمودن نرم افزارها و توزیع نرم افزارها بدون نیاز به نصب٬ همچنین Fox Code Analyzer[^27] جهت Decompile٬ آنالیز سرعت اجرای برنامه های .NET و رفع مشکلات آنها را ارائه می نماید (تصویر 5.C.). 
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-c.jpg" alt="تصویر5.C.  – Decompile اسمبلی snooplogin.exe در Fox Code Analyzer" caption="تصویر5.C.  – Decompile اسمبلی snooplogin.exe در Fox Code Analyzer" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-c.webp" alt="تصویر5.C.  – Decompile اسمبلی snooplogin.exe در Fox Code Analyzer" caption="تصویر5.C.  – Decompile اسمبلی snooplogin.exe در Fox Code Analyzer" >}}
 
 هر یک از نرم افزارهای مجموعه Xenocode معمولا قیمتی تا چندین برابر Visual Studio دارند و قیمت آن ها بر اساس تعداد توسعه دهندگان تیم محاسبه می شود.
 
@@ -564,19 +564,19 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 
 متاسفانه این نسخه از Postbuild با نصب Security Update for CAPICOM[^28] دچار مشکلاتی می شود و تا حذف آن از سیستم توانائی اجرا نخواهد داشت (تصویر 5.D.). از آنجا که این وصله امنیتی در XP SP3 و Vista SP1 به صورت پیش فرض نصب می باشد از Windows 2000 Professional بر روی VMWare Fusion جهت تشریح ادامه مقاله استفاده می نمائیم. همچنین با نصب NET FX 2.0 SP1/SP2 به دلیل مسئله یاد شده این نرم افزار مجددا از کار باز می ماند. این نرم افزار به نسخه اولیه .NET FX 2.0 جهت اجرا و ادامه کار نیازمند است.
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-d.jpg" alt="تصویر5.D. – عدم اجرای  Postbuild 2006 Professional در صورت وجود Security Update for CAPICOM" caption="تصویر5.D. – عدم اجرای  Postbuild 2006 Professional در صورت وجود Security Update for CAPICOM" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-d.webp" alt="تصویر5.D. – عدم اجرای  Postbuild 2006 Professional در صورت وجود Security Update for CAPICOM" caption="تصویر5.D. – عدم اجرای  Postbuild 2006 Professional در صورت وجود Security Update for CAPICOM" >}}
 
 پس از اجرای Postbuild (تصویر 5.E.) با نرم افزاری خوش دست جهت توزیع برنامه های .NET مواجه خواهیم شد (تصویر 5.F.). توزیع یک برنامه .NET در این نرم افزار  شامل چهار مرحله است.
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-e.jpg" alt="تصویر5.E. – SplashScreen نرم افزار Postbuild" caption="تصویر5.E. – SplashScreen نرم افزار Postbuild" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-e.webp" alt="تصویر5.E. – SplashScreen نرم افزار Postbuild" caption="تصویر5.E. – SplashScreen نرم افزار Postbuild" >}}
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-f.jpg" alt="تصویر5.F. – مرحله اول: افزودن اسمبلی ها و انتخاب پروفایل نوع برنامه" caption="تصویر5.F. – مرحله اول: افزودن اسمبلی ها و انتخاب پروفایل نوع برنامه" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-f.webp" alt="تصویر5.F. – مرحله اول: افزودن اسمبلی ها و انتخاب پروفایل نوع برنامه" caption="تصویر5.F. – مرحله اول: افزودن اسمبلی ها و انتخاب پروفایل نوع برنامه" >}}
 
 در زمان افزودن اسمبلی ها بایستی توجه داشت که می توان تمامی اسمبلی ها را با هم ترکیب نموده و در نهایت یک فایل اسمبلی داشت. در قسمت Preset می توانید نوع پروژه را تعیین نمائید. این انتخاب بر نحوه برخورد با فایل اسمبلی کاملا تاثیرگذار خواهد بود.
 
 در زبانه دوم تنظیمات مربوط به تغییر نام Object ها٬ جلوگیری از Decompile٬ و کدگذاری رشته ها انجام می شود (تصویر 5.G.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-g.jpg" alt="تصویر5.G. – مرحله دوم: مهم ترین تنظیمات اسمبلی" caption="تصویر5.G. – مرحله دوم: مهم ترین تنظیمات اسمبلی" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-g.webp" alt="تصویر5.G. – مرحله دوم: مهم ترین تنظیمات اسمبلی" caption="تصویر5.G. – مرحله دوم: مهم ترین تنظیمات اسمبلی" >}}
 
 در قسمت Symbol Renaming می توان چگونگی تعیین و تغییر نام تمامی Object های برنامه اعم از کلاس ها تا متغیرها را تنظیم نمود.
 
@@ -586,11 +586,11 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 
 در نهایت در قسمت String Encryption می توان دست به Cryptography (کد گذاری) رشته های داخل برنامه زد. با فشردن Select Strings کادر Select Encrypted String جهت انتخاب رشته های مورد نظر باز می شود (تصویر 5.H.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-h.jpg" alt="تصویر5.H. – انتخاب رشته های مورد استفاده برنامه جهت Cryptography" caption="تصویر5.H. – انتخاب رشته های مورد استفاده برنامه جهت Cryptography" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-h.webp" alt="تصویر5.H. – انتخاب رشته های مورد استفاده برنامه جهت Cryptography" caption="تصویر5.H. – انتخاب رشته های مورد استفاده برنامه جهت Cryptography" >}}
 
 مرحله سوم که مرحله بهینه سازی اسمبلی است٬ در صورت انتخاب هر گزینه ای از دو بخش اول آن جزو حساس ترین مرحله هاست. چرا که به سادگی در بسیاری از موارد این گزینه ها باعث تخریب فایل نهائی خواهند شد (تصویر 5.I.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-i.jpg" alt="تصویر5.I. – مرحله سوم: بهینه سازی اسمبلی" caption="تصویر5.I. – مرحله سوم: بهینه سازی اسمبلی" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-i.webp" alt="تصویر5.I. – مرحله سوم: بهینه سازی اسمبلی" caption="تصویر5.I. – مرحله سوم: بهینه سازی اسمبلی" >}}
 
 در قسمت Metadata Reduction می توان با استفاده از فشرده سازی Metadata موجود در اسمبلی باعث کاهش حجم آن شد. تنظیمات این بخش وابسته به تنظیمات زبانه Protect یعنی مرحله قبل می باشد که در صورت سهل انگاری باعث تخریب اسمبلی نهائی خواهد شد.
 
@@ -602,13 +602,13 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 
 در مرحله پایانی تنظیمات مربوط به اسمبلی خروجی تعیین می گردد.
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-j.jpg" alt="تصویر5.J. – مرحله چهارم: تنظیمات خروجی" caption="تصویر5.J. – مرحله چهارم: تنظیمات خروجی" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-j.webp" alt="تصویر5.J. – مرحله چهارم: تنظیمات خروجی" caption="تصویر5.J. – مرحله چهارم: تنظیمات خروجی" >}}
 
 در بخش Output Type می توانید تعیین کنید که اسمبلی ها جداگانه صادر شوند یا همگی در قالب یک فایل اسمبلی ترکیب و صادر شوند.
 
 در ناحیه Link and Code Generation تنظیم بسیار مهمی وجود دارد که باعث بی نیاز شدن برنامه شما از .NET FX خواهد شد. با انتخاب نسخه .NET FX از کادر Embed .NET Framwrok library dependencies گزینه Generate native x86 executable image انتخاب خواهد شد (و بالعکس). با انتخاب این گزینه لایسنس .NET FX نمایان خواهد شد. در این حالت اساسی ترین بخش های .NET FX به علاوه سایر کتابخانه های مورد نیاز برنامه به فایل نهائی الحاق و با آن همراه خواهد شد. بدلیل استفاده از ngen.exe در تولید این فایل احتمال اجرا شدن و پرتابل بودن آن بر روی سایر سیستم ها تقلیل می یابد (چرا که ابزار ngen.exe فایلی صد در صد سازگار با پلتفرم فعلی را تهیه می نماید که با سیستم های دیگر سازگار نخواهد بود). همچنین به دلیل تعبیه .NET FX در فایل اجرائی افزایش حجم چشمگیری خواهیم داشت. برای پروژه ما حجم فایل خروجی 11.60 MB خواهد بود. چنانچه فایل خروجی را درون پنجره IL Disassembler درگ کنید با پیغام خطائی مبنی بر اسمبلی و  تحت CLR نبودن برنامه مواجه خواهید شد (تصویر 5.K.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-k.jpg" alt="تصویر5.K. – خطا از سوی IL Disassmbler مبنی بر عدم شناسائی کدهای CIL" caption="تصویر5.K. – خطا از سوی IL Disassmbler مبنی بر عدم شناسائی کدهای CIL" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-k.webp" alt="تصویر5.K. – خطا از سوی IL Disassmbler مبنی بر عدم شناسائی کدهای CIL" caption="تصویر5.K. – خطا از سوی IL Disassmbler مبنی بر عدم شناسائی کدهای CIL" >}}
 
 پس با استفاده از این ویژگی فایل شما از سوی تمامی نرم افزارها یک کد مدیریت نشده در نظر گرفته می شود. آخرین نکته در مورد این ویژگی این است که در پروژه هائی که از کلاس های پایگاه داده استفاده نموده اند ایجاد خطا می نماید.
 
@@ -618,21 +618,21 @@ eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k
 
 در نهایت پس از کلیک بر روی Xenocode Assemblies کادری ظاهر و عملیات آغاز خواهد شد. بسته به نوع پروژه از چند ثانیه تا چند دقیقه زمان نیاز خواهد بود.
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-l.jpg" alt="تصویر5.L. – آغاز پردازش اسمبلی و تبدیل آن" caption="تصویر5.L. – آغاز پردازش اسمبلی و تبدیل آن" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-l.webp" alt="تصویر5.L. – آغاز پردازش اسمبلی و تبدیل آن" caption="تصویر5.L. – آغاز پردازش اسمبلی و تبدیل آن" >}}
 
 پس از تبدیل اسمبلی اولین تغییر چشمگیر حجم آن می باشد. اسمبلی اصلی 36.0 KB حجم دارد٬ این در حالی است که حجم اسمبلی محافظت شده با تنظیمات موجود در اسلایدها 268.0 KB می باشد. علاوه بر آن کد به خوبی اجرا می شود. در نهایت جهت مشاهده تغییرات اساسی٬ آن را در IL Disassembler باز می نمائیم. نتیجه کار خیره کننده است (تصویر 5.M.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-m.jpg" alt="تصویر5.M. – اسمبلی محافظت شده و مشاهده تغییرات ساختاری آن" caption="تصویر5.M. – اسمبلی محافظت شده و مشاهده تغییرات ساختاری آن" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-m.webp" alt="تصویر5.M. – اسمبلی محافظت شده و مشاهده تغییرات ساختاری آن" caption="تصویر5.M. – اسمبلی محافظت شده و مشاهده تغییرات ساختاری آن" >}}
 
 اسامی درون اسمبلی به شدت تغییر یافته اند. علاوه بر آن کاملا مشخص است که فضای نام و کلاس هائی به اسمبلی اضافه شده است. با توجه به شناختی که قبلا از اسمبلی داشتیم به دنبال متغیر pangram و مقدارش که قبلا شرح آن گذشت، اسمبلی را جستجو می نمائیم (تصویر 5.N.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-n.jpg" alt="تصویر5.N. – مشاهده تغییرات مربوط به متغیر pangram و اطلاعات آن  در کلاس Login" caption="تصویر5.N. – مشاهده تغییرات مربوط به متغیر pangram و اطلاعات آن  در کلاس Login" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-n.webp" alt="تصویر5.N. – مشاهده تغییرات مربوط به متغیر pangram و اطلاعات آن  در کلاس Login" caption="تصویر5.N. – مشاهده تغییرات مربوط به متغیر pangram و اطلاعات آن  در کلاس Login" >}}
 
 همانطور که مشخص است نام متغیر و مقدار آن کد گذاری شده اند و دیگر قابل تشخیص نیست.
 
 در نهایت اقدام به گشودن کد در یک Decompiler  می نمائیم. در مقایسه با کد قبلی به طرز قابل ملاحظه ای از خوانائی کد کاسته شده است (تصویر 5.O.).
 
-{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-o.jpg" alt="تصویر5.O. – پیچیدگی کد پس از باز کردن آن در یک Decompiler (مقایسه کنید با تصویر 5.C.)" caption="تصویر5.O. – پیچیدگی کد پس از باز کردن آن در یک Decompiler (مقایسه کنید با تصویر 5.C.)" >}}
+{{< figure src="/blog/dotnet-java-code-obfuscation/dotnet-java-code-obfuscation-005-o.webp" alt="تصویر5.O. – پیچیدگی کد پس از باز کردن آن در یک Decompiler (مقایسه کنید با تصویر 5.C.)" caption="تصویر5.O. – پیچیدگی کد پس از باز کردن آن در یک Decompiler (مقایسه کنید با تصویر 5.C.)" >}}
 
 برخی دیگر از Decompiler ها مانند Dis# در زمان خواندن اطلاعات داخل اسمبلی در قسمتی هائی از کد دچار مشکل می شوند و آن را با کامنت مشخص می نمایند.
 

@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #BanIRSportsFederations آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #BanIRSportsFederations آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #BanIRSportsFederations آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #BanIRSportsFederations آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#BanIRSportsFederations](https://twitter.com/hashtag/BanIRSportsFederations?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #BanIRSportsFederations
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BanIRSportsFederations" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BanIRSportsFederations" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BanIRSportsFederations" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BanIRSportsFederations" >}}
 
 1. [#BanIRSportsFederations](https://twitter.com/hashtag/BanIRSportsFederations?src=hash)
 2. [#سحر](https://twitter.com/hashtag/سحر?src=hash)
@@ -128,7 +128,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#BanIRSportsFederations](https://twitter.com/hashtag/BanIRSportsFederations?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #BanIRSportsFederations" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #BanIRSportsFederations" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #BanIRSportsFederations" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #BanIRSportsFederations" >}}
 
 1. [@FIFAcom](https://twitter.com/FIFAcom)
 2. [@mohmd_mozafari](https://twitter.com/mohmd_mozafari)
@@ -236,7 +236,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#BanIRSportsFederations](https://twitter.com/hashtag/BanIRSportsFederations?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #BanIRSportsFederations با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #BanIRSportsFederations با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #BanIRSportsFederations با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #BanIRSportsFederations با بیشترین تعداد توییت" >}}
 
 1. [@0x__dead](https://twitter.com/0x__dead)
 2. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
@@ -343,8 +343,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#BanIRSportsFederations](https://twitter.com/hashtag/BanIRSportsFederations?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#BanIRSportsFederations](https://twitter.com/hashtag/BanIRSportsFederations?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-banirsportsfederations/banirsportsfederations-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BanIRSportsFederations، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #G7Biarritz آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #G7Biarritz آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #G7Biarritz آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #G7Biarritz آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -22,7 +22,7 @@ toc = true
 
 بدلیل عظمت این طوفان و تعداد ۱۲,۸۰۰ هشتگ مرتبط و ترسیم گراف‌ شبکه هشتگ‌ها در [@Barandazstorm](https://twitter.com/Barandazstorm) به شکل Undirected (برخلاف گراف شبکه کاربران که Directed است)، بدلیل پیچدگی محاسباتی در نسخه فعلی ترسیم این نوع گراف برای طوفانی با این وسعت زمان‌بر و بسیار غیربهینه است؛ لذا از ترسیم آن صرف‌نظر نمودم.
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #G7Biarritz" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #G7Biarritz" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #G7Biarritz" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #G7Biarritz" >}}
 
 1. [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash)
 2. [#g7](https://twitter.com/hashtag/g7?src=hash)
@@ -79,7 +79,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #G7Biarritz" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #G7Biarritz" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #G7Biarritz" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #G7Biarritz" >}}
 
 همانطور که از لیست ۵۰ کاربر سرشناس شبکه این هشتگ متشکل از ۱۸۱,۷۲۱ اکانت توییتری پیداست، تنها اکانت ایرانی در لیست سرشناس‌ها [#ماله_کش_اعظم](https://twitter.com/hashtag/ماله_کش_اعظم?src=hash) [@JZarif](https://twitter.com/JZarif) می‌باشد.
 
@@ -138,7 +138,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #G7Biarritz با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #G7Biarritz با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #G7Biarritz با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #G7Biarritz با بیشترین تعداد توییت" >}}
 
 نکته قابل توجه درخشش اکانت‌های ایرانی در این لیست می‌باشد.
 
@@ -197,7 +197,7 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #G7Biarritz، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 ## ابداع گونه جدیدی از طوفان‌های توییتری مختص براندازان
 
@@ -215,6 +215,6 @@ toc = true
 
 ۵. درست است جز ظریف هیچ کاربر دیگری به لیست ۵۰ کاربر سرشناس شبکه هشتگ [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash) راه نیافت؛ اما برای نمونه کاربران [@mohmd_mozafari](https://twitter.com/mohmd_mozafari) و [@mamadou_babaei](https://twitter.com/mamadou_babaei) در میان ۱۸۱,۷۲۱ کاربر شبکه هشتگ [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash) به ترتیب در جایگاه ۱۵۱ و ۱۵۵ قرار گرفته اند که با توجه به تعداد کاربران، به این معنی است که این دو اکانت جزو <code>۰.۱٪</code> کاربران سرشناس این شبکه بوده‌اند که با توجه به این تجربه جدید، فوق‌العاده است.
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-mohmd-mozafari-mamadou-babaei.png" alt="جایگاه محمد مظفری و ممدوو بابائی در جدول کاربران سرشناس شبکه هشتگ #G7Biarritz" title="جایگاه محمد مظفری و ممدوو بابائی در جدول کاربران سرشناس شبکه هشتگ #G7Biarritz" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-g7biarritz/g7biarritz-twitterstorm-hashtag-analysis-mohmd-mozafari-mamadou-babaei.webp" alt="جایگاه محمد مظفری و ممدوو بابائی در جدول کاربران سرشناس شبکه هشتگ #G7Biarritz" title="جایگاه محمد مظفری و ممدوو بابائی در جدول کاربران سرشناس شبکه هشتگ #G7Biarritz" >}}
 
 در پایان مطلب بایستی خاطرنشان شد که این تجربه اتفاقی و بازخورد بسیار مثبتی که دوستان برانداز توییت‌کننده [#G7Biarritz](https://twitter.com/hashtag/G7Biarritz?src=hash) دریافت نمودند، حاکی از موثر بودن این شیوه بهره‌برداری از رخدادهای سیاسی در جهت امر خطیر براندازی است.

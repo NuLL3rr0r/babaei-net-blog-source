@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Constitutional Mona
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-eigenvector-centrality.jpg" alt="گراف طوفان توییتری و شبکه کاربران هشتگ #PahlaviMadeIranGreat آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف طوفان توییتری و شبکه کاربران هشتگ #PahlaviMadeIranGreat آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-eigenvector-centrality.webp" alt="گراف طوفان توییتری و شبکه کاربران هشتگ #PahlaviMadeIranGreat آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف طوفان توییتری و شبکه کاربران هشتگ #PahlaviMadeIranGreat آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#PahlaviMadeIranGreat](https://twitter.com/hashtag/PahlaviMadeIranGreat?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -18,11 +18,11 @@ toc = true
 
 برای هشتگ [#PahlaviMadeIranGreat](https://twitter.com/hashtag/%D9%85%D8%B1%D8%AF_%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%AD%D9%84?src=hash)، نرم‌افزار Barandazstorm تعداد <code>۴۴,۵۹۴</code> توییت، ریتوییت، کوت، پاسخ، و منشن در رابطه با هشتگ [#PahlaviMadeIranGreat](https://twitter.com/hashtag/%D9%85%D8%B1%D8%AF_%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%AD%D9%84?src=hash)، توسط <code>۴,۰۳۵</code> کاربر را به ثبت رسانده است. تعداد اکانت‌های درگیر در شبکه این هشتگ شامل توییت کنندگان، ریتوییت کنندگان، کوت کنندگان، پاسخ دهندگان، منشن شده‌ها، کوت‌شده‌ها، و در نهایت پاسخ داده شده‌ها <code>۴,۴۶۱</code> کاربر بوده است:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-output.png" alt="از خروجی آنالیز طوفان توییتری و هشتگ #PahlaviMadeIranGreat توسط نرم افزار Barandazstorm" title="خروجی آنالیز طوفان توییتری و هشتگ #PahlaviMadeIranGreat توسط نرم افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-output.webp" alt="از خروجی آنالیز طوفان توییتری و هشتگ #PahlaviMadeIranGreat توسط نرم افزار Barandazstorm" title="خروجی آنالیز طوفان توییتری و هشتگ #PahlaviMadeIranGreat توسط نرم افزار Barandazstorm" >}}
 
 ناگفته نماند که ۵۰ کاربر برجسته در خلال طوفان و شبکه هشتگ [#PahlaviMadeIranGreat](https://twitter.com/hashtag/PahlaviMadeIranGreat?src=hash)، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-popular-accounts.png" alt="کاربران برجسته در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat" title="کاربران برجسته در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-popular-accounts.webp" alt="کاربران برجسته در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat" title="کاربران برجسته در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat" >}}
 
 1. [@dnravi23](https://twitter.com/dnravi23)
 2. [@mohmd_mozafari](https://twitter.com/mohmd_mozafari)
@@ -83,7 +83,7 @@ toc = true
 
 قطعا هیچ‌کس منکر نقش بسیار پررنگ کاربران گمنام در ترند شدن هشتگ‌ها و صرف وقت و انرژی فراوان از سوی آن‌ها نمی باشند. لذا علاوه بر لیست فوق، ۵۰ کاربر ترند کننده هشتگ با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat با بیشترین تعداد توییت" title="کاربران ترند کننده در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-accounts-with-most-tweets.webp" alt="کاربران ترند کننده در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat با بیشترین تعداد توییت" title="کاربران ترند کننده در طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat با بیشترین تعداد توییت" >}}
 
 1. [@baran_mehr36](https://twitter.com/baran_mehr36)
 2. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
@@ -153,7 +153,7 @@ toc = true
 
 هشتگ‌های مرتبط با هشتگ [#PahlaviMadeIranGreat](https://twitter.com/hashtag/PahlaviMadeIranGreat?src=hash) که توسط Barandazstorm استخراج شده است، به شرح  ذیل می باشد:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-related-hashtags.png" alt="گراف با کیفیت هشتگ‌های مرتبط با هشتگ #PahlaviMadeIranGreat استخراج شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت هشتگ‌های مرتبط با هشتگ #PahlaviMadeIranGreat استخراج شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="گراف با کیفیت هشتگ‌های مرتبط با هشتگ #PahlaviMadeIranGreat استخراج شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت هشتگ‌های مرتبط با هشتگ #PahlaviMadeIranGreat استخراج شده توسط نرم‌افزار Barandazstorm" >}}
 
 این هشتگ‌ها معمولا به همراه هشتگ اصلی توییت شده یا در توییت دیگری که با توییتی حاوی هشتگ [#PahlaviMadeIranGreat](https://twitter.com/hashtag/PahlaviMadeIranGreat?src=hash) می باشد کوت شده‌اند. پس از استخراج، اهمیت هر هشتگ مرتبط در شبکه [#PahlaviMadeIranGreat](https://twitter.com/hashtag/PahlaviMadeIranGreat?src=hash) بازهم توسط الگوریتم Eigenvector Centrality محاسبه می‌شود. خطوط ضخیم و قطورتر نشانگر ارتباط تنگانگ میان دو هشتگ (گره) می باشد.
 
@@ -161,6 +161,6 @@ toc = true
 
 در پایان می توانید گراف‌های با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#PahlaviMadeIranGreat](https://twitter.com/hashtag/PahlaviMadeIranGreat?src=hash) را دریافت نمایید:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-eigenvector-centrality.png" alt="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده با الگوریتم Eigenvector Centrality توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده با الگوریتم Eigenvector Centrality توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-eigenvector-centrality.webp" alt="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده با الگوریتم Eigenvector Centrality توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده با الگوریتم Eigenvector Centrality توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-by-tweet-count.png" alt="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده بر اساس تعداد بیشترین توییت توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده بر اساس تعداد بیشترین توییت توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-pahlavimadeirangreat/pahlavimadeirangreat-twitterstorm-hashtag-analysis-by-tweet-count.webp" alt="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده بر اساس تعداد بیشترین توییت توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت طوفان توییتری و شبکه هشتگ #PahlaviMadeIranGreat، آنالیز شده بر اساس تعداد بیشترین توییت توسط نرم‌افزار Barandazstorm" >}}

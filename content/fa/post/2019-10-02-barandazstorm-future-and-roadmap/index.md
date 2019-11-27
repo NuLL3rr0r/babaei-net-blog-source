@@ -25,6 +25,6 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Instagram", "Iran", "Islami
 
 آیا کسی به خاطر دارد هشتگ انحرافی [#دختر_آبی](https://twitter.com/hashtag/دختر_آبی?src=hash) با چه هدفی و توسط چه کسانی زده شد؟
 
-{{< figure src="/blog/barandazstorm-future-and-roadmap/bluegirl-hashtag-origin.png" alt="هشتگ #دختر_آبی با چه هدفی و توسط چه کسانی زده شد؟" title="هشتگ #دختر_آبی با چه هدفی و توسط چه کسانی زده شد؟" >}}
+{{< figure src="/blog/barandazstorm-future-and-roadmap/bluegirl-hashtag-origin.webp" alt="هشتگ #دختر_آبی با چه هدفی و توسط چه کسانی زده شد؟" title="هشتگ #دختر_آبی با چه هدفی و توسط چه کسانی زده شد؟" >}}
 
 <!--more-->

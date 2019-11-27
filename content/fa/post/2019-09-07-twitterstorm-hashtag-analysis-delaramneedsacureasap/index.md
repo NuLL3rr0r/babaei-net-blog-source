@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #DelaramNeedsACureASAP آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #DelaramNeedsACureASAP آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #DelaramNeedsACureASAP آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #DelaramNeedsACureASAP آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #DelaramNeedsACureASAP
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #DelaramNeedsACureASAP" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #DelaramNeedsACureASAP" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #DelaramNeedsACureASAP" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #DelaramNeedsACureASAP" >}}
 
 1. [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash)
 2. [#ourleaderrezapahlavi](https://twitter.com/hashtag/ourleaderrezapahlavi?src=hash)
@@ -127,7 +127,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #DelaramNeedsACureASAP" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #DelaramNeedsACureASAP" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #DelaramNeedsACureASAP" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #DelaramNeedsACureASAP" >}}
 
 1. [@UN](https://twitter.com/UN)
 2. [@FarhadiIvar](https://twitter.com/FarhadiIvar)
@@ -235,7 +235,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #DelaramNeedsACureASAP با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #DelaramNeedsACureASAP با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #DelaramNeedsACureASAP با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #DelaramNeedsACureASAP با بیشترین تعداد توییت" >}}
 
 1. [@Zgh75204326](https://twitter.com/Zgh75204326)
 2. [@Sasar_S](https://twitter.com/Sasar_S)
@@ -342,8 +342,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#DelaramNeedsACureASAP](https://twitter.com/hashtag/DelaramNeedsACureASAP?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-delaramneedsacureasap/delaramneedsacureasap-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #DelaramNeedsACureASAP، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

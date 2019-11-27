@@ -12,7 +12,7 @@ Digital Restrictions Management (DRM) harms almost everyone, but most people hav
 There are people around the world coming together to say that we will not tolerate the remote deletions, unethical surveillance, and invasive restrictions of DRM. In fact, with events in at least nine countries and huge online participation, it's the world's biggest anti-DRM protest.
 {{< /blockquote >}}
 
-{{< figure src="/blog/international-day-against-drm-packt-publishing/international-day-against-drm-packt-publishing.png" alt="International Day Against DRM at Packt Publishing" caption="International Day Against DRM at Packt Publishing" >}}
+{{< figure src="/blog/international-day-against-drm-packt-publishing/international-day-against-drm-packt-publishing.webp" alt="International Day Against DRM at Packt Publishing" caption="International Day Against DRM at Packt Publishing" >}}
 
 Well, I just found out that this year, to demonstrate their continuing support for Day Against DRM, as they celebrates [International Day Against DRM, May 6th 2015](https://www.defectivebydesign.org/dayagainstdrm), [Packt Publishing is offering all its DRM-free content at $10 for 24 hours only on May 6th](http://bit.ly/1clSCd7) – with more than 3000 eBooks and 100 Videos available across [the publisher’s website](http://www.packtpub.com/).
 

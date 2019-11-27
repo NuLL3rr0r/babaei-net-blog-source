@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis.jpg" alt="گراف طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis.webp" alt="گراف طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#StandUp4SahelSqMan](https://twitter.com/hashtag/StandUp4SahelSqMan?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -16,13 +16,13 @@ toc = true
 
 با گذشت بیش از ۲۴ ساعت از شروع طوفان یعنی ساعت ۲۰:۰۰ روز ۳۱ تیرماه ۱۳۹۸ به وقت تهران تا امروز یکم مردادماه حوالی ساعت ۲۰:۰۷ به وقت تهران، تعداد <code>۴۱,۷۶۵</code> توییت، ریتوییت، کوت، پاسخ، و منشن در رابطه با هشتگ [#StandUp4SahelSqMan](https://twitter.com/hashtag/%D9%85%D8%B1%D8%AF_%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%AD%D9%84?src=hash) توسط <code>۳,۳۸۱</code> کاربر در نرم افزار Barandazstorm ثبت شده است. تعداد کاربران درگیر در این هشتگ شامل توییت کنندگان، ریتوییت کنندگان، کوت کنندگان، پاسخ دهندگان، منشن شده‌ها، کوت‌شده‌ها، و در نهایت پاسخ داده شده‌ها <code>۳,۷۴۷</code> اکانت بوده است:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis-output.png" alt="بخشی از خروجی آنالیز طوفان توییتری و هشتگ #StandUp4SahelSqMan توسط نرم افزار Barandazstorm" title="بخشی از خروجی آنالیز طوفان توییتری و هشتگ #StandUp4SahelSqMan توسط نرم افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis-output.webp" alt="بخشی از خروجی آنالیز طوفان توییتری و هشتگ #StandUp4SahelSqMan توسط نرم افزار Barandazstorm" title="بخشی از خروجی آنالیز طوفان توییتری و هشتگ #StandUp4SahelSqMan توسط نرم افزار Barandazstorm" >}}
 
 ناگفته نماند که ۵۰ کاربر برجسته (نه لزوما تاثیرگذار) در خلال طوفان و شبکه هشتگ [#StandUp4SahelSqMan](https://twitter.com/hashtag/StandUp4SahelSqMan?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis-popular-accounts-01-to-25.png" alt="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۱ تا ۲۵" title="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۱ تا ۲۵" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis-popular-accounts-01-to-25.webp" alt="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۱ تا ۲۵" title="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۱ تا ۲۵" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis-popular-accounts-26-to-50.png" alt="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۲۶ تا ۵۰" title="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۲۶ تا ۵۰" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis-popular-accounts-26-to-50.webp" alt="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۲۶ تا ۵۰" title="کاربران برجسته در طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan از ۲۶ تا ۵۰" >}}
 
 خاطر نشان می شود که مطابق با لیست فوق، کاربران [@UNHumanRights](https://twitter.com/UNHumanRights)، [@ICHRI_Fa](https://twitter.com/ICHRI_Fa)، [@united4iran](https://twitter.com/united4iran)، [@PahlaviReza](https://twitter.com/PahlaviReza)، [@ICHRI](https://twitter.com/ICHRI)، [@JZarif](https://twitter.com/JZarif) و [@AmnestyIran](https://twitter.com/AmnestyIran) در این طوفان توییتری مشارکت نداشته‌اند. برجسته شدن این کاربران در خلال طوفان و شبکه هشتگ [#StandUp4SahelSqMan](https://twitter.com/hashtag/StandUp4SahelSqMan?src=hash) می تواند دلایل مختلفی داشته باشد. برای مثال برجسته شدن اکانت [شاهزاده رضا پهلوی](https://twitter.com/PahlaviReza) به این دلیل است که ایشان محور براندازی، و در کنار [#مرد_میدان_ساحل](/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/) محور محتوای طوفان و هشتگ بوده‌اند. در رابطه با سایر اکانت‌ها، کاربران شرکت کننده در طوفان با منشن یا کوت نمودن و پاسخ دادن به توییت‌های آن‌ها، درخواست پیگری وضعیت، اقدام به صدور بیانیه، واکنش و یا محکوم نمودن عمل جمهوری اسلامی در زیرپا گذاردن حقوق بشر و اصل آزادی بیان در مورد مرد میدان ساحل را داشته‌اند و یا از این سازمان‌ها و ارگان‌ها خواسته اند که سیاست حقوق بشر گزینشی در مورد مرد میدان ساحل را کنار بگذارند. یا حتی به جناب ظریف، یادآوری نموده‌اند که ما در ایران مرد میدان ساحل نداریم!
 
@@ -83,7 +83,7 @@ toc = true
 
 در پایان می توانید گراف با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#StandUp4SahelSqMan](https://twitter.com/hashtag/StandUp4SahelSqMan?src=hash) را دریافت نمایید:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis.png" alt="گراف با کیفیت طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/standup4sahelsqman-twitterstorm-hashtag-analysis.webp" alt="گراف با کیفیت طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت طوفان توییتری و شبکه هشتگ #StandUp4SahelSqMan آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 ## توضیح مختصری در رابطه با هشتگ‌های انگلیسی با حروف کوچک و بزرگ
 
@@ -91,7 +91,7 @@ toc = true
 
 بایستی یادآور شد که توییتر و نرم‌افزار Barandazstorm تفاوتی میان هشتگ‌های با حروف کوچک و بزرگ قائل نمی‌شوند. البته برخی وب‌سایت‌های  ترند توییتر نظیر [صبارسانه](https://trend.sabamedia.info/) آمار مجزایی برای هر هشتگ ارائه می‌نمایند که به زعم بنده اشکال از این دست از وب سایت‌ها می‌باشد:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/sabamedia-bug-differentiating-uppercase-lowercase-hashtags.png" alt="اشکال صبارسانه در تفاوت قائل شدن میان حروف کوچک و بزرگ و در نتیجه محاسبه اشتباه تعداد هشتگ" title="اشکال صبارسانه در تفاوت قائل شدن میان حروف کوچک و بزرگ و در نتیجه محاسبه اشتباه تعداد هشتگ" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-standup4sahelsqman/sabamedia-bug-differentiating-uppercase-lowercase-hashtags.webp" alt="اشکال صبارسانه در تفاوت قائل شدن میان حروف کوچک و بزرگ و در نتیجه محاسبه اشتباه تعداد هشتگ" title="اشکال صبارسانه در تفاوت قائل شدن میان حروف کوچک و بزرگ و در نتیجه محاسبه اشتباه تعداد هشتگ" >}}
 
 لازم به ذکر است که وب‌سایت [ترندزمپ](https://www.trendsmap.com/)، هیچ‌گونه تفاوتی میان حروف کوچک و بزرگ قائل نمی‌شود و با نمایش تعداد مجموع، تعداد هر فرمی از هشتگ که بیشتر باشد، از آن به منظور نمایش نام هشتگ استفاده می نماید. تنها نکته مهم در رابطه با هشتگ‌ها در طوفان‌های توییتری این است که بایستی مراقب باشید تا قربانی [حملات ربودن هشتگ توسط سایبری‌ها و عرازشه](/blog/twitter-hashtag-hijacking-attacks/) نشوید.
 

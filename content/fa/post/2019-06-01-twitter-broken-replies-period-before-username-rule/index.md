@@ -6,7 +6,7 @@ tags = [ "Social Media", "Twitter", "Twitterstorm" ]
 toc = "true"
 +++
 
-{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/twitter-broken-replies-period-before-username-rule.jpg" alt="قاعده توییتری «نقطه پیش از نام کاربری»" caption="قاعده توییتری «نقطه پیش از نام کاربری»" >}}
+{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/twitter-broken-replies-period-before-username-rule.webp" alt="قاعده توییتری «نقطه پیش از نام کاربری»" caption="قاعده توییتری «نقطه پیش از نام کاربری»" >}}
 
 **به روز رسانی [۲۲ خرداد ۱۳۹۸]:** افزودن یک نمونه واضح تر از پاسخ های شکسته
 
@@ -26,19 +26,19 @@ toc = "true"
 
 یک توییت عادی توییتی است که با کلیک یا تپ بر روی دکمه یا آیکن New Tweet یا Tweet، در اکثر پلتفرم ها ایجاد می شود. این توییت ها می توانند شامل هشتگ، تصویر یا فایل ویدیویی باشند. [مثال](https://twitter.com/mamadou_babaei/status/1118864969674760192):
 
-{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/normal-tweet.png" alt="قاعده توییتری «نقطه پیش از نام" caption="یک توییت عادی" >}}
+{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/normal-tweet.webp" alt="قاعده توییتری «نقطه پیش از نام" caption="یک توییت عادی" >}}
 
 ### منشن ها
 
 یک منشن، درست همانند توییت های عادی ایجاد می شود با این تفاوت که در متن توییت، با استفاده از کاراکتر <code>@</code> و بدون فاصله، با افزودن نام کاربر ساخته می شود. برای مثال نام کاربری من در توییتر mamadou_babaei می باشد. جهت منشن نمودن من در یک توییت بایستی [@mamadou_babaei](https://twitter.com/mamadou_babaei) را در متن آن توییت ذکر نمایید. [مثال](https://twitter.com/mamadou_babaei/status/1133771418943066112):
 
-{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/mention.png" alt="منشن" caption="منشن" >}}
+{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/mention.webp" alt="منشن" caption="منشن" >}}
 
 ### پاسخ ها
 
 یک پاسخ معمولا با کلیک یا تپ بر روی دکمه یا آیکن Reply، جهت پاسخ به یک توییت ایجاد می شود. درست مانند پاسخ به یک ایمیل؛ با این تفاوت که پاسخ ایمیل فقط توسط مخاطب یا مخاطبان آن رویت می شود. روش دیگر ایجاد یک پاسخ، ایجاد یک توییت جدید با قرار دادن کاراکتر <code>@</code> و نام کاربری در ابتدای متن توییت می باشد. برای مثال در تصویر ذیل کاربر [@NuLL3rr0r](https://twitter.com/NuLL3rr0r) با همین روش کاربر [@mamadou_babaei](https://twitter.com/mamadou_babaei) را خطاب قرار داده است. با این روش، توییت پاسخ در پروفایل [@NuLL3rr0r](https://twitter.com/NuLL3rr0r) در قسمت Tweets ظاهر نمی شود. اما اگر به قسمت Tweets & Replies مراجعه نمایید، توییت جدید ایجاد شده به عنوان یک پاسخ ثبت شده است. توییتر تنها این توییت را در فید (تایم لاین) شما، کاربر مخاطب و کاربرانی که به صورت مشترک هر دوی شما را فالو می نمایند نمایش می دهد.
 
-{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/reply.png" alt="پاسخ" caption="پاسخ" >}}
+{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/reply.webp" alt="پاسخ" caption="پاسخ" >}}
 
 خب، کاربرد این نوع توییت چیست؟ برای مثال فرض کنید کاربر جدیدی شما را فالو نموده است. شما جهت قدردانی قصد دارید در یک توییت تشکر، این شخص را منشن کنید. احتمالا سایر فالورهای شما علاقه چندانی به دیدن این توییت نخواهند داشت. بنابراین توییتر تصمیم می گیرد که این توییت را فقط در فید شما، کاربر مورد خطاب و فالورهای مشترک میان طرفین نمایش دهد.
 
@@ -46,11 +46,11 @@ toc = "true"
 
 با مشخص شدن سیاست توییتر در قبال توییت های آغاز شده با کاراکتر  <code>@</code>، حالا فرض کنید برخی مواقع بنا به دلایل گرامری، نام شخص یا سازمان مورد خطاب در توییت شما، بایستی در ابتدای توییت قرار گیرد. به دلیل محدود شدن مخاطبان توییت به کاربر توییت کننده، مخاطب و فالورهای مشترک، روش مرسوم بین کاربران توییتر، قرار دادن کاراکتر <code>.</code> و بعضا کاراکتر <code>-</code> پیش از کاراکتر <code>@</code> آغازین می باشد. این نوع از توییت ها بین کاربران به شکل غیر رسمی به نام Broken Replies یا پاسخ های شکسته [شده] شناخته می شود. [مثال](https://twitter.com/mamadou_babaei/status/1118606151023779841):
 
-{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/broken-reply.png" alt="پاسخ شکسته" caption="پاسخ شکسته" >}}
+{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/broken-reply.webp" alt="پاسخ شکسته" caption="پاسخ شکسته" >}}
 
 البته در مثال فوق یک کاراکتر فاصله فی مابین کاراکترهای <code>.</code> و <code>@</code> وجود دارد. اگر محدودیت کاراکتر دارید می توان این فاصله را از میان برداشت. مثلا به جای: <code>. @instagram did a great job ...</code> نوشت: <code>.@instagram did a great job ...</code>.
 
-{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/broken-reply-no-space.png" alt="نمونه دیگری از پاسخ شکسته" caption="نمونه دیگری از پاسخ شکسته" >}}
+{{< figure src="/blog/twitter-broken-replies-period-before-username-rule/broken-reply-no-space.webp" alt="نمونه دیگری از پاسخ شکسته" caption="نمونه دیگری از پاسخ شکسته" >}}
 
 [فی الواقع](https://twitter.com/hashtag/%D9%81%DB%8C_%D8%A7%D9%84%D9%88%D8%A7%D9%82%D8%B9?src=hash)، ایده کلی شکستن پاسخ با قرار دادن یک کاراکتر در ابتدای توییت و تبدیل آن به منشن می باشد.
 

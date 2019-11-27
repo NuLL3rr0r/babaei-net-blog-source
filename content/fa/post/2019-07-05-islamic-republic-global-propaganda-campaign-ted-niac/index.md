@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Iran", "Islamic Republic Of Iran", "NIAC", "Reddit", "So
 toc = false
 +++
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/ted-talks-niac-propaganda-tool.jpg" alt="آیا سخنرانی های تد ابزاری برای پروپاگاندای نایاک و جمهوری اسلامی است؟" title="آیا سخنرانی های تد ابزاری برای پروپاگاندای نایاک و جمهوری اسلامی است؟" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/ted-talks-niac-propaganda-tool.webp" alt="آیا سخنرانی های تد ابزاری برای پروپاگاندای نایاک و جمهوری اسلامی است؟" title="آیا سخنرانی های تد ابزاری برای پروپاگاندای نایاک و جمهوری اسلامی است؟" >}}
 
 **به روز رسانی [۱۵ تیرماه ۱۳۹۸]:** ضمن سپاس از جناب [امیر اعتمادی](https://twitter.com/amiretemadi) عضو [فرشگرد](https://iranrevival.com/) بابت [ذکر این نکته](https://web.archive.org/save/https://twitter.com/amiretemadi/status/1147268526207655938)، گویا [تدکس کیش توسط لیلی صرافان عضو هیات مدیره نایاک راه اندازی شده است](https://web.archive.org/web/20170711144000/https://www.niacouncil.org/tedxkish-2015-tipping-point/).
 
@@ -53,7 +53,7 @@ toc = false
 
 مجموعه این مسایل باعث شد که به شخصه ۹۰ درصد از ویدیوهای تد را چندان جدی نگیرم. اما شب گذشته به شکل کاملا اتفاقی در توییتر به [توییت تد با عنوان تریتا پارسی می گوید برای ایران و اسرائیل صلح امکان پذیر است](https://web.archive.org/web/20190705201604/https://twitter.com/TEDTalks/status/387960093767393280)، برخورد نمودم:
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-tedtalks-trita-parsi.png" alt="تریتا پارسی می گوید برای ایران و اسرائیل صلح امکان پذیر است" title="تریتا پارسی می گوید برای ایران و اسرائیل صلح امکان پذیر است" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-tedtalks-trita-parsi.webp" alt="تریتا پارسی می گوید برای ایران و اسرائیل صلح امکان پذیر است" title="تریتا پارسی می گوید برای ایران و اسرائیل صلح امکان پذیر است" >}}
 
  به طبع آن [تریتا پارسی](https://fa.wikipedia.org/wiki/%D8%AA%D8%B1%DB%8C%D8%AA%D8%A7_%D9%BE%D8%A7%D8%B1%D8%B3%DB%8C) در وبسایت تد [به عنوان سخنران داری یک صفحه است](https://www.ted.com/speakers/trita_parsi) که از طریق آن می توانید [سخنرانی او](https://www.ted.com/talks/trita_parsi_iran_and_israel_peace_is_possible?language=fa) مربوط به ژوئن ۲۰۱۳ را مشاهده نمایید. تا زمان نوشتن این مقاله این سخنرانی به شکل آنلاین <code>۷۸۳,۸۲۶</code> بار دیده شده است:
 
@@ -71,7 +71,7 @@ toc = false
 
 او ابایی از [حمل نمودن کیف خود با نام و نشان و‌ آدرس وب سایت نایاک](https://web.archive.org/web/20171103011010/https://twitter.com/NeginFarsad/status/825403662897799168) نداشته و حتی به آن افتخار هم می نماید:
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-negin-farsad-niacaction.png" alt="نگین فرساد و توییت او خطاب به @NIACAction" title="نگین فرساد و توییت او خطاب به @NIACAction" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-negin-farsad-niacaction.webp" alt="نگین فرساد و توییت او خطاب به @NIACAction" title="نگین فرساد و توییت او خطاب به @NIACAction" >}}
 
 [نگین فرساد](https://en.wikipedia.org/wiki/Negin_Farsad) در سخنرانی خود به یک نکته بسیار ظریف اشاره می نماید (از زیرنویس فارسی تد):
 
@@ -113,11 +113,11 @@ toc = false
 
 البته نمی دانم جمیل ابو ورده مستقیما به نایاک مرتبط می باشد یا خیر، اما گویا پس از طوفان های توییتری [#NIACLobbies4Mullahs](https://twitter.com/hashtag/NIACLobbies4Mullahs?src=hash) و [#NIACviolatesFARA](https://twitter.com/hashtag/NIACviolatesFARA?src=hash) علیه نایاک، [مازجبرانی اخیرا از نایاک جدا شده است](https://web.archive.org/web/20190705175540/https://twitter.com/amiretemadi/status/1136821161466241024):
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-amir-etemadi-niac-maz-jobrani.png" alt="جدا شدن مازجبرانی از نایاک" title="جدا شدن ماز جبرانی از نایاک" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-amir-etemadi-niac-maz-jobrani.webp" alt="جدا شدن مازجبرانی از نایاک" title="جدا شدن ماز جبرانی از نایاک" >}}
 
 اجازه دهید نگاهی به [لیست کارکنان، اعضای هیات مدیره، و هیات مشاوران فعلی نایاک](https://www.niacouncil.org/about-niac/staff-board/) بیاندازیم:
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/niac-staff-board-of-directors-board-of-advisors.jpg" alt="لیست کارکنان، اعضای هیات مدیره، و هیات مشاوران فعلی نایاک" title="لیست کارکنان، اعضای هیات مدیره، و هیات مشاوران فعلی نایاک" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/niac-staff-board-of-directors-board-of-advisors.webp" alt="لیست کارکنان، اعضای هیات مدیره، و هیات مشاوران فعلی نایاک" title="لیست کارکنان، اعضای هیات مدیره، و هیات مشاوران فعلی نایاک" >}}
 
 از این لیست افراد ذیل دارای سخنرانی تد یا تدکس می باشند:
 
@@ -152,9 +152,9 @@ toc = false
 
 علاوه بر اعضای رسمی نایاک، اگر [وب سایت نایاک را جستجو نمایید](https://www.google.com/search?client=firefox-b-d&q=Shirin+Neshat+site%3Aniacouncil.org)، به همکاری خانم [شیرین نشاط](https://fa.wikipedia.org/wiki/%D8%B4%DB%8C%D8%B1%DB%8C%D9%86_%D9%86%D8%B4%D8%A7%D8%B7) در رخداد جمع آوری کمک مالی نایاک و یا [مقالاتی در مورد او](https://www.niacouncil.org/shirin-neshat-creating-art-in-a-politicized-world/) خواهید رسید:
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/niac-fundraiser-shirin-neshat-1.png" alt="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط به عنوان مهمان ویژه در رخداد جمع آوری کمک مالی نایاک" title="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط به عنوان مهمان ویژه در رخداد جمع آوری کمک مالی نایاک" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/niac-fundraiser-shirin-neshat-1.webp" alt="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط به عنوان مهمان ویژه در رخداد جمع آوری کمک مالی نایاک" title="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط به عنوان مهمان ویژه در رخداد جمع آوری کمک مالی نایاک" >}}
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/niac-fundraiser-shirin-neshat-2.png" alt="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط در رخداد جمع آوری کمک مالی نایاک" title="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط در رخداد جمع آوری کمک مالی نایاک" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/niac-fundraiser-shirin-neshat-2.webp" alt="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط در رخداد جمع آوری کمک مالی نایاک" title="اعلانی در وب سایت رسمی نایاک مربوط به حضور خانم شیرین نشاط در رخداد جمع آوری کمک مالی نایاک" >}}
 
 شیرین نشاط، سخنرانی تحت عنوان [هنر در تبعید](https://www.ted.com/talks/shirin_neshat_art_in_exile?language=fa)، در تد در تاریخ دسامبر ۲۰۱۰ با <code>۷۲۷,۴۲۱</code> بار بازید را انجام داده است:
 
@@ -164,11 +164,11 @@ toc = false
 
 و در نهایت [انوشه انصاری](https://twitter.com/AnoushehAnsari)، که به نظر می رسد [از حامیان و موافقان ماموریت نایاک می باشد](https://web.archive.org/web/20190705185643/https:/twitter.com/AnoushehAnsari/status/834056967094140929):
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-anousheh-ansari-niac-mission.png" alt="نایاک را می شناسم. ماموریتش تسهیل سیاست های دوستانه برای آمریکایی ایرانی هاست که چیز خوبی است." title="نایاک را می شناسم. ماموریتش تسهیل سیاست های دوستانه برای آمریکایی ایرانی هاست که چیز خوبی است" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/tweet-anousheh-ansari-niac-mission.webp" alt="نایاک را می شناسم. ماموریتش تسهیل سیاست های دوستانه برای آمریکایی ایرانی هاست که چیز خوبی است." title="نایاک را می شناسم. ماموریتش تسهیل سیاست های دوستانه برای آمریکایی ایرانی هاست که چیز خوبی است" >}}
 
 و یا [از مردم می خواهد که با جمع آوری کمک مالی از نایاک پشتیبانی نمایند](https://web.archive.org/web/20190705184722/https://www.facebook.com/NIACouncil/posts/anousheh-ansari-endorses-niacs-work-and-kicks-off-our-fundraising-month/228120963866510/):
 
-{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/facebook-anousheh-ansari-support-niac.png" alt="انوشه انصاری: نایاک را پشتیبانی کنید!" title="انوشه انصاری: نایاک را پشتیبانی کنید!" >}}
+{{< figure src="/blog/islamic-republic-global-propaganda-campaign-ted-niac/facebook-anousheh-ansari-support-niac.webp" alt="انوشه انصاری: نایاک را پشتیبانی کنید!" title="انوشه انصاری: نایاک را پشتیبانی کنید!" >}}
 
 [انوشه انصاری](https://fa.wikipedia.org/wiki/%D8%A7%D9%86%D9%88%D8%B4%D9%87_%D8%A7%D9%86%D8%B5%D8%A7%D8%B1%DB%8C)، سه سخنرای تدکس به ترتیب ۹، ۸، و ۲ سال پیش، تحت عناوین [آیا شما می توانید همه چیز را تغییر دهید](https://www.youtube.com/watch?v=naSNBpcPQzQ) و [چرا کاوش؟](https://www.youtube.com/watch?v=ykXaOLJIk78) و [تنها به همان اندازه که آرزو داریم می توانیم باشیم](https://www.youtube.com/watch?v=fa4Ure_-5l4) دارد که حدودا به ترتیب <code>۶۹۵,۰۰۰</code> و <code>۷۵۵,۰۰۰</code> و <code>۱۰,۰۰۰</code> بار تا لحظه فعلی دیده شده اند:
 

@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #Stand4HEPCO آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #Stand4HEPCO آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #Stand4HEPCO آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #Stand4HEPCO آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #Stand4HEPCO
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #Stand4HEPCO" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #Stand4HEPCO" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #Stand4HEPCO" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #Stand4HEPCO" >}}
 
 1. [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash)
 2. [#هپکو](https://twitter.com/hashtag/هپکو?src=hash)
@@ -128,7 +128,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #Stand4HEPCO" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #Stand4HEPCO" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #Stand4HEPCO" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #Stand4HEPCO" >}}
 
 1. [@Hashshaashin](https://twitter.com/Hashshaashin)
 2. [@mamadou_babaei](https://twitter.com/mamadou_babaei)
@@ -235,7 +235,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #Stand4HEPCO با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #Stand4HEPCO با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #Stand4HEPCO با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #Stand4HEPCO با بیشترین تعداد توییت" >}}
 
 1. [@Persian_kingg](https://twitter.com/Persian_kingg)
 2. [@sasari_s](https://twitter.com/sasari_s)
@@ -342,8 +342,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#Stand4HEPCO](https://twitter.com/hashtag/Stand4HEPCO?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-stand4hepco/stand4hepco-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #Stand4HEPCO، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

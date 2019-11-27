@@ -5,7 +5,7 @@ date = 2018-12-04T12:14:00+01:00
 tags = [ "Constitutional Monarchy", "Iran", "Islamic Republic of Iran", "Mohammad Reza Shah", "Monarchy", "Pahlavi", "Prosperity Index", "Republics", "Reza Shah", "Shah", "Shah of Iran" ]
 +++
 
-{{< figure src="/blog/monarchies-versus-republics-quality-of-life/farah-pahlavi-controversial-tweet.jpg" alt="#والاحضرت_ياسمين" >}}
+{{< figure src="/blog/monarchies-versus-republics-quality-of-life/farah-pahlavi-controversial-tweet.webp" alt="#والاحضرت_ياسمين" >}}
 
 من نه سلطنت طلب هستم نه مشروطه خواه و اتفاقا دو سه روز گذشته هم از خوندن نظرات مختلف راجع به قضیه [#والاحضرت_ياسمين](https://twitter.com/hashtag/%D9%88%D8%A7%D9%84%D8%A7%D8%AD%D8%B6%D8%B1%D8%AA_%D9%8A%D8%A7%D8%B3%D9%85%D9%8A%D9%86?src=hash) لذت بردم. هر چند کوتاه، ولی تجربه زندگی در کشوری که نوع حکومتش پادشاهی مشروطه هست رو هم دارم. این مطلب هم جهت مخالفت یا موافقت با این موضوع نیست؛ بلکه میخوام یک سری حقایق جالب رو بیان کنم.
 
@@ -13,15 +13,15 @@ tags = [ "Constitutional Monarchy", "Iran", "Islamic Republic of Iran", "Mohamma
 
 همونطوری که اطلاع دارید در حال حاضر [ژاپن، ۱۲ کشور اروپائی، و چندین کشور دیگر حکومتی از نوع پادشاهی مشروطه یا Monarchy دارند](https://www.infoplease.com/world/political-statistics/kingdoms-and-monarchs-world). نگاهی به نقشه درآمد سالانه در جهان در سال ۲۰۱۵ رابطه عجیب و جالبی رو مابین سرانه تولید ناخالص داخلی و حکومت های از نوع پادشاهی نمایان میکنه.
 
-{{< figure src="/blog/monarchies-versus-republics-quality-of-life/monarchies-map.jpg" alt="نقشه درآمد سالانه در جهان در سال ۲۰۱۵" caption="نقشه درآمد سالانه در جهان در سال ۲۰۱۵" >}}
+{{< figure src="/blog/monarchies-versus-republics-quality-of-life/monarchies-map.webp" alt="نقشه درآمد سالانه در جهان در سال ۲۰۱۵" caption="نقشه درآمد سالانه در جهان در سال ۲۰۱۵" >}}
 
 فی الواقع به نظر میرسه که بنا به هر دلیلی، نه تنها این نوع حکومت ها برای شهروندهاشون بیشترین سرانه تولید ناخالص داخلی رو به ارمغان میارن، بلکه کمتر مستعد جنگ و درگیری داخلی هستند، و علاوه بر این ها نسبت به جمهوری ها مکان های بهتری برای زندگی هستند. جالب تر این که بر اساس [شاخص ثروت موسسه Legatum Institute](https://www.prosperity.com/rankings) در سال ۲۰۱۵، از ۱۰ کشور صدر این جدول ۷ مورد پادشاهی مشروطه هستند (نروژ ۱، دانمارک ۳، نیوزیلند ۴، سوئد ۵، کانادا ۶، استرالیا ۷، هلند ۸)، در حالیکه ۱ مورد فدرالی (سوئیس ۲) و ۲ مورد جمهوری (فنلاند ۹، ایرلند ۱۰) هستند.
 
-{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-ten-2015.jpg" alt="۱۰ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۵" caption="۱۰ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۵" >}}
+{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-ten-2015.webp" alt="۱۰ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۵" caption="۱۰ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۵" >}}
 
 نگاه دیگری به آخرین اطلاعات این شاخص برای سال ۲۰۱۸، همچنان ۷ پادشاهی مشروطه نروژ ۱، نیوزیلند ۲، دانمارک ۵، سوئد ۶، انگلستان ۷، کانادا ۸، و هلند ۹، رو در میان ۱۰ کشور صدر شاخص قرار میده. علاوه بر این ها در میان ۲۵ کشور صدر این جدول، نام پادشاهی های مشروطه لوکزامبورگ در رده ۱۲، استرالیا ۱۳، بلژیک ۱۶، و ژاپن ۲۳ دیده میشه. و در نهایت، پادشاهی پارلمانی اسپانیا هم در رده ۲۵ این جدول قرار داره.
 
-{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-twenty-five-2018.png" alt="۲۵ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۸" caption="۲۵ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۸" >}}
+{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-twenty-five-2018.webp" alt="۲۵ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۸" caption="۲۵ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۸" >}}
 
 جمله ای بسیار مشهور راجع به نگهداری سیستم های کامپیوتری در مهندسی نرم افزار هست که میگه:
 

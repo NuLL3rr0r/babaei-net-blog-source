@@ -7,7 +7,7 @@ toc = true
 aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 +++
 
-{{< figure src="/blog/unreal-engine-installation/unreal-engine-4-a-boy-and-his-kite.jpg" alt="A Boy and His Kite" caption="A Boy and His Kite" link="https://www.youtube.com/watch?v=JNgsbNvkNjE" >}}
+{{< figure src="/blog/unreal-engine-installation/unreal-engine-4-a-boy-and-his-kite.webp" alt="A Boy and His Kite" caption="A Boy and His Kite" link="https://www.youtube.com/watch?v=JNgsbNvkNjE" >}}
 
 [قبلا در مقاله ای مفصل به شرح تاریخچه Unreal Engine پرداخته و سپس با برخی از مفاهیم و کلیات آن آشنا شدیم](/blog/2016/01/25/unreal-engine-4-introduction/). حال نوبت به نصب آن می رسد. نصب این Game Engine و ابزارهای آن بسیار ساده می باشد. اما، دلایلی همچون: نصب آنلاین، فایل های حجیم، دسترسی کند برخی از کاربران به اینترنت و در نهایت تحریم های بین اللملی، ممکن است برخی از کاربران ایرانی را جهت دریافت این نرم افزار با مشکل مواجه کند. لذا علاوه بر نصب UE4، اقدام به ارایه راهکاری مناسب و کم هزینه جهت دریافت آن در چنین شرایطی می نمائیم.
 
@@ -258,7 +258,7 @@ aliases = [ "/blog/2016/02/07/unreal-engine-installation/" ]
 
 فرآیند کلی نصب به اینصورت خواهد بود که ابتدا یک حساب کاربری Epic Games ایجاد می نمائیم. سپس اقدام به دریافت Epic Games Launcher که برنامه نصب Unreal Engine 4 می باشد، می نمائیم. توسط حساب کاربری ایجاد شده می توان وارد Epic Games Launcher شد. Epic Game Launcher امکان دریافت و نصب UE4 به همراه به روزرسانی آن را فراهم می آورد.
 
-{{< figure src="/blog/unreal-engine-installation/installation-goal.jpg" alt="تصویر 1. Epic Games Launcher" caption="تصویر 1. Epic Games Launcher" >}}
+{{< figure src="/blog/unreal-engine-installation/installation-goal.webp" alt="تصویر 1. Epic Games Launcher" caption="تصویر 1. Epic Games Launcher" >}}
 
 __توجه__: چنانچه پیش از این مراحل تهیه حساب کاربری را طی نموده اید، می توانید مستقیما به بخش [دریافت و اجرای برنامه نصب](#downloading-and-running-the-installer) مراجعه نمائید.
 
@@ -275,18 +275,18 @@ __توجه__: چنانچه پیش از این مراحل تهیه حساب کا�
 1. ابتدا به وب سایت [UnrealEngine.com](https://www.unrealengine.com/) مراجعه نمائید.
 2. بر روی دکمه Get Unreal کلیک نمائید (تصویر 2.).
 
-{{< figure src="/blog/unreal-engine-installation/unreal-website.jpg" alt="تصویر 2. وب سایت Unreal Engine" caption="تصویر 2. وب سایت Unreal Engine" >}}
+{{< figure src="/blog/unreal-engine-installation/unreal-website.webp" alt="تصویر 2. وب سایت Unreal Engine" caption="تصویر 2. وب سایت Unreal Engine" >}}
 
 3. پس از آن فرم Join the Community را با مشخصات و ایمیل خود پر نموده، سپس بر روی دکمه Sign Up کلیک نمائید (تصویر 3.).
 
-{{< figure src="/blog/unreal-engine-installation/signup-screen.jpg" alt="تصویر 3. صفحه ایجاد حساب کاربری" caption="تصویر 3. صفحه ایجاد حساب کاربری" >}}
+{{< figure src="/blog/unreal-engine-installation/signup-screen.webp" alt="تصویر 3. صفحه ایجاد حساب کاربری" caption="تصویر 3. صفحه ایجاد حساب کاربری" >}}
 
 __توجه__: توصیه می شود پیش از ثبت نام [شرایط استفاده از خدمات Epic Games](http://epicgames.com/tos) را مطالعه نمائید.
 </pre>
 
 4. پیش از کلیک بر روی دکمه Accept شرایط استفاده از Unreal Engine را مطالعه نمائید (تصویر 4.).
 
-{{< figure src="/blog/unreal-engine-installation/eula.jpg" alt="تصویر 4. توافقنامه مجوز کاربر نهایی یا EULA" caption="تصویر 4. توافقنامه مجوز کاربر نهایی یا EULA" >}}
+{{< figure src="/blog/unreal-engine-installation/eula.webp" alt="تصویر 4. توافقنامه مجوز کاربر نهایی یا EULA" caption="تصویر 4. توافقنامه مجوز کاربر نهایی یا EULA" >}}
 
 __توجه__: در صورت بروز سوالات بیشتر در مورد EULA و چگونگی شرایط استفاده آن به [قسمت پرسش و پاسخ آن در وب سایت Unreal Engine](https://www.unrealengine.com/faq#legal) مراجعه نمائید.
 </pre>
@@ -303,15 +303,15 @@ __توجه__: در صورت بروز سوالات بیشتر در مورد EULA 
 
 1. با کلیک بر روی دکمه دانلود اقدام به دریافت برنامه نصب نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/download-screen.jpg" alt="تصویر 5. صفحه دریافت Epic Games Launcher" caption="تصویر 5. صفحه دریافت Epic Games Launcher" >}}
+{{< figure src="/blog/unreal-engine-installation/download-screen.webp" alt="تصویر 5. صفحه دریافت Epic Games Launcher" caption="تصویر 5. صفحه دریافت Epic Games Launcher" >}}
 
 2. پس از دریافت کامل فایل، برنامه نصب را اجرا نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/run-installer.jpg" alt="تصویر 6. اجرای برنامه نصب" caption="تصویر 6. اجرای برنامه نصب" >}}
+{{< figure src="/blog/unreal-engine-installation/run-installer.webp" alt="تصویر 6. اجرای برنامه نصب" caption="تصویر 6. اجرای برنامه نصب" >}}
 
 3. پس از ظاهر شدن پنجره Epic Games Launcher Setup بر روی دکمه Install کلیک نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/run-epic-launcher-setup.jpg" alt="تصویر 7. برنامه نصب Epic Games Launcher" caption="تصویر 7. برنامه نصب Epic Games Launcher" >}}
+{{< figure src="/blog/unreal-engine-installation/run-epic-launcher-setup.webp" alt="تصویر 7. برنامه نصب Epic Games Launcher" caption="تصویر 7. برنامه نصب Epic Games Launcher" >}}
 
 
 #### Mac OS X
@@ -320,7 +320,7 @@ __توجه__: در صورت بروز سوالات بیشتر در مورد EULA 
 2. بر روی فایل دریافت شده با نام <code>EpicGamesLauncher.dmg</code> دابل کلیک نمائید تا محتویات آن در پنجره Finder نمایش داده شود.
 3. آیکن Epic Games Launcher را به داخل پوشه Applications درگ نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/install-epic-laucher-mac.jpg" alt="تصویر 8. برنامه نصب Epic Games Launcher در سیستم عامل Mac OS X" caption="تصویر 8. برنامه نصب Epic Games Launcher در سیستم عامل Mac OS X" >}}
+{{< figure src="/blog/unreal-engine-installation/install-epic-laucher-mac.webp" alt="تصویر 8. برنامه نصب Epic Games Launcher در سیستم عامل Mac OS X" caption="تصویر 8. برنامه نصب Epic Games Launcher در سیستم عامل Mac OS X" >}}
 
 
 #### GNU/Linux
@@ -334,7 +334,7 @@ __نکته__: در حال حاضر کاربران GNU/Linux می توانند ب
 
 پس از آنکه برنامه نصب،  Epic Games Launcher بر روی دستگاه شما نصب نمود، با اجرا نمودن آن و سپس استفاده از اطلاعات حساب کاربری خود به داخل Epic Games Launcher لاگین نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/epic-sign-in.jpg" alt="تصویر 9. ورود به حساب کاربری Epic از داخل Launcher" caption="تصویر 9. ورود به حساب کاربری Epic از داخل Launcher" >}}
+{{< figure src="/blog/unreal-engine-installation/epic-sign-in.webp" alt="تصویر 9. ورود به حساب کاربری Epic از داخل Launcher" caption="تصویر 9. ورود به حساب کاربری Epic از داخل Launcher" >}}
 
 
 ### نصب Unreal Engine
@@ -351,26 +351,26 @@ __نکته__: در حال حاضر کاربران GNU/Linux می توانند ب
 
 1. در صفحه بارگذاری Epics Game Launcher بر روی زبانه Unreal Engine کلیک نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/launcher-load-screen.jpg" alt="تصویر 10. صفحه بارگذاری Epic Games Launcher" caption="تصویر 10. صفحه بارگذاری Epic Games Launcher" >}}
+{{< figure src="/blog/unreal-engine-installation/launcher-load-screen.webp" alt="تصویر 10. صفحه بارگذاری Epic Games Launcher" caption="تصویر 10. صفحه بارگذاری Epic Games Launcher" >}}
 
 2. سپس بر روی دکمه Install Engine جهت نصب آخرین نسخه از Unreal Engine، کلیک نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/install-engine.jpg" alt="تصویر 11. نصب Engine" caption="تصویر 11. نصب Engine" >}}
+{{< figure src="/blog/unreal-engine-installation/install-engine.webp" alt="تصویر 11. نصب Engine" caption="تصویر 11. نصب Engine" >}}
 
 3. پیش از کلیک بر روی دکمه Accept، شرایط استفاده از Unreal Engine را مطالعه نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/accept-eula-launcher.jpg" alt="تصویر 12. قبول توافقنامه مجوز نهایی کاربر" caption="تصویر 12. قبول توافقنامه مجوز نهایی کاربر" >}}
+{{< figure src="/blog/unreal-engine-installation/accept-eula-launcher.webp" alt="تصویر 12. قبول توافقنامه مجوز نهایی کاربر" caption="تصویر 12. قبول توافقنامه مجوز نهایی کاربر" >}}
 
 4. در صورت دسترسی به اینترنت با پهنای باند قابل قبول، نصب UE4 ممکن است چندین دقیقه تا چندین ساعت به طول بیانجامد. در صورتی که پهنای باند اینترنت شما قابل توجه نمی باشد استفاده از [روشی که در انتهای این مقاله شرح داده شده](#windows-vps) است، توصیه می شود.
 
-{{< figure src="/blog/unreal-engine-installation/downloading-engine.jpg" alt="تصویر 13. دریافت Engine" caption="تصویر 13. دریافت Engine" >}}
+{{< figure src="/blog/unreal-engine-installation/downloading-engine.webp" alt="تصویر 13. دریافت Engine" caption="تصویر 13. دریافت Engine" >}}
 
 
 ## اجرای Unreal Engine
 
 پس از آنکه Unreal Engine توسط Epic Games Launcher با موفقیت دریافت شد، با کلیک بر روی دکمه Launch می توانید UE4 را اجرا نمائید.
 
-{{< figure src="/blog/unreal-engine-installation/launch-ue4.jpg" alt="تصویر 14. اجرای UE4" caption="تصویر 14. اجرای UE4" >}}
+{{< figure src="/blog/unreal-engine-installation/launch-ue4.webp" alt="تصویر 14. اجرای UE4" caption="تصویر 14. اجرای UE4" >}}
 
 تبریکات صمیمانه مرا پذیرا باشید! شما آموختید که:
 
@@ -385,12 +385,12 @@ __نکته__: در حال حاضر کاربران GNU/Linux می توانند ب
 
 جهت غلبه بر مسایلی از این دست راه های متفاوت زیادی وجود دارد. اما Foolproof ترین راه ممکن خرید یک سرور مجازی ویندوزی (Windows VPS) می باشد. جهت اتصال به سرور های ویندوزی می توان از <code>mstsc</code> که به همراه Microsoft Windows عرضه می شود، استفاده نمود. کافیست پنجره Run را با فشردن کلید میانبر <code>Windows+R</code>  بر روی صفجه کلید، باز نموده و دستور <code>mstsc</code> را تایپ و اجرا نمود (تصویر 15.):
 
-{{< figure src="/blog/unreal-engine-installation/run-mstsc.png" alt="تصویر 15. اجرای mstsc" caption="تصویر 15. اجرای mstsc" >}}
+{{< figure src="/blog/unreal-engine-installation/run-mstsc.webp" alt="تصویر 15. اجرای mstsc" caption="تصویر 15. اجرای mstsc" >}}
 [{% img post-image  427 235 "'تصویر 15. اجرای mstsc'" "'تصویر 15. اجرای mstsc'" %}](/blog/unreal-engine-installation/run-mstsc.png)
 
 معمولا پس از تهیه یک سرور مجازی ویندوز، آدرس IP سرور و یا نام Domain به همراه یک نام کاربری و کلمه عبور در اختیار شما قرار می گیرد. با اجرا نمودن <code>mstsc</code> کادری مشابه تصویر 16. باز می شود. جهت اتصال، در کادر Computer نام Domain و یا IP مورد نظر را تایپ نموده و کلید Connect را بفشارید. پس از آن در صورت اتصال موفقیت آمیز اولیه با سرور مجازی، این برنامه با نمایش کادر دیگری از شما نام کاربری و کلمه عبور را می طلبد. شایان ذکر است که علاوه بر ویندوز، نرم افزارهای مشابهی برای سیستم عامل های FreeBSD, GNU/Linux و Mac OS X بدین منظور عرضه می شوند.
 
-{{< figure src="/blog/unreal-engine-installation/remote-desktop-connection.png" alt="تصویر 16. اتصال به سرور مجازی راه دور از طریق Remote Desktop Connection" caption="تصویر 16. اتصال به سرور مجازی راه دور از طریق Remote Desktop Connection" >}}
+{{< figure src="/blog/unreal-engine-installation/remote-desktop-connection.webp" alt="تصویر 16. اتصال به سرور مجازی راه دور از طریق Remote Desktop Connection" caption="تصویر 16. اتصال به سرور مجازی راه دور از طریق Remote Desktop Connection" >}}
 
 با وارد نمودن اطلاعات صحیح و برقراری ارتباط موفقیت آمیز با سرور مجازی، درست مانند کامپیوتر دسکتاپ خود می توانید از محیط دسکتاپ آن استفاده نمائید. چنانچه سرور مجازی با مشخصات مناسب (به خصوص دارای پورت گیگابیتی) تهیه نمایید قادر به دریافت و نصب UE4 فقط در عرض چند دقیقه خواهید بود. پس از آن می توانید با فشرده نمودن پوشه نصب شده Unreal Engine 4 بر روی سرور، با استفاده از نرم افزارهای FTP و یا راه اندازی یک وب سرور ساده مانند [Nginx](http://nginx.org/) فایل فشرده شده را به راحتی به کامپیوتر خود انتقال دهید.
 

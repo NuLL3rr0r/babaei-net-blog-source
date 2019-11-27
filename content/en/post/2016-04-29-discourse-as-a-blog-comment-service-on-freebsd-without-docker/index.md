@@ -15,7 +15,7 @@ __Update 3 [2016/09/30]:__ _A section has been added to the end of the article f
 
 __Update 4 [2016/10/06]:__ _I decided to get rid of Discourse on this blog for various reasons including negative feedback from my readers, performance issues, being a memory hog and not so easy on memory, difficult maintenance, dealing with building Ruby Gems which is a tedious task in case they fail to build and a bug that duplicates my posts and creates a new thread for each post which means it won't show previous comments. Last but not least, in my estimation it's too heavy for such a small task such as a comment system._ **_As a result, this guide won't be maintained anymore._**
 
-{{< figure src="/blog/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.png" alt="Figure 1. Discourse Logo" caption="Figure 1. Discourse Logo" >}}
+{{< figure src="/blog/discourse-as-a-blog-comment-service-on-freebsd-without-docker/discourse-logo.webp" alt="Figure 1. Discourse Logo" caption="Figure 1. Discourse Logo" >}}
 
 Well, when it comes to blog comment hosting services for static blogs, you will have a plethora of options such as [SolidOpinion](http://solidopinion.com/), [Disqus](https://disqus.com/), [Livefyre](http://web.livefyre.com/), Google+ or Facebook comments, and many more. Unfortunately, such services has never been an option for me and I resisted them like forever. Yes, I've got one million reasons to believe and do so which demands another post of its own. So, I'll avoid that argument for now.
 

@@ -6,7 +6,7 @@ tags = [ "Advertising", "Packt Publishing" ]
 aliases = [ "/blog/2015/12/19/packt-dollar-5-campaign-packt-publishing/" ]
 +++
 
-{{< figure src="/blog/packt-dollar-5-campaign-packt-publishing/packt-dollar-5-campaign-packt-publishing.png" alt="Packt $5 Campaign - Packt Publishing" caption="Packt $5 Campaign - Packt Publishing" >}}
+{{< figure src="/blog/packt-dollar-5-campaign-packt-publishing/packt-dollar-5-campaign-packt-publishing.webp" alt="Packt $5 Campaign - Packt Publishing" caption="Packt $5 Campaign - Packt Publishing" >}}
 
 From the 17th December 2015 into the New Year, Packt Publishing is inviting the tech world to explore its extensive library of eBooks and Video courses for one amazing price. Every single eBook and Video course Packt has ever created will be available on packtpub.com for just $5!
 

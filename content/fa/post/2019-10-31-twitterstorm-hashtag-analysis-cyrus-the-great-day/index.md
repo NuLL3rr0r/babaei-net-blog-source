@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Constitutional Monarchy", "
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis.jpg" alt="هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" title="هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis.webp" alt="هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" title="هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 بدلیل تعدد و فراوانی هشتگ‌های روز بزرگداشت کوروش کبیر، تعدادی از این هشتگ‌ها تنها در ایران ترند شدند، به همین دلیل ویژگی آنالیز گروهی هشتگ‌ها به [@Barandazstorm](https:://twitter.com/Barandazstorm) افزوده شد تا تصویر بهتر و دقیق‌تری از هشتگ‌های محبوب و مرتبط با این روز ارایه شود.
 
@@ -38,7 +38,7 @@ toc = true
 
 مرتبط‌ترین هشتگ‌های روز بزرگداشت کوروش کبیر به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های روز بزرگداشت کوروش کبیر" title="مرتبط‌ترین هشتگ‌های روز بزرگداشت کوروش کبیر" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های روز بزرگداشت کوروش کبیر" title="مرتبط‌ترین هشتگ‌های روز بزرگداشت کوروش کبیر" >}}
 
 1. [#کوروش](https://twitter.com/hashtag/کوروش?src=hash)
 2. [#کوروش_بزرگ](https://twitter.com/hashtag/کوروش_بزرگ?src=hash)
@@ -145,7 +145,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر" title="سرشناس‌ترین اکانت‌های هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر" title="سرشناس‌ترین اکانت‌های هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر" >}}
 
 1. [@PahlaviReza](https://twitter.com/PahlaviReza)
 2. [@Hashshaashin](https://twitter.com/Hashshaashin)
@@ -252,7 +252,7 @@ toc = true
 
 کاربران ترند کننده هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر با بیشترین تعداد توییت" title="کاربران ترند کننده هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر با بیشترین تعداد توییت" title="کاربران ترند کننده هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر با بیشترین تعداد توییت" >}}
 
 1. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 2. [@MenveyRlKLjO5MT](https://twitter.com/MenveyRlKLjO5MT)
@@ -359,6 +359,6 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های ترند شده مرتبط با روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های ترند شده مرتبط با روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های ترند شده مرتبط با روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های ترند شده مرتبط با روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-cyrus-the-great-day/cyrus-the-great-day-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران هشتگ‌های ترند شده روز بزرگداشت کوروش کبیر، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

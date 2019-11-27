@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Iraq", "Islamic Rep
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #اطردوا_سليماني_و_خامنئي_من_العراق آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #اطردوا_سليماني_و_خامنئي_من_العراق آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #اطردوا_سليماني_و_خامنئي_من_العراق آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #اطردوا_سليماني_و_خامنئي_من_العراق آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#اطردوا_سليماني_و_خامنئي_من_العراق](https://twitter.com/hashtag/اطردوا_سليماني_و_خامنئي_من_العراق?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -22,7 +22,7 @@ toc = true
 
 مرتبط‌ترین هشتگ‌های شبکه هشتگ  [#اطردوا_سليماني_و_خامنئي_من_العراق](https://twitter.com/hashtag/اطردوا_سليماني_و_خامنئي_من_العراق?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" >}}
 
 1. [#اطردوا_سلیمانی_و_خامنئی_من_العراق](https://twitter.com/hashtag/اطردوا_سلیمانی_و_خامنئی_من_العراق?src=hash)
 2. [#عراق](https://twitter.com/hashtag/عراق?src=hash)
@@ -129,7 +129,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#اطردوا_سليماني_و_خامنئي_من_العراق](https://twitter.com/hashtag/اطردوا_سليماني_و_خامنئي_من_العراق?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق" >}}
 
 1. [@mohmd_mozafari](https://twitter.com/mohmd_mozafari)
 2. [@FarhadiIvar](https://twitter.com/FarhadiIvar)
@@ -236,7 +236,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#اطردوا_سليماني_و_خامنئي_من_العراق](https://twitter.com/hashtag/اطردوا_سليماني_و_خامنئي_من_العراق?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق با بیشترین تعداد توییت" >}}
 
 1. [@MiramMiran](https://twitter.com/MiramMiran)
 2. [@0x__dead](https://twitter.com/0x__dead)
@@ -343,6 +343,6 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#اطردوا_سليماني_و_خامنئي_من_العراق](https://twitter.com/hashtag/اطردوا_سليماني_و_خامنئي_من_العراق?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-expel-qasem-soleimani-and-khamenei-from-iraq/expel-qasem-soleimani-and-khamenei-from-iraq-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

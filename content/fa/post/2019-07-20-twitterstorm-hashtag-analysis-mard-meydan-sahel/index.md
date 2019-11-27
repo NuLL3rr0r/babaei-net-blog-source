@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = false
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis.jpg" alt="آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" title="آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis.webp" alt="آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" title="آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" >}}
 
 **به روز رسانی [۲۹ تیرماه ۱۳۹۸]:** [در توییتر برای برخی از کاربران شبهه‌ای ایجاد شده](https://twitter.com/mamadou_babaei/status/1152569481539067906) که بعضی از کاربران بدون داشتن حتی یک توییت، چرا در این گزارش جزو کاربران تاثیرگذار قلمداد شده‌اند. پاسخ این است که همانطور که در جداول و تصاویر مشاهده می شود تعداد توییت‌ها برای این کاربران عدد <code>۰</code> درج شده، اما چون این کاربران به تعداد بالا به همراه هشتگ منشن یا کوت می شوند و یا به توییت‌هایشان از سوی سایر کاربران با هشتگ پاسخ داده می‌شوند در شبکه هشتگ جزو کاربران مهم قلمداد می‌شوند. مثلا ممکن است کاربران با آن هشتگ از آن‌ها درخواستی داشته باشند، یا حتی علیه آن‌ها توییت نمایند. به همین دلیل در تصویر خروجی مربوط به نرم افزار ‌‌Barandazstorm دو آمار برای تعداد کاربران گزارش می شود؛ یکی آمار کاربران شرکت کننده، و دیگری آمار کاربران درگیر (که تعدادشان بیشتر است). به عنوان مثال دیگر، در [آنالیز]("/blog/my-first-twitterstorm-hashtag-analysis-protest-against-niac/) طوفان و هشتگ [#ProtestAgainstNIAC](https://twitter.com/hashtag/ProtestAgainstNIAC?src=hash) هم اکانت [NIACouncil](https://twitter.com/NIACouncil) به عنوان بدون حتی یک توییت، به دلایل فوق مهم‌ترین گره از شبکه این هشتگ شناسایی شده است. به زعم بنده، اشتباه استفاده از واژه "کاربران تاثیرگذار" بوده که باعث این شبهه شده است. حتما در گزارش‌های بعدی این واژه با واژه بهتری که توصیف کننده این دسته از کاربران هم باشد، جایگزین خواهد شد.
 
@@ -17,13 +17,13 @@ toc = false
 
 تا ساعت ۱۴:۰۰ امروز به وقت تهران تعداد <code>۴,۲۱۶</code> توییت، ریتوییت، کوت، پاسخ، و منشن در رابطه با هشتگ [#مرد_میدان_ساحل](https://twitter.com/hashtag/%D9%85%D8%B1%D8%AF_%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%AD%D9%84?src=hash) توسط <code>۱,۳۳۳</code> کاربر زده شده است. تعداد کاربران درگیر در این هشتگ شامل توییت کنندگان، ریتوییت کنندگان، کوت کنندگان، پاسخ دهنده‌ها، منشن شده‌ها، کوت‌شده‌ها، و در نهایت پاسخ داده شده‌ها <code>۱,۵۶۴</code> اکانت بوده است:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis-output.png" alt="بخشی از خروجی نرم‌افزار آنالیز هشتگ Barandazstorm" title="بخشی از خروجی نرم‌افزار آنالیز هشتگ Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis-output.webp" alt="بخشی از خروجی نرم‌افزار آنالیز هشتگ Barandazstorm" title="بخشی از خروجی نرم‌افزار آنالیز هشتگ Barandazstorm" >}}
 
 ناگفته نماند که ۵۰ کاربر تاثیرگذار در شبکه هشتگ [#مرد_میدان_ساحل](https://twitter.com/hashtag/%D9%85%D8%B1%D8%AF_%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%AD%D9%84?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis-top-accounts-01-to-25.png" alt="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۱ تا ۲۵" title="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۱ تا ۲۵" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis-top-accounts-01-to-25.webp" alt="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۱ تا ۲۵" title="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۱ تا ۲۵" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis-top-accounts-26-to-50.png" alt="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۲۶ تا ۵۰" title="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۲۶ تا ۵۰" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis-top-accounts-26-to-50.webp" alt="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۲۶ تا ۵۰" title="کاربران تاثیرگذار در شبکه هشتگ #مرد_میدان_ساحل از ۲۶ تا ۵۰" >}}
 
 شناسه‌های این کاربران در توییتر:
 
@@ -82,4 +82,4 @@ toc = false
 
 فایل تصویر با کیفیت نتایج آنالیز انجام شده برای هشتگ [#مرد_میدان_ساحل](https://twitter.com/hashtag/%D9%85%D8%B1%D8%AF_%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%AD%D9%84?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis.png" alt="فایل با کیفیت آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" title="فایل با کیفیت آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-mard-meydan-sahel/mard-meydan-sahel-twitterstorm-hashtag-analysis.webp" alt="فایل با کیفیت آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" title="فایل با کیفیت آنالیز هشتگ #مرد_میدان_ساحل - تولید شده توسط نرم‌افزار Barandazstorm" >}}

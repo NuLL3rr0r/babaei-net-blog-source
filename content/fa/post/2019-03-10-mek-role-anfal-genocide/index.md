@@ -5,11 +5,11 @@ date = 2019-03-10T18:44:00+01:00
 tags = [ "Al Anfal", "Al Anfal Campaign", "Anfal", "Anfal Genocide", "Crime Against Humanity", "Desacralization", "Genocide", "Iran", "Iraq", "Islam", "Islamic Republic of Iran", "Islamophobia", "Kurd", "Kurdish", "Kurdistan", "Kurds", "Left", "Left Wing", "Left Wing Politics", "Leftist", "MEK", "MKO", "Mojahedin", "Mujahedin", "PMOI", "Religion", "Religion Criticism", "Religious Superstition", "Religious Violence", "Superstition", "Violence" ]
 +++
 
-{{< figure src="/blog/mek-role-anfal-genocide/kurdish-kids-iraq-iran-border-black-white.jpg" alt="کودکان کورد در مرز عراق و ایران" >}}
+{{< figure src="/blog/mek-role-anfal-genocide/kurdish-kids-iraq-iran-border-black-white.webp" alt="کودکان کورد در مرز عراق و ایران" >}}
 
 اصلا باور کردنی نیست که در توئیتر فارسی، هنوز هم عده ای هستند که نقش فرقه تبهکار رجوی در نسل کشی انفال که به کشتار ۵۰ تا ۱۸۲ هزار شهروند کرد انجامید رو انکار می کنند. در این نوشتار قصد ارائه سندی جالب دال بر مشارکت خلق مجاهدین در این جنایات ضد بشری رو دارم که در وب فارسی ابدا بهش اشاره نشده.
 
-{{< figure src="/blog/mek-role-anfal-genocide/anfal-genocide-facts.png" alt="حقایق نسل کشی انفال" caption="حقایق نسل کشی انفال" >}}
+{{< figure src="/blog/mek-role-anfal-genocide/anfal-genocide-facts.webp" alt="حقایق نسل کشی انفال" caption="حقایق نسل کشی انفال" >}}
 
 <!--more-->
 
@@ -25,7 +25,7 @@ tags = [ "Al Anfal", "Al Anfal Campaign", "Anfal", "Anfal Genocide", "Crime Agai
 </blockquote>
 </div>
 
-{{< figure src="/blog/mek-role-anfal-genocide/another-anfal-for-the-kurds-from-baghdad-to-chicago.jpg" alt="بخشی از کتاب “از بغداد تا شیکاگو، خاطرات و افکار یک پزشک عراقی آمریکایی” - نویسنده: Asad A. Bakir" caption="بخشی از کتاب “از بغداد تا شیکاگو، خاطرات و افکار یک پزشک عراقی آمریکایی” - نویسنده: Asad A. Bakir" >}}
+{{< figure src="/blog/mek-role-anfal-genocide/another-anfal-for-the-kurds-from-baghdad-to-chicago.webp" alt="بخشی از کتاب “از بغداد تا شیکاگو، خاطرات و افکار یک پزشک عراقی آمریکایی” - نویسنده: Asad A. Bakir" caption="بخشی از کتاب “از بغداد تا شیکاگو، خاطرات و افکار یک پزشک عراقی آمریکایی” - نویسنده: Asad A. Bakir" >}}
 
 مستندی دیگر مبنی بر این که تفاوتی میان فرقه تبهکار خمینی و رجوی وجود نداره!
 
@@ -34,4 +34,4 @@ tags = [ "Al Anfal", "Al Anfal Campaign", "Anfal", "Anfal Genocide", "Crime Agai
 
 پ.ن. عکس بی نظیر برای کاور این پست از کودکان پناهنجوی کورد عراقی در مرز ایران و عراق هست که توسط عکاس ایرانی [جاسم غضبان‌پور](http://www.jassem-photographer.com/) در صف دریافت غذا و آذوقه گرفته شده. [عکس دیگری با با زاویه یکسان و زمان متفاوت از وب سایت عکاس](http://www.jassem-photographer.com/wp/war/) قابل مشاهده هست. متشکرم از کاربر [@bicyclistic](https://twitter.com/bicyclistic) بابت ذکر نام عکاس و توضیحات عکس.
 
-{{< figure src="/blog/mek-role-anfal-genocide/kurdish-kids-iraq-iran-border-by-jassem-ghazbanpour.jpg" alt="کودکان کورد در مرز عراق و ایران - عکاس: جاسم غضبان‌پور" caption="کودکان کورد در مرز عراق و ایران - عکاس: جاسم غضبان‌پور" >}}
+{{< figure src="/blog/mek-role-anfal-genocide/kurdish-kids-iraq-iran-border-by-jassem-ghazbanpour.webp" alt="کودکان کورد در مرز عراق و ایران - عکاس: جاسم غضبان‌پور" caption="کودکان کورد در مرز عراق و ایران - عکاس: جاسم غضبان‌پور" >}}

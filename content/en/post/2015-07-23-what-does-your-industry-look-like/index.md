@@ -6,7 +6,7 @@ tags = [ "Advertising", "Packt Publishing" ]
 aliases = [ "/blog/2015/07/23/what-does-your-industry-look-like/" ]
 +++
 
-{{< figure src="/blog/what-does-your-industry-look-like/what-does-your-industry-look-like.png" alt="What does your industry look like?" caption="What does your industry look like?" >}}
+{{< figure src="/blog/what-does-your-industry-look-like/what-does-your-industry-look-like.webp" alt="What does your industry look like?" caption="What does your industry look like?" >}}
 
 I can only say wow! [Packt Publishing](https://www.packtpub.com/) has just released [their comprehensive IT industry salary reports, with data from over 20,000 developers around the globe](http://bit.ly/1TSIsRq).
 

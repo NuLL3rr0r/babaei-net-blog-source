@@ -8,9 +8,9 @@ aliases = [ "/blog/2013/03/03/colors-talk-a-colorful-terminal-console/" ]
 
 If you've ever used a __GNU__ [Gentoo](http://www.gentoo.org/) or [Funtoo](http://www.funtoo.org/wiki/Welcome) __Linux__ variant, or a live version of any of them, you may have noticed their eye-catching colorful terminal or console. Whether you're on a virtual console or one of __KDE__, __GNOME__, __XFCE__, __LXDE__ terminal apps.
 
-{{< figure src="/blog/colors-talk-a-colorful-terminal-console/colors-talk-a-colorful-terminal-console-1.jpg" alt="A Colorful Xfce4 Terminal on FreeBSD (Bash)" caption="A Colorful Xfce4 Terminal on FreeBSD (Bash)" >}}
+{{< figure src="/blog/colors-talk-a-colorful-terminal-console/colors-talk-a-colorful-terminal-console-1.webp" alt="A Colorful Xfce4 Terminal on FreeBSD (Bash)" caption="A Colorful Xfce4 Terminal on FreeBSD (Bash)" >}}
 
-{{< figure src="/blog/colors-talk-a-colorful-terminal-console/colors-talk-a-colorful-terminal-console-2.jpg" alt="The default Xfce4 Terminal on FreeBSD (sh csh)" caption="The default Xfce4 Terminal on FreeBSD (sh csh)" >}}
+{{< figure src="/blog/colors-talk-a-colorful-terminal-console/colors-talk-a-colorful-terminal-console-2.webp" alt="The default Xfce4 Terminal on FreeBSD (sh csh)" caption="The default Xfce4 Terminal on FreeBSD (sh csh)" >}}
 
 When I've migrated from __Funtoo__ to [FreeBSD](http://www.freebsd.org), the one thing that I've missed so badly was its colorful terminal. The nice thing about these colors is taht they always give you some valuable hints, e.g., currently you're __root__ user or a regular user, the file is a symlink (Symbolic link), executable or just a regular file.
 

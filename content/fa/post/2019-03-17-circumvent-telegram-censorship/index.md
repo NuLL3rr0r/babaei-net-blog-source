@@ -6,7 +6,7 @@ tags = [ "Censorship", "Iran", "Islamic Republic Of Iran", "REST", "RESTful", "T
 toc = true
 +++
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-logo.png" alt="تلگرام" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-logo.webp" alt="تلگرام" >}}
 
  حاج آقا عندالموءمنین می فرمایند: "[فی الواقع](https://twitter.com/hashtag/%D9%81%DB%8C_%D8%A7%D9%84%D9%88%D8%A7%D9%82%D8%B9?src=hash)، به تعداد آدم‌ها راه هست برای دور زدن فیلترینگ تلگرام."
 
@@ -14,7 +14,7 @@ toc = true
 
 با وجود این که پیش از این هیچ آشنائی قبلی با طراحی و پیاده سازی بات های تلگرام نداشتم (جز این که احتمالا تلگرام برای دسترسی عمومی به سرویس خود یک API به شکل RESTful یا WebSocket عرضه نموده)، در همان بازه زمانی با بررسی مستندات رسمی تلگرام، خوشبختانه خیلی سریع و در عرض یکی دو ساعت موفق شدم راهی را برای فائق آمدن بر مشکلات یاد شده پیدا کنم: ایجاد و برنامه نویسی یک بات که بتوان با افزودن به گروه های مورد نظر بدون نیاز به قندشکن و نرم افزارهای مشابه فایل ها را محدود به حداکثر سرعت آپلود، ارسال نمود. فی الواقع اصلا فکر نمی کردم ایجاد بات و استفاده از API تلگرام تا بدین حد ساده باشد. [این مطلب را هم قصد داشتم در همان زمان منتشر کنم](https://github.com/NuLL3rr0r/babaei-net-blog-source/commit/00fec16e67dc051c354d50ea5dbb410865848621) تا شاید برای اکثر افراد مفید واقع شود که متاسفانه به دلایلی همچون مشغله زیاد تا این لحظه اتفاق نیافتاد. این بات به خوبی جوابش را پس داده و پس از ماه ها استفاده هنوز هم قابل اتکا بوده و به خوبی کار می کند.
 
-{{< figure src="/blog/circumvent-telegram-censorship/real-world-sos-use-case-tweet.png" alt="ارسال پیام توسط دود با استفاده از روش سرخ پوست ها جهت دور زدن فیلترینگ تلگرام" caption="ارسال پیام توسط دود با استفاده از روش سرخ پوست ها جهت دور زدن فیلترینگ تلگرام" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/real-world-sos-use-case-tweet.webp" alt="ارسال پیام توسط دود با استفاده از روش سرخ پوست ها جهت دور زدن فیلترینگ تلگرام" caption="ارسال پیام توسط دود با استفاده از روش سرخ پوست ها جهت دور زدن فیلترینگ تلگرام" >}}
 
 در ادامه این مطلب نه تنها نحوه ایجاد چنین ابزاری را خواهیم آموخت، بلکه کد این ابزار جهت استفاده در اختیار شما قرار می گیرد تا بدون نیاز به دانش برنامه نویسی بتوانید آن را راه اندازی کنید. با وجود به اشتراک گذاشتن تمامی کدها، از آنجائی که ممکن است برخی از افراد تمایلی به یادگیری نحوه کد نویسی بات ها در تلگرام نداشته باشند، از توضیح کد خودداری نموده تا ارائه مطلب برای طیف بیشتری از افراد ساده و قابل درک بماند. البته این به آن معنی نیست که هیچ گونه دانشی جهت راه اندازی این بات نیاز نخواهد بود. در واقع فرض بر این است که مخاطب این راهنما، یک کاربر متوسط کامیپوتر خواهد بود.
 
@@ -72,33 +72,33 @@ toc = true
 
 ۱. ابتدا در نرم افزار تلگرام (تفاوتی میان نسخه PC، موبایل یا وب وجود ندارد) با استفاده از قابلیت جستجو BotFather را پیدا نمائید.
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-search.png" alt="یافتن BotFather در تلگرام" caption="یافتن BotFather در تلگرام" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-search.webp" alt="یافتن BotFather در تلگرام" caption="یافتن BotFather در تلگرام" >}}
 
 ۲. BotFather ابزار رسمی تلگرام برای ساخت و مدیریت بات ها می باشد. چنانچه قبلا از این بات استفاده ننموده اید، با اطلاعات ذیل مواجه خواهید شد. جهت شروع استفاده بر روی دکمه استارت کلیک یا تپ نمائید.
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-start.png" alt="شروع استفاده از BotFather" caption="شروع استفاده از BotFather" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-start.webp" alt="شروع استفاده از BotFather" caption="شروع استفاده از BotFather" >}}
 
 ۳. همانطور که در تصویر بالا مشاهده می کنید. برای ایجاد یک بات جدید به دستور newbot احتیاج داریم. بر روی این دستور کلیک نموده یا آن را تایپ و سپس ارسال نمائید. پس از ارسال این دستور BotFather از شما می خواهد نامی را برای بات خود تعیین نمائید (فارسی یا انگلیسی تفاوتی ندارد و حق استفاده از هر کاراکتری را دارید، در واقع این نامی است که نمایش داده می شود و با نام کاربری متفاوت است)؛ و پس از آن نام کاربری مورد نظر برای بات را (فقط کاراکتر های A تا Z، کوچک یا بزرگ تفاوتی ندارد؛ اعداد ۰ تا ۹؛ و در نهایت کاراکتر Underscore. دقت نمائید که حق استفاده از کاراکتر فاصله را ندارید).
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-newbot.png" alt="دستور newbot" caption="دستور newbot" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-newbot.webp" alt="دستور newbot" caption="دستور newbot" >}}
 
 همانطور که در تصویر فوق مشاهده می شود، مهمترین چیزی که پس از تکمیل دستور newbot در اختیار شما قرار می گیرد HTTP API Access Token می باشد. که در مثال ما <code>766664963:AAHPXGLPzdGXrtMiqL1bGbQwglhsjDJEafI</code> می باشد. در واقع هر فردی که این Access Token را در اختیار داشته باشد می تواند کنترل بات را به دست بگیرد. پس، آن را در جای امنی نگهداری و با هیچ کس به اشتراک نگذارید.
 
 ۴. سپس جهت درج توضیحات تکمیلی برای بات مورد نظرتان، دستور setdescription را وارد نمائید. چنانچه می خواهید سایر کاربران تلگرام از انگیزه و کاربرد بات شما مطلع شوند از دستور setabouttext استفاده نمائید. اگر بیش از یک بات در اختیار دارید، پس از ارسال هریک از دستورات فوق BotFather از شما می خواهد که بات مورد نظرتان را جهت افزودن توضیحات تکمیلی انتخاب نمائید.
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setdescription-setabouttext.png" alt="دستورات setdescription و setabouttext" caption="دستورات setdescription و setabouttext" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setdescription-setabouttext.webp" alt="دستورات setdescription و setabouttext" caption="دستورات setdescription و setabouttext" >}}
 
 ۵. در نهایت جهت تعیین تصویر کاربری برای باتی که ایجاد نموده اید، از دستور setuserpic استفاده نمائید. مانند دستورات قبلی چنانچه بیش از یک بات در اختیار دارید، ابتدا بات جدید را انتخاب و سپس تصویری را از گالری یا هارد درایو کامپیوترتان انتخاب و آپلود نمائید.
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setuserpic.png" alt="دستور setuserpic" caption="دستور setuserpic" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setuserpic.webp" alt="دستور setuserpic" caption="دستور setuserpic" >}}
 
 ۶. در ادامه، نیاز داریم که مطمئن شویم بات جدید قابلیت افزوده شدن به گروه ها را دارد. بدین منظور دستور setjoingroups را صادر می نمائیم.
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setjoingroups.png" alt="دستور setjoingroups" caption="دستور setjoingroups" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setjoingroups.webp" alt="دستور setjoingroups" caption="دستور setjoingroups" >}}
 
 ۷. در مرحله آخر با استفاده از دستور setprivacy به بات جدید اجازه دسترسی به پیام های داخل گروه را خواهیم داد. از این به بعد هر پیام جدیدی که توسط اعضای گروه ارسال شود به بات اطلاع داده شده و مخابره خواهد شد. چنانچه فقط قصد ارسال فایل، تصویر، ویدیو یا پیام را دارید و قصد خواندن پیام ها توسط بات را ندارید می توانید وضعیت Privacy را در حالت Enabled قرار دهید. در این حالت، کماکان قابلیت افزودن بات به گروه ها و ارسال هر گونه فایل یا پیامی را خواهید داشت، اما بات فقط زمانی به محتوای پیام ها دسترسی خواهد داشت که پیام با کاراکتر <code>/</code> شروع شده باشد یا اینکه یکی از اعضای گروه در پیام مربوطه نام بات را با استفاده از <code>@</code> به اصطلاح ذکر یا Mention نماید. جهت تکمیل این مقاله آموزشی ما این قابلیت را در وضعیت Disabled قرار می دهیم تا بات بدون محدودیت به تمامی پیام ها دسترسی داشته باشد.
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setprivacy.png" alt="دستور setprivacy" caption="دستور setprivacy" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-father-setprivacy.webp" alt="دستور setprivacy" caption="دستور setprivacy" >}}
 
 بسیار عالی! هم اکنون بات ما آماده افزوده شدن به گروه های تلگرام می باشد.
 
@@ -106,19 +106,19 @@ toc = true
 
 افزودن بات به گروه های تلگرام مانند افزودن یک کاربر عادی از طریق کادر Add Members صورت می گیرد. به این منظور نام کاربری بات را بدون فاصله پس از کاراکتر <code>@</code> در کادر جستجو وارد نمائید. ممکن است پیدا کردن بات چند لحظه ای زمان ببرد، پس صبور باشید.
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-add-bot-to-group.png" alt="افزودن بات به یک گروه تلگرام از طریق کادر Add Members" caption="افزودن بات به یک گروه تلگرام از طریق کادر Add Members" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-add-bot-to-group.webp" alt="افزودن بات به یک گروه تلگرام از طریق کادر Add Members" caption="افزودن بات به یک گروه تلگرام از طریق کادر Add Members" >}}
 
 با افزودن بات به گروه از طریق دکمه INVITE، پیام افزوده شدن موفقیت آمیز بات به گروه توسط تلگرام به شما اعلام می شود:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-add-bot-to-group-confirmation-log.png" alt="افزوده شدن موفقیت آمیز بات به گروه" caption="افزوده شدن موفقیت آمیز بات به گروه" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-add-bot-to-group-confirmation-log.webp" alt="افزوده شدن موفقیت آمیز بات به گروه" caption="افزوده شدن موفقیت آمیز بات به گروه" >}}
 
 علاوه بر این، پس از افزودن بات در قسمت اطلاعات گروه می توانید بات را در میان اعضای گروه مشاهده نمائید. همچنین در تلگرام اندروید یا Telegram X می توان سطح دسترسی بات به پیام ها را مشاهده نمود:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-desktop-group-info.png" alt="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه دسکتاپ" caption="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه دسکتاپ" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-desktop-group-info.webp" alt="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه دسکتاپ" caption="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه دسکتاپ" >}}
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-x-android-group-info.png" alt="صفحه اطلاعات گروه پس از افزودن بات در تلگرام X نسخه اندروید" caption="صفحه اطلاعات گروه پس از افزودن بات در تلگرام X نسخه اندروید" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-x-android-group-info.webp" alt="صفحه اطلاعات گروه پس از افزودن بات در تلگرام X نسخه اندروید" caption="صفحه اطلاعات گروه پس از افزودن بات در تلگرام X نسخه اندروید" >}}
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-android-group-info.png" alt="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه اندروید" caption="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه اندروید" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-android-group-info.webp" alt="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه اندروید" caption="صفحه اطلاعات گروه پس از افزودن بات در تلگرام نسخه اندروید" >}}
 
 در نظر داشته باشید که بات دوم با نام Le bot uploader در تمامی تصاویر بالا یک بات مجزاست که قبلا در گروه اضافه شده و ربطی به بات فعلی ندارد. در یک گروه محدودیتی برای افزودن بات های متعدد، جز حداکثر تعداد اعضا وجود ندارد.
 
@@ -138,9 +138,9 @@ git clone https://gitlab.com/NuLL3rr0r/telegram-seditious-bot.git
 
 در غیر اینصورت با مراجعه به [Repository گیت هاب](https://github.com/NuLL3rr0r/telegram-seditious-bot) و یا [Repository گیت لب](https://gitlab.com/NuLL3rr0r/telegram-seditious-bot) اقدام به دریافت سورس کد بات در قالب یک فایل فشرده (فرمت zip برای GitHub و یا یکی از فرمت های zip, tar, tar.gz, tar.bz2 برای GitLab) نمائید:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-seditious-bot-github-source-code.png" alt="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitHub" caption="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitHub" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-seditious-bot-github-source-code.webp" alt="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitHub" caption="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitHub" >}}
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-seditious-bot-gitlab-source-code.png" alt="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitLab" caption="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitLab" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-seditious-bot-gitlab-source-code.webp" alt="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitLab" caption="دریافت فایل فشرده سورس کد Telegram Seditious Bot از GitLab" >}}
 
 پس از دانلود، فایل را از حالت فشرده خارج سازید. در بخش بعدی نحوه تنظیم بات و افزودن آن به گروه های تلگرام را خواهیم آموخت.
 
@@ -230,7 +230,7 @@ https://api.telegram.org/bot766664963:AAHPXGLPzdGXrtMiqL1bGbQwglhsjDJEafI/getUpd
 
 به نظر می رسد که بات کار می کند! به منظور بهینه سازی مصرف پهنای باند، سرور تلگرام پاسخ های بازگشتی را با از بین بردن فضاهای خالی شامل Space, Tab, NewLine، به اصطلاح Uglify می نماید که خوانائی آن برای انسان را پائین می آورد. خوشبختانه، مرورگر فایرفاکس اطلاعات برگشتی از سرور تلگرام به شکل JSON را تشخیص داده و از طریق یک رابط کاربری مناسب، اطلاعات را در قالبی که برای آدمیزاد خوانا باشد در اختیارتان قرار می دهد:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-api-get-updates-result.png" alt="رابط کاربری فایرفاکس برای اطلاعات JSON با خوانائی بهتر" caption="رابط کاربری فایرفاکس برای اطلاعات JSON با خوانائی بهتر" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-api-get-updates-result.webp" alt="رابط کاربری فایرفاکس برای اطلاعات JSON با خوانائی بهتر" caption="رابط کاربری فایرفاکس برای اطلاعات JSON با خوانائی بهتر" >}}
 
 اگر به فایرفاکس دسترسی ندارید یا مرورگر شما JSON بازگشتی را به شکل Uglify شده نمایش می دهد می توانید عبارت JSON Beautifier را در موتور جستجوی خود وارد نمائید. با استفاده از ابزارهای رایگان آنلاین جهت Beautify نمودن JSON می توان اطلاعات فوق را به شکل ذیل با خوانائی بیشتر مطالعه نمود:
 
@@ -270,37 +270,37 @@ https://api.telegram.org/bot766664963:AAHPXGLPzdGXrtMiqL1bGbQwglhsjDJEafI/getUpd
 
 بسیار عالی، چنانچه بات جدید را به گروه مورد نظر افزوده باشید و تمامی تنظیمات به درستی انجام شده باشد، پس از مراجعه به آدرس اینترنتی که برای رابط کاربری مبتنی بر وب بات در نظر گرفته اید (در مثال ما <code>https://telegram.babaei.net</code>)، با صفحه ذیل مواجه خواهید شد:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-tools.png" alt="رابط کاربری مبتنی بر وب بات تلگرام" caption="رابط کاربری مبتنی بر وب بات تلگرام" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-tools.webp" alt="رابط کاربری مبتنی بر وب بات تلگرام" caption="رابط کاربری مبتنی بر وب بات تلگرام" >}}
 
 این رابط کاربری شامل ۳ ابزار می باشد. یکی از این ابزارها به شما قابلیت مشاهده آخرین پیام های موجود در گروه مورد نظرتان را می دهد:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-messages-p1.png" alt="مشاهده آخرین پیام ها با قابلیت پشتیبانی از زبان فارسی، چیدمان راست به چپ و ایموجی" caption="مشاهده آخرین پیام ها با قابلیت پشتیبانی از زبان فارسی، چیدمان راست به چپ و ایموجی" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-messages-p1.webp" alt="مشاهده آخرین پیام ها با قابلیت پشتیبانی از زبان فارسی، چیدمان راست به چپ و ایموجی" caption="مشاهده آخرین پیام ها با قابلیت پشتیبانی از زبان فارسی، چیدمان راست به چپ و ایموجی" >}}
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-messages-p2.png" alt="مشاهده عنوان فایل های مستندات، صوتی و تصویری ارسال شده" caption="مشاهده عنوان فایل های مستندات، صوتی و تصویری ارسال شده" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-messages-p2.webp" alt="مشاهده عنوان فایل های مستندات، صوتی و تصویری ارسال شده" caption="مشاهده عنوان فایل های مستندات، صوتی و تصویری ارسال شده" >}}
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-messages-p3.png" alt="نمایش پاسخ ها و پیام های فوروارد شده" caption="نمایش پاسخ ها و پیام های فوروارد شده" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-messages-p3.webp" alt="نمایش پاسخ ها و پیام های فوروارد شده" caption="نمایش پاسخ ها و پیام های فوروارد شده" >}}
 
 همانطور که در تصاویر فوق مشاهده می شود، قابلیت مشاهده تصاویر و پخش فایل های صوتی تصویری یا دریافت مستندات به دلیل نیاز به کد نویسی بیشتر در رابط کاربری تحت وب گنجانده نشده است. علاوه بر آن، مشخص نیست که کدام پاسخ در جواب به کدام پیام بوده است. توجه داشته باشید که این به معنی آن نیست که امکان افزودن این قابلیت ها وجود ندارد؛ بلکه، تمامی اطلاعات مورد نیاز در پاسخ بازگشتی از سوی سرور تلگرام برای افزودن قابلیت های فوق وجود دارد. تنها بایستی زمان بیشتری صرف نموده و این اطلاعات را از JSON بازگشتی استخراج نموده و در رابط کاربری نمایش داد که از حوصله نگارنده خارج بوده است. هر فردی با مختصری دانش برنامه نویسی و صرف زمان مناسب قادر به افزودن ویژگی های فوق خواهد بود.
 
 ابزار بعدی، ابزار ارسال پیام می باشد. با این ابزار قادر به ارسال پیام به گروه مورد نظر به زبان فارسی یا هر زبان دیگری خواهید بود:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-message.png" alt="امکان ارسال پیام با قابلیت پشتیبانی از زبان فارسی" caption="امکان ارسال پیام با قابلیت پشتیبانی از زبان فارسی" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-message.webp" alt="امکان ارسال پیام با قابلیت پشتیبانی از زبان فارسی" caption="امکان ارسال پیام با قابلیت پشتیبانی از زبان فارسی" >}}
 
 پس از ارسال موفقیت آمیز پیام، اعلان ارسال موفقیت آمیز پیام به شما نمایش داده خواهد شد:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-message-success.png" alt="اعلان ارسال موفقیت آمیز پیام" caption="اعلان ارسال موفقیت آمیز پیام" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-message-success.webp" alt="اعلان ارسال موفقیت آمیز پیام" caption="اعلان ارسال موفقیت آمیز پیام" >}}
 
 و در نهایت ابزار ارسال فایل مستندات، عکس، صوتی و تصویری با قابلیت درج عنوان به زبان فارسی یا هر زبان دیگر:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-video.png" alt="ارسال فایل مستندات، عکس، صوتی و تصویری با قابلیت درج عنوان به زبان فارسی" caption="ارسال فایل مستندات، عکس، صوتی و تصویری با قابلیت درج عنوان به زبان فارسی" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-video.webp" alt="ارسال فایل مستندات، عکس، صوتی و تصویری با قابلیت درج عنوان به زبان فارسی" caption="ارسال فایل مستندات، عکس، صوتی و تصویری با قابلیت درج عنوان به زبان فارسی" >}}
 
 پس از انتخاب نوع فایل، مسیر فایل از هارد کامپیوترتان و درج عنوان، چنانچه فایل با موفقیت ارسال شود با اعلان ذیل مواجه خواهید شد:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-video-success.png" alt="اعلان ارسال موفقیت آمیز فایل مستندات، عکس، صوتی و تصویری" caption="اعلان ارسال موفقیت آمیز فایل مستندات، عکس، صوتی و تصویری" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-latest-send-video-success.webp" alt="اعلان ارسال موفقیت آمیز فایل مستندات، عکس، صوتی و تصویری" caption="اعلان ارسال موفقیت آمیز فایل مستندات، عکس، صوتی و تصویری" >}}
 
 در ادامه نمونه پیام و فایل ارسالی از رابط کاربری مبتنی بر وب توسط بات را درون نرم افزار تلگرام مشاهده می نمائید:
 
-{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-sent-content.png" alt="نمونه پیام و فایل ارسالی از رابط کاربری مبتنی بر وب توسط بات به تلگرام" caption="نمونه پیام و فایل ارسالی از رابط کاربری مبتنی بر وب توسط بات به تلگرام" >}}
+{{< figure src="/blog/circumvent-telegram-censorship/telegram-bot-webui-sent-content.webp" alt="نمونه پیام و فایل ارسالی از رابط کاربری مبتنی بر وب توسط بات به تلگرام" caption="نمونه پیام و فایل ارسالی از رابط کاربری مبتنی بر وب توسط بات به تلگرام" >}}
 
 ## ایمن سازی رابط کاربری مبتنی بر وب
 

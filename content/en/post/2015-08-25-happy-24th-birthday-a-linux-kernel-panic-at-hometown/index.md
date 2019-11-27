@@ -6,7 +6,7 @@ tags = [ "Crash", "FLOSS", "FOSS", "FreeBSD", "GNU", "Kernel Panic", "Linux", "U
 aliases = [ "/blog/2015/08/25/happy-24th-birthday-a-linux-kernel-panic-at-hometown/" ]
 +++
 
-{{< figure src="/blog/happy-24th-birthday-a-linux-kernel-panic-at-hometown/happy-24th-birthday-a-linux-kernel-panic-at-hometown.jpg" link="/blog/happy-24th-birthday-a-linux-kernel-panic-at-hometown/happy-24th-birthday-a-linux-kernel-panic-at-hometown-hq.jpg" alt="A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)" caption="A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)" >}}
+{{< figure src="/blog/happy-24th-birthday-a-linux-kernel-panic-at-hometown/happy-24th-birthday-a-linux-kernel-panic-at-hometown.webp" link="/blog/happy-24th-birthday-a-linux-kernel-panic-at-hometown/happy-24th-birthday-a-linux-kernel-panic-at-hometown-hq.webp" alt="A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)" caption="A Linux kernel panic on tram 7B at its hometown, Helsinki (Click to enlarge)" >}}
 
 Undeniably, flaming has been around since the dawn of the Internet age. And even worse, it has been on the rise ever since. Gazillions of flame wars on websites such as [Slashdot](http://slashdot.org) or [Reddit](https://www.reddit.com/) surely is enough proof, the greatest of which is the perennial debates between users of competing operating systems. 
 

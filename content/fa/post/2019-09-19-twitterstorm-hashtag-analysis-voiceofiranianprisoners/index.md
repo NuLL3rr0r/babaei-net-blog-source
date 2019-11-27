@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #VoiceOfIranianPrisoners آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #VoiceOfIranianPrisoners آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #VoiceOfIranianPrisoners آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #VoiceOfIranianPrisoners آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#VoiceOfIranianPrisoners](https://twitter.com/hashtag/VoiceOfIranianPrisoners?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #VoiceOfIranianPrisoners
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #VoiceOfIranianPrisoners" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #VoiceOfIranianPrisoners" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #VoiceOfIranianPrisoners" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #VoiceOfIranianPrisoners" >}}
 
 1. [#VoiceOfIranianPrisoners](https://twitter.com/hashtag/VoiceOfIranianPrisoners?src=hash)
 2. [#هپکو](https://twitter.com/hashtag/هپکو?src=hash)
@@ -127,7 +127,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#VoiceOfIranianPrisoners](https://twitter.com/hashtag/VoiceOfIranianPrisoners?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #VoiceOfIranianPrisoners" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #VoiceOfIranianPrisoners" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #VoiceOfIranianPrisoners" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #VoiceOfIranianPrisoners" >}}
 
 1. [@night_watch0](https://twitter.com/night_watch0)
 2. [@Hashshaashin](https://twitter.com/Hashshaashin)
@@ -234,7 +234,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#VoiceOfIranianPrisoners](https://twitter.com/hashtag/VoiceOfIranianPrisoners?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #VoiceOfIranianPrisoners با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #VoiceOfIranianPrisoners با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #VoiceOfIranianPrisoners با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #VoiceOfIranianPrisoners با بیشترین تعداد توییت" >}}
 
 1. [@Maryam05236104](https://twitter.com/Maryam05236104)
 2. [@Shn587](https://twitter.com/Shn587)
@@ -341,8 +341,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#VoiceOfIranianPrisoners](https://twitter.com/hashtag/VoiceOfIranianPrisoners?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#VoiceOfIranianPrisoners](https://twitter.com/hashtag/VoiceOfIranianPrisoners?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-voiceofiranianprisoners/voiceofiranianprisoners-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #VoiceOfIranianPrisoners، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

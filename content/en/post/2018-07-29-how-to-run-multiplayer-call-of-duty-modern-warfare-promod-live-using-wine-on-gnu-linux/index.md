@@ -5,7 +5,7 @@ date = 2018-07-29T18:39:00+04:30
 tags = [ "COD4", "Emulation", "FLOSS", "FOSS", "Games", "GNU", "Linux", "Multiplayer", "Promod", "Promod LIVE", "UE4", "Unreal Engine", "VMWare", "Wine" ]
 +++
 
-{{< figure src="/blog/how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux/call-of-duty-modern-warfare.jpg" alt="Call of Duty 4: Modern Warfare" caption="Call of Duty 4: Modern Warfare" >}}
+{{< figure src="/blog/how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux/call-of-duty-modern-warfare.webp" alt="Call of Duty 4: Modern Warfare" caption="Call of Duty 4: Modern Warfare" >}}
 
 Well, I haven't played a multiplayer game in ages until recently, when my cool boss announced regular playtimes for all the employees in our company as a group activity in order to put the fun back into work. Since I'm a die-hard [COD4](https://www.callofduty.com/) fan and I used to play [Promod LIVE](https://promod.github.io/) heavily with colleagues and friends, I proposed Call of Duty 4: Promod LIVE 220 which happened to be favored by everybody; except there was one issue: everyone uses Microsoft Windows while I'm developing [UE4](https://unrealengine.com/) games on a single-boot [Funtoo Linux](https://funtoo.org/) system.
 

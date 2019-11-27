@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-caspianseasellout-twitterstorms-hashtags-analysis.jpg" alt="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #برای_کاسپین_بپاخیز و #CaspianSeaSellOut آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #برای_کاسپین_بپاخیز و #CaspianSeaSellOut آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-caspianseasellout-twitterstorms-hashtags-analysis.webp" alt="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #برای_کاسپین_بپاخیز و #CaspianSeaSellOut آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌های طوفان‌ توییتری و شبکه‌ هشتگ‌های #برای_کاسپین_بپاخیز و #CaspianSeaSellOut آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان‌های توییتری و شبکه هشتگ‌های [#برای_کاسپین_بپاخیز](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash) و [#CaspianSeaSellOut](https://twitter.com/hashtag/CaspianSeaSellOut?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -26,7 +26,7 @@ toc = true
 
 ۵۰ کاربر برجسته شبکه هشتگ [#برای_کاسپین_بپاخیز](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-twitterstorm-hashtag-analysis-popular-accounts.png" alt="کاربران برجسته در شبکه هشتگ #برای_کاسپین_بپاخیز" title="کاربران برجسته در شبکه هشتگ #برای_کاسپین_بپاخیز" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-twitterstorm-hashtag-analysis-popular-accounts.webp" alt="کاربران برجسته در شبکه هشتگ #برای_کاسپین_بپاخیز" title="کاربران برجسته در شبکه هشتگ #برای_کاسپین_بپاخیز" >}}
 
 1. [@PahlaviReza](https://twitter.com/PahlaviReza)
 2. [@Hashshaashin](https://twitter.com/Hashshaashin)
@@ -83,7 +83,7 @@ toc = true
 
 ۵۰ کاربر برجسته شبکه هشتگ [#CaspianSeaSellOut](https://twitter.com/hashtag/CaspianSeaSellOut?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-twitterstorm-hashtag-analysis-popular-accounts.png" alt="کاربران برجسته در شبکه هشتگ #CaspianSeaSellOut" title="کاربران برجسته در شبکه هشتگ #CaspianSeaSellOut" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-twitterstorm-hashtag-analysis-popular-accounts.webp" alt="کاربران برجسته در شبکه هشتگ #CaspianSeaSellOut" title="کاربران برجسته در شبکه هشتگ #CaspianSeaSellOut" >}}
 
 1. [@patrick_jane77](https://twitter.com/patrick_jane77)
 2. [@HamediEbrahim](https://twitter.com/HamediEbrahim)
@@ -140,7 +140,7 @@ toc = true
 
 ۵۰ کاربر ترند کننده شبکه هشتگ  [#برای_کاسپین_بپاخیز](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #برای_کاسپین_بپاخیز با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #برای_کاسپین_بپاخیز با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-twitterstorm-hashtag-analysis-accounts-with-most-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #برای_کاسپین_بپاخیز با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #برای_کاسپین_بپاخیز با بیشترین تعداد توییت" >}}
 
 1. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 2. [@am70561791](https://twitter.com/am70561791)
@@ -197,7 +197,7 @@ toc = true
 
 ۵۰ کاربر ترند کننده شبکه هشتگ  [#CaspianSeaSellOut](https://twitter.com/hashtag/CaspianSeaSellOut?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #CaspianSeaSellOut با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #CaspianSeaSellOut با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-twitterstorm-hashtag-analysis-accounts-with-most-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #CaspianSeaSellOut با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #CaspianSeaSellOut با بیشترین تعداد توییت" >}}
 
 1. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 2. [@garshasp7](https://twitter.com/garshasp7)
@@ -254,16 +254,16 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ [#برای_کاسپین_بپاخیز](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#برای_کاسپین_بپاخیز](https://twitter.com/hashtag/%D8%A8%D8%B1%D8%A7%DB%8C_%DA%A9%D8%A7%D8%B3%D9%BE%DB%8C%D9%86_%D8%A8%D9%BE%D8%A7%D8%AE%DB%8C%D8%B2?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/baraye-caspian-bepakhiz-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #برای_کاسپین_بپاخیز، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ [#CaspianSeaSellOut](https://twitter.com/hashtag/CaspianSeaSellOut?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#CaspianSeaSellOut](https://twitter.com/hashtag/CaspianSeaSellOut?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-baraye-caspian-bepakhiz-caspianseasellout/caspianseasellout-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #CaspianSeaSellOut، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

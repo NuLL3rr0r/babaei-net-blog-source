@@ -8,7 +8,7 @@ aliases = [ "/blog/2016/01/22/there-and-back-again/" ]
 
 خب، تا اونجائی که من خاطرم هست فکر می کنم آخرین پستی که من توی بلاگ فارسی ام نوشتم 6 یا 7 سال پیش بوده. در واقع در اون زمان ابدا وبلاگی وجود نداشت و من یک وب سایت خیلی ساده داشتم متشکل از چند تا صفحه که با [زبان برنامه نویسی Perl](https://github.com/NuLL3rr0r/babaei-net-in-perl) نوشته شده بود. یکی از اون صفحات صفحه مختص مقالات بود که بازدید کننده ها می تونستن پست های این وبلاگ رو در قالب فایل های نرم افزار [Macromedia FlashPaper](https://www.adobe.com/support/flashpaper/) دریافت و مطالعه کنند. 
 
-{{< figure src="/blog/there-and-back-again/babaei-net-website-in-perl.png" alt="وب سایت قدیمی من نوشته شده در Perl" caption="وب سایت قدیمی من نوشته شده در Perl" >}}
+{{< figure src="/blog/there-and-back-again/babaei-net-website-in-perl.webp" alt="وب سایت قدیمی من نوشته شده در Perl" caption="وب سایت قدیمی من نوشته شده در Perl" >}}
 
 پس از آشنائی من با مفهوم [Static Generator ها](https://www.staticgen.com/) در نهایت تصمیم گرفتم که تمامی مقالات رو با صرف مقداری زمان تبدیل کنم به [پست های Octopress در قالب  Markdown](https://github.com/NuLL3rr0r/babaei-net-blog-source/tree/octopress-v2)  که برای اولین بار لذت فوق العاده وبلاگ نویسی رو با این نرم افزار تجربه کردم و بعدها با [مهاجرت به Hexo که وبلاگ فعلی هست](https://github.com/NuLL3rr0r/babaei-net-blog-source/tree/hexo-v3). در تمامی این مدت من هر از چندگاهی مقاله ای در[ دیگر وبلاگم به زبان انگلیسی](http://www.babaei.net/) منتشر کردم که این اولین پست فارسی من در تمامی این دوران هستش.
 

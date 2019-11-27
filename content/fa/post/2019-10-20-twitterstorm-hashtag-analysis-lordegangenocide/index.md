@@ -6,7 +6,7 @@ tags = [ "AIDS", "Barandazan", "Barandazstorm", "Big Data", "HIV", "Iran", "Isla
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #LordeganGenocide آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #LordeganGenocide آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #LordeganGenocide آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #LordeganGenocide آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#LordeganGenocide](https://twitter.com/hashtag/LordeganGenocide?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #LordeganGenocide
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #LordeganGenocide" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #LordeganGenocide" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #LordeganGenocide" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #LordeganGenocide" >}}
 
 1. [#LordeganGenocide](https://twitter.com/hashtag/LordeganGenocide?src=hash)
 2. [#لردگان](https://twitter.com/hashtag/لردگان?src=hash)
@@ -127,7 +127,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#LordeganGenocide](https://twitter.com/hashtag/LordeganGenocide?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #LordeganGenocide" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #LordeganGenocide" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #LordeganGenocide" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #LordeganGenocide" >}}
 
 1. [@WHO](https://twitter.com/WHO)
 2. [@WHOEMRO](https://twitter.com/WHOEMRO)
@@ -234,7 +234,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#LordeganGenocide](https://twitter.com/hashtag/LordeganGenocide?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #LordeganGenocide با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #LordeganGenocide با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #LordeganGenocide با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #LordeganGenocide با بیشترین تعداد توییت" >}}
 
 1. [@MiramMiran](https://twitter.com/MiramMiran)
 2. [@pesarekourosh](https://twitter.com/pesarekourosh)
@@ -341,6 +341,6 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#LordeganGenocide](https://twitter.com/hashtag/LordeganGenocide?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-lordegangenocide/lordegangenocide-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #LordeganGenocide، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

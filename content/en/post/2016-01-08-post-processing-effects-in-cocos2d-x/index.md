@@ -6,7 +6,7 @@ tags = [ "C", "C++", "Cocos2d-x", "FLOSS", "FOSS", "Game Development", "Game Pro
 aliases = [ "/blog/2016/01/08/post-processing-effects-in-cocos2d-x/" ]
 +++
 
-{{< figure src="/blog/post-processing-effects-in-cocos2d-x/gray-black-and-white-shader.png" alt="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" caption="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" >}}
+{{< figure src="/blog/post-processing-effects-in-cocos2d-x/gray-black-and-white-shader.webp" alt="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" caption="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" >}}
 
 Despite the fact that [Cocos2d-x](http://cocos2d-x.org/) uses the [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/) for the shaders (in order to learn more about the language, please refer to: [OpenGL ES Shading Language v1.0 Spec](https://www.khronos.org/files/opengles_shading_language.pdf)) the engine does not provide an out-of-the-box API to apply post-processing effects to the whole game scene output at once.
 
@@ -18,7 +18,7 @@ OK, the code I provide here developed based on a combination of the solutions th
 
 So, back to our work, I did summarize the flow for the solution as in the following diagram:
 
-{{< figure src="/blog/post-processing-effects-in-cocos2d-x/post-processing-effects-in-cocos2d-x.png" alt="Picture B: Post-processing workflow diagram" caption="Picture B: Post-processing workflow diagram" >}}
+{{< figure src="/blog/post-processing-effects-in-cocos2d-x/post-processing-effects-in-cocos2d-x.webp" alt="Picture B: Post-processing workflow diagram" caption="Picture B: Post-processing workflow diagram" >}}
 
 From now on, in order to make life simpler and subsequently easier, we have to (re-)structure our game scene a bit according to the diagram above (picture B.). Although it’s self explanatory, let's explain what's happening here:
 
@@ -34,7 +34,7 @@ Let's make an example. First assume we want to create a color transition post-pr
 
 _1_. First, we create our main game layer according to the diagram that we'll call <code>gameLayer</code>:
 
-{{< figure src="/blog/post-processing-effects-in-cocos2d-x/cocos-2d-x-hello-world-game-scene.png" alt="Picture C: Cocos2d-x Hello World game scene which we move into gameLayer" caption="Picture C: Cocos2d-x Hello World game scene which we move into gameLayer" >}}
+{{< figure src="/blog/post-processing-effects-in-cocos2d-x/cocos-2d-x-hello-world-game-scene.webp" alt="Picture C: Cocos2d-x Hello World game scene which we move into gameLayer" caption="Picture C: Cocos2d-x Hello World game scene which we move into gameLayer" >}}
 
 _2_. Then, we create another layer on top of that which we call <code>colorPostProcessLayer</code> for the color transition effect. It gives us this:
 

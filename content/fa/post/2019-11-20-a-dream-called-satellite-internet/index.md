@@ -27,17 +27,17 @@ tags = [ "Barandazan", "Cybersecurity", "Free Internet For Iran", "Iran", "Iran 
 
 براساس مشخصات فنی دستگاه، سرعت دریافت اطلاعات حداکثر ۴۶۴۰ کیلوبیت یا به عبارتی ۵۸ کیلوبایت و سرعت ارسال دستگاه حداکثر ۴۴۸ کیلوبیت یا ۵۶ کیلوبایت خواهد بود.
 
-{{< figure src="/blog/a-dream-called-satellite-internet/explorer-510-bgan-satellite-terminal-specs.png" alt="مشخصات Explorer 510 BGAN Satellite Terminal" title="مشخصات Explorer 510 BGAN Satellite Terminal" >}}
+{{< figure src="/blog/a-dream-called-satellite-internet/explorer-510-bgan-satellite-terminal-specs.webp" alt="مشخصات Explorer 510 BGAN Satellite Terminal" title="مشخصات Explorer 510 BGAN Satellite Terminal" >}}
 
 قیمت دستگاه در ارزانترین حالت ممکن (با خرید به همراه سرویس از این شرکت) 2,145 دلار خواهد بود که برای مصرف کننده ایرانی بدون واسطه با احتساب دلار ۱۲,۰۰۰ تومانی در ارزانترین حالت ممکنه ۲۶ میلیون تومان و برای خرید بدون بسته اینترنتی حدودا ۲۹ میلیون تومان خواهد بود.
 
-{{< figure src="/blog/a-dream-called-satellite-internet/explorer-510-bgan-satellite-terminal-price.png" alt="قیمت Explorer 510 BGAN Satellite Terminal" title="قیمت Explorer 510 BGAN Satellite Terminal" >}}
+{{< figure src="/blog/a-dream-called-satellite-internet/explorer-510-bgan-satellite-terminal-price.webp" alt="قیمت Explorer 510 BGAN Satellite Terminal" title="قیمت Explorer 510 BGAN Satellite Terminal" >}}
 
 اگر از قیمت سرسام‌آور آن برآشفته شده‌اید بایستی عرض کنم که این قسمت خوب ماجراست. این شرکت برای بسته ۱۰۰ مگابایتی اینترنت ماهواره‌ای مبلغ 525 دلار یا به عبارتی ۶ میلیون و ۳۰۰ هزار تومان دریافت می‌نماید! اگر به سراغ بسته ۱.۲ گیگابایتی آن بروید بایستی 5,639 دلار یا به عبارتی حدودا ۶۸ میلیون تومان نا قابل برای کمی بیش‌تر از یک گیگابایت داده پرداخت نمایید!
 
-{{< figure src="/blog/a-dream-called-satellite-internet/satellite-internet-100mb-price.png" alt="قیمت ۱۰۰ مگابایت اینترنت ماهواره‌ای" title="قیمت ۱۰۰ مگابایت اینترنت ماهواره‌ای" >}}
+{{< figure src="/blog/a-dream-called-satellite-internet/satellite-internet-100mb-price.webp" alt="قیمت ۱۰۰ مگابایت اینترنت ماهواره‌ای" title="قیمت ۱۰۰ مگابایت اینترنت ماهواره‌ای" >}}
 
-{{< figure src="/blog/a-dream-called-satellite-internet/satellite-internet-1200mb-price.png" alt="قیمت ۱۲۰۰ مگابایت اینترنت ماهواره‌ای" title="قیمت ۱۲۰۰ مگابایت اینترنت ماهواره‌ای" >}}
+{{< figure src="/blog/a-dream-called-satellite-internet/satellite-internet-1200mb-price.webp" alt="قیمت ۱۲۰۰ مگابایت اینترنت ماهواره‌ای" title="قیمت ۱۲۰۰ مگابایت اینترنت ماهواره‌ای" >}}
 
 اما چرا این تکنولوژی آنقدر گران است؟
 

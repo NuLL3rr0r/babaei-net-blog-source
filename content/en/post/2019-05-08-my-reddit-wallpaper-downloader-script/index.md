@@ -6,7 +6,7 @@ tags = [ "FLOSS", "FOSS", "FreeBSD", "Funtoo", "Gentoo", "GNU", "i3", "i3wm", "L
 toc = true
 +++
 
-{{< figure src="/blog/my-reddit-wallpaper-downloader-script/i3wm-gruvbox-color-scheme-reddit-wallpaper.jpg" alt="My i3wm setup with amazing gruvbox color scheme and a wallpaper from Reddit" caption="i3wm setup with amazing gruvbox color scheme and a wallpaper from Reddit" >}}
+{{< figure src="/blog/my-reddit-wallpaper-downloader-script/i3wm-gruvbox-color-scheme-reddit-wallpaper.webp" alt="My i3wm setup with amazing gruvbox color scheme and a wallpaper from Reddit" caption="i3wm setup with amazing gruvbox color scheme and a wallpaper from Reddit" >}}
 
 **Update [2019/05/08]**: Many people have been asking for the wallpaper in the above screenshot. It is from [System Failure II, oil on canvas, 31x43” on r/Art](https://www.reddit.com/r/Art/comments/aqeq16/system_failure_ii_oil_on_canvas_31x43/).
 

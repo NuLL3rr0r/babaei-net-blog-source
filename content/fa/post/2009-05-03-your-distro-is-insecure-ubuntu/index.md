@@ -53,7 +53,7 @@ aliases = [ "/blog/2009/05/03/your-distro-is-insecure-ubuntu/" ]
 
 یکی از اولین ریسک های امنیتی که در حین نصب اوبونتو سریعا در ذهن نمایان می شود٬ خوانا نمودن شاخه home برای همگان می باشد: “The contents of your home directory will normally be visible to all users on the system” (یعنی: محتویات شاخه home شما در حالت عادی برای تمامی کاربران بر روی سیتم قابل رویت است) همان طور که در شکل ۱ نمایش داده شده است٬ “تنظیم نام های کاربری و کلمات عبور”.
 
-{{< figure src="/blog/your-distro-is-insecure-ubuntu/your-distro-is-insecure-ubuntu.jpg" alt="تصویر ۱: تنظیم نام های کاربری و کلمات عبور" caption="تصویر ۱: تنظیم نام های کاربری و کلمات عبور" >}}
+{{< figure src="/blog/your-distro-is-insecure-ubuntu/your-distro-is-insecure-ubuntu.webp" alt="تصویر ۱: تنظیم نام های کاربری و کلمات عبور" caption="تصویر ۱: تنظیم نام های کاربری و کلمات عبور" >}}
 
 آیا مجوزهای دسترسی به صورت پیش فرض باز هستند؟ ترجیجا به طرز پیچیده وعجیب و غریبی٬ از آن جا که پوشه به طرز وسیعی باز است٬ برنامه نصب سعی می کند با کدگذاری نمودن یک پوشه خصوصی حفره را پوشانده و برطرف نماید!
 

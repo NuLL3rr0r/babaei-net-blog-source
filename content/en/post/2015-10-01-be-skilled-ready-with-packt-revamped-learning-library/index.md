@@ -6,7 +6,7 @@ tags = [ "Advertising", "Packt Publishing" ]
 aliases = [ "/blog/2015/10/01/be-skilled-ready-with-packt-revamped-learning-library/" ]
 +++
 
-{{< figure src="/blog/be-skilled-ready-with-packt-revamped-learning-library/be-skilled-ready-with-packt-revamped-learning-library.png" alt="Be Skilled & Ready with Packt’s revamped learning library – over 3,000 titles for a whole year now just $100!" caption="Be Skilled & Ready with Packt’s revamped learning library – over 3,000 titles for a whole year now just $100!" >}}
+{{< figure src="/blog/be-skilled-ready-with-packt-revamped-learning-library/be-skilled-ready-with-packt-revamped-learning-library.webp" alt="Be Skilled & Ready with Packt’s revamped learning library – over 3,000 titles for a whole year now just $100!" caption="Be Skilled & Ready with Packt’s revamped learning library – over 3,000 titles for a whole year now just $100!" >}}
 
 **_With new features and our latest books and videos just for you, there’s no reason to stay behind when it comes to IT_**
 

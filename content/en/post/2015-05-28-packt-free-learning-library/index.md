@@ -8,7 +8,7 @@ aliases = [ "/blog/2015/05/28/packt-free-learning-library/" ]
 
 From 30th April, 2015 Packt Publishing has thrown open the virtual doors of its new Free Learning Library and offering its customers a daily chance to grab a fresh free eBook from its website. The publisher is encouraging people to learn new skills and try out new technologies and so every day it will be offering a different eBook from its huge list of titles free for anyone to download.
 
-{{< figure src="/blog/packt-free-learning-library/packt-free-learning-library.png" alt="Packt Free Learning Library - Every day Packt Publishing is giving away books for free to help teach new tech skills" caption="Packt Free Learning Library - Every day Packt Publishing is giving away books for free to help teach new tech skills" >}}
+{{< figure src="/blog/packt-free-learning-library/packt-free-learning-library.webp" alt="Packt Free Learning Library - Every day Packt Publishing is giving away books for free to help teach new tech skills" caption="Packt Free Learning Library - Every day Packt Publishing is giving away books for free to help teach new tech skills" >}}
 
 <!--more-->
 

@@ -6,7 +6,7 @@ tags = [ "Aenigma", "Allo", "Android", "Apple", "Assembly", "Barandazan", "Briar
 toc = true
 +++
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/cybersecurity-101-for-barandazan.jpg" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/cybersecurity-101-for-barandazan.webp" >}}
 
 از زمان عرضه تلگرام در سال ۲۰۱۳ تا کنون، این پیام رسان دائما در حال رشد و افزودن قابلیت های جدید بوده است تا آنجا که سازندگان تلگرام در مارس ۲۰۱۸ تعداد کاربران فعال این پیام رسان را ۲۰۰ میلیون نفر اعلام نمودند. ممکن است شما هم یکی از کاربران این پیام رسان باشید. چنان چه شما یک فعال حقوق بشر، فعال مدنی، فعال سیاسی، روزنامه نگار، و یا برانداز هستید و یا فعالیت هایی انجام می دهید که ممکن است شما را در صف مخالفان رژیم جمهوری اسلامی قرار دهد، احتمالا بهتر است که هر چه زودتر استفاده از این پیام رسان را متوقف نمایید!
 
@@ -43,13 +43,13 @@ toc = true
 
 از همان ابتدا به دلیل شیوع ویروس های کامپیوتری در محیط سیستم عامل داس، علاقه شدیدی به مقوله امنیت پیدا کردم تا آنجا که با انگیزه نوشتن یک ویروس کامپیوتری در دوران راهنمایی، برنامه نویسی [زبان اسمبلی](https://fa.wikipedia.org/wiki/%D8%B2%D8%A8%D8%A7%D9%86_%D8%A7%D8%B3%D9%85%D8%A8%D9%84%DB%8C) را یاد گرفتم. هر چند که کد اولین ویروسی که نوشتم را با از دست رفتن هاردیسکم از دست دادم، ولی هنوز هم [کد برنامه کوچکی که برای شکستن قفل یک نرم افزار آموزشی نوشته بودم](https://github.com/NuLL3rr0r/cloppy-floppy-clone) را می توان در [گیت هاب](https://fa.wikipedia.org/wiki/%DA%AF%DB%8C%D8%AA%E2%80%8C%D9%87%D8%A7%D8%A8) یا [گیت لب](https://fa.wikipedia.org/wiki/%DA%AF%DB%8C%D8%AA%E2%80%8C%D9%84%D8%A8) پیدا نمود. در نهایت، به عنوان یک نوجوان مشتاق در زمینه امنیت کامپیوتری، سال های نوجوانی و جوانی یا به خواندن کتاب PC Intern: System Programming: The Encyclopedia of DOS Programming Know-how و یا در گوشه و کنار وب فارسی، به کسب دانش در گروه ها و انجمن های خصوصی و خارج از دسترس عموم، یا در اصطلاح عامه، هکری گذشت.
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/slush-mikko-hermanni-hypponen-mamadou-babaei.jpg" alt="من در کنار میکوهایپونن کاشف اولین ویروس کامپیوتری و مدیر ارشد تحقیق شرکت ضدویروس اف سکیور - اسلاش ۲۰۱۴، هلسینکی، فنلاند" caption="من در کنار میکوهایپونن کاشف اولین ویروس کامپیوتری و مدیر ارشد تحقیق شرکت ضدویروس اف سکیور - اسلاش ۲۰۱۴، هلسینکی، فنلاند" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/slush-mikko-hermanni-hypponen-mamadou-babaei.webp" alt="من در کنار میکوهایپونن کاشف اولین ویروس کامپیوتری و مدیر ارشد تحقیق شرکت ضدویروس اف سکیور - اسلاش ۲۰۱۴، هلسینکی، فنلاند" caption="من در کنار میکوهایپونن کاشف اولین ویروس کامپیوتری و مدیر ارشد تحقیق شرکت ضدویروس اف سکیور - اسلاش ۲۰۱۴، هلسینکی، فنلاند" >}}
 
 قدیمی های وب فارسی، [اولین مجله تخصصی امنیت اطلاعات در ایران به نام اسنوپ](http://web.archive.org/web/20150402025335/http://www.snoopmag.net/archive.html) در زمینه امنیت دیجیتال را به خوبی به خاطر می آورند. هنوز هم [با کمی جستجو](https://www.google.com/search?q=مجله+تخصصی+امنیت+اطلاعات+اسنوپ) می توان شماره های مختلف این مجله را در گوشه و کنار وب فارسی یافت. به عنوان هیات تحریریه در شماره های ۲ و ۲.۵ این مجله، مقالاتی در زمینه امنیت تحت عنوان [مبهم سازی کد در .NET و Java](https://fa.babaei.net/blog/dotnet-java-code-obfuscation/) و [توزیع شما نا امن است: اوبونتو](https://fa.babaei.net/blog/your-distro-is-insecure-ubuntu/) منتشر نمودم. لازم به ذکر است که انتشار و بازخورد موفقیت آمیز این مجله، باعث معرفی آن در برنامه کلیک بی بی سی فارسی نیز شد.
 
 علاوه بر این ها، علاقه به مباحث امنیت در نوجوانی باعث جذب من به سیستم عامل های یونیکسی مانند [گنو/لینوکس](https://fa.wikipedia.org/wiki/%D8%A8%D8%AD%D8%AB_%D9%86%D8%A7%D9%85%E2%80%8C%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C_%DA%AF%D9%86%D9%88/%D9%84%DB%8C%D9%86%D9%88%DA%A9%D8%B3) و بعدها سیستم عامل [فری بی اس دی](https://fa.babaei.net//tags/freebsd/) (رجوع شود به مقالات نوشته شده توسط نگارنده: [تاریخچه FreeBSD](https://fa.babaei.net/blog/the-history-of-freebsd/) و [FreeBSD چیست؟ یک نمای کلی از سیستم عامل FreeBSD](https://fa.babaei.net/blog/what-is-freebsd-an-overview-of-freebsd-operating-system/) و [FreeBSD یا Linux مسئله این است؟](https://fa.babaei.net/blog/freebsd-vs-linux/)) شد.
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/slush-richard-matthew-stallman-mamadou-babaei.jpg" alt="من در کنار ریچارد استالمن بنیانگذار بنیاد نرم افزارهای آزاد و پروژه گنو - اسلاش ۲۰۱۴، هلسینکی، فنلاند" caption="من در کنار ریچارد استالمن بنیانگذار بنیاد نرم افزارهای آزاد و پروژه گنو - اسلاش ۲۰۱۴، هلسینکی، فنلاند" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/slush-richard-matthew-stallman-mamadou-babaei.webp" alt="من در کنار ریچارد استالمن بنیانگذار بنیاد نرم افزارهای آزاد و پروژه گنو - اسلاش ۲۰۱۴، هلسینکی، فنلاند" caption="من در کنار ریچارد استالمن بنیانگذار بنیاد نرم افزارهای آزاد و پروژه گنو - اسلاش ۲۰۱۴، هلسینکی، فنلاند" >}}
 
 با توجه به این که در حال حاضر یکی از طرفداران پر و پا قرص تکنولوژی های [متن باز](https://fa.wikipedia.org/wiki/%D9%85%D8%AA%D9%86%E2%80%8C%D8%A8%D8%A7%D8%B2) و یونیکسی می باشم،  از طریق [توسعه، پورت، و نگهداری چندین نرم افزار به عنوان بخشی از مجموعه پورت های رسمی FreeBSD](https://freebsd.org/cgi/ports.cgi?query=info%40babaei.net&stype=maintainer) در  [پروژه FreeBSD](https://freebsd.org/) مشارکت نموده ام. افرادی که با تیم توسعه FreeBSD و [دستورالعمل های امنیتی](https://www.freebsd.org/doc/en/books/porters-handbook/book.html#security) این سیستم عامل ایمن آشنایی دارند، خوب می دانند که به دلیل استفاده عمده این سیستم عامل در سرور (برای مثال پلتفرم محصولات شرکت های [واتس اپ](https://fa.wikipedia.org/wiki/%D9%88%D8%A7%D8%AA%D8%B3%E2%80%8C%D8%A7%D9%BE) و [نت فلیکس](https://fa.wikipedia.org/wiki/%D9%86%D8%AA%E2%80%8C%D9%81%D9%84%DB%8C%DA%A9%D8%B3) و ... بر پایه این سیستم عامل طراحی شده اند، جهت کسب اطلاعات بیشتر رجوع شود به مقالات فوق)، چنان چه پورت های شما از حداقل استانداردهای امنیتی برخوردار نباشند، توسط این پروژه پذیرفته نخواهند شد.
 
@@ -65,7 +65,7 @@ toc = true
 
 چیزی که آن را بدتر می نماید، در زمان دستگیری در نهادهای امنیتی در ایران نه تنها شما حق دسترسی به وکیل را نخواهید داشت بلکه اگر دستگاهی نظیر کامپیوتر، لپ تاپ، گوشی تلفن همراه، هارد درایو، و یا حتی اکانت ایمیل یا شبکه های اجتماعی از شما کشف شود، تفاوتی نخواهد داشت اگر پسورد شما <code>1</code> باشد یا <code>8799Nk209I90;y046mT23y7H.\0LB5|6362=288wA^y7618OS84q260!995$3o&H</code>؛ هیچ چیز شما را نجات نخواهد داد:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/xkcd-538-security.png" alt="امنیت - xkcd شماره ۵۳۸" caption="امنیت - xkcd شماره ۵۳۸" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/xkcd-538-security.webp" alt="امنیت - xkcd شماره ۵۳۸" caption="امنیت - xkcd شماره ۵۳۸" >}}
 
 {{< blockquote author="xkcd" link="https://xkcd.com/538/" title="امنیت - xkcd شماره ۵۳۸" >}}
 
@@ -99,7 +99,7 @@ toc = true
 از آنجایی که همیشه معتقد بوده ام با وجود تمام ضعف های جمهوری اسلامی، [رژیم هم در پروپاگاندای داخلی و هم خارجی همیشه موفق عمل کرده است](/blog/iri-regime-propaganda-reddit/) (بزودی بیشتر در این زمینه خواهم نوشت)، به منظور ایجاد یک صدای مستقل، پس از آزادی از زندان، ماموریت ساخت و عرضه یک بازی تحت عنوان [Gods Of Deceit یا خدایان فریب](https://gitlab.com/SeditiousGames/GodsOfDeceit) را اولویت اول ساعات فراغت خود قرار دادم. البته توسعه ایده اولیه مدتی طول کشید تا این که بلاخره در [سال روز مرگ دجال قرن و بنیانگذار فرقه تبهکار](https://gitlab.com/SeditiousGames/GodsOfDeceit/commit/7c20e11905abbb6df2cb839e31b75f57ef4dbbb6) با صرف هزینه های شخصی اقدام به کلیدزدن آغاز این پروژه در قالب یک برند ناشناس تحت عنوان [Seditious Games یا کمپانی بازی های فتنه گر](https://seditious.games/) نمودم. هر چند این نام ممکن است برای افراد دیگر بی معنی باشد، اما این نام برای من یادآور لقبی است که بازجوها به من تخصیص داده بودند. به دلیل مدل ریش دوران ویکتوریایی انتخابی و مورد علاقه ام، آن ها مرا تحت عنوان "انگلیسی فتنه گر" صدا می زدند. مطمئن نیستم که به عنوان یک سندرم آیا نامی برای آن
 ابداع شده است یا نه؛ واقعیت امر این نام را دوست داشتم و به نظرم برای یک کمپانی بازی سازی که ماموریت خنثی نمودن پروپاگاندای رژیم را سرلوحه کار خود قرار داده است نام بسیار مناسب و به جایی است.
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/mamadou_babaei.png" alt="ممدوو بابائی" caption="ممدوو بابائی" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/mamadou_babaei.webp" alt="ممدوو بابائی" caption="ممدوو بابائی" >}}
 
 با وجود این که اولویت اولم به پایان رساندن این پروژه بود، و با وجود آگاهی از ناامن بودن تلگرام، تا پیش از این هیچ وقت به ذهنم خطور نکرده بود که با توجه به شرایط بسیار بد فعلی، که سایه جنگ، فروپاشی داخلی و فقر کشور را تهدید می نماید، آموزش صحیح نکات پیشگیرانه در زمینه امنیت سایبری تا چه حد می تواند در حفظ حریم خصوصی و امنیت جانی سایر فعالان و براندازان اهمیت داشته باشد. شک ندارم با کوچکترین قیام و حرکت مردمی، بگیر و ببند های دسته جمعی فعالان حقوق بشر، مدنی، سیاسی، روزنامه نگاران و براندازان آغاز خواهد شد. به خصوص پس از [گفت و گوی اخیر ایران وایر با دو عضو بسیج در رابطه با اعدام آنی شهروندان به رسم دادگاهای صحرایی، در صورت آغاز قیام های مردمی](https://web.archive.org/web/20190626152541/https://iranwire.com/fa/features/31711):
 
@@ -229,7 +229,7 @@ Ciphertext: Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.
 
 اما برای درک بهتر مفهوم متادیتا در امنیت و ارتباطات دیجیتال، اجازه دهید [ابزار متن بازی تحت عنوان MIT Immersion جهت به نمایش گذاشتن ارزش و خطر متادیتاها در دانشگاه MIT توسعه داده شده و در اختیار عموم قرار گرفته است](https://immersion.media.mit.edu/) را معرفی نمایم. با صدور اجازه دسترسی توسط شما به صندوق پست الکترونیک تان، این ابزار بدون کاوش نمودن عنوان یا متن پیام ها، تنها با کاوش قسمت To, Cc و زمان دریافت یا ارسال آن ها، اقدام به ترسیم نقشه ارتباطات شما با دیگران می نماید:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/mit-immersion.png" alt="نمونه ای از متادیتای استخراج شده توسط MIT Immersion از یک صندوق پست الکترونیکی" caption="نمونه ای از متادیتای استخراج شده توسط MIT Immersion از یک صندوق پست الکترونیکی" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/mit-immersion.webp" alt="نمونه ای از متادیتای استخراج شده توسط MIT Immersion از یک صندوق پست الکترونیکی" caption="نمونه ای از متادیتای استخراج شده توسط MIT Immersion از یک صندوق پست الکترونیکی" >}}
 
 تصویر نمونه فوق که توسط این ابزار ترسیم شده است ممکن است برای بسیاری از افراد تداعی کننده چیز خاصی نباشد؛ اما، این تصویر حاصل کاوش و پردازش تعداد ۲۰,۸۴۹ پیام در صندوق پستی آقای [تونی استارک](https://fa.wikipedia.org/wiki/%D9%85%D8%B1%D8%AF_%D8%A2%D9%87%D9%86%DB%8C) و کشف روابط میان ۱۵۹ مشارکت کننده می باشد.
 
@@ -251,7 +251,7 @@ Ciphertext: Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.
 
 ## عدم رمزگذاری سر تا سر بصورت پیش فرض
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-secret-chats.png" alt="یک چت مخفی تلگرام که بصورت پیش فرض غیرفعال می باشد" caption="یک چت مخفی تلگرام که بصورت پیش فرض غیرفعال می باشد" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-secret-chats.webp" alt="یک چت مخفی تلگرام که بصورت پیش فرض غیرفعال می باشد" caption="یک چت مخفی تلگرام که بصورت پیش فرض غیرفعال می باشد" >}}
 
 یکی از قابلیت های بسیار خوب تلگرام در زمینه امنیت، [قابلیت Secret Chats یا چت های مخفی](https://telegram.org/faq#q-how-are-secret-chats-different) می باشد. متاسفانه [با ارائه چندین دلیل غیرمتقاعده کننده از سوی سازندگان تلگرام این قابلیت به صورت پیش فرض غیرفعال می باشد](https://telegram.org/faq#q-why-not-just-make-all-chats-secret). اجازه دهید جمله بندی ام را تغییر دهم:
 
@@ -259,11 +259,11 @@ Ciphertext: Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.
 
 مشکل دقیقا همین جاست! بسیاری از کاربران تلگرام به دلیل تبلیغات اشتباه آن، تصور می کنند که  ارتباطات و چت های آن ها کاملا رمزگذاری شده است، در حالی که این گونه نیست و آن ها نمی دانند برای این کار باید مراحل بیشتری را طی نموده و کارهای دیگری انجام دهند. در [صفحه آغازین وب سایت](https://telegram.org/) آن ها با وجود اشاره به: "پیام های تلگرام به شدت رمزگذاری می شوند و می توانند خود را از بین ببرند." هیچ اشاره ای به چت های مخفی نشده است!
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-privacy-claims.png" alt="تبلیغات حریم خصوصی و رمزگذاری در صفحه آغازین تلگرام" caption="تبلیغات حریم خصوصی و رمزگذاری در صفحه آغازین تلگرام" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-privacy-claims.webp" alt="تبلیغات حریم خصوصی و رمزگذاری در صفحه آغازین تلگرام" caption="تبلیغات حریم خصوصی و رمزگذاری در صفحه آغازین تلگرام" >}}
 
 این دقیقا همان چیزی است که آژانس و نهادهای های امنیتی و یا هکرها خواهند. در واقع امر، به دلیل عدم آشنایی عمده افراد به جزئیات فنی رمزنگاری و تکنولوژی پیام رسان ها، اکثریت کاربرانی که از این واقعیات و تنظیمات پیشگیرانه آگاهی ندارند - که تعدادشان ابدا هم کم نیست - آسیب پذیر خواهند بود. این برخلاف نظرات تقریبا تمامی متخصصان حوزه امنیت و رمزنگاری است. این در حالی است که [قسمت سوالات متداول تلگرام خود را امن تر از واتس اپ می داند](https://telegram.org/faq#q-how-secure-is-telegram):
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/whatsapp-chats-end-to-end-encryption.png" alt="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های واتس اپ" caption="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های واتس اپ" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/whatsapp-chats-end-to-end-encryption.webp" alt="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های واتس اپ" caption="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های واتس اپ" >}}
 
 راستش را بخواهید خیلی سعی کردم که مقایسه تلگرام و واتس اپ را با توجه به این نکته که تیم بازاریابی واتس اپ ابدا این محصول را به عنوان امن ترین پیام رسان ممکن تبلیغ نمی کنند، نادیده بگیرم. اما باید بگویم که واتس اپ در این زمینه از تلگرام بهتر عمل نموده است. حتی [نرم افزار لاین هم در سال ۲۰۱۶ به صورت پیش فرض این قابلیت را فعال نموده است](https://venturebeat.com/2016/06/30/ahead-of-ipo-mobile-messaging-giant-line-introduces-end-to-end-encryption-by-default/).
 
@@ -271,7 +271,7 @@ Ciphertext: Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.
 
 علاوه بر غیرفعال بودن پیش فرض قابلیت رمزگذاری سر تا سر در چت های فردی تلگرام، چت های گروهی تلگرام هیچ وقت از قابلیت رمزگذاری سر تا سر تا به امروز که حدودا شش سال از عرضه آن می گذرد، پشتیبانی ننموده است. و به نظر نمی رسد که هیچ گاه این قابلیت به تلگرام اضافه شود. این در حالی است که واتس اپ نه تنها از قابلیت رمزگذاری سر تا سر در چت های گروهی پشتیبانی می نماید، بلکه این قابلیت به صورت پیش فرض نیز فعال می باشد:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/whatsapp-groups-end-to-end-encryption.png" alt="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های گروهی واتس اپ" caption="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های گروهی واتس اپ" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/whatsapp-groups-end-to-end-encryption.webp" alt="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های گروهی واتس اپ" caption="پشتیبانی از رمزگذاری سر تا سر و فعال بودن پیش فرض آن در چت های گروهی واتس اپ" >}}
 
 ## عدم رمزگذاری سر تا سر در نسخ دسکتاپ و وب
 
@@ -329,19 +329,19 @@ Ciphertext: Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.
 
 چنان چه به [قسمت سوالات متداول برای کاربران فنی تر در وب سایت تلگرام](https://core.telegram.org/techfaq) (که کاملا به زبان انگلیسی است) مراجعه نمائید، در میان متن پرسش و پاسخ های این صفحه بسیار بلند، یک لینک فارسی در قسمت [شبکه‌های تحویل محتوا (CDN) رمزنگاری شده](https://core.telegram.org/techfaq#encrypted-cdns) خودنمایی می کند:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/encrypted-cdns-farsi-hyperlink.png" alt="لینک فارسی در قسمت شبکه‌های تحویل محتوا (CDN) رمزنگاری شده در وب سایت پیام رسان تلگرام" caption="لینک فارسی در قسمت شبکه‌های تحویل محتوا (CDN) رمزنگاری شده در وب سایت پیام رسان تلگرام" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/encrypted-cdns-farsi-hyperlink.webp" alt="لینک فارسی در قسمت شبکه‌های تحویل محتوا (CDN) رمزنگاری شده در وب سایت پیام رسان تلگرام" caption="لینک فارسی در قسمت شبکه‌های تحویل محتوا (CDN) رمزنگاری شده در وب سایت پیام رسان تلگرام" >}}
 
 وجود [تنها یک صفحه مستندات فارسی در وب سایت تلگرام](https://core.telegram.org/cdn/faq_ir) به همراه [یک پست به زبان فارسی از آقای پاول دورُف](https://core.telegram.org/cdn/faq_ir/durov) کمی عجیب به نظر می رسد. چرا فقط زبان فارسی و نه زبان دیگر؟ چرا فقط مستندات مربوط به "شبکه‌های تحویل محتوا رمزنگاری شده"؟
 
 احتمالا دلیل ارائه این بخش از مستندات به زبان فارسی و تاکید پاول دورُف در پست فارسی مبنی بر ایمن بودن شبکه‌های تحویل محتوای تلگرام، به تنش های متعدد ایجاد شده میان مسئولان جمهوری اسلامی در زمان وزارت محمود واعظی در سمت وزیر ارتباطات و فناوری اطلاعات باز می گردد، که برای مدتی در سر تیتر خبرها بود. یکی از تنش های ایجاد شده بر سر [انتقال سرور تلگرام به ایران](https://web.archive.org/web/20181027123225/https://www.radiofarda.com/a/f6_iran_telegram_vaezi/28648785.html) بود، که در نهایت با توافق های صورت گرفته منجر به [برپایی شبکه های تحویل محتوای تلگرام (نه سرور)](https://web.archive.org/web/20180507091908/http://www.bbc.com/persian/iran-40768971) در ایران شد. تا این که در نهایت [پاول دورُف با توییت نمودن یک پست در توییتر اقدام به شفاف سازی در این زمینه نمود](https://web.archive.org/web/20190703233106/https://twitter.com/durov/status/891640780774703105):
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-clickbait-telegram-servers-moved-iran-north-korea-mordor.png" alt="اگر تاکنون با یک تله کلیک با عنوان \"تلگرام سرورهای خود را به ایران / کره شمالی / موردور منتقل نموده\" مواجه شده اید، این را بخوانید" title="اگر تاکنون با یک تله کلیک با عنوان \"تلگرام سرورهای خود را به ایران / کره شمالی / موردور منتقل نموده\" مواجه شده اید، این را بخوانید" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-clickbait-telegram-servers-moved-iran-north-korea-mordor.webp" alt="اگر تاکنون با یک تله کلیک با عنوان \"تلگرام سرورهای خود را به ایران / کره شمالی / موردور منتقل نموده\" مواجه شده اید، این را بخوانید" title="اگر تاکنون با یک تله کلیک با عنوان \"تلگرام سرورهای خود را به ایران / کره شمالی / موردور منتقل نموده\" مواجه شده اید، این را بخوانید" >}}
 
 با وجود این که سرور های تلگرام به ایران منتقل نشد، موضوع انتقال شبکه های توزیع محتوا، کماکان مایه نگرانی فعالان حوزه اینترنت بوده است. برای مثال توجه شما را به صحبت های منعکس شده از [مهدی یحیی نژاد](https://twitter.com/mehdiy_fa) موسس [بالاترین](https://www.balatarin.com/) و [NetFreedom Pioneers](https://www.netfreedompioneers.org/) در این رابطه [در وب سایت AzerNews](https://www.azernews.az/region/117987.html) جلب می نمایم.
 
 به شخصه [کد منبع کلاینت های تلگرام](https://telegram.org/apps#source-code) را مطالعه ننموده ام. اما [بر اساس دیاگرام رسمی نحوه کارکرد شبکه های تحویل محتوای تلگرام](https://core.telegram.org/cdn#how-this-works)، این پیام رسان از شبکه های تحویل محتوا تنها به منظور ذخیره سازی فایل‌های کانال های عمومی با بیش از یک صد هزار عضو و دسترسی سریع تر کاربران به این فایل ها، استفاده می نماید. بر اساس این دیاگرام، هیچ گونه داده خصوصی بر روی شبکه های توزیع محتوا ذخیره نخواهد شد. همچنین این شبکه ها به کلیدهای رمزگشایی دسترسی ندارند. و در نهایت از [تابع Hash](https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%A8%D8%B9_%D8%AF%D8%B1%D9%87%D9%85%E2%80%8C%D8%B3%D8%A7%D8%B2_%D8%B1%D9%85%D8%B2%D9%86%DA%AF%D8%A7%D8%B1%D8%A7%D9%86%D9%87) به منظور تایید اصالت فایل ها استفاده می نمایند که امنیت قابل قبولی را مهیا می نماید:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-encrypted-cdn-workflow.jpg" alt="نحوه کارکرد شبکه های توزیع محتوای رمزگذاری شده تلگرام برای فایل های چندرسانه ای به اشتراک گذاشته شده در کانال های عمومی با بیش از یک صد هزار عضو" title="نحوه کارکرد شبکه های توزیع محتوای رمزگذاری شده تلگرام برای فایل های چندرسانه ای به اشتراک گذاشته شده در کانال های عمومی با بیش از یک صد هزار عضو" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-encrypted-cdn-workflow.webp" alt="نحوه کارکرد شبکه های توزیع محتوای رمزگذاری شده تلگرام برای فایل های چندرسانه ای به اشتراک گذاشته شده در کانال های عمومی با بیش از یک صد هزار عضو" title="نحوه کارکرد شبکه های توزیع محتوای رمزگذاری شده تلگرام برای فایل های چندرسانه ای به اشتراک گذاشته شده در کانال های عمومی با بیش از یک صد هزار عضو" >}}
 
 علیرغم تمامی تمهیدات امنیتی اندیشیده شده برای شبکه‌های تحویل محتوای تلگرام، هنوز یک [پاشنه آشیل](https://fa.wikipedia.org/wiki/%D9%BE%D8%A7%D8%B4%D9%86%D9%87_%D8%A2%D8%B4%DB%8C%D9%84) و آسیب پذیری جدی وجود دارد. مطابق با نمودار فوق، نرم افزار تلگرام نصب شده در دستگاه کاربران، اقدام به دریافت مستقیم فایل ها از شبکه های توزیع محتوا می نماید که باعث به جای ماندن رد پای کاربر در شبکه های توزیع محتوا خواهد شد. هر فرد یا سازمانی که به شبکه های توزیع محتوا دسترسی فیزیکی داشته باشد می تواند با استفاده از متادیتای [نشانی آی پی](https://fa.wikipedia.org/wiki/%D9%86%D8%B4%D8%A7%D9%86%DB%8C_%D8%A2%DB%8C%E2%80%8C%D9%BE%DB%8C)، اقدام به شناسایی مختصات جغرافیایی کاربران نماید. علاوه بر آن پس از مرتبط ساختن نشانی های آی پی به کاربران، آن ها دقیقا متوجه می شوند که کدام فایل های صوتی - تصویری، عکس ها و یا مستندات، توسط کدام کاربر با نشانی آی پی مشخص شده دیده شده است.
 
@@ -357,7 +357,7 @@ Ciphertext: Gur dhvpx oebja sbk whzcf bire 13 ynml qbtf.
 
 متاسفانه یکی از نقصان های جدی امنیتی در پیام رسان تلگرام، نشت متادیتا می باشد. به عنوان یک مثال، در سال ۲۰۱۶ میلادی یک محقق امنیتی متوجه شد که [یک هکر به راحتی می تواند زمان آنلاین یا آفلاین بودن یک کاربر خاص در تلگرام را به راحتی تشخیص دهد](https://oflisback.github.io/telegram-stalking/). این آسیب پذیری به هکر اجازه خواهد داد که متوجه شود شما با چه کسی در یک لحظه خاص در حال گفتگو هستید. این موضوع زمانی بدتر می شود که هکر حتی نیازی به شنود ۲۴/۷ شما نخواهد داشت، بلکه از طریق اعلان فراهم شده توسط تلگرام، از زمان آنلاین شدن شما با خبر خواهد شد.
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-cli-metadata-leakage.png" alt="نشت متادیتا در تلگرام" title="نشت متادیتا در تلگرام" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/telegram-cli-metadata-leakage.webp" alt="نشت متادیتا در تلگرام" title="نشت متادیتا در تلگرام" >}}
 
 نکته تاسف بار این است که با انجام یک تنظیم ساده در این پیام رسان کاربران قادر به جلوگیری از این آسیب پذیری و عواقب آن خواهند بود. که به دلیل عدم نمایش این متادیتاهای غیرضروری در رابط کاربری، آن ها هرگز متوجه آن نشده و بازهم قربانی تنظیمات پیش فرض تلگرام می شوند. جالب تر این که برای دسترسی به این متادیتاها نیاز به ابزار چندان عجیب و غریبی نیز نمی باشد؛ بلکه با ابزار متن باز و رایگان [vysheng/tg](vysheng/tg)، خودتان قادر به آزمایش صحت این موضوع می باشید.
 
@@ -403,7 +403,7 @@ The team behind Telegram, led by Nikolai Durov, consists of six ACM champions, h
 
 با توجه به هزینه های تهیه و نگهداری سرور، شامل الکتریسیته، سخت افزار سرور، [RAID](https://fa.wikipedia.org/wiki/%D8%A2%D8%B1%D8%A7%DB%8C%D9%87_%DA%86%D9%86%D8%AF%DA%AF%D8%A7%D9%86%D9%87_%D8%AF%DB%8C%D8%B3%DA%A9%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%85%D8%B3%D8%AA%D9%82%D9%84) به منظور [تحمل پذیری خطا](https://fa.wikipedia.org/wiki/%D8%AA%D8%A7%D8%A8%E2%80%8C%D8%A2%D9%88%D8%B1%DB%8C_%D8%AE%D8%B7%D8%A7)، مشخصا هزینه ساخت و برپایی [دیتاسنتر](https://fa.wikipedia.org/wiki/%D9%85%D8%B1%DA%A9%D8%B2_%D8%AF%D8%A7%D8%AF%D9%87) مقرون به صرفه نخواهد بود. از طرفی پس از برنامه فیلترینگ تلگرام در روسیه [[۱]](https://www.theverge.com/2018/4/17/17246150/telegram-russia-ban) [[۲]](https://www.privateinternetaccess.com/blog/2018/04/russias-telegram-ban-is-a-fiasco-and-its-rendering-millions-of-ip-addresses-inaccessible/) مشخص شد که سرویس تلگرام بر روی [سرویس های وب آمازون](https://fa.wikipedia.org/wiki/%D8%B3%D8%B1%D9%88%DB%8C%D8%B3%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%88%D8%A8_%D8%A2%D9%85%D8%A7%D8%B2%D9%88%D9%86) و [گوگل کلاد](https://fa.wikipedia.org/wiki/%D8%B3%D8%B1%D9%88%DB%8C%D8%B3%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%88%D8%A8_%D8%A2%D9%85%D8%A7%D8%B2%D9%88%D9%86) میزبانی می شود. به منظور سادگی محاسبات و پرهیز از گمانه زنی بیشتر، با توجه به حجم داده های ماهانه پیام رسان تلگرام، و واقع شدن مقر اصلی این شرکت در برلین آلمان، [قیمت ۰/۰۲۲۵ دلار در هر گیگابایت داده در شهر فرانکفورت برای AWS](https://aws.amazon.com/s3/pricing/) را در نظر خواهیم گرفت:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/amazon-s3-standard-storage-pricing-eu-frankfurt.png" alt="تعرفه فضای ذخیره سازی استاندارد S3 بر روی سرویس های وب آمازون" title="تعرفه فضای ذخیره سازی استاندارد S3 بر روی سرویس های وب آمازون" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/amazon-s3-standard-storage-pricing-eu-frankfurt.webp" alt="تعرفه فضای ذخیره سازی استاندارد S3 بر روی سرویس های وب آمازون" title="تعرفه فضای ذخیره سازی استاندارد S3 بر روی سرویس های وب آمازون" >}}
 
 در نتیجه، با فرض عدم افزایش کاربران پیام رسان تلگرام، فقط هزینه فضای ذخیره سازی جدید در هر ماه به شرح ذیل خواهد بود:
 
@@ -445,13 +445,13 @@ If Telegram receives a court order that confirms you're a terror suspect, we may
 
 در ماه ژوئن ۲۰۱۷، پاول دورُف ادعا نمود که [در زمان بازدید توسعه دهندگان این شرکت از آمریکا در سال ۲۰۱۶، آژانس های اطلاعاتی ایالات متحده دو بار تلاش نموده اند تا با پرداخت رشوه به آن ها اقدام به تضعیف رمزگذاری این پیام رسان نمایند](https://web.archive.org/web/20190511181254/https://twitter.com/durov/status/873868773119451136). پاول دورُف حتی ادعا نمود که [اداره تحقیقات فدرال (FBI)](https://fa.wikipedia.org/wiki/%D8%A7%D8%AF%D8%A7%D8%B1%D9%87_%D8%AA%D8%AD%D9%82%DB%8C%D9%82%D8%A7%D8%AA_%D9%81%D8%AF%D8%B1%D8%A7%D9%84) شخص وی را تحت فشار قرار داده است:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-us-intelligence-agencies-bribe-attempt-fbi-pressure.png" alt="در مدت زمان بازدید تیم ما از ایالات متحده در سال گذشته ما با دو تلاش جهت پرداخت رشوه به توسعه دهندگانمان از سوی آژانس های [اطلاعاتی] ایالات متحده به علاوه فشار بر [شخص] خودم از سوی اداره تحقیقات فدرال مواجه شدیم." title="در مدت زمان بازدید تیم ما از ایالات متحده در سال گذشته ما با دو تلاش جهت پرداخت رشوه به توسعه دهندگانمان از سوی آژانس های [اطلاعاتی] ایالات متحده به علاوه فشار بر [شخص] خودم از سوی اداره تحقیقات فدرال مواجه شدیم." >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-us-intelligence-agencies-bribe-attempt-fbi-pressure.webp" alt="در مدت زمان بازدید تیم ما از ایالات متحده در سال گذشته ما با دو تلاش جهت پرداخت رشوه به توسعه دهندگانمان از سوی آژانس های [اطلاعاتی] ایالات متحده به علاوه فشار بر [شخص] خودم از سوی اداره تحقیقات فدرال مواجه شدیم." title="در مدت زمان بازدید تیم ما از ایالات متحده در سال گذشته ما با دو تلاش جهت پرداخت رشوه به توسعه دهندگانمان از سوی آژانس های [اطلاعاتی] ایالات متحده به علاوه فشار بر [شخص] خودم از سوی اداره تحقیقات فدرال مواجه شدیم." >}}
 
 پیش تر از آن، در تاریخ ۲۰ اکتبر ۲۰۱۵، پاول دورُف با فاصله زمانی کوتاه در اکانت رسمی توییتر خود در دو توییت ([توییت اول](https://web.archive.org/web/20180419193617/https://twitter.com/durov/status/656543684167651329)؛ [توییت دوم](https://web.archive.org/web/20180419193627/https://twitter.com/durov/status/656551981226528768)) اذعان نموده که مقامات ایرانی خواستار جاسوسی از شهروندان خود شده اند:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-iranian-officials-spy-citizens.png" alt="مقامات ایرانی می خواهند از تلگرام برای جاسوسی از شهروندان خود استفاده کنند. ما نمی توانیم و نمی خواهیم به آنها کمک کنیم." title="مقامات ایرانی می خواهند از تلگرام برای جاسوسی از شهروندان خود استفاده کنند. ما نمی توانیم و نمی خواهیم به آنها کمک کنیم." >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-iranian-officials-spy-citizens.webp" alt="مقامات ایرانی می خواهند از تلگرام برای جاسوسی از شهروندان خود استفاده کنند. ما نمی توانیم و نمی خواهیم به آنها کمک کنیم." title="مقامات ایرانی می خواهند از تلگرام برای جاسوسی از شهروندان خود استفاده کنند. ما نمی توانیم و نمی خواهیم به آنها کمک کنیم." >}}
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-iranian-ict-ministry-demanded-spying-censorship-tools.png" alt="وزارت ارتباطات و فناوری اطلاعات ایران خواستار این شد که تلگرام برای آن ها ابزار جاسوسی و سانسور فراهم نماید. آن تقاضا را نادیده گرفتیم، آن ها ما را مسدود نمودند." title="وزارت ارتباطات و فناوری اطلاعات ایران خواستار این شد که تلگرام برای آن ها ابزار جاسوسی و سانسور فراهم نماید. آن تقاضا را نادیده گرفتیم، آن ها ما را مسدود نمودند." >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/tweet-pavel-durov-iranian-ict-ministry-demanded-spying-censorship-tools.webp" alt="وزارت ارتباطات و فناوری اطلاعات ایران خواستار این شد که تلگرام برای آن ها ابزار جاسوسی و سانسور فراهم نماید. آن تقاضا را نادیده گرفتیم، آن ها ما را مسدود نمودند." title="وزارت ارتباطات و فناوری اطلاعات ایران خواستار این شد که تلگرام برای آن ها ابزار جاسوسی و سانسور فراهم نماید. آن تقاضا را نادیده گرفتیم، آن ها ما را مسدود نمودند." >}}
 
 شکی در این نکته که مقامات ایرانی به دفعات درخواست دسترسی به داده های کاربران ایرانی و جاسوسی از آن ها را داشته اند وجود ندارد. اما این حقیقت که تلگرام با آن ها همکاری داشته یا نداشته و یا اگر داشته تا چه حد بوده است، فقط از سوی سازندگان تلگرام قابل رد یا تایید می باشد.
 
@@ -511,7 +511,7 @@ All code will be released eventually. We started with the most useful parts — 
 
 [لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط Prism Break](https://prism-break.org/fa/all/#instant-messaging) به شرح ذیل می باشد:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-alternatives-prism-break.png" alt="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط Prism Break" title="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط Prism Break" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-alternatives-prism-break.webp" alt="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط Prism Break" title="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط Prism Break" >}}
 
 لازم به ذکر است که در جدول فوق، نرم افزارهای ستون [مالکیت طلبانه](https://fa.wikipedia.org/wiki/%D9%86%D8%B1%D9%85%E2%80%8C%D8%A7%D9%81%D8%B2%D8%A7%D8%B1_%D9%85%D8%A7%D9%84%DA%A9%DB%8C%D8%AA%DB%8C) نرم افزارهایی هستند که به اعتقاد Prism Break بایستی از آن ها حذر نمود. اما دو ستون بعدی (Free Recommendations) نرم افزارهای جایگزین می باشند.
 
@@ -519,31 +519,31 @@ All code will be released eventually. We started with the most useful parts — 
 
 [لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط privacytools.io](https://www.privacytools.io/software/im/) به شرح ذیل می باشد:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-alternatives-privacytools-io.png" alt="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط privacytools.io" title="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط privacytools.io" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-alternatives-privacytools-io.webp" alt="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط privacytools.io" title="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط privacytools.io" >}}
 
 ## لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط ThinkPrivacy
 
 [لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط ThinkPrivacy](https://www.thinkprivacy.io/#messaging) به شرح ذیل می باشد:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-alternatives-thinkprivacy.png" alt="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط ThinkPrivacy" title="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط ThinkPrivacy" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-alternatives-thinkprivacy.webp" alt="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط ThinkPrivacy" title="لیست پیام رسان های مورد تایید و جایگزین تلگرام توسط ThinkPrivacy" >}}
 
 ## مقایسه امنیت پیام رسان ها توسط ThinkPrivacy
 
 [نتایج مقایسه امنیت پیام رسان ها توسط ThinkPrivacy](https://www.thinkprivacy.io/messengers.html)، به شرح ذیل می باشد:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-comparison-thinkprivacy.png" alt="مقایسه امنیت پیام رسان ها توسط ThinkPrivacy" title="مقایسه امنیت پیام رسان ها توسط ThinkPrivacy" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-comparison-thinkprivacy.webp" alt="مقایسه امنیت پیام رسان ها توسط ThinkPrivacy" title="مقایسه امنیت پیام رسان ها توسط ThinkPrivacy" >}}
 
 ## مقایسه امنیت پیام رسان ها بر اساس استانداردهای Electronic Frontier Foundation
 
 این مقایسه با توجه به مقاله ای تحت عنوان [فکر کردن درباره چیزی که در یک پیام رسان امن نیاز دارید](https://www.eff.org/deeplinks/2018/03/thinking-about-what-you-need-secure-messenger)، که در وب سایت بنیاد [Electronic Frontier Foundation](https://www.eff.org/) منتشر شده، توسط [SecureChatGuide.org](https://securechatguide.org/effguide.html) تهیه شده است:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-comparison-eff-secure-chat-guide.png" alt="مقایسه امنیت پیام رسان ها توسط Electronic Frontier Foundation" title="مقایسه امنیت پیام رسان ها توسط Electronic Frontier Foundation" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-comparison-eff-secure-chat-guide.webp" alt="مقایسه امنیت پیام رسان ها توسط Electronic Frontier Foundation" title="مقایسه امنیت پیام رسان ها توسط Electronic Frontier Foundation" >}}
 
 ## مقایسه امنیت پیام رسان ها توسط Secure Messaging Apps
 
 [نتایج مقایسه امنیت پیام رسان ها توسط Secure Messaging Apps که با کوشش آقای مارک ویلیامز میسر شده است](https://www.securemessagingapps.com/)، به شرح ذیل می باشد:
 
-{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-comparison-secure-messaging-apps.png" alt="مقایسه امنیت پیام رسان ها توسط Secure Messaging Apps" title="مقایسه امنیت پیام رسان ها توسط Secure Messaging Apps" >}}
+{{< figure src="/blog/cybersecurity-101-for-barandazan-is-telegram-really-secure/instant-messaging-comparison-secure-messaging-apps.webp" alt="مقایسه امنیت پیام رسان ها توسط Secure Messaging Apps" title="مقایسه امنیت پیام رسان ها توسط Secure Messaging Apps" >}}
 
 ## Signal
 

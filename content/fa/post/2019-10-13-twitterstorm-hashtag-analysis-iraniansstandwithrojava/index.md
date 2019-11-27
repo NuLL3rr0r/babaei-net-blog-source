@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #IraniansStandWithRojava آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #IraniansStandWithRojava آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #IraniansStandWithRojava آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #IraniansStandWithRojava آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#IraniansStandWithRojava](https://twitter.com/hashtag/IraniansStandWithRojava?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #IraniansStandWithRojava
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #IraniansStandWithRojava" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #IraniansStandWithRojava" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #IraniansStandWithRojava" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #IraniansStandWithRojava" >}}
 
 1. [#IraniansStandWithRojava](https://twitter.com/hashtag/IraniansStandWithRojava?src=hash)
 2. [#rojava](https://twitter.com/hashtag/rojava?src=hash)
@@ -127,7 +127,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#IraniansStandWithRojava](https://twitter.com/hashtag/IraniansStandWithRojava?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansStandWithRojava" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansStandWithRojava" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansStandWithRojava" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansStandWithRojava" >}}
 
 1. [@chawshin_83](https://twitter.com/chawshin_83)
 2. [@mohmd_mozafari](https://twitter.com/mohmd_mozafari)
@@ -234,7 +234,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#IraniansStandWithRojava](https://twitter.com/hashtag/IraniansStandWithRojava?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #IraniansStandWithRojava با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #IraniansStandWithRojava با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #IraniansStandWithRojava با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #IraniansStandWithRojava با بیشترین تعداد توییت" >}}
 
 1. [@pesarekourosh](https://twitter.com/pesarekourosh)
 2. [@RezaS49](https://twitter.com/RezaS49)
@@ -341,6 +341,6 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#IraniansStandWithRojava](https://twitter.com/hashtag/IraniansStandWithRojava?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansstandwithrojava/iraniansstandwithrojava-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #IraniansStandWithRojava، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

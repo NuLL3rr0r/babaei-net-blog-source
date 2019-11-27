@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری و شبکه‌ هشتگ #iamthe15th4iran آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری و شبکه‌ هشتگ #iamthe15th4iran آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری و شبکه‌ هشتگ #iamthe15th4iran آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری و شبکه‌ هشتگ #iamthe15th4iran آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #iamthe15th4iran
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #iamthe15th4iran" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #iamthe15th4iran" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #iamthe15th4iran" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #iamthe15th4iran" >}}
 
 1. [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash)
 2. [#shameonsweden](https://twitter.com/hashtag/shameonsweden?src=hash)
@@ -77,7 +77,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #iamthe15th4iran" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #iamthe15th4iran" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #iamthe15th4iran" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #iamthe15th4iran" >}}
 
 1. [@Rezamehregan1](https://twitter.com/Rezamehregan1)
 2. [@KonourSharar](https://twitter.com/KonourSharar)
@@ -134,7 +134,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #iamthe15th4iran با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #iamthe15th4iran با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-twitterstorm-hashtag-analysis-accounts-with-most-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #iamthe15th4iran با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #iamthe15th4iran با بیشترین تعداد توییت" >}}
 
 1. [@amir_daraii](https://twitter.com/amir_daraii)
 2. [@Maryam05236104](https://twitter.com/Maryam05236104)
@@ -191,8 +191,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#iamthe15th4iran](https://twitter.com/hashtag/iamthe15th4iran?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iamthe15th4iran/iamthe15th4iran-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #iamthe15th4iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

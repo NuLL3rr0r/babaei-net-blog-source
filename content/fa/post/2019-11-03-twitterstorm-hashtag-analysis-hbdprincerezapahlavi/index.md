@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Constitutional Mona
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #HBDPrinceRezaPahlavi آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #HBDPrinceRezaPahlavi آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #HBDPrinceRezaPahlavi آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #HBDPrinceRezaPahlavi آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#HBDPrinceRezaPahlavi](https://twitter.com/hashtag/HBDPrinceRezaPahlavi?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -22,7 +22,7 @@ toc = true
 
 مرتبط‌ترین هشتگ‌های شبکه هشتگ  [#HBDPrinceRezaPahlavi](https://twitter.com/hashtag/HBDPrinceRezaPahlavi?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #HBDPrinceRezaPahlavi" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #HBDPrinceRezaPahlavi" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #HBDPrinceRezaPahlavi" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #HBDPrinceRezaPahlavi" >}}
 
 1. [#HBDPrinceRezaPahlavi](https://twitter.com/hashtag/HBDPrinceRezaPahlavi?src=hash)
 2. [#جاویدشاه](https://twitter.com/hashtag/جاویدشاه?src=hash)
@@ -129,7 +129,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#HBDPrinceRezaPahlavi](https://twitter.com/hashtag/HBDPrinceRezaPahlavi?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #HBDPrinceRezaPahlavi" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #HBDPrinceRezaPahlavi" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #HBDPrinceRezaPahlavi" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #HBDPrinceRezaPahlavi" >}}
 
 1. [@PahlaviReza](https://twitter.com/PahlaviReza)
 2. [@ShahbanouFarah](https://twitter.com/ShahbanouFarah)
@@ -236,7 +236,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#HBDPrinceRezaPahlavi](https://twitter.com/hashtag/HBDPrinceRezaPahlavi?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #HBDPrinceRezaPahlavi با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #HBDPrinceRezaPahlavi با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #HBDPrinceRezaPahlavi با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #HBDPrinceRezaPahlavi با بیشترین تعداد توییت" >}}
 
 1. [@RezaS49](https://twitter.com/RezaS49)
 2. [@amir_alizadee](https://twitter.com/amir_alizadee)
@@ -343,6 +343,6 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#HBDPrinceRezaPahlavi](https://twitter.com/hashtag/HBDPrinceRezaPahlavi?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-hbdprincerezapahlavi/hbdprincerezapahlavi-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #HBDPrinceRezaPahlavi، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

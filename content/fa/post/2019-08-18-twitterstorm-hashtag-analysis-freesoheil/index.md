@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری و شبکه‌ هشتگ #FreeSoheil آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری و شبکه‌ هشتگ #FreeSoheil آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری و شبکه‌ هشتگ #FreeSoheil آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری و شبکه‌ هشتگ #FreeSoheil آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#FreeSoheil](https://twitter.com/hashtag/FreeSoheil?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #FreeSoheil
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #FreeSoheil" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #FreeSoheil" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #FreeSoheil" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #FreeSoheil" >}}
 
 1. [#FreeSoheil](https://twitter.com/hashtag/FreeSoheil?src=hash)
 2. [#freearash](https://twitter.com/hashtag/freearash?src=hash)
@@ -77,7 +77,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#FreeSoheil](https://twitter.com/hashtag/FreeSoheil?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #FreeSoheil" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #FreeSoheil" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #FreeSoheil" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #FreeSoheil" >}}
 
 1. [@yekiroboti](https://twitter.com/yekiroboti)
 2. [@ar_persian](https://twitter.com/ar_persian)
@@ -134,7 +134,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#FreeSoheil](https://twitter.com/hashtag/FreeSoheil?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #FreeSoheil با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #FreeSoheil با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-twitterstorm-hashtag-analysis-accounts-with-most-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #FreeSoheil با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #FreeSoheil با بیشترین تعداد توییت" >}}
 
 1. [@bardiiya](https://twitter.com/bardiiya)
 2. [@kam04141](https://twitter.com/kam04141)
@@ -191,8 +191,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#FreeSoheil](https://twitter.com/hashtag/FreeSoheil?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#FreeSoheil](https://twitter.com/hashtag/FreeSoheil?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-freesoheil/freesoheil-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #FreeSoheil، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

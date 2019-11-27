@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #BloodLustRegimeMustGo آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #BloodLustRegimeMustGo آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #BloodLustRegimeMustGo آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #BloodLustRegimeMustGo آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #BloodLustRegimeMustGo
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BloodLustRegimeMustGo" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BloodLustRegimeMustGo" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BloodLustRegimeMustGo" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #BloodLustRegimeMustGo" >}}
 
 1. [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash)
 2. [#iran](https://twitter.com/hashtag/iran?src=hash)
@@ -127,7 +127,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #BloodLustRegimeMustGo" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #BloodLustRegimeMustGo" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #BloodLustRegimeMustGo" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #BloodLustRegimeMustGo" >}}
 
 1. [@realDonaldTrump](https://twitter.com/realDonaldTrump)
 2. [@mohmd_mozafari](https://twitter.com/mohmd_mozafari)
@@ -234,7 +234,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #BloodLustRegimeMustGo با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #BloodLustRegimeMustGo با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #BloodLustRegimeMustGo با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #BloodLustRegimeMustGo با بیشترین تعداد توییت" >}}
 
 1. [@0x__dead](https://twitter.com/0x__dead)
 2. [@pesarekourosh](https://twitter.com/pesarekourosh)
@@ -341,8 +341,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#BloodLustRegimeMustGo](https://twitter.com/hashtag/BloodLustRegimeMustGo?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-bloodlustregimemustgo/bloodlustregimemustgo-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #BloodLustRegimeMustGo، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

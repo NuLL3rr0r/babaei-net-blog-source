@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری و شبکه‌ هشتگ #GetLostRussiaFromIran آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری و شبکه‌ هشتگ #GetLostRussiaFromIran آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری و شبکه‌ هشتگ #GetLostRussiaFromIran آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری و شبکه‌ هشتگ #GetLostRussiaFromIran آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #GetLostRussiaFromIran
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #GetLostRussiaFromIran" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #GetLostRussiaFromIran" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #GetLostRussiaFromIran" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #GetLostRussiaFromIran" >}}
 
 1. [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash)
 2. [#روسیه](https://twitter.com/hashtag/روسیه?src=hash)
@@ -77,7 +77,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #GetLostRussiaFromIran" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #GetLostRussiaFromIran" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #GetLostRussiaFromIran" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #GetLostRussiaFromIran" >}}
 
 1. [@Hashshaashin](https://twitter.com/Hashshaashin)
 2. [@KremlinRussia_E](https://twitter.com/KremlinRussia_E)
@@ -134,7 +134,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #GetLostRussiaFromIran با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #GetLostRussiaFromIran با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-twitterstorm-hashtag-analysis-accounts-with-most-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #GetLostRussiaFromIran با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #GetLostRussiaFromIran با بیشترین تعداد توییت" >}}
 
 1. [@unkngh](https://twitter.com/unkngh)
 2. [@0x__dead](https://twitter.com/0x__dead)
@@ -191,8 +191,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#GetLostRussiaFromIran](https://twitter.com/hashtag/GetLostRussiaFromIran?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-getlostrussiafromiran/getlostrussiafromiran-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #GetLostRussiaFromIran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

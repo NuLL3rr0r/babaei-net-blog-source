@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #وکیل_ملت آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #وکیل_ملت آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #وکیل_ملت آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #وکیل_ملت آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#وکیل_ملت](https://twitter.com/hashtag/وکیل_ملت?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -20,7 +20,7 @@ toc = true
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #وکیل_ملت
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis-related-hashtags.png" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #وکیل_ملت" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #وکیل_ملت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis-related-hashtags.webp" alt="مرتبط‌ترین هشتگ‌های شبکه هشتگ #وکیل_ملت" title="مرتبط‌ترین هشتگ‌های شبکه هشتگ #وکیل_ملت" >}}
 
 1. [#وکیل_ملت](https://twitter.com/hashtag/وکیل_ملت?src=hash)
 2. [#شاهزاده_رضا_پهلوی](https://twitter.com/hashtag/شاهزاده_رضا_پهلوی?src=hash)
@@ -127,7 +127,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#وکیل_ملت](https://twitter.com/hashtag/وکیل_ملت?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #وکیل_ملت" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #وکیل_ملت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #وکیل_ملت" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #وکیل_ملت" >}}
 
 1. [@PahlaviReza](https://twitter.com/PahlaviReza)
 2. [@pouriazeraati](https://twitter.com/pouriazeraati)
@@ -234,7 +234,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#وکیل_ملت](https://twitter.com/hashtag/وکیل_ملت?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #وکیل_ملت با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #وکیل_ملت با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #وکیل_ملت با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #وکیل_ملت با بیشترین تعداد توییت" >}}
 
 1. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 2. [@robot689](https://twitter.com/robot689)
@@ -341,8 +341,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ [#وکیل_ملت](https://twitter.com/hashtag/وکیل_ملت?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-hashtag-network-analysis.png" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-hashtag-network-analysis.webp" alt="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ‌های مرتبط با طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#وکیل_ملت](https://twitter.com/hashtag/وکیل_ملت?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-vakil-e-mellat/vakil-e-mellat-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #وکیل_ملت، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

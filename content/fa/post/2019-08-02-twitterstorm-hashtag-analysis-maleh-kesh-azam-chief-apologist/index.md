@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.jpg" alt="گراف‌های شبکه هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌های شبکه هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.webp" alt="گراف‌های شبکه هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌های شبکه هشتگ #ماله_کش_اعظم آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌های با کیفیت آنالیز شبکه هشتگ [#ماله_کش_اعظم](https://twitter.com/hashtag/%D9%85%D8%A7%D9%84%D9%87_%DA%A9%D8%B4_%D8%A7%D8%B9%D8%B8%D9%85?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -14,13 +14,13 @@ toc = true
 
 ## آنالیز
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis-output.png" alt="از خروجی آنالیز هشتگ #ماله_کش_اعظم توسط نرم افزار Barandazstorm" title="خروجی آنالیز هشتگ #ماله_کش_اعظم توسط نرم افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis-output.webp" alt="از خروجی آنالیز هشتگ #ماله_کش_اعظم توسط نرم افزار Barandazstorm" title="خروجی آنالیز هشتگ #ماله_کش_اعظم توسط نرم افزار Barandazstorm" >}}
 
 {{< hashtag-analysis hashtag="#ماله_کش_اعظم" tweet-count="۱۷,۹۷۰" participant-accounts="۴,۹۷۱" involved-accounts="۵,۴۷۹" directly-related-hashtags="۹۴۳" all-related-hashtags="۱,۰۰۰">}}
 
 ۵۰ کاربر برجسته شبکه هشتگ [#ماله_کش_اعظم](https://twitter.com/hashtag/%D9%85%D8%A7%D9%84%D9%87_%DA%A9%D8%B4_%D8%A7%D8%B9%D8%B8%D9%85?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis-popular-accounts.png" alt="کاربران برجسته در شبکه هشتگ #ماله_کش_اعظم" title="کاربران برجسته در شبکه هشتگ #ماله_کش_اعظم" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis-popular-accounts.webp" alt="کاربران برجسته در شبکه هشتگ #ماله_کش_اعظم" title="کاربران برجسته در شبکه هشتگ #ماله_کش_اعظم" >}}
 
 1. [@USAdarFarsi](https://twitter.com/USAdarFarsi)
 2. [@JZarif](https://twitter.com/JZarif)
@@ -75,7 +75,7 @@ toc = true
 
 ۵۰ کاربر ترند کننده شبکه هشتگ [#ماله_کش_اعظم](https://twitter.com/hashtag/%D9%85%D8%A7%D9%84%D9%87_%DA%A9%D8%B4_%D8%A7%D8%B9%D8%B8%D9%85?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis-accounts-with-most-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #ماله_کش_اعظم با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #ماله_کش_اعظم با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis-accounts-with-most-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #ماله_کش_اعظم با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #ماله_کش_اعظم با بیشترین تعداد توییت" >}}
 
 1. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 2. [@azad28196173](https://twitter.com/azad28196173)
@@ -138,4 +138,4 @@ toc = true
 
 در پایان می توانید گراف‌های با کیفیت آنالیز شبکه هشتگ [#ماله_کش_اعظم](https://twitter.com/hashtag/%D9%85%D8%A7%D9%84%D9%87_%DA%A9%D8%B4_%D8%A7%D8%B9%D8%B8%D9%85?src=hash) را دریافت نمایید:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.png" alt="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis.webp" alt="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه هشتگ #ماله_کش_اعظم، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

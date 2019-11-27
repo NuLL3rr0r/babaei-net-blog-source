@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Free Internet For Iran", "I
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-internet4iran-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ شبکه هشتگ #IranProtests آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ شبکه هشتگ #IranProtests آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-internet4iran-twitterstorm-hashtag-analysis.webp" alt="گراف‌ شبکه هشتگ #IranProtests آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ شبکه هشتگ #IranProtests آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز شبکه هشتگ‌های [#IranProtests](https://twitter.com/hashtag/IranProtests?src=hash) و [#Internet4Iran](https://twitter.com/hashtag/Internet4Iran?src=hash) که ترند یک دنیا شدند، به ادامه مطلب مراجعه نمایید.
 
@@ -24,7 +24,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#IranProtests](https://twitter.com/hashtag/IranProtests?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #IranProtests" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #IranProtests" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #IranProtests" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #IranProtests" >}}
 
 1. [@AlinejadMasih](https://twitter.com/AlinejadMasih)
 2. [@SecPompeo](https://twitter.com/SecPompeo)
@@ -231,7 +231,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#IranProtests](https://twitter.com/hashtag/IranProtests?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #IranProtests با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #IranProtests با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #IranProtests با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #IranProtests با بیشترین تعداد توییت" >}}
 
 1. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 2. [@MiramMiran](https://twitter.com/MiramMiran)
@@ -438,7 +438,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#Internet4Iran](https://twitter.com/hashtag/Internet4Iran?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/internet4iran-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #Internet4Iran" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #Internet4Iran" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/internet4iran-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #Internet4Iran" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #Internet4Iran" >}}
 
 1. [@netblocks](https://twitter.com/netblocks)
 2. [@SecPompeo](https://twitter.com/SecPompeo)
@@ -645,7 +645,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#Internet4Iran](https://twitter.com/hashtag/Internet4Iran?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/internet4iran-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #Internet4Iran با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #Internet4Iran با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/internet4iran-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #Internet4Iran با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #Internet4Iran با بیشترین تعداد توییت" >}}
 
 1. [@ShahanshahiBot](https://twitter.com/ShahanshahiBot)
 2. [@ab_kimiya](https://twitter.com/ab_kimiya)
@@ -852,8 +852,8 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ هشتگ [#IranProtests](https://twitter.com/hashtag/IranProtests?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران هشتگ #IranProtests، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران هشتگ #IranProtests، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/iranprotests-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران هشتگ #IranProtests، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران هشتگ #IranProtests، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 دریافت گراف با کیفیت شبکه کاربران هشتگ [#Internet4Iran](https://twitter.com/hashtag/Internet4Iran?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/internet4iran-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران هشتگ #Internet4Iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران هشتگ #Internet4Iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iranprotests-internet4iran/internet4iran-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران هشتگ #Internet4Iran، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران هشتگ #Internet4Iran، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}

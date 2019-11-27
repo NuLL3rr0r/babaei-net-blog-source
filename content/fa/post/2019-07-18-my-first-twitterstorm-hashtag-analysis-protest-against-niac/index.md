@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = false
 +++
 
-{{< figure src="/blog/my-first-twitterstorm-hashtag-analysis-protest-against-niac/protest-against-niac-twitterstorm-hashtag-analysis.jpg" alt="اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" title="اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/my-first-twitterstorm-hashtag-analysis-protest-against-niac/protest-against-niac-twitterstorm-hashtag-analysis.webp" alt="اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" title="اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" >}}
 
 **به روز رسانی [۳۱ تیرماه ۱۳۹۸]:** خانم [مانا مستطابی](https://twitter.com/mostlymana) مدیر ارتباطات [نایاک](https://twitter.com/NIACouncil) گزارش ارسالی از سوی توییتر برای جعفر گلبرگ مبنی بر تخلف و ساسپند شدن اکانت به دلیل سواستفاده از پلتفرم توییتر را در [پروفایل توییتر خود](https://archive.ph/JN0HD) منتشر نموده است. [سوال اینجاست که گزارش ارسالی از سوی توییتر برای جعفر گلبرگ مبنی بر تخلف و ساسپند شدن، دست مدیر ارتباطات نایاک چه می کند؟ آیا توییتر به خانم مانا مستطابی رونوشت زده است؟](https://twitter.com/mamadou_babaei/status/1153416251689046016)
 
@@ -49,4 +49,4 @@ toc = false
 
 در پایان می توانید فایل با کیفیت آنالیز انجام شده برای هشتگ و طوفان توییتری [#ProtestAgainstNIAC](https://twitter.com/hashtag/ProtestAgainstNIAC?src=hash) را دریافت نمایید:
 
-{{< figure src="/blog/my-first-twitterstorm-hashtag-analysis-protest-against-niac/protest-against-niac-twitterstorm-hashtag-analysis.png" alt="نسخه بسیار با کیفیت تر از اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" title="نسخه بسیار با کیفیت تر از اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/my-first-twitterstorm-hashtag-analysis-protest-against-niac/protest-against-niac-twitterstorm-hashtag-analysis.webp" alt="نسخه بسیار با کیفیت تر از اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" title="نسخه بسیار با کیفیت تر از اولین آنالیز طوفان توییتری و هشتگ #ProtestAgainstNIACتولید شده توسط نرم‌افزار Barandazstorm" >}}

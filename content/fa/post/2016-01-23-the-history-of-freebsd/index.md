@@ -7,7 +7,7 @@ toc = true
 aliases = [ "/blog/2016/01/23/the-history-of-freebsd/" ]
 +++
 
-{{< figure src="/blog/the-history-of-freebsd/evolution-of-unix-and-unix-like-systems.png" alt="نمودار سیر تکاملی سیستم عامل های یونیکس و شبه یونیکس - منبع تصویر: ویکی پدیا" caption="نمودار سیر تکاملی سیستم عامل های یونیکس و شبه یونیکس - منبع تصویر: ویکی پدیا" link="https://en.wikipedia.org/wiki/File:Unix_history-simple.svg" target="_blank" >}}
+{{< figure src="/blog/the-history-of-freebsd/evolution-of-unix-and-unix-like-systems.webp" alt="نمودار سیر تکاملی سیستم عامل های یونیکس و شبه یونیکس - منبع تصویر: ویکی پدیا" caption="نمودار سیر تکاملی سیستم عامل های یونیکس و شبه یونیکس - منبع تصویر: ویکی پدیا" link="https://en.wikipedia.org/wiki/File:Unix_history-simple.svg" target="_blank" >}}
 
 اگر از یک سیستم عامل آزاد و کد باز استفاده می نمائید، به احتمال قریب به یقین مبتنی بر [گنو](https://www.gnu.org/) و [هسته لینوکس](https://www.kernel.org/) می باشد. اما باید بدانید این پلتفرم های کد باز و آزاد نه تنها اولین نرم افزارها در نوع خود نبوده، حتی حرفه ای ترین و یا موفق ترین نرم افزارهای کد باز تجاری شده در نوع خود نیز محسوب نخواهند شد. در هر سه این موارد [Berkeley Software Distribution یا به اختصار BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)  از [GNU/Linux](http://www.gnu.org/gnu/linux-and-gnu.en.html)  پیشی می گیرد. حال سوال اصلی اینجاست که چرا BSD در [اکوسیستم نرم افزارهای آزاد](https://en.wikipedia.org/wiki/Free_and_open-source_software) به حاشیه رانده شده است، در حالی که توزیع های مختلف GNU/Linux گوی سبقت را از آن ربوده اند؟
 

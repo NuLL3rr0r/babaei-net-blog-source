@@ -5,7 +5,7 @@ date = 2019-04-06T15:27:11+02:00
 tags = [ "Desacralization", "Iran", "Islam", "Islamic Republic of Iran", "Islamophobia", "Religion", "Religion Criticism", "Religious Superstition", "Religious Violence", "Superstition", "Violence" ]
 +++
 
-{{< figure src="/blog/the-sacred-city-documentary/medina-munawwarah-tweet.png" alt="توییت: المدينة المنورة" caption="توییت: المدينة المنورة" >}}
+{{< figure src="/blog/the-sacred-city-documentary/medina-munawwarah-tweet.webp" alt="توییت: المدينة المنورة" caption="توییت: المدينة المنورة" >}}
 
 امروز توئیتی نوشتم در رابطه با شهر مدینه و نقش توماس ادیسون در منور نمودن این شهر :smile: که دوستی در یکی از منشن ها مستندی رو معرفی کرد به نام [The Sacred City یا شهر مقدس](https://www.imdb.com/title/tt5842412/) محصول سال ۲۰۱۶ میلادی. این مستند بریتانیایی درباره ی کشف شواهد جدید باستان شناسی توسط مورخ کانادایی [Dan Gibson](https://en.wikipedia.org/wiki/Dan_Gibson_(author)) هست مبنی بر این که شهر مقدس فعلی اسلام یعنی مکه، محل زندگی قبیله قریش و محمد نبوده و تبعا آغاز اسلام از این شهر نبوده. حتی برخلاف تصور عموم، بیت المقدس و بعدها مکه قبله اصلی مسلمانان در زمان حیات محمد نبوده.
 

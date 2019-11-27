@@ -6,7 +6,7 @@ tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of
 toc = true
 +++
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-twitterstorm-hashtag-analysis.jpg" alt="گراف‌ طوفان توییتری #KurdsBetrayedByTrump آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #KurdsBetrayedByTrump آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #KurdsBetrayedByTrump آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #KurdsBetrayedByTrump آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
 
 جهت اطلاع از جزئیات و دریافت گراف‌ با کیفیت آنالیز طوفان توییتری و شبکه هشتگ [#KurdsBetrayedByTrump](https://twitter.com/hashtag/KurdsBetrayedByTrump?src=hash) به ادامه مطلب مراجعه نمایید.
 
@@ -22,7 +22,7 @@ toc = true
 
 سرشناس‌ترین اکانت‌های شبکه هشتگ [#KurdsBetrayedByTrump](https://twitter.com/hashtag/KurdsBetrayedByTrump?src=hash) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-twitterstorm-hashtag-analysis-most-popular-accounts.png" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #KurdsBetrayedByTrump" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #KurdsBetrayedByTrump" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #KurdsBetrayedByTrump" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #KurdsBetrayedByTrump" >}}
 
 1. [@PaulLidicul](https://twitter.com/PaulLidicul)
 2. [@RobertDeNiroUS](https://twitter.com/RobertDeNiroUS)
@@ -129,7 +129,7 @@ toc = true
 
 کاربران ترند کننده شبکه هشتگ  [#KurdsBetrayedByTrump](https://twitter.com/hashtag/KurdsBetrayedByTrump?src=hash) با بیشترین تعداد توییت، به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.png" alt="کاربران ترند کننده در شبکه هشتگ #KurdsBetrayedByTrump با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #KurdsBetrayedByTrump با بیشترین تعداد توییت" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-twitterstorm-hashtag-analysis-accounts-highest-number-tweets.webp" alt="کاربران ترند کننده در شبکه هشتگ #KurdsBetrayedByTrump با بیشترین تعداد توییت" title="کاربران ترند کننده در شبکه هشتگ #KurdsBetrayedByTrump با بیشترین تعداد توییت" >}}
 
 1. [@bitcoinconnect](https://twitter.com/bitcoinconnect)
 2. [@juar73640293](https://twitter.com/juar73640293)
@@ -236,4 +236,4 @@ toc = true
 
 دریافت گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ [#KurdsBetrayedByTrump](https://twitter.com/hashtag/KurdsBetrayedByTrump?src=hash):
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-user-network-analysis.png" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-kurdsbetrayedbytrump/kurdsbetrayedbytrump-user-network-analysis.webp" alt="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف با کیفیت شبکه کاربران‌ طوفان توییتری و هشتگ #KurdsBetrayedByTrump، آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
