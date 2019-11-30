@@ -182,7 +182,7 @@ theme = "beautifulhugo"
             subtitle = "برنامه نویس C++ / Unreal Engine"
 
 [markup]
-    defaultMarkdownHandler = "goldmark"
+    defaultMarkdownHandler = "blackFriday"
 
     [markup.goldmark]
         [markup.goldmark.renderer]
