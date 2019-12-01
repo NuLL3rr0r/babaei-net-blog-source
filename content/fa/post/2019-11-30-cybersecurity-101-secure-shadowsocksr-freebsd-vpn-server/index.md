@@ -872,15 +872,19 @@ $ service sshguard start
 
 [جهت اطلاعات بیشتر راجع به SSHGuard این مطلب را مطالعه نمایید](https://www.babaei.net/blog/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/).
 
-## فعاال سازی TCP Fast Open
+## فعال سازی TCP Fast Open
 
-ویژگی TCP Fast Open (TFO) ، افزونه ای برای پروتکل كنترل انتقال (TCP) است كه با فعال كردن داده ها در طی تبادل اولیه TCP SYN ، باعث كاهش تأخیر شبکه می شود.
+ویژگی TCP Fast Open (TFO)، افزونه ای بر روی پروتکل کنترل انتقال یا همان TCP می‌باشد که با فعال نمودن تبادل داده ها در طی TCP SYN اولیه توسط فرستنده درخواست، باعث کاهش تأخیر شبکه و در نتیجه افزایش کارایی و سرعت می‌شود.
+
+به منظور فعال نمودن این ویژگی تنظیمات ذیل را به فایل تنظیمات کرنل بیافزایید:
 
 {{< codeblock lang="sh" title="/etc/sysctl.conf" >}}
 # tcp fast open (TFO)
 net.inet.tcp.fastopen.client_enable=1
 net.inet.tcp.fastopen.server_enable=1
 {{< /codeblock >}}
+
+جهت فعال نمودن آنی TCP Fast Open:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ sysctl net.inet.tcp.fastopen.client_enable=1
@@ -891,6 +895,8 @@ net.inet.tcp.fastopen.server_enable: 0 -> 1
 {{< /codeblock >}}
 
 ## بهینه‌سازی و تنظیم محدودیت های هسته سیستم‌عامل
+
+نگاهی به برخی محدودیت‌های هسته سیستم‌عامل مشخص می‌سازد که مقادیر پیش‌فرض آن‌ها بسیار کمتر از مقادیر مورد‌نیاز ShadowsocksR جهت کارکرد بهینه می‌باشد:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ ulimit -a
@@ -920,15 +926,21 @@ $ ulimit -Sn
 28377
 {{< /codeblock >}}
 
+جهت افزایش این مقادیر بایستی این مقادیر را در زمان بوت کرنل تعیین نمود، لذا این مقادیر را از طریق فایل <code>/boot/loader.conf</code> تعیین می‌نماییم:
+
 {{< codeblock lang="sh" title="/boot/loader.conf" >}}
 # kernel limits
 kern.maxfiles="51200"
 kern.maxfilesperproc="51200"
 {{< /codeblock >}}
 
+جهت اعمال این تغییرات نیاز به راه‌اندازی مجدد سرور خواهد بود:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ reboot
 {{< /codeblock >}}
+
+پس از راه‌اندازی مجدد سرور، جهت تایید اعمال تنظیمات:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ ulimit -a
@@ -960,10 +972,13 @@ $ ulimit -Sn
 
 ## نصب پیش‌نیازهای دریافت و اجرای ShadowsocksR
 
+پیش از دریافت و اجرای ShadowsocksR در سرور، بایستی نیازمندی‌های دریافت و اجرای آن را فراهم نمود:
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ pkg install security/ca_root_nss devel/git dns/c-ares devel/libev devel/py-typing devel/py-typing-extensions lang/python math/py-pybloom security/libsodium security/py-m2crypto security/mbedtls
 $ rehash
 {{< /codeblock >}}
+
+جهت پاکسازی حافظه ذخیره‌سازی سرور می‌توانید مقداری از فضای اشغال شده توسط فایل‌های نصب این بسته‌ها یا بسته‌های احتمالی که دیگر نیازمند حضور آن‌ها در سیستم نمی‌باشیم را پاکسازی نمود:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ pkg autoremove
@@ -972,12 +987,16 @@ $ rm -f /var/cache/pkg/*
 
 ## دریافت و پیکربندی ShadowsocksR
 
+جهت دریافت و پیکربندی اولیه ShadowsocksR دستورات ذیل را اجرا نمایید:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ cd /usr/local/
 $ git clone https://github.com/shadowsocksrr/shadowsocksr.git
 $ cd shadowsocksr
 $ sh initcfg.sh
 {{< /codeblock >}}
+
+به منظور پیکربندی سرور ShadowsocksR، تنظیمات فایل نمونه <code>/usr/local/shadowsocksr/config.json</code> را با تنظیمات بهینه ذیل جایگزین نمایید. بدیهی است که به جای <code>xxx.xxx.xxx.xxx</code> بایستی IPv4 سرور و به جای <code>xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx</code> بایستی IPv6 سرور جایگزین شود:
 
 {{< codeblock lang="json" title="/usr/local/shadowsocksr/config.json" >}}
 {
@@ -1007,17 +1026,33 @@ $ sh initcfg.sh
 }
 {{< /codeblock >}}
 
+همانطور که قبلا در بخش پیکربندی فایروال ذکر شد پورت <code>۴۴۳</code> را به منظور رد و بدل ترافیک مبهم‌سازی شده ShadowsocksR استفاده نموده‌ایم. بدیهی است که اگر پورت دیگری مدنظر شما می‌باشد، علاوه بر تغییر آن در این مرحله نیاز است که تنظیمات مربوط به باز نمودن آن پورت در بخش تنظیم فایروال نیز باید انجام شود.
+
+همانطور که در کامنت‌های موجود در فایل فوق دیده می‌شود امکان ایجاد پسورد‌های مختلف بر روی پورت‌های مختلف برای کاربران مختلف وجود دارد که بدلیل حفظ سادگی مطلب ما به حالت تک‌کاربره بسنده نموده‌ایم. شما می‌توانید کلمه عبور حالت تک‌کاربره را بدون هیچ محدودیتی بصورت همزمان در اختیار کاربران متعدد قرار دهید. حالت چندکاربره تنها به منظور مانیتورینگ لاگ استفاده کاربران مختلف سودمند خواهد بود. در غیر اینصورت هیچ تفاوتی میان حالت چندکاربره و تک‌کاربره وجود ندارد.
+
+بدلیل وجود داده‌ حساسی مانند کلمه عبور در این فایل سطوح دسترسی را تنها به خواندن فایل توسط کاربر مدیر یا <code>root</code> تقلیل خواهیم داد:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ chmod 400 /usr/local/shadowsocksr/config.json
 {{< /codeblock >}}
+
+جهت راه‌اندازی و اجرای سرور ShadowsocksR بصورت خودکار در هربار راه‌اندازی سیستم یک فایل اسکریپت با محتوای ذیل را ایجاد می‌نماییم:
 
 {{< codeblock lang="sh" title="/usr/local/shadowsocksr/cron.sh" >}}
 #!/bin/sh
 cd /usr/local/shadowsocksr/shadowsocks && python ./server.py -c ../config.json &
 {{< /codeblock >}}
 
+سپس سطح دسترسی اجرا برای تمامی کاربران سیستم را بر روی آن اعمال می‌نماییم:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 chmod a+x /usr/local/shadowsocksr/cron.sh
+{{< /codeblock >}}
+
+وقت تنظیم و راه‌اندازی اصولی سیستم اجرای وظایف FreeBSD که با نام Cron شناخته می‌شود فرا رسیده است. جهت تنظیم آن و همچنین اجرا نمودن اسکریپت راه‌اندازی ShadowsocksR، محتوای ذیل را پس از اجرای دستور <code>crontab</code> برای کاربر <code>root</code> به Cron بیافزایید:
+
+{{< codeblock lang="sh" title="crontab -e -u root" >}}
+$ crontab -e -u root
 {{< /codeblock >}}
 
 {{< codeblock lang="sh" title="crontab -e -u root" >}}
@@ -1029,9 +1064,25 @@ MAILTO=""
 @reboot root    /usr/local/shadowsocksr/cron.sh
 {{< /codeblock >}}
 
+پس از ذخیره فایل <code>crontab</code> برای کاربر <code>root</code> از درست بودن محتویات آن مطمئن شوید:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ crontab -l -u root
+SHELL=/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+MAILTO=""
+
+# shadowsocksr
+@reboot root    /usr/local/shadowsocksr/cron.sh
 {{< /codeblock >}}
+
+وقت آزمایش تنظیمات و اسکریپت راه‌اندازی ShadowsocksR فرا رسیده است. می‌توانید بصورت دستی فایل اسکریپت را پیش از راه‌اندازی مجدد سیستم اجرا نمایید:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
+$ /usr/local/shadowsocksr/cron.sh
+{{< /codeblock >}}
+
+تبریک! اگر همه چیز تا بدین جای کار خوب پیش‌رفته باشد، سرور VPN شما آماده است! حالا می‌توانید با یکی از کلاینت‌های ShadowsocksR به سرور متصل شوید و لاگ خروجی ShadowsocksR را کنترل نمایید تا ببیند همه چیز به خوبی کار می‌کند یا خیر. در صورتی که همه چیز موفقیت‌آمیر بود می‌توانید سرور را مجددا راه‌اندازی نمایید تا از صحت کارکرد <code>crontab</code> مطمئن شوید:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ reboot
