@@ -13,7 +13,7 @@ draft = true
 
 در ابتدای این مطلب آموزشی نحوه دریافت سرور رایگان ۵ ماهه از یکی از معتبرترین سرویس‌دهنده‌های سرور مجازی یا VPS به نام [UpCloud](https://upcloud.com/) را خواهیم آموخت.
 
-این سرور VPN قابلیت ارائه و فراهم نمودن فیلترشکن امن برای سیستم‌عامل‌های موبایل Android و iOS و همچنین سیستم‌عامل‌های دسکتاپ نظیر Microsoft Windows, macOS, GNU/Linux و در نهایت سیستم‌عامل‌های خانواده BSD از جمله FreeBSD, NetBSD, OpenBSD, TrueOS, DragonFlyBSD و ... را خواهد داشت.
+این سرور VPN قابلیت ارائه و فراهم نمودن فیلترشکن امن برای سیستم‌عامل‌های موبایل Android و iOS و همچنین سیستم‌عامل‌های دسکتاپ نظیر Microsoft Windows, macOS, GNU/Linux و در نهایت سیستم‌عامل‌های خانواده BSD از جمله FreeBSD, NetBSD, OpenBSD, TrueOS, DragonFlyBSD و ... را خواهد داشت. نکته قابل توجه این می‌باشد که این VPN در زمان قطعی اینترنت در زمان خیزش اخیر مردم ایران در ترکیب با روش‌های امن یا نا‌امن دیگر در پاره‌ای از موارد قادر به دور زدن قطعی‌ اینترنت و فیلترینگ با سرعت بسیار عالی و به طریقی امن بود! در صورت لزوم در مطلبی دیگر به چگونگی این امر خواهیم پرداخت.
 
 از نقطه نظر دانش فنی به منظور دنبال نمودن این راهنمای ویدیویی، تنها پیش‌نیاز دنبال نمودن این راهنما، آشنایی متوسط کاربر به استفاده از یکی از سیستم‌عامل‌های ویندوز یا مک، و استفاده از اینترنت می‌باشد.
 
@@ -1092,14 +1092,51 @@ $ reboot
 
 ## بروز نگه داشتن سرور
 
+بروزرسانی سرور VPN به منظور مقابله با آسیب‌پذیری‌های احتمالی آینده امری اجتناب ناپذیر در هر سیستم‌عاملی است. این امر برای چیدمان سرور VPN ما شامل ۳ مرحله می‌باشد:
+
+۱. بروزرسانی منظم FreeBSD با وصله‌های امنیتی
+
+۲. بروزرسانی بسته‌های نصب شده در سیستم‌عامل توسط ما با ابزار <code>pkgng</code>
+
+۳. بروزرسانی ShadowsocksR
+
+بدیهی است که نسخه‌های کلاینت ShadowsocksR که بر روی دستگاه کامپیوتر، لپ‌تاپ، و یا موبایل شما نصب می‌شوند نیز به طور منظم و مرتب نیازمند بروزرسانی می‌باشند.
+
+از طریق ابزار <code>crontab</code> می توان بصورت خودکار و به شکل روزانه بروزرسانی‌ها و وصله‌های امنیتی FreeBSD را دریافت نمود:
+
 {{< codeblock lang="sh" title="crontab -e -u root" >}}
 # fetch and notify root for system's security patches
 @daily  root    /usr/sbin/freebsd-update cron
 {{< /codeblock >}}
 
+پس از ذخیره به منظور بررسی محتویات <code>crontab</code>:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ crontab -l -u root
+SHELL=/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+MAILTO=""
+
+# shadowsocksr
+@reboot root    /usr/local/shadowsocksr/cron.sh
+
+# fetch and notify root for system's security patches
+@daily  root    /usr/sbin/freebsd-update cron
 {{< /codeblock >}}
+
+از این پس، اگر وصله‌ای وجود داشته باشد، بطور خودکار دریافت خواهد شد اما این وصله به صورت خودکار اعمال نخواهد شد. پس از ورود کاربر <code>root</code> به سیستم از سوی سیستم‌عامل پیامی به وی ارسال می‌شود، که با اجرای دستور <code>mail</code> قابل خواندن خواهد بود:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
+$ mail
+{{< /codeblock >}}
+
+در صورت تمایل کاربر <code>root</code> می‌تواند با اجرای دستور <code>freebsd-update</code> اقدام به نصب و اعمال وصله امنیتی نماید:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
+$ freebsd-update install
+{{< /codeblock >}}
+
+به منظور بررسی آسیب‌پذیری بسته‌های نصب شده، ابزار <code>pkgng</code> به ابزاری با نام <code>audit</code> مجهز شده است. در زمان اولین اجرای ابزار <code>audit</code> با یک پیام خطا برخورد خواهید نمود که با افزودن سوییچ <code>-F</code> این مشکل مرتفع خواهد شد:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ pkg audit
@@ -1108,15 +1145,23 @@ pkg: vulnxml file (null) does not exist. Try running 'pkg audit -F' first
 $ pkg audit -F
 Fetching vuln.xml.bz2: 100%  821 KiB 841.0kB/s    00:01    
 0 problem(s) in 0 installed package(s) found.
+{{< /codeblock >}}
 
+پس از اجرا نمودن دوره‌ای و منظم ابزار <code>audit</code> چنانچه آسیب‌پذیری در بسته‌های نصب شده سیستم وجود داشته باشد به شما اطلاع داده خواهد شد، در غیر اینصورت هیچ مشکلی گزارش نخواهد شد:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $  pkg audit
 0 problem(s) in 0 installed package(s) found.
 {{< /codeblock >}}
+
+در صورت گزارش آسیب‌پذیری توسط ابزار <code>audit</code>، توصیه می‌شود هرچه سریعتر بسته‌های سیستم را با اجرای دستورات ذیل بروزرسانی نمایید:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ pkg update
 $ pkg upgrade
 {{< /codeblock >}}
+
+به منظور بروزرسانی نسخه سرور ShadowsocksR می‌توانید بصورت منظم و دوره‌ای دستورات ذیل را اجرا نمایید:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ cd /usr/local/shadowsocksr
