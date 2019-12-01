@@ -1276,7 +1276,7 @@ $ proxychains aria2c -s16 -x16 https://download.freebsd.org/ftp/releases/amd64/a
 
 با دریافت افزونه‌های [uBlock Origin برای Firefox](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) و یا [uBlock Origin برای Chrome و Chromium](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en) و افزونه‌های مشابه برای سایر مرورگر‌ها و تنظیم و تست آن‌ها از حریم خصوصی خود مراقبت نمایید.
 
-## باز هم امنیت بیشتر!
+## باز هم امنیت بیشتر
 
 بدلیل ساده و کوتاه‌تر نگه‌داشتن مطلب، از توضیح برخی از بهترین تمرین‌های امنیت در این مطلب جلوگیری نمودم. برای مثال جهت افزایش امنیت می‌توان ShadowsocksR را توسط کاربری محدود با دسترسی‌های بسیار کمتر از کاربر <code>root</code> اجرا نمود تا در صورت نفوذ احتمالی به سیستم از طریق خرابکاری یا آسیب‌پذیری امنیتی احتمالی در ShadowsocksR، نفوذگر احتمالی دسترسی حداکثری به سیستم را بدست نیاورد. و یا حتی بهتر از آن، ShadowsocksR را در سیستمی مختص FreeBSD با نام Jails که ایده Docker در لینوکس از آن گرفته شده است، بصورت ایزوله اجرا نمود. اگر به این موضوع علاقمند هستید، جهت کسب اطلاعات بیشتر، مطالعه [مستندات رسمی Jails](https://www.freebsd.org/doc/handbook/jails.html) به شدت توصیه می‌شود.
 
