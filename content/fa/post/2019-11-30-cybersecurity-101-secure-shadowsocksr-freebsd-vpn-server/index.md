@@ -1184,12 +1184,16 @@ $ git pull
 
 در سیستم‌عامل macOS می‌توانید [ShadowsocksR-Live/ssrMac](https://github.com/ShadowsocksR-Live/ssrMac/releases) را نصب و پیکربندی نمایید.
 
-## نصب کلاینت در GNU/Linux یا سایر سیستم‌عامل‌های یونیکس یا شبه‌یونیکس
+## نصب کلاینت در GNU/Linux یا سایر سیستم‌عامل‌های یونیکس یا شبه‌یونیکس و تنظیم آن
+
+نصب و پیگربندی نسخه کلاینت ShadowsocksR در این گونه از سیستم‌عامل‌ها بسیار به نسخه سرور شبیه می‌باشد. در واقع همان نسخه‌ای از ShadowsocksR که در سرور نصب شده است را دریافت می‌نماییم (بدیهی است که مانند FreeBSD پیش‌نیاز‌های دریافت و اجرای آن بایستی پیش از این مرحله در سیستم نصب شده باشد):
 
 {{< codeblock lang="sh" title="اجرا در کلاینت" >}}
 $ cd /opt/
 $ sudo git clone https://github.com/shadowsocksrr/shadowsocksr.git
 {{< /codeblock >}}
+
+همانطور که مشاهده می‌نمایید، فایل تنظیمات کلاینت دقیقا با فایل نسخه سرور در FreeBSD یکسان می‌باشد:
 
 {{< codeblock lang="json" title="/opt/shadowsocksr/shadowsocks/shadowsocks-1443.json" >}}
 {
@@ -1219,15 +1223,22 @@ $ sudo git clone https://github.com/shadowsocksrr/shadowsocksr.git
 }
 {{< /codeblock >}}
 
+درست مانند نسخه FreeBSD، بدلیل وجود اطلاعات حساسی مانند پسورد در این فایل، سطوح دسترسی را طوری تنظیم می‌نماییم که تنها کاربر <code>root</code> توانایی خواندن آنرا داشته باشد:
+
 {{< codeblock lang="sh" title="اجرا در کلاینت" >}}
 $ sudo chmod 0400 /opt/shadowsocksr/shadowsocks/shadowsocks-1443.json
 {{< /codeblock >}}
+
+در سیستم‌عامل Gentoo، به منظور اجرای ShadowsocksR در زمان بوت سیستم و اتصال خودکار به سرور VPN، کافیست فایل ذیل را در سیستم‌تان ایجاد نمایید:
 
 {{< codeblock lang="json" title="/etc/local.d/ShadowsocksR-1443.start" >}}
 #!/bin/sh
 cd /opt/shadowsocksr/shadowsocks && python ./local.py -c ./shadowsocks-1443.json &
 {{< /codeblock >}}
 
+در غیر اینصورت می‌توانید اجرای خودکار ShadowsocksR را درست مانند نسخه FreeBSD از <code>crontab</code> کنترل نمایید.
+
+به منظور رد و بدل ترافیک نرم‌افزارهای غیرگرافیکی تحت خط فرمان یا نرم‌افزارهای گرافیکی و غیرگرافیکی که امکان تنظیم پراکسی SOCKS5 را ندارند، می‌توانید ابزار <code>proxychains</code> و یا <code>proxychains-ng</code> را در کنار ShadowsocksR در سیستم‌عامل خود نصب نمایید. سپس با اعمال تنظیمات ذیل امکان استفاده این گونه از نرم‌افزارها از ShadowsocksR را فراهم می‌نمایید:
 
 {{< codeblock lang="sh" title="/etc/proxychains.conf" >}}
 strict_chain
@@ -1238,6 +1249,18 @@ tcp_connect_time_out 8000
 [ProxyList]
 socks5 127.0.0.1 1443
 {{< /codeblock >}}
+
+برای نمونه چنانچه می‌خواهید نرم‌افزار دانلود منیجر <code>aria2c</code> فایلی را از طریق این فیلتر شکن دریافت نماید:
+
+{{< codeblock lang="sh" title="aria2c - دریافت فایل به شکل مستقیم" >}}
+$ aria2c -s16 -x16 https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-memstick.img
+{{< /codeblock >}}
+
+{{< codeblock lang="sh" title="aria2c - دریافت فایل با استفاده از پراکسی" >}}
+$ proxychains aria2c -s16 -x16 https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-memstick.img
+{{< /codeblock >}}
+
+همانطور که حدس زده‌اید، از این پس به منظور بهره‌مندی از ShadowsocksR، تنها کافیست <code>proxychains</code> را پیش از هر دستوری در خط فرمان اضافه نمایید.
 
 **نکته**: <code>proxychains</code> به ترتیب زیر فایل تنظیمات را جستجو می‌نماید:
 
@@ -1252,6 +1275,10 @@ socks5 127.0.0.1 1443
 ## مراقب رخنه امنیتی WebRTC Leak Test باشید!
 
 با دریافت افزونه‌های [uBlock Origin برای Firefox](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) و یا [uBlock Origin برای Chrome و Chromium](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en) و افزونه‌های مشابه برای سایر مرورگر‌ها و تنظیم و تست آن‌ها از حریم خصوصی خود مراقبت نمایید.
+
+## باز هم امنیت بیشتر!
+
+بدلیل ساده و کوتاه‌تر نگه‌داشتن مطلب، از توضیح برخی از بهترین تمرین‌های امنیت در این مطلب جلوگیری نمودم. برای مثال جهت افزایش امنیت می‌توان ShadowsocksR را توسط کاربری محدود با دسترسی‌های بسیار کمتر از کاربر <code>root</code> اجرا نمود تا در صورت نفوذ احتمالی به سیستم از طریق خرابکاری یا آسیب‌پذیری امنیتی احتمالی در ShadowsocksR، نفوذگر احتمالی دسترسی حداکثری به سیستم را بدست نیاورد. و یا حتی بهتر از آن، ShadowsocksR را در سیستمی مختص FreeBSD با نام Jails که ایده Docker در لینوکس از آن گرفته شده است، بصورت ایزوله اجرا نمود. اگر به این موضوع علاقمند هستید، جهت کسب اطلاعات بیشتر، مطالعه [مستندات رسمی Jails](https://www.freebsd.org/doc/handbook/jails.html) به شدت توصیه می‌شود.
 
 ## تست سرعت VPN
 
