@@ -447,10 +447,14 @@ mamadou@xxx.xxx.xxx.xxx: Permission denied (publickey).
 
 ## تنظیم DNS Cache با استفاده از سرویس unbound
 
+سرویس <code>unbound</code> به عنوان یک Local Cache به منظور تسریع پرس‌وجو‌های دامین بکار می‌رود. بدلیل اینکه سرویس <code>unbound</code> هنوز به شکل دائمی در سرور فعال نشده است، جهت انجام تنظیمات آنرا یکبار راه‌اندازی می‌نماییم. پس از آن اقدام به افزودن DNS Serverهای بسیار سریع و امن Cloudflare ‌جهت حل پرس‌وجوهای دامنه می‌نماییم:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ service local_unbound onestart
 $ local-unbound-setup 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
 {{< /codeblock >}}
+
+اگر دو دستور فوق با موفقیت اجرا شده باشند، اثرات اجرای آن‌ها بایستی در فایل‌های <code>/etc/resolv.conf</code> و <code>/etc/unbound/forward.conf</code> مشاهده شود:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ cat /etc/resolv.conf
@@ -472,24 +476,32 @@ forward-zone:
 	forward-addr: 2606:4700:4700::1001
 {{< /codeblock >}}
 
-{{< codeblock lang="sh" title="" >}}
+به جهت جلوگیری از رونویسی تنظیمات توسط سایر سرویس‌های شبکه نظیر DHCP، با تنظیم Flag‌های مربوطه، هر دو فایل به معنای واقعی کلمه فقط خواندنی می‌نماییم؛ به صورتی که حتی کاربر مدیر سیستم یعنی <code>root</code> توان پاک نمودن یا تغییر آن‌ها را نداشته باشد:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ chflags schg /etc/resolv.conf
 $ chflags schg /etc/unbound/forward.conf
 {{< /codeblock >}}
 
-{{< codeblock lang="sh" title="" >}}
+پس از تنظیم Flagهای مربوطه می‌توانید صحت این موضوع را آزمایش نمایید:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ rm -f /etc/resolv.conf
 $ cat  /etc/resolv.conf
 $ rm -f /etc/unbound/forward.conf
 $ cat  /etc/unbound/forward.conf
 {{< /codeblock >}}
 
-{{< codeblock lang="sh" title="" >}}
+درصورتی که بنا به هر دلیلی پشیمان شدید یا نیاز به تغییر یا حذف این فایل‌ها داشتید، می‌توانید با دستورات ذیل هر دو فایل را به حالت نرمال برگردانید، در غیر اینصورت از اجرای دستورات ذیل خود‌داری کنید به این دلیل که در راه‌اندازی مجدد سرور ممکن است در دسترسی به شبکه بر روی آن با اختلال مواجه شوید:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ chflags noschg /etc/resolv.conf
 $ chflags noschg /etc/unbound/forward.conf
 {{< /codeblock >}}
 
 ## تنظیمات عمومی
+
+زمان انجام تنظیمات عمومی سرور فرا رسیده است. احتمالا در فایل ذیل که فایل اصلی تنظیمات سیستم‌عامل FreeBSD می‌باشد نیاز داشته باشید که محتوای متغیر <code>hostname</code> را تغییر دهید:
 
 {{< codeblock lang="sh" title="/etc/rc.conf" >}}
 # keymap
@@ -541,15 +553,60 @@ ntpd_sync_on_start="YES"
 sshd_enable="YES"
 {{< /codeblock >}}
 
+توجه داشتبه باشید که برخلاف رفتار سنتی گنو/لینوکس که فارغ از سازنده یا نوع درایور کارت شبکه آنرا <code>eth0</code> ,<code>eth1</code>, <code>eth2</code> و ... نامگذاری می‌نماید، در FreeBSD نام دستگاه کارت شبکه بر اساس نوع درایور تعیین می‌شود. برای مثال در سرور مجازی ما در UpCloud نام کارت‌های شبکه <code>vtnet0</code> ,<code>vtnet1</code>, <code>vtnet2</code> تعیین شده است. به منظور اطلاع از نام کارت شبکه خود در این سیستم‌عامل دستور <code>ifconfig</code> را اجرا نموده سپس تنظیمات مربوط به شبکه در فایل فوق را متناسب با آن ویرایش نمایید:
+
+{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
+$ ifconfig
+vtnet0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=6c07bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,TSO4,TSO6,LRO,VLAN_HWTSO,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
+	ether 1e:ce:74:5e:41:7c
+	inet 94.237.60.78 netmask 0xfffffc00 broadcast 94.237.63.255
+	media: Ethernet 10Gbase-T <full-duplex>
+	status: active
+	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+vtnet1: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=6c07bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,TSO4,TSO6,LRO,VLAN_HWTSO,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
+	ether 1e:ce:74:5e:d8:c7
+	inet 10.2.7.144 netmask 0xfffffc00 broadcast 10.2.7.255
+	media: Ethernet 10Gbase-T <full-duplex>
+	status: active
+	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+vtnet2: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=6c07bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,TSO4,TSO6,LRO,VLAN_HWTSO,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
+	ether 1e:ce:74:5e:7f:d5
+	inet6 fe80::1cce:74ff:fe5e:7fd5%vtnet2 prefixlen 64 scopeid 0x3
+	inet6 2a04:3541:1000:500:1cce:74ff:fe5e:7fd5 prefixlen 64 autoconf
+	media: Ethernet 10Gbase-T <full-duplex>
+	status: active
+	nd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
+	options=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
+	inet6 ::1 prefixlen 128
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x4
+	inet 127.0.0.1 netmask 0xff000000
+	groups: lo
+	nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
+{{< /codeblock >}}
+
+توجه داشته باشید که کارت شبکه چهارم در خروجی نمونه فوق، کارت شبکه به اصطلاح Loopback می‌باشد که مفهومی رایج در تمامی سیستم‌عامل‌های مدرن مجهز به کارت شبکه می‌باشد. این کارت شبکه مجازی به منظور تعیین آدرس <code>localhost</code> یا همان <code>127.0.0.1</code> در IPv4 و <code>::1</code> در IPv6 کاربرد دارد و به صورت خودکار تنظیم می‌شود. بنابراین نیازی به انجام تنظیمات در فایل <code>/etc/rc.conf</code> ندارد.
+
+همانطور که احتمالا تاکنون متوجه شده‌اید، در فایل <code>/etc/rc.conf</code> برخی سرویس‌های موجود در سیستم‌عامل FreeBSD، بنا به این دلیل که اولا در یک سرور مختص VPN بدان‌ها نیاز نداریم و دوما به دلایل امنیتی (اجرا شدن کد کمتر یعنی آسیب‌پذیری کمتر) غیرفعال شده‌اند.
+
+فایل <code>/etc/sysctl.conf</code> به منظور انجام تنظیمات کرنل یا هسته سیستم‌عامل بکار می‌رود:
+
 {{< codeblock lang="sh" title="/etc/sysctl.conf" >}}
 # coredump
 kern.coredump=0
 {{< /codeblock >}}
 
+تنظیماتی که در این فایل انجام می‌شوند تا راه‌اندازی مجدد سرور اعمال نمی‌شوند. بنابراین جهت اعمال آنی این تنظیمات از دستور <code>sysctl</code> استفاده می‌نماییم که تا پیش از راه‌اندازی مجدد سرور یا اجرای مجدد این دستور، مقدار مورد نظر ما را بر روی متغیرهای کرنل اعمال می‌سازد. با راه‌اندازی مجدد سرور تنظیمات از فایل <code>/etc/rc.conf</code> اعمال خواهند شد:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ sysctl kern.coredump=0
 kern.coredump: 1 -> 0
 {{< /codeblock >}}
+
+جهت اعمال تنظیمات شبکه و نام سرور که در فایل <code>/etc/rc.conf</code> انجام شد دستورات ذیل را اجرا خواهیم نمود. دقت نمایید که این دستورات را از طریق نشست SSH اجرا ننمایید چرا که به یقین باعث قطع دسترسی به سرور خواهد شد. می‌توانید پس از اطمینان از صحیح بودن تنظیمات شبکه سرور مجازی را راه‌اندازی مجدد نمایید و یا این دستورات را از طریق VNC یا Web Console اجرا نمایید:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ service netif restart
@@ -557,18 +614,35 @@ $ service routing restart
 $ service hostname restart
 {{< /codeblock >}}
 
-{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
+پس از اعمال تنظیمات IPv4 و IPv6 جهت آزمایش در دسترس بودن سرور دستورات ذیل را اجرا نمایید:
+
+{{< codeblock lang="cmd" title="اجرا در سیستم‌عامل ویندوز" >}}
+> ping -a xxx.xxx.xxx.xxx
+> ping -6 -a xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
+{{< /codeblock >}}
+
+{{< codeblock lang="sh" title="اجرا در سیستم‌عامل‌های یونیکسی و شبه‌یونیکسی" >}}
 $ ping xxx.xxx.xxx.xxx
 $ ping6 xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
 {{< /codeblock >}}
 
+چنانچه شبکه‌ای که در آن هستید امکان استفاده از IPv6 را ندارد و یا تنظیمات IPv6 در کامیپوتر شما انجام نشده است می‌توانید در دسترس بودن سرور از طریق IPv6 را از روی خود سرور آزمایش نمایید:
+
+{{< codeblock lang="sh" title="اجرا در سرور" >}}
+$ ping6 xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
+{{< /codeblock >}}
+
 ## سخت‌تر نمودن FreeBSD
+
+برخی از تنظیمات کرنل فقط در زمان بوت شدن کرنل امکان تنظیم دارند. این تنظیمات بایستی در فایل <code>/boot/loader.conf</code> اعمال شوند.
 
 {{< codeblock lang="sh" title="/boot/loader.conf" >}}
 # hardening
 security.bsd.allow_destructive_dtrace=0
 {{< /codeblock >}}
 
+ مابقی تنظیمات سخت‌سازی FreeBSD در فایل <code>/etc/sysctl.conf</code> انجام و از طریق <code>sysctl</code> اعمال می‌شوند:
+ 
 {{< codeblock lang="sh" title="/etc/sysctl.conf" >}}
 # hardening
 security.bsd.see_other_uids=0
@@ -605,6 +679,8 @@ security.bsd.stack_guard_page: 1 -> 1
 
 ## سخت‌تر نمودن سیستم در مقابل حملات Denial of Service
 
+علیرغم اینکه به نظر می‌رسد <code>net.inet.tcp.syncookies</code> بصورت پیش‌فرض روشن می‌باشد، با فعال‌سازی صریح آن از طریق <code>/etc/sysctl.conf</code> از فعال ماندن آن تحت هر شرایطی اطمینان حاصل می‌نماییم. این ویژگی به منظور مقابله با حملات انکار سرویس یا DoS در نظر گرفته شده است:
+
 {{< codeblock lang="sh" title="/etc/sysctl.conf" >}}
 # SYN flood DoS attack protection
 net.inet.tcp.syncookies=1
@@ -616,6 +692,8 @@ net.inet.tcp.syncookies: 1 -> 1
 {{< /codeblock >}}
 
 ## فعال‌سازی و تنظیم دیوار آتش
+
+فری‌بی‌اس‌دی دارای سه فایروال است که بصورت پیش‌فرض در Base System آن تعبیه شده و در دسترس می‌باشند: PF, IPFW و IPFILTER که به عنوان IPF نیز شناخته می شود. بدلیل سادگی استفاده و در عین‌حال کارآمد بودن در این مطلب از IPFW به عنوان Firewall یا دیوار آتش استفاده می‌نماییم. به منظور ساده‌سازی حداکثری و مدیریت ساده‌تر فایروال از طریق فایل <code>/etc/rc.conf</code> اسکریپت ذیل را به سیستم اضافه می‌نماییم:
 
 {{< codeblock lang="sh" title="/usr/local/etc/rc.firewall" >}}
 #!/usr/bin/env sh
@@ -689,9 +767,13 @@ quietstop)
 esac
 {{< /codeblock >}}
 
+پس از ایجاد اسکریپت سطوح دسترسی لازمه جهت اجرای آن را تنظیم می‌نماییم:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ chmod u-w,ugo+x /usr/local/etc/rc.firewall
 {{< /codeblock >}}
+
+زمان تنظیم فایروال فرا رسیده است. اسکریپت فوق با توجه به تنظیمات ذیل به صورت پیش‌فرض تمامی پورت‌های سرور را بلاک خواهد نمود و در نتیجه راه نفوذ به آن‌ها بسته خواهد شد؛ مگر پورت‌هایی که در قسمت‌های <code>firewall_myservices_tcp</code> و <code>firewall_myservices_udp</code> تعیین شده‌اند:
 
 {{< codeblock lang="sh" title="/etc/rc.conf" >}}
 # ipfw
@@ -703,20 +785,49 @@ firewall_logdeny="YES"
 firewall_coscripts="/usr/local/etc/rc.firewall"
 firewall_myservices_rules_id_start="56000"
 firewall_myservices_rules_id_step="10"
+firewall_myservices_tcp="ssh https"
+firewall_myservices_udp="https"
+{{< /codeblock >}}
+
+در تنظیمات فوق، پورت‌ ssh (پورت شماره ۲۲) را برای پروتکل TCP و https (پورت شماره ۴۴۳) را برای هر دو پروتکل TCP و UDP باز نموده‌ایم. در این قسمت می‌توانید پورت‌ها را یا با شماره و یا با نام شناخته شده و استاندارد آن‌ها باز نمایید. برای مثال می‌توان تنظیمات فوق را بدین شکل نوشت:
+
+{{< codeblock lang="sh" title="تعیین پورت‌های باز با شماره پورت به جای نام" >}}
 firewall_myservices_tcp="22 443"
 firewall_myservices_udp="443"
 {{< /codeblock >}}
+
+و یا حتی ترکیبی از هر دو حالت:
+
+{{< codeblock lang="sh" title="مثال: ترکیبی از تعیین پورت‌های باز با شماره پورت و نام" >}}
+firewall_myservices_tcp="143 1441 2020 domain http https imaps pop3s smtp smtps"
+firewall_myservices_udp="143 2020 domain"
+{{< /codeblock >}}
+
+اگر پورت SSH را قبلا به پورتی غیر از <code>۲۲</code> تغییر داده‌اید مشخصا اینجا دیگر نمی‌توانید با نام آن پورت را باز نمایید و لازم است شماره پورت را جهت باز نمودن آن ذکر نمایید. علاوه برآن ما قصد داریم ترافیک فیلترشکن ShadowsocksR را از طریق پورت <code>۴۴۳</code> یا همان پورت استاندارد https رد و بدل نماییم، پس بایستی آن را برای هر دو پروتکل TCP و UDP باز نماییم. به همین دلیل در تنظیمات فوق علاوه بر پورت SSH، این پورت را باز نموده‌ایم.
+
+اما جهت پی‌بردن به اینکه کدام پورت‌ها چه نامی دارند و یا هر سرویس به شکل استاندارد از چه پورت استفاده می‌نماید، برای مثال می‌توانید از دستوراتی مشابه آنچه که در ادامه می‌آید استفاده نمایید:
+
+{{< codeblock lang="sh" title="اجرا در سرور" >}}
+$ cat /etc/services | grep 'domain'
+domain		 53/tcp	   #Domain Name Server
+domain		 53/udp	   #Domain Name Server
+
+$ cat /etc/services | grep '143'
+imap		143/tcp	   imap2 imap4	#Interim Mail Access Protocol v2
+imap		143/udp	   imap2 imap4	#Interim Mail Access Protocol v2
+{{< /codeblock >}}
+
+جهت انجام تنظیمات Logging فایروال IPFW در کرنل:
 
 {{< codeblock lang="sh" title="/etc/sysctl.conf" >}}
 # ipfw
 net.inet.ip.fw.verbose_limit=5
 {{< /codeblock >}}
 
-{{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
-$ service ipfw restart
-{{< /codeblock >}}
+از آنجایی که IPFW هنوز راه‌اندازی نشده است ابتدا سرویس آنرا راه‌اندازی و سپس تنظیمات مربوط به  Logging فایروال IPFW در کرنل را اعمال می‌نماییم:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
+$ service ipfw start
 $ sysctl net.inet.ip.fw.verbose_limit=5
 net.inet.ip.fw.verbose_limit: 0 -> 5
 {{< /codeblock >}}
