@@ -332,6 +332,8 @@ $ nano -w /path/to/some/file
 set nowrap
 {{< /codeblock >}}
 
+[جهت کسب اطلاعات بیشتر راجع به غیرفعال نمودن Text-Wrapping در نانو این مطلب را مطالعه نمایید](https://www.babaei.net/blog/nano-do-not-wrap-text/).
+
 کاربران پیشرفته‌تر می‌توانند از سایر ویرایشگر‌های مورد علاقه خود بهرمنده شوند. برای مثال بشخصه ویرایشگر Neovim را بر هر دو ویرایشگر <code>vi</code> و <code>nano</code> ترجیح می‌دهم:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
@@ -832,12 +834,20 @@ $ sysctl net.inet.ip.fw.verbose_limit=5
 net.inet.ip.fw.verbose_limit: 0 -> 5
 {{< /codeblock >}}
 
+[جهت کسب اطلاعات بیشتر راجع به IPFW این مطلب را مطالعه نمایید](https://www.babaei.net/blog/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/).
+
 ## فعال‌سازی و تنظیم سیستم تشخیص و پیشگیری از نفوذ SSHGuard
+
+سرویس [SSHGuard](https://www.sshguard.net/) یک IDPS (Intrusion Detection and Prevention System) یا سیستم تشخیص و پیشگیری از نفوذ ‌می‌باشد که می تواند پیام های ورود به سیستم را زیر نظرگرفته و برای الگوهای شناخته شده تجزیه و تحلیل نماید؛ این سیستم می‌تواند در صورت شناسایی یک حمله، مانند چندین سعی در ورود ناموفق در فاصله زمانی کوتاه، آن آدرس IP متخلف را از طریق فایروال موجود در سیستم مسدود نماید. این امکان وجود دارد که متخلفان پس از یک بازه زمانی از حالت مسدود خارج شوند، اما می توان در صورت سعی مجدد، با استفاده از گزینه لیست سیاه، برای مدت طولانی‌تری این متخلفین را مسدود نمود. با کمک این سرویس نفوذ به سیستم از طریق [حملات جستجوی فراگیر یا Brute-force](https://fa.wikipedia.org/wiki/%D8%AD%D9%85%D9%84%D9%87_%D8%AC%D8%B3%D8%AA%D8%AC%D9%88%DB%8C_%D9%81%D8%B1%D8%A7%DA%AF%DB%8C%D8%B1) کاملا غیرممکن می‌شود.
+
+به منظور نصب SSHGuard:
 
 {{< codeblock lang="sh" title="" >}}
 $ pkg install security/sshguard
 $ rehash
 {{< /codeblock >}}
+
+انجام تنظیمات SSHGuard در فایل اصلی تنظیمات فری‌بی‌اس‌دی <code>/etc/rc.conf</code>:
 
 {{< codeblock lang="sh" title="/etc/rc.conf" >}}
 # sshgaurd
@@ -852,15 +862,19 @@ sshguard_whitelistfile="/usr/local/etc/sshguard.whitelist"
 sshguard_flags=""
 {{< /codeblock >}}
 
+راه‌اندازی سرویس SSHGuard:
+
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ service sshguard start
 {{< /codeblock >}}
 
-نکته‌ای که ذکر آن حائز اهمیت به نظر می‌رسد این است که در FreeBSD امکان استفاده و پیکربندی سایر نرم‌افزارهای IDS و IPS نظیر <code>security/ossec-hids-local</code>, <code>security/suricata</code>, <code>security/snort</code>, <code>security/chkrootkit</code>, <code>security/revealrk</code>, <code>security/rkhunter</code> و ... به منظور افزایش حداکثری ضریب امنیت وجود دارد و امکان نصب و پیکربندی آن‌ها در این مطلب وجود داشت، اما برای کاربرد در سرور مدنظر ما که کاربردش تنها یک سرویس VPN و سرور SSH می‌باشد، کمی بیش از حد به نظر می‌رسد. لذا در اینجا به ذکر نام آن‌ها بسنده می‌نمایم.
+نکته‌ای که ذکر آن حائز اهمیت به نظر می‌رسد این است که در FreeBSD امکان استفاده و پیکربندی سایر نرم‌افزارهای IDS (Intrusion Detection System) و IPS (Intrusion Prevention System) نظیر <code>security/ossec-hids-local</code>, <code>security/suricata</code>, <code>security/snort</code>, <code>security/chkrootkit</code>, <code>security/revealrk</code>, <code>security/rkhunter</code> و ... به منظور افزایش حداکثری ضریب امنیت وجود دارد و امکان نصب و پیکربندی آن‌ها در این مطلب وجود داشت، اما برای کاربرد در سرور مدنظر ما که کاربردش تنها یک سرویس VPN و سرور SSH می‌باشد، کمی بیش از حد به نظر می‌رسد. لذا در اینجا به ذکر نام آن‌ها بسنده می‌نمایم.
 
-
+[جهت اطلاعات بیشتر راجع به SSHGuard این مطلب را مطالعه نمایید](https://www.babaei.net/blog/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/).
 
 ## فعاال سازی TCP Fast Open
+
+ویژگی TCP Fast Open (TFO) ، افزونه ای برای پروتکل كنترل انتقال (TCP) است كه با فعال كردن داده ها در طی تبادل اولیه TCP SYN ، باعث كاهش تأخیر شبکه می شود.
 
 {{< codeblock lang="sh" title="/etc/sysctl.conf" >}}
 # tcp fast open (TFO)
@@ -1022,6 +1036,8 @@ $ crontab -l -u root
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
 $ reboot
 {{< /codeblock >}}
+
+[جهت کسب اطلاعات بیشتر راجع به crontab این مطلب را مطالعه نمایید](https://www.babaei.net/blog/the-proper-way-of-adding-a-cron-job/).
 
 ## بروز نگه داشتن سرور
 
