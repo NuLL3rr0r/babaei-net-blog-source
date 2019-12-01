@@ -182,7 +182,7 @@ $ ssh mamadou@xxx.xxx.xxx.xxx
 
 ## SSH Tunneling فیلترشکن امن و قابل اتکا، اما کند
 
-جهت انجام تنظیمات Socks5 می‌توانید افزونه‌های [FoxyProxy Standard برای مرورگر فایرفاکس](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) و [FoxyProxy Standard برای کروم](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp?hl=en) را نصب نمایید.
+جهت انجام تنظیمات Socks5 می‌توانید افزونه‌های [FoxyProxy Standard برای مرورگر فایرفاکس](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/) و [FoxyProxy Standard برای کروم یا کرومیوم](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp?hl=en) را نصب نمایید.
 
 به منظور انجام SSH Tunneling در سیستم‌عامل ویندوز کافیست مقدار متغیر <code>LOCAL_SOCKS5_PORT</code> در فایل اسکریپت <code>kitty-ssh.cmd</code> را تنظیم نموده و اجرا نمایید.
 
