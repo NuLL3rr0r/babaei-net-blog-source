@@ -1071,7 +1071,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
 
 # shadowsocksr
-@reboot root    /usr/local/shadowsocksr/cron.sh
+@reboot     /usr/local/shadowsocksr/cron.sh
 {{< /codeblock >}}
 
 پس از ذخیره فایل <code>crontab</code> برای کاربر <code>root</code> از درست بودن محتویات آن مطمئن شوید:
@@ -1083,7 +1083,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
 
 # shadowsocksr
-@reboot root    /usr/local/shadowsocksr/cron.sh
+@reboot     /usr/local/shadowsocksr/cron.sh
 {{< /codeblock >}}
 
 وقت آزمایش تنظیمات و اسکریپت راه‌اندازی ShadowsocksR فرا رسیده است. می‌توانید بصورت دستی فایل اسکریپت را پیش از راه‌اندازی مجدد سیستم اجرا نمایید:
@@ -1128,7 +1128,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 MAILTO=""
 
 # shadowsocksr
-@reboot root    /usr/local/shadowsocksr/cron.sh
+@reboot     /usr/local/shadowsocksr/cron.sh
 
 # fetch and notify root for system's security patches
 @daily  root    /usr/sbin/freebsd-update cron
