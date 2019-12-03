@@ -1,11 +1,14 @@
 +++
 title = "امنیت سایبری ۱۰۱ ویژه فعالان حقوق بشر، فعالان مدنی، فعالان سیاسی، روزنامه نگاران و براندازان: سرور VPN بسیار امن ShadowsocksR مبتنی بر سیستم‌عامل FreeBSD"
 slug = "cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server"
-date = 2019-12-02T00:40:00+02:00
+date = 2019-12-03T05:59:00+02:00
 tags = [ "Censorship", "Cybersecurity", "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "Security", "ShadowsocksR", "UNIX", "VPN" ]
 toc = true
-draft = true
 +++
+
+{{< youtube ed94Pr4FNiA >}}
+
+<br />
 
 در این مطلب به چگونگی راه‌اندازی سرور VPN بسیار امن با استفاده از [ShadowsocksR](https://github.com/shadowsocksrr) و سیستم‌عامل [FreeBSD](https://www.freebsd.org/) به زبان ساده خواهیم پرداخت. همچنین نحوه Hardening یا سخت‌سازی آنرا جهت افزایش ضریب ایمنی خواهیم آموخت. به منظور افزایش راندمان و کارایی حداکثری آن، نحوه Perfromance Tuning یا تنظیم کارایی Network Stack سیستم‌عامل FreeBSD را خواهیم آموخت. دلیل انتخاب سیستم عامل FreeBSD، امنیت بسیار بالا، سادگی استفاده، پایداری بی نظیر آن، و در نهایت تسلط نگارنده این مطلب بدلیل [توسعه، پورت، و نگهداری چندین نرم افزار به عنوان بخشی از مجموعه پورت های رسمی FreeBSD](https://www.freebsd.org/cgi/ports.cgi?query=info%40babaei.net&stype=maintainer&sektion=all) می باشد.
 
