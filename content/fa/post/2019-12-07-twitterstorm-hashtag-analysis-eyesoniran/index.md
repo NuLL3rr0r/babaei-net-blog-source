@@ -1,5 +1,5 @@
 +++
-title = "آنالیز طوفان توییتری شبکه هشتگ #EyesOnIran"
+title = "آنالیز طوفان توییتری و شبکه هشتگ #EyesOnIran"
 slug = "twitterstorm-hashtag-analysis-eyesoniran"
 date = 2019-12-07T20:28:00+01:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Free Internet For Iran", "Iran", "Iran Protests", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]

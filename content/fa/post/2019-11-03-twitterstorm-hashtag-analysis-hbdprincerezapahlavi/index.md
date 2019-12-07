@@ -1,5 +1,5 @@
 +++
-title = "آنالیز طوفان توییتری شبکه هشتگ #HBDPrinceRezaPahlavi"
+title = "آنالیز طوفان توییتری و شبکه هشتگ #HBDPrinceRezaPahlavi"
 slug = "twitterstorm-hashtag-analysis-hbdprincerezapahlavi"
 date = 2019-11-03T18:53:00+01:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Constitutional Monarchy", "Islamic Republic Of Iran", "Monarchy", "Pahlavi", "Reza Shah", "Shah", "Shah of Iran", "Social Media", "Twitter", "Twitterstorm" ]
