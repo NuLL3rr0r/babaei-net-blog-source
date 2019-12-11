@@ -1297,7 +1297,7 @@ $ proxychains aria2c -s16 -x16 https://download.freebsd.org/ftp/releases/amd64/a
 
 به منظور سنجش کارایی و سرعت سرویس VPNی که راه‌اندازی نموده‌ایم، میتوان در کامپیوتر به [Speedtest by Ookla](https://www.speedtest.net/) مراجعه نمود. همچنین در سیستم‌عامل موبایل می‌توانید از اپلیکیشن [Speedtest by Ookla برای اندروید](https://play.google.com/store/apps/details?id=org.zwanoo.android.speedtest.gworld) و [Speedtest by Ookla برای آی‌او‌اس](https://apps.apple.com/us/app/speedtest-by-ookla/id300704847)، بدین منظور استفاده نمایید.
 
-## فیلترشکن حلال با احضار نمودن روح پلید BSD
+## فیلترشکن شرعی و حلال بوسیله احضار نمودن روح پلید BSD
 
 بصورت پیش‌فرض صفحه آغازین FreeBSD در هنگام شروع بکار بدین شکل خواهد بود:
 
