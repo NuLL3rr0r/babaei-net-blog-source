@@ -632,8 +632,8 @@ $ service hostname restart
 پس از اعمال تنظیمات IPv4 و IPv6 جهت آزمایش در دسترس بودن سرور دستورات ذیل را اجرا نمایید:
 
 {{< codeblock lang="cmd" title="اجرا در سیستم‌عامل ویندوز" >}}
-> ping -a xxx.xxx.xxx.xxx
-> ping -6 -a xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
+> ping xxx.xxx.xxx.xxx
+> ping -6 xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
 {{< /codeblock >}}
 
 {{< codeblock lang="sh" title="اجرا در سیستم‌عامل‌های یونیکسی و شبه‌یونیکسی" >}}
@@ -987,7 +987,18 @@ $ ulimit -Sn
 
 پیش از دریافت و اجرای ShadowsocksR در سرور، بایستی نیازمندی‌های دریافت و اجرای آن را فراهم نمود:
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
-$ pkg install security/ca_root_nss devel/git dns/c-ares devel/libev devel/py-typing devel/py-typing-extensions lang/python math/py-pybloom security/libsodium security/py-m2crypto security/mbedtls
+$ pkg install \
+    security/ca_root_nss \
+    devel/git \
+    dns/c-ares \
+    devel/libev \
+    devel/py-typing \
+    devel/py-typing-extensions \
+    lang/python \
+    math/py-pybloom \
+    security/libsodium \
+    security/py-m2crypto \
+    security/mbedtls
 $ rehash
 {{< /codeblock >}}
 
