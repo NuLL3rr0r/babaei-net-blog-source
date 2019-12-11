@@ -1296,3 +1296,21 @@ $ proxychains aria2c -s16 -x16 https://download.freebsd.org/ftp/releases/amd64/a
 ## تست سرعت VPN
 
 به منظور سنجش کارایی و سرعت سرویس VPNی که راه‌اندازی نموده‌ایم، میتوان در کامپیوتر به [Speedtest by Ookla](https://www.speedtest.net/) مراجعه نمود. همچنین در سیستم‌عامل موبایل می‌توانید از اپلیکیشن [Speedtest by Ookla برای اندروید](https://play.google.com/store/apps/details?id=org.zwanoo.android.speedtest.gworld) و [Speedtest by Ookla برای آی‌او‌اس](https://apps.apple.com/us/app/speedtest-by-ookla/id300704847)، بدین منظور استفاده نمایید.
+
+## فیلترشکن حلال با احضار نمودن روح پلید BSD
+
+بصورت پیش‌فرض صفحه آغازین FreeBSD در هنگام شروع بکار بدین شکل خواهد بود:
+
+{{< figure src="/blog/cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server/default-freebsd-bootloader.webp" alt="صفحه آغازین فری‌بی‌اس‌دی پیش از شروع بکار سیستم‌عامل" title="صفحه آغازین فری‌بی‌اس‌دی پیش از شروع بکار سیستم‌عامل" >}}
+
+بصورت سنتی FreeBSD دارای یک [روح پلید به نام Beastie](https://en.wikipedia.org/wiki/BSD_Daemon) می‌باشد که به عنوان [طلسم خوش‌شانسی](https://en.wikipedia.org/wiki/Mascot) این سیستم‌عامل بکار می‌رود. بمنظور احضار این روح پلید در هنگام آغاز بکار نسخه FreeBSD خود این خط را به فایل <code>/boot/loader.conf</code> اضافه نمایید :smiley:
+
+
+{{< codeblock lang="sh" title="/boot/loader.conf" >}}
+# Summon Beastie
+loader_logo="beastie"
+{{< /codeblock >}}
+
+از این پس صفحه آغازین FreeBSD در هنگام بوت سیستم‌عامل بدین شکل نمایش داده می‌شود:
+
+{{< figure src="/blog/cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server/beastie-on-freebsd-bootloader.webp" alt="احضار روح پلید فری‌بی‌اس‌دی: Beastie" title="احضار روح پلید فری‌بی‌اس‌دی: Beastie" >}}
