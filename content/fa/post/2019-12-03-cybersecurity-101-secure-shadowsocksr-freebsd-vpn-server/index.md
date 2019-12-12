@@ -10,6 +10,8 @@ toc = true
 
 <br />
 
+**به روز رسانی ۱ [۲۱ آذرماه ۱۳۹۸]:** لینک قسمت دوم به ادامه مطلب اضافه شد.
+
 در این مطلب به چگونگی راه‌اندازی سرور VPN بسیار امن با استفاده از [ShadowsocksR](https://github.com/shadowsocksrr) و سیستم‌عامل [FreeBSD](https://www.freebsd.org/) به زبان ساده خواهیم پرداخت. همچنین نحوه Hardening یا سخت‌سازی آنرا جهت افزایش ضریب ایمنی خواهیم آموخت. به منظور افزایش راندمان و کارایی حداکثری آن، نحوه Perfromance Tuning یا تنظیم کارایی Network Stack سیستم‌عامل FreeBSD را خواهیم آموخت. دلیل انتخاب سیستم عامل FreeBSD، امنیت بسیار بالا، سادگی استفاده، پایداری بی نظیر آن، و در نهایت تسلط نگارنده این مطلب بدلیل [توسعه، پورت، و نگهداری چندین نرم افزار به عنوان بخشی از مجموعه پورت های رسمی FreeBSD](https://www.freebsd.org/cgi/ports.cgi?query=info%40babaei.net&stype=maintainer&sektion=all) می باشد.
 
 در مقام مقایسه از نقطه‌نظر امنیتی، تعداد آسیب‌پذیری‌های سیستم‌عامل‌های مختلف از سال ۱۹۹۹ تاکنون (مدت ۲۰ سال): [FreeBSD تعداد ۳۴۸ مورد](https://www.cvedetails.com/product/7/?q=Freebsd)، [Red Hat Enterprise Linux تعداد ۶۶۱ مورد](https://www.cvedetails.com/product/78/Redhat-Enterprise-Linux.html?vendor_id=25)، [Linux Kernel تعداد ۲۳۳۳ مورد](https://www.cvedetails.com/product/47/Linux-Linux-Kernel.html?vendor_id=33)، [Debian Linux تعداد ۳۰۵۷ مورد](https://www.cvedetails.com/product/36/?q=Debian+Linux)، [Ubuntu Linux از سال ۲۰۰۵ تعداد ۲۰۰۷ مورد](https://www.cvedetails.com/product/20550/Canonical-Ubuntu-Linux.html?vendor_id=4781) و در نهایت [Microsoft Windows 10 از سال ۲۰۱۵ تعداد ۱۱۱۱ مورد](https://www.cvedetails.com/product/32238/?q=Windows+10) آسیب‌پذیری را ثبت نمو‌ده‌اند. فراموش نشود که این سیستم‌عامل آنقدر قابل اتکا می‌باشد که Netflix با کمک آن یک‌چهارم ترافیک کل اینترنت را به خود اختصاص داده است یا شرکت WhatsApp توانسته است به کمک آن بر روی هر سرور به ۲ میلیون کاربر خدمات دهد. ناگفته نماند که شرکت Sony سیستم‌عامل PlayStation های ۳ و ۴ را مبتنی بر FreeBSD توسعه داده است.
@@ -37,6 +39,12 @@ toc = true
 {{< blockquote author="ممدوو بابائی" link="https://fa.babaei.net" title="لیسانس مطالب منتشر شده در وب سایت" >}}
 تمامی محتویات این وب سایت تحت مجوز <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/deed.fa" target="_blank">(CC BY-SA 3.0) Creative Commons Attribution-ShareAlike 3.0 Unported License</a> منتشر شده است. همچنین، تمامی سورس کدهای منتشر شده در این وب سایت تحت لیسانس <a rel="license" href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> منتشر شده است، مگر آن که به صراحت ذکر شده باشد. تمامی محتویات ارائه شده صرفا جنبه آموزشی و اطلاعاتی داشته و فاقد هرگونه ضمانت، تعهد یا شرایطی از هر نوع می باشد. بایستی توجه نمود که اطلاعات عرضه شده حتی ممکن است دقیق و یا بروز نباشد. هرگونه اطمینان به و یا استفاده از محتویات یا منابع منتشر شده در این وب سایت با مسئولیت مخاطب بوده و نگارنده یا نگارندگان هیچ گونه مسئولیتی در مورد عواقب آن را نخواهند پذیرفت.
 {{< /blockquote >}}
+
+## قسمت دوم
+
+{{< youtube 6FPxxiTVoxo >}}
+
+<br />
 
 ## چی؟ این روش در زمان قطعی اینترنت کار می‌کرد؟
 
