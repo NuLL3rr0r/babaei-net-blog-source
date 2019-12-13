@@ -1273,7 +1273,7 @@ $ sudo chmod 0400 /opt/shadowsocksr/shadowsocks/shadowsocks-1443.json
 
 در سیستم‌عامل Gentoo، به منظور اجرای ShadowsocksR در زمان بوت سیستم و اتصال خودکار به سرور VPN، کافیست فایل ذیل را در سیستم‌تان ایجاد نمایید:
 
-{{< codeblock lang="json" title="/etc/local.d/ShadowsocksR-1443.start" >}}
+{{< codeblock lang="sh" title="/etc/local.d/ShadowsocksR-1443.start" >}}
 #!/bin/sh
 cd /opt/shadowsocksr/shadowsocks && python ./local.py -c ./shadowsocks-1443.json &
 {{< /codeblock >}}
