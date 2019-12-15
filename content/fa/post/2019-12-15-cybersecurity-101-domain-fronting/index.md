@@ -371,7 +371,7 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 
 {{< figure src="/blog/cybersecurity-101-domain-fronting/cloak-diagram.webp" alt="پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor با استفاده از Cloak" title="پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor با استفاده از Cloak" >}}
 
-به شخصه Cloak را در شبکه اینترنت ایران تست نموده‌ام و علی‌رغم آنکه باعث کاهش سرعت در مقایسه با ShadowsocksR می‌شود (حدودا تا یک پنجم سرعت ShadowsocksR) اما به خوبی قادر به پنهان‌سازی ترافیک Shadowsocks و عبور از فیلترینگ ایران می‌باشد. Cloak توانایی کار به شکل مستقل یا به عنوان پلاگین نرم‌افزار شدوساکز را دارد.
+به شخصه ترکیب Cloak + Shadowsocks را در شبکه اینترنت ایران تست نموده‌ام و علی‌رغم آنکه باعث کاهش سرعت در مقایسه با ShadowsocksR می‌شود (حدودا تا یک پنجم سرعت ShadowsocksR) اما به خوبی قادر به پنهان‌سازی ترافیک Shadowsocks و عبور از فیلترینگ ایران می‌باشد. Cloak توانایی کار به شکل مستقل یا به عنوان پلاگین نرم‌افزار شدوساکز را دارد.
 
 ## نحوه تنظیم و راه‌اندازی meek و یا Cloak را آموزش نخواهی داد؟
 
