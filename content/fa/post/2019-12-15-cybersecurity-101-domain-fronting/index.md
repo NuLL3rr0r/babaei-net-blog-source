@@ -30,7 +30,7 @@ Collateral Freedom، یک استراتژی ضد سانسور است که سعی 
 
 [پروتکل TLS](https://fa.wikipedia.org/wiki/%D8%A7%D9%85%D9%86%DB%8C%D8%AA_%D9%84%D8%A7%DB%8C%D9%87_%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84)، جانشین پروتکل قدیمی‌تر SSL (که با استادندارهای امروزی نا‌امن می‌باشد)، یک پروتکل رمزنگاری است که به منظور برقراری یکپارچگی و حفظ حریم خصوصی بین برنامه ها طراحی شده است. متداول ترین کاربرد TLS در HTTPS است که همان HTTP از طریق TLS (یا SSL) می‌باشد. با استفاده از TLS، دو دستگاه کامپیوتر یا موبایل می توانند ارتباطاتی ایمن را از طریق اینترنت برقرار نمایند. این پروتکل مانع از مشاهده، اصلاح یا جعل پیام های بین آنها، توسط نفوذگرها یا استراق‌سمع‌کنندگان می‌شود.
 
-همچنین پروتکل TLS در پروتکل شبکه [QUIC](https://en.wikipedia.org/wiki/QUIC) که در سال 2012 توسط گوگل طراحی شده و هنوز در دست توسعه می‌باشد، مورد استفاده قرار می گیرد. این پروتکل قرار است جایگزین پروتکل‌های HTTP/HTTPS شود. QUIC به جای استفاده از TCP، از UDP بعنوان لایه انتقال داده استفاده می نماید.
+همچنین پروتکل TLS در پروتکل شبکه [QUIC](https://en.wikipedia.org/wiki/QUIC) که در سال 2012 توسط گوگل طراحی شده و هنوز در دست توسعه می‌باشد، مورد استفاده قرار می گیرد. این پروتکل قرار است جایگزین پروتکل‌های HTTP/HTTPS شود. QUIC به جای استفاده از TCP، از UDP بعنوان لایه انتقال داده استفاده می‌نماید.
 
 آخرین نسخه پروتکل TLS نسخه <code>1.3</code> می‌باشد که در سال 2018 تصویب شده است. TLSv1.3 شامل تغییرات بسیار مهمی است که مهمترین آن‌ها حذف الگوریتم‌های رمزنگاری قدیمی، مستهلک و ناامنی است که نباید در سال 2018 مورد استفاده قرار بگیرند. از دیگر ویژگی‌های این نسخه، سرعت بخشیدن ارتباطات امن از طریق TLS False Start و 0-RTT می‌باشد.
 
@@ -365,6 +365,8 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 
 نرم‌افزار [cbeuw/Cloak](https://github.com/cbeuw/Cloak) حاصل تحقیقات گسترده و تجربه‌های پیشین حاصل از کار بر روی [شدوساکس](https://fa.wikipedia.org/wiki/%D8%B4%D8%AF%D9%88%D8%B3%D8%A7%DA%A9%D8%B3) نظیر [ShadowsocksR](https://github.com/shadowsocksrr/)، [shadowsocks/simple-obfs](https://github.com/shadowsocks/simple-obfs)، [shadowsocks/v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin) و [cbeuw/GoQuiet](https://github.com/cbeuw/GoQuiet) در جامعه کدباز می‌باشد.
 
+این نرم‌افزار برخلاف پراکسی‌های سنتی هرگونه ردپا و اثرانگشتی از ارتباط از طریق فیلترشکن‌ها را محو و پنهان‌می‌نماید. همچنین امکان شناسایی کاربرانی متصل به فیلترشکن را از طریق تکنیک‌هایی نظیر Deep Packet Inspection برای دولت‌ها و آژانس‌های اطلاعاتی غیرممکن می‌سازد.
+
 در دیاگرام ذیل نحوه کارکرد Cloak و توانایی پنهان‌سازی ترافیک OpenVPN، Shadowsocks، و Tor و جلوه دادن آن به عنوان ترافیک معمولی HTTPS با استفاده از تکنیک Domain Fronting را مشاهده می‌نمایید:
 
 {{< figure src="/blog/cybersecurity-101-domain-fronting/cloak-diagram.webp" alt="پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor با استفاده از Cloak" title="پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor با استفاده از Cloak" >}}
@@ -374,6 +376,3 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 ## نحوه تنظیم و راه‌اندازی meek و یا Cloak را آموزش نخواهی داد؟
 
 از آنجایی که این مطلب منحصرا در رابطه با اثبات مفهوم Collateral Freedom و Domain Fronting به رشته تحریر درآمده است، در مطالب آموزشی آتی ممکن است به نحوه تنظیم و راه‌اندازی meek بپردازم. تا آن‌زمان [جهت آشنایی با Tor به این مطلب](/blog/cybersecurity-101-my-2nd-interview-with-azadi-tv/) و [جهت آشنایی با ShadowsocksR و FreeBSD به این مطلب مراجعه نمایید](/blog/cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server/).
-
-
-
