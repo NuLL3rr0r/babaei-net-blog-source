@@ -365,7 +365,7 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 
 نرم‌افزار [cbeuw/Cloak](https://github.com/cbeuw/Cloak) حاصل تحقیقات گسترده و تجربه‌های پیشین حاصل از کار بر روی [شدوساکس](https://fa.wikipedia.org/wiki/%D8%B4%D8%AF%D9%88%D8%B3%D8%A7%DA%A9%D8%B3) نظیر [ShadowsocksR](https://github.com/shadowsocksrr/)، [shadowsocks/simple-obfs](https://github.com/shadowsocks/simple-obfs)، [shadowsocks/v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin) و [cbeuw/GoQuiet](https://github.com/cbeuw/GoQuiet) در جامعه کدباز می‌باشد.
 
-این نرم‌افزار برخلاف پراکسی‌های سنتی هرگونه ردپا و اثرانگشتی از ارتباط از طریق فیلترشکن‌ها را محو و پنهان‌می‌نماید. همچنین امکان شناسایی کاربرانی متصل به فیلترشکن را از طریق تکنیک‌هایی نظیر Deep Packet Inspection برای دولت‌ها و آژانس‌های اطلاعاتی غیرممکن می‌سازد.
+این نرم‌افزار برخلاف پراکسی‌های سنتی هرگونه ردپا و اثرانگشتی از ارتباط از طریق فیلترشکن‌ها را محو و پنهان می‌سازد. همچنین امکان شناسایی کاربران متصل به فیلترشکن را از طریق تکنیک‌هایی نظیر Deep Packet Inspection برای دولت‌ها و آژانس‌های اطلاعاتی غیرممکن می‌سازد.
 
 در دیاگرام ذیل نحوه کارکرد Cloak و توانایی پنهان‌سازی ترافیک OpenVPN، Shadowsocks، و Tor و جلوه دادن آن به عنوان ترافیک معمولی HTTPS با استفاده از تکنیک Domain Fronting را مشاهده می‌نمایید:
 
