@@ -151,4 +151,6 @@ Collateral Freedom، یک استراتژی ضد سانسور است که سعی 
 
 ## Cloak ابزاری جهت پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor
 
+نرم‌افزار [cbeuw/Cloak](https://github.com/cbeuw/Cloak) حاصل تحقیقات گسترده و تجربه‌های پیشین کار بر روی [شدوساکس](https://fa.wikipedia.org/wiki/%D8%B4%D8%AF%D9%88%D8%B3%D8%A7%DA%A9%D8%B3) نظیر [ShadowsocksR](https://github.com/shadowsocksrr/)، [shadowsocks/simple-obfs](https://github.com/shadowsocks/simple-obfs)، [shadowsocks/v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin) و [cbeuw/GoQuiet](https://github.com/cbeuw/GoQuiet) می‌باشد.
+
 {{< figure src="/blog/cybersecurity-101-domain-fronting/cloak-diagram.webp" alt="پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor با استفاده از Cloak" title="پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor با استفاده از Cloak" >}}
