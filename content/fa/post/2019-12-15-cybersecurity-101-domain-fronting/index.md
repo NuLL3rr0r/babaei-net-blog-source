@@ -1,5 +1,5 @@
 +++
-title = "امنیت سایبری ۱۰۱ ویژه فعالان حقوق بشر، فعالان مدنی، فعالان سیاسی، روزنامه نگاران و براندازان: تکنیک Domain Fronting گلوله نقره‌ای دور زدن فیلترینگ اینترنت"
+title = "امنیت سایبری ۱۰۱ ویژه فعالان حقوق بشر، فعالان مدنی، فعالان سیاسی، روزنامه نگاران و براندازان: تکنیک Domain Fronting گلوله نقره‌ای دور زدن هرگونه فیلترینگ آتی اینترنت توسط جمهوری اسلامی"
 slug = "cybersecurity-101-domain-fronting"
 date = 2019-12-15T18:24:00+02:00
 tags = [ "Censorship", "Cloak", "Cybersecurity", "FLOSS", "FreeBSD", "GNU", "GoQuiet", "LINUX", "Open Source", "Security", "Shadowsocks", "ShadowsocksR", "simple-obfs", "UNIX", "V2Ray", "v2ray-plugin", "VPN" ]
