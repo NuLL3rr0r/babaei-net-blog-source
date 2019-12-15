@@ -143,7 +143,11 @@ Collateral Freedom، یک استراتژی ضد سانسور است که سعی 
 
 ## تشریح فنی Domain Fronting
 
+بسیار خب، پس از آشنایی با مفهوم Domain Fronting، فکر می‌کنم که دیاگرام ذیل بخوبی جزییات فنی این تکنیک را تشریح می‌نماید:
+
 {{< figure src="/blog/cybersecurity-101-domain-fronting/domain-fronting-explanation.webp" alt="تشریح فنی Domain Fronting" title="تشریح فنی Domain Fronting" >}}
+
+
 
 ## meek ابزاری جهت پیاده‌سازی Domain Fronting در Tor
 
