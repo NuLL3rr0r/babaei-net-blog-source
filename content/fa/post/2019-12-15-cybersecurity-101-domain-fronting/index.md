@@ -143,11 +143,11 @@ Collateral Freedom، یک استراتژی ضد سانسور است که سعی 
 
 ## تشریح فنی Domain Fronting
 
-بسیار خب، پس از آشنایی با مفهوم Domain Fronting، فکر می‌کنم که دیاگرام ذیل بخوبی جزییات فنی این تکنیک را تشریح می‌نماید:
+بسیار خب، پس از آشنایی با مفهوم Domain Fronting، فکر می‌کنم که دیاگرام ذیل بخوبی جزییات فنی این تکنیک را تشریح نماید:
 
 {{< figure src="/blog/cybersecurity-101-domain-fronting/domain-fronting-explanation.webp" alt="تشریح فنی Domain Fronting" title="تشریح فنی Domain Fronting" >}}
 
-جهت تشریح عملی و آزمایش نحوه کارکرد تکنیک Domain Fronting می‌توان از ابزارهای خط فرمان <code>wget</code>, <code>openssl</code>, <code>curl</code> و ... استفاده نمود. در ادامه این مطلب ما از ابزار <code>curl</code> به منظور تشریح Domain Fronting استفاده می‌نماییم.
+جهت تشریح عملی و آزمایش نحوه کارکرد تکنیک Domain Fronting می‌توان از ابزارهای خط فرمان نظیر <code>wget</code>, <code>openssl</code>, <code>curl</code> و ... استفاده نمود. در ادامه این مطلب ما از ابزار <code>curl</code> به منظور تشریح Domain Fronting استفاده می‌نماییم.
 
 بعنوان یک نمونه واقعی، دامین‌های [fa.babaei.net](https://fa.babaei.net/) و [barandazstorm.com](https://www.barandazstorm.com/) در حال حاضر بر روی یک سرور میزبانی می‌شوند. فرض کنید دامین barandazstorm.com فیلتر می‌باشد اما دامین babaei.net خیر. اگر به وب‌سایت fa.babaei.net مراجعه نمایید با وبلاگ فعلی مواجه خواهید شد، اما اگر به وب‌سایت barandazstorm.com مراجعه نمایید با صفحه‌ای حاوی یک انیمیشن با پیام در دست ساخت و عنوان صفحه Under Construction مواجه خواهید شد. حالا اجازه دهید درخواست دسترسی به وب‌سایت barandazstorm.com را با استفاده از وب‌سایت fa.babaei.net صادر نماییم:
 
@@ -182,9 +182,9 @@ $ curl -s -H "Host: google.com" bing.com
 $ curl -H "host: www.google.de" www.google.co.uk -o ~/google-de.html
 {{< /codeblock >}}
 
-پس از بررسی فایل متوجه خواهید شد که محتوای صفحه آغازین گوگل به زبان آلمانی از سوی سرور گوگل در انگلیس در پاسخ به درخواست شما ارسال شده است.
+پس از بررسی فایل متوجه خواهید شد که محتوای صفحه آغازین گوگل به زبان آلمانی از سوی سرور گوگل در انگلیس، در پاسخ به درخواست شما ارسال شده است.
 
-بسیار خب، پس از آشنایی عملی با تکنیک Domain Fronting، حالا می‌دانیم که در زمان بلاک گسترده اینترنت، می‌توان با استفاده از تکنیک Domain Fronting برای مثال محتوای وب‌سایت‌هایی که مردم بایستی بدان دسترسی داشته باشند می‌توانند برای مثال بر روی سرویس مایکروسافت آژور قرار گرفته و با تکنیک دامین فرانتینگ در اختیار عموم در ایران قرار داد. یا حتی بهتر از آن سرورهای meek یا Cloak که در ادامه بدان‌ها خواهیم پرداخت را جهت دسترسی به کل اینترنت در این سرویس اجاره، تنظیم و در اختیار عموم مردم در ایران قرار داد. یک تست سریع نشان می‌دهد که سرویس Microsoft Azure در زمان نگارش این نوشتار بخوبی از Domain Fronting پشتیبانی می‌نماید:
+بسیار خب، پس از آشنایی عملی با تکنیک Domain Fronting، حالا می‌دانیم که در زمان بلاک گسترده اینترنت، می‌توان با استفاده از تکنیک Domain Fronting محتوای وب‌سایت‌هایی که لازم است عموم مردم آزادانه بدان دسترسی داشته باشند می‌توانند برای مثال بر روی سرویس مایکروسافت آژور قرار گرفته و با تکنیک دامین فرانتینگ در اختیار عموم در ایران قرار داد. یا حتی بهتر از آن سرورهای meek یا Cloak که در ادامه بدان‌ها خواهیم پرداخت را جهت دسترسی به کل اینترنت در این سرویس اجاره، تنظیم و در اختیار عموم مردم در ایران قرار داد. یک تست سریع نشان می‌دهد که سرویس Microsoft Azure در زمان نگارش این نوشتار بخوبی از Domain Fronting پشتیبانی می‌نماید:
 
 {{< codeblock lang="sh" >}}
 $ curl -s -H "Host: meek.azureedge.net" https://ajax.aspnetcdn.com
@@ -193,7 +193,7 @@ I’m just a happy little web server.
 
 جهت تست سایر سرویس‌دهنده‌های CDN، می‌توانید به [صفحه مستندات meek در وب‌سایت پروژه Tor](https://trac.torproject.org/projects/tor/wiki/doc/meek) مراجعه نمایید.
 
-پیش از خاتمه تشریح فنی تکنیک Domain Fronting ممکن است یک سوال در ذهن کاربران آشنا به پروتکل TLS و گواهینامه‌های SSL ایجاد شود که شفاف‌سازی آن را لازم می‌دانم. آیا عدم تطابق نام دامنه در گواهینامه‌های SSL دردسرساز نمی‌شوند؟ آیا عدم تطابق نام دامنه‌ها در هدرها باعث دریافت هشدار عدم تطابق گواهینامه توسط نرم‌افزارها و سرور وب نمی‌شود؟
+پیش از خاتمه تشریح فنی تکنیک Domain Fronting ممکن است یک سوال در ذهن کاربران آشنا به پروتکل TLS و گواهینامه‌های SSL ایجاد شود که شفاف‌سازی آن را لازم می‌دانم. آیا عدم تطابق نام دامنه در گواهینامه‌های SSL دردسرساز نمی‌شود؟ آیا عدم تطابق نام دامنه‌ها در هدرها باعث دریافت هشدار عدم تطابق گواهینامه توسط نرم‌افزارها و سرور وب نمی‌شود؟
 
 باید گفت سوال بسیار خوبی است و پاسخ کوتاه به آن: خیر!
 
@@ -205,7 +205,7 @@ I’m just a happy little web server.
 
 اما چگونه <code>curl</code> یا سرور وب هیچ‌گونه خطا یا هشداری را مبنی بر عدم تطابق گواهینامه‌ها صادر ننمود؟
 
-بیایید دستور ذیل را با ابزار <code>curl</code> صادر نماییم:
+جهت بررسی عمیق‌تر بیایید دستور ذیل را با ابزار <code>curl</code> صادر نماییم:
 
 {{< codeblock lang="sh" >}}
 $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
@@ -336,7 +336,7 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 * Connection #0 to host fa.babaei.net left intact
 {{< /codeblock >}}
 
-مشخصا اطلاعات بسیار زیادی در درخواست و پاسخ فوق نهفته است. اما دو خط مهم در نمونه فوق این‌ها می‌باشد:
+مشخصا اطلاعات بسیار زیادی در درخواست و پاسخ فوق نهفته است. اما دو خط مهم در نمونه فوق این‌ها می‌باشند:
 {{< codeblock lang="sh" >}}
 *  subject: CN=babaei.net
 *  subjectAltName: host "fa.babaei.net" matched cert's "fa.babaei.net"
@@ -351,7 +351,7 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 > Accept: */*
 {{< /codeblock >}}
 
-در واقع با توجه به آزمایش فوق، در ابتدای برقراری تماس، اولین چیزی که راه‌اندازی و تنظیم می‌شود، اتصال شبکه است؛ اینجاست که TLS وارد می‌شود. بمحض برقراری اتصال TCP، رد و بدل TLS مبتنی بر نام دامنه‌ای که درخواست را شروع نموده، انجام می‌شود (در اینجا fa.babaei.net). هدر هاست (در اینجا www.barandazstorm.com) در لایه اپلیکیشن قرار دارد، لذا تا زمانی که همه لایه های پایین‌تر (لایه پروتکل) ایجاد نشود ، هیچ‌کس به آن نگاهی نمی‌اندازد. در مثال فوق ارتباط TLS با استفاده از گواهینامه fa.babaei.net انجام شده و از آنجایی که همه چیز منطبق است هیچ‌گونه هشدار یا خطایی مبنی بر نامعتبر بودن گواهینامه صادر نمی‌شود. در واقع هیچ اشاره‌ای به نام www.barandazstorm.com تا زمان ارسال هدر هاست در درخواست HTTP نمی‌شود. از آنجایی که در خواست HTTP پس از برقراری ارتباط TLS انجام می‌شود، هرگز این هشدار دریافت نخواهد شد.
+در واقع با توجه به آزمایش فوق مشاهده می‌شود که در ابتدای برقراری تماس، اولین چیزی که راه‌اندازی و تنظیم می‌شود، اتصال شبکه است؛ اینجاست که TLS وارد می‌شود. بمحض برقراری اتصال TCP، رد و بدل TLS مبتنی بر نام دامنه‌ای که درخواست را شروع نموده، انجام می‌شود (در اینجا fa.babaei.net). هدر هاست (در اینجا با مقدار www.barandazstorm.com) در لایه اپلیکیشن قرار دارد، لذا تا زمانی که همه لایه های پایین‌تر (لایه پروتکل) ایجاد نشود ، هیچ‌کس به آن نگاهی نمی‌اندازد. در مثال فوق ارتباط TLS با استفاده از گواهینامه fa.babaei.net انجام شده و از آنجایی که همه چیز منطبق است هیچ‌گونه هشدار یا خطایی مبنی بر نامعتبر بودن گواهینامه صادر نمی‌شود. در واقع هیچ اشاره‌ای به نام www.barandazstorm.com تا زمان ارسال هدر هاست در درخواست HTTP صورت نخواهد پذیرفت. از آنجایی که در خواست HTTP پس از برقراری ارتباط TLS انجام می‌شود، هرگز این هشدار دریافت نخواهد شد.
 
 ## meek ابزاری جهت پیاده‌سازی Domain Fronting در Tor
 
@@ -359,9 +359,11 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 
 {{< figure src="/blog/cybersecurity-101-domain-fronting/meek-diagram.webp" alt="پیاده‌سازی Domain Fronting در Tor با استفاده از meek" title="پیاده‌سازی Domain Fronting در Tor با استفاده از meek" >}}
 
+جهت دریافت جزییات بیشتر و آشنایی دقیق‌تر با این پروژه به [مستندات رسمی میک در وب‌سایت پروژه تور](https://trac.torproject.org/projects/tor/wiki/doc/meek) مراجعه نمایید.
+
 ## Cloak ابزاری جهت پیاده‌سازی Domain Fronting در OpenVPN, Shadowsocks و Tor
 
-نرم‌افزار [cbeuw/Cloak](https://github.com/cbeuw/Cloak) حاصل تحقیقات گسترده و تجربه‌های پیشین کار بر روی [شدوساکس](https://fa.wikipedia.org/wiki/%D8%B4%D8%AF%D9%88%D8%B3%D8%A7%DA%A9%D8%B3) نظیر [ShadowsocksR](https://github.com/shadowsocksrr/)، [shadowsocks/simple-obfs](https://github.com/shadowsocks/simple-obfs)، [shadowsocks/v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin) و [cbeuw/GoQuiet](https://github.com/cbeuw/GoQuiet) می‌باشد.
+نرم‌افزار [cbeuw/Cloak](https://github.com/cbeuw/Cloak) حاصل تحقیقات گسترده و تجربه‌های پیشین حاصل از کار بر روی [شدوساکس](https://fa.wikipedia.org/wiki/%D8%B4%D8%AF%D9%88%D8%B3%D8%A7%DA%A9%D8%B3) نظیر [ShadowsocksR](https://github.com/shadowsocksrr/)، [shadowsocks/simple-obfs](https://github.com/shadowsocks/simple-obfs)، [shadowsocks/v2ray-plugin](https://github.com/shadowsocks/v2ray-plugin) و [cbeuw/GoQuiet](https://github.com/cbeuw/GoQuiet) در جامعه کدباز می‌باشد.
 
 در دیاگرام ذیل نحوه کارکرد Cloak و توانایی پنهان‌سازی ترافیک OpenVPN، Shadowsocks، و Tor و جلوه دادن آن به عنوان ترافیک معمولی HTTPS با استفاده از تکنیک Domain Fronting را مشاهده می‌نمایید:
 
