@@ -337,14 +337,14 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 {{< /codeblock >}}
 
 مشخصا اطلاعات بسیار زیادی در درخواست و پاسخ فوق نهفته است. اما دو خط مهم در نمونه فوق این‌ها می‌باشند:
-{{< codeblock lang="sh" >}}
+{{< codeblock lang="plaintext" >}}
 *  subject: CN=babaei.net
 *  subjectAltName: host "fa.babaei.net" matched cert's "fa.babaei.net"
 {{< /codeblock >}}
 
 و پس از آن در درخواست HTTP/1.1، محتوای www.barandazstorm.com درخواست می‌شود:
 
-{{< codeblock lang="sh" >}}
+{{< codeblock lang="plaintext" >}}
 > GET / HTTP/1.1
 > Host: www.barandazstorm.com
 > User-Agent: curl/7.67.0
