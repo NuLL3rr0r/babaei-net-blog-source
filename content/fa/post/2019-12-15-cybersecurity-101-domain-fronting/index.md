@@ -375,4 +375,4 @@ $ curl -v -H "Host: www.barandazstorm.com" https://fa.babaei.net
 
 ## نحوه تنظیم و راه‌اندازی meek و یا Cloak را آموزش نخواهی داد؟
 
-از آنجایی که این مطلب منحصرا در رابطه با اثبات مفهوم Collateral Freedom و Domain Fronting به رشته تحریر درآمده است، در مطالب آموزشی آتی ممکن است به نحوه تنظیم و راه‌اندازی meek بپردازم. تا آن‌زمان [جهت آشنایی با Tor به این مطلب](/blog/cybersecurity-101-my-2nd-interview-with-azadi-tv/) و [جهت آشنایی با ShadowsocksR و FreeBSD به این مطلب مراجعه نمایید](/blog/cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server/).
+از آنجایی که این مطلب منحصرا در رابطه با اثبات مفهوم Collateral Freedom و Domain Fronting به رشته تحریر درآمده است، در مطالب آموزشی آتی ممکن است به نحوه تنظیم و راه‌اندازی meek و یا ترکیب Shadowsocks + Cloak بپردازم. تا آن‌زمان [جهت آشنایی با Tor به این مطلب](/blog/cybersecurity-101-my-2nd-interview-with-azadi-tv/) و [جهت آشنایی با ShadowsocksR و FreeBSD به این مطلب مراجعه نمایید](/blog/cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server/).
