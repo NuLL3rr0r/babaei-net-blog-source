@@ -375,7 +375,7 @@ set nowrap
 کاربران پیشرفته‌تر می‌توانند از سایر ویرایشگر‌های مورد علاقه خود بهرمنده شوند. برای مثال بشخصه ویرایشگر Neovim را بر هر دو ویرایشگر <code>vi</code> و <code>nano</code> ترجیح می‌دهم:
 
 {{< codeblock lang="sh" title="اجرا در سرور به عنوان مدیر" >}}
-$ pkg install editors/Neovim
+$ pkg install editors/neovim
 $ rehash
 {{< /codeblock >}}
 
