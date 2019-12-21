@@ -2,7 +2,7 @@
 title = "فلات پتانسیل پنهان و دره ناامیدی"
 slug = "the-plateau-of-latent-potential-valley-of-dissappointment"
 date = 2019-12-21T22:21:00+01:00
-tags = [ "Iran", "Islamic Republic of Iran" ]
+tags = [ "Barandazan", "Iran", "Iran Protests", "Islamic Republic of Iran" ]
 +++
 
 {{< figure src="/blog/the-plateau-of-latent-potential-valley-of-dissappointment/the-plateau-of-latent-potential-valley-of-dissappointment.webp" alt="فلات پتانسیل پنهان و دره ناامیدی" title="فلات پتانسیل پنهان و دره ناامیدی" >}}
