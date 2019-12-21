@@ -1,11 +1,11 @@
 +++
-title = "فلات پتانسیل نهفته و دره ناامیدی"
+title = "فلات پتانسیل پنهان و دره ناامیدی"
 slug = "the-plateau-of-latent-potential-valley-of-dissappointment"
 date = 2019-12-21T22:21:00+01:00
 tags = [ "Iran", "Islamic Republic of Iran" ]
 +++
 
-{{< figure src="/blog/the-plateau-of-latent-potential-valley-of-dissappointment/the-plateau-of-latent-potential-valley-of-dissappointment.webp" alt="فلات پتانسیل نهفته و دره ناامیدی" title="فلات پتانسیل نهفته و دره ناامیدی" >}}
+{{< figure src="/blog/the-plateau-of-latent-potential-valley-of-dissappointment/the-plateau-of-latent-potential-valley-of-dissappointment.webp" alt="فلات پتانسیل پنهان و دره ناامیدی" title="فلات پتانسیل پنهان و دره ناامیدی" >}}
 
 {{< blockquote author="James Clear" link="https://jamesclear.com/atomic-habits" title="Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones" >}}
 We often expect progress to be linear. At the very least, we hope it will come quickly. In reality, the results of our efforts are often delayed. It is not until months or years later that we realize the true value of the previous work we have done. This can result in “valley of disappointment” where people feel discouraged after putting in weeks or months of hard work without experiencing any results. However, this work was not wasted. It was simply being stored. It is not until much later that the full value of previous effort is revealed.
@@ -13,7 +13,7 @@ We often expect progress to be linear. At the very least, we hope it will come q
 ما اغلب انتظار داریم پیشرفت خطی باشد. حداقل امیدواریم که به سرعت به نتیجه برسد. در واقعیت، نتایج تلاشهای ما اغلب به تأخیر می افتد. گاه ماهها یا سالها از آن می‌گذرد تا ارزش واقعی کار قبلی را که انجام داده ایم متوجه شویم. این می‌تواند منجر به "دره ناامیدی" یا Valley of Disappointment در جایی شود که افراد بعد از گذشت هفته‌ها یا ماه‌ها از کار سخت و ناامید کننده، بدون اینکه نتیجه‌ای بگیرند، احساس دلسردی کنند. با این حال این کار هدر نرفته است. در واقع ذخیره شده است. دیری نخواهد پایید که ارزش کامل تلاش قبلی آشکار می‌شود.
 {{< /blockquote >}}
 
-نمودار و متن فوق تحت عنوان The Plateau of Latent Potential یا فلات "پتانسیل نهفته" برگرفته از کتابی بنام Atomic Habits یا "عادات اتمی" می‌باشد که مدت‌ها پیش مطالعه می‌نمودم و امروز به شکل کاملا اتفاقی اسکرین‌شاتی که از آن تهیه نموده بودم را، پیدا کردم.
+نمودار و متن فوق تحت عنوان The Plateau of Latent Potential یا فلات "پتانسیل پنهان" برگرفته از کتابی بنام Atomic Habits یا "عادات اتمی" می‌باشد که مدت‌ها پیش مطالعه می‌نمودم و امروز به شکل کاملا اتفاقی اسکرین‌شاتی که از آن تهیه نموده بودم را، پیدا کردم.
 
 بزبان ساده، در نمودار فوق، محور افقی زمان می‌باشد و محور عمودی نتایج؛ بردار مستقیم نتایجی است که ما انتظار داریم اتفاق بیافتد؛ و بردار منحنی نتایج واقعی حاصل از اعمال ما. بدین دلیل که در ابتدای آغاز هر نوع فعالیتی، معمولا پیشرفت کند و در انتها نتایج بصورت تصاعدی ظاهر می‌شوند، غالبا در حد فاصل میان دو بردار مستقیم و منحی، ناحیه‌ای شکل می‌گیرد که علی‌رغم تلاش‌های زیاد ما در بخش عمده‌ای از زمان (بخصوص در ابتدای تلاش‌هایمان) به نظر می‌رسد که باوجود تمامی تلاش‌ها و صرف وقت زیاد، پیشرفت چندانی حاصل نمی‌شود و هرگز به نتایج دلخواه نخواهیم رسید. مطمئن هستم که اگر کمی تامل بفرمایید هرکدام از ماها می‌توانیم مثال‌های اینچنینی زیادی را در زندگی، تحصیل، کار و روابط خود بیابیم که علی‌رغم پیشرفت کند و نتایج نه چندان چشمگیر و بعضا ناامید‌کننده به ناگاه نتایج دلخواه ما به طرز شگفت‌انگیزی ظاهر می‌شوند.
 
