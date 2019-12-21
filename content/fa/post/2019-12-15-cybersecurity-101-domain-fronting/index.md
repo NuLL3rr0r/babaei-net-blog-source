@@ -6,6 +6,8 @@ tags = [ "Censorship", "Cloak", "Cybersecurity", "FLOSS", "FreeBSD", "GNU", "GoQ
 toc = true
 +++
 
+{{< figure src="/blog/cybersecurity-101-domain-fronting/domain-fronting-sni-post-http-host-meek.webp" alt="Domain Fronting" title="Domain Fronting" >}}
+
 بسیار خب. اجازه می‌خواهم پیش از پرداختن به [گلوله نقره‌ای](https://fa.wikipedia.org/wiki/%DA%AF%D9%84%D9%88%D9%84%D9%87_%D9%86%D9%82%D8%B1%D9%87%E2%80%8C%D8%A7%DB%8C) یا [برگ آس](https://fa.wikipedia.org/wiki/%D8%A2%D8%B3) براندازان در دور زدن فیلترینگ اینترنت (مشابه آنچه که در خیزش آبان‌ماه ۹۸ مشاهده شد) یعنی تکنیک Domain Fronting، به مفهومی تحت عنوان Collateral Freedom بپردازم:
 
 {{< blockquote author="ویکی‌پدیا" link="https://en.wikipedia.org/wiki/Collateral_freedom" title="Collateral Freedom" >}}
