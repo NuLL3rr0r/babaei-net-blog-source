@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#Stand4HEPCO" tweet-count="۲۹,۱۲۹" hashtag-usage-count="۴۵,۴۴۶" participant-accounts="۲,۶۴۷" involved-accounts="۲,۸۹۸" directly-related-hashtags="۲۳۹" all-related-hashtags="۲۹۰">}}
+{{< hashtag-analysis hashtag="#Stand4HEPCO" tweet-count="۲۹,۱۲۹" hashtag-usage-count="۴۵,۴۴۶" participant-accounts="۲,۶۴۷" involved-accounts="۲,۸۹۸" directly-related-hashtags="۲۳۹" all-related-hashtags="۲۹۰" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #Stand4HEPCO
 

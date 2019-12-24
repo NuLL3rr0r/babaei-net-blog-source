@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#اعتصاب_غذای_درویشان" tweet-count="۱۶,۵۶۸" hashtag-usage-count="۲۴,۸۱۱" participant-accounts="۲,۰۷۵" involved-accounts="۲,۲۰۴" directly-related-hashtags="۲۱۹" all-related-hashtags="۲۴۶">}}
+{{< hashtag-analysis hashtag="#اعتصاب_غذای_درویشان" tweet-count="۱۶,۵۶۸" hashtag-usage-count="۲۴,۸۱۱" participant-accounts="۲,۰۷۵" involved-accounts="۲,۲۰۴" directly-related-hashtags="۲۱۹" all-related-hashtags="۲۴۶" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #اعتصاب_غذای_درویشان
 

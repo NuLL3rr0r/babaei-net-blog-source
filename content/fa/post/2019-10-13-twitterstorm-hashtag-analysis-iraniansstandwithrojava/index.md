@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#IraniansStandWithRojava" tweet-count="۱۲۴,۰۷۰" hashtag-usage-count="۱۸۶,۴۴۱" participant-accounts="۹,۹۱۷" involved-accounts="۱۰,۷۹۵" directly-related-hashtags="۱,۱۹۳" all-related-hashtags="۱,۳۸۴">}}
+{{< hashtag-analysis hashtag="#IraniansStandWithRojava" tweet-count="۱۲۴,۰۷۰" hashtag-usage-count="۱۸۶,۴۴۱" participant-accounts="۹,۹۱۷" involved-accounts="۱۰,۷۹۵" directly-related-hashtags="۱,۱۹۳" all-related-hashtags="۱,۳۸۴" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #IraniansStandWithRojava
 

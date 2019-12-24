@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#وعده_ما_پنجم_دی" tweet-count="۲۵۱,۳۱۵" hashtag-usage-count="۳۷۴,۹۰۹" participant-accounts="۱۰,۱۴۳" involved-accounts="۱۱,۳۴۳" directly-related-hashtags="۲,۲۶۶" all-related-hashtags="۲,۷۲۱">}}
+{{< hashtag-analysis hashtag="#وعده_ما_پنجم_دی" tweet-count="۲۵۱,۳۱۵" hashtag-usage-count="۳۷۴,۹۰۹" participant-accounts="۱۰,۱۴۳" involved-accounts="۱۱,۳۴۳" directly-related-hashtags="۲,۲۶۶" all-related-hashtags="۲,۷۲۱" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #وعده_ما_پنجم_دی
 

@@ -16,9 +16,9 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#خزر_فروشی_نیست" tweet-count="۲۰,۶۵۴" hashtag-usage-count="۲۷,۴۹۳" participant-accounts="۳,۴۹۷" involved-accounts="۴,۰۰۵" directly-related-hashtags="۶۶۴" all-related-hashtags="۷۴۲">}}
+{{< hashtag-analysis hashtag="#خزر_فروشی_نیست" tweet-count="۲۰,۶۵۴" hashtag-usage-count="۲۷,۴۹۳" participant-accounts="۳,۴۹۷" involved-accounts="۴,۰۰۵" directly-related-hashtags="۶۶۴" all-related-hashtags="۷۴۲" >}}
 
-{{< hashtag-analysis hashtag="#خاک_میخوریم_خاک_نمیدهیم" tweet-count="۱۱,۸۳۹" hashtag-usage-count="۱۸,۷۹۲" participant-accounts="۱,۴۲۹" involved-accounts="۱,۵۹۷" directly-related-hashtags="۲۲۷۰" all-related-hashtags="۲۸۶">}}
+{{< hashtag-analysis hashtag="#خاک_میخوریم_خاک_نمیدهیم" tweet-count="۱۱,۸۳۹" hashtag-usage-count="۱۸,۷۹۲" participant-accounts="۱,۴۲۹" involved-accounts="۱,۵۹۷" directly-related-hashtags="۲۲۷۰" all-related-hashtags="۲۸۶" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #خزر_فروشی_نیست
 

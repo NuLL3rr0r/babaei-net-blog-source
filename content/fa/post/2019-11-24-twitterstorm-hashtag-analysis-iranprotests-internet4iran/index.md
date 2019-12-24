@@ -16,9 +16,9 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#IranProtests" tweet-count="۱,۱۳۸,۴۳۸" hashtag-usage-count="۱,۶۰۷,۹۰۸" participant-accounts="۱۴۷,۹۰۰" involved-accounts="۱۵۶,۵۳۷" directly-related-hashtags="۱۳,۲۰۵" all-related-hashtags="۱۴,۵۹۰">}}
+{{< hashtag-analysis hashtag="#IranProtests" tweet-count="۱,۱۳۸,۴۳۸" hashtag-usage-count="۱,۶۰۷,۹۰۸" participant-accounts="۱۴۷,۹۰۰" involved-accounts="۱۵۶,۵۳۷" directly-related-hashtags="۱۳,۲۰۵" all-related-hashtags="۱۴,۵۹۰" >}}
 
-{{< hashtag-analysis hashtag="#Internet4Iran" tweet-count="۲۳۷,۷۸۷" hashtag-usage-count="۳۱۸,۸۰۵" participant-accounts="۴۲,۲۵۳" involved-accounts="۴۷,۳۱۱" directly-related-hashtags="۵,۳۶۵" all-related-hashtags="۶,۰۰۸">}}
+{{< hashtag-analysis hashtag="#Internet4Iran" tweet-count="۲۳۷,۷۸۷" hashtag-usage-count="۳۱۸,۸۰۵" participant-accounts="۴۲,۲۵۳" involved-accounts="۴۷,۳۱۱" directly-related-hashtags="۵,۳۶۵" all-related-hashtags="۶,۰۰۸" >}}
 
 ### سرشناس‌ترین اکانت‌های شبکه هشتگ #IranProtests
 

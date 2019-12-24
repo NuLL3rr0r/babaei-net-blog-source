@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#HappyShah100thBirthday" tweet-count="۳۱,۸۶۳" hashtag-usage-count="۴۴,۸۷۹" participant-accounts="۳,۳۲۶" involved-accounts="۳,۵۵۳" directly-related-hashtags="۴۵۸" all-related-hashtags="۵۴۷">}}
+{{< hashtag-analysis hashtag="#HappyShah100thBirthday" tweet-count="۳۱,۸۶۳" hashtag-usage-count="۴۴,۸۷۹" participant-accounts="۳,۳۲۶" involved-accounts="۳,۵۵۳" directly-related-hashtags="۴۵۸" all-related-hashtags="۵۴۷" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #HappyShah100thBirthday
 

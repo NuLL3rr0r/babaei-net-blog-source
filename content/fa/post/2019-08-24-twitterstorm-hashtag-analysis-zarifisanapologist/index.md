@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#ZarifIsAnApologist" tweet-count="۵۵,۰۰۲" hashtag-usage-count="۷۸,۵۳۴" participant-accounts="۴,۳۰۲" involved-accounts="۴,۷۶۶" directly-related-hashtags="۵۴۵" all-related-hashtags="۶۸۵">}}
+{{< hashtag-analysis hashtag="#ZarifIsAnApologist" tweet-count="۵۵,۰۰۲" hashtag-usage-count="۷۸,۵۳۴" participant-accounts="۴,۳۰۲" involved-accounts="۴,۷۶۶" directly-related-hashtags="۵۴۵" all-related-hashtags="۶۸۵" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #ZarifIsAnApologist
 

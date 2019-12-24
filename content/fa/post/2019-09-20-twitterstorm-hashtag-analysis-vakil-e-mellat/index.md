@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#وکیل_ملت" tweet-count="۳۵,۷۵۵" hashtag-usage-count="۵۱,۵۰۱" participant-accounts="۴,۹۵۱" involved-accounts="۵,۲۷۳" directly-related-hashtags="۸۲۲" all-related-hashtags="۸۸۷">}}
+{{< hashtag-analysis hashtag="#وکیل_ملت" tweet-count="۳۵,۷۵۵" hashtag-usage-count="۵۱,۵۰۱" participant-accounts="۴,۹۵۱" involved-accounts="۵,۲۷۳" directly-related-hashtags="۸۲۲" all-related-hashtags="۸۸۷" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #وکیل_ملت
 

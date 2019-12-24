@@ -49,11 +49,11 @@ toc = true
 
 ### آمار و ارقام #FifaStandUp4Sahar بدون احتساب هشتگ‌های موازی
 
-{{< hashtag-analysis hashtag="#FifaStandUp4Sahar" tweet-count="۱۷۱,۹۷۷" hashtag-usage-count="۲۴۲,۸۱۵" participant-accounts="۱۳,۹۰۶" involved-accounts="۱۵,۳۲۳" directly-related-hashtags="۱,۴۵۵" all-related-hashtags="۱,۶۴۰">}}
+{{< hashtag-analysis hashtag="#FifaStandUp4Sahar" tweet-count="۱۷۱,۹۷۷" hashtag-usage-count="۲۴۲,۸۱۵" participant-accounts="۱۳,۹۰۶" involved-accounts="۱۵,۳۲۳" directly-related-hashtags="۱,۴۵۵" all-related-hashtags="۱,۶۴۰" >}}
 
 ### آمار و ارقام #FifaStandUp4Sahar با احتساب هشتگ‌های موازی
 
-{{< hashtag-analysis hashtag="#FifaStandUp4Sahar" tweet-count="۱۷۳,۹۲۶" hashtag-usage-count="۲۴۵,۴۹۷" participant-accounts="۱۴,۰۸۹" involved-accounts="۱۵,۵۳۵" directly-related-hashtags="۱,۴۶۹" all-related-hashtags="۱,۶۴۸">}}
+{{< hashtag-analysis hashtag="#FifaStandUp4Sahar" tweet-count="۱۷۳,۹۲۶" hashtag-usage-count="۲۴۵,۴۹۷" participant-accounts="۱۴,۰۸۹" involved-accounts="۱۵,۵۳۵" directly-related-hashtags="۱,۴۶۹" all-related-hashtags="۱,۶۴۸" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #FifaStandUp4Sahar بدون احتساب هشتگ‌های موازی
 

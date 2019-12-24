@@ -18,9 +18,9 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#برای_کاسپین_بپاخیز" tweet-count="۸۶,۷۴۷" hashtag-usage-count="۱۲۴,۰۲۳" participant-accounts="۷,۳۹۲" involved-accounts="۸,۰۶۲" directly-related-hashtags="۹۲۶" all-related-hashtags="۱۰۴۴">}}
+{{< hashtag-analysis hashtag="#برای_کاسپین_بپاخیز" tweet-count="۸۶,۷۴۷" hashtag-usage-count="۱۲۴,۰۲۳" participant-accounts="۷,۳۹۲" involved-accounts="۸,۰۶۲" directly-related-hashtags="۹۲۶" all-related-hashtags="۱۰۴۴" >}}
 
-{{< hashtag-analysis hashtag="#CaspianSeaSellOut" tweet-count="۱۹,۴۹۲" hashtag-usage-count="۲۵,۰۴۶" participant-accounts="۴,۶۸۲" involved-accounts="۵,۲۳۴" directly-related-hashtags="۵۶۰" all-related-hashtags="۶۳۲">}}
+{{< hashtag-analysis hashtag="#CaspianSeaSellOut" tweet-count="۱۹,۴۹۲" hashtag-usage-count="۲۵,۰۴۶" participant-accounts="۴,۶۸۲" involved-accounts="۵,۲۳۴" directly-related-hashtags="۵۶۰" all-related-hashtags="۶۳۲" >}}
 
 ### ۵۰ کاربر برجسته شبکه هشتگ #برای_کاسپین_بپاخیز
 

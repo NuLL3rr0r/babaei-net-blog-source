@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#1Min4Iran" tweet-count="۶,۱۹۲" hashtag-usage-count="۹,۳۷۹" participant-accounts="۱,۴۲۲" involved-accounts="۱,۶۳۱" directly-related-hashtags="۱۲۱" all-related-hashtags="۱۵۲">}}
+{{< hashtag-analysis hashtag="#1Min4Iran" tweet-count="۶,۱۹۲" hashtag-usage-count="۹,۳۷۹" participant-accounts="۱,۴۲۲" involved-accounts="۱,۶۳۱" directly-related-hashtags="۱۲۱" all-related-hashtags="۱۵۲" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #1Min4Iran
 

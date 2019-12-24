@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#BloodLustRegimeMustGo" tweet-count="۲۵۳,۸۰۵" hashtag-usage-count="۳۷۶,۳۰۴" participant-accounts="۷,۷۵۳" involved-accounts="۹,۱۷۴" directly-related-hashtags="۱,۶۵۴" all-related-hashtags="۱,۹۵۸">}}
+{{< hashtag-analysis hashtag="#BloodLustRegimeMustGo" tweet-count="۲۵۳,۸۰۵" hashtag-usage-count="۳۷۶,۳۰۴" participant-accounts="۷,۷۵۳" involved-accounts="۹,۱۷۴" directly-related-hashtags="۱,۶۵۴" all-related-hashtags="۱,۹۵۸" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #BloodLustRegimeMustGo
 

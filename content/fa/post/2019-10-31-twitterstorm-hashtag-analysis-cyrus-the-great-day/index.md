@@ -20,19 +20,19 @@ toc = true
 
 آمار و ارقام جداگانه هشتگ‌های ترنده شده روز بزرگداشت کوروش کبیر در ایران به شکل تفکیک شده، و به ترتیب محبوبیت محاسبه شده با الگوریتم اختصاصی Barandazstorm، به شرح ذیل می‌باشد (در واقع تعداد توییت به تنهایی معیار درستی جهت اندازه گیری میزان محبوبیت هشتگ‌ها نمی‌باشد؛ در زمانی دیگر به پارامترهای موثر در تشخیص میزان محبوبیت و چگونگی ترند شدن هشتگ‌ها خواهیم پرداخت):
 
-{{< hashtag-analysis hashtag="#کوروش" tweet-count="۴,۷۷۷" hashtag-usage-count="۷,۴۳۹" participant-accounts="۲,۸۶۰" involved-accounts="۲,۹۹۷" directly-related-hashtags="۸۸۸" all-related-hashtags="۹۱۶">}}
+{{< hashtag-analysis hashtag="#کوروش" tweet-count="۴,۷۷۷" hashtag-usage-count="۷,۴۳۹" participant-accounts="۲,۸۶۰" involved-accounts="۲,۹۹۷" directly-related-hashtags="۸۸۸" all-related-hashtags="۹۱۶" >}}
 
-{{< hashtag-analysis hashtag="#کوروش_بزرگ" tweet-count="۱۴,۴۴۹" hashtag-usage-count="۲۱,۵۰۰" participant-accounts="۴,۸۲۳" involved-accounts="۴,۹۶۵" directly-related-hashtags="۷۰۴" all-related-hashtags="۷۵۶">}}
+{{< hashtag-analysis hashtag="#کوروش_بزرگ" tweet-count="۱۴,۴۴۹" hashtag-usage-count="۲۱,۵۰۰" participant-accounts="۴,۸۲۳" involved-accounts="۴,۹۶۵" directly-related-hashtags="۷۰۴" all-related-hashtags="۷۵۶" >}}
 
-{{< hashtag-analysis hashtag="#پاسارگاد" tweet-count="۳,۷۹۳" hashtag-usage-count="۵,۰۹۲" participant-accounts="۱,۶۷۵" involved-accounts="۱,۷۴۶" directly-related-hashtags="۴۰۸" all-related-hashtags="۴۱۳">}}
+{{< hashtag-analysis hashtag="#پاسارگاد" tweet-count="۳,۷۹۳" hashtag-usage-count="۵,۰۹۲" participant-accounts="۱,۶۷۵" involved-accounts="۱,۷۴۶" directly-related-hashtags="۴۰۸" all-related-hashtags="۴۱۳" >}}
 
-{{< hashtag-analysis hashtag="#هفتم_آبان" tweet-count="۵,۵۴۴" hashtag-usage-count="۶,۹۴۸" participant-accounts="۲,۰۲۲" involved-accounts="۲,۱۰۷" directly-related-hashtags="۳۳۷" all-related-hashtags="۳۶۰">}}
+{{< hashtag-analysis hashtag="#هفتم_آبان" tweet-count="۵,۵۴۴" hashtag-usage-count="۶,۹۴۸" participant-accounts="۲,۰۲۲" involved-accounts="۲,۱۰۷" directly-related-hashtags="۳۳۷" all-related-hashtags="۳۶۰" >}}
 
-{{< hashtag-analysis hashtag="#CyrusTheGreatDay" tweet-count="۷,۷۰۱" hashtag-usage-count="۱۰,۲۷۵" participant-accounts="۲,۲۳۱" involved-accounts="۲,۴۸۹" directly-related-hashtags="۴۴۶" all-related-hashtags="۵۰۶">}}
+{{< hashtag-analysis hashtag="#CyrusTheGreatDay" tweet-count="۷,۷۰۱" hashtag-usage-count="۱۰,۲۷۵" participant-accounts="۲,۲۳۱" involved-accounts="۲,۴۸۹" directly-related-hashtags="۴۴۶" all-related-hashtags="۵۰۶" >}}
 
-{{< hashtag-analysis hashtag="#روز_کوروش" tweet-count="۲,۳۷۹" hashtag-usage-count="۳,۱۰۹" participant-accounts="۱,۵۴۵" involved-accounts="۱,۵۸۳" directly-related-hashtags="۲۴۸" all-related-hashtags="۲۶۷">}}
+{{< hashtag-analysis hashtag="#روز_کوروش" tweet-count="۲,۳۷۹" hashtag-usage-count="۳,۱۰۹" participant-accounts="۱,۵۴۵" involved-accounts="۱,۵۸۳" directly-related-hashtags="۲۴۸" all-related-hashtags="۲۶۷" >}}
 
-{{< hashtag-analysis hashtag="#CyrusIsOurSaviour" tweet-count="۱۹,۲۰۶" hashtag-usage-count="۲۸,۱۴۹" participant-accounts="۱,۹۸۸" involved-accounts="۲,۱۶۰" directly-related-hashtags="۲۸۷" all-related-hashtags="۳۶۱">}}
+{{< hashtag-analysis hashtag="#CyrusIsOurSaviour" tweet-count="۱۹,۲۰۶" hashtag-usage-count="۲۸,۱۴۹" participant-accounts="۱,۹۸۸" involved-accounts="۲,۱۶۰" directly-related-hashtags="۲۸۷" all-related-hashtags="۳۶۱" >}}
 
 ### مرتبط‌ترین هشتگ‌های روز بزرگداشت کوروش کبیر
 

@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#VoiceOfIranianPrisoners" tweet-count="۵۰,۷۹۴" hashtag-usage-count="۷۷,۰۴۲" participant-accounts="۳,۳۸۸" involved-accounts="۳,۶۳۳" directly-related-hashtags="۴۶۱" all-related-hashtags="۵۵۴">}}
+{{< hashtag-analysis hashtag="#VoiceOfIranianPrisoners" tweet-count="۵۰,۷۹۴" hashtag-usage-count="۷۷,۰۴۲" participant-accounts="۳,۳۸۸" involved-accounts="۳,۶۳۳" directly-related-hashtags="۴۶۱" all-related-hashtags="۵۵۴" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #VoiceOfIranianPrisoners
 

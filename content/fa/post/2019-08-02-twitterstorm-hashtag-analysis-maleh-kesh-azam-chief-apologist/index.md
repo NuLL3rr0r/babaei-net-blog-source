@@ -16,7 +16,7 @@ toc = true
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-maleh-kesh-azam-chief-apologist/maleh-kesh-azam-chief-apologist-twitterstorm-hashtag-analysis-output.webp" alt="از خروجی آنالیز هشتگ #ماله_کش_اعظم توسط نرم افزار Barandazstorm" title="خروجی آنالیز هشتگ #ماله_کش_اعظم توسط نرم افزار Barandazstorm" >}}
 
-{{< hashtag-analysis hashtag="#ماله_کش_اعظم" tweet-count="۱۷,۹۷۰" participant-accounts="۴,۹۷۱" involved-accounts="۵,۴۷۹" directly-related-hashtags="۹۴۳" all-related-hashtags="۱,۰۰۰">}}
+{{< hashtag-analysis hashtag="#ماله_کش_اعظم" tweet-count="۱۷,۹۷۰" participant-accounts="۴,۹۷۱" involved-accounts="۵,۴۷۹" directly-related-hashtags="۹۴۳" all-related-hashtags="۱,۰۰۰" >}}
 
 ۵۰ کاربر برجسته شبکه هشتگ [#ماله_کش_اعظم](https://twitter.com/hashtag/%D9%85%D8%A7%D9%84%D9%87_%DA%A9%D8%B4_%D8%A7%D8%B9%D8%B8%D9%85?src=hash) به ترتیب به شرح ذیل می باشند:
 

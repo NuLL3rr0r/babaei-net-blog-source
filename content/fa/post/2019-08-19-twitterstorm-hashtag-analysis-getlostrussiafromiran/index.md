@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#GetLostRussiaFromIran" tweet-count="۱۲۲,۴۴۱" hashtag-usage-count="۱۹۷,۵۰۲" participant-accounts="۴,۳۶۱" involved-accounts="۵,۰۳۵" directly-related-hashtags="۶۳۷" all-related-hashtags="۸۲۹">}}
+{{< hashtag-analysis hashtag="#GetLostRussiaFromIran" tweet-count="۱۲۲,۴۴۱" hashtag-usage-count="۱۹۷,۵۰۲" participant-accounts="۴,۳۶۱" involved-accounts="۵,۰۳۵" directly-related-hashtags="۶۳۷" all-related-hashtags="۸۲۹" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #GetLostRussiaFromIran
 

@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#EyesOnIran" tweet-count="۱۳۸,۲۶۵" hashtag-usage-count="۱۹۷,۳۱۷" participant-accounts="۹,۱۲۳" involved-accounts="۱۰,۷۳۷" directly-related-hashtags="۲,۰۶۱" all-related-hashtags="۲,۴۲۷">}}
+{{< hashtag-analysis hashtag="#EyesOnIran" tweet-count="۱۳۸,۲۶۵" hashtag-usage-count="۱۹۷,۳۱۷" participant-accounts="۹,۱۲۳" involved-accounts="۱۰,۷۳۷" directly-related-hashtags="۲,۰۶۱" all-related-hashtags="۲,۴۲۷" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #EyesOnIran
 

@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#KurdsBetrayedByTrump" tweet-count="۳۴۰,۲۴۳" hashtag-usage-count="۴۵۸,۷۱۰" participant-accounts="۱۶۴,۲۴۳" involved-accounts="۱۷۱,۵۹۲" directly-related-hashtags="۱۰,۲۳۲" all-related-hashtags="۱۰,۶۱۲">}}
+{{< hashtag-analysis hashtag="#KurdsBetrayedByTrump" tweet-count="۳۴۰,۲۴۳" hashtag-usage-count="۴۵۸,۷۱۰" participant-accounts="۱۶۴,۲۴۳" involved-accounts="۱۷۱,۵۹۲" directly-related-hashtags="۱۰,۲۳۲" all-related-hashtags="۱۰,۶۱۲" >}}
 
 ### سرشناس‌ترین اکانت‌های شبکه هشتگ #KurdsBetrayedByTrump
 

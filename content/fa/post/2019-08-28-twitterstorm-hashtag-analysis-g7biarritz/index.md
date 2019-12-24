@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#G7Biarritz" tweet-count="۴۵۱,۴۵۷" hashtag-usage-count="۶۷۵,۸۵۰" participant-accounts="۱۷۵,۲۰۰" involved-accounts="۱۸۱,۷۲۱" directly-related-hashtags="۱۲,۲۲۰" all-related-hashtags="۱۲,۸۰۰">}}
+{{< hashtag-analysis hashtag="#G7Biarritz" tweet-count="۴۵۱,۴۵۷" hashtag-usage-count="۶۷۵,۸۵۰" participant-accounts="۱۷۵,۲۰۰" involved-accounts="۱۸۱,۷۲۱" directly-related-hashtags="۱۲,۲۲۰" all-related-hashtags="۱۲,۸۰۰" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #G7Biarritz
 

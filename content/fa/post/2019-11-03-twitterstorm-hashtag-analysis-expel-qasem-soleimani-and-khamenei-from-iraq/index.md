@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#اطردوا_سليماني_و_خامنئي_من_العراق" tweet-count="۶۲,۲۲۶" hashtag-usage-count="۸۸,۵۴۱" participant-accounts="۴,۶۲۶" involved-accounts="۵,۱۸۲" directly-related-hashtags="۵۶۶" all-related-hashtags="۷۱۹">}}
+{{< hashtag-analysis hashtag="#اطردوا_سليماني_و_خامنئي_من_العراق" tweet-count="۶۲,۲۲۶" hashtag-usage-count="۸۸,۵۴۱" participant-accounts="۴,۶۲۶" involved-accounts="۵,۱۸۲" directly-related-hashtags="۵۶۶" all-related-hashtags="۷۱۹" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #اطردوا_سليماني_و_خامنئي_من_العراق
 

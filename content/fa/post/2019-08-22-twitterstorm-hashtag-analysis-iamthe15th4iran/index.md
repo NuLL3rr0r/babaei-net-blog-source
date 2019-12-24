@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#iamthe15th4iran" tweet-count="۳۲,۹۸۲" hashtag-usage-count="۵۱,۹۱۷" participant-accounts="۲,۰۵۱" involved-accounts="۲,۳۵۴" directly-related-hashtags="۲۵۲" all-related-hashtags="۳۵۱">}}
+{{< hashtag-analysis hashtag="#iamthe15th4iran" tweet-count="۳۲,۹۸۲" hashtag-usage-count="۵۱,۹۱۷" participant-accounts="۲,۰۵۱" involved-accounts="۲,۳۵۴" directly-related-hashtags="۲۵۲" all-related-hashtags="۳۵۱" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #iamthe15th4iran
 

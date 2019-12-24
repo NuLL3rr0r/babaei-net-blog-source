@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#LordeganGenocide" tweet-count="۶۰,۳۴۳" hashtag-usage-count="۹۳,۲۷۹" participant-accounts="۳,۲۷۴" involved-accounts="۳,۶۷۲" directly-related-hashtags="۴۹۴" all-related-hashtags="۶۳۲">}}
+{{< hashtag-analysis hashtag="#LordeganGenocide" tweet-count="۶۰,۳۴۳" hashtag-usage-count="۹۳,۲۷۹" participant-accounts="۳,۲۷۴" involved-accounts="۳,۶۷۲" directly-related-hashtags="۴۹۴" all-related-hashtags="۶۳۲" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #LordeganGenocide
 

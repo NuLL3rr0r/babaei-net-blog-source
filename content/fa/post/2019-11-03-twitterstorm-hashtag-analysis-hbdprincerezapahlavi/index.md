@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#HBDPrinceRezaPahlavi" tweet-count="۳۹,۵۵۸" hashtag-usage-count="۶۲,۴۰۲" participant-accounts="۲,۱۵۶" involved-accounts="۲,۳۱۳" directly-related-hashtags="۲۳۸" all-related-hashtags="۳۰۱">}}
+{{< hashtag-analysis hashtag="#HBDPrinceRezaPahlavi" tweet-count="۳۹,۵۵۸" hashtag-usage-count="۶۲,۴۰۲" participant-accounts="۲,۱۵۶" involved-accounts="۲,۳۱۳" directly-related-hashtags="۲۳۸" all-related-hashtags="۳۰۱" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #HBDPrinceRezaPahlavi
 

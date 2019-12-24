@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#FreeSoheil" tweet-count="۱۳,۴۱۴" hashtag-usage-count="۱۹,۶۸۷" participant-accounts="۲,۳۶۸" involved-accounts="۲,۶۱۸" directly-related-hashtags="۲۵۳" all-related-hashtags="۲۸۱">}}
+{{< hashtag-analysis hashtag="#FreeSoheil" tweet-count="۱۳,۴۱۴" hashtag-usage-count="۱۹,۶۸۷" participant-accounts="۲,۳۶۸" involved-accounts="۲,۶۱۸" directly-related-hashtags="۲۵۳" all-related-hashtags="۲۸۱" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #FreeSoheil
 

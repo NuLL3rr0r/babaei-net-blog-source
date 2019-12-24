@@ -16,7 +16,7 @@ toc = true
 
 ### آمار و ارقام
 
-{{< hashtag-analysis hashtag="#BanIRSportsFederations" tweet-count="۹۶,۰۲۳" hashtag-usage-count="۱۳۸,۱۱۸" participant-accounts="۵,۵۷۱" involved-accounts="۶,۱۸۱" directly-related-hashtags="۶۹۰" all-related-hashtags="۸۰۳">}}
+{{< hashtag-analysis hashtag="#BanIRSportsFederations" tweet-count="۹۶,۰۲۳" hashtag-usage-count="۱۳۸,۱۱۸" participant-accounts="۵,۵۷۱" involved-accounts="۶,۱۸۱" directly-related-hashtags="۶۹۰" all-related-hashtags="۸۰۳" >}}
 
 ### مرتبط‌ترین هشتگ‌های شبکه هشتگ #BanIRSportsFederations
 
