@@ -6,6 +6,8 @@ tags = [ "Censorship", "Cybersecurity", "FLOSS", "FreeBSD", "GNU", "LINUX", "mee
 toc = true
 +++
 
+**بروزرسانی [۰۵ دی ۱۳۹۸]:** در ویدیو عنوان نمودم که پورت <code>9050</code> پورت Socks5 نرم‌افزار Tor Browser است که اشتباه می‌باشد. در نرم‌افزار Tor بصورت سنتی پورت <code>9050</code> پورت Socks5 می‌باشد، اما در نرم‌افزار Tor Browser پورت شماره <code>9150</code> پورت Socks5 می‌باشد. این نکته توسط یکی از عزیزان در اینستاگرام به بنده یادآوری شد.
+
 {{< youtube XdENi20AjAY >}}
 
 در این راهنمای تصویری به نحوه عبور از فیلترینگ سنگین اینترنت در زمان اعتراضات در ایران با استفاده از [تکنیک Domain Fronting](/blog/cybersecurity-101-domain-fronting/) و نرم‌افزارهای Tor و meek خواهیم پرداخت.
