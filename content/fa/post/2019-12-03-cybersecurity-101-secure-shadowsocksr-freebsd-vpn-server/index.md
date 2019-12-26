@@ -1,7 +1,7 @@
 +++
 title = "امنیت سایبری ۱۰۱ ویژه فعالان حقوق بشر، فعالان مدنی، فعالان سیاسی، روزنامه نگاران و براندازان: سرور VPN بسیار امن ShadowsocksR مبتنی بر سیستم‌عامل FreeBSD"
 slug = "cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server"
-date = 2019-12-03T05:59:00+02:00
+date = 2019-12-03T05:59:00+01:00
 tags = [ "Censorship", "Cybersecurity", "FLOSS", "FreeBSD", "GNU", "LINUX", "Open Source", "Security", "ShadowsocksR", "UNIX", "VPN" ]
 toc = true
 +++
