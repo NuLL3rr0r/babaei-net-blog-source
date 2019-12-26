@@ -12,7 +12,7 @@ toc = true
 
 لینک منابع و دریافت نرم‌افزارهای مورد نیاز در ادامه مطلب.
 
-* [پرسش و پاسخ در توییتر](https://twitter.com/mamadou_babaei/status/1210283015554895872)
+* [پرسش و پاسخ در توییتر](https://twitter.com/mamadou_babaei/status/1210284400237334529)
 
 * [مشاهده در اینستاگرام](https://www.instagram.com/tv/B6jCNpsH6ff/)
 
