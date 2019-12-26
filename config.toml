@@ -19,7 +19,7 @@ theme = "beautifulhugo"
             name = "Mamadou Babaei"
             github = "NuLL3rr0r"
             gitlab = "NuLL3rr0r"
-            telegram = "babaei_net"
+            telegram = "mamadou_babaei"
             twitter = "NuLL3rr0r"
             website = "https://www.babaei.net/"
 
@@ -70,7 +70,7 @@ theme = "beautifulhugo"
             [[languages.en.menu.main]]
                 parent = "subscribe"
                 name = "Subscribe via Telegram"
-                url = "https://telegram.me/babaei_net"
+                url = "https://telegram.me/mamadou_babaei"
                 weight = 3
 
             [[languages.en.menu.main]]
@@ -104,7 +104,7 @@ theme = "beautifulhugo"
             name = "ممدوو بابائی"
             github = "NuLL3rr0r"
             gitlab = "NuLL3rr0r"
-            telegram = "babaei_net"
+            telegram = "mamadou_babaei"
             twitter = "mamadou_babaei"
             website = "https://fa.babaei.net/"
 
@@ -159,7 +159,7 @@ theme = "beautifulhugo"
             [[languages.fa.menu.main]]
                 parent = "subscribe"
                 name = "تلگرام"
-                url = "https://telegram.me/babaei_net"
+                url = "https://telegram.me/mamadou_babaei"
                 weight = 3
 
             [[languages.fa.menu.main]]
