@@ -2,7 +2,7 @@
 title = "امنیت سایبری ۱۰۱ ویژه فعالان حقوق بشر، فعالان مدنی، فعالان سیاسی، روزنامه نگاران و براندازان: راهنمای نحوه عبور از فیلترینگ سنگین اینترنت در زمان اعتراضات در ایران با استفاده از تکنیک Domain Fronting و نرم‌افزارهای Tor و meek"
 slug = "cybersecurity-101-domain-fronting-bypass-iran-internet-shutdown-using-tor-meek-pluggable-transport"
 date = 2019-12-26T16:24:00+01:00
-tags = [ "Censorship", "Cybersecurity", "FLOSS", "FreeBSD", "GNU", "LINUX", "meek", "Open Source", "Pluggable Transport", "Proxy", "Security", "Tor", "UNIX", "VPN" ]
+tags = [ "Censorship", "Cybersecurity", "FLOSS", "FreeBSD", "GNU", "LINUX", "meek", "Open Source", "Pluggable Transport", "Proxy", "Security", "Tor", "Tor Browser", "UNIX", "VPN" ]
 toc = true
 +++
 
