@@ -35,19 +35,20 @@
           {{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
             {{ $.Scratch.Set "has_related" true }}
           {{ end }}
+
           {{ if $.Scratch.Get "has_related" }}
           <div class="see-also">
-          <h4>{{ i18n "seeAlso" }}</h4>
-          <ul>
-          {{ $num_to_show := .Site.Params.related_content_limit | default 4 }}
-          {{ range first $num_to_show (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-          </ul>
+                  <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
+                  <ul>
+                {{ $num_to_show := .Site.Params.related_content_limit | default 4 }}
+                {{ range first $num_to_show (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+
           </div>
           {{ end }}
         {{ end }}
-    
       </article>
 
       {{ if ne .Type "page" }}

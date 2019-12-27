@@ -11,65 +11,30 @@
         <div class="posts-list">
           {{ $pag := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
           {{ range $pag.Pages }}
-            <article class="post-preview">
-              <a href="{{ .Permalink }}">
-                <h2 class="post-title">{{ .Title }}</h2>
-                {{ if .Params.subtitle }}
-                  <h3 class="post-subtitle">
-                  {{ .Params.subtitle }}
-                  </h3>
-                {{ end }}
-                {{ if .Params.image }}
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" />
-                {{ end }}
-                {{ if .Params.video }}
-                <video src="{{ .Params.video }}" loop autoplay muted playsinline class="img-title" />
-                {{ end }}
-              </a>
-
-              {{ partial "post_meta.html" . }}
-              <div class="post-entry">
-                {{ if .Truncated }}
-                  {{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Summary }}{{ end }}
-                  <a href="{{ .Permalink }}" class="post-read-more">[ {{ i18n "readMore" }} ]</a>
-                {{ else }}
-                  {{ .Content }}
-                {{ end }}
-              </div>
-
-              <div class="clearfix"></div>
-
-              {{ if .Params.tags }}
-                <div class="blog-tags">
-                  {{ range .Params.tags }}
-                    <a href="tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-                  {{ end }}
-                </div>
-              {{ end }}
-            </article>
+            {{ partial "post_preview" . }}
           {{ end }}
         </div>
 
         {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
           <ul class="pager main-pager">
-             {{ if .Paginator.HasPrev }}
-               <li class="previous">
-                 {{ if eq .Lang "fa" }}
+            {{ if .Paginator.HasPrev }}
+              <li class="previous">
+                {{ if eq .Lang "fa" }}
                 <a href="{{ .Paginator.Prev.URL | absURL }}">[ {{ i18n "newerPosts" }} &rarr; ]</a>
-                 {{ else }}
+                {{ else }}
                 <a href="{{ .Paginator.Prev.URL | absURL }}">[ &larr; {{ i18n "newerPosts" }} ]</a>
-                 {{ end }}
+                {{ end }}
                </li>
-             {{ end }}
-             {{ if .Paginator.HasNext }}
-               <li class="next">
-                 {{ if eq .Lang "fa" }}
+            {{ end }}
+            {{ if .Paginator.HasNext }}
+              <li class="next">
+                {{ if eq .Lang "fa" }}
                 <a href="{{ .Paginator.Next.URL | absURL }}">[ &larr; {{ i18n "olderPosts" }} ]</a>
-                 {{ else }}
+                {{ else }}
                 <a href="{{ .Paginator.Next.URL | absURL }}">[ {{ i18n "olderPosts" }} &rarr; ]</a>
-                 {{ end }}
-               </li>
-             {{ end }}
+                {{ end }}
+              </li>
+            {{ end }}
           </ul>
         {{ end }}
       </div>

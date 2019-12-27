@@ -35,6 +35,12 @@ title = "مرا در توئیتر دنبال کنید"
 icon = "fab fa-twitter"
 
 [[social_icons]]
+id = "slack"
+url = "https://%s.slack.com/"
+title = "Slack"
+icon = "fab fa-slack"
+
+[[social_icons]]
 id = "reddit"
 url = "https://reddit.com/u/%s"
 title = "Reddit"
@@ -129,3 +135,27 @@ id = "500px"
 url = "https://500px.com/%s"
 title = "500px"
 icon = "fab fa-500px"
+
+[[social_icons]]
+id = "codepen"
+url = "https://codepen.io/%s"
+title = "CodePen"
+icon = "fab fa-codepen"
+
+[[social_icons]]
+id = "kaggle"
+url = "https://www.kaggle.com/%s"
+title = "kaggle"
+icon = "fab fa-kaggle"
+
+[[social_icons]]
+id = "mastodon"
+url = "https://%s"
+title = "Mastodon"
+icon = "fab fa-mastodon"
+
+[[social_icons]]
+id = "weibo"
+url = "https://weibo.com/%s"
+title = "Weibo"
+icon = "fab fa-weibo"
