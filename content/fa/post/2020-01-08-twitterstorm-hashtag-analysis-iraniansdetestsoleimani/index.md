@@ -225,11 +225,11 @@ toc = true
 199. [#chiomab](https://twitter.com/hashtag/chiomab?src=hash)
 200. [#revenge](https://twitter.com/hashtag/revenge?src=hash)
 
-### سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansDetestSoleimani
+### سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansDetestSoleimani (اینفلوئنسرها)
 
-سرشناس‌ترین اکانت‌های شبکه هشتگ [#IraniansDetestSoleimani](https://twitter.com/hashtag/IraniansDetestSoleimani?src=hash) به ترتیب به شرح ذیل می باشند:
+سرشناس‌ترین اکانت‌های شبکه هشتگ [#IraniansDetestSoleimani](https://twitter.com/hashtag/IraniansDetestSoleimani?src=hash) (اینفلوئنسرها) به ترتیب به شرح ذیل می باشند:
 
-{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansdetestsoleimani/iraniansdetestsoleimani-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansDetestSoleimani" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansDetestSoleimani" >}}
+{{< figure src="/blog/twitterstorm-hashtag-analysis-iraniansdetestsoleimani/iraniansdetestsoleimani-twitterstorm-hashtag-analysis-most-popular-accounts.webp" alt="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansDetestSoleimani (اینفلوئنسرها)" title="سرشناس‌ترین اکانت‌های شبکه هشتگ #IraniansDetestSoleimani (اینفلوئنسرها)" >}}
 
 1. [@mohmd_mozafari](https://twitter.com/mohmd_mozafari)
 2. [@realDonaldTrump](https://twitter.com/realDonaldTrump)
