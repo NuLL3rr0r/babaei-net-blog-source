@@ -4,7 +4,6 @@ slug = "twitterstorm-hashtag-analysis-nancypelosifakenews"
 date = 2020-01-20T09:50:00+01:00
 tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
-draft = true
 +++
 
 {{< figure src="/blog/twitterstorm-hashtag-analysis-nancypelosifakenews/nancypelosifakenews-twitterstorm-hashtag-analysis.webp" alt="گراف‌ طوفان توییتری #NancyPelosiFakeNews آنالیز شده توسط نرم‌افزار Barandazstorm" title="گراف‌ طوفان توییتری #NancyPelosiFakeNews آنالیز شده توسط نرم‌افزار Barandazstorm" >}}
