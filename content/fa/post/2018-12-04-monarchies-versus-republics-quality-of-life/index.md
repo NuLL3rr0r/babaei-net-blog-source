@@ -15,13 +15,13 @@ tags = [ "Constitutional Monarchy", "Iran", "Islamic Republic of Iran", "Mohamma
 
 {{< figure src="/blog/monarchies-versus-republics-quality-of-life/monarchies-map.webp" alt="نقشه درآمد سالانه در جهان در سال ۲۰۱۵" caption="نقشه درآمد سالانه در جهان در سال ۲۰۱۵" >}}
 
-فی الواقع به نظر میرسه که بنا به هر دلیلی، نه تنها این نوع حکومت ها برای شهروندهاشون بیشترین سرانه تولید ناخالص داخلی رو به ارمغان میارن، بلکه کمتر مستعد جنگ و درگیری داخلی هستند، و علاوه بر این ها نسبت به جمهوری ها مکان های بهتری برای زندگی هستند. جالب تر این که بر اساس [شاخص ثروت موسسه Legatum Institute](https://www.prosperity.com/rankings) در سال ۲۰۱۵، از ۱۰ کشور صدر این جدول ۷ مورد پادشاهی مشروطه هستند (نروژ ۱، دانمارک ۳، نیوزیلند ۴، سوئد ۵، کانادا ۶، استرالیا ۷، هلند ۸)، در حالیکه ۱ مورد فدرالی (سوئیس ۲) و ۲ مورد جمهوری (فنلاند ۹، ایرلند ۱۰) هستند.
+فی الواقع به نظر میرسه که بنا به هر دلیلی، نه تنها این نوع حکومت ها برای شهروندهاشون بیشترین سرانه تولید ناخالص داخلی رو به ارمغان میارن، بلکه کمتر مستعد جنگ و درگیری داخلی هستند، و علاوه بر این ها نسبت به جمهوری ها مکان های بهتری برای زندگی هستند. جالب تر این که بر اساس [شاخص سعادت موسسه Legatum Institute](https://www.prosperity.com/rankings) در سال ۲۰۱۵، از ۱۰ کشور صدر این جدول ۷ مورد پادشاهی مشروطه هستند (نروژ ۱، دانمارک ۳، نیوزیلند ۴، سوئد ۵، کانادا ۶، استرالیا ۷، هلند ۸)، در حالیکه ۱ مورد فدرالی (سوئیس ۲) و ۲ مورد جمهوری (فنلاند ۹، ایرلند ۱۰) هستند.
 
-{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-ten-2015.webp" alt="۱۰ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۵" caption="۱۰ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۵" >}}
+{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-ten-2015.webp" alt="۱۰ کشور صدر شاخص سعادت Legatum Institute در سال ۲۰۱۵" caption="۱۰ کشور صدر شاخص سعادت Legatum Institute در سال ۲۰۱۵" >}}
 
 نگاه دیگری به آخرین اطلاعات این شاخص برای سال ۲۰۱۸، همچنان ۷ پادشاهی مشروطه نروژ ۱، نیوزیلند ۲، دانمارک ۵، سوئد ۶، انگلستان ۷، کانادا ۸، و هلند ۹، رو در میان ۱۰ کشور صدر شاخص قرار میده. علاوه بر این ها در میان ۲۵ کشور صدر این جدول، نام پادشاهی های مشروطه لوکزامبورگ در رده ۱۲، استرالیا ۱۳، بلژیک ۱۶، و ژاپن ۲۳ دیده میشه. و در نهایت، پادشاهی پارلمانی اسپانیا هم در رده ۲۵ این جدول قرار داره.
 
-{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-twenty-five-2018.webp" alt="۲۵ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۸" caption="۲۵ کشور صدر شاخص ثروت Legatum Institute در سال ۲۰۱۸" >}}
+{{< figure src="/blog/monarchies-versus-republics-quality-of-life/legatum-prosperity-index-top-twenty-five-2018.webp" alt="۲۵ کشور صدر شاخص سعادت Legatum Institute در سال ۲۰۱۸" caption="۲۵ کشور صدر شاخص سعادت Legatum Institute در سال ۲۰۱۸" >}}
 
 جمله ای بسیار مشهور راجع به نگهداری سیستم های کامپیوتری در مهندسی نرم افزار هست که میگه:
 
