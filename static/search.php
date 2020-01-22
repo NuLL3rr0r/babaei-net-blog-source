@@ -1,5 +1,5 @@
 <?php
-    $site = "www.babaei.net";
+    $site = $_SERVER['SERVER_NAME'];
     $api = "https://search.babaei.net";
     $categories = "general";
     $language = "en-US";
