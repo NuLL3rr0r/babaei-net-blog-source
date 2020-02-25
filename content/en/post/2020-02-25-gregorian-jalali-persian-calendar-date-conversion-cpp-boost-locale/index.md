@@ -1,5 +1,5 @@
 +++
-title = "Gregorian / Jalali (a.k.a Persian Calendar) Date Conversion in C++ using boost::locale"
+title = "Gregorian / Jalali (a.k.a. Persian Calendar) Date Conversion in C++ using boost::locale"
 slug = "gregorian-jalali-persian-calendar-date-conversion-cpp-boost-locale"
 date = 2020-02-25T00:27:00+01:00
 tags = [ "C", "C++", "Clang", "Cross-platform", "FreeBSD", "G++", "GCC", "Linux", "LLVM", "macOS", "MSVC", "VC++", "Visual C++", "Visual Stuio", "Windows", "XCode" ]
