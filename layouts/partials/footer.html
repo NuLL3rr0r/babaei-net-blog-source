@@ -75,10 +75,10 @@
 </footer>
 
 {{- if .Site.Params.selfHosted -}}
-<script src="{{ "js/katex.min.js" | absURL }}"></script>
-<script src="{{ "js/auto-render.min.js" | absURL }}"></script>
-<script src="{{ "js/jquery.min.js" | absURL }}"></script>
-<script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
+<script src="{{ "js/katex.min.js" | absURL }}" integrity="sha256-gNVpJCw01Tg4rruvtWJp9vS0rRchXP2YF+U+b2lp8Po= sha512-EpsVrsZsSC7kuXAnUBOWdA9HEzG0bKKzG4nkRLvPEY8EyDenXnryy0HltE/n0hstYPQezQyP34Z+e6uj14hAcA==" crossorigin="anonymous"></script>
+<script src="{{ "js/auto-render.min.js" | absURL }}" integrity="sha256-ExtbCSBuYA7kq1Pz362ibde9nnsHYPt6JxuxYeZbU+c= sha512-0y93pXcYvsqy0sCxxnpor7fqkxxAqAZxYmJ9wxD3tX4C6er3TAyZfp6wwwK7l6FyiIaYbLs8VV1vx00hNUVOfA==" crossorigin="anonymous"></script>
+<script src="{{ "js/jquery.min.js" | absURL }}" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ= sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+<script src="{{ "js/bootstrap.min.js" | absURL }}" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8= sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
 {{- else -}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
@@ -86,25 +86,25 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 {{- end }}
 
-<script src="{{ "js/main.js" | absURL }}"></script>
+<script src="{{ "js/main.js" | absURL }}" integrity="sha256-WZnQhU6lfUXaa4SCtLrmZ1av5DUmM+UENhUYMRqR2sE= sha512-rLl9ops45Y/7Tg6W0/ltI0ySDCMIJNaXvXAUtVa0SmQY3/pw7Ci66Y4dJydz8o4uwqKKtYr3p9MRKZiiqe0l0w==" crossorigin="anonymous"></script>
 {{- if .Site.Params.staticman }}
-<script src="{{ "js/staticman.js" | absURL }}"></script>
+<script src="{{ "js/staticman.js" | absURL }}" integrity="sha256-nIZfhyQptBmfOKdvV44ve6HrK1Cf5MOpH4uVOj+35YQ= sha512-rOaZnOJca3pjVjquHs6mKmEE/SY577b4Wt7bq41julCuM52N0jwvaJIKCbkigZxz9NjJbO+7DCIVZG2OmU9+jQ==" crossorigin="anonymous"></script>
 {{- end }}
 {{- if  .Site.Params.useHLJS }}
-<script src="{{ "js/highlight.min.js" | absURL }}"></script>
+<script src="{{ "js/highlight.min.js" | absURL }}" integrity="sha256-+n/tMwfVOu3EOHSt2bXyw8M7aGiLP6fzdK7cSseWJ84= sha512-x1COOfTQJtFSpo6BHdKd+f0U6RnN+cQaHjcVtVslEOuGQf2in0C80+ipGBjW684NY+sv5ZHKYVmL1Cj4OqHmEw==" crossorigin="anonymous"></script>
 <script> hljs.initHighlightingOnLoad(); </script>
 <script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script>
 {{- end -}}
 <script> renderMathInElement(document.body); </script>
 
 {{- if .Site.Params.selfHosted -}}
-<script src="{{ "js/photoswipe.min.js" | absURL }}"></script>
-<script src="{{ "js/photoswipe-ui-default.min.js" | absURL }}"></script>
+<script src="{{ "js/photoswipe.min.js" | absURL }}" integrity="sha256-iG1tiE5xJSJQhKdeOW4cPiSy+RTrnRKjjjrVQ0hexug= sha512-CgVIIM2vhx0v0TDKdzOfWiCCQCWXwRh4tRAzh9yBOzde53yojRJMOr4zIbWtf6aXdtb4HBWg5hsvcktZthznfA==" crossorigin="anonymous"></script>
+<script src="{{ "js/photoswipe-ui-default.min.js" | absURL }}" integrity="sha256-XvSk6Opq7XZ8oUcx213MtikXtbl5bbe4Q9tr4+NJBCg= sha512-RuKUPTW4qK7OUS1YqshNm+sCmsGvMyzAczUIBWi8wnLjeZTd1Zeih/D3C7uyXrnZVuaw8kHuKfilc7GyECtlag==" crossorigin="anonymous"></script>
 {{- else -}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
 {{- end -}}
-<script src="{{ "js/load-photoswipe.js" | absURL }}"></script>
+<script src="{{ "js/load-photoswipe.js" | absURL }}" integrity="sha256-WEaciXWBo0KZI4PMBlveWUl4zXBvQxWmN9Qg/FIYOIQ= sha512-Po/7wsP+v5myhCx9SAL8/zX2TcwQ4Xpgpumtnss0Xo/XkwRtXkguL7lYs3BYJRp8eNIQPjHJpcVnT8C0sZNIdQ==" crossorigin="anonymous"></script>
 
 <!-- Google Custom Search Engine -->
 {{ if .Site.Params.gcse }}
