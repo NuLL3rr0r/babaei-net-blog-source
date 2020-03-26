@@ -86,8 +86,7 @@
 {{ $load_photoswipe_js := resources.Get "js/load-photoswipe.js" }}
 
 {{ $bundle_js := slice $katex_min_js $auto_render_min_js $jquery_min_js $bootstrap_min_js $main_js $photoswipe_min_js $photoswipe_ui_default_min_js $load_photoswipe_js | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
-
-<script src="{{ $bundle_js.Permalink }}" integrity="{{ $bundle_js.Data.Integrity }}"></script>
+<script src="{{ $bundle_js.RelPermalink }}" integrity="{{ $bundle_js.Data.Integrity }}"></script>
 
 <script> renderMathInElement(document.body); </script>
 
