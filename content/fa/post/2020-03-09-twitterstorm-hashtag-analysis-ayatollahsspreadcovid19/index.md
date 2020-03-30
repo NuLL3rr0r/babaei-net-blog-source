@@ -2,7 +2,7 @@
 title = "آنالیز طوفان توییتری و شبکه هشتگ #AyatollahsSpreadCOVID19"
 slug = "twitterstorm-hashtag-analysis-ayatollahsspreadcovid19"
 date = 2020-03-09T19:16:47+01:00
-tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]
+tags = [ "Barandazan", "Barandazstorm", "Big Data", "Coronavirus", "COVID19", "Iran", "Islamic Republic Of Iran", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
 +++
 
