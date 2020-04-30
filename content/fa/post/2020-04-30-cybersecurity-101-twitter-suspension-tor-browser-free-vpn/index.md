@@ -16,4 +16,6 @@ toc = false
 
 نتیجه آنکه ایمن‌ترین راه وصل شدن به توییتر [راه‌اندازی و استفاده از سرور امن شخصی VPN](/blog/cybersecurity-101-secure-shadowsocksr-freebsd-vpn-server/) خودتان خواهد بود.
 
+نمونه تجربه‌ای مشابه از [کاربری که بدلیل اتصال با شبکه Tor به پلتفرم توییتر ساسپند شده است را می‌توانید از اینجا بخوانید](https://web.archive.org/web/20200430053328/https://medium.com/@nusenu/why-i-disappeared-from-twitter-8e9b48423d98).
+
 <!--more-->
