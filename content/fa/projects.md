@@ -1,5 +1,5 @@
 +++
-title = "پروژه ها"
+title = "پروژه‌ها"
 +++
 
 <div class="portfolio">
