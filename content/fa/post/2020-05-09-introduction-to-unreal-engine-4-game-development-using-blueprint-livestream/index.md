@@ -53,3 +53,7 @@ tags = [ "Blueprint", "Epic Games", "gamedev", "Game Development", "Game Program
 ### قسمت ششم
 
 {{< youtube uMvWp1a2okw >}}
+
+### قسمت هفتم و پایانی
+
+{{< youtube u4GN0kGgqzo >}}
