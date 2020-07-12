@@ -2,7 +2,7 @@
 title = "آنالیز طوفان توییتری و شبکه هشتگ #ShalomFromIran"
 slug = "twitterstorm-hashtag-analysis-shalomfromiran"
 date = 2020-05-23T22:52:00+02:00
-tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Propaganda", "Social Media", "Twitter", "Twitterstorm" ]
+tags = [ "Barandazan", "Barandazstorm", "Big Data", "Iran", "Islamic Republic Of Iran", "Israel", "Propaganda", "Social Media", "Twitter", "Twitterstorm" ]
 toc = true
 +++
 
