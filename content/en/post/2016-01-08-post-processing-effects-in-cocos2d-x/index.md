@@ -8,6 +8,8 @@ aliases = [ "/blog/2016/01/08/post-processing-effects-in-cocos2d-x/" ]
 
 {{< figure src="/blog/post-processing-effects-in-cocos2d-x/gray-black-and-white-shader.webp" alt="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" caption="Picture A: Gray (black and white) post-processing effect in Cocos2d-x" >}}
 
+__Update [2020/10/23]:__ _Since I wrote this tutorial many things has changed in Cocos2d-x and I haven't been using it in years as I switched to Unreal Engine 4. According to [this GitHub issue](https://github.com/NuLL3rr0r/babaei.net/issues/2) opened by my blog readers, in order for this code to work there has to be some modifications to the code which is provided on that issue by @lazerfalcon and @madrazo. I was also [having trouble with render to texture on Sprite3D](https://stackoverflow.com/questions/34595594/cocos2dx-sprite3d-wont-render-to-texture/39073958#39073958) which seems to have been solved in newer versions._
+
 Despite the fact that [Cocos2d-x](http://cocos2d-x.org/) uses the [OpenGL ES Shading Language v1.0](https://www.khronos.org/opengles/) for the shaders (in order to learn more about the language, please refer to: [OpenGL ES Shading Language v1.0 Spec](https://www.khronos.org/files/opengles_shading_language.pdf)) the engine does not provide an out-of-the-box API to apply post-processing effects to the whole game scene output at once.
 
 In this tutorial we will learn an easy way to apply multiple post-processing effects to the game scene output all at once.
