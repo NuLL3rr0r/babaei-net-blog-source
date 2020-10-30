@@ -4,9 +4,9 @@
 - id: shortdateFormat
   translation: "Jan 2, 2006 15:04:05"
 - id: postedOnDate
-  translation: "پست شده در {{ .Count }}"
+  translation: "پست شده در {{ . }}"
 - id: lastModified
-  translation: "(ویرایش شده در {{ .Count }})"
+  translation: "(ویرایش شده در {{ . }})"
 - id: translationsLabel
   translation: "زبان های دیگر: "
 - id: translationsSeparator
