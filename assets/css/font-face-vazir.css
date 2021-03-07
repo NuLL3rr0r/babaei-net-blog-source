@@ -38,9 +38,9 @@
 @font-face {
     font-family: 'Vazir';
     font-weight: 400;
-    src: local('Vazir'), local('Vazir-Regular')
-         url('../fonts/vazir.woff2') format('woff2'),
-         url('../fonts/vazir.woff') format('woff');
+    src: local('Vazir'), local('Vazir Regular'), local('Vazir-Regular')
+         url('../fonts/vazir-regular.woff2') format('woff2'),
+         url('../fonts/vazir-regular.woff') format('woff');
 }
 
 /* font-face-vazir-thin.css */
