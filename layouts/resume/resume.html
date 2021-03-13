@@ -19,17 +19,8 @@
         {{ $font_face_roboto_styles := resources.Get "css/font-face-roboto.css" }}
         {{ $font_face_roboto_condensed_styles := resources.Get "css/font-face-roboto-condensed.css" }}
 
-        {{ if eq .Lang "fa" }}
-
-        {{ $resume_styles_bundle := slice $normalize_styles $resume_styles $font_face_roboto_styles $font_face_roboto_condensed_styles | resources.Concat "css/resume-rtl-bundle.css" | minify | resources.Fingerprint "sha512" }}
-        <link rel="stylesheet" href="{{ $resume_styles_bundle.Permalink }}" integrity="{{ $resume_styles_bundle.Data.Integrity }}">
-
-        {{ else }}
-
         {{ $resume_styles_bundle := slice $normalize_styles $resume_styles $font_face_roboto_styles $font_face_roboto_condensed_styles | resources.Concat "css/resume-bundle.css" | minify | resources.Fingerprint "sha512" }}
         <link rel="stylesheet" href="{{ $resume_styles_bundle.Permalink }}" integrity="{{ $resume_styles_bundle.Data.Integrity }}">
-
-        {{ end }}
 
         <link rel="stylesheet" href="{{ "fontawesome/css/all.css" | absURL }}">
     </head>

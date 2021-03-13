@@ -12,6 +12,4 @@ cd "${BASE_DIRECTORY}" \
         GIT_COMMIT_SHA_SHORT=`git rev-parse --short HEAD` \
         hugo \
     && rsync -avze "ssh -p ${BABAEI_NET_SSH_PORT}" --perms --chmod=u+rwx,g+rx,o+rx,g-w,o-wx\
-        --delete public/en/ ${BABAEI_NET_SSH_USER}@${BABAEI_NET_SSH_HOST}:${BABAEI_NET_EN_SSH_REMOTE_DIR} \
-    && rsync -avze "ssh -p ${BABAEI_NET_SSH_PORT}" --perms --chmod=u+rwx,g+rx,o+rx,g-w,o-wx\
-        --delete public/fa/ ${BABAEI_NET_SSH_USER}@${BABAEI_NET_SSH_HOST}:${BABAEI_NET_FA_SSH_REMOTE_DIR}
+        --delete public/ ${BABAEI_NET_SSH_USER}@${BABAEI_NET_SSH_HOST}:${BABAEI_NET_EN_SSH_REMOTE_DIR}
