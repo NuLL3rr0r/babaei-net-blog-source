@@ -1,6 +1,9 @@
 +++
 +++
 
-Developer of [Barandazstorm](https://twitter.com/Barandazstorm), social media analyst, C++ programmer, *nix enthusiast, Unreal Engine 4 game developer, and a lifelong learner.
-
-I am a daydreamer for life (a.k.a. INFP); that's why I craft videogames!
+* Founder and lead developer [Mamadou Archives](https://twitter.com/mamadou_archive)
+* C++ / Unreal Engine 4 game developer
+* VR and Oculus developer
+* FreeBSD ports contributor
+* Social media analyst
+* *nix enthusiast

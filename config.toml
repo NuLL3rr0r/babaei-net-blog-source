@@ -85,7 +85,7 @@ theme = "beautifulhugo"
 
         [languages.en.params]
             homeTitle = "Mamadou Babaei"
-            subtitle = "C++ / Unreal Engine Developer"
+            subtitle = "Memento Mori • Amor Fati • Summum Bonum"
 
 [markup]
     defaultMarkdownHandler = "blackFriday"
