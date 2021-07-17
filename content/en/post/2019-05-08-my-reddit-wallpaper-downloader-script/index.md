@@ -2,7 +2,7 @@
 title = "My Reddit Wallpaper Downloader Script"
 slug = "my-reddit-wallpaper-downloader-script"
 date = 2019-05-08T01:01:00+02:00
-tags = [ "FLOSS", "FOSS", "FreeBSD", "Funtoo", "Gentoo", "GNU", "i3", "i3wm", "Linux", "Unix" ]
+tags = [ "Bash", "csh", "FLOSS", "FOSS", "FreeBSD", "Funtoo", "Gentoo", "GNU", "i3", "i3wm", "Linux", "sh", "Shell Scripting", "Unix" ]
 toc = true
 +++
 

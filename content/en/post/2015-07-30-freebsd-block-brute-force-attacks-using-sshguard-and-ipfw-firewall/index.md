@@ -2,7 +2,7 @@
 title = "FreeBSD: Block Brute-force Attacks Using Sshguard and IPFW Firewall"
 slug = "freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall"
 date = 2015-07-30T19:56:00+04:30
-tags = [ "Brute-force", "Firewall", "FLOSS", "FOSS", "FreeBSD", "GNU", "IPF", "IPFILTER", "IPFW", "Linux", "PF", "Security", "SSH", "Unix", "Vulnerability" ]
+tags = [ "Bash", "Brute-force", "csh", "Firewall", "FLOSS", "FOSS", "FreeBSD", "GNU", "IPF", "IPFILTER", "IPFW", "Linux", "PF", "Security", "sh", "Shell Scripting", "SSH", "Unix", "Vulnerability" ]
 toc = true
 aliases = [ "/blog/2015/07/30/freebsd-block-brute-force-attacks-using-sshguard-and-ipfw-firewall/" ]
 +++

@@ -2,7 +2,7 @@
 title = "Keep Crashing Daemons Running on FreeBSD"
 slug = "keep-crashing-daemons-running-on-freebsd"
 date = 2019-05-09T19:27:37+02:00
-tags = [ "FOSS", "FLOSS", "FreeBSD", "Unix" ]
+tags = [ "Bash", "csh", "FOSS", "FLOSS", "FreeBSD", "sh", "Shell Scripting", "Unix" ]
 +++
 
 <hr />

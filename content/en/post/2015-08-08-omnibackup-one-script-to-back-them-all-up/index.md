@@ -2,7 +2,7 @@
 title = "OmniBackup: One Script to back them all up"
 slug = "omnibackup-one-script-to-back-them-all-up"
 date = 2015-08-08T03:23:23+04:30
-tags = [ "Backup", "FLOSS", "FOSS", "FreeBSD", "GNU", "Linux", "OmniBackup", "Unix" ]
+tags = [ "Backup", "Bash", "csh", "FLOSS", "FOSS", "FreeBSD", "GNU", "Linux", "OmniBackup", "sh", "Shell Scripting", "Unix" ]
 toc = true
 aliases = [ "/blog/2015/08/08/omnibackup-one-script-to-back-them-all-up/" ]
 +++

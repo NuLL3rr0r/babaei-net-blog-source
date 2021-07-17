@@ -2,7 +2,7 @@
 title = "How to Run Multiplayer Call of Duty 4: Modern Warfare (Promod LIVE) using Wine on GNU/Linux"
 slug = "how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux"
 date = 2018-07-29T18:39:00+04:30
-tags = [ "COD4", "Emulation", "FLOSS", "FOSS", "Games", "GNU", "Linux", "Multiplayer", "Promod", "Promod LIVE", "UE4", "Unreal Engine", "VMWare", "Wine" ]
+tags = [ "Bash", "COD4", "csh", "Emulation", "FLOSS", "FOSS", "Games", "GNU", "Linux", "Multiplayer", "Promod", "Promod LIVE", "sh", "Shell Scripting", "UE4", "Unreal Engine", "VMWare", "Wine" ]
 +++
 
 {{< figure src="/blog/how-to-run-multiplayer-call-of-duty-modern-warfare-promod-live-using-wine-on-gnu-linux/call-of-duty-modern-warfare.webp" alt="Call of Duty 4: Modern Warfare" caption="Call of Duty 4: Modern Warfare" >}}
