@@ -36,24 +36,19 @@ theme = "beautifulhugo"
                 weight = 2
 
             [[languages.en.menu.main]]
-                name = "Resume"
-                url = "/resume/"
-                weight = 3
-
-            [[languages.en.menu.main]]
                 name = "Projects"
                 url = "/projects/"
-                weight = 4
+                weight = 3
 
             [[languages.en.menu.main]]
                 name = "About"
                 url = "/about/"
-                weight = 5
+                weight = 4
 
             [[languages.en.menu.main]]
                 identifier = "subscribe"
                 name = "Subscribe"
-                weight = 6
+                weight = 5
 
             [[languages.en.menu.main]]
                 parent = "subscribe"
@@ -76,12 +71,12 @@ theme = "beautifulhugo"
             [[languages.en.menu.main]]
                 name = "Contact"
                 url = "http://subscribe.babaei.net/?lang=en&contact-form"
-                weight = 7
+                weight = 6
 
             [[languages.en.menu.main]]
                 name = "Search"
                 url = "/search/"
-                weight = 8
+                weight = 7
 
         [languages.en.params]
             homeTitle = "Mamadou Babaei"
