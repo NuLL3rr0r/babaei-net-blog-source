@@ -437,10 +437,13 @@ __12__. Now, it's time to adjust Git LFS for our project. Avoid tracking files b
 #
 # This file contains rules that control how Git handles binary and text files, including line endings
 #
+ 
+
 # Make sure Windows batch files preserve CR/LF line endings, otherwise they may not be able to execute.  Windows
 # batch files require a CR/LF for labels to work properly, otherwise they may fail when labels straddle 512-byte
 # block boundaries.  This is important when files are downloaded through a zip archive that was authored on a
 # Linux machine (the default behavior on GitHub)
+
 *.bat eol=crlf
 
 # UE4 Git Dependencies
@@ -457,10 +460,13 @@ So, we adjust this file according to our needs in the following manner. Add ever
 #
 # This file contains rules that control how Git handles binary and text files, including line endings
 #
+ 
+
 # Make sure Windows batch files preserve CR/LF line endings, otherwise they may not be able to execute.  Windows
 # batch files require a CR/LF for labels to work properly, otherwise they may fail when labels straddle 512-byte
 # block boundaries.  This is important when files are downloaded through a zip archive that was authored on a
 # Linux machine (the default behavior on GitHub)
+
 *.bat eol=crlf
 
 # UE4 file types
