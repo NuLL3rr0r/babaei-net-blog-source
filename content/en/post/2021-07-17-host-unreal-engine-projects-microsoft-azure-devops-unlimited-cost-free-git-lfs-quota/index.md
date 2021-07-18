@@ -38,7 +38,7 @@ In uncommon circumstances, repositories may be larger than 10GB. For instance, t
 
 Before we proceed any further, there are some catches to consider about Microsoft Azure DevOPS:
 
-__1__. The maximum Git repository size is <code>10GB</code>, which considering that we keep binary assets and huge files in LFS, is way beyond any project's actual needs. For comparison, the engine source code for <code>4.27</code> is <code>1.4GB</code>, which in turn when it's getting committed to the git repo becomes less than <code>230MB</code>:
+__1__. The maximum Git repository size is <code>10GB</code>, which considering that we keep binary assets and huge files in LFS, is way beyond any project's actual needs. For Git LFS it seems that [Microsoft since at least 2015 has been providing unlimited free storage](https://devblogs.microsoft.com/devops/announcing-git-lfs-on-all-vso-git-repos/). For comparison, the engine source code for <code>4.27</code> is <code>1.4GB</code>, which in turn when it's getting committed to the git repo becomes less than <code>230MB</code>:
 
 {{< highlight sh >}}
 $ cd /path/to/ue4.27/source
@@ -62,7 +62,7 @@ garbage: 0
 size-garbage: 0 bytes
 {{< /highlight >}}
 
-__2__. The maximum push size is limited to <code>5GB</code> at a time. The <code>5GB</code> limit is only for files in the actual repository and it won't affect LFS objects. Thus, there are no limits for LFS objects' pushes. Despite that, if your internet connection is not stable, you could divide your files into multiple commits and push them separately. For example, the initial git dependencies for UE <code>4.27</code> is over <code>20GB</code> spanned over <code>70,000</code> files. Instead of commiting and pushing a <code>20GB</code> chunk all at once, one could divide that into multiple commits and push those commits one by one using the following command:
+__2__. The maximum push size is limited to <code>5GB</code> at a time. The <code>5GB</code> limit is only for files in the actual repository and it won't affect LFS objects. Thus, there are no limits for LFS objects' pushes. Despite that, if your internet connection is not stable, you could divide your files into multiple commits and push them separately. For example, the initial git dependencies for UE <code>4.27</code> is around <code>40GB</code> spanned across <code>~70,000</code> files. Instead of commiting and pushing a <code>40GB</code> chunk all at once, one could divide that into multiple commits and push those commits one by one using the following command:
 
 {{< highlight sh >}}
 $ git rev-list --reverse master \
