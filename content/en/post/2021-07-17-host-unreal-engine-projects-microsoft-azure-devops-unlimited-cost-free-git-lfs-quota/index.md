@@ -86,6 +86,6 @@ __4__. Last but not least, there is an issue with the Microsoft implementation o
 $ git config http.version HTTP/1.1
 {{< /highlight >}}
 
-Well, not only it did the trick and worked like a charm, but also the push time on the following git push dropped dramatically to 30 minutes for that hefty <code>40GB</code> UE4 binary dependencies.
+Well, not only it did the trick and worked like a charm, but also the push time on the following git push dropped dramatically to <code>30</code> minutes for that hefty <code>40GB</code> UE4 binary dependencies.
 
 <!--more-->
