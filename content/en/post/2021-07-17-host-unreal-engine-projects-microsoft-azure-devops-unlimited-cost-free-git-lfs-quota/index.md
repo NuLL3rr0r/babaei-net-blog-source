@@ -467,7 +467,7 @@ So, we adjust this file according to our needs in the following manner. Add ever
 *.uasset filter=lfs diff=lfs merge=lfs -text
 *.umap filter=lfs diff=lfs merge=lfs -text
 
-# Raw Content types
+# Raw content types
 *.fbx filter=lfs diff=lfs merge=lfs -text
 *.3ds filter=lfs diff=lfs merge=lfs -text
 *.psd filter=lfs diff=lfs merge=lfs -text
@@ -477,10 +477,10 @@ So, we adjust this file according to our needs in the following manner. Add ever
 *.xcf filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 
-# MamadouArchives Assets Source
+# MamadouArchives assets source
 MamadouArchives/RawContent/**/* filter=lfs diff=lfs merge=lfs -text
 
-# MamadouArchives Third Party Libraries
+# MamadouArchives third-party libraries
 MamadouArchives/ThirdParty/**/* filter=lfs diff=lfs merge=lfs -text
 
 # UE4 Git Dependencies
