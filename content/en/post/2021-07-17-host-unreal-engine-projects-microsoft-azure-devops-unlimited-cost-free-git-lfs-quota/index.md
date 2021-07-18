@@ -3,6 +3,7 @@ title = "Host Unreal Engine 4 projects on Microsoft Azure DevOPS with unlimited 
 slug = "host-unreal-engine-projects-microsoft-azure-devops-unlimited-cost-free-git-lfs-quota"
 date = 2021-07-17T16:12:00+02:00
 tags = [ "Azure", "Azure DevOPS", "Bash", "C", "C++", "Clang", "Cross-platform", "csh", "Epic Games", "Game Development", "Game Programming", "gamedev", "Git", "Git Large File Storage", "Git LFS", "indiedev", "Linux", "LLVM", "Microsoft", "MSVC", "Perforce", "SCM", "sh", "Shell Scripting", "Subversion", "SVN", "UDK", "UE4", "Unreal Engine", "UnrealScript", "VC++", "Visual C++", "Visual Stuio", "Windows" ]
+toc = true
 draft = true
 +++
 
@@ -30,7 +31,7 @@ For GitLab, although the initial generous <code>10GB</code> repository size is w
 2. When adding storage to an existing subscription, you will be charged the prorated amount for the remaining term of your subscription. (ex. If your subscription ends in 6 months and you buy storage, you will be charge for 6 months of the storage subscription, i.e. $30 USD)
 {{< /blockquote >}}
 
-Well, before this all get you disappointed, let's hear the good news from Microsoft Azure DevOPS team:
+Well, before this all get you disappointed, let's hear the good news from the Microsoft Azure DevOPS team:
 
 {{< blockquote author="microsoft.com" link="https://docs.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops" title="Git limits" >}}
 In uncommon circumstances, repositories may be larger than 10GB. For instance, the Windows repository is at least 300GB. For that reason, we do not have a hard block in place. If your repository grows beyond 10GB, consider using Git-LFS, Scalar, or Azure Artifacts to refactor your development artifacts.
@@ -62,7 +63,7 @@ garbage: 0
 size-garbage: 0 bytes
 {{< /highlight >}}
 
-__2__. The maximum push size is limited to <code>5GB</code> at a time. The <code>5GB</code> limit is only for files in the actual repository and it won't affect LFS objects. Thus, there are no limits for LFS objects' pushes. Despite that, if your internet connection is not stable, you could divide your files into multiple commits and push them separately. For example, the initial git dependencies for UE <code>4.27</code> is around <code>40GB</code> spanned across <code>~70,000</code> files. Instead of commiting and pushing a <code>40GB</code> chunk all at once, one could divide that into multiple commits and push those commits one by one using the following command:
+__2__. The maximum push size is limited to <code>5GB</code> at a time. The <code>5GB</code> limit is only for files in the actual repository and it won't affect LFS objects. Thus, there are no limits for LFS objects' pushes. Despite that, if your internet connection is not stable, you could divide your files into multiple commits and push them separately. For example, the initial git dependencies for UE <code>4.27</code> is around <code>40GB</code> spanned across <code>~70,000</code> files. Instead of committing and pushing a <code>40GB</code> chunk all at once, one could divide that into multiple commits and push those commits one by one using the following command:
 
 {{< highlight sh >}}
 $ git rev-list --reverse master \
@@ -80,7 +81,7 @@ A: Azure DevOps Services currently doesn't support LFS over SSH. Use HTTPS to co
 
 OK, after getting ourselves familiarized with all the limits, if you deem this solution a worthy one for managing UE4 projects along with the engine source in the same repository, in the rest of this blog post I'm going to share my experiences and a script to keep the engine updated with ease using a Git + LFS setup.
 
-__4__. Last but not least, there is an issue with the Microsoft implementation of LFS, which rejects large LFS objects and spits out a bunch of HTTP <code>413</code> and <code>503</code> errors at the end of your <code>git push</code>. It happened to me when I was pushing <code>40GB</code> of UE4 binary dependencies. The weird thing was I tried twice and both times it took a few good hours till the end of the push operation and based on measuring the bandwidth usage, the LFS upload size appeared to be more than the actual upload size. According to some answers on [this GitHub issue](https://github.com/MicrosoftDocs/azure-devops-docs/issues/4179) and [this Microsoft developer community question](https://developercommunity.visualstudio.com/t/git-lfs-push-got-413-error/867488) it seems the solution is running the following command inside the root of your local repository, before any git pull/push operations:
+__4__. Last but not least, there is an issue with the Microsoft implementation of LFS, which rejects large LFS objects and spits out a bunch of HTTP <code>413</code> and <code>503</code> errors at the end of your <code>git push</code>. It happened to me when I was pushing <code>40GB</code> of UE4 binary dependencies. The weird thing was I tried twice and both times it took a few good hours till the end of the push operation and based on measuring the bandwidth usage, the LFS upload size appeared to be more than the actual upload size. According to some answers on [this GitHub issue](https://github.com/MicrosoftDocs/azure-devops-docs/issues/4179) and [this Microsoft developer community question](https://developercommunity.visualstudio.com/t/git-lfs-push-got-413-error/867488), it seems the solution is running the following command inside the root of your local repository, before any git pull/push operations:
 
 {{< highlight sh >}}
 $ git config http.version HTTP/1.1
@@ -89,3 +90,132 @@ $ git config http.version HTTP/1.1
 Well, not only it did the trick and worked like a charm, but also the push time on the following git push dropped dramatically to <code>30</code> minutes for that hefty <code>40GB</code> UE4 binary dependencies.
 
 <!--more-->
+
+## Let's get started
+
+OK, in this tutorial I assume we are going to create a new project from scratch. Migration is a similar story if one learns how to set up a Git LFS repository from scratch. We briefly go over that at the end.
+
+In the rest of this tutorial, I will name the new project <code>MamadouArchives</code>.
+
+## Requirements
+
+The script that I am going to represent in this tutorial is a Bash shell script and runs on Linux. I haven't tested it on Git Bash for Windows. It may work on macOS or Microsoft Windows or not. In fact, you don't even need this script for following this tutorial. It could all be done manually, or it could be automated using your favorite automation scripting language once you know what are you doing.
+
+In order to effectively follow this tutorial and use the script, you may need the following:
+
+* Bash
+* Git + LFS
+* [rsync](https://rsync.samba.org/)
+* A github account setup with SSH access and access to [Unreal Engine's repository on Epic's official GitHub account](https://github.com/EpicGames/UnrealEngine)
+* A [Microsoft Azure DevOPS](https://azure.microsoft.com/en-us/services/devops/) account
+
+## The Directory Structure
+
+```
+MamadouArchives (the project name containing the engine source + binary dependencies + the actual UE4 project)
+  │
+  ├── .git/ (Git metadata and objects database directory)
+  │     │
+  │     └── *
+  │
+  ├── Engine/
+  │     │
+  │     └── *
+  │
+  ├── FeaturePacks/
+  │     │
+  │     └── *
+  │
+  ├── MamadouArchives/ (your actual UE4 project sits here)
+  │     │
+  │     ├── Config/
+  │     │     │
+  │     │     └── *
+  │     │
+  │     ├── Content/
+  │     │     │
+  │     │     └── *
+  │     │
+  │     ├── Plugins/
+  │     │     │
+  │     │     └── *
+  │     │
+  │     ├── Source/
+  │     │     │
+  │     │     └── *
+  │     │
+  │     ├── .gitignore (your project's .gitignore, which overrides the the engine one)
+  │     │
+  │     ├── MamadouArchives.uproject
+  │     │
+  │     └── README.md
+  │
+  ├── Samples/
+  │     │
+  │     └── *
+  │
+  ├── Templates/
+  │     │
+  │     └── *
+  │
+  ├── .editorconfig
+  │
+  ├── .gitattributes (used by Git LFS to keep track of the LFS objects)
+  │
+  ├── .gitignore
+  │
+  ├── .tgitconfig
+  │
+  ├── .ue4dependencies
+  │
+  ├── cpp.hint
+  │
+  ├── GenerateProjectFiles.bat
+  │
+  ├── GenerateProjectFiles.command
+  │
+  ├── GenerateProjectFiles.sh
+  │
+  ├── LICENSE.md
+  │
+  ├── README.md
+  │
+  ├── Setup.bat
+  │
+  ├── Setup.command
+  │
+  ├── Setup.sh
+  │
+  ├── UE4Games.uprojectdirs (scanned by UnrealBuildTool in order to find projects)
+  │
+  └── UpdateEngine.sh (the engine update script from this tutorial)
+```
+
+## Three copies of the Engine
+
+OK, in order to keep things less complex and as easy as we could, we need three copies of the engine (I use the actual paths on my computer):
+
+* <code>/opt/UnrealEngine</code>: the untouched engine source from Epic Games GitHub account which tracks the Unreal Engine development
+* <code>~/dev/MamadouArchives</code>: the actual engine and project directory I build and work with daily. One should never ever run the engine update script from this directory, or there may be hazardous effects ¯\\\_(ツ)_/¯. See the next one for more details.
+* <code>~/dev/MamadouArchives-Sync</code>: due to using <code>rsync</code> since the script has destructive effects on any uncommitted changes, or is cleaning up the engine builds, we use this intermediatory copy of our project which tracks our project's development. We run the engine update script only from this directory and git pull/push this repository in order to keep it in sync with the actual project <code>/dev/MamadouArchives</code>
+
+__Note__: Running the engine update script gives you the following warning before actually doing anything. It's safe until you press <code>y</code>. And, by default the answer is no:
+
+{{< highlight plain >}}
+WARNING: RUNNING THIS SCRIPT MAY HAVE DESTRUCTIVE EFFECTS
+ON THIS REPOSITORY!
+
+MAKE A BACKUP FIRST, BEFORE YOU PROCEED ANY FURTHER!
+
+Are you sure? [y/N] 
+{{< /highlight >}}
+
+## Migrating an existing repository
+
+After setting up your current repository for LFS as we have explained in this tutorial, in case you need your git history, it could be as easy as running a command like this:
+
+{{< highlight sh >}}
+$ git lfs migrate import --everything --include="*.uasset,*.umap"
+{{< /highlight >}}
+
+Adjust the <code>--include</code> according to your project's specific needs.
