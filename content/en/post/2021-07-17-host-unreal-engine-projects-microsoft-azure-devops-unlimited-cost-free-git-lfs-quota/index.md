@@ -433,7 +433,7 @@ __11__. Create a UE4 project with the desired name, in my case <code>MamadouArch
 
 __12__. Now, it's time to adjust Git LFS for our project. Avoid tracking files by using <code>git lfs track "pattern or file path"</code>, because it will probably get truncated by the engine update script in consecutive runs. If you take a look at <code>.gitattributes</code> inside our newly created repository. You will see a line containing <code># UE4 Git Dependencies</code>. Anything after this line will be truncated on each script's run:
 
-{{< highlight sh >}}
+{{< codeblock lang="bash" title=".gitattributes" line_numbers="true" >}}
 #
 # This file contains rules that control how Git handles binary and text files, including line endings
 #
@@ -448,11 +448,11 @@ __12__. Now, it's time to adjust Git LFS for our project. Avoid tracking files b
 ".ue4dependencies" filter=lfs diff=lfs merge=lfs -text
 "Engine/Binaries/DotNET/AgentInterface.dll" filter=lfs diff=lfs merge=lfs -text
 ...
-{{< /highlight >}}
+{{< /codeblock >}}
 
 So, we adjust this file according to our needs in the following manner. Add everything you want to be tracked by Git LFS before the line <code># UE4 Git Dependencies</code>:
 
-{{< highlight sh >}}
+{{< codeblock lang="bash" title=".gitattributes" line_numbers="true" >}}
 #
 # This file contains rules that control how Git handles binary and text files, including line endings
 #
@@ -487,7 +487,13 @@ MamadouArchives/ThirdParty/**/* filter=lfs diff=lfs merge=lfs -text
 ".ue4dependencies" filter=lfs diff=lfs merge=lfs -text
 "Engine/Binaries/DotNET/AgentInterface.dll" filter=lfs diff=lfs merge=lfs -text
 ...
-{{< /highlight >}}
+{{< /codeblock >}}
+
+You can also override UE4's <code>.gitignore</code> rules, by creating your own one inside the your project directory for your project's specific needs:
+
+{{< codeblock lang="bash" title="~/dev/MamadouArchives-Sync/MamadouArchives/.gitignore" line_numbers="true" >}}
+ThirdParty/build/
+{{< /codeblock >}}
 
 __13__. Check whether GitLFS is keeping track of those files and then stage, commit, and push the adjusted <code>.gitattributes</code> file to Microsoft Azure DevOPS:
 
