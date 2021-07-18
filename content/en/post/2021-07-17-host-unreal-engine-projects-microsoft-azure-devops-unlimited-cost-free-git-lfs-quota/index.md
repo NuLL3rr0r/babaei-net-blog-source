@@ -332,7 +332,7 @@ function update() {
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
         && "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
-        && git add "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
+        && git add "${GIT_ATTRIBUTES_FILE_NAME}" \
         && echo "" \
         && echo "Done!" \
         && echo ""
