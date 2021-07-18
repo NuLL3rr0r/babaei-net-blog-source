@@ -450,6 +450,7 @@ __12__. Now, it's time to adjust Git LFS for our project. Avoid tracking files b
 ...
 {{< /codeblock >}}
 
+<br />
 So, we adjust this file according to our needs in the following manner. Add everything you want to be tracked by Git LFS before the line <code># UE4 Git Dependencies</code>:
 
 {{< codeblock lang="bash" title=".gitattributes" line_numbers="true" >}}
@@ -489,12 +490,14 @@ MamadouArchives/ThirdParty/**/* filter=lfs diff=lfs merge=lfs -text
 ...
 {{< /codeblock >}}
 
+<br />
 You can also override UE4's <code>.gitignore</code> rules, by creating your own one inside the your project directory for your project's specific needs:
 
 {{< codeblock lang="bash" title="~/dev/MamadouArchives-Sync/MamadouArchives/.gitignore" line_numbers="true" >}}
 ThirdParty/build/
 {{< /codeblock >}}
 
+<br />
 __13__. Check whether GitLFS is keeping track of those files and then stage, commit, and push the adjusted <code>.gitattributes</code> file to Microsoft Azure DevOPS:
 
 {{< highlight sh >}}
