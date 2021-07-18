@@ -1,5 +1,5 @@
 +++
-title = "Host Unreal Engine 4 projects on Microsoft Azure DevOPS with unlimited cost free Git LFS quota"
+title = "Host Unreal Engine 4 projects on Microsoft Azure DevOPS with unlimited cost-free Git LFS quota"
 slug = "host-unreal-engine-projects-microsoft-azure-devops-unlimited-cost-free-git-lfs-quota"
 date = 2021-07-17T16:12:00+02:00
 tags = [ "Azure", "Azure DevOPS", "Bash", "C", "C++", "Clang", "Cross-platform", "csh", "Epic Games", "Game Development", "Game Programming", "gamedev", "Git", "Git Large File Storage", "Git LFS", "indiedev", "Linux", "LLVM", "Microsoft", "MSVC", "Perforce", "SCM", "sh", "Shell Scripting", "Subversion", "SVN", "UDK", "UE4", "Unreal Engine", "UnrealScript", "VC++", "Visual C++", "Visual Stuio", "Windows" ]
