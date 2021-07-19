@@ -372,6 +372,34 @@ $ git commit -m "add unreal engine 4.27 source code"
 $ git push -u origin --all
 {{< /highlight >}}
 
+__Note__: In case one needs to store their git credentials on their computer they could simply do:
+
+{{< highlight sh >}}
+$ git config credential.helper store
+{{< /highlight >}}
+
+This will add the following to <code>.git/config</code>:
+
+{{< highlight sh >}}
+[credential]
+	helper = store
+{{< /highlight >}}
+
+Upon your next pull/push, after typing your password once, it will be saved in plain text inside <code>~/.git-credentials</code> in the following format:
+
+{{< highlight sh >}}
+https://SOME-ORGANIZATION:PASSWORD@dev.azure.com
+{{< /highlight >}}
+
+__WARNING__: Although the permission for this file is set to <code>0600</code> by Git, which means only the owner can read/write it. This is not a recommended approach for saving Git credentials, at all! Any malicious program running by the user owning <code>~/.git-credentials</code> could still your Git credentials.
+
+{{< highlight sh >}}
+$ ls -lah ~/.git-credentials
+-rw------- 1 mamadou mamadou 88 Jul 17 09:18 /home/mamadou/.git-credentials
+{{< /highlight >}}
+
+There are better ways to store Git credentials, but, it is out of the scope of this article.
+
 __5__. Add the script from the previous section to the root of the repository, and modify the following variables with your project directory name inside the root directory and the Epic Game's untouched engine source path:
 
 {{< codeblock lang="bash" title="Updating UpdateEngine.sh Important Variables" line_numbers="false" >}}
