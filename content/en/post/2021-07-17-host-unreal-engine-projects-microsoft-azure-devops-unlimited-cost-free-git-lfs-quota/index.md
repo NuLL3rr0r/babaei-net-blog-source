@@ -574,7 +574,7 @@ MamadouArchives/
 __15__. Let's make the previous step's change permanent by staging, committing, and then pushing it to Microsoft Azure DevOPS:
 
 {{< highlight sh >}}
-$ git add UE4Games.uprojectdirs
+$ git add -f UE4Games.uprojectdirs
 $ git commit -m "add MamadouArchives to UE4Games.uprojectdirs"
 $ git push
 {{< /highlight >}}
