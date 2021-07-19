@@ -391,7 +391,7 @@ Upon your next pull/push, after typing your password once, it will be saved in p
 https://SOME-ORGANIZATION:PASSWORD@dev.azure.com
 {{< /highlight >}}
 
-__WARNING__: Although the permission for this file is set to <code>0600</code> by Git, which means only the owner can read/write it. This is not a recommended approach for saving Git credentials, at all! Any malicious program running by the user owning <code>~/.git-credentials</code> could still your Git credentials.
+__WARNING__: Although the permission for this file is set to <code>0600</code> by Git, which means only the owner can read/write it. This is not a recommended approach for saving Git credentials, at all! Any malicious program running by the user owning <code>~/.git-credentials</code> could steal your Git credentials.
 
 {{< highlight sh >}}
 $ ls -lah ~/.git-credentials
