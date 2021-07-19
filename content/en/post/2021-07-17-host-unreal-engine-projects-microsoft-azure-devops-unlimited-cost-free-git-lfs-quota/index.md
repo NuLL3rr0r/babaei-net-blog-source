@@ -579,7 +579,7 @@ $ git commit -m "add MamadouArchives to UE4Games.uprojectdirs"
 $ git push
 {{< /highlight >}}
 
-__Note__: The <code>-f</code> or <code>--force</code> parameter for <code>git add</code> is helpful when a file such as <code>UE4Games.uprojectdirs</code> is being ignored by one of the engine's <code>.gitignore</code>'s files, but you want to track it nontheless.
+__Note__: Adding the <code>-f</code> or <code>--force</code> parameter to <code>git add</code> is helpful when a file such as <code>UE4Games.uprojectdirs</code> is being ignored by one of the engine's <code>.gitignore</code>'s files, but you want to track it nontheless.
 
 __16__. Well, congratulations! Now we have everything set up. You can make a copy of the intermediary <code>~/dev/MamadouArchives-Sync/</code> in order to start your development:
 
