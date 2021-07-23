@@ -47,7 +47,7 @@ $ du -h
 1.4G	.
 
 $ git init
-$ git add -f .
+$ git add .
 $ git commit -m "add unreal engine 4.27 source code"
 
 $ git count-objects -vH
@@ -367,7 +367,7 @@ __4__. Initialize your project's git repository, commit the engine source, and p
 $ cd ~/dev/MamadouArchives-Sync/
 $ git init
 $ git remote add origin https://SOME-ORGANIZATION@dev.azure.com/SOME-ORGANIZATION/MamadouArchives/_git/MamadouArchives
-$ git add .
+$ git add -f .
 $ git commit -m "add unreal engine 4.27 source code"
 $ git push -u origin --all
 {{< /highlight >}}
