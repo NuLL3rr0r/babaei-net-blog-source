@@ -306,7 +306,7 @@ function update() {
         && echo "Extracting the engine's source changelist from '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && git diff --name-only -z | xargs -0 printf "git add \"%s\"\n" > "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
+        && git diff --name-only -z | xargs -0 -I % echo "printf 'git add \"%\"\n'" | sh > "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
         && chmod a+x "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
         && echo "" \
         && echo "Staging the engine's source changes inside '${PROJECT_ENGINE_DIR}'..." \
@@ -321,9 +321,9 @@ function update() {
         && echo "# UE4 Git Dependencies" >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && rm -f "${UPSTREAM_ENGINE_GIT_IGNORE_FILE}" \
-        && git ls-files -z -o --exclude-standard | xargs -0 printf "\"%s\" filter=lfs diff=lfs merge=lfs -text\n" >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
+        && git ls-files -z -o --exclude-standard | xargs -0 -I % echo "printf '\"%\" filter=lfs diff=lfs merge=lfs -text\n'" | sh >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
         && echo "#/usr/bin/env bash" > "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
-        && git ls-files -z -o --exclude-standard | xargs -0 printf "git add -f '%s'\n" >> "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
+        && git ls-files -z -o --exclude-standard | xargs -0 -I % echo "printf 'git add -f \"%\"\n'" | sh >> "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
         && chmod a+x "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && git checkout "${GIT_IGNORE_FILE_NAME}" \
