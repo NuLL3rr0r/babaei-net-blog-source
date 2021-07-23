@@ -47,7 +47,7 @@ $ du -h
 1.4G	.
 
 $ git init
-$ git add .
+$ git add -f .
 $ git commit -m "add unreal engine 4.27 source code"
 
 $ git count-objects -vH
