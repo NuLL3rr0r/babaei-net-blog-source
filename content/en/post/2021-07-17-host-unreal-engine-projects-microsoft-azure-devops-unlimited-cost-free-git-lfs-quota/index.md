@@ -108,7 +108,7 @@ In order to effectively follow this tutorial and use the script, you may need th
 * A github account correctly setup with access to [Unreal Engine's repository on Epic's official GitHub account](https://github.com/EpicGames/UnrealEngine)
 * A [Microsoft Azure DevOPS](https://azure.microsoft.com/en-us/services/devops/) account
 
-## The Directory Structure
+## The directory structure
 
 ```
 MamadouArchives (the project name containing the engine source + binary dependencies + the actual UE4 project)
