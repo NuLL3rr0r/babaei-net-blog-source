@@ -607,7 +607,7 @@ The solution is to find the ShaderCompileWorker project inside Microsoft Visual 
 
 {{< highlight sh >}}
 $ cd ~/dev/MamadouArchives
-$ make -j17 ShaderCompileWorker # -j<CPU_NUM+1>
+$ make ShaderCompileWorker
 {{< /highlight >}}
 
 __19__. If everything went fine until this step, you can directly open your project inside the engine by issuing the following command or making it a script file in your project's engine root directory and then run that:
