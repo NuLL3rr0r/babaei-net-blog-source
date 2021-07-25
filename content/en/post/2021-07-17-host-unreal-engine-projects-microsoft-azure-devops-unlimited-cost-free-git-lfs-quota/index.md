@@ -10,6 +10,14 @@ toc = true
 
 **UPDATE 1 [2021/07/25]**: _It seems that Git LFS is able to resume your pushes after a network failure. At least it's like that on Microsoft Azure DevOPS. So, it should be totally redundant to divide huge commits into smaller ones. How have I noticed this? Today, I pushed a huge single commit (around 53GBs) and it failed at 39GB due to a connection error without me noticing it for some time. A few hours later, when I made another attempt by issuing the push command again, it picked up and resumed the push at 39GB, which was really exciting._
 
+**UPDATE 2 [2021/07/25]**: _After pushing the repository to Azure DevOPS, if you find your self stuck in git pull without doing anything, the following command will fix the consecutive pulls:_
+
+{{< highlight sh >}}
+$ git pull origin master
+{{< /highlight >}}
+
+<hr />
+
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
 
 There are plenty of costly solutions to keep UE4 projects under source control; ranging from maintaining a local physical server or renting a VPS with plenty of space on the cloud, equipped with a self-hosted Git, SVN, or Perforce, to use cloud SCM providers such as GitHub, GitLab, BitBucket, or Perforce. Since I prefer cloud SCM providers and Git + Git LFS (which also supports file locking), let's take a look at some popular ones such as GitHub and GitLab.
