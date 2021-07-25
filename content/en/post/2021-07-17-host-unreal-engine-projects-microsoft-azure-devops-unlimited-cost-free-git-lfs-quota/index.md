@@ -16,6 +16,13 @@ toc = true
 $ git pull origin master
 {{< /highlight >}}
 
+_Or, alternatively_:
+
+{{< highlight sh >}}
+$ git fetch origin master
+$ git reset --hard FETCH_HEAD
+{{< /highlight >}}
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
