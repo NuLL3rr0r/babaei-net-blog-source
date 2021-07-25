@@ -299,7 +299,6 @@ function update() {
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && rsync -avze --delete \
             --exclude=".git" \
-            --exclude="${GIT_ATTRIBUTES_FILE_NAME}" \
             --exclude="UE4Games.uprojectdirs" \
             --exclude="${UPDATE_SCRIPT_NAME}" \
             --exclude="${PROJECT_DIR_NAME}" \
@@ -308,7 +307,7 @@ function update() {
         && echo "Extracting the engine's source changelist from '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && git diff --name-only -z | xargs -0 -I % echo "printf 'git add \"%\"\n'" | sh > "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
+        && git diff --name-only -z | xargs -0 -I % echo "printf 'git add -f \"%\"\n'" | sh > "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
         && chmod a+x "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
         && echo "" \
         && echo "Staging the engine's source changes inside '${PROJECT_ENGINE_DIR}'..." \
@@ -319,7 +318,6 @@ function update() {
         && echo "Extracting the engine's git dependencies list from '${UPSTREAM_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && sed -i '/# UE4 Git Dependencies/,$d' "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
         && echo "# UE4 Git Dependencies" >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && rm -f "${UPSTREAM_ENGINE_GIT_IGNORE_FILE}" \
@@ -334,7 +332,7 @@ function update() {
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
         && "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
-        && git add "${GIT_ATTRIBUTES_FILE_NAME}" \
+        && git add -f "${GIT_ATTRIBUTES_FILE_NAME}" \
         && echo "" \
         && echo "Done!" \
         && echo ""
@@ -461,76 +459,174 @@ __10__. Form now on, you can always follow steps <code>#8</code> <code>#9</code>
 
 __11__. Create a UE4 project with the desired name, in my case <code>MamadouArchives</code>, or copy over an already existing project (without the <code>.git</code> directory if it's already hosted on git) into your newly created repository. e.g. <code>~/dev/MamadouArchives-Sync/</code>.
 
-__12__. Now, it's time to adjust Git LFS for our project. Avoid tracking files by using <code>git lfs track "pattern or file path"</code>, because it will probably get truncated by the engine update script in consecutive runs. If you take a look at <code>.gitattributes</code> inside our newly created repository. You will see a line containing <code># UE4 Git Dependencies</code>. Anything after this line will be truncated on each script's run:
+__12__. Now, it's time to adjust Git LFS for our project. In order to touch less engine files, we are not going to touch the engine's <code>.gitattributes</code> located at <code>~/dev/MamadouArchives-Sync/.gitattributes</code>. Instead, we could override this file by creating the exact same file in our project's directory, e.g. <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code>. If you are going to do so, keep in mind that from now on you must avoid tracking files by running <code>git lfs track "pattern or file path"</code> in the engine directory <code>~/dev/MamadouArchives-Sync</code>, because it will probably get truncated by the engine update script in consecutive runs. Thus, etither run this command in the project directory <code>~/dev/MamadouArchives-Sync/MamadouArchives</code> or it's subdirectories, and after that by issuing <code>cat ~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> always make sure your pattern is being tracked. Or, you code modify <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> directly. Here is a sample <code>.gitattributes</code>, which overrides or adds to engine's <code>.gitattributes</code>:
 
-{{< codeblock lang="bash" title=".gitattributes" line_numbers="true" >}}
-#
-# This file contains rules that control how Git handles binary and text files, including line endings
-#
- 
+{{< codeblock lang="bash" title="~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes" line_numbers="true" >}}
+# Keep CRLF out of the repository
+* text=auto eol=lf
 
-# Make sure Windows batch files preserve CR/LF line endings, otherwise they may not be able to execute.  Windows
-# batch files require a CR/LF for labels to work properly, otherwise they may fail when labels straddle 512-byte
-# block boundaries.  This is important when files are downloaded through a zip archive that was authored on a
-# Linux machine (the default behavior on GitHub)
+# In case the git binary/text auto-detection algorithm fails, in order to avoid
+# line-ending normalization, treat these files as binary no matter what
+*.{uasset,umap,3ds,fbx,flac,gif,jif,jiff,jpe,jpeg,jpg,m4a,mp3,mp4,ogg,png,psd,ttf,wav,webp,xcf} binary
 
-*.bat eol=crlf
-
-# UE4 Git Dependencies
-".tgitconfig" filter=lfs diff=lfs merge=lfs -text
-".ue4dependencies" filter=lfs diff=lfs merge=lfs -text
-"Engine/Binaries/DotNET/AgentInterface.dll" filter=lfs diff=lfs merge=lfs -text
-...
-{{< /codeblock >}}
-
-<br />
-So, we adjust this file according to our needs in the following manner. Add everything you want to be tracked by Git LFS before the line <code># UE4 Git Dependencies</code>:
-
-{{< codeblock lang="bash" title=".gitattributes" line_numbers="true" >}}
-#
-# This file contains rules that control how Git handles binary and text files, including line endings
-#
- 
-
-# Make sure Windows batch files preserve CR/LF line endings, otherwise they may not be able to execute.  Windows
-# batch files require a CR/LF for labels to work properly, otherwise they may fail when labels straddle 512-byte
-# block boundaries.  This is important when files are downloaded through a zip archive that was authored on a
-# Linux machine (the default behavior on GitHub)
-
-*.bat eol=crlf
-
-# UE4 file types
+# LFS: UE4 file types
 *.uasset filter=lfs diff=lfs merge=lfs -text
 *.umap filter=lfs diff=lfs merge=lfs -text
 
-# Raw content types
-*.fbx filter=lfs diff=lfs merge=lfs -text
+# LFS: raw content types
 *.3ds filter=lfs diff=lfs merge=lfs -text
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.mp3 filter=lfs diff=lfs merge=lfs -text
-*.wav filter=lfs diff=lfs merge=lfs -text
-*.xcf filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.flac filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.jif filter=lfs diff=lfs merge=lfs -text
+*.jiff filter=lfs diff=lfs merge=lfs -text
+*.jpe filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
+*.m4a filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+*.xcf filter=lfs diff=lfs merge=lfs -text
 
-# MamadouArchives assets source
-MamadouArchives/RawContent/**/* filter=lfs diff=lfs merge=lfs -text
+# LFS: everything under Content/
+Content/**/* filter=lfs diff=lfs merge=lfs -text
 
-# MamadouArchives third-party libraries
-MamadouArchives/ThirdParty/**/* filter=lfs diff=lfs merge=lfs -text
+# LFS: every asset source under RawContent/
+RawContent/**/* filter=lfs diff=lfs merge=lfs -text
 
-# UE4 Git Dependencies
-".tgitconfig" filter=lfs diff=lfs merge=lfs -text
-".ue4dependencies" filter=lfs diff=lfs merge=lfs -text
-"Engine/Binaries/DotNET/AgentInterface.dll" filter=lfs diff=lfs merge=lfs -text
-...
+# LFS: all third-party libraries
+ThirdParty/**/* filter=lfs diff=lfs merge=lfs -text
 {{< /codeblock >}}
 
 <br />
-You can also override UE4's <code>.gitignore</code> rules, by creating your own one inside the your project directory for your project's specific needs:
+After adjusting the <code>.gitattributes</code> file according to your needs, you could also override UE4's <code>.gitignore</code> rules, by creating your own one inside the project's directory for your project's specific needs:
 
 {{< codeblock lang="bash" title="~/dev/MamadouArchives-Sync/MamadouArchives/.gitignore" line_numbers="true" >}}
-ThirdParty/build/
+# Annoying windows files
+[Dd]esktop.ini
+Thumbs.db
+
+# Explcitly ignore Mac DS_Store files, regardless of where they are
+.DS_Store
+
+# Visual Studio settings directory
+.vs/
+
+# Visual Studio Code settings directory
+.vscode/
+
+# Visual Studio database file
+*.VC.db
+
+# Qt Creator
+.qmake.stash
+*.autosave
+*.pro.user
+*.pro.user.*
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+
+# Ignore CLion directory
+.idea/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.ipa
+
+# These project files can be generated by the engine
+*.xcodeproj
+*.xcworkspace
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+.idea/
+.kdev4/
+.vscode/
+*.code-workspace
+*.kdev4
+*.pro
+*.workspace
+*CodeCompletionFolders.txt
+*CodeLitePreProcessor.txt
+*Config.pri
+*Defines.pri
+*Header.pri
+*Includes.pri
+*Source.pri
+CMakeLists.txt
+Makefile
+!ThirdParty/**/CMakeLists.txt
+!ThirdParty/**/Makefile
+
+# Precompiled Assets
+SourceArt/**/*.png
+SourceArt/**/*.tga
+
+# Binary Files
+Binaries/*
+Plugins/*/Binaries/*
+
+# Builds
+Build/*
+
+# Whitelist PakBlacklist-<BuildConfiguration>.txt files
+!Build/*/
+Build/*/**
+!Build/*/PakBlacklist*.txt
+
+# Don't ignore icon files in Build
+!Build/**/*.ico
+
+# Built data for maps
+*_BuiltData.uasset
+
+# Configuration files generated by the Editor
+Saved/*
+
+# Compiled source files for the engine to use
+Intermediate/*
+Plugins/*/Intermediate/*
+
+# Cache files for the editor to use
+DerivedDataCache/*
+
+# Misc
+.ignore
 {{< /codeblock >}}
 
 <br />
