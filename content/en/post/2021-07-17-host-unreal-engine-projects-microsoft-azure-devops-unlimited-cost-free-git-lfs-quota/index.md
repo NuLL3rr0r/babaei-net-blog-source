@@ -23,6 +23,8 @@ $ git fetch origin master
 $ git reset --hard FETCH_HEAD
 {{< /highlight >}}
 
+**UPDATE 3 [2021/07/28]**: _I've noticed due to the fact that the files modification times affect how Rsync and Git work by default, my approach in writing the original script was totally wrong, which in turn caused a bug where on each update it committed all tracked files over again causing huge bloat in the repository, despite the fact that the content of the files was unchanged. Thus, it led me to completely rewrite the script. Hopefully, the new script has been extensively tested with two repositories/projects and works as expected. In addition to that, the script now shows progress for every step, which is a nice addition in order to keep you informed and give an estimation of the time it is going to take to get the job done. And, last but not least, I have edited and improved the blog post a bit._
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
@@ -119,7 +121,7 @@ The script that I am going to represent in this tutorial is a Bash shell script 
 
 In order to effectively follow this tutorial and use the script, you may need the following:
 
-* Bash
+* Bash (Tested on 5.1, but it probably works on 4.x, too)
 * Git + LFS
 * [rsync](https://rsync.samba.org/)
 * A github account correctly setup with access to [Unreal Engine's repository on Epic's official GitHub account](https://github.com/EpicGames/UnrealEngine)
@@ -267,10 +269,10 @@ readonly UPDATE_SCRIPT_NAME="$(basename "$0")"
 readonly PROJECT_ENGINE_DIR="$(dirname $(realpath "$0"))"
 readonly GIT_ATTRIBUTES_FILE_NAME=".gitattributes"
 readonly GIT_IGNORE_FILE_NAME=".gitignore"
+readonly GIT_DIR_NAME=".git"
+readonly UE4_GAMES_UPROJECTDIRS_FILE_NAME="UE4Games.uprojectdirs"
 readonly PROJECT_ENGINE_GIT_ATTRIBUTES_FILE="${PROJECT_ENGINE_DIR}/${GIT_ATTRIBUTES_FILE_NAME}"
 readonly UPSTREAM_ENGINE_GIT_IGNORE_FILE="${UPSTREAM_ENGINE_DIR}/${GIT_IGNORE_FILE_NAME}"
-readonly PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT="/tmp/${PROJECT_DIR_NAME}-engine-source-changelist-git-add.sh"
-readonly PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT="/tmp/${PROJECT_DIR_NAME}-engine-deps-git-force-add.sh"
 
 function displayWarning() {
     echo ""
@@ -299,7 +301,6 @@ function update() {
     echo "Cleaning up the upstream engine '${UPSTREAM_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
-        && git rm --cached -r . \
         && git clean -dfx \
         && git reset --hard \
         && echo "" \
@@ -312,44 +313,78 @@ function update() {
         && echo "Syncing the ${PROJECT_DIR_NAME}'s engine '${PROJECT_ENGINE_DIR}' with upstream '${UPSTREAM_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
-        && rsync -avze --delete \
-            --exclude=".git" \
-            --exclude="UE4Games.uprojectdirs" \
-            --exclude="${UPDATE_SCRIPT_NAME}" \
-            --exclude="${PROJECT_DIR_NAME}" \
+        && rsync --checksum --delete-after --ignore-errors \
+            --ignore-times --links --perms --recursive --verbose \
+            --exclude="/${GIT_DIR_NAME}" \
+            --exclude="/${UE4_GAMES_UPROJECTDIRS_FILE_NAME}" \
+            --exclude="/${UPDATE_SCRIPT_NAME}" \
+            --exclude="/${PROJECT_DIR_NAME}" \
             "${UPSTREAM_ENGINE_DIR}/" "${PROJECT_ENGINE_DIR}/" \
-        && echo "" \
-        && echo "Extracting the engine's source changelist from '${PROJECT_ENGINE_DIR}'..." \
-        && echo "" \
-        && cd "${PROJECT_ENGINE_DIR}" \
-        && git diff --name-only -z | xargs -0 -I % echo "printf 'git add -f \"%\"\n'" | sh > "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
-        && chmod a+x "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
-        && echo "" \
-        && echo "Staging the engine's source changes inside '${PROJECT_ENGINE_DIR}'..." \
-        && echo "" \
-        && cd "${PROJECT_ENGINE_DIR}" \
-        && "${PROJECT_ENGINE_SOURCE_CHANGELIST_GIT_ADD_SCRIPT}" \
         && echo "" \
         && echo "Extracting the engine's git dependencies list from '${UPSTREAM_ENGINE_DIR}'..." \
         && echo "" \
-        && cd "${PROJECT_ENGINE_DIR}" \
-        && echo "# UE4 Git Dependencies" >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && rm -f "${UPSTREAM_ENGINE_GIT_IGNORE_FILE}" \
-        && git ls-files -z -o --exclude-standard | xargs -0 -I % echo "printf '\"%\" filter=lfs diff=lfs merge=lfs -text\n'" | sh >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
-        && echo "#/usr/bin/env bash" > "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
-        && git ls-files -z -o --exclude-standard | xargs -0 -I % echo "printf 'git add -f \"%\"\n'" | sh >> "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
-        && chmod a+x "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
-        && cd "${UPSTREAM_ENGINE_DIR}" \
-        && git checkout "${GIT_IGNORE_FILE_NAME}" \
+        && ENGINE_DEPS=($(git ls-files -z -o --exclude-standard | xargs -0)) \
+        && ENGINE_DEPS_COUNT="${#ENGINE_DEPS[@]}" \
+        && echo "" \
+        && echo "Tracking the engine's git dependencies list as LFS objects..." \
+        && echo "" \
+        && echo "# UE4 Git Dependencies" >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
+        && for i in ${!ENGINE_DEPS[@]}; do \
+            echo "Tracking $((${i}+1))/${ENGINE_DEPS_COUNT} '${ENGINE_DEPS[${i}]}'..."; \
+            echo "\"${ENGINE_DEPS[${i}]}\" filter=lfs diff=lfs merge=lfs -text" \
+                >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}"; \
+            done \
+        && echo "" \
+        && echo "Extracting the project engine's changelist from '${PROJECT_ENGINE_DIR}'..." \
+        && echo "" \
+        && cd "${PROJECT_ENGINE_DIR}" \
+        && ENGINE_CHANGELIST=($(git diff --name-only -z | xargs -0)) \
+        && ENGINE_CHANGELIST_UNTRACKED=($(git ls-files --others --exclude-standard -z | xargs -0)) \
+        && ENGINE_CHANGELIST=("${ENGINE_CHANGELIST[@]}" "${ENGINE_CHANGELIST_UNTRACKED[@]}") \
+        && unset ENGINE_CHANGELIST_UNTRACKED \
+        && ENGINE_CHANGELIST_COUNT="${#ENGINE_CHANGELIST[@]}" \
+        && echo "" \
+        && echo "Staging the project engine's changes inside '${PROJECT_ENGINE_DIR}'..." \
+        && echo "" \
+        && for i in ${!ENGINE_CHANGELIST[@]}; do \
+            echo "Staging $((${i}+1))/${ENGINE_CHANGELIST_COUNT} '${ENGINE_CHANGELIST[${i}]}'..."; \
+            git add -f "${ENGINE_CHANGELIST[${i}]}" &> /dev/null; \
+            done \
+        && unset ENGINE_CHANGELIST \
+        && unset ENGINE_CHANGELIST_COUNT \
         && echo "" \
         && echo "Staging the engine's git dependencies inside '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && "${PROJECT_ENGINE_DEPS_GIT_FORCE_ADD_SCRIPT}" \
-        && git add -f "${GIT_ATTRIBUTES_FILE_NAME}" \
+        && for i in ${!ENGINE_DEPS[@]}; do \
+            echo "Staging LFS object $((${i}+1))/${ENGINE_DEPS_COUNT} '${ENGINE_DEPS[${i}]}'..."; \
+            git add -f "${ENGINE_DEPS[${i}]}" &> /dev/null; \
+            done \
+        && unset ENGINE_DEPS \
+        && unset ENGINE_DEPS_COUNT \
+        && echo "" \
+        && echo "Cleaning up the upstream engine '${UPSTREAM_ENGINE_DIR}'..." \
+        && echo "" \
+        && cd "${UPSTREAM_ENGINE_DIR}" \
+        && git clean -dfx \
+        && git reset --hard \
+        && echo "" \
+        && echo "Counting the number of staged files inside '${PROJECT_ENGINE_DIR}'..." \
+        && echo "" \
+        && cd "${PROJECT_ENGINE_DIR}" \
+        && STAGED_FILES_COUNT=$(git diff --name-only --cached | wc -l) \
+        && echo "${STAGED_FILES_COUNT} file(s) have been staged and ready to be committed!" \
+        && unset STAGED_FILES_COUNT \
         && echo "" \
         && echo "Done!" \
+        && echo "" \
+        && echo "In order to delete old LFS files from local storage, thus" \
+        && echo "freeing up space, after commiting and pushing your changes," \
+        && echo "do not forget to run:" \
+        && echo "" \
+        && echo "   $ git lfs prune --verbose --verify-remote" \
         && echo ""
 }
 
@@ -369,9 +404,9 @@ __2__. Create your project's git repository on Microsoft Azure DevOPS and genera
 __3__. Prepare the initial intermediary local git repository we are going to use for syncing the engine source code with upstream:
 
 {{< highlight sh >}}
-$ rsync -avze --delete \
-    --exclude='.git' \
-    /opt/UnrealEngine/ ~/dev/MamadouArchives-Sync/
+$ rsync -arv --delete-before \
+    --exclude='/.git' \
+    /opt/UnrealEngine/ /home/mamadou/dev/MamadouArchives-Sync/
 {{< /highlight >}}
 
 __WARNING__: Never run this command ever again after this step!
