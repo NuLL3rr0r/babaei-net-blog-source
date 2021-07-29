@@ -325,13 +325,14 @@ function update() {
         && echo "" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && rm -f "${UPSTREAM_ENGINE_GIT_IGNORE_FILE}" \
-        && ENGINE_DEPS=($(git ls-files -z -o --exclude-standard | xargs -0)) \
+        && ENGINE_DEPS=($(git ls-files -z -o --exclude-standard | xargs -0 -I %s printf 'eval [[ -n \\"%s\\" ]] && printf "\\"%s\\"\\n";' | sh)) \
         && ENGINE_DEPS_COUNT="${#ENGINE_DEPS[@]}" \
         && echo "" \
         && echo "Tracking the engine's git dependencies list as LFS objects..." \
         && echo "" \
         && echo "# UE4 Git Dependencies" >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
-        && for i in ${!ENGINE_DEPS[@]}; do \
+        && for i in "${!ENGINE_DEPS[@]}"; do \
+            [[ -z "${ENGINE_DEPS[${i}]}" ]] && continue; \
             echo "Tracking $((${i}+1))/${ENGINE_DEPS_COUNT} '${ENGINE_DEPS[${i}]}'..."; \
             echo "\"${ENGINE_DEPS[${i}]}\" filter=lfs diff=lfs merge=lfs -text" \
                 >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}"; \
@@ -340,15 +341,16 @@ function update() {
         && echo "Extracting the project engine's changelist from '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && ENGINE_CHANGELIST=($(git diff --name-only -z | xargs -0)) \
-        && ENGINE_CHANGELIST_UNTRACKED=($(git ls-files --others --exclude-standard -z | xargs -0)) \
+        && ENGINE_CHANGELIST=($(git diff --name-only -z | xargs -0 -I %s printf 'eval [[ -n \\"%s\\" ]] && printf "\\"%s\\"\\n";' | sh)) \
+        && ENGINE_CHANGELIST_UNTRACKED=($(git ls-files --others --exclude-standard -z | xargs -0 -I %s printf 'eval [[ -n \\"%s\\" ]] && printf "\\"%s\\"\\n";' | sh)) \
         && ENGINE_CHANGELIST=("${ENGINE_CHANGELIST[@]}" "${ENGINE_CHANGELIST_UNTRACKED[@]}") \
         && unset ENGINE_CHANGELIST_UNTRACKED \
         && ENGINE_CHANGELIST_COUNT="${#ENGINE_CHANGELIST[@]}" \
         && echo "" \
         && echo "Staging the project engine's changes inside '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
-        && for i in ${!ENGINE_CHANGELIST[@]}; do \
+        && for i in "${!ENGINE_CHANGELIST[@]}"; do \
+            [[ -z "${ENGINE_CHANGELIST[${i}]}" ]] && continue; \
             echo "Staging $((${i}+1))/${ENGINE_CHANGELIST_COUNT} '${ENGINE_CHANGELIST[${i}]}'..."; \
             git add -f "${ENGINE_CHANGELIST[${i}]}" &> /dev/null; \
             done \
@@ -358,7 +360,8 @@ function update() {
         && echo "Staging the engine's git dependencies inside '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && for i in ${!ENGINE_DEPS[@]}; do \
+        && for i in "${!ENGINE_DEPS[@]}"; do \
+            [[ -z "${ENGINE_DEPS[${i}]}" ]] && continue; \
             echo "Staging LFS object $((${i}+1))/${ENGINE_DEPS_COUNT} '${ENGINE_DEPS[${i}]}'..."; \
             git add -f "${ENGINE_DEPS[${i}]}" &> /dev/null; \
             done \
