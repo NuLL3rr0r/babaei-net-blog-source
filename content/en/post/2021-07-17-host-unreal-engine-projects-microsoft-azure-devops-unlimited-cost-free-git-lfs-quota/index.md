@@ -325,7 +325,9 @@ function update() {
         && echo "" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && rm -f "${UPSTREAM_ENGINE_GIT_IGNORE_FILE}" \
-        && ENGINE_DEPS=($(git ls-files -z -o --exclude-standard | xargs -0 -I %s printf 'eval [[ -n \\"%s\\" ]] && printf "\\"%s\\"\\n";' | sh)) \
+        && ENGINE_DEPS_STR=$(git ls-files -z --others --exclude-standard | xargs -0 -I %s printf '[[ "%s" != "" ]] && printf "%s\n";\0' | xargs -0 -n1 bash -c 2> /dev/null) \
+        && IFS=$'\n' && ENGINE_DEPS=(${ENGINE_DEPS_STR}) && unset IFS \
+        && unset ENGINE_DEPS_STR \
         && ENGINE_DEPS_COUNT="${#ENGINE_DEPS[@]}" \
         && echo "" \
         && echo "Tracking the engine's git dependencies list as LFS objects..." \
@@ -341,8 +343,12 @@ function update() {
         && echo "Extracting the project engine's changelist from '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && ENGINE_CHANGELIST=($(git diff --name-only -z | xargs -0 -I %s printf 'eval [[ -n \\"%s\\" ]] && printf "\\"%s\\"\\n";' | sh)) \
-        && ENGINE_CHANGELIST_UNTRACKED=($(git ls-files --others --exclude-standard -z | xargs -0 -I %s printf 'eval [[ -n \\"%s\\" ]] && printf "\\"%s\\"\\n";' | sh)) \
+        && ENGINE_CHANGELIST_STR=$(git diff -z --name-only | xargs -0 -I %s printf '[[ "%s" != "" ]] && printf "%s\n";\0' | xargs -0 -n1 bash -c 2> /dev/null) \
+        && IFS=$'\n' && ENGINE_CHANGELIST=(${ENGINE_CHANGELIST_STR}) && unset IFS \
+        && unset ENGINE_CHANGELIST_STR \
+        && ENGINE_CHANGELIST_UNTRACKED_STR=$(git ls-files -z --others --exclude-standard | xargs -0 -I %s printf '[[ "%s" != "" ]] && printf "%s\n";\0' | xargs -0 -n1 bash -c 2> /dev/null) \
+        && IFS=$'\n' && ENGINE_CHANGELIST_UNTRACKED=(${ENGINE_CHANGELIST_UNTRACKED_STR}) && unset IFS \
+        && unset ENGINE_CHANGELIST_UNTRACKED_STR \
         && ENGINE_CHANGELIST=("${ENGINE_CHANGELIST[@]}" "${ENGINE_CHANGELIST_UNTRACKED[@]}") \
         && unset ENGINE_CHANGELIST_UNTRACKED \
         && ENGINE_CHANGELIST_COUNT="${#ENGINE_CHANGELIST[@]}" \
