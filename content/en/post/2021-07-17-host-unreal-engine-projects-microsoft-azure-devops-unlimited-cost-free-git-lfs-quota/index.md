@@ -25,6 +25,8 @@ $ git reset --hard FETCH_HEAD
 
 **UPDATE 3 [2021/07/28]**: _I've noticed due to the fact that the files modification times affect how Rsync and Git work by default, my approach in writing the original script was totally wrong, which in turn caused a bug where on each update it committed all tracked files over again causing huge bloat in the repository, despite the fact that the content of the files was unchanged. Thus, it led me to completely rewrite the script. Hopefully, the new script has been extensively tested with two repositories/projects and works as expected. In addition to that, the script now shows progress for every step, which is a nice addition in order to keep you informed and give an estimation of the time it is going to take to get the job done. And, last but not least, I have edited and improved the blog post a bit._
 
+**UPDATE 4 [2021/08/04]**: Due to nested <code>.gitignore</code> files inside the Unreal Engine dependencies, I noticed tiny bits of dependencies for building UE4/UE5 on Microsoft Windows are not getting copied over to the repository. As a result, I fixed the script in order to also take care of that.
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
@@ -272,7 +274,6 @@ readonly GIT_IGNORE_FILE_NAME=".gitignore"
 readonly GIT_DIR_NAME=".git"
 readonly UE4_GAMES_UPROJECTDIRS_FILE_NAME="UE4Games.uprojectdirs"
 readonly PROJECT_ENGINE_GIT_ATTRIBUTES_FILE="${PROJECT_ENGINE_DIR}/${GIT_ATTRIBUTES_FILE_NAME}"
-readonly UPSTREAM_ENGINE_GIT_IGNORE_FILE="${UPSTREAM_ENGINE_DIR}/${GIT_IGNORE_FILE_NAME}"
 
 function displayWarning() {
     echo ""
@@ -324,7 +325,9 @@ function update() {
         && echo "Extracting the engine's git dependencies list from '${UPSTREAM_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
-        && rm -f "${UPSTREAM_ENGINE_GIT_IGNORE_FILE}" \
+        && for GIT_IGNORE_FILE in $(find . -type f -name "${GIT_IGNORE_FILE_NAME}"); do \
+            rm -f "${GIT_IGNORE_FILE}"; \
+            done \
         && ENGINE_DEPS_STR=$(git ls-files -z --others --exclude-standard | xargs -0 -I %s printf '[[ "%s" != "" ]] && printf "%s\n";\0' | xargs -0 -n1 bash -c 2> /dev/null) \
         && IFS=$'\n' && ENGINE_DEPS=(${ENGINE_DEPS_STR}) && unset IFS \
         && unset ENGINE_DEPS_STR \
