@@ -126,7 +126,7 @@ In order to effectively follow this tutorial and use the script, you may need th
 * Bash (Tested on 5.1, but it probably works on 4.x, too)
 * Git + LFS
 * [rsync](https://rsync.samba.org/)
-* A github account correctly setup with access to [Unreal Engine's repository on Epic's official GitHub account](https://github.com/EpicGames/UnrealEngine)
+* A github account correctly setup with access to [the Unreal Engine repository on Epic's official GitHub account](https://github.com/EpicGames/UnrealEngine)
 * A [Microsoft Azure DevOPS](https://azure.microsoft.com/en-us/services/devops/) account
 
 ## The directory structure
@@ -311,7 +311,7 @@ function update() {
         && git pull \
         && bash Setup.sh \
         && echo "" \
-        && echo "Syncing the ${PROJECT_DIR_NAME}'s engine '${PROJECT_ENGINE_DIR}' with upstream '${UPSTREAM_ENGINE_DIR}'..." \
+        && echo "Syncing the ${PROJECT_DIR_NAME} engine '${PROJECT_ENGINE_DIR}' with upstream '${UPSTREAM_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && rsync --checksum --delete-after --ignore-errors \
@@ -322,7 +322,7 @@ function update() {
             --exclude="/${PROJECT_DIR_NAME}" \
             "${UPSTREAM_ENGINE_DIR}/" "${PROJECT_ENGINE_DIR}/" \
         && echo "" \
-        && echo "Extracting the engine's git dependencies list from '${UPSTREAM_ENGINE_DIR}'..." \
+        && echo "Extracting engine's git dependencies list from '${UPSTREAM_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${UPSTREAM_ENGINE_DIR}" \
         && for GIT_IGNORE_FILE in $(find . -type f -name "${GIT_IGNORE_FILE_NAME}"); do \
@@ -333,7 +333,7 @@ function update() {
         && unset ENGINE_DEPS_STR \
         && ENGINE_DEPS_COUNT="${#ENGINE_DEPS[@]}" \
         && echo "" \
-        && echo "Tracking the engine's git dependencies list as LFS objects..." \
+        && echo "Tracking engine's git dependencies as LFS objects..." \
         && echo "" \
         && echo "# UE4 Git Dependencies" >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}" \
         && for i in "${!ENGINE_DEPS[@]}"; do \
@@ -343,7 +343,7 @@ function update() {
                 >> "${PROJECT_ENGINE_GIT_ATTRIBUTES_FILE}"; \
             done \
         && echo "" \
-        && echo "Extracting the project engine's changelist from '${PROJECT_ENGINE_DIR}'..." \
+        && echo "Extracting engine's changelist from '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
         && ENGINE_CHANGELIST_STR=$(git diff -z --name-only | xargs -0 -I %s -r printf '[[ "%s" != "" ]] && printf "%s\n";\0' | xargs -0 -n1 -r bash -c 2> /dev/null) \
@@ -356,7 +356,7 @@ function update() {
         && unset ENGINE_CHANGELIST_UNTRACKED \
         && ENGINE_CHANGELIST_COUNT="${#ENGINE_CHANGELIST[@]}" \
         && echo "" \
-        && echo "Staging the project engine's changes inside '${PROJECT_ENGINE_DIR}'..." \
+        && echo "Staging engine's changes inside '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && for i in "${!ENGINE_CHANGELIST[@]}"; do \
             [[ -z "${ENGINE_CHANGELIST[${i}]}" ]] && continue; \
@@ -366,7 +366,7 @@ function update() {
         && unset ENGINE_CHANGELIST \
         && unset ENGINE_CHANGELIST_COUNT \
         && echo "" \
-        && echo "Staging the engine's git dependencies inside '${PROJECT_ENGINE_DIR}'..." \
+        && echo "Staging engine's git dependencies inside '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
         && for i in "${!ENGINE_DEPS[@]}"; do \
@@ -383,10 +383,10 @@ function update() {
         && git clean -dfx \
         && git reset --hard \
         && echo "" \
-        && echo "Counting the number of staged files inside '${PROJECT_ENGINE_DIR}'..." \
+        && echo "Counting staged files inside '${PROJECT_ENGINE_DIR}'..." \
         && echo "" \
         && cd "${PROJECT_ENGINE_DIR}" \
-        && STAGED_FILES_COUNT=$(git diff --name-only --cached | wc -l) \
+        && STAGED_FILES_COUNT=$(git diff --name-only --cached | wc -l 2> /dev/null) \
         && echo "${STAGED_FILES_COUNT} file(s) have been staged and ready to be committed!" \
         && unset STAGED_FILES_COUNT \
         && echo "" \
@@ -494,7 +494,7 @@ This will add the following to <code>.git/config</code>:
 	version = HTTP/1.1
 {{< /highlight >}}
 
-__8__. Now, in order to fetch the engine's binary dependencies, run the script by issuing either:
+__8__. Now, in order to fetch engine's binary dependencies, run the script by issuing either:
 
 {{< highlight sh >}}
 $ cd ~/dev/MamadouArchives-Sync/
@@ -507,7 +507,7 @@ Or (because the script is aware of how to find its repository path, one code saf
 $ ~/dev/MamadouArchives-Sync/UpdateEngine.sh
 {{< /highlight >}}
 
-__9__. It may take a long time for the script to finish. If everything goes fine, we can commit and push the engine's binary dependencies. Note that the script does not so automatically because I prefer to review it before committing or pushing it. But, the script stage the retrieved new or updated files for you automatically. So:
+__9__. It may take a long time for the script to finish. If everything goes fine, we can commit and push engine's binary dependencies. Note that the script does not so automatically because I prefer to review it before committing or pushing it. But, the script stage the retrieved new or updated files for you automatically. So:
 
 {{< highlight sh >}}
 $ git status           # in order to see the changes
@@ -521,7 +521,7 @@ __10__. Form now on, you can always follow steps <code>#8</code> <code>#9</code>
 
 __11__. Create a UE4 project with the desired name, in my case <code>MamadouArchives</code>, or copy over an already existing project (without the <code>.git</code> directory if it's already hosted on git) into your newly created repository. e.g. <code>~/dev/MamadouArchives-Sync/</code>.
 
-__12__. Now, it's time to adjust Git LFS for our project. In order to touch less engine files, we are not going to touch the engine's <code>.gitattributes</code> located at <code>~/dev/MamadouArchives-Sync/.gitattributes</code>. Instead, we could override this file by creating the exact same file in our project's directory, e.g. <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code>. If you are going to do so, keep in mind that from now on you must avoid tracking files by running <code>git lfs track "pattern or file path"</code> in the engine directory <code>~/dev/MamadouArchives-Sync</code>, because it will probably get truncated by the engine update script in consecutive runs. Thus, etither run this command in the project directory <code>~/dev/MamadouArchives-Sync/MamadouArchives</code> or it's subdirectories, and after that by issuing <code>cat ~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> always make sure your pattern is being tracked. Or, you code modify <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> directly. Here is a sample <code>.gitattributes</code>, which overrides or adds to engine's <code>.gitattributes</code>:
+__12__. Now, it's time to adjust Git LFS for our project. In order to touch less engine files, we are not going to touch engine's <code>.gitattributes</code> located at <code>~/dev/MamadouArchives-Sync/.gitattributes</code>. Instead, we could override this file by creating the exact same file in our project's directory, e.g. <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code>. If you are going to do so, keep in mind that from now on you must avoid tracking files by running <code>git lfs track "pattern or file path"</code> in the engine directory <code>~/dev/MamadouArchives-Sync</code>, because it will probably get truncated by the engine update script in consecutive runs. Thus, etither run this command in the project directory <code>~/dev/MamadouArchives-Sync/MamadouArchives</code> or it's subdirectories, and after that by issuing <code>cat ~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> always make sure your pattern is being tracked. Or, you code modify <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> directly. Here is a sample <code>.gitattributes</code>, which overrides or adds to engine's <code>.gitattributes</code>:
 
 {{< codeblock lang="bash" title="~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes" line_numbers="true" >}}
 # Keep CRLF out of the repository
@@ -744,7 +744,7 @@ $ git commit -m "add MamadouArchives to UE4Games.uprojectdirs"
 $ git push
 {{< /highlight >}}
 
-__Note__: Adding the <code>-f</code> or <code>--force</code> parameter to <code>git add</code> is helpful when a file such as <code>UE4Games.uprojectdirs</code> is being ignored by one of the engine's <code>.gitignore</code>'s files, but you want to track it nonetheless.
+__Note__: Adding the <code>-f</code> or <code>--force</code> parameter to <code>git add</code> is helpful when a file such as <code>UE4Games.uprojectdirs</code> is being ignored by one of the engine <code>.gitignore</code> files, but you want to track it nonetheless.
 
 __16__. Well, congratulations! Now we have everything set up. You can make a copy of the intermediary <code>~/dev/MamadouArchives-Sync/</code> in order to start your development:
 
@@ -768,7 +768,7 @@ Couldn't launch /home/mamadou/dev/MamadouArchives/Engine/Binaries/Linux/ShaderCo
 make ShaderCompileWorker
 ```
 
-The solution is to find the ShaderCompileWorker project inside Microsoft Visual Studio's solution explorer and build it. Or, on GNU/Linux open up a terminal, navigate to the engine's directory and issue the <code>make</code> command:
+The solution is to find the ShaderCompileWorker project inside Microsoft Visual Studio's solution explorer and build it. Or, on GNU/Linux open up a terminal, navigate to the engine directory and issue the <code>make</code> command:
 
 {{< highlight sh >}}
 $ cd ~/dev/MamadouArchives
