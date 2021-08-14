@@ -812,6 +812,26 @@ $ git lfs migrate import --everything --include="*.uasset,*.umap"
 
 Adjust the <code>--include</code> according to your project's specific needs.
 
+Since migration does overwrite your reoisutiry's history, you'll need to force push your repository:
+
+{{< highlight sh >}}
+$ git push --force
+{{< /highlight >}}
+
+__Note__: In case you don't desire a history rewrite, <code>--no-rewrite</code> comes to the rescue in order to create new commits that move your files to Git LFS instead:
+
+{{< highlight sh >}}
+$ git lfs migrate import --everything --include="*.uasset,*.umap" --no-rewrite
+{{< /highlight >}}
+
+Now, it's time for cleaning up your local <code>.git</code> directory after the migration to Git LFS:
+
+{{< highlight sh >}}
+$ git reflog expire --expire-unreachable=now --all
+$ git gc --prune=now
+{{< /highlight >}}
+
+
 ## Final thoughts
 
 Despite the shortcomings of Git in handling binary files, it's my SCM of choice for game development over currently available solutions such as SVN or Perforce. In the past, I used to heavily relying on nested [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) in order to divide UE4 git projects' repositories into smaller repositories and keep the history clean. Since I've found Microsoft Azure DevOPS, life has never been easier with UE4 project maintenance under git.
