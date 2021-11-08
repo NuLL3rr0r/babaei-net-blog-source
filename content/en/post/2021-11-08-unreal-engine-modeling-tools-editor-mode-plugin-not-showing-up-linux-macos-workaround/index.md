@@ -6,7 +6,7 @@ tags = [ "C", "C++", "Epic Games", "Game Development", "Game Programming", "game
 toc = true
 +++
 
-**UPDATE [2021/11/08]**: _For whitelisting macOS one could simply add <code>Mac</code> to <code>PlatformAllowList</code> inside the <code>.uplugin</code> file. e.g._:
+**UPDATE [2021/11/08]**: _For whitelisting macOS, one could simply add <code>Mac</code> to <code>PlatformAllowList</code> inside the <code>.uplugin</code> file. e.g._:
 
 {{< codeblock lang="sh" title="Whitelisting Linux inside ModelingToolsEditorMode.uplugin" >}}
 	"Modules": [
