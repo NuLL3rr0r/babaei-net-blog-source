@@ -1,7 +1,7 @@
 +++
 title = "A quick workaround for Unreal Engine Modeling Tools Editor Mode plugin not showing up on Linux and macOS"
-slug = "2021-11-08-unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround"
-date = 2021-08-17T01:10:00+01:00
+slug = "unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround"
+date = 2021-11-08T01:10:00+01:00
 tags = [ "C", "C++", "Epic Games", "Game Development", "Game Programming", "gamedev", "GNU", "Linux", "macOS", "Qt Creator", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Windows", "ZFS" ]
 toc = true
 +++
@@ -14,11 +14,11 @@ If you are starting up a new project, the modeling mode plugin may need to be tu
 
 So, I did enable the plugin from inside the editor:
 
-{{< figure src="/blog/2021-11-08-unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround/enabling-unreal-engine-modeling-tools-editor-mode-plugin.webp" alt="Enabling Unreal Engine Modeling Tools Editor Mode plugin" caption="Enabling Unreal Engine Modeling Tools Editor Mode Plugin" >}}
+{{< figure src="/blog/unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround/enabling-unreal-engine-modeling-tools-editor-mode-plugin.webp" alt="Enabling Unreal Engine Modeling Tools Editor Mode plugin" caption="Enabling Unreal Engine Modeling Tools Editor Mode Plugin" >}}
 
 To no avail and I was never able to find it inside the UE5 editor:
 
-{{< figure src="/blog/2021-11-08-unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround/unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos.webp" alt="Unreal Engine Modeling Tools Editor Mode plugin not showing up after being enabled" caption="Unreal Engine Modeling Tools Editor Mode plugin not showing up after being enabled" >}}
+{{< figure src="/blog/unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround/unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos.webp" alt="Unreal Engine Modeling Tools Editor Mode plugin not showing up after being enabled" caption="Unreal Engine Modeling Tools Editor Mode plugin not showing up after being enabled" >}}
 
 Despite that, I was able to figure out what's wrong. Here's how I fixed it on Linux and it's an easy fix. It probably works on macOS, too. Though I have no idea why Epic Games has disabled it on non-Windows platforms in spite of the fact that it works just fine.
 
@@ -158,7 +158,7 @@ To:
 
 Fixed the build issue. I Fired up the editor and I was able to immediately spot the Modeling Mode inside the UE5 editor:
 
-{{< figure src="/blog/2021-11-08-unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround/unreal-engine-modeling-tools-editor-mode-plugin-linux.webp" alt="Unreal Engine Modeling Tools Editor Mode plugin on GNU/Linux" caption="Unreal Engine Modeling Tools Editor Mode plugin on GNU/Linux" >}}
+{{< figure src="/blog/unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround/unreal-engine-modeling-tools-editor-mode-plugin-linux.webp" alt="Unreal Engine Modeling Tools Editor Mode plugin on GNU/Linux" caption="Unreal Engine Modeling Tools Editor Mode plugin on GNU/Linux" >}}
 
 And, it works flawlessly on Linux just as advertised by Epic Games!
 
