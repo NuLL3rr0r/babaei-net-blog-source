@@ -6,6 +6,21 @@ tags = [ "C", "C++", "Epic Games", "Game Development", "Game Programming", "game
 toc = true
 +++
 
+**UPDATE 1 [2021/07/25]**: _For whitelisting macOS one could simply add <code>Mac</code> to <code>PlatformAllowList</code> inside the <code>.uplugin</code> file. e.g.:
+
+{{< codeblock lang="sh" title="Whitelisting Linux inside ModelingToolsEditorMode.uplugin" >}}
+	"Modules": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ "Win64", "Linux", "Mac" ]
+		}
+	],
+{{< /codeblock >}}
+
+<hr />
+
 I've been trying to enable and make use of [UE5's Modeling Tools Editor Mode Plugin](https://www.unrealengine.com/en-US/tech-blog/unreal-engine-5-s-modeling-mode-takes-shape) inside the editor built from <code>ue5-main</code> and <code>5.0</code> and struggled to some extent. According to Epic Games, this should suffice:
 
 {{< blockquote author="Russell Paul from Unreal Engine's blog" link="https://www.unrealengine.com/en-US/tech-blog/unreal-engine-5-s-modeling-mode-takes-shape" title="Unreal Engine 5’s modeling mode takes shape" >}}
