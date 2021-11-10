@@ -3,7 +3,7 @@ title = "A quick workaround for Unreal Engine Modeling Tools Editor Mode plugin 
 slug = "unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround"
 date = 2021-11-08T01:10:00+01:00
 tags = [ "C", "C++", "Epic Games", "Game Development", "Game Programming", "gamedev", "GNU", "Linux", "macOS", "Qt Creator", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Windows", "ZFS" ]
-toc = true
+toc = false
 +++
 
 **UPDATE [2021/11/08]**: _For whitelisting macOS, one could simply add <code>Mac</code> to <code>PlatformAllowList</code> inside the <code>.uplugin</code> file. e.g._:
