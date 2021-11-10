@@ -14,7 +14,7 @@ Again, before we go any further there's a catch you should know about. If you'd 
 
 __1.__ Installing in hardware RAID mode, but making each disk a <code>RAID-0</code> array consisting of only one disk. For example, if you've got <code>8</code> disks, you'll end up with <code>8 RAID-0</code> arrays. Then you'd perform a ZFS installation and your operating system boots as expected. Though this is not recommended and if you'd proceed with this approach, it renders the rest of this post useless.
 
-__2.__ HP Proliant ML350p provides an SD-Card slot, which can be used to install a full system, which is not recommended due to the wear and tear of SDCards with each write-operation on them. In addition to that, this storage type is costly and slow. For example, a <code>SanDisk SDXC Extreme Pro 256GB</code>, which provides a write speed of <code>90MB/s</code> and read speed of <code>170MB/s</code>, costs around <code>€99,99</code> where I live. With today's standards, this is not fast at all or even good enough, especially on a server. I was also able to find a <code>Sandisk CF Express Extreme Pro 512GB type B</code>, with a write speed of <code>800MB/s</code> and a read speed of <code>1500MB/s</code>. It only costs <code>€629,-</code>, which costs an arm and leg to buy!
+__2.__ HP Proliant ML350p provides an SD-Card slot, which can be used to install a full system, which is not recommended due to the wear and tear effect of SDCards with each write-operation on them. In addition to that, this storage type is costly and slow. For example, a <code>SanDisk SDXC Extreme Pro 256GB</code>, which provides a write speed of <code>90MB/s</code> and read speed of <code>170MB/s</code>, costs around <code>€99,99</code> where I live. With today's standards, this is not fast at all or even good enough, especially on a server. I was also able to find a <code>Sandisk CF Express Extreme Pro 512GB type B</code>, with a write speed of <code>800MB/s</code> and a read speed of <code>1500MB/s</code>. It only costs <code>€629,-</code>, which costs an arm and leg to buy!
 
 So, then! What's the solution one might ask? We are going to install only <code>/boot</code> partition on the internal SD Card. Note, that placing only a bootloader such as GRUB, rEFInd or other similar tools won't work as they won't be able to see the boot drive anyway! So, the only solution is to put the boot partition on the SDCard. This way, the system only reads it one time at boot and it does not even have to be an expensive SD-Card.
 
@@ -23,6 +23,8 @@ So, let's begin!
 <!--more-->
 
 ## Switching to HBA mode
+
+Before performing this procedure, I highly recommend to update your server's firmware to the latest version, or else this might not work!
 
 In order to switch the P420i RAID controller on HP Proliant ML350p Gen8:
 
