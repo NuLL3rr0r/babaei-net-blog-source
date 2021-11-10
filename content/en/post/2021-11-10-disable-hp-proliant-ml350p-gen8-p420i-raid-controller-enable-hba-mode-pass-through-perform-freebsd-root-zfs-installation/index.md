@@ -144,24 +144,24 @@ $ sudo fdisk -l
 $ sudo dd if=FreeBSD-13.0-RELEASE-amd64-memstick.img of=/dev/sdX bs=8M
 {{< /codeblock >}}
 
-__3.__ Install FreeBSD as you'd usually do, use <code>Auto (ZFS) Guided Root-on-ZFS</code> option in order to perform the installation on your ZFS RAID level of choice. Remember to write down your <code>HP iLO Internal SD-CARD</code> disk number in the <code>ZFS Configuration</code> dialog. In my case with <code>8</code> disks, <code>da0</code> to <code>da7</code> will be actual SAS disks, <code>da8</code> is the USB flash drive used to boot the installer, and finally, <code>da9</code> is the internal SD-Card (note that the order of the internal SD-Card and the installer USB drive could change, and this is not a general rule). So, for the rest of this post, I'd be using that. When done with the installation, DO NOT REBOOT YET!
+__3.__ Install FreeBSD as you'd usually do, use <code>Auto (ZFS) Guided Root-on-ZFS</code> option in order to perform the installation on your ZFS RAID level of choice. Remember to keep track of your <code>HP iLO Internal SD-CARD</code> disk number in the <code>ZFS Configuration</code> dialog. In my case with the first <code>8</code> disks, <code>da0</code> to <code>da7</code> will be actual SAS disks, the last one <code>da9</code> is the USB flash drive used to boot the installer, and finally, the penultimate one <code>da8</code> is the internal SD-Card (note that the order of the internal SD-Card and the installer USB drive could change, and this is not a general rule). So, for the rest of this post, I'd be using that. When done with the installation, DO NOT REBOOT YET!
 
 __4.__ After the installation is finished, the FreeBSD Installer will ask for any final manual modifications. So, choose <code>Yes</code> here in order to drop into a terminal. If you don't do this, you're installation simply won't boot.
 
-__5.__ Since there might already be some data or partitions on the internal SD-Card, in my case <code>da9</code>, we are going to force destroy everything first:
+__5.__ Since there might already be some data or partitions on the internal SD-Card, in my case <code>da8</code>, we are going to force destroy everything first:
 
 {{< codeblock lang="sh" title="Destroying all partitions on the internal SD-Card" >}}
-$ gpart destroy -F da9
+$ gpart destroy -F da8
 
-da9 destroyed
+da8 destroyed
 {{< /codeblock >}}
 
 __5.__ Then, create a GPT partition table on the internal SD-Card:
 
 {{< codeblock lang="sh" title="Creating a GPT partition" >}}
-$ gpart create -s GPT da9
+$ gpart create -s GPT da8
 
-da9 created
+da8 created
 {{< /codeblock >}}
 
 __6.__ Proceed to create a <code>freebsd-boot</code> partition. According to <code>gpart</code> manpage:
@@ -181,32 +181,32 @@ upto the nearest 4 kB boundary.
 Thus, issue the following command:
 
 {{< codeblock lang="sh" title="Creating a boot partition" >}}
-$ gpart add -b 40 -s 472 -t freebsd-boot da9
+$ gpart add -b 40 -s 472 -t freebsd-boot da8
 
-da9p1 added
+da8p1 added
 {{< /codeblock >}}
 
 __7.__ Now, it's time to install the FreeBSD loader on the newly created partition and a protective MBR on the internal SD-Card:
 
 {{< codeblock lang="sh" title="Installing the loader and a protective MBR" >}}
-$ gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 da9
+$ gpart bootcode -b /boot/pmbr -p /boot/gptzfsboot -i 1 da8
 
-partcode written to da9p1
-bootcode written to da9
+partcode written to da8p1
+bootcode written to da8
 {{< /codeblock >}}
 
 __8.__ After this, we need a ZFS partition on the internal SD-Card:
 
 {{< codeblock lang="sh" title="Adding a ZFS partition" >}}
-$ gpart add -t freebsd-zfs da9
+$ gpart add -t freebsd-zfs da8
 
-da9p2 added
+da8p2 added
 {{< /codeblock >}}
 
-__9.__ Time to create a ZFS pool on the newly created partition, in my case <code>da9p2</code>, and mount it:
+__9.__ Time to create a ZFS pool on the newly created partition, in my case <code>da8p2</code>, and mount it:
 
 {{< codeblock lang="sh" title="Creating and mounting a zpool" >}}
-$ zpool create -o altroot=/mnt zboot /dev/da9p2e
+$ zpool create -o altroot=/mnt zboot /dev/da8p2e
 {{< /codeblock >}}
 
 __10.__ According to <code>gptzfsboot</code> manpage:
