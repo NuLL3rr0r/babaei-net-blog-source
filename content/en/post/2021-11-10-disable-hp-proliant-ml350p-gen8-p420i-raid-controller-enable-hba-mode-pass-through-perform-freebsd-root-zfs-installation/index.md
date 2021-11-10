@@ -206,7 +206,7 @@ da8p2 added
 __9.__ Time to create a ZFS pool on the newly created partition, in my case <code>da8p2</code>, and mount it:
 
 {{< codeblock lang="sh" title="Creating and mounting a zpool" >}}
-$ zpool create -o altroot=/mnt zboot /dev/da8p2e
+$ zpool create -o altroot=/mnt zboot /dev/da8p2
 {{< /codeblock >}}
 
 __10.__ According to <code>gptzfsboot</code> manpage:
