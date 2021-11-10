@@ -211,7 +211,7 @@ $ zpool create -o altroot=/mnt zboot /dev/da8p2
 
 __10.__ According to <code>gptzfsboot</code> manpage:
 
-{{< blockquote author="The FreeBSD Project" link="https://www.freebsd.org/cgi/man.cgi?gpart(8)" title="FreeBSD System Manager's Manual - GPTZFSBOOT(8)" >}}
+{{< blockquote author="The FreeBSD Project" link="https://www.freebsd.org/cgi/man.cgi?query=gptzfsboot&sektion=8" title="FreeBSD System Manager's Manual - GPTZFSBOOT(8)" >}}
 If /boot.config or /boot/config is present in
 the boot filesystem, boot options are read from it in the same way as
 boot(8).
