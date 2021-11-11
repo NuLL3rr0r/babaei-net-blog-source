@@ -4,7 +4,6 @@ slug = "disable-hp-proliant-ml350p-gen8-p420i-raid-controller-enable-hba-mode-pa
 date = 2021-11-10T18:33:00+01:00
 tags = [ "FOSS", "FLOSS", "FreeBSD", "GNU", "Hardware", "HP", "Proliant", "Linux", "Self-hosted", "Server", "Unix", "ZFS" ]
 toc = true
-draft = true
 +++
 
 I recently purchased a second-hand HP Proliant ML350p Gen8 in order to be used as a home server and to my disappointment realized I won't be able to disable the hardware RAID that comes with this model, at least at first glance. Well, there is a way to do that, which is supported by HP themselves. And, this is how to do it the easy way!
