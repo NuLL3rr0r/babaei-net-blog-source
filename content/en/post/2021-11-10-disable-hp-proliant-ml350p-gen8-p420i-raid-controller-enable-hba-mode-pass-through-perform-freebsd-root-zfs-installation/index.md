@@ -222,13 +222,13 @@ __11.__ Since we are going to replace <code>/boot</code> with <code>/mnt/zboot/b
 $ rm -rf /boot
 {{< /codeblock >}}
 
-__12.__ OK, now we can create the symlink. Note that <code>/mnt/zboot</code> will remain mounted accross reboots due to the fact that now it's in the hand of ZFS to manage:
+__12.__ OK, now we can create the symlink. Note that <code>/mnt/zboot</code> will remain mounted across reboots due to the fact that now it's in the hand of ZFS to manage:
 
 {{< codeblock lang="sh" title="Creating the /boot symlink to /mnt/zboot/boot" >}}
 $ ln -sfn /mnt/zboot/boot /boot
 {{< /codeblock >}}
 
-__13.__ As the last step we have to let the loader know where to the operating system root is residing:
+__13.__ As the last step we have to let the loader know where the operating system root is residing:
 
 {{< codeblock lang="sh" title="Instruct the FreeBSD loader to mount the zroot as root" >}}
 $ echo 'vfs.root.mountfrom="zfs:zroot/ROOT/default"' >> /boot/loader.conf
