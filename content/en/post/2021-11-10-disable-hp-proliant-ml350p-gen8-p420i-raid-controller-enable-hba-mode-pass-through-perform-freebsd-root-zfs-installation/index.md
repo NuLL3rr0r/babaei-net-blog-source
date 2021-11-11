@@ -225,7 +225,7 @@ $ rm -rf /boot
 __12.__ OK, now we can create the symlink. Note that <code>/mnt/zboot</code> will remain mounted across reboots due to the fact that now it's in the hand of ZFS to manage:
 
 {{< codeblock lang="sh" title="Creating the /boot symlink to /mnt/zboot/boot" >}}
-$ ln -sfn /mnt/zboot/boot /boot
+$ ln -s /mnt/zboot/boot /boot
 {{< /codeblock >}}
 
 __13.__ As the last step we have to let the loader know where the operating system root is residing:
