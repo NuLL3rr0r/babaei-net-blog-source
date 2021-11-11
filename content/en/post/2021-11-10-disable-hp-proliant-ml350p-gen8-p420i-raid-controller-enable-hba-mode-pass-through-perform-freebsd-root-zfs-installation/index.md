@@ -204,35 +204,40 @@ $ gpart add -t freebsd-zfs da8
 da8p2 added
 {{< /codeblock >}}
 
-__9.__ Time to create a ZFS pool on the newly created partition, in my case <code>da8p2</code>, and mount it:
+__9.__ Time to create a ZFS pool on the newly created partition, in my case <code>da8p2</code>, and mount it. This will be our separate boot partition containing boot loader, kernel, etc. I also recommend enabling <code>lz4</code> compression on the internal SD-Card since it improves the I/O performance, boot time, and its lifespan in exchange for negligible CPU usage:
 
-{{< codeblock lang="sh" title="Creating and mounting a zpool" >}}
-$ zpool create -o altroot=/mnt zboot /dev/da8p2
+{{< codeblock lang="sh" title="Creating and mounting zboot" >}}
+$ zpool create -O mountpoint=/mnt/zboot -O compression=lz4 zboot /dev/da8p2
 {{< /codeblock >}}
 
-__10.__ According to <code>gptzfsboot</code> manpage:
+__10.__ After creating and mounting the boot partition under <code>/mnt/zboot</code>, we need to copy everything from the <code>/boot</code> directory into the newly created boot partition:
 
-{{< blockquote author="The FreeBSD Project" link="https://www.freebsd.org/cgi/man.cgi?query=gptzfsboot&sektion=8" title="FreeBSD System Manager's Manual - GPTZFSBOOT(8)" >}}
-If /boot.config or /boot/config is present in
-the boot filesystem, boot options are read from it in the same way as
-boot(8).
-{{< /blockquote >}}
-
-So, we are going to instruct <code>gptzfsboot</code> to boot from our newly installed FreeBSD zpool <code>zroot/ROOT/default</code> by creating the <code>boot.config</code> file:
-
-{{< codeblock lang="sh" title="Guiding gptzfsboot to boot from the zroot" >}}
-$ echo "zfs:zroot/ROOT/default:" > /mnt/zboot/boot.config
-
-$ cat /mnt/zboot/boot.config
-
-zfs:zroot/ROOT/default:
+{{< codeblock lang="sh" title="Copying /boot to the zboot partition" >}}
+$ cp -vr /boot /mnt/zboot/
 {{< /codeblock >}}
 
-__11.__ And, finally export the boot pool on the internal SD-Card and reboot:
+__11.__ Since we are going to replace <code>/boot</code> with <code>/mnt/zboot/boot</code> and we have already made a copy, we can now safely remove the <code>/boot</code> directory:
 
-{{< codeblock lang="sh" title="Guiding gptzfsboot to boot from the zroot" >}}
-$ export zboot
+{{< codeblock lang="sh" title="Removing the old /boot" >}}
+$ rm -rf /boot
+{{< /codeblock >}}
+
+__12.__ OK, now we can create the symlink. Note that <code>/mnt/zboot</code> will remain mounted accross reboots due to the fact that now it's in the hand of ZFS to manage:
+
+{{< codeblock lang="sh" title="Creating the /boot symlink to /mnt/zboot/boot" >}}
+$ ln -sfn /mnt/zboot/boot /boot
+{{< /codeblock >}}
+
+__13.__ As the last step we have to let the loader know where to the operating system root is residing:
+
+{{< codeblock lang="sh" title="Instruct the FreeBSD loader to mount the zroot as root" >}}
+$ echo 'vfs.root.mountfrom="zfs:zroot/ROOT/default"' >> /boot/loader.conf
+{{< /codeblock >}}
+
+__14.__ And, finally reboot the server:
+
+{{< codeblock lang="sh" title="Rebooting the server" >}}
 $ reboot
 {{< /codeblock >}}
 
-Done :)
+Done :) If everything has been done correctly, your server should boot normally as expected.
