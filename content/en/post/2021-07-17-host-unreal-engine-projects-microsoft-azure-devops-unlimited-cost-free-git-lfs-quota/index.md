@@ -42,7 +42,7 @@ $ git config diff.renameLimit 999999
 $ git config merge.renameLimit 999999
 {{< /highlight >}}
 
-__Note__: You will get this warning only when the Git option <code>diff.renames</code> is set to <code>true</code> (default behavior). Likewise, the above settings does not have any effects when the copy/rename detection is turned off. You can always check your settings with:
+__Note__: _You will get this warning only when the Git option <code>diff.renames</code> is set to <code>true</code> (default behavior). Likewise, the above settings does not have any effects when the copy/rename detection is turned off. Nonetheless, you can always check your settings with:_
 
 {{< highlight sh >}}
 $ git config -l
