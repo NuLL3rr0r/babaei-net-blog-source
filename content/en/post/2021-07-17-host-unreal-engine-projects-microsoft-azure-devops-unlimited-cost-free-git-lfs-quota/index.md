@@ -27,7 +27,7 @@ $ git reset --hard FETCH_HEAD
 
 **UPDATE 4 [2021/08/04]**: _Due to nested <code>.gitignore</code> files inside the Unreal Engine dependencies, I noticed tiny bits of dependencies for building UE4/UE5 on Microsoft Windows are not getting copied over to the repository. As a result, I fixed the script in order to also take care of that._
 
-**UPDATE 5 [2021/11/30]**: _Sometimes it's possible that the amount of renamed Unreal Engine files surpass the Git's optimal rename limit:_
+**UPDATE 5 [2021/11/30]**: _Sometimes it's possible that the amount of renamed Unreal Engine files surpass the Git's optimal rename limit inside the Sync repository (the intermediary local git repository that we are going to use for syncing the engine source code with upstream):_
 
 {{< highlight sh >}}
 warning: exhaustive rename detection was skipped due to too many files.
@@ -37,7 +37,7 @@ warning: you may want to set your diff.renameLimit variable to at least 13453 an
 _So, you could set that to a really large number in order to keep track of file renames:_
 
 {{< highlight sh >}}
-$ cd ~/dev/MamadouArchives
+$ cd ~/dev/MamadouArchives-Sync
 $ git config diff.renameLimit 999999
 $ git config merge.renameLimit 999999
 {{< /highlight >}}
