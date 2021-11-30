@@ -27,7 +27,7 @@ $ sudo -u root -g wheel crontab -l
 *   *   *   *   *   /usr/local/cron-scripts/daemon-keeper.sh -d "clamav-clamd" -e "dovecot"
 {{< /highlight >}}
 
-**UPDATE 2 [2019/05/11]**: Another thanks to [@mirrorbox](https://www.reddit.com/user/mirrorbox) for mentioning <code>sysutils/daemontools</code> which seems a proven solution for restarting a crashing daemon. It makes this hack redundant.
+**UPDATE 2 [2019/05/11]**: _Another thanks to [@mirrorbox](https://www.reddit.com/user/mirrorbox) for mentioning <code>sysutils/daemontools</code> which seems a proven solution for restarting a crashing daemon. It makes this hack redundant._
 
 ```
 Daemontools is a small set of /very/ useful utilities, from Dan
@@ -37,7 +37,7 @@ maintaining logfiles.
 WWW: http://cr.yp.to/daemontools.html
 ```
 
-**UPDATE 3 [2019/05/11]**: Thanks to [@dlangille](https://www.reddit.com/user/dlangille) for mentioning <code>sysutils/py-supervisor</code>, which seems to be a viable alternative to <code>sysutils/daemontools</code>.
+**UPDATE 3 [2019/05/11]**: _Thanks to [@dlangille](https://www.reddit.com/user/dlangille) for mentioning <code>sysutils/py-supervisor</code>, which seems to be a viable alternative to <code>sysutils/daemontools</code>._
 
 ```
 Supervisor is a client/server system that allows its users
@@ -54,7 +54,7 @@ other program at boot time.
 WWW: http://supervisord.org/
 ```
 
-**UPDATE 4 [2019/05/13]**: Thanks to [@olevole](https://www.reddit.com/user/olevole) for mentioning <code>sysutils/fsc</code>. It is minimalistic, dependency free and designed for FreeBSD:
+**UPDATE 4 [2019/05/13]**: _Thanks to [@olevole](https://www.reddit.com/user/olevole) for mentioning <code>sysutils/fsc</code>. It is minimalistic, dependency free and designed for FreeBSD:_
 
 ```
 The FreeBSD Services Control software provides service
@@ -64,7 +64,8 @@ which is interfaced with using fscadm.  See manual pages
 for more information.
 ```
 
-**UPDATE 5 [2019/05/13]**: Thanks to [@jcigar](https://www.reddit.com/user/jcigar) for bringing [daemon(8)](https://www.freebsd.org/cgi/man.cgi?query=daemon&sektion=8) to my attention, which is available in the base system and it seems perfectly capable of doing what I was going to achieve in my script and more.
+**UPDATE 5 [2019/05/13]**: _Thanks to [@jcigar](https://www.reddit.com/user/jcigar) for bringing [daemon(8)](https://www.freebsd.org/cgi/man.cgi?query=daemon&sektion=8) to my attention, which is available in the base system and it seems perfectly capable of doing what I was going to achieve in my script and more._
+
 <hr />
 
 Amidst all the chaos in the current stage of my life, I don't know exactly what got into me that I thought it was a good idea to perform a major upgrade on a production FreeBSD server from <code>11.2-RELENG</code> to <code>12.0-RELENG</code>, when I even did not have enough time to go through <code>/usr/src/UPDATING</code> thoroughly or consult [the Release Notes](https://www.freebsd.org/releases/12.0R/relnotes.html) or [the Errata](https://www.freebsd.org/releases/12.0R/errata.html) properly; let alone [hitting some esoteric changes which technically crippled my mail server](https://forums.freebsd.org/threads/mailserver-stops-working-after-a-few-days-after-12-releng-upgrade.70640/), when I realized it has been over a week that I haven't been receiving any new emails.

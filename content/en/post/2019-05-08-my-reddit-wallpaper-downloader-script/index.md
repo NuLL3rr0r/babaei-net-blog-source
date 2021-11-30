@@ -8,7 +8,7 @@ toc = true
 
 {{< figure src="/blog/my-reddit-wallpaper-downloader-script/i3wm-gruvbox-color-scheme-reddit-wallpaper.webp" alt="My i3wm setup with amazing gruvbox color scheme and a wallpaper from Reddit" caption="i3wm setup with amazing gruvbox color scheme and a wallpaper from Reddit" >}}
 
-**Update [2019/05/08]**: Many people have been asking for the wallpaper in the above screenshot. It is from [System Failure II, oil on canvas, 31x43” on r/Art](https://www.reddit.com/r/Art/comments/aqeq16/system_failure_ii_oil_on_canvas_31x43/).
+**Update [2019/05/08]**: _Many people have been asking for the wallpaper in the above screenshot. It is from [System Failure II, oil on canvas, 31x43” on r/Art](https://www.reddit.com/r/Art/comments/aqeq16/system_failure_ii_oil_on_canvas_31x43/)._
 
 Well, I am really fascinated by [Reddit](https://www.reddit.com/) art and [genuine creative ideas such as Scrolller](https://scrolller.com/art) which [was made possible thanks to gazillions of art pieces scattered throughout various art subreddits](https://www.reddit.com/r/web_design/comments/6eoa78/i_made_a_simple_website_filled_with_random_nsfw/). I am also fascinated by [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) and have been a *nix enthusiast for as long as I can remember. In addition to all this, the discovery of [r/unixporn](https://www.reddit.com/r/unixporn/) - realizing I am not the only one who cares about aesthetics of their Unix box - was a huge blow for me; to the point that studying the GitHub dotfiles posted along the screenshots on r/unixporn by fellow nix-enthusiast redditors felt like a day to day hubby for me.
 
