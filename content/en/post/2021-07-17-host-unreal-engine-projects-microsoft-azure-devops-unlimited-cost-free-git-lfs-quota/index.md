@@ -25,16 +25,16 @@ $ git reset --hard FETCH_HEAD
 
 **UPDATE 3 [2021/07/28]**: _I've noticed due to the fact that the files modification times affect how Rsync and Git work by default, my approach in writing the original script was totally wrong, which in turn caused a bug where on each update it committed all tracked files over again causing huge bloat in the repository, despite the fact that the content of the files was unchanged. Thus, it led me to completely rewrite the script. Hopefully, the new script has been extensively tested with two repositories/projects and works as expected. In addition to that, the script now shows progress for every step, which is a nice addition in order to keep you informed and give an estimation of the time it is going to take to get the job done. And, last but not least, I have edited and improved the blog post a bit._
 
-**UPDATE 4 [2021/08/04]**: Due to nested <code>.gitignore</code> files inside the Unreal Engine dependencies, I noticed tiny bits of dependencies for building UE4/UE5 on Microsoft Windows are not getting copied over to the repository. As a result, I fixed the script in order to also take care of that.
+**UPDATE 4 [2021/08/04]**: _Due to nested <code>.gitignore</code> files inside the Unreal Engine dependencies, I noticed tiny bits of dependencies for building UE4/UE5 on Microsoft Windows are not getting copied over to the repository. As a result, I fixed the script in order to also take care of that._
 
-**UPDATE 5 [2021/11/30]**: _Sometimes it's possible that the amount of renamed Unreal Engine files surpass the Git's optimal rename limit:
+**UPDATE 5 [2021/11/30]**: _Sometimes it's possible that the amount of renamed Unreal Engine files surpass the Git's optimal rename limit:_
 
 {{< highlight sh >}}
 warning: exhaustive rename detection was skipped due to too many files.
 warning: you may want to set your diff.renameLimit variable to at least 13453 and retry the command.
 {{< /highlight >}}
 
-So, you could set that to a really large number in order to keep track of file renames:_
+_So, you could set that to a really large number in order to keep track of file renames:_
 
 {{< highlight sh >}}
 $ cd ~/dev/MamadouArchives
