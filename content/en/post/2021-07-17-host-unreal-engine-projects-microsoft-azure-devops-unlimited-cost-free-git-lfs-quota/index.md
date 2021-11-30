@@ -42,6 +42,12 @@ $ git config diff.renameLimit 999999
 $ git config merge.renameLimit 999999
 {{< /highlight >}}
 
+__Note__: You will get this warning only when the Git option <code>diff.renames</code> is set to <code>true</code> (default behavior). Likewise, the above settings does not have any effects when the copy/rename detection is turned off. You can always check your settings with:
+
+{{< highlight sh >}}
+$ git config -l
+{{< /highlight >}}
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
