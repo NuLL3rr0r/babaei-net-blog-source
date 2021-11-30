@@ -27,6 +27,21 @@ $ git reset --hard FETCH_HEAD
 
 **UPDATE 4 [2021/08/04]**: Due to nested <code>.gitignore</code> files inside the Unreal Engine dependencies, I noticed tiny bits of dependencies for building UE4/UE5 on Microsoft Windows are not getting copied over to the repository. As a result, I fixed the script in order to also take care of that.
 
+**UPDATE 5 [2021/11/30]**: _Sometimes it's possible that the amount of renamed Unreal Engine files surpass the Git's optimal rename limit:
+
+{{< highlight sh >}}
+warning: exhaustive rename detection was skipped due to too many files.
+warning: you may want to set your diff.renameLimit variable to at least 13453 and retry the command.
+{{< /highlight >}}
+
+So, you could set that to a really large number in order to keep track of file renames:_
+
+{{< highlight sh >}}
+$ cd ~/dev/MamadouArchives
+$ git config diff.renameLimit 999999
+$ git config merge.renameLimit 999999
+{{< /highlight >}}
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
