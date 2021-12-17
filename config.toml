@@ -151,6 +151,11 @@ theme = "beautifulhugo"
     name  = "tags"
     weight = 100
 
+[security]
+
+  [security.funcs]
+    getenv = ['(?i)^(GIT_COMMIT_SHA|GIT_COMMIT_SHA_SHORT|HUGO)$']
+
 [services]
     [services.instagram]
         disableInlineCSS = true
