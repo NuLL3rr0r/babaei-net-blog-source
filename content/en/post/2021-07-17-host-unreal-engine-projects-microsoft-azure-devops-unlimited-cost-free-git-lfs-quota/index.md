@@ -48,6 +48,8 @@ __Note__: _You will get this warning only when the Git option <code>diff.renames
 $ git config -l
 {{< /highlight >}}
 
+**UPDATE 6 [2021/12/18]**: I've added a step regarding <code>EngineAssociation</code> in the project's <code>.uproject</code> file, which I forgot to mention in the original post.
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
@@ -542,7 +544,25 @@ __10__. Form now on, you can always follow steps <code>#8</code> <code>#9</code>
 
 __11__. Create a UE4 project with the desired name, in my case <code>MamadouArchives</code>, or copy over an already existing project (without the <code>.git</code> directory if it's already hosted on git) into your newly created repository. e.g. <code>~/dev/MamadouArchives-Sync/</code>.
 
-__12__. Now, it's time to adjust Git LFS for our project. In order to touch less engine files, we are not going to touch engine's <code>.gitattributes</code> located at <code>~/dev/MamadouArchives-Sync/.gitattributes</code>. Instead, we could override this file by creating the exact same file in our project's directory, e.g. <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code>. If you are going to do so, keep in mind that from now on you must avoid tracking files by running <code>git lfs track "pattern or file path"</code> in the engine directory <code>~/dev/MamadouArchives-Sync</code>, because it will probably get truncated by the engine update script in consecutive runs. Thus, etither run this command in the project directory <code>~/dev/MamadouArchives-Sync/MamadouArchives</code> or it's subdirectories, and after that by issuing <code>cat ~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> always make sure your pattern is being tracked. Or, you code modify <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> directly. Here is a sample <code>.gitattributes</code>, which overrides or adds to engine's <code>.gitattributes</code>:
+__12__. Make sure to set <code>EngineAssociation</code> to <code>""</code>. This is of chief importance!
+
+{{< codeblock lang="json" title="~/dev/MamadouArchives-Sync/MamadouArchives/MamadouArchives.uproject" line_numbers="true" >}}
+{
+	"FileVersion": 3,
+	"EngineAssociation": "",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "MamadouArchives",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
+{{< /codeblock >}}
+
+__13__. Now, it's time to adjust Git LFS for our project. In order to touch less engine files, we are not going to touch engine's <code>.gitattributes</code> located at <code>~/dev/MamadouArchives-Sync/.gitattributes</code>. Instead, we could override this file by creating the exact same file in our project's directory, e.g. <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code>. If you are going to do so, keep in mind that from now on you must avoid tracking files by running <code>git lfs track "pattern or file path"</code> in the engine directory <code>~/dev/MamadouArchives-Sync</code>, because it will probably get truncated by the engine update script in consecutive runs. Thus, etither run this command in the project directory <code>~/dev/MamadouArchives-Sync/MamadouArchives</code> or it's subdirectories, and after that by issuing <code>cat ~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> always make sure your pattern is being tracked. Or, you code modify <code>~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes</code> directly. Here is a sample <code>.gitattributes</code>, which overrides or adds to engine's <code>.gitattributes</code>:
 
 {{< codeblock lang="bash" title="~/dev/MamadouArchives-Sync/MamadouArchives/.gitattributes" line_numbers="true" >}}
 # Keep CRLF out of the repository
@@ -718,7 +738,7 @@ DerivedDataCache/*
 {{< /codeblock >}}
 
 <br />
-__13__. Check whether GitLFS is keeping track of those files and then stage, commit, and push the adjusted <code>.gitattributes</code> file to Microsoft Azure DevOPS:
+__14__. Check whether GitLFS is keeping track of those files and then stage, commit, and push the adjusted <code>.gitattributes</code> file to Microsoft Azure DevOPS:
 
 {{< highlight sh >}}
 $ git add .gitattributes
@@ -726,7 +746,7 @@ $ git commit -m "track even more lfs objects"
 $ git push
 {{< /highlight >}}
 
-__14__. Well done! Now, we need to take one more step in order to enable the engine to pick up our project automatically at the time of generating the project files and building the engine, so that our project is going to be built along with the engine. Open the <code>UE4Games.uprojectdirs</code> file in the root of our repository:
+__15__. Well done! Now, we need to take one more step in order to enable the engine to pick up our project automatically at the time of generating the project files and building the engine, so that our project is going to be built along with the engine. Open the <code>UE4Games.uprojectdirs</code> file in the root of our repository:
 
 {{< codeblock lang="bash" title="UE4Games.uprojectdirs" line_numbers="true" >}}
 ; These folders will be searched 1 level deep in order to find projects
@@ -757,7 +777,7 @@ MamadouArchives/
 {{< /codeblock >}}
 
 <br />
-__15__. Let's make the previous step's change permanent by staging, committing, and then pushing it to Microsoft Azure DevOPS:
+__16__. Let's make the previous step's change permanent by staging, committing, and then pushing it to Microsoft Azure DevOPS:
 
 {{< highlight sh >}}
 $ git add -f UE4Games.uprojectdirs
@@ -767,7 +787,7 @@ $ git push
 
 __Note__: Adding the <code>-f</code> or <code>--force</code> parameter to <code>git add</code> is helpful when a file such as <code>UE4Games.uprojectdirs</code> is being ignored by one of the engine <code>.gitignore</code> files, but you want to track it nonetheless.
 
-__16__. Well, congratulations! Now we have everything set up. You can make a copy of the intermediary <code>~/dev/MamadouArchives-Sync/</code> in order to start your development:
+__17__. Well, congratulations! Now we have everything set up. You can make a copy of the intermediary <code>~/dev/MamadouArchives-Sync/</code> in order to start your development:
 
 {{< highlight sh >}}
 $ cp -vr ~/dev/MamadouArchives-Sync ~/dev/MamadouArchives
@@ -779,9 +799,9 @@ Or, you could clone a completely new copy of it from Microsoft Azure DevOPS:
 $ git clone https://SOME-ORGANIZATION@dev.azure.com/SOME-ORGANIZATION/MamadouArchives/_git/MamadouArchives ~/dev/MamadouArchives
 {{< /highlight >}}
 
-__17__. Now you can head to <code>~/dev/MamadouArchives</code> and run <code>GenerateProjectFiles.sh</code> for GNU/Linux,  <code>GenerateProjectFiles.bat</code> for Windows,  <code>GenerateProjectFiles.command</code> for macOS, in order to generate the project files for your platform or toolchain of choice and build the engine and your project with it.
+__18__. Now you can head to <code>~/dev/MamadouArchives</code> and run <code>GenerateProjectFiles.sh</code> for GNU/Linux,  <code>GenerateProjectFiles.bat</code> for Windows,  <code>GenerateProjectFiles.command</code> for macOS, in order to generate the project files for your platform or toolchain of choice and build the engine and your project with it.
 
-__18__. On both GNU/Linux and Microsoft Windows, sometimes the ShaderCompileWorker fails to build. You may notice this at build time or when running the engine with an error similar to the following:
+__19__. On both GNU/Linux and Microsoft Windows, sometimes the ShaderCompileWorker fails to build. You may notice this at build time or when running the engine with an error similar to the following:
 
 
 ```
@@ -796,7 +816,7 @@ $ cd ~/dev/MamadouArchives
 $ make ShaderCompileWorker
 {{< /highlight >}}
 
-__19__. If everything went fine until this step, you can directly open your project inside the engine by issuing the following command or making it a script file in your project's engine root directory and then run that:
+__20__. If everything went fine until this step, you can directly open your project inside the engine by issuing the following command or making it a script file in your project's engine root directory and then run that:
 
 {{< highlight sh >}}
 $ cd ~/dev/MamadouArchives
@@ -810,7 +830,7 @@ $ cd ~/dev/MamadouArchives
 $ /home/mamadou/dev/Animus/Engine/Binaries/Linux/UE4Editor-Linux-DebugGame "./MamadouArchives/MamadouArchives.uproject" -vulkan -debug
 {{< /highlight >}}
 
-__20__. Lastly, in case you need the useful file locking feature for LFS objects, it could be enabled by running the following command:
+__21__. Lastly, in case you need the useful file locking feature for LFS objects, it could be enabled by running the following command:
 
 {{< highlight sh >}}
 $ git config lfs.https://SOME-ORGANIZATION@dev.azure.com/SOME-ORGANIZATION/MamadouArchives/_git/MamadouArchives.git/info/lfs.locksverify true
