@@ -48,7 +48,7 @@ __Note__: _You will get this warning only when the Git option <code>diff.renames
 $ git config -l
 {{< /highlight >}}
 
-**UPDATE 6 [2021/12/18]**: I've added a step regarding <code>EngineAssociation</code> in the project's <code>.uproject</code> file, which I forgot to mention in the original post.
+**UPDATE 6 [2021/12/18]**: _I've added a step regarding <code>EngineAssociation</code> in the project's <code>.uproject</code> file, which I forgot to mention in the original post._
 
 <hr />
 
