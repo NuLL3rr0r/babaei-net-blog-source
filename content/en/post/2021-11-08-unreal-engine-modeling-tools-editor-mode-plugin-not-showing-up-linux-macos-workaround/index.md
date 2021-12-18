@@ -2,7 +2,7 @@
 title = "A quick workaround for Unreal Engine Modeling Tools Editor Mode plugin not showing up on Linux and macOS"
 slug = "unreal-engine-modeling-tools-editor-mode-plugin-not-showing-up-linux-macos-workaround"
 date = 2021-11-08T01:10:00+01:00
-tags = [ "C", "C++", "Epic Games", "Game Development", "Game Programming", "gamedev", "GNU", "Linux", "macOS", "Qt Creator", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Windows", "ZFS" ]
+tags = [ "C", "C++", "CPP", "Epic Games", "Game Development", "Game Programming", "gamedev", "GNU", "Linux", "macOS", "Qt Creator", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Windows", "ZFS" ]
 toc = false
 +++
 

@@ -2,7 +2,7 @@
 title = "Gregorian / Jalali (a.k.a. Persian Calendar) Date Conversion in C++ using boost::locale"
 slug = "gregorian-jalali-persian-calendar-date-conversion-cpp-boost-locale"
 date = 2020-02-25T00:27:00+01:00
-tags = [ "C", "C++", "Clang", "Cross-platform", "FreeBSD", "G++", "GCC", "Linux", "LLVM", "macOS", "MSVC", "VC++", "Visual C++", "Visual Stuio", "Windows", "XCode" ]
+tags = [ "C", "C++", "CPP", "Clang", "Cross-platform", "FreeBSD", "G++", "GCC", "Linux", "LLVM", "macOS", "MSVC", "VC++", "Visual C++", "Visual Stuio", "Windows", "XCode" ]
 +++
 
 Well, anyone who has ever developed a C++ game or application with Gregorian to Jalali date conversion (or, vice versa) requirement is well aware of the hurdles of doing such a task. I, for one,  have been maintaining my own cross-platform C++ library for almost two decades now, with occasional bugs coming up from time to time.
