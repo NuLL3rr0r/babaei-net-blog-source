@@ -1,4 +1,4 @@
 [submodule "babaei.net/themes/beautifulhugo"]
 	path = themes/beautifulhugo
-	url = git@gitlab.com:NuLL3rr0r/beautifulhugo.git
+	url = https://gitlab.com/NuLL3rr0r/beautifulhugo.git
 	branch = master
