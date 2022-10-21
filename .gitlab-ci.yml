@@ -6,6 +6,7 @@ variables:
 
 pages:
   script:
+  - ls -R
   - hugo
   artifacts:
     paths:
