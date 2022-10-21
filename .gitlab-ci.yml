@@ -8,6 +8,7 @@ pages:
   script:
   - ls -R
   - hugo
+  - ls -R
   artifacts:
     paths:
     - public
