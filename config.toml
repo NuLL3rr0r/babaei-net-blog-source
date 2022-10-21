@@ -8,7 +8,7 @@ theme = "beautifulhugo"
 [languages]
 
     [languages.en]
-        baseURL = "https://www.babaei.net/"
+        baseURL = "/"
         contentDir = "content/en"
         languageCode = "en-us"
         languageName = "English"
