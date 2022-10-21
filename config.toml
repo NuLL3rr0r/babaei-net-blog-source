@@ -8,7 +8,7 @@ theme = "beautifulhugo"
 [languages]
 
     [languages.en]
-        baseURL = "/"
+        baseURL = "https://null3rr0r.gitlab.io/babaei-net-blog-source/"
         contentDir = "content/en"
         languageCode = "en-us"
         languageName = "English"
