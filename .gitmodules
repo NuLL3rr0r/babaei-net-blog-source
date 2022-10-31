@@ -1,3 +1,4 @@
-[submodule "themes/beautifulhugo"]
+[submodule "babaei.net/themes/beautifulhugo"]
 	path = themes/beautifulhugo
-	url = ../beautifulhugo.git
+	url = git@github.com:NuLL3rr0r/beautifulhugo.git
+	branch = master

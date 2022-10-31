@@ -8,7 +8,7 @@ theme = "beautifulhugo"
 [languages]
 
     [languages.en]
-        baseURL = "https://null3rr0r.gitlab.io/babaei-net-blog-source/"
+        baseURL = "https://www.babaei.net/"
         contentDir = "content/en"
         languageCode = "en-us"
         languageName = "English"
@@ -83,6 +83,8 @@ theme = "beautifulhugo"
             subtitle = "Memento Mori • Amor Fati • Summum Bonum"
 
 [markup]
+    defaultMarkdownHandler = "blackFriday"
+
     [markup.goldmark]
         [markup.goldmark.renderer]
             unsafe = true
