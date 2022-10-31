@@ -83,8 +83,6 @@ theme = "beautifulhugo"
             subtitle = "Memento Mori • Amor Fati • Summum Bonum"
 
 [markup]
-    defaultMarkdownHandler = "blackFriday"
-
     [markup.goldmark]
         [markup.goldmark.renderer]
             unsafe = true
