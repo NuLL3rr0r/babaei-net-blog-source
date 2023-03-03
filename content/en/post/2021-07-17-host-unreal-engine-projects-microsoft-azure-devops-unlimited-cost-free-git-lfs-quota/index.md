@@ -50,6 +50,8 @@ $ git config -l
 
 **UPDATE 6 [2021/12/18]**: _I've added a step regarding <code>EngineAssociation</code> in the project's <code>.uproject</code> file, which I forgot to mention in the original post._
 
+**UPDATE 7 [2023/03/03]**: _In UE5 <code>UE4Games.uprojectdirs</code> file shas been renamed to <code>Default.uprojectdirs</code>. Though the syntax and the contents of the file has remained the same._
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
