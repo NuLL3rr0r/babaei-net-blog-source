@@ -119,6 +119,62 @@ _And sadly, the approach of pushing one commit at a time was frutiless as well :
 
 _Thus, for the time being I'm stuck pushing the updated project from my Linux machine and pulling it from my Windows machine. I'll do another updated once I've figured what's going wrong._
 
+**UPDATE 9 [2023/03/04]**: _As an experiment, I did create a new organiation and a new repository inside it. Then prior to changing the origin URL, I fetched all LFS objects issuing:_
+
+{{< highlight sh >}}
+$ git lfs fetch --all
+fetch: 78618 objects found, done.                                                                      
+fetch: Fetching all references...
+{{< /highlight >}}
+
+Then, I decided to first push the Git comnmits without the LFS objects, so after updating the origin URL inside the <code>.git/config</code>:
+
+{{< highlight sh >}}
+$ git push --set-upstream origin 5.1 --no-verify
+Enumerating objects: 296578, done.
+Counting objects: 100% (296578/296578), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (210384/210384), done.
+Writing objects: 100% (296578/296578), 360.11 MiB | 5.78 MiB/s, done.
+Total 296578 (delta 78143), reused 296578 (delta 78143), pack-reused 0
+remote: Analyzing objects... (296578/296578) (77738 ms)
+remote: Storing packfile... done (10303 ms)
+remote: Storing index... done (3740 ms)
+To https://dev.azure.com/SOME-ORGANIZATION/MamadouArchives/_git/MamadouArchives
+ * [new branch]            5.1 -> 5.1
+branch '5.1' set up to track 'origin/5.1'
+{{< /highlight >}}
+
+_¯\\\_(ツ)_/¯ as unexpected as it seems, it worked! As you can see my actual Git objects without the LFS objects on this repository are in no way near the <code>10 GB</code> size limit:_
+
+{{< highlight sh >}}
+$ git count-objects -vH                         
+count: 0               
+size: 0 bytes
+in-pack: 296583
+packs: 1
+size-pack: 366.76 MiB
+prune-packable: 0
+garbage: 0
+size-garbage: 0 bytes
+{{< /highlight >}}
+
+_The issue might be that I've reached some kind of limit on the main organization that I'm not aware of._
+
+_Anyways, then I pushed the master and checked out back the new brnach for continuation on the upgrade:_
+
+{{< highlight sh >}}
+$ git checkout master
+$ git push origin master --no-verify
+$ git checkout 5.1
+{{< /highlight >}}
+
+_And, then proceeded to pushing all LFS objects:_
+
+{{< highlight sh >}}
+$ git lfs push origin --all
+{{< /highlight >}}
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
