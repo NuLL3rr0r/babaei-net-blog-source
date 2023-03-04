@@ -75,7 +75,7 @@ $ export GIT_TRACE=1
 $ export GIT_CURL_VERBOSE=1
 {{< /highlight >}}
 
-_And then maxing out on all the size limits, buffer, and packet sizes, and other hints:_
+_And then maxing out on all the size limits, buffer, packet sizes, and other hints:_
 
 {{< highlight sh >}}
 [core]
@@ -95,7 +95,7 @@ _And then maxing out on all the size limits, buffer, and packet sizes, and other
     windowMemory = 2047m
 {{< /highlight >}}
 
-_Then I tried to change the origin url to SSH:_
+_Then I tried to change the origin URL to SSH:_
 
 {{< highlight sh >}}
 [remote "origin"]
