@@ -52,6 +52,73 @@ $ git config -l
 
 **UPDATE 7 [2023/03/03]**: _In UE5 <code>UE4Games.uprojectdirs</code> file shas been renamed to <code>Default.uprojectdirs</code>. Though the syntax and the contents of the file has remained the same._
 
+**UPDATE 8 [2023/03/04]**: _After upgrading my project to Unreal Engin 5.1 despite the fact that I've already set the git configuration <code>http.version</code> to <code>HTTP/1.1</code> as instructed in this article, despite the commit size of no bigger than <code>166.30 MB</code> and the acceptable upload bandwidth I've got, I was getting <code>HTTP 413 Request Entity Too Large</code> error:_
+
+{{< highlight sh >}}
+Enumerating objects: 190058, done.
+Counting objects: 100% (164439/164439), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (113439/113439), done.
+Writing objects: 100% (138834/138834), 166.30 MiB | 47.32 MiB/s, done.
+Total 138834 (delta 35613), reused 121343 (delta 22206), pack-reused 0
+error: RPC failed; HTTP 413 curl 22 The requested URL returned error: 413
+send-pack: unexpected disconnect while reading sideband packet
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
+{{< /highlight >}}
+
+_I tried every suggestion that I came across in order to debug and resolve the issue to no avail. Including enabling git verbose logging:_
+
+{{< highlight sh >}}
+$ export GIT_TRACE_PACKET=1                      
+$ export GIT_TRACE=1
+$ export GIT_CURL_VERBOSE=1
+{{< /highlight >}}
+
+_And then maxing out on all the size limits, buffer, and packet sizes, and other hints:_
+
+{{< highlight sh >}}
+[core]
+	compression = 0
+    packedGitLimit = 512m
+    packedGitWindowSize = 512m
+[http]
+    postBuffer = 2147483648
+[https]
+    postBuffer = 2147483648
+[init]
+    defaultBranch = master
+[pack] 
+    deltaCacheSize = 2047m
+    packSizeLimit = 2047m
+	window = 1
+    windowMemory = 2047m
+{{< /highlight >}}
+
+_Then I tried to change the origin url to SSH:_
+
+{{< highlight sh >}}
+[remote "origin"]
+	url = https://SOME-ORGANIZATION@dev.azure.com/SOME-ORGANIZATION/MamadouArchives/_git/MamadouArchives
+	#url = git@ssh.dev.azure.com:v3/SOME-ORGANIZATION/MamadouArchives/MamadouArchives
+{{< /highlight >}}
+
+_And then pushing without LFS:_
+
+{{< highlight sh >}}
+$ git push --set-upstream origin 5.1 --no-verify
+{{< /highlight >}}
+
+_This attempt was futile as well, that made me revert back to https. Then I tried to push commit by commit since I had made a few commits using (<code>5.1</code> which has been repeated twice in the following command, is the name of the new local branch intended to be pushed):_
+
+{{< highlight sh >}}
+$ git rev-list --reverse 5.1 | ruby -ne 'i ||= 0; i += 1; puts $_ if i % 1 == 0' | xargs -I{} git push origin +{}:refs/heads/5.1 --no-verify
+{{< /highlight >}}
+
+_And sadly, the approach of pushing one commit at a time was frutiless as well :/_
+
+_Thus, for the time being I'm stuck pushing the updated project from my Linux machine and pulling it from my Windows machine. I'll do another updated once I've figured what's going wrong._
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
