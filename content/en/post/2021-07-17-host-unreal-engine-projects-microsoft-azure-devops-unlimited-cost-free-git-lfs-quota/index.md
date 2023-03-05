@@ -175,6 +175,8 @@ _And, then proceeded to pushing all LFS objects:_
 $ git lfs push origin --all
 {{< /highlight >}}
 
+**UPDATE 10 [2023/03/05]**: _Yesterday, I removed a large redundant repository from the previous organization, in order to see if I could still push my updates and the error I am getting was not due to hitting some kind of ceiling limit. It didn't work. I did also cleanup the limit hacks I've added to my <code>~/.gitconfig</code> in UPDATE 8. Then, after successfully pushing to the new organization/repository, I've decided to revert back the URL section for the orgin inside my <code>.git/config</code> inside the local repository and try to push once more to the old repository and guess what? It worked! Weird Microsoft/Azure! Not sure what fixed the issue. It could be even I had to wait for Microsoft to clean up the repository's space I've deleted if the organization size limit was the issue. Don't really know._
+
 <hr />
 
 Among the gamedev industry, it's a well-known fact that Unreal Engine projects sizes have always been huge and a pain to manage properly. And it becomes more painful by the day as your project moves forward and grows in size. Some even keep the Engine source and its monstrous binary dependencies inside their source control management software. In case you are a AAA game development company or you are working for one, there's probably some system in place with an unlimited quota to take care of that. But, for most of us indie devs, or individual hobbyists, it seems there are not lots of affordable options, especially that your team is scattered across the globe.
