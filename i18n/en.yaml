@@ -67,13 +67,13 @@
 - id: yourEmail
   translation: "Your email address"
 - id: yourWebsite
-  translation: "You website"
+  translation: "Your website"
 
 # Delayed Disqus
 - id: show
   translation: "Show"
 - id: comments
-  translation: "comments" 
+  translation: "comments"
 
 # Footer links
 - id: subscribeEmail
@@ -94,19 +94,3 @@
 # Related posts
 - id: seeAlso
   translation: "See also"
-
-# Share links
-- id: shareTwitter
-  translation: "Share on Twitter"
-- id: shareGooglePlus
-  translation: "Share on Google Plus"
-- id: shareFacebook
-  translation: "Share on Facebook"
-- id: shareReddit
-  translation: "Share on Reddit"
-- id: shareLinkedIn
-  translation: "Share on LinkedIn"
-- id: shareStumbleUpon
-  translation: "Share on StumbleUpon"
-- id: sharePinterest
-  translation: "Share on Pinterest"

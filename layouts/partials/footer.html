@@ -76,7 +76,7 @@
 
 {{ $katex_min_js := resources.Get "js/katex.min.js" }}
 {{ $auto_render_min_js := resources.Get "js/auto-render.min.js" }}
-{{ $jquery_min_js := resources.Get "js/jquery.min.js" }}
+{{ $jquery_slim_min_js := resources.Get "js/jquery-3.7.0.slim.min.js" }}
 {{ $bootstrap_min_js := resources.Get "js/bootstrap.min.js" }}
 
 {{ $main_js := resources.Get "js/main.js" }}
@@ -85,7 +85,7 @@
 {{ $photoswipe_ui_default_min_js := resources.Get "js/photoswipe-ui-default.min.js" }}
 {{ $load_photoswipe_js := resources.Get "js/load-photoswipe.js" }}
 
-{{ $bundle_js := slice $katex_min_js $auto_render_min_js $jquery_min_js $bootstrap_min_js $main_js $photoswipe_min_js $photoswipe_ui_default_min_js $load_photoswipe_js | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
+{{ $bundle_js := slice $katex_min_js $auto_render_min_js $jquery_slim_min_js $bootstrap_min_js $main_js $photoswipe_min_js $photoswipe_ui_default_min_js $load_photoswipe_js | resources.Concat "js/bundle.js" | resources.Fingerprint "sha512" }}
 <script src="{{ $bundle_js.RelPermalink }}" integrity="{{ $bundle_js.Data.Integrity }}"></script>
 
 <script> renderMathInElement(document.body); </script>
@@ -134,19 +134,19 @@
 $(function(){
   $('#show-comments').on('click', function(){
     var disqus_shortname = '{{ .Site.DisqusShortname }}';
-      
+
     (function() {
-      var disqus = document.createElement('script'); 
-      disqus.type = 'text/javascript'; 
+      var disqus = document.createElement('script');
+      disqus.type = 'text/javascript';
       disqus.async = true;
       disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
     })();
-      
-    $(this).hide(); 
+
+    $(this).hide();
     });
   });
-      
+
 </script>
 <script id="dsq-count-scr" src="//{{ .Site.DisqusShortname }}.disqus.com/count.js" async></script>
 <!-- End Delayed Disqus -->
