@@ -109,7 +109,7 @@ title = "Projects"
                             Year(s)
                         </th>
                         <td>
-                            2022
+                            2021 - 2022
                         </td>
                     </tr>
                     <tr>
