@@ -18,7 +18,7 @@ title = "Projects"
                             Genre
                         </th>
                         <td>
-                            It's not a gamedev project.
+                            Not a gamedev project
                         </td>
                     </tr>
                     <tr>
@@ -66,7 +66,9 @@ title = "Projects"
                             Roles(s)
                         </th>
                         <td>
-                            Lead C++/Unreal Developer, Lead Rust Developer, Go lang.
+                            Lead C++/Unreal Developer<br />
+                            Lead Rust Developer<br />
+                            Go lang<br />
                         </td>
                     </tr>
                 </tbody>
