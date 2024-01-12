@@ -4,6 +4,76 @@ title = "Projects"
 
 <div class="portfolio">
     <div class="project">
+        <a id="nhra" name="nhra"></a>
+        <div class="title">
+            <h2>NHRA Championship Drag Racing: Speed For All</h2>
+        </div>
+        <div class="trailer">
+        {{< youtube Ee-m7T7xI3Q >}}
+        </div>
+        <div class="extra-info">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th>
+                            Genre
+                        </th>
+                        <td>
+                            Racing
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Developer
+                        </th>
+                        <td>
+                            Team6
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Year(s)
+                        </th>
+                        <td>
+                            2022
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Engine
+                        </th>
+                        <td>
+                            Unreal Engine 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Platform(s)
+                        </th>
+                        <td>
+                            PlayStation 5, Nintendo Switch, Xbox One, PlayStation 4, Microsoft Windows, Xbox Series X and Series S
+                    </tr>
+                    <tr>
+                        <th>
+                            Description
+                        </th>
+                        <td>
+                            The official NHRA video-game.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Roles(s)
+                        </th>
+                        <td>
+                            Tools, UI, Gameplay, Multiplayer
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="project">
         <a id="reminiscence" name="reminiscence"></a>
         <div class="title">
             <h2>Reminiscence</h2>
@@ -48,7 +118,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Platform
+                            Platform(s)
                         </th>
                         <td>
                             Microsoft Windows, SteamOS
@@ -64,7 +134,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Role
+                            Roles(s)
                         </th>
                         <td>
                             Lead game programmer
@@ -98,7 +168,7 @@ title = "Projects"
                             Genre
                         </th>
                         <td>
-                            Platformer
+                            Platform(s)er
                         </td>
                     </tr>
                     <tr>
@@ -127,7 +197,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Platform
+                            Platform(s)
                         </th>
                         <td>
                             Microsoft Windows
@@ -145,7 +215,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Role
+                            Roles(s)
                         </th>
                         <td>
                             Core programmer<br />
@@ -182,7 +252,7 @@ title = "Projects"
                             Genre
                         </th>
                         <td>
-                            Role-playing (RPG)
+                            Roles-playing (RPG)
                         </td>
                     </tr>
                     <tr>
@@ -211,7 +281,7 @@ title = "Projects"
                     </tr>
                     <tr>
                         <th>
-                            Platform
+                            Platform(s)
                         </th>
                         <td>
                             Microsoft Windows
@@ -222,12 +292,12 @@ title = "Projects"
                             Description
                         </th>
                         <td>
-                            It’s a role-playing 3D video game based on Shahnameh by the Persian poet Ferdowsi and a direct sequel to Age of Pahlevans I (2009). The main plot happens in the ancient city of Zabol and borrows many of its characters from Iranian mythology.
+                            It’s a Roles(s)-playing 3D video game based on Shahnameh by the Persian poet Ferdowsi and a direct sequel to Age of Pahlevans I (2009). The main plot happens in the ancient city of Zabol and borrows many of its characters from Iranian mythology.
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            Role
+                            Roles(s)
                         </th>
                         <td>
                             Core programmer<br />
