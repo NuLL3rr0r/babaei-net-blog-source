@@ -4,6 +4,78 @@ title = "Projects"
 
 <div class="portfolio">
     <div class="project">
+        <a id="something-cool" name="something-cool"></a>
+        <div class="title">
+            <h2>Something Cool</h2>
+        </div>
+        <div class="trailer">
+        </div>
+        <div class="extra-info">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th>
+                            Genre
+                        </th>
+                        <td>
+                            It's not a gamedev project.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Developer
+                        </th>
+                        <td>
+                            -
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Year(s)
+                        </th>
+                        <td>
+                            2022 - Present
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Engine
+                        </th>
+                        <td>
+                            Unreal Engine 4 / 5
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Platform(s)
+                        </th>
+                        <td>
+                            Microsoft Windows, GNU/Linux, Android, Oculus Quest 2, Oculus Quest Pro, HTC VIVE Pro, HTC VIVE Focus 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Description
+                        </th>
+                        <td>
+                            -
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Roles(s)
+                        </th>
+                        <td>
+                            Lead C++/Unreal Developer, Lead Rust Developer, Go lang.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="project">
+    </div>
+    <div class="project">
         <a id="nhra" name="nhra"></a>
         <div class="title">
             <h2>NHRA Championship Drag Racing: Speed For All</h2>
@@ -52,6 +124,7 @@ title = "Projects"
                         </th>
                         <td>
                             PlayStation 5, Nintendo Switch, Xbox One, PlayStation 4, Microsoft Windows, Xbox Series X and Series S
+                        </td>
                     </tr>
                     <tr>
                         <th>
