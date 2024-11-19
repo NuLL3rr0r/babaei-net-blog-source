@@ -6,6 +6,8 @@ tags = [ "Blueprint", "Epic Games", "Game Development", "Game Programming", "gam
 toc = false
 +++
 
+{{< figure src="/blog/virtual-reality-openxr-hand-tracking-gesture-recognition-detection-unreal-engine/virtual-reality-openxr-hand-tracking-gesture-recognition-detection-unreal-engine.webp" alt="Introduction to Virtual Reality, OpenXR Hand-Tracking, and Gesture Recognition in Unreal Engine" caption="Introduction to Virtual Reality, OpenXR Hand-Tracking, and Gesture Recognition in Unreal Engine" >}}
+
 Here's a lesser-known fact about me. Once upon a time, when it was just me and the dinosaurs... Okay, maybe not that far back, but long before VR headsets, the Metaverse, and the social media craze, I used to teach people things for 8 years! I loved it so much that, honestly, I could talk for hours (don't worry, I won't in this video)!
 
 Anyway, enough of my rambling! Recently, I rediscovered that passion for teaching, and I'm thrilled to kick off a VR tutorial series in Unreal Engine. That's why, as the introductory step into this series, we're diving hands-first into the fascinating world of virtual reality.
