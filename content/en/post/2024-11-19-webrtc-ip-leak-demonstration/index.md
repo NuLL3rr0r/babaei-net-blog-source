@@ -14,7 +14,7 @@ Deep in the vast jungle of the internet, an elusive predator lies in wait: the _
 
 ## A Quick Disclaimer
 
-_**Before we dive into this journey, here is a quick but important disclaimer: everything I share in this tutorial, including any code or techniques, is strictly for educational purposes. The goal is to help you understand and protect yourself against potential vulnerabilities like WebRTC IP leaks. Any misuse, abuse, or illegal application of the information provided here is entirely your responsibility. I do not condone or encourage any unethical or unlawful activity, and I am not liable for any consequences that may arise from such actions.**_
+_**Before we embark on this journey, here is a quick but important disclaimer: everything I share in this tutorial, including any code or techniques, is strictly for educational purposes. The goal is to help you understand and protect yourself against potential vulnerabilities like WebRTC IP leaks. Any misuse, abuse, or illegal application of the information provided here is entirely your responsibility. I do not condone or encourage any unethical or unlawful activity, and I am not liable for any consequences that may arise from such actions.**_
 
 ## YouTube Tutorials
 
