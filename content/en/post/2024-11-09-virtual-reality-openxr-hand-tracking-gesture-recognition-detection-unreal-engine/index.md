@@ -2,7 +2,7 @@
 title = "Introduction to Virtual Reality, OpenXR Hand-Tracking, and Gesture Recognition in Unreal Engine"
 slug = "virtual-reality-openxr-hand-tracking-gesture-recognition-detection-unreal-engine"
 date = 2024-11-09T01:10:00+01:00
-tags = [ "Blueprint", "Epic Games", "Game Development", "Game Programming", "gamedev", "Gesture Detection", "Gesture Recognition", "Hand-tracking", "OpenXR", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Virtual Reality", "VR", "Windows", "XR" ]
+tags = [ "Blueprint", "Epic Games", "Game Development", "Game Programming", "gamedev", "Gesture Detection", "Gesture Recognition", "Hand-tracking", "HTC VIVE", "Meta Quest", "Oculus", "Oculus Quest", "OpenXR", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Virtual Reality", "VR", "Windows", "XR" ]
 toc = false
 +++
 
