@@ -2,7 +2,7 @@
 title = "How to disable HP Proliant ML350p Gen8 P420i RAID controller, enable HBA mode (a.k.a. pass-through), and perform a FreeBSD root on ZFS installation"
 slug = "disable-hp-proliant-ml350p-gen8-p420i-raid-controller-enable-hba-mode-pass-through-perform-freebsd-root-zfs-installation"
 date = 2021-11-10T18:33:00+01:00
-tags = [ "FOSS", "FLOSS", "FreeBSD", "GNU", "Hardware", "HP", "Proliant", "Linux", "Self-hosted", "Server", "Unix", "ZFS" ]
+tags = [ "FLOSS", "FOSS", "FreeBSD", "GNU", "Hardware", "HP", "Proliant", "Linux", "Self-hosted", "Server", "Unix", "ZFS" ]
 toc = true
 +++
 
