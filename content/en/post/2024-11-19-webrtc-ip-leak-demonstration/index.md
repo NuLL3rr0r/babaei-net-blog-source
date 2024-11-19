@@ -2,7 +2,7 @@
 title = "WebRTC IP Leak Demonstration"
 slug = "webrtc-ip-leak-demonstration"
 date = 2024-11-19T21:32:00+01:00
-tags = [ "Android", "Chrome", "Chromium", "Cybersecurity", "FreeBSD", "Fingerprinting", "Firefox", "GNU", "GNU/Linux", "Google Chrome", "JavaScript", "Linux", "Microsoft", "Microsoft Windows", "Mozilla", "Mozilla Firefox", "Rust", "Security", "Vulnerability", "WebRTC", "Windows" ]
+tags = [ "Android", "Chrome", "Chromium", "Cybersecurity", "FLOSS", "FOSS", "FreeBSD", "Fingerprinting", "Firefox", "GNU", "GNU/Linux", "Google Chrome", "JavaScript", "Linux", "Microsoft", "Microsoft Windows", "Mozilla", "Mozilla Firefox", "Rust", "Security", "Self-hosted", "Unix", "Vulnerability", "WebRTC", "Windows" ]
 toc = true
 +++
 
