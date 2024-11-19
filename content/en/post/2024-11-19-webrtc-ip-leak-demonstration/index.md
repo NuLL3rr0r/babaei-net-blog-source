@@ -6,6 +6,8 @@ tags = [ "Cybersecurity", "JavaScript", "Rust", "Security", "WebRTC", ]
 toc = true
 +++
 
+{{< figure src="/blog/webrtc-ip-leak-demonstration/webrtc-ip-leak-demonstration-rust-javascript.webp" alt="WebRTC IP Leak Demonstration using Rust and JavaScript" caption="WebRTC IP Leak Demonstration using Rust and JavaScript" >}}
+
 Deep in the vast jungle of the internet, an elusive predator lies in wait: the __WebRTC IP leak__. This invisible hunter slithers through the dense digital undergrowth, silent and unseen, ready to strike its next target. The IP addresses of its unsuspecting victims are exposed in an instant. But its danger isn't merely technical; if you're a political activist in a repressive regime, leaking your IP could jeopardize your very life. Today, we embark on an expedition to track this hidden predator, uncover its secrets, and learn how to protect ourselves before it strikes.
 
 <!--more-->
