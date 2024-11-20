@@ -134,10 +134,14 @@ Stay tuned as we break down the mechanics and implications of WebRTC leaks!
 
 This demonstration highlights just how easily a WebRTC leak can compromise your privacy. The good news? Protecting yourself is straightforward:
 
-- **Disable WebRTC**: Use browser add-ons or settings to turn it off if you don’t need it.
-- **Ensure mDNS is Enabled**: Modern browsers support mDNS to protect your local IP—double-check it’s enabled.
+- **Disable WebRTC**: Use browser add-ons or settings to turn it off if you don’t need it. On Chrome/Chromium or any browsers based on Chromium, e.g. [Brave](https://brave.com/), use an extension like [WebRTC Leak Shield](https://chromewebstore.google.com/detail/webrtc-leak-shield/bppamachkoflopbagkdoflbgfjflfnfl?hl=en) to prevent leaking any kind of IPs (local IPv4, public IPv4, and IPv6). And, on Firefox or any Firefox-based browsers, e.g. [LibreWolf](https://librewolf.net/), navigate to `about:config` in your address bar and set `media.peerconnection.enabled` to `False`. Alternatively, on Firefox the [WebRTC Leak Shield](https://addons.mozilla.org/en-US/firefox/addon/webrtc-leak-shield/) add-on can achieve the same results. **Please note that in Incognito or Private Browsing modes by default extensions are disabled, so, it's best practice to make sure these extensions are enabled even in Incognito or Private Browsing modes by checking the options _Allow in Incognito_ in Chrome or _Run in Private Windows_ in Firefox are enabled for the extension**.
+
+- **Ensure mDNS is Enabled**: Modern browsers support mDNS to protect your local IP—double-check it’s enabled. On Chrome navigate to `chrome://flags#enable-webrtc-hide-local-ips-with-mdns` and Brave to `brave://flags#enable-webrtc-hide-local-ips-with-mdns` and ensure it's enabled. On Firefox navigate to `about:config` and ensure both `media.peerconnection.ice.no_host` and `media.peerconnection.ice.relay_only` are set to `True`.
+
 - **Use a Reliable and Trusted VPN**: Choose a VPN with WebRTC leak protection and a kill switch to safeguard your connection, even if the VPN connectiopn drops, this feature is going to save you from leaking your IP!
+
 - **Block Malicious Scripts**: Install established privacy-focused add-ons to prevent malicious scripts from exploiting WebRTC vulnerabilities (e.g. [uBlock Origin](https://github.com/gorhill/uBlock)).
+
 - **Test for WebRTC Leaks Regularly**: Make it a habit to check your browser for leaks to ensure your protections are working.
 
 Remember, this isn’t about fear—it’s about empowerment. By taking these simple steps,you can reclaim your privacy and stay safe in the digital jungle. Thanks for following this tutorial, and as always, stay secure out there!
