@@ -124,7 +124,7 @@ __Note__: While your ISP assigns you a block of IPv6 addresses (known as a prefi
 
 ## Hands-On Demonstration: Using Rust and JavaScript
 
-Now, let’s get practical. To illustrate how easily WebRTC leaks can be exploited, I’ve developed a hypothetical demonstration using **Rust** and **JavaScript**. The complete source code is available on [GitHub](https://github.com/NuLL3rr0r/webrtc-leak-demo) and [GitLab](https://github.com/NuLL3rr0r/webrtc-leak-demo).
+Now, let’s get practical. To illustrate how easily WebRTC leaks can be exploited, I’ve developed a hypothetical demonstration using **Rust** and **JavaScript**. The complete source code is available on [GitHub](https://github.com/NuLL3rr0r/webrtc-leak-demo) and [GitLab](https://gitlab.com/NuLL3rr0r/webrtc-leak-demo).
 
 In the [videos above](#youtube-tutorials), I’ll walk you through deploying the demo to a VPS, showcasing its functionality step by step. The repository includes comprehensive documentation, making it straightforward to get it up and running on **Microsoft Windows**, various **GNU/Linux distributions**, or **FreeBSD**. 
 
