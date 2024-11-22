@@ -138,7 +138,7 @@ This demonstration highlights just how easily a WebRTC leak can compromise your 
 
 - **Ensure mDNS is Enabled**: Modern browsers support mDNS to protect your local IP—double-check it’s enabled. On Chrome navigate to `chrome://flags#enable-webrtc-hide-local-ips-with-mdns` and Brave to `brave://flags#enable-webrtc-hide-local-ips-with-mdns` and ensure it's enabled. On Firefox navigate to `about:config` and ensure `media.peerconnection.ice.no_host`, `media.peerconnection.ice.obfuscate_host_addresses`, and `media.peerconnection.ice.relay_only` are all set to `True`. For other browsers and platforms instructions exist all over the web.
 
-- **Use a Reliable and Trusted VPN**: Choose a VPN with WebRTC leak protection and a kill switch to safeguard your connection, even if the VPN connectiopn drops, this feature is going to save you from leaking your IP!
+- **Use a Reliable and Trusted VPN**: Choose a VPN with WebRTC leak protection and a kill switch to safeguard your connection, even if the VPN connection drops, this feature is going to save you from leaking your IP!
 
 - **Block Malicious Scripts**: Install established privacy-focused add-ons to prevent malicious scripts from exploiting WebRTC vulnerabilities (e.g. [uBlock Origin](https://github.com/gorhill/uBlock)).
 
