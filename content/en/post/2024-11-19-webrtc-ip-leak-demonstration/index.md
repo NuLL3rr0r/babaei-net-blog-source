@@ -144,4 +144,4 @@ This demonstration highlights just how easily a WebRTC leak can compromise your 
 
 - **Test for WebRTC Leaks Regularly**: Make it a habit to check your browser for leaks to ensure your protections are working.
 
-Remember, this isn’t about fear—it’s about empowerment. By taking these simple steps,you can reclaim your privacy and stay safe in the digital jungle. Thanks for following this tutorial, and as always, stay secure out there!
+Remember, this isn’t about fear—it’s about empowerment. By taking these simple steps, you can reclaim your privacy and stay safe in the digital jungle. Thanks for following this tutorial, and as always, stay secure out there!
