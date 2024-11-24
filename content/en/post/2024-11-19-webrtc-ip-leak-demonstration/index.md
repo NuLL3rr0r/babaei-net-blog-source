@@ -20,9 +20,17 @@ _**Before we embark on this journey, here is a quick but important disclaimer: e
 
 You can watch this tutorial on YouTube:
 
-- English Version:
+- The English video tutorial:
 
-- Farsi Version:
+{{< youtube 1YX1Jyo8Hqo >}}
+
+<br/>
+
+- The video tutorial in Persian:
+
+{{< youtube SjK7dnZXJRQ >}}
+
+<br/>
 
 ## What is WebRTC and What is it Used For?
 
