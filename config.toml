@@ -65,7 +65,7 @@ theme = "beautifulhugo"
             [[languages.en.menu.main]]
                 parent = "subscribe"
                 name = "Subscribe via Telegram"
-                url = "https://telegram.me/mamadou_babaei"
+                url = "https://telegram.me/babaei_mamadou"
                 weight = 3
 
             [[languages.en.menu.main]]
