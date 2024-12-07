@@ -8,8 +8,6 @@ toc = true
 
 {{< figure src="/blog/unreal-engine-openxr-hand-tracking-procedural-virtual-hand-mesh-animation/unreal-engine-openxr-hand-tracking-procedural-virtual-hand-mesh-animation.webp" alt="Procedural Virtual Hand Mesh Animation Using OpenXR Hand-Tracking in Unreal Engine" caption="Procedural Virtual Hand Mesh Animation Using OpenXR Hand-Tracking in Unreal Engine" >}}
 
-## Unreal Engine Tutorial: Procedural Virtual Hand Mesh Animation Using OpenXR Hand-Tracking Data
-
 Building on the [Introduction to Virtual Reality, OpenXR Hand-Tracking, and Gesture Recognition in Unreal Engine](https://www.babaei.net/blog/virtual-reality-openxr-hand-tracking-gesture-recognition-detection-unreal-engine/) tutorial, this slightly more advanced tutorial will dive deeper into the following topics:
 
 - Transitioning seamlessly between motion controller and hand-tracking modes in Unreal Engine.
