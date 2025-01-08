@@ -116,9 +116,9 @@ theme = "beautifulhugo"
     [privacy.instagram]
         disable = true
     [privacy.twitter]
-        disable = true
-        enableDNT = true
-        simple = true
+        disable = false
+        enableDNT = false
+        simple = false
     [privacy.vimeo]
         disable = false
         simple = true
