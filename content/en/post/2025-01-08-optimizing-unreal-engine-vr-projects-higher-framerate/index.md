@@ -78,6 +78,53 @@ Optimizing performance for mobile platforms requires careful attention to specif
 
 **Forward Shading**: Enable Forward Shading for improved efficiency. It’s optimized for mobile platforms.
 
+{{< blockquote author="Unreal Engine 5.5 Release Notes - Mobile Renderer" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5.5-release-notes#mobilerenderer" >}}
+**Mobile Renderer**
+
+Unreal Engine 5.5 brings several new features to the mobile renderer:
+
+- Forward mode now supports d-buffer decals, rect lights, capsule shadows and point light shadows
+- Runtime automatic PSO precaching, which offers an alternative to the manual PSO gathering workflow
+- Screen-space Reflections
+{{< /blockquote >}}
+
+{{< blockquote author="Unreal Engine 5.5 Release Notes - Mobile Forward and Desktop Forward feature parity" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5.5-release-notes#mobileforwardanddesktopforwardfeatureparity" >}}
+**Mobile Forward and Desktop Forward feature parity**
+
+The Mobile Forward renderer is receiving feature updates and performance improvements with the objective of becoming the recommended renderer for PC VR once it reaches feature parity with the legacy Desktop Forward Renderer. In 5.5 we implemented support for the following features:
+
+- Moveable Point/Spot-light IES Textures
+- Capsule Direct Shadows
+- Decals
+- Rectangular Lights
+- Volumetric Fog
+- Niagara Particle Lights
+- Moveable Point Light Shadows (only supported with d3d and not Vulkan)
+{{< /blockquote >}}
+
+{{< blockquote author="Unreal Engine 5.5 Release Notes - Mobile Rendering" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5.5-release-notes#mobilerendering" >}}
+**Mobile Rendering**
+
+**Bug Fix**:
+
+- Correctly change between Mobile Forward and Mobile Deferred, taking into account r.Mobile.AllowDeferredShadingOpenGL cvar
+{{< /blockquote >}}
+
+{{< blockquote author="Unreal Engine 5.5 Release Notes - Mobile Forward" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5.5-release-notes#mobileforward" >}}
+**Mobile Forward**
+
+**New**:
+
+- Added IES Textures in Mobile Forward Renderer
+- Added movable point lights dynamic shadows in mobile forward renderer. Requires r.Mobile.EnableMovablePointLightsShadows=1 and r.Mobile.SupportGPUScene=True.
+- Added rect light support to mobile forward renderer. Requires r.Mobile.Forward.RenderRectLightsAsSpotLights=0.
+- Added capsule direct shadows to mobile forward renderer. Requires r.Mobile.EnableCapsuleShadows=1 and r.Mobile.EnableCapsuleDirectShadows=1.
+
+**Bug Fix**:
+
+- Fix depth prepass disabling MSAA.
+{{< /blockquote >}}
+
 ![Standalone Mode (Mobile) - Rendering Settings - Forward Shading](project-rendering-settings-forward-renderer-shading.webp "Standalone Mode (Mobile) - Rendering Settings - Forward Shading")
 
 ![Standalone Mode (Mobile) - Rendering Settings - Mobile Shading](project-rendering-settings-mobile-shading.webp "Standalone Mode (Mobile) - Rendering Settings - Mobile Shading")
