@@ -287,27 +287,27 @@ __NOTE__: Unreal Engine provides various console commands for inspecting culling
 
 The [Meta XR Unreal Engine Plugin](https://developers.meta.com/horizon/downloads/package/unreal-engine-5-integration/) includes a built-in **Project Setup Tool** to help optimize Unreal Engine projects for VR.
 
-![Meta XR Plugin - Project Setup Tool](metaxr-project-setup-tool.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool")
+![Meta XR Plugin - Project Setup Tool](metaxr-project-setup-tool.webp "Meta XR Plugin - Project Setup Tool")
 
 Once opened, the tool displays all tweakable project settings across multiple tabs, regardless of their optimization status. It categorizes these settings into four sections: **Required Rules**, **Recommended Rules**, **Applied Rules**, and **Ignored Rules**.
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)](metaxr-project-setup-tool-unoptimized-all-quest.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)](metaxr-project-setup-tool-unoptimized-all-quest.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)](metaxr-project-setup-tool-unoptimized-pc-link.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)](metaxr-project-setup-tool-unoptimized-pc-link.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)](metaxr-project-setup-tool-unoptimized-quest-3.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)](metaxr-project-setup-tool-unoptimized-quest-3.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)](metaxr-project-setup-tool-unoptimized-quest-pro.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)](metaxr-project-setup-tool-unoptimized-quest-pro.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)](metaxr-project-setup-tool-unoptimized-quest-2.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)](metaxr-project-setup-tool-unoptimized-quest-2.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)")
 
 You can apply the required or recommended rules individually by clicking the `Apply` button next to each rule, or apply all rules in a section by using the `Apply All` button. Multiple presses of the `Apply All` button may be necessary to ensure all rules are applied. After applying the rules, the tool will prompt you to restart the editor for the changes to take effect.
 
-![Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)](metaxr-project-setup-tool-apply-all-restart-editor-prompt.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)")
+![Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)](metaxr-project-setup-tool-apply-all-restart-editor-prompt.webp "Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)")
 
 After restarting, verify that all the rules in the Project Setup Tool across all tabs are applied. Occasionally, some rules may not take effect across the editor restarts, requiring you to repeat the process and restart the editor multiple times to correctly apply the changes.
 
-![Meta XR Plugin - Project Setup Tool (Optimized Settings)](metaxr-project-setup-tool-optimized-settings-applied.webp "Game User Settings and Engine Scalability Settings - Meta XR Plugin - Project Setup Tool (Optimized Settings)")
+![Meta XR Plugin - Project Setup Tool (Optimized Settings)](metaxr-project-setup-tool-optimized-settings-applied.webp "Meta XR Plugin - Project Setup Tool (Optimized Settings)")
 
 ### Game User Settings and Engine Scalability Settings
 
