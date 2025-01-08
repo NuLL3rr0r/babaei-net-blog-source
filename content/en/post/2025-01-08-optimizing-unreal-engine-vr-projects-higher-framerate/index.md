@@ -1,7 +1,7 @@
 +++
 title = "Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest Tips Included!)"
 slug = "optimizing-unreal-engine-vr-projects-higher-framerate"
-date = 2025-01-02T02:17:00+01:00
+date = 2025-01-08T03:36:00+01:00
 tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "Frame Generation", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XR" ]
 toc = true
 +++
