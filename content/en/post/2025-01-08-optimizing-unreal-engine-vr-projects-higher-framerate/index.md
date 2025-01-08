@@ -2,7 +2,7 @@
 title = "Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest Tips Included!)"
 slug = "optimizing-unreal-engine-vr-projects-higher-framerate"
 date = 2025-01-08T03:36:00+01:00
-tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "Frame Generation", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Intel", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XeSS", "XR" ]
+tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "ETFR", "Frame Generation", "FFR", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Intel", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XeSS", "XR" ]
 toc = true
 +++
 
@@ -308,6 +308,20 @@ You can apply the required or recommended rules individually by clicking the `Ap
 After restarting, verify that all the rules in the Project Setup Tool across all tabs are applied. Occasionally, some rules may not take effect across the editor restarts, requiring you to repeat the process and restart the editor multiple times to correctly apply the changes.
 
 ![Meta XR Plugin - Project Setup Tool (Optimized Settings)](metaxr-project-setup-tool-optimized-settings-applied.webp "Meta XR Plugin - Project Setup Tool (Optimized Settings)")
+
+#### FFR
+
+Consider utilizing [Fixed Foveated Rendering (FFR)](https://developers.meta.com/horizon/documentation/unreal/unreal-ffr/) which is a rendering technique used in virtual reality (VR) and augmented reality (AR) applications to optimize performance by reducing the graphical detail in the peripheral areas of the display, where the user is less likely to notice a loss in quality. The center of the view, where the user focuses the most, is rendered at full resolution, while the edges are rendered at a lower resolution. FFR is particularly effective in VR to increase frame rates and reduce the computational load on the GPU, enabling smoother experiences on hardware with limited performance capabilities. This technique is "fixed" because the high-resolution focus area does not adapt to where the user is looking.
+
+Devices that support **FFR** include standalone VR headsets like the Meta Quest 2, Meta Quest Pro, and Quest 3, as well as tethered headsets like HTC Vive and Valve Index when paired with compatible GPUs.
+
+#### ETFR
+
+Consider utilizing [Eye-Tracked Foveated Rendering (ETFR)](https://developers.meta.com/horizon/documentation/unreal/unreal-eye-tracked-foveated-rendering/) which is an advanced rendering method that dynamically adjusts the resolution and graphical detail of a scene based on the user's gaze, as detected by eye-tracking technology. The area where the user is looking is rendered at the highest quality, while the rest of the scene is rendered at progressively lower resolutions. By concentrating computational resources on the exact area of focus, ETFR significantly reduces the GPU workload, enabling higher frame rates and improved performance, even for graphically intensive applications. ETFR is particularly beneficial in VR and AR environments, where it enhances realism and immersion while allowing developers to push hardware capabilities further.
+
+![Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation](metaxr-eye-tracked-foveated-rendering-etfr.gif "Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation")
+
+Devices that support **ETFR** include VR headsets with integrated eye-tracking, such as the Meta Quest Pro, PlayStation VR2, and high-end models like the Varjo Aero and HTC Vive Pro Eye.
 
 ### Game User Settings and Engine Scalability Settings
 
