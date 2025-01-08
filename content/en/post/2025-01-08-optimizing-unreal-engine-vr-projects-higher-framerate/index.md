@@ -2,7 +2,7 @@
 title = "Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest Tips Included!)"
 slug = "optimizing-unreal-engine-vr-projects-higher-framerate"
 date = 2025-01-08T03:36:00+01:00
-tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "Frame Generation", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XR" ]
+tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "Frame Generation", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Intel", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XeSS", "XR" ]
 toc = true
 +++
 
@@ -366,3 +366,7 @@ Consider utilizing [NVIDIA Deep Learning Super Sampling (DLSS)](https://develope
 ### AMD FSR
 
 Consider utilizing [AMD FidelityFX Super Resolution (FSR)](https://gpuopen.com/learn/ue-fsr3/) which is AMD's upscaling technology designed to boost frame rates by rendering games at a lower resolution and upscaling them to a higher resolution using a spatial or temporal upscaling algorithm. Unlike NVIDIA DLSS, FSR does not require specialized AI hardware, making it compatible with a broader range of GPUs, including AMD Radeon GPUs (from RX 400 series and newer), select NVIDIA GPUs (GeForce GTX 10 series and newer), and even some integrated GPUs. This wide compatibility is due to its hardware-agnostic nature, enabling developers to implement FSR across a wide array of platforms.
+
+### Intel XeSS
+
+Consider utilizing [Intel Xe Super Sampling (XeSS)](https://github.com/GameTechDev/XeSSUnrealPlugin) which is Intel's AI-based upscaling technology that improves gaming performance and visual quality by rendering games at a lower resolution and then upscaling to a higher resolution using advanced machine learning algorithms. XeSS reconstructs high-quality images with enhanced detail, sharpness, and temporal stability, providing visuals comparable to native resolution while boosting frame rates. Designed for a wide range of hardware, XeSS works best on Intel GPUs equipped with Xe Matrix Extensions (XMX) AI acceleration, such as the Intel Arc GPUs. Additionally, XeSS supports other hardware, including non-Intel GPUs like AMD and NVIDIA, by using DP4a instructions, ensuring broader compatibility across various systems.
