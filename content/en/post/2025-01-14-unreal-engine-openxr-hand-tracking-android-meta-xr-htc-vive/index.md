@@ -21,6 +21,11 @@ Let’s jump right in and get the hand-tracking working exactly the way it’s s
 
 <br/>
 
+# Plugins
+
+- Get [Meta XR Unreal Engine 5 Integration Plugin](https://developers.meta.com/horizon/downloads/package/unreal-engine-5-integration/).
+- Get [HTC VIVE OpenXR Unreal Engine Plugin](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/).
+
 ## Patched Meta XR Unreal Engine 5 Integration v71.0 for UE 5.5
 
 - Get it on [Microsoft Azure DevOps](https://dev.azure.com/NuLL3rr0r/_git/meta-xr-unreal-engine-integration-patched).
