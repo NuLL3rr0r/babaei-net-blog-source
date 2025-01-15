@@ -1,7 +1,7 @@
 +++
 title = "Unreal Engine OpenXR Hand-Tracking on Android with Meta XR (Quest 3S/3/2) and HTC VIVE OpenXR (Focus Vision/XR Elite/Focus 3) Plugins"
 slug = "unreal-engine-openxr-hand-tracking-android-meta-xr-htc-vive"
-date = 2025-01-14T11:07:00+01:00
+date = 2025-01-15T12:12:00+01:00
 tags = [ "Android", "Epic Games", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Meta Quest", "Oculus", "Oculus Quest", "OpenXR", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Virtual Reality", "VR", "Windows", "XR" ]
 toc = true
 draft = true
