@@ -19,6 +19,8 @@ Let’s jump right in and get the hand-tracking working exactly the way it’s s
 
 ## Video Tutorial
 
+{{< youtube BWd3MwtfTJE >}}
+
 <br/>
 
 # Plugins
