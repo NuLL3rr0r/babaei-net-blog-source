@@ -1,11 +1,11 @@
 +++
-title = "Deploy Unreal Engine Projects to Android and Meta Quest 2/3 in Standalone Mode"
+title = "Deploy Unreal Engine Projects to Android and Meta Quest 3S/3/Pro/2 in Standalone Mode"
 slug = "deploy-unreal-engine-projects-android-meta-quest-standalone-mode"
 date = 2024-12-20T17:28:00+01:00
 tags = [ "ADB", "Android", "Blueprint", "Epic Games", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Java", "JDK", "Meta Quest", "Oculus", "Oculus Quest", "OpenXR", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Virtual Reality", "VR", "Windows", "XR" ]
 +++
 
-{{< figure src="/blog/deploy-unreal-engine-projects-android-meta-quest-standalone-mode/deploy-unreal-engine-projects-android-meta-quest-standalone-mode.webp" alt="Deploy Unreal Engine Projects to Android and Meta Quest 2/3 in Standalone Mode" caption="Deploy Unreal Engine Projects to Android and Meta Quest 2/3 in Standalone Mode" >}}
+{{< figure src="/blog/deploy-unreal-engine-projects-android-meta-quest-standalone-mode/deploy-unreal-engine-projects-android-meta-quest-standalone-mode.webp" alt="Deploy Unreal Engine Projects to Android and Meta Quest 3S/3/Pro/2 in Standalone Mode" caption="Deploy Unreal Engine Projects to Android and Meta Quest 3S/3/Pro/2 in Standalone Mode" >}}
 
 All right… so… you might be wondering—where have I been? Did I fall into a virtual void or some digital black hole? Did I get sucked into a never-ending loading screen? Did Unreal Engine finally crash me for good? Well, almost.
 

@@ -6,7 +6,7 @@ tags = [ "Android", "Epic Games", "Game Development", "Game Programming", "gamed
 toc = true
 +++
 
-{{< figure src="/blog/unreal-engine-openxr-hand-tracking-android-meta-xr-htc-vive/unreal-engine-openxr-hand-tracking-android-meta-xr-htc-vive.webp" alt="Unreal Engine OpenXR Hand-Tracking on Android with Meta XR (Quest 3S/3/2) and HTC VIVE OpenXR (Focus Vision/XR Elite/Focus 3) Plugins" caption="Unreal Engine OpenXR Hand-Tracking on Android with Meta XR (Quest 3S/3/2) and HTC VIVE OpenXR (Focus Vision/XR Elite/Focus 3) Plugins" >}}
+{{< figure src="/blog/unreal-engine-openxr-hand-tracking-android-meta-xr-htc-vive/unreal-engine-openxr-hand-tracking-android-meta-xr-htc-vive.webp" alt="Unreal Engine OpenXR Hand-Tracking on Android with Meta XR (Quest 3S/3/Pro/2) and HTC VIVE OpenXR (Focus Vision/XR Elite/Focus 3) Plugins" caption="Unreal Engine OpenXR Hand-Tracking on Android with Meta XR (Quest 3S/Pro/3/2) and HTC VIVE OpenXR (Focus Vision/XR Elite/Focus 3) Plugins" >}}
 
 Hey everyone! Welcome back to the channel! In the last tutorial, we tackled deploying Unreal Engine projects to Android and Meta Quest in standalone mode—because who doesn’t love the thrill of watching their code actually work on a headset? But if you caught that episode, you’ll remember I dropped a little plot twist: Unreal Engine’s built-in OpenXR plugin... yeah, it’s like that friend who shows up at your party and forgets to bring their own hand-tracking support for Android. Awkward, right?
 
