@@ -78,9 +78,93 @@ theme = "beautifulhugo"
                 url = "/search/"
                 weight = 7
 
+            [[languages.en.menu.main]]
+                name = "وبلاگ فارسی"
+                url = "https://fa.babaei.net/"
+                weight = 9
+
         [languages.en.params]
             homeTitle = "Mamadou Babaei"
             subtitle = "Memento Mori • Amor Fati • Summum Bonum"
+
+    [languages.fa]
+        baseURL = "https://fa.babaei.net/"
+        contentDir = "content/fa"
+        languageCode = "fa-ir"
+        languageName = "فارسی"
+        title = "ممدوو بابائی"
+        weight = 20
+
+        [languages.fa.author]
+            name = "ممدوو بابائی"
+            github = "NuLL3rr0r"
+            gitlab = "NuLL3rr0r"
+            telegram = "mamadou_babaei"
+            twitter = "mamadou_babaei"
+            website = "https://fa.babaei.net/"
+
+        [languages.fa.menu]
+            [[languages.fa.menu.main]]
+                name = "وبلاگ"
+                url = ""
+                weight = 1
+
+            [[languages.fa.menu.main]]
+                name = "آرشیو"
+                url = "/blog/archives/"
+                weight = 2
+
+            [[languages.fa.menu.main]]
+                name = "پروژه ها"
+                url = "/projects/"
+                weight = 3
+
+            [[languages.fa.menu.main]]
+                name = "درباره"
+                url = "/about/"
+                weight = 4
+
+            [[languages.fa.menu.main]]
+                identifier = "subscribe"
+                name = "اشتراک"
+                weight = 5
+
+            [[languages.fa.menu.main]]
+                parent = "subscribe"
+                name = "ایمیل"
+                url = "http://subscribe.babaei.net/?lang=fa&subscription=fa"
+                weight = 1
+
+            [[languages.fa.menu.main]]
+                parent = "subscribe"
+                name = "فید"
+                url = "/index.xml"
+                weight = 2
+
+            [[languages.fa.menu.main]]
+                parent = "subscribe"
+                name = "تلگرام"
+                url = "https://telegram.me/mamadou_babaei"
+                weight = 3
+
+            [[languages.fa.menu.main]]
+                name = "تماس"
+                url = "http://subscribe.babaei.net/?lang=fa&contact-form"
+                weight = 8
+
+            [[languages.fa.menu.main]]
+                name = "جستجو"
+                url = "/search/"
+                weight = 9
+
+            [[languages.fa.menu.main]]
+                name = "English Blog"
+                url = "https://www.babaei.net/"
+                weight = 10
+
+        [languages.fa.params]
+            homeTitle = "ممدوو بابائی"
+            subtitle = "برنامه نویس C++ / Unreal Engine"
 
 [markup]
     [markup.goldmark]

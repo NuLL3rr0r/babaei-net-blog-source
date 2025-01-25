@@ -58,9 +58,20 @@
 {{ $font_face_roboto_styles := resources.Get "css/font-face-roboto.css" }}
 {{ $font_face_roboto_condensed_styles := resources.Get "css/font-face-roboto-condensed.css" }}
 {{ $font_face_roboto_mono_styles := resources.Get "css/font-face-roboto-mono.css" }}
+{{ $font_face_vazir_styles := resources.Get "css/font-face-vazir.css" }}
 
-{{ $styles_bundle := slice $katex_min_css $fontawesome_all_css $bootstrap_min_css $main_css $fonts_css $fonts_css $codeblock_css $photoswipe_min_css $photoswipe_default_skin_min_css $custom_styles $font_face_roboto_styles $font_face_roboto_condensed_styles $font_face_roboto_mono_styles | resources.Concat "css/custom-bundle.css" | minify | resources.Fingerprint "sha512" }}
+{{ if eq .Lang "fa" }}
+
+{{ $custom_rtl_styles := resources.Get "css/custom-rtl.css" }}
+{{ $styles_bundle := slice $katex_min_css $fontawesome_all_css $bootstrap_min_css $main_css $fonts_css $fonts_css $codeblock_css $photoswipe_min_css $photoswipe_default_skin_min_css $custom_styles $custom_rtl_styles $custom_rtl_styles $font_face_roboto_styles $font_face_roboto_condensed_styles $font_face_roboto_mono_styles $font_face_vazir_styles | resources.Concat "css/custom-rtl-bundle.css" | minify | resources.Fingerprint "sha512" }}
 <link rel="stylesheet" href="{{ $styles_bundle.RelPermalink }}" integrity="{{ $styles_bundle.Data.Integrity }}">
+
+{{ else }}
+
+{{ $styles_bundle := slice $katex_min_css $fontawesome_all_css $bootstrap_min_css $main_css $fonts_css $fonts_css $codeblock_css $photoswipe_min_css $photoswipe_default_skin_min_css $custom_styles $font_face_roboto_styles $font_face_roboto_condensed_styles $font_face_roboto_mono_styles $font_face_vazir_styles | resources.Concat "css/custom-bundle.css" | minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $styles_bundle.RelPermalink }}" integrity="{{ $styles_bundle.Data.Integrity }}">
+
+{{ end }}
 
 {{- partial "head_custom.html" . }}
 {{- if not .Site.IsServer -}}

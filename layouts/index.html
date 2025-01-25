@@ -19,12 +19,20 @@
           <ul class="pager main-pager">
             {{ if .Paginator.HasPrev }}
               <li class="previous">
+                {{ if eq .Lang "fa" }}
+                <a href="{{ .Paginator.Prev.URL | absURL }}">[ {{ i18n "newerPosts" }} &rarr; ]</a>
+                {{ else }}
                 <a href="{{ .Paginator.Prev.URL | absURL }}">[ &larr; {{ i18n "newerPosts" }} ]</a>
+                {{ end }}
                </li>
             {{ end }}
             {{ if .Paginator.HasNext }}
               <li class="next">
+                {{ if eq .Lang "fa" }}
+                <a href="{{ .Paginator.Next.URL | absURL }}">[ &larr; {{ i18n "olderPosts" }} ]</a>
+                {{ else }}
                 <a href="{{ .Paginator.Next.URL | absURL }}">[ {{ i18n "olderPosts" }} &rarr; ]</a>
+                {{ end }}
               </li>
             {{ end }}
           </ul>
