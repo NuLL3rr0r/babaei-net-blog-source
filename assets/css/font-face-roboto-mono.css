@@ -1,99 +1,112 @@
-/* font-face-roboto-mono-v5-latin-bold.css */
+/* roboto-mono-100 - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Roboto Mono Bold'), local('RobotoMono-Bold'),
-         url('../fonts/roboto-mono-v5-latin-700.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-700.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/roboto-mono-v23-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-bold-italic.css */
+/* roboto-mono-100italic - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: italic;
-    font-weight: 700;
-    src: local('Roboto Mono Bold Italic'), local('RobotoMono-BoldItalic'),
-         url('../fonts/roboto-mono-v5-latin-700italic.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-700italic.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 100;
+  src: url('../fonts/roboto-mono-v23-latin-100italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-italic.css */
+/* roboto-mono-200 - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Roboto Mono Italic'), local('RobotoMono-Italic'),
-         url('../fonts/roboto-mono-v5-latin-italic.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-italic.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/roboto-mono-v23-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-light.css */
+/* roboto-mono-200italic - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Roboto Mono Light'), local('RobotoMono-Light'),
-         url('../fonts/roboto-mono-v5-latin-300.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-300.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 200;
+  src: url('../fonts/roboto-mono-v23-latin-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-light-italic.css */
+/* roboto-mono-300 - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: italic;
-    font-weight: 300;
-    src: local('Roboto Mono Light Italic'), local('RobotoMono-LightItalic'),
-         url('../fonts/roboto-mono-v5-latin-300italic.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-300italic.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/roboto-mono-v23-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-medium.css */
+/* roboto-mono-300italic - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Roboto Mono Medium'), local('RobotoMono-Medium'),
-         url('../fonts/roboto-mono-v5-latin-500.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-500.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../fonts/roboto-mono-v23-latin-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-medium-italic.css */
+/* roboto-mono-regular - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: italic;
-    font-weight: 500;
-    src: local('Roboto Mono Medium Italic'), local('RobotoMono-MediumItalic'),
-         url('../fonts/roboto-mono-v5-latin-500italic.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-500italic.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-mono-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-regular.css */
+/* roboto-mono-italic - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto Mono'), local('RobotoMono-Regular'),
-         url('../fonts/roboto-mono-v5-latin-regular.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-regular.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/roboto-mono-v23-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-thin.css */
+/* roboto-mono-500 - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 100;
-    src: local('Roboto Mono Thin'), local('RobotoMono-Thin'),
-         url('../fonts/roboto-mono-v5-latin-100.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-100.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-mono-v23-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* font-face-roboto-mono-v5-latin-thin-italic.css */
+/* roboto-mono-500italic - latin */
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: italic;
-    font-weight: 100;
-    src: local('Roboto Mono Thin Italic'), local('RobotoMono-ThinItalic'),
-         url('../fonts/roboto-mono-v5-latin-100italic.woff2') format('woff2'),
-         url('../fonts/roboto-mono-v5-latin-100italic.woff') format('woff');
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: url('../fonts/roboto-mono-v23-latin-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-mono-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/roboto-mono-v23-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-mono-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 600;
+  src: url('../fonts/roboto-mono-v23-latin-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-mono-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-mono-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-mono-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/roboto-mono-v23-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
