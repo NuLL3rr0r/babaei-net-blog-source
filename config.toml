@@ -1,27 +1,17 @@
 DefaultContentLanguage = "en"
+baseURL = "https://www.babaei.net/"
 disableLanguages = ""
 enableEmoji = true
-Paginate = 8
-PaginatePath = "/blog/page"
 theme = "beautifulhugo"
 
 [languages]
 
     [languages.en]
-        baseURL = "https://www.babaei.net/"
         contentDir = "content/en"
         languageCode = "en-us"
         languageName = "English"
         title = "Mamadou Babaei"
         weight = 10
-
-        [languages.en.author]
-            name = "Mamadou Babaei"
-            github = "NuLL3rr0r"
-            gitlab = "NuLL3rr0r"
-            telegram = "mamadou_babaei"
-            twitter = "NuLL3rr0r"
-            website = "https://www.babaei.net/"
 
         [languages.en.menu]
 
@@ -81,6 +71,19 @@ theme = "beautifulhugo"
         [languages.en.params]
             homeTitle = "Mamadou Babaei"
             subtitle = "Memento Mori • Amor Fati • Summum Bonum"
+
+        [languages.en.params.author]
+            name = "Mamadou Babaei"
+            github = "NuLL3rr0r"
+            gitlab = "NuLL3rr0r"
+            telegram = "mamadou_babaei"
+            twitter = "NuLL3rr0r"
+            website = "https://www.babaei.net/"
+
+        [languages.en.params.pagination]
+            pagerSize = 8
+            path = "/blog/page"
+
 
 [markup]
     [markup.goldmark]

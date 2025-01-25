@@ -25,7 +25,7 @@ So, let’s get started before that snail finishes its coffee break!
 
 ## Proof: Optimized VR Project with 120+ FPS on Cinematic Quality Level
 
-{{< twitter mamadou_gamedev 1809991716843434228 >}}
+{{< x user="mamadou_gamedev" id="1809991716843434228" >}}
 
 ### Enhanced Visuals and Boosted Performance Utilizing NVIDIA DLSS
 
