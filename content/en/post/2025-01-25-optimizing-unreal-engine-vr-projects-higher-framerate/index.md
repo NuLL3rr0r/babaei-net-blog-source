@@ -1,7 +1,7 @@
 +++
 title = "Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest, FFR, ETFR, NVIDIA DLSS, AMD FSR, and Intel XeSS Tips Included!)"
 slug = "optimizing-unreal-engine-vr-projects-higher-framerate"
-date = 2025-01-14T10:47:00+01:00
+date = 2025-01-25T10:47:00+01:00
 tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "ETFR", "Frame Generation", "FFR", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Intel", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XeSS", "XR" ]
 toc = true
 draft = true
