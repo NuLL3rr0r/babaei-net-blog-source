@@ -73,8 +73,6 @@ The default refresh rate is set at `72 Hz` when streaming from a PC to Meta Ques
 
 Optimizing performance for mobile platforms requires careful attention to specific settings. Here are some essential adjustments to maximize performance and efficiency for mobile devices.
 
----
-
 ### Generic Rendering Settings
 
 **Forward Shading**: Enable Forward Shading for improved efficiency. It’s optimized for mobile platforms.
@@ -150,8 +148,6 @@ The Mobile Forward renderer is receiving feature updates and performance improve
 
 ![Standalone Mode (Mobile) - Rendering Settings - Reflection Capture Resolution](project-rendering-settings-reflections-reflection-capture-resolution.webp "Standalone Mode (Mobile) - Rendering Settings - Reflection Capture Resolution")
 
----
-
 ### Texture Settings
 
 **Enable Virtual Texture Support**: Turn this setting off for better performance. See the [Virtual Texturing documentation](https://dev.epicgames.com/documentation/en-us/unreal-engine/virtual-texturing-in-unreal-engine) for more details.
@@ -166,8 +162,6 @@ The Mobile Forward renderer is receiving feature updates and performance improve
 
 **Texture Compression**: Use **ASTC** compression for Android devices to ensure optimized texture performance.
 
----
-
 ### Lighting Settings
 
 **Static Lighting**: Use static lighting instead of dynamic lighting to save processing power.
@@ -179,8 +173,6 @@ The Mobile Forward renderer is receiving feature updates and performance improve
 **Distance Field Shadows/Ambient Occlusion**: Turn these features off as they are resource-intensive.
 
 ![Standalone Mode (Mobile) - Rendering Settings - Ambient Occlusion](project-rendering-settings-default-ambient-occlusion.webp "Standalone Mode (Mobile) - Rendering Settings - Ambient Occlusion")
-
----
 
 ### Post-Processing Settings
 
@@ -198,8 +190,6 @@ The Mobile Forward renderer is receiving feature updates and performance improve
 
 ![Standalone Mode (Mobile) - Rendering Settings - Motion Blur](project-rendering-settings-default-motion-blur.webp "Standalone Mode (Mobile) - Rendering Settings - Motion Blur")
 
----
-
 ### Materials and Shaders
 
 **Material Complexity**: Simplify materials by minimizing instructions and limiting textures or shader nodes.
@@ -208,15 +198,11 @@ The Mobile Forward renderer is receiving feature updates and performance improve
 
 **LOD (Level of Detail) Models**: Ensure models have LODs configured, reducing polygon count for distant objects.
 
----
-
 ### Level of Detail (LOD) Settings
 
 **Mesh LODs**: Configure all meshes with appropriate LODs to reduce polygons as objects move further away.
 
 **Screen Size**: Adjust LOD screen size settings to ensure efficient transitions for mobile devices.
-
----
 
 ### Engine Scalability Settings
 
@@ -232,15 +218,11 @@ The Mobile Forward renderer is receiving feature updates and performance improve
 
 _**NOTE**_: In PCVR mode, Unreal Engine typically defaults the Engine Scalability Settings profile to `Epic`. However, when deploying to Standalone mode (Android), it switches to a custom profile. For more details, refer to [Game User Settings and Engine Scalability Settings](#game-user-settings-and-engine-scalability-settings).
 
----
-
 ### Physics and Collision
 
 **Physics Simulation**: Limit physics calculations where possible to save resources.
 
 **Collision Complexity**: Use simple collision meshes instead of complex ones.
-
----
 
 ### Audio Settings
 
@@ -248,13 +230,9 @@ _**NOTE**_: In PCVR mode, Unreal Engine typically defaults the Engine Scalabilit
 
 **Number of Audio Channels**: Restrict the number of channels to optimize CPU usage.
 
----
-
 ### Rendering API
 
 **Vulkan vs OpenGL ES**: Test both APIs on your target device. Vulkan typically offers better performance but may not be supported universally.
-
----
 
 ### Culling
 
