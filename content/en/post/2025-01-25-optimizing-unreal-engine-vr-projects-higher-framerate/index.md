@@ -1,5 +1,5 @@
 +++
-title = "Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest, FFR, ETFR, NVIDIA DLSS, AMD FSR, and Intel XeSS Tips Included!)"
+title = "Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest, HTC VIVE, FFR, ETFR, NVIDIA DLSS, AMD FSR, and Intel XeSS Tips Included!)"
 slug = "optimizing-unreal-engine-vr-projects-higher-framerate"
 date = 2025-01-25T10:47:00+01:00
 tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "ETFR", "Frame Generation", "FFR", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Intel", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XeSS", "XR" ]
@@ -288,27 +288,27 @@ __NOTE__: Unreal Engine provides various console commands for inspecting culling
 
 The [Meta XR Unreal Engine Plugin](https://developers.meta.com/horizon/downloads/package/unreal-engine-5-integration/) includes a built-in **Project Setup Tool** to help optimize Unreal Engine projects for VR.
 
-![Meta XR Plugin - Project Setup Tool](metaxr-project-setup-tool.webp "Meta XR Plugin - Project Setup Tool")
+![Meta XR Plugin - Project Setup Tool](meta-xr-plugin-project-setup-tool.webp "Meta XR Plugin - Project Setup Tool")
 
 Once opened, the tool displays all tweakable project settings across multiple tabs, regardless of their optimization status. It categorizes these settings into four sections: **Required Rules**, **Recommended Rules**, **Applied Rules**, and **Ignored Rules**.
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)](metaxr-project-setup-tool-unoptimized-all-quest.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)](meta-xr-plugin-project-setup-tool-unoptimized-all-quest.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - All Quest Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)](metaxr-project-setup-tool-unoptimized-pc-link.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)](meta-xr-plugin-project-setup-tool-unoptimized-pc-link.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - PC Link Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)](metaxr-project-setup-tool-unoptimized-quest-3.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)](meta-xr-plugin-project-setup-tool-unoptimized-quest-3.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest 3 Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)](metaxr-project-setup-tool-unoptimized-quest-pro.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)](meta-xr-plugin-project-setup-tool-unoptimized-quest-pro.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - Quest Pro Tab)")
 
-![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)](metaxr-project-setup-tool-unoptimized-quest-2.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)")
+![Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)](meta-xr-plugin-project-setup-tool-unoptimized-quest-2.webp "Meta XR Plugin - Project Setup Tool (Unoptimized Settings - The Quest 2 Tab)")
 
 You can apply the required or recommended rules individually by clicking the `Apply` button next to each rule, or apply all rules in a section by using the `Apply All` button. Multiple presses of the `Apply All` button may be necessary to ensure all rules are applied. After applying the rules, the tool will prompt you to restart the editor for the changes to take effect.
 
-![Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)](metaxr-project-setup-tool-apply-all-restart-editor-prompt.webp "Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)")
+![Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)](meta-xr-plugin-project-setup-tool-apply-all-restart-editor-prompt.webp "Meta XR Plugin - Project Setup Tool (Apply All and Restart Editor Prompt)")
 
 After restarting, verify that all the rules in the Project Setup Tool across all tabs are applied. Occasionally, some rules may not take effect across the editor restarts, requiring you to repeat the process and restart the editor multiple times to correctly apply the changes.
 
-![Meta XR Plugin - Project Setup Tool (Optimized Settings)](metaxr-project-setup-tool-optimized-settings-applied.webp "Meta XR Plugin - Project Setup Tool (Optimized Settings)")
+![Meta XR Plugin - Project Setup Tool (Optimized Settings)](meta-xr-plugin-project-setup-tool-optimized-settings-applied.webp "Meta XR Plugin - Project Setup Tool (Optimized Settings)")
 
 #### FFR
 
@@ -320,9 +320,169 @@ Devices that support **FFR** include standalone VR headsets like the Meta Quest 
 
 Consider utilizing [Eye-Tracked Foveated Rendering (ETFR)](https://developers.meta.com/horizon/documentation/unreal/unreal-eye-tracked-foveated-rendering/) which is an advanced rendering method that dynamically adjusts the resolution and graphical detail of a scene based on the user's gaze, as detected by eye-tracking technology. The area where the user is looking is rendered at the highest quality, while the rest of the scene is rendered at progressively lower resolutions. By concentrating computational resources on the exact area of focus, ETFR significantly reduces the GPU workload, enabling higher frame rates and improved performance, even for graphically intensive applications. ETFR is particularly beneficial in VR and AR environments, where it enhances realism and immersion while allowing developers to push hardware capabilities further.
 
-![Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation](metaxr-eye-tracked-foveated-rendering-etfr.gif "Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation")
+![Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation](meta-xr-plugin-eye-tracked-foveated-rendering-etfr.gif "Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation")
 
 Devices that support **ETFR** include VR headsets with integrated eye-tracking, such as the Meta Quest Pro, PlayStation VR2, and high-end models like the Varjo Aero and HTC Vive Pro Eye.
+
+### HTC VIVE OpenXR Plugin
+
+Headsets such as the HTC VIVE Focus 3 and Focus Vision feature larger framebuffers, higher eye-buffer resolutions, wider fields of view (FOV), and different refresh rates compared to HMDs like the Meta Quest series. As a result, performance may vary when running the same content across these devices.
+
+#### Setting a Custom Pixel Density
+
+If performance on the Focus 3 or Focus Vision is lower than on the Quest, it is recommended to adjust the **Pixel Density** to approximately `0.8` (or another value suited to your content). This reduces the eye-buffer resolution to match the Quest 2, improving FPS:
+
+![HTC VIVE OpenXR Plugin - Setting a custom pixel density](htc-vive-openxr-plugin-set-pixel-density.webp "HTC VIVE OpenXR Plugin - Setting a custom pixel density")
+
+#### Setting a Lower Refresh Rate
+
+The `ViveOpenXR` plugin provides various Blueprint functions to query supported refresh rates and adjust the current refresh rate according to your requirements:
+
+![HTC VIVE OpenXR Plugin - ViveOpenXR plugin refresh rate Blueprint functions](htc-vive-openxr-plugin-refresh-rate-blueprint-functions.webp "HTC VIVE OpenXR Plugin - ViveOpenXR plugin refresh rate Blueprint functions")
+
+However, before making these adjustments, you must enable the relevant settings by navigating to `Edit > Project Settings > Plugins > Vive OpenXR` and ensuring the `Enable Display Refresh Rate` option is checked. This option enables support for the OpenXR extension `XR_FB_display_refresh_rate`, allowing your application to dynamically adjust the display refresh rate to enhance user experience. Please note that you need to restart the engine after changing this setting for the changes to take effect.
+
+![HTC VIVE OpenXR Plugin - Enable Display Refresh Rate Editor Restart Prompt](htc-vive-openxr-plugin-enable-display-refresh-rate-editor-restart-prompt.webp "HTC VIVE OpenXR Plugin - Enable Display Refresh Rate Editor Restart Prompt")
+
+To query all available display refresh rates, use the Blueprint function `Enumerate Display Refresh Rates`:
+
+![HTC VIVE OpenXR Plugin - Enumerating the available display refresh rates](htc-vive-openxr-plugin-enumerate-display-refresh-rates.webp "HTC VIVE OpenXR Plugin - Enumerating the available display refresh rates")
+
+Currently, most devices return `75.0` and `90.0` Hz as available options.
+
+To change the current display refresh rate, use the Blueprint function `Request Display Refresh Rate`:
+
+![HTC VIVE OpenXR Plugin - Changing the current display refresh rate](htc-vive-openxr-plugin-request-display-refresh-rate.webp "HTC VIVE OpenXR Plugin - Changing the current display refresh rate")
+
+To obtain the current display refresh rate, use the Blueprint function `Get Display Refresh Rate`:
+
+![HTC VIVE OpenXR Plugin - Obtaining the current display refresh rate](htc-vive-openxr-plugin-get-display-refresh-rate.webp "HTC VIVE OpenXR Plugin - Obtaining the current display refresh rate")
+
+If you need additional performance from your HTC VIVE HMD in standalone mode, consider lowering the target refresh rate from `90 Hz` to `75 Hz`. This adjustment can reduce GPU workload and enhance stability while maintaining an acceptable experience.
+
+#### Optimal Rendering Settings
+
+As a last resort, consider adding the following rendering settings to your project's `DefaultEngine.ini` under the `/Script/Engine.RendererSettings` section. Experiment with these settings to achieve your desired performance:
+
+```ini
+[/Script/Engine.RendererSettings]
+r.Mobile.DisableVertexFog=True
+r.Mobile.AllowDitheredLODTransition=False
+r.Mobile.AllowSoftwareOcclusion=False
+r.Mobile.VirtualTextures=False
+r.DiscardUnusedQuality=False
+r.AllowOcclusionQueries=True
+r.MinScreenRadiusForLights=0.030000
+r.MinScreenRadiusForDepthPrepass=0.030000
+r.MinScreenRadiusForCSMDepth=0.010000
+r.PrecomputedVisibilityWarning=False
+r.TextureStreaming=True
+Compat.UseDXT5NormalMaps=False
+r.VirtualTextures=False
+r.VirtualTexturedLightmaps=False
+r.VT.TileSize=128
+r.VT.TileBorderSize=4
+r.vt.FeedbackFactor=16
+r.VT.EnableCompressZlib=True
+r.VT.EnableCompressCrunch=False
+r.ClearCoatNormal=False
+r.ReflectionCaptureResolution=128
+r.ReflectionEnvironmentLightmapMixBasedOnRoughness=True
+r.ForwardShading=True
+r.VertexFoggingForOpaque=True
+r.AllowStaticLighting=True
+r.NormalMapsForStaticLighting=False
+r.GenerateMeshDistanceFields=False
+r.DistanceFieldBuild.EightBit=False
+r.GenerateLandscapeGIData=False
+r.DistanceFieldBuild.Compress=False
+r.TessellationAdaptivePixelsPerTriangle=48.000000
+r.SeparateTranslucency=True
+r.TranslucentSortPolicy=0
+TranslucentSortAxis=(X=0.000000,Y=-1.000000,Z=0.000000)
+r.CustomDepth=1
+r.CustomDepthTemporalAAJitter=True
+r.PostProcessing.PropagateAlpha=2
+r.DefaultFeature.Bloom=False
+r.DefaultFeature.AmbientOcclusion=False
+r.DefaultFeature.AmbientOcclusionStaticFraction=True
+r.DefaultFeature.AutoExposure=False
+r.DefaultFeature.AutoExposure.Method=0
+r.DefaultFeature.AutoExposure.Bias=1.000000
+r.DefaultFeature.AutoExposure.ExtendDefaultLuminanceRange=True
+r.EyeAdaptation.EditorOnly=False
+r.DefaultFeature.MotionBlur=False
+r.DefaultFeature.LensFlare=False
+r.TemporalAA.Upsampling=False
+r.SSGI.Enable=False
+r.AntiAliasingMethod=3
+r.DefaultFeature.LightUnits=1
+r.DefaultBackBufferPixelFormat=4
+r.Shadow.UnbuiltPreviewInGame=True
+r.StencilForLODDither=False
+r.EarlyZPass=3
+r.EarlyZPassOnlyMaterialMasking=False
+r.DBuffer=True
+r.ClearSceneMethod=1
+r.VelocityOutputPass=0
+r.Velocity.EnableVertexDeformation=0
+r.SelectiveBasePassOutputs=False
+bDefaultParticleCutouts=False
+fx.GPUSimulationTextureSizeX=1024
+fx.GPUSimulationTextureSizeY=1024
+r.AllowGlobalClipPlane=False
+r.GBufferFormat=1
+r.MorphTarget.Mode=True
+r.GPUCrashDebugging=False
+vr.InstancedStereo=True
+r.MobileHDR=False
+vr.MobileMultiView=True
+r.Mobile.UseHWsRGBEncoding=True
+vr.RoundRobinOcclusion=False
+vr.ODSCapture=False
+r.MeshStreaming=False
+r.WireframeCullThreshold=5.000000
+r.RayTracing=False
+r.RayTracing.UseTextureLod=False
+r.SupportStationarySkylight=True
+r.SupportLowQualityLightmaps=True
+r.SupportPointLightWholeSceneShadows=True
+r.SupportAtmosphericFog=True
+r.SupportSkyAtmosphere=True
+r.SupportSkyAtmosphereAffectsHeightFog=False
+r.SkinCache.CompileShaders=False
+r.SkinCache.DefaultBehavior=1
+r.SkinCache.SceneMemoryLimitInMB=128.000000
+r.Mobile.EnableStaticAndCSMShadowReceivers=True
+r.Mobile.EnableMovableLightCSMShaderCulling=True
+r.Mobile.AllowDistanceFieldShadows=True
+r.Mobile.AllowMovableDirectionalLights=True
+r.MobileNumDynamicPointLights=4
+r.MobileDynamicPointLightsUseStaticBranch=True
+r.Mobile.EnableMovableSpotlights=False
+r.Mobile.EnableMovableSpotlightsShadow=False
+r.GPUSkin.Support16BitBoneIndex=False
+r.GPUSkin.Limit2BoneInfluences=False
+r.SupportDepthOnlyIndexBuffers=True
+r.SupportReversedIndexBuffers=True
+r.LightPropagationVolume=False
+r.Mobile.AmbientOcclusion=False
+r.GPUSkin.UnlimitedBoneInfluences=False
+r.GPUSkin.UnlimitedBoneInfluencesThreshold=8
+r.Mobile.PlanarReflectionMode=0
+bStreamSkeletalMeshLODs=(Default=False,PerPlatform=())
+bDiscardSkeletalMeshOptionalLODs=(Default=False,PerPlatform=())
+VisualizeCalibrationColorMaterialPath=None
+VisualizeCalibrationCustomMaterialPath=None
+VisualizeCalibrationGrayscaleMaterialPath=None
+r.Mobile.AntiAliasing=3
+r.Mobile.FloatPrecisionMode=2
+r.OpenGL.ForceDXC=0
+r.DynamicGlobalIlluminationMethod=1
+r.ReflectionMethod=1
+r.Shadow.Virtual.Enable=0
+r.Lumen.TranslucencyReflections.FrontLayer.EnableForProject=False
+```
 
 ### Game User Settings and Engine Scalability Settings
 
