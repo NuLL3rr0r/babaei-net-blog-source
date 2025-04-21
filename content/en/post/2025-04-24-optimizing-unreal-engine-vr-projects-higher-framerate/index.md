@@ -336,7 +336,7 @@ If performance on the Focus 3 or Focus Vision is lower than on the Quest, it is 
 
 #### Setting a Lower Refresh Rate
 
-The `ViveOpenXR` plugin provides various Blueprint functions to query supported refresh rates and adjust the current refresh rate according to your requirements:
+The [HTC Vive OpenXR Unreal Engine Plugin](https://developer.vive.com/resources/openxr/unreal/unreal-tutorials/viveppenxrplugininstallation/) provides various Blueprint functions to query supported refresh rates and adjust the current refresh rate according to your requirements:
 
 ![HTC VIVE OpenXR Plugin - ViveOpenXR plugin refresh rate Blueprint functions](htc-vive-openxr-plugin-refresh-rate-blueprint-functions.webp "HTC VIVE OpenXR Plugin - ViveOpenXR plugin refresh rate Blueprint functions")
 
