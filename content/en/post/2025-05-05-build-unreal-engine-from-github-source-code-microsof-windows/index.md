@@ -16,9 +16,9 @@ Today’s tutorial is all about how to build Unreal Engine `5.6` from source—o
 
 Now, some of you patient folks out there might be thinking:
 “Why bother? Can’t I just wait for the release?”
-Fair question. But here’s the deal—I work for a company that publishes Unreal Engine plugins on the Fab Store. And they want their plugin ready on day zero when the new engine drops. The catch? Epic only allows you to submit plugins once the final version is officially released. So to stay ahead of the curve, we grab the source early, build it, test it, and make sure everything works before launch day.
+Fair question. But here’s the deal—I work for a company that publishes Unreal Engine plugins on the Fab Store. And they want their plugin ready on day zero when the new engine drops. The catch? Epic only allows you to submit plugins once the final version is officially released. So to stay ahead of the curve, we grab the source early, build it, test it, and make sure everything works before the launch day.
 
-And hey, if you’re on Linux—don’t worry—I’ve got a separate video coming soon. Just not today. Because building on Linux is like dating in your forties… not complicated, exactly—just different.
+And hey, if you’re a Linux user—don’t worry—I’ve got a separate video coming soon. Just not today. Because building on Linux is like dating in your forties… not complicated, exactly—just different.
 
 We’ll be diving into more Unreal Engine `5.6` goodness over the coming months, so buckle up, hit that subscribe button, and let’s get nerdy.
 
