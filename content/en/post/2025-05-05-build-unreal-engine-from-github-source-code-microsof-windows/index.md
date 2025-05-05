@@ -2,7 +2,7 @@
 title = "Building Unreal Engine 5.6 From the GitHub Source Code on Microsoft Windows"
 slug = "build-unreal-engine-from-github-source-code-microsof-windows"
 date = 2025-05-05T15:38:00+02:00
-tags = [ "Android", "Epic Games", "Game Development", "Game Programming", "gamedev", "Git", "GitHub", "Linux", "MSVC", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Visual Studio", "Windows" ]
+tags = [ "Android", "Epic Games", "Game Development", "Game Programming", "gamedev", "Git", "GitHub", "Java", "JDK", "Linux", "MSVC", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Visual Studio", "Windows" ]
 toc = true
 draft = true
 +++
