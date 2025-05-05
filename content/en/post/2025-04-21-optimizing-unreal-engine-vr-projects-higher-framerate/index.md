@@ -7,7 +7,7 @@ toc = true
 draft = true
 +++
 
-{{< figure src="/blog/optimizing-unreal-engine-vr-projects-higher-framerate/optimizing-unreal-engine-vr-projects-higher-framerate.webp" alt="Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest Tips Included!)" caption="Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest Tips Included!)" >}}
+{{< figure src="/blog/optimizing-unreal-engine-vr-projects-higher-framerate/optimizing-unreal-engine-vr-projects-higher-framerate.webp" alt="Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest, HTC VIVE, FFR, ETFR, NVIDIA DLSS, AMD FSR, and Intel XeSS Tips Included!)" caption="Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest, HTC VIVE, FFR, ETFR, NVIDIA DLSS, AMD FSR, and Intel XeSS Tips Included!)" >}}
 
 Ever felt like your VR project is running so slow it could be a snail's day job? 🐌 Or maybe your framerate is auditioning for a role in The Matrix—dodging bullets, but also every performance standard? 😅
 
