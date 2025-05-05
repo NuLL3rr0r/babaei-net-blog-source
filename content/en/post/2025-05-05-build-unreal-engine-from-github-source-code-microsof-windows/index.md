@@ -35,7 +35,7 @@ We’ll be diving into more Unreal Engine `5.6` goodness over the coming months,
 - **Unreal Engine has a voracious appetite for storage space**—the bare minimum requirement for building the current version of the engine from source is, more or less, **around `500 GB` of free space**. For a smoother experience and room to grow, I strongly recommend **`1 TB` or more of fast NVMe storage**.
 - [Git Bash for Windows](https://git-scm.com/downloads).
 - [Microsoft Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/).
-- Optional: Android Studio, Android SDK, Android NDK, and Java Development Kit. [See below](#build-with-android-support-optional).
+- Optional: Android Studio, Android SDK, Android NDK, and Java Development Kit (JDK). [See below](#build-with-android-support-optional).
 
 ## Microsot Visual Studio Installer Configuration File
 
