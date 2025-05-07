@@ -1,10 +1,9 @@
 +++
 title = "Building Unreal Engine 5.6 From the GitHub Source Code on Microsoft Windows"
 slug = "build-unreal-engine-from-github-source-code-microsof-windows"
-date = 2025-05-05T15:38:00+02:00
+date = 2025-05-05T23:00:00+02:00
 tags = [ "Android", "Epic Games", "Game Development", "Game Programming", "gamedev", "Git", "GitHub", "Java", "JDK", "Linux", "MSVC", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Visual Studio", "Windows" ]
 toc = true
-draft = true
 +++
 
 {{< figure src="/blog/build-unreal-engine-from-github-source-code-microsof-windows/build-unreal-engine-from-github-source-code-microsof-windows.webp" alt="Building Unreal Engine 5.6 from the GitHub Source Code" caption="Building Unreal Engine 5.6 from the GitHub Source Code" >}}
@@ -26,7 +25,7 @@ We’ll be diving into more Unreal Engine `5.6` goodness over the coming months,
 
 ## Video Tutorial
 
-{{< youtube  >}}
+{{< youtube wYDe0_A0dK4 >}}
 
 <br/>
 
