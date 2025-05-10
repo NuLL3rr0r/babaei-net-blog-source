@@ -2,7 +2,7 @@
 title = "Rust Devs Think We’re Hopeless; Let’s Prove Them Wrong (with C++ Memory Leaks)!"
 slug = "rust-devs-think-we-are-hopeless-lets-prove-them-wrong-with-cpp-memory-leaks"
 date = 2025-05-10T15:26:00+02:00
-tags = [ "Borrow Checker", "C", "C++", "CPP", "Cybersecurity", "Debugging", "Memory Leaks", "MSVC", "Programming", "Rust", "Security", "System Programming", "VC++", "Visual C++", "Visual Stuio", "Valgrind", "Windows" ]
+tags = [ "Borrow Checker", "C", "C++", "CPP", "Cybersecurity", "Debugging", "Memory Leaks", "MSVC", "Programming", "Rust", "Security", "System Programming", "VC++", "Visual C++", "Visual Stuio", "Valgrind", "Vulnerability", "Windows" ]
 toc = true
 +++
 
