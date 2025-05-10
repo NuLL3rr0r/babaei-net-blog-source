@@ -2,9 +2,8 @@
 title = "Rust Devs Think We’re Hopeless; Let’s Prove Them Wrong (with C++ Memory Leaks)!"
 slug = "rust-devs-think-we-are-hopeless-lets-prove-them-wrong-with-cpp-memory-leaks"
 date = 2025-05-10T15:26:00+02:00
-tags = [ "Borrow Checker", "C", "C++", "CPP", "Cybersecurity", "Debugging", "Memory Leaks", "MSVC", "Rust", "Security", "VC++", "Visual C++", "Visual Stuio", "Valgrind", "Windows" ]
+tags = [ "Borrow Checker", "C", "C++", "CPP", "Cybersecurity", "Debugging", "Memory Leaks", "MSVC", "Programming", "Rust", "Security", "System Programming", "VC++", "Visual C++", "Visual Stuio", "Valgrind", "Windows" ]
 toc = true
-draft = true
 +++
 
 {{< figure src="/blog/rust-devs-think-we-are-hopeless-lets-prove-them-wrong-with-cpp-memory-leaks/rust-devs-think-we-are-hopeless-lets-prove-them-wrong-with-cpp-memory-leaks.webp" alt="Rust Devs Think We’re Hopeless; Let’s Prove Them Wrong (with C++ Memory Leaks)!" caption="Rust Devs Think We’re Hopeless; Let’s Prove Them Wrong (with C++ Memory Leaks)!" >}}
@@ -21,7 +20,7 @@ If that sounds unreasonably dangerous — and incredibly fun — smash that subs
 
 ## Video Tutorial
 
-{{< youtube  >}}
+{{< youtube mmUAdCzrdmQ >}}
 
 <br/>
 
@@ -267,7 +266,7 @@ It adds a magic camera (`<crtdbg.h>`) that watches where we drop bricks. And whe
 - `#include <crtdbg.h>`: Gives access to Microsoft's debug heap and leak-checking functions (only available on Windows with MSVC in debug builds).
 - The `#define new DEBUG_NEW` trick: Replaces every usage of `new` with a debug version that logs the file and line where the allocation happened. This makes it possible to pinpoint **exactly where a leak originated**.
 
-**tl;dr;** `DEBUG_NEW` and `_CRTDBG_MAP_ALLOC` tracks `new`/`malloc` calls with file + line info.
+**tl;dr;** `DEBUG_NEW` and `_CRTDBG_MAP_ALLOC` tracks `new`/`malloc` calls with file and line information.
 
 ---
 
@@ -318,4 +317,4 @@ It dumps out a report saying, “Hey! You left a brick at line `42`! And another
 - This is **optional** if you already enabled `_CRTDBG_LEAK_CHECK_DF` — the CRT will dump leaks automatically.
 - But calling it manually gives you control over when the leak dump happens (e.g., before global/static destruction).
 
-**tl;dr;** `_CrtDumpMemoryLeaks()` manually prints out leak info with pointer and size.
+**tl;dr;** `_CrtDumpMemoryLeaks()` manually prints out leak information with pointer and size.
