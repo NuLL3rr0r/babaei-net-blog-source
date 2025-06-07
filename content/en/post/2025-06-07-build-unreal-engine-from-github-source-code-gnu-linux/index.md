@@ -336,7 +336,17 @@ It seems this does not occur on every distribution and is related to Intel Impli
 
 This one is easy to solve:
 
-1. Do not interrupt the build and let it go on until it fails.
+1. Do not interrupt the build and let it go on until it fails:
+
+{{< highlight plain >}}
+Trace written to file /opt/UnrealEngine/Engine/Programs/UnrealBuildTool/Log.uba with size 645.2kb
+Total time in Unreal Build Accelerator local executor: 1675.70 seconds
+
+Result: Failed (OtherCompilationError)
+Total execution time: 1683.45 seconds
+make: *** [Makefile:9097: UnrealEditor-Linux-Development] Error 6
+{{< /highlight >}}
+
 2. Once the build stops re-invoke the `make` command and this time it will succeed.
 
 Somehow the ISPC generated headers are not available on the first invokation of the `make` command, possibly due to a timing issue in Unreal Header Tool or Unreal Build Tool, while it's available when the `make` is invoked the second time. Hence, the build succeeds on the second attempt.
