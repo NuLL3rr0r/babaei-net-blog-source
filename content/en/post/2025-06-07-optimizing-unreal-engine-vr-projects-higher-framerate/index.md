@@ -73,9 +73,7 @@ The default refresh rate is set at `72 Hz` when streaming from a PC to Meta Ques
 
 Optimizing performance for mobile platforms requires careful attention to specific settings. Here are some essential adjustments to maximize performance and efficiency for mobile devices.
 
-### Generic Rendering Settings
-
-**Forward Shading**: Enable Forward Shading for improved efficiency. It’s optimized for mobile platforms.
+The good news is that Unreal Engine 5 has continued to evolve rapidly in terms of mobile rendering, VR support, and performance optimization, with each minor release bringing noticable performance improvements, especially in the two latest releases, `5.5` and `5.6`, which you'll benefit from for free.
 
 {{< blockquote author="Unreal Engine 5.5 Release Notes - Mobile Renderer" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5.5-release-notes#mobilerenderer" >}}
 **Mobile Renderer**
@@ -123,6 +121,80 @@ The Mobile Forward renderer is receiving feature updates and performance improve
 
 - Fix depth prepass disabling MSAA.
 {{< /blockquote >}}
+
+
+{{< blockquote author="Unreal Engine 5.6 Release Notes - Mobile Rendering" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5-6-release-notes#mobilerendering" >}}
+**Mobile Rendering**
+
+We improved the Mobile Renderer performance and feature set with Unreal Engine 5.6, notably:
+
+- We added support for skylight real time capture.
+- GPUScene received optimizations and we added skinned mesh support.
+- We added the Experimental Multipass deferred mode (cvar) for Android Vulkan, providing for shadow and screenspace techniques without depth prepass.
+- We added the Experimental Distance Field Ambient Occlusion (cvar).
+{{< /blockquote >}}
+
+{{< blockquote author="Unreal Engine 5.6 Release Notes - Mobile Rendering" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5-6-release-notes#mobilerendering-2" >}}
+**Mobile Rendering**
+
+New:
+
+- Add ReplaceTonemapper BlendLocation to the Mobile PostProcess
+- Enable LightGrid Debug for Mobile Keep Light Grid Debug disabled for Preview and D3D ES31 because of FXC restriction
+- Use R8G8B8_UNORM where supported When r.Mobile.SceneColorFormat=3 use R8G8B8_UNORM if supported and alpha is not needed
+- For everyone else use R8G8B8_UNORM in tonemapping if supported and alpha is not needed
+- Make ASTC_RGB_HDR on IOS/Android default to ASTC_RGB if ASTC HDR is not supported instead of RGBA16F
+- Mobile/Desktop PostFX parity. PostProcessMaterialAfterTonemapping after FXAA. Drive-by cleanup of unused bLastPass.
+- Add Bloom to ReplaceTonemapper Mobile
+- Allow some ISceneViewExtension postprocess delegates to extend mobile postprocessing
+- Mobile DFAO implementation Mobile Deferred MultiPass has its own DFAO generation renderpass, samples the DFAO texture and composites it with other AO like SSAO Mobile Forward and Deferred Single Pass will modulate the DFAO result into the SSAO texture and sample it.
+
+Bug Fix:
+
+- Don't apply AerialPerspective to Translucent Materials on Mobile when r.Mobile.PixelFogQuality is 0
+- Force FullPrecision for Mobile DOF shaders
+- Skip the last transition for memory less texture.
+- Wrong type used in Velocity pass shaders on Opengl Windows
+- Fix hair (voxel) shadow causing incorrect shadow causing incorrect light transmission from thin diffuse surface.
+- Fix metallic properties not making it into the shader path for mobile materials. The conditions around IsNonmetal are invalid as they only consider input connections but not constant scalar values. In either case, the constant value could be modified at runtime. Moreover, the optimization from this path was limited to a lerp and a multiplication operation.
+- Fixed strange stripes on the screen when using gtao on mobile.
+- Resolve thread timing issue that was causing invalid Scene texture config. Move TaskDatas.VisibilityTaskData->Finish(); to precede IsMobileSeparateTranslucencyActive calls as it depends on results from TaskDatas.VisibilityTaskData, namely SetupMeshPasses and the collection of DynamicMeshRelevance data.
+- Fixed shader compilation for SM5 on tvOS
+
+Deprecated:
+
+- Remove the mobile PixelProjectReflection because we have the mobile SSR.
+
+**Mobile Lighting**
+
+New:
+
+- Added a Map Check warning when static lights are present in the scene but disabled due to Lumen.
+
+Bug Fix:
+
+- Fix OIT crash on platform not supporting R16uint format for UAV write.
+
+**Mobile Materials**
+
+New:
+
+- Disable normal output for GBuffer decals on mobile deferred.
+{{< /blockquote >}}
+
+{{< blockquote author="Unreal Engine 5.6 Release Notes - Mobile Rendering" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5-6-release-notes#mobilerendering-3" >}}
+**Mobile Rendering**
+
+**Mobile Materials**
+
+API Change:
+
+1. Mobile deferred uses octahedral encoding for normals which can't blend.
+{{< /blockquote >}}
+
+### Generic Rendering Settings
+
+**Forward Shading**: Enable Forward Shading for improved efficiency. It’s optimized for mobile platforms.
 
 ![Standalone Mode (Mobile) - Rendering Settings - Forward Shading](project-rendering-settings-forward-renderer-shading.webp "Standalone Mode (Mobile) - Rendering Settings - Forward Shading")
 
