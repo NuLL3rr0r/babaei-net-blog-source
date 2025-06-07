@@ -77,6 +77,8 @@ The good news is that Unreal Engine 5 has continued to evolve rapidly in terms o
 
 ![Unreal Engine 5 - Mobile Rendering](unreal-engine-mobile-rendering.gif "Unreal Engine 5 - Mobile Rendering")
 
+<br />
+
 {{< blockquote author="Unreal Engine 5.5 Release Notes - Mobile Renderer" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-5.5-release-notes#mobilerenderer" >}}
 **Mobile Renderer**
 
