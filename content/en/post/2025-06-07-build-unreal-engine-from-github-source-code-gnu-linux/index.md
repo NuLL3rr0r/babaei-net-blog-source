@@ -349,6 +349,14 @@ make: *** [Makefile:9097: UnrealEditor-Linux-Development] Error 6
 
 2. Once the build stops re-invoke the `make` command and this time it will succeed.
 
+{{< highlight plain >}}
+Trace written to file /opt/UnrealEngine/Engine/Programs/UnrealBuildTool/Log.uba with size 54.8kb
+Total time in Unreal Build Accelerator local executor: 142.17 seconds
+
+Result: Succeeded
+Total execution time: 145.17 seconds
+{{< /highlight >}}
+
 Somehow the ISPC generated headers are not available on the first invokation of the `make` command, possibly due to a timing issue in Unreal Header Tool or Unreal Build Tool, while it's available when the `make` is invoked the second time. Hence, the build succeeds on the second attempt.
 
 As an alternative workaround, disabling `bCompileISPC` UBT option by adding the following inside your Game and Editor’s `.Target.cs` file might work:
