@@ -382,6 +382,6 @@ To launch the Unreal Editor, navigate to the Engine’s source directory and run
 $ ./Engine/Binaries/Linux/UnrealEditor
 {{< /highlight >}}
 
-On your first run, the editor will need to compile a large number of shaders, which can take some time. It may take a while to get past the splash screen before the editor window appears.
+On your first run, the editor will need to compile a large number of shaders, which can take some time. It may take a while to get past the splash screen before the Unreal Project Browser window appears. Subsequently, whether you create a new project or open an existing one, the engine may need to compile even more shaders.
 
 Grab a coffee and give yourself a well-earned pat on the back — you’ve just built Unreal Engine from source on GNU/Linux!
