@@ -373,3 +373,15 @@ Older versions of UE had a known bug where the `ShaderCompileWorker` binary were
 {{< highlight zsh >}}
 $ make ShaderCompileWorker
 {{< /highlight >}}
+
+## Running Unreal Editor on Linux
+
+To launch the Unreal Editor, navigate to the Engine’s source directory and run:
+
+{{< highlight zsh >}}
+$ ./Engine/Binaries/Linux/UnrealEditor
+{{< /highlight >}}
+
+On your first run, the editor will need to compile a large number of shaders, which can take some time. It may take a while to get past the splash screen before the editor window appears.
+
+Grab a coffee and give yourself a well-earned pat on the back — you’ve just built Unreal Engine from source on GNU/Linux!
