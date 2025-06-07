@@ -312,7 +312,7 @@ If you need to cleanup all binaries and rebuild everything:
 make ARGS="-clean"
 {{< /highlight >}}
 
-Altenatively you can, which also cleans up the generated project files and Git dependencies (`WARNING`: destructive Git command!). You need to re-run the `Setup.sh` and `GenerateProjectFiles.sh` scripts again.
+Altenatively you can, which also cleans up the generated project files and Git dependencies (`WARNING`: destructive Git command). You need to re-run the `Setup.sh` and `GenerateProjectFiles.sh` scripts again.
 
 {{< highlight zsh >}}
 # WARNING: destructive Git command!
