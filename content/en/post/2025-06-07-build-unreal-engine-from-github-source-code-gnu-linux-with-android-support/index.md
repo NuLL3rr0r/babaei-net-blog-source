@@ -1,12 +1,12 @@
 +++
-title = "Building Unreal Engine 5.6 From the GitHub Source Code on GNU/Linux"
-slug = "build-unreal-engine-from-github-source-code-gnu-linux"
+title = "Building Unreal Engine 5.6 From the GitHub Source Code on GNU/Linux With Android Support"
+slug = "build-unreal-engine-from-github-source-code-gnu-linux-with-android-support"
 date = 2025-06-07T07:49:00+02:00
-tags = [ "Android", "Epic Games", "Game Development", "Game Programming", "gamedev", "Git", "GitHub", "Java", "JDK", "Linux", "MSVC", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Visual Studio", "Windows" ]
+tags = [ "Android", "Epic Games", "Game Development", "Game Programming", "gamedev", "Git", "GitHub", "HTC VIVE", "Java", "JDK", "Linux", "Meta Quest", "Oculus", "Oculus Quest", "MSVC", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Virtual Reality", "Visual Studio", "VR", "Windows" ]
 toc = true
 +++
 
-{{< figure src="/blog/build-unreal-engine-from-github-source-code-gnu-linux/build-unreal-engine-from-github-source-code-gnu-linux.webp" alt="Building Unreal Engine 5.6 from the GitHub Source Code" caption="Building Unreal Engine 5.6 from the GitHub Source Code" >}}
+{{< figure src="/blog/build-unreal-engine-from-github-source-code-gnu-linux-with-android-support/build-unreal-engine-from-github-source-code-gnu-linux-with-android-support.webp" alt="Building Unreal Engine 5.6 from the GitHub Source Code With Android Support" caption="Building Unreal Engine 5.6 from the GitHub Source Code With Android Support" >}}
 
 Alright, I’m back with another video.
 
