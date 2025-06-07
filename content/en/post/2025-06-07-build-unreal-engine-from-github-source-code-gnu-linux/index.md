@@ -321,7 +321,7 @@ $ git clean -dfx && git reset --hard && git checkout .
 
 ### Dealing With Intel Implicit SPMD Program Compiler (ISPC) Errors
 
-Since UE `5.4` release I've been encountering errors like the following when I build Unreal Engine from source on my Gentoo instance:
+Since UE `5.5` release I've been encountering errors like the following when I build Unreal Engine from source on my Gentoo instance:
 
 {{< highlight plain >}}
 [215/4841] Compile Module.Chaos.10.cpp
