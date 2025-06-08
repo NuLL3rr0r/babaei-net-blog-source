@@ -59,6 +59,13 @@ Upon completion, you will receive an email from Epic Games verifying that your G
 
 ## Cloning the Source Code from GitHub
 
+If you'd like to use a password-less login using SSH keys, you can generate a pair of private/public keys using the following command and add the public key as an authentication key on GitHub prior to cloning the Unreal Engine source:
+
+{{< highlight zsh >}}
+$ ssh-keygen -t rsa -b 4096 -C "Mamadou's Linux Machine"
+$ cat ~/.ssh/id_rsa.pub
+{{< /highlight >}}
+
 To clone Unreal Engine 5.6 source code from GitHub:
 
 {{< highlight zsh >}}
