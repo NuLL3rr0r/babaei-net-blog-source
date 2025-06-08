@@ -233,8 +233,8 @@ Since I use ZFS datasets for my Unreal Engine's installation with specific ZFS s
 {{< highlight zsh >}}
 $ zfs list
 
-zroot/opt/UnrealEngine             33.5G   531G  1.59G  /opt/UnrealEngine
-zroot/opt/UnrealEngine/.git        31.9G   531G  31.9G  /opt/UnrealEngine/.git
+zroot/opt/UnrealEngine              192K   569G    96K  /opt/UnrealEngine
+zroot/opt/UnrealEngine/.git          96K   569G    96K  /opt/UnrealEngine/.git
 {{< /highlight >}}
 
 As a result, the above Git command will fail for me. In that case, I can run the following to clone the source code with Git:
