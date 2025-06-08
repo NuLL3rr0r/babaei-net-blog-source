@@ -148,10 +148,10 @@ Now, it's time to setup a temporary download directory:
 
 {{< highlight zsh >}}
 $ mkdir -p /tmp/android-setup
-$ /tmp/android-setup
+$ cd /tmp/android-setup
 {{< /highlight >}}
 
-See [Unreal Engine 5.6 Android Development Requirements](https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.6) and [Unreal Engine 5.6 Android Development Requirements](https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.5) for more information.
+See [Unreal Engine 5.6 Android Development Requirements](https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.6) and [Unreal Engine 5.5 Android Development Requirements](https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.5) for more information.
 
 #### Downloading and Extracting Java Development Kit (JDK)
 
@@ -283,13 +283,13 @@ $ ./Setup.sh
 Once the Git dependencies are downloaded, you can generate the `Makefile` to build Unreal Engine using:
 
 {{< highlight zsh >}}
-$ bash GenerateProjectFiles.sh
+$ ./GenerateProjectFiles.sh
 {{< /highlight >}}
 
 The above command generates all kinds of project files for various IDEs or build systems. If you'd like to generate the project files only for GNU Make, which is much faster than generating all supported project file formats:
 
 {{< highlight zsh >}}
-$ bash GenerateProjectFiles.sh -makefile
+$ ./GenerateProjectFiles.sh -makefile
 {{< /highlight >}}
 
 In order to start the build process and build everything with the `Development` profile, invoke:
