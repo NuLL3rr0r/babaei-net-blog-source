@@ -90,7 +90,7 @@ See [Unreal Engine 5.6 Android Development Requirements](https://dev.epicgames.c
 
 #### Downloading and Extracting Java Development Kit (JDK)
 
-If you are developing using UE `5.6` or newer, grab the latest Java Development Kit (JDK) 21 using the following command, and adjust the `JAVA_HOME` environment variable accordingly (e.g. `export JAVA_HOME="/opt/jdk-21.0.7"`):
+If you are developing using UE `5.6` or newer, grab the latest Java Development Kit (JDK) `21` using the following command, and adjust the `JAVA_HOME` environment variable accordingly (e.g. `export JAVA_HOME="/opt/jdk-21.0.7"`):
 
 {{< highlight zsh >}}
 $ aria2c -s16 -x16 \
@@ -99,7 +99,7 @@ $ sudo tar xvzf jdk-21_linux-x64_bin.tar.gz -C /opt
 $ ls -ahl /opt/
 {{< /highlight >}}
 
-If you are developing using UE `5.5` or earlier versions, grab the latest publicly available Java Development Kit (JDK) 17 using the following command, and adjust the `JAVA_HOME` environment variable accordingly (e.g. `export JAVA_HOME="/opt/jdk-17.0.12"`):
+If you are developing using UE `5.5` or earlier versions, grab the latest publicly available Java Development Kit (JDK) `17` using the following command, and adjust the `JAVA_HOME` environment variable accordingly (e.g. `export JAVA_HOME="/opt/jdk-17.0.12"`):
 
 {{< highlight zsh >}}
 $ aria2c -s16 -x16 \
@@ -139,7 +139,7 @@ To download and extract Android Studio Koala `2024.1.2`, run:
 {{< highlight zsh >}}
 $ aria2c -s16 -x16 \
     https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.2.13/android-studio-2024.1.2.13-linux.tar.gz
-$ tar xvzf android-studio-2024.1.2.13-linux.tar.gz -C "${HOME}"
+$ tar xvzf android-studio-2024.1.2.13-linux.tar.gz -C ~/
 $ ls -ahl ~/android-studio
 {{< /highlight >}}
 
@@ -332,7 +332,7 @@ In file included from /opt/UnrealEngine/Engine/Intermediate/Build/Linux/x64/Unre
 1 error generated.
 {{< /highlight >}}
 
-It seems this does not occur on every distribution and is related to Intel Implicit SPMD Program Compiler.
+It seems this won't occur on every distribution and is related to Intel Implicit SPMD Program Compiler.
 
 This one is easy to solve:
 
