@@ -28,6 +28,64 @@ We’re doing it the Linux way this time: clean, efficient, and just a bit diffe
 - [Git](https://git-scm.com/downloads).
 - Optional: Android Studio, Android SDK, Android NDK, and Java Development Kit (JDK). [See below](#build-with-android-support-optional).
 
+## Accessing Unreal Engine Source Code on GitHub
+
+To get started with building Unreal Engine from source, you'll first need access to the official source code on GitHub. Follow the steps below, as outlined by the Unreal Engine official documentation:
+
+{{< blockquote author="Epic Developer Community" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/downloading-source-code-in-unreal-engine#accessingunrealenginesourcecodeongithub" >}}
+
+### Accessing Unreal Engine Source Code on GitHub
+
+Unreal Engine includes full access to the complete C++ source code, so you can study, customize, extend, and debug the entire Unreal Engine, and complete your project without obstruction.
+
+Our source code repository on GitHub is continually updated as we develop features in our own mainline, so you don’t even have to wait for the next product release to get your hands on the very latest code.
+
+To access Unreal Engine source code, do the following:
+
+1. Navigate to [GitHub](https://github.com/) and sign up for an account.
+
+2. Sign in to [UnrealEngine.com](https://www.unrealengine.com/) with your verified Epic Games account. To open your [account](https://accounts.unrealengine.com/) dashboard, hover over your username, and select Personal from the drop-down menu.
+
+3. With your account dashboard open, select the Connections tab from the sidebar. Select the Accounts tab, and then select the Connect button below the GitHub icon.
+
+4. If you have not already signed the Unreal Engine End User License Agreement, you will need to read through its terms and select the check box, then select Link Account. If you are signed out of your GitHub account, you will be directed to GitHub to sign in after clicking the Link Account button.
+
+5. To complete the OAuth App Authorization process, click the Authorize EpicGames button. You can learn more about this process in [GitHub’s overview on Authorizing OAuth Apps](https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps).
+
+6. GitHub will send an email inviting you to join the `@EpicGames` organization on GitHub. You must select the Join `@EpicGames` button in this email within seven days to complete the GitHub and Epic Games account linking process.
+
+Upon completion, you will receive an email from Epic Games verifying that your GitHub and Epic Games accounts were successfully linked. If you don’t receive a confirmation email, or if your account is experiencing problems, get help from [Customer Service](https://www.epicgames.com/site/customer-service). You are now ready to get started by going to our [GitHub page](https://github.com/EpicGames/UnrealEngine) (login required) to download the full source code.
+{{< /blockquote >}}
+
+## Cloning the Source Code from GitHub
+
+To clone Unreal Engine 5.6 source code from GitHub:
+
+{{< highlight zsh >}}
+$ cd /some/path/
+$ git clone git@github.com:EpicGames/UnrealEngine.git -b 5.6 UnrealEngine
+{{< /highlight >}}
+
+Since I use ZFS datasets for my Unreal Engine's installation with specific ZFS settings and optimizations, I already have my `/opt/UnrealEngine` and `/opt/UnrealEngine/.git` directories in place:
+
+{{< highlight zsh >}}
+$ zfs list
+
+zroot/opt/UnrealEngine              192K   569G    96K  /opt/UnrealEngine
+zroot/opt/UnrealEngine/.git          96K   569G    96K  /opt/UnrealEngine/.git
+{{< /highlight >}}
+
+As a result, the above Git command will fail for me. In that case, I can run the following to clone the source code with Git:
+
+{{< highlight zsh >}}
+$ sudo chown -R mamadou:mamadou /opt/UnrealEngine
+$ cd /opt/UnrealEngine
+$ git init
+$ git remote add -t \* -f origin git@github.com:EpicGames/UnrealEngine.git
+$ git checkout 5.6
+{{< /highlight >}}
+
+
 ## Build with Android Support (Optional)
 
 If you need to add Android support to your custom build of Unreal Engine, make sure to set up the Android build environment before setting up the engine, generating the project file, and starting the build process.
@@ -190,64 +248,7 @@ $ sdkmanager \
     "ndk;25.1.8937393"
 {{< /highlight >}}
 
-## Accessing Unreal Engine Source Code on GitHub
-
-To get started with building Unreal Engine from source, you'll first need access to the official source code on GitHub. Follow the steps below, as outlined by the Unreal Engine official documentation:
-
-{{< blockquote author="Epic Developer Community" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/downloading-source-code-in-unreal-engine#accessingunrealenginesourcecodeongithub" >}}
-
-### Accessing Unreal Engine Source Code on GitHub
-
-Unreal Engine includes full access to the complete C++ source code, so you can study, customize, extend, and debug the entire Unreal Engine, and complete your project without obstruction.
-
-Our source code repository on GitHub is continually updated as we develop features in our own mainline, so you don’t even have to wait for the next product release to get your hands on the very latest code.
-
-To access Unreal Engine source code, do the following:
-
-1. Navigate to [GitHub](https://github.com/) and sign up for an account.
-
-2. Sign in to [UnrealEngine.com](https://www.unrealengine.com/) with your verified Epic Games account. To open your [account](https://accounts.unrealengine.com/) dashboard, hover over your username, and select Personal from the drop-down menu.
-
-3. With your account dashboard open, select the Connections tab from the sidebar. Select the Accounts tab, and then select the Connect button below the GitHub icon.
-
-4. If you have not already signed the Unreal Engine End User License Agreement, you will need to read through its terms and select the check box, then select Link Account. If you are signed out of your GitHub account, you will be directed to GitHub to sign in after clicking the Link Account button.
-
-5. To complete the OAuth App Authorization process, click the Authorize EpicGames button. You can learn more about this process in [GitHub’s overview on Authorizing OAuth Apps](https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/authorizing-oauth-apps).
-
-6. GitHub will send an email inviting you to join the `@EpicGames` organization on GitHub. You must select the Join `@EpicGames` button in this email within seven days to complete the GitHub and Epic Games account linking process.
-
-Upon completion, you will receive an email from Epic Games verifying that your GitHub and Epic Games accounts were successfully linked. If you don’t receive a confirmation email, or if your account is experiencing problems, get help from [Customer Service](https://www.epicgames.com/site/customer-service). You are now ready to get started by going to our [GitHub page](https://github.com/EpicGames/UnrealEngine) (login required) to download the full source code.
-{{< /blockquote >}}
-
-## Cloning the Source Code from GitHub
-
-To clone Unreal Engine 5.6 source code from GitHub:
-
-{{< highlight zsh >}}
-$ cd /some/path/
-$ git clone git@github.com:EpicGames/UnrealEngine.git -b 5.6 UnrealEngine
-{{< /highlight >}}
-
-Since I use ZFS datasets for my Unreal Engine's installation with specific ZFS settings and optimizations, I already have my `/opt/UnrealEngine` and `/opt/UnrealEngine/.git` directories in place:
-
-{{< highlight zsh >}}
-$ zfs list
-
-zroot/opt/UnrealEngine              192K   569G    96K  /opt/UnrealEngine
-zroot/opt/UnrealEngine/.git          96K   569G    96K  /opt/UnrealEngine/.git
-{{< /highlight >}}
-
-As a result, the above Git command will fail for me. In that case, I can run the following to clone the source code with Git:
-
-{{< highlight zsh >}}
-$ sudo chown -R mamadou:mamadou /opt/UnrealEngine
-$ cd /opt/UnrealEngine
-$ git init
-$ git remote add -t \* -f origin git@github.com:EpicGames/UnrealEngine.git
-$ git checkout 5.6
-{{< /highlight >}}
-
-## Ensuring a Healthy Android SDK Installation
+### Ensuring a Healthy Android SDK Installation
 
 To verify if your Android SDK installation is healthy and working properly:
 
