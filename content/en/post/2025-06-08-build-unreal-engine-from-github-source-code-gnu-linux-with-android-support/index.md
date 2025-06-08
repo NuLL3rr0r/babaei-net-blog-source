@@ -1,7 +1,7 @@
 +++
 title = "Building Unreal Engine 5.6 From the GitHub Source Code on GNU/Linux With Android Support"
 slug = "build-unreal-engine-from-github-source-code-gnu-linux-with-android-support"
-date = 2025-06-07T07:49:00+02:00
+date = 2025-06-08T10:07:00+02:00
 tags = [ "Android", "Clang", "Clang/LLVM", "Epic Games", "Epic Native Toolchain", "Game Development", "Game Programming", "gamedev", "Git", "GitHub", "GNU", "HTC VIVE", "Intel", "Intel Compiler", "Java", "JDK", "Linux", "LLVM", "Meta Quest", "Oculus", "Oculus Quest", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Virtual Reality", "Visual Studio", "VR", "Windows" ]
 toc = true
 +++
@@ -40,7 +40,7 @@ To do so, [follow this tutorial](/blog/deploy-unreal-engine-projects-android-met
 
 ### Quick and Dirty Unreal Engine Android Prerequisites Setup on GNU/Linux
 
-First, setup the required environment variables. Here's are example environment variables to setup Unreal Engine 5.6 for Android development:
+First, set up the required environment variables. Here are example environment variables to setup Unreal Engine 5.6 for Android development:
 
 {{< highlight zsh >}}
 # Unreal Engine Android Development
@@ -56,7 +56,7 @@ export PATH="${NDK_ROOT}:${PATH}"
 export PATH="${JAVA_HOME}/bin:${PATH}"
 {{< /highlight >}}
 
-You can export these to the current shell, or add them to your shell's configuration (or startup) file (e.g., `.zshrc`, `.bashrc`, etc.) to ensure they persist across reboots.
+You can export these to the current shell session, or add them to your shell's configuration (or startup) file (e.g., `.zshrc`, `.bashrc`, etc.) to ensure they persist across reboots.
 
 You can force the current shell to reload your shell configuration file using `source ~/.your-shell-configuration-file`. In my case:
 
@@ -69,7 +69,7 @@ Furthermore, some shells such as ZSH require you to run the `rehash` command in 
 $ rehash
 {{< /highlight >}}
 
-To verify whether our environment variables are in effects or not, we could either use `echo` or a compination of `env` and `grep` commands:
+To verify whether our environment variables are in effect or not, we could either use `echo` or a combination of `env` and `grep` commands:
 
 {{< highlight zsh >}}
 $ env | grep ANDROID_HOME
@@ -108,7 +108,7 @@ $ sudo tar xvzf jdk-17.0.12_linux-x64_bin.tar.gz -C /opt
 $ ls -ahl /opt/
 {{< /highlight >}}
 
-Since JDK `17.0.12` is the latest publicly JDK `17` available that does not require a sign in on Oracle's webiste, if you need a newer version you can grab it from [this repository](https://github.com/adoptium/temurin17-binaries). Adjust the `JAVA_HOME` environment variable accordingly (e.g. `export JAVA_HOME="/opt/jdk-17.0.15+6"`):
+Since JDK `17.0.12` is the latest publicly JDK `17` available that does not require a sign in on Oracle's website, if you need a newer version you can grab it from [this repository](https://github.com/adoptium/temurin17-binaries). Adjust the `JAVA_HOME` environment variable accordingly (e.g. `export JAVA_HOME="/opt/jdk-17.0.15+6"`):
 
 {{< highlight zsh >}}
 $ aria2c -s16 -x16 \
@@ -159,7 +159,7 @@ After this create the Android home directory:
 $ mkdir -p "${ANDROID_HOME}"
 {{< /highlight >}}
 
-In my case, since I choose `/opt` and I don't have the sufficient privileges to create a directory I need to create the directory as the `root` user and change the owner of the directory to my own user:
+In my case, since I chose `/opt` and I don't have the sufficient privileges to create a directory I need to create the directory as the `root` user and change the owner of the directory to my own user:
 
 {{< highlight zsh >}}
 $ sudo mkdir -p "${ANDROID_HOME}"
@@ -300,7 +300,7 @@ $ make UnrealEditor
 $ make ShaderCompileWorker
 {{< /highlight >}}
 
-Also, you can choose your build profile as well, for example instead of building Unreal Editor using the `Development` profile, one can invoke the following to build Edtior using the `DebugGame` profile:
+Also, you can choose your build profile as well, for example instead of building Unreal Editor using the `Development` profile, one can invoke the following to build Editor using the `DebugGame` profile:
 
 {{< highlight zsh >}}
 $ make UnrealEditor-Linux-DebugGame
@@ -312,7 +312,7 @@ If you need to cleanup all binaries and rebuild everything:
 make ARGS="-clean"
 {{< /highlight >}}
 
-Altenatively you can, which also cleans up the generated project files and Git dependencies (`WARNING`: destructive Git command). You need to re-run the `Setup.sh` and `GenerateProjectFiles.sh` scripts again.
+Alternatively you can, which also cleans up the generated project files and Git dependencies (`WARNING`: destructive Git command). You need to re-run the `Setup.sh` and `GenerateProjectFiles.sh` scripts again.
 
 {{< highlight zsh >}}
 # WARNING: destructive Git command!
@@ -357,7 +357,7 @@ Result: Succeeded
 Total execution time: 145.17 seconds
 {{< /highlight >}}
 
-Somehow the ISPC generated headers are not available on the first invokation of the `make` command, possibly due to a timing issue in Unreal Header Tool or Unreal Build Tool, while it's available when the `make` is invoked the second time. Hence, the build succeeds on the second attempt.
+Somehow the ISPC generated headers are not available on the first invocation of the `make` command, possibly due to a timing issue in Unreal Header Tool or Unreal Build Tool, while it's available when the `make` is invoked the second time. Hence, the build succeeds on the second attempt.
 
 As an alternative workaround, disabling `bCompileISPC` UBT option by adding the following inside your Game and Editor’s `.Target.cs` file might work:
 
@@ -368,7 +368,7 @@ bCompileISPC = false;
 
 ### Shader Compilation Issues and Editor Crash
 
-Older versions of UE had a known bug where the `ShaderCompileWorker` binary were not being built thus causing the Unreal Enditor to crash during the first start up. The workaround was to build that separately once the Unreal Engine build process is done by invoking the following command inside the Unreal Engine's source folder:
+Older versions of UE had a known bug where the `ShaderCompileWorker` binary were not being built thus causing the Unreal Editor to crash during the first start up. The workaround was to build that separately once the Unreal Engine build process is done by invoking the following command inside the Unreal Engine's source directory:
 
 {{< highlight zsh >}}
 $ make ShaderCompileWorker
