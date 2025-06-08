@@ -18,7 +18,7 @@ We’re doing it the Linux way this time: clean, efficient, and just a bit diffe
 
 ## Video Tutorial
 
-{{< youtube  >}}
+{{< youtube eGsg3Ph3QPA >}}
 
 <br/>
 
