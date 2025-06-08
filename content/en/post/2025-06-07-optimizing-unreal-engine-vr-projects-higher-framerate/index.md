@@ -220,7 +220,7 @@ API Change:
 
 ![Standalone Mode (Mobile) - Rendering Settings - Mobile Anti-Aliasing Method](project-rendering-settings-mobile-anti-aliasing-method.webp "Standalone Mode (Mobile) - Rendering Settings - Mobile Anti-Aliasing Method")
 
-**Reflection Capture Resolution**: Lower the resolution (e.g., 128 or 256) to save memory.
+**Reflection Capture Resolution**: Lower the resolution (e.g., `128` or `256`) to save memory.
 
 ![Standalone Mode (Mobile) - Rendering Settings - Reflection Capture Resolution](project-rendering-settings-reflections-reflection-capture-resolution.webp "Standalone Mode (Mobile) - Rendering Settings - Reflection Capture Resolution")
 
@@ -234,17 +234,17 @@ API Change:
 
 ![Standalone Mode (Mobile) - Rendering Settings - Texture Streaming](project-rendering-settings-textures-texture-streaming.webp "Standalone Mode (Mobile) - Rendering Settings - Texture Streaming")
 
-**Texture Quality**: Adjust to Medium or Low, depending on the capabilities of the target device.
+**Texture Quality**: Adjust to `Medium` or `Low`, depending on the capabilities of the target device.
 
-**Texture Compression**: Use **ASTC** compression for Android devices to ensure optimized texture performance.
+**Texture Compression**: Use `ASTC` compression for Android devices to ensure optimized texture performance.
 
 ### Lighting Settings
 
 **Static Lighting**: Use static lighting instead of dynamic lighting to save processing power.
 
-**Lightmap Resolution**: Opt for lower lightmap resolutions (e.g., 32 or 64) to minimize memory usage.
+**Lightmap Resolution**: Opt for lower lightmap resolutions (e.g., `32` or `64`) to minimize memory usage.
 
-**Dynamic Shadows**: Disable or reduce dynamic shadows. If necessary, use Cascaded Shadow Maps (CSM) with reduced resolution and range.
+**Dynamic Shadows**: Disable or reduce dynamic shadows. If necessary, use `Cascaded Shadow Maps (CSM)` with reduced resolution and range.
 
 **Distance Field Shadows/Ambient Occlusion**: Turn these features off as they are resource-intensive.
 
@@ -282,7 +282,7 @@ API Change:
 
 ### Engine Scalability Settings
 
-**Resolution Scale**: Lower the scale (e.g., 70% or 80%) for a balance of quality and performance.
+**Resolution Scale**: Lower the scale (e.g., `70%` or `80%`) for a balance of quality and performance.
 
 **View Distance**: Set to Medium or Low to reduce detail rendered at long distances.
 
