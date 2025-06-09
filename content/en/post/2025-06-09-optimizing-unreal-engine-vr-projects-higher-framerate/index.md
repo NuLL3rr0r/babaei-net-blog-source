@@ -4,7 +4,6 @@ slug = "optimizing-unreal-engine-vr-projects-higher-framerate"
 date = 2025-06-09T14:18:00+02:00
 tags = [ "AMD", "Android", "Blueprint", "DLSS", "Epic Games", "ETFR", "Frame Generation", "FFR", "FSR", "Game Development", "Game Programming", "gamedev", "HTC VIVE", "Intel", "Meta Quest", "NVIDIA", "Oculus", "Oculus Quest", "OpenXR", "Optimization", "PCVR", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Upscaling", "Virtual Reality", "VR", "Windows", "XeSS", "XR" ]
 toc = true
-draft = true
 +++
 
 {{< figure src="/blog/optimizing-unreal-engine-vr-projects-higher-framerate/optimizing-unreal-engine-vr-projects-higher-framerate.webp" alt="Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest, HTC VIVE, FFR, ETFR, NVIDIA DLSS, AMD FSR, and Intel XeSS Tips Included!)" caption="Optimizing Unreal Engine VR Projects for Higher Framerates (Meta Quest, HTC VIVE, FFR, ETFR, NVIDIA DLSS, AMD FSR, and Intel XeSS Tips Included!)" >}}
@@ -19,7 +18,7 @@ So, let’s get started before that snail finishes its coffee break!
 
 ## English Video Tutorials
 
-- The video tutorial:
+{{< youtube 67CZqMrAOns >}}
 
 <br/>
 
