@@ -368,7 +368,7 @@ After restarting, verify that all the rules in the Project Setup Tool across all
 
 Consider utilizing [Fixed Foveated Rendering (FFR)](https://developers.meta.com/horizon/documentation/unreal/unreal-ffr/) which is a rendering technique used in virtual reality (VR) and augmented reality (AR) applications to optimize performance by reducing the graphical detail in the peripheral areas of the display, where the user is less likely to notice a loss in quality. The center of the view, where the user focuses the most, is rendered at full resolution, while the edges are rendered at a lower resolution. FFR is particularly effective in VR to increase frame rates and reduce the computational load on the GPU, enabling smoother experiences on hardware with limited performance capabilities. This technique is "fixed" because the high-resolution focus area does not adapt to where the user is looking.
 
-Devices that support **FFR** include standalone VR headsets like the Meta Quest 2, Meta Quest Pro, and Quest 3, as well as tethered headsets like HTC Vive and Valve Index when paired with compatible GPUs.
+Devices that support **FFR** include standalone VR headsets like the Meta Quest 2, Meta Quest Pro, and Meta Quest 3, as well as tethered headsets like HTC VIVE and Valve Index when paired with compatible GPUs.
 
 #### ETFR
 
@@ -376,7 +376,7 @@ Consider utilizing [Eye-Tracked Foveated Rendering (ETFR)](https://developers.me
 
 ![Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation](meta-xr-plugin-eye-tracked-foveated-rendering-etfr.gif "Meta XR Plugin - Eye-Tracked Foveated Rendering (ETFR) - Credits: Meta XR Documentation")
 
-Devices that support **ETFR** include VR headsets with integrated eye-tracking, such as the Meta Quest Pro, PlayStation VR2, and high-end models like the Varjo Aero and HTC Vive Pro Eye.
+Devices that support **ETFR** include VR headsets with integrated eye-tracking, such as the Meta Quest Pro, PlayStation VR2, and high-end models like the Varjo Aero and HTC VIVE Pro Eye.
 
 ### HTC VIVE OpenXR Plugin
 
@@ -390,11 +390,11 @@ If performance on the Focus 3 or Focus Vision is lower than on the Quest, it is 
 
 #### Setting a Lower Refresh Rate
 
-The [HTC Vive OpenXR Unreal Engine Plugin](https://developer.vive.com/resources/openxr/unreal/unreal-tutorials/viveppenxrplugininstallation/) provides various Blueprint functions to query supported refresh rates and adjust the current refresh rate according to your requirements:
+The [HTC VIVE OpenXR Unreal Engine Plugin](https://developer.VIVE.com/resources/openxr/unreal/unreal-tutorials/VIVEppenxrplugininstallation/) provides various Blueprint functions to query supported refresh rates and adjust the current refresh rate according to your requirements:
 
-![HTC VIVE OpenXR Plugin - ViveOpenXR plugin refresh rate Blueprint functions](htc-vive-openxr-plugin-refresh-rate-blueprint-functions.webp "HTC VIVE OpenXR Plugin - ViveOpenXR plugin refresh rate Blueprint functions")
+![HTC VIVE OpenXR Plugin - VIVEOpenXR plugin refresh rate Blueprint functions](htc-vive-openxr-plugin-refresh-rate-blueprint-functions.webp "HTC VIVE OpenXR Plugin - VIVEOpenXR plugin refresh rate Blueprint functions")
 
-However, before making these adjustments, you must enable the relevant settings by navigating to `Edit > Project Settings > Plugins > Vive OpenXR` and ensuring the `Enable Display Refresh Rate` option is checked. This option enables support for the OpenXR extension `XR_FB_display_refresh_rate`, allowing your application to dynamically adjust the display refresh rate to enhance user experience. Please note that you need to restart the engine after changing this setting for the changes to take effect.
+However, before making these adjustments, you must enable the relevant settings by navigating to `Edit > Project Settings > Plugins > VIVE OpenXR` and ensuring the `Enable Display Refresh Rate` option is checked. This option enables support for the OpenXR extension `XR_FB_display_refresh_rate`, allowing your application to dynamically adjust the display refresh rate to enhance user experience. Please note that you need to restart the engine after changing this setting for the changes to take effect.
 
 ![HTC VIVE OpenXR Plugin - Enable Display Refresh Rate Editor Restart Prompt](htc-vive-openxr-plugin-enable-display-refresh-rate-editor-restart-prompt.webp "HTC VIVE OpenXR Plugin - Enable Display Refresh Rate Editor Restart Prompt")
 
