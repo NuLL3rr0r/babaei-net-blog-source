@@ -14,6 +14,8 @@ If you caught the [last one on building Unreal Engine 5.6 from source on Windows
 
 We’re doing it the Linux way this time: clean, efficient, and just a bit different. Let’s dive in.
 
+**UPDATE [2025/07/04]**: _The original `NDK_ROOT` and `NDKROOT` environment variables values used during the video shoot were misconfigured. That has now been corrected._
+
 <!--more-->
 
 ## Video Tutorial
