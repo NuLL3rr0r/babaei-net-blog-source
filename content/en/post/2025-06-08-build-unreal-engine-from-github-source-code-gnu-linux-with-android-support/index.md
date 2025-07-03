@@ -111,7 +111,7 @@ First, set up the required environment variables. Here are example environment v
 # Unreal Engine Android Development
 export ANDROID_HOME="/opt/android/sdk"
 export JAVA_HOME="/opt/openjdk-bin-21"
-export NDK_ROOT="${ANDROID_HOME}/sdk/ndk/25.1.8937393"
+export NDK_ROOT="${ANDROID_HOME}/ndk/25.1.8937393"
 export NDKROOT="${NDK_ROOT}"
 export STUDIO_PATH="${HOME}/android-studio"
 export STUDIO_SDK_PATH="${ANDROID_HOME}"
