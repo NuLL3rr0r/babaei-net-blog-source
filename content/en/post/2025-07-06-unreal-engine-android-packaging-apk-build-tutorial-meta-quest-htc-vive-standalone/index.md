@@ -54,3 +54,117 @@ You can [follow the detailed steps from the previous tutorial](/blog/deploy-unre
 - [00:08:03 - 00:25:53 Prerequisites (Android Studio)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=483s)
 - [00:25:54 - 00:27:13 Prerequisites (JDK)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=1554s)
 - [00:27:14 - 00:32:47 Prerequisites (SetupAndroid.bat)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=1634s)
+
+## Android Project Settings
+
+### UE 5.6 Android Project Settings
+
+#### UE 5.6 SetupAndroid.bat
+
+{{< codeblock lang="cmd" title="Engine/Extras/Android/SetupAndroid.bat" >}}
+rem hardcoded versions for compatibility with non-Turnkey manual running
+if "%PLATFORMS_VERSION%" == "" SET PLATFORMS_VERSION=android-34
+if "%BUILDTOOLS_VERSION%" == "" SET BUILDTOOLS_VERSION=34.0.0
+if "%CMAKE_VERSION%" == "" SET CMAKE_VERSION=3.22.1
+if "%NDK_VERSION%" == "" SET NDK_VERSION=25.1.8937393
+{{< /codeblock >}}
+
+<br />
+
+#### UE 5.6 Android Development Requirements
+
+{{< blockquote author="Epic Developer Community - UE 5.6 Android Development Requirements - Current SDK Information" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.6" >}}
+```
+⚠️ Since August 31, 2024, Google Play Store requires apps to target Android 14, which requires API level 34. To publish new apps on the Google Play Store, you must update to UE 5.4.4 or newer for target SDK 34 support. Apps built with previous versions of UE will no longer submit successfully. 
+
+For more information, see the Android documentation on Google Play's target API level requirement.
+```
+
+- Current UE Version: 5.6
+- Android Studio Version: Koala 2024.1.2 August 29, 2024
+- Android SDK:
+  - Recommended: SDK 34
+  - Minimum for compilation: SDK 34
+  - Default target SDK for shipping on devices: 34
+  - Minimum install SDK level: 26
+```
+ℹ️ Different stores have their own target SDK minimum requirements, which may differ from that mentioned above.
+```
+- NDK Version:  r25b
+- Build-tools: 34.0.0
+- Java runtime: OpenJDK 21.0.3 2024-04-16
+- AGDE v23.2.91+ required for AGDE debugging. 
+{{< /blockquote >}}
+
+### UE 5.5 Android Project Settings
+
+#### UE 5.5 SetupAndroid.bat
+
+{{< codeblock lang="cmd" title="Engine/Extras/Android/SetupAndroid.bat" >}}
+rem hardcoded versions for compatibility with non-Turnkey manual running
+if "%PLATFORMS_VERSION%" == "" SET PLATFORMS_VERSION=android-34
+if "%BUILDTOOLS_VERSION%" == "" SET BUILDTOOLS_VERSION=34.0.0
+if "%CMAKE_VERSION%" == "" SET CMAKE_VERSION=3.22.1
+if "%NDK_VERSION%" == "" SET NDK_VERSION=25.1.8937393
+{{< /codeblock >}}
+
+<br />
+
+#### UE 5.5 Android Development Requirements
+
+{{< blockquote author="Epic Developer Community - UE 5.5 Android Development Requirements - Current SDK Information" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.5" >}}
+```
+⚠️ After August 31, 2024, Google Play Store requires apps to target Android 14, which requires API level 34. To publish new apps on the Google Play Store after this date, you must update to UE 5.4.4 or newer for target SDK 34 support. Apps built with previous versions of UE will no longer submit successfully. For more information, see the Android documentation on Google Play's target API level requirement.
+```
+
+- Current UE Version: 5.5
+- Android Studio Version: Koala 2024.1.2 August 29, 2024
+- Android SDK:
+  - Recommended: SDK 34
+  - Minimum for compilation: SDK 34
+  - Default target SDK for shipping on devices: 34
+  - Minimum install SDK level: 26
+```
+Different stores have their own target SDK minimum requirements, which may differ from that mentioned above.
+```
+- NDK Version: r25b
+- Build-tools: 34.0.0
+- Java runtime: OpenJDK 17.0.6 2023-01-17
+- AGDE v23.1.82+ required for AGDE debugging.
+{{< /blockquote >}}
+
+### UE 5.4 Android Project Settings
+
+#### UE 5.4 SetupAndroid.bat
+
+{{< codeblock lang="cmd" title="Engine/Extras/Android/SetupAndroid.bat" >}}
+rem hardcoded versions for compatibility with non-Turnkey manual running
+if "%PLATFORMS_VERSION%" == "" SET PLATFORMS_VERSION=android-33
+if "%BUILDTOOLS_VERSION%" == "" SET BUILDTOOLS_VERSION=33.0.1
+if "%CMAKE_VERSION%" == "" SET CMAKE_VERSION=3.22.1
+if "%NDK_VERSION%" == "" SET NDK_VERSION=25.1.8937393
+{{< /codeblock >}}
+
+<br />
+
+#### UE 5.4 Android Development Requirements
+
+{{< blockquote author="Epic Developer Community - UE 5.4 Android Development Requirements - Current SDK Information" link="https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.4" >}}
+```
+⚠️ After August 31, 2024, Google Play Store requires apps to target Android 14, which requires API level 34. To publish new apps on the Google Play Store after this date, you must update to UE 5.4.4 for target SDK 34 support. Apps built with previous versions of UE will no longer submit successfully. For more information, see the Android documentation on Google Play's target API level requirement.
+```
+
+- Current UE Version: 5.4.4
+- Android Studio Version: Flamingo 2022.2.1 Patch 2 May 24, 2023
+- Android SDK:
+  - Recommended: SDK 34
+  - Minimum for compilation: SDK 34
+  - Minimum SDK for shipping on devices: 26
+```
+Different stores have their own target SDK minimum requirements, which may differ from that mentioned above.
+```
+- NDK Version: r25b
+- Build-tools: 34.0.0
+- Java runtime: OpenJDK 17.0.6 2023-01-17
+- AGDE v23.1.82+ required for AGDE debugging.
+{{< /blockquote >}}
