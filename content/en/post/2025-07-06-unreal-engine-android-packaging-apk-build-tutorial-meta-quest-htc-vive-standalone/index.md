@@ -40,12 +40,12 @@ Get the installer's source code on:
 
 This is the [Microsot Visual Studio Installer configuration file](visual-studio-2022.vsconfig) that automatically selects and installs all the required components needed by various versions of Unreal Engine including `5.6`.
 
-# Plugins
+## Plugins
 
 - [Meta XR Unreal Engine 5 Integration Plugin](https://developers.meta.com/horizon/downloads/package/unreal-engine-5-integration/).
 - [HTC VIVE OpenXR Unreal Engine Plugin](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/).
 
-# Manual Android Development Environment Setup
+## Manual Android Development Environment Setup
 
 Prefer to set things up manually instead of using the one-click installer provided in this tutorial? No problem.
 
