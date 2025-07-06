@@ -44,3 +44,13 @@ This is the [Microsot Visual Studio Installer configuration file](visual-studio-
 
 - [Meta XR Unreal Engine 5 Integration Plugin](https://developers.meta.com/horizon/downloads/package/unreal-engine-5-integration/).
 - [HTC VIVE OpenXR Unreal Engine Plugin](https://developer.vive.com/resources/openxr/unreal/unreal-download/latest/).
+
+# Manual Android Development Environment Setup
+
+Prefer to set things up manually instead of using the one-click installer provided in this tutorial? No problem.
+
+You can [follow the detailed steps from the previous tutorial](/blog/deploy-unreal-engine-projects-android-meta-quest-standalone-mode/), which walks through the entire process. The key sections to focus on are:
+
+- [00:08:03 - 00:25:53 Prerequisites (Android Studio)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=483s)
+- [00:25:54 - 00:27:13 Prerequisites (JDK)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=1554s)
+- [00:27:14 - 00:32:47 Prerequisites (SetupAndroid.bat)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=1634s)
