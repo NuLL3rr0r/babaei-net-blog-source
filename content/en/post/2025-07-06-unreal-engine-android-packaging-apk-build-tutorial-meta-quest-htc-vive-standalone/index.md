@@ -35,3 +35,7 @@ Get the installer's source code on:
 
 - [GitHub](https://github.com/NuLL3rr0r/unreal-android-installer)
 - [GitLab](https://gitlab.com/NuLL3rr0r/unreal-android-installer)
+
+## Microsot Visual Studio Installer Configuration File
+
+This is the [Microsot Visual Studio Installer configuration file](visual-studio-2022.vsconfig) that automatically selects and installs all the required components needed by various versions of Unreal Engine including `5.6`.
