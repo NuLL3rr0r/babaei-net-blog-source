@@ -83,7 +83,7 @@ title = "Projects"
             <h2>NHRA Championship Drag Racing: Speed For All</h2>
         </div>
         <div class="trailer">
-        {{< youtube Ee-m7T7xI3Q >}}
+        {{< youtube IGgh54EZEpA >}}
         </div>
         <div class="extra-info">
             <table class="table table-hover">
@@ -154,7 +154,7 @@ title = "Projects"
             <h2>Reminiscence</h2>
         </div>
         <div class="trailer">
-        {{< vimeo 298723067 >}}
+        {{< youtube w7nfGtWAvfI >}}
         </div>
         <div class="extra-info">
             <table class="table table-hover">
@@ -225,7 +225,7 @@ title = "Projects"
             <h2>Resonance</h2>
         </div>
         <div class="trailer">
-        {{< vimeo 175407810 >}}
+        {{< youtube wrl4OjyNEbo >}}
         </div>
         <div class="extra-info">
             <table class="table table-hover">
@@ -309,7 +309,7 @@ title = "Projects"
             <h2>Thrateon</h2>
         </div>
         <div class="trailer">
-        {{< vimeo 175401743 >}}
+        {{< youtube 95WEYwYSRsQ >}}
         </div>
         <div class="extra-info">
             <table class="table table-hover">

@@ -121,7 +121,7 @@ theme = "beautifulhugo"
         simple = false
     [privacy.vimeo]
         disable = false
-        simple = true
+        simple = false
     [privacy.youtube]
         disable = false
         privacyEnhanced = true
