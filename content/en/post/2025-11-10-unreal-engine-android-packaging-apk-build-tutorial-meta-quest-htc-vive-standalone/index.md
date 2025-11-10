@@ -1,7 +1,7 @@
 +++
-title = "Unreal Engine 5.6 Android Packaging & APK Build Tutorial | Meta Quest & HTC VIVE Standalone"
+title = "Unreal Engine 5.7 Android Packaging & APK Build Tutorial | Meta Quest & HTC VIVE Standalone"
 slug = "unreal-engine-android-packaging-apk-build-tutorial-meta-quest-htc-vive-standalone"
-date = 2025-09-06T18:20:00+02:00
+date = 2025-11-10T09:22:00+01:00
 tags = [ "ADB", "Android", "Blueprint", "Epic Games", "Game Development", "Game Programming", "gamedev", "Hand-tracking", "HTC VIVE", "HTC VIVE Focus 3", "HTC VIVE Focus Vision", "HTC VIVE OpenXR Plugin", "HTC VIVE XR Elite", "Java", "JDK", "Meta Quest", "Meta Quest 2", "Meta Quest Pro", "Meta Quest 3", "Meta Quest 3S", "Meta XR Plugin", "Oculus", "Oculus Quest", "Oculus XR", "OpenXR", "PCVR", "Standalone", "UDK", "UE4", "UE5", "Unreal Engine", "UnrealScript", "Virtual Reality", "VR", "Windows", "XR", "XR_EXT_hand_tracking" ]
 toc = "true"
 draft = "true"
@@ -57,9 +57,23 @@ You can [follow the detailed steps from the previous tutorial](/blog/deploy-unre
 
 ## Android Project Settings
 
+### UE 5.7 Android Project Settings
+
+#### UE 5.7 SetupAndroid.bat
+
+{{< codeblock lang="cmd" title="Engine/Extras/Android/SetupAndroid.bat" >}}
+rem hardcoded versions for compatibility with non-Turnkey manual running
+if "%PLATFORMS_VERSION%" == "" SET PLATFORMS_VERSION=android-34
+if "%BUILDTOOLS_VERSION%" == "" SET BUILDTOOLS_VERSION=35.0.1
+if "%CMAKE_VERSION%" == "" SET CMAKE_VERSION=3.22.1
+if "%NDK_VERSION%" == "" SET NDK_VERSION=27.2.12479018
+{{< /codeblock >}}
+
 ### UE 5.6 Android Project Settings
 
 #### UE 5.6 SetupAndroid.bat
+
+Original `5.6.0` `SetupAndroid.bat`:
 
 {{< codeblock lang="cmd" title="Engine/Extras/Android/SetupAndroid.bat" >}}
 rem hardcoded versions for compatibility with non-Turnkey manual running
@@ -67,6 +81,16 @@ if "%PLATFORMS_VERSION%" == "" SET PLATFORMS_VERSION=android-34
 if "%BUILDTOOLS_VERSION%" == "" SET BUILDTOOLS_VERSION=34.0.0
 if "%CMAKE_VERSION%" == "" SET CMAKE_VERSION=3.22.1
 if "%NDK_VERSION%" == "" SET NDK_VERSION=25.1.8937393
+{{< /codeblock >}}
+
+Updated `5.6.1` `SetupAndroid.bat`:
+
+{{< codeblock lang="cmd" title="Engine/Extras/Android/SetupAndroid.bat" >}}
+rem hardcoded versions for compatibility with non-Turnkey manual running
+if "%PLATFORMS_VERSION%" == "" SET PLATFORMS_VERSION=android-34
+if "%BUILDTOOLS_VERSION%" == "" SET BUILDTOOLS_VERSION=35.0.1
+if "%CMAKE_VERSION%" == "" SET CMAKE_VERSION=3.22.1
+if "%NDK_VERSION%" == "" SET NDK_VERSION=27.2.12479018
 {{< /codeblock >}}
 
 <br />
@@ -93,8 +117,10 @@ For more information, see the Android documentation on Google Play's target API 
 - NDK Version:  r25b
 - Build-tools: 34.0.0
 - Java runtime: OpenJDK 21.0.3 2024-04-16
-- AGDE v23.2.91+ required for AGDE debugging. 
+- AGDE v23.2.91+ required for AGDE debugging.
 {{< /blockquote >}}
+
+📌 **Note:** Please note that the official documentation for UE `5.6.x` is outdated, as [this commit, which has been released as part of `5.6.1`](https://github.com/EpicGames/UnrealEngine/commit/1fed1ed38f1684405fec2987fa19efe6760bb49b) has bumped the recommended NDK Version to `27.2.12479018` and Build-tools to `35.0.1`. That's why always it's always the best idea to check the [`Engine/Extras/Android/SetupAndroid.bat`](#ue-56-setupandroidbat) shipped with your engine installation for optimal and correct values.
 
 ### UE 5.5 Android Project Settings
 
