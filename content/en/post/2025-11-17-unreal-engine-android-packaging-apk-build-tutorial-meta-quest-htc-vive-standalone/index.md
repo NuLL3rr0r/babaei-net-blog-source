@@ -7,7 +7,7 @@ toc = "true"
 draft = "true"
 +++
 
-{{< figure src="/blog/unreal-engine-android-packaging-apk-build-tutorial-meta-quest-htc-vive-standalone/unreal-engine-android-packaging-apk-build-tutorial-meta-quest-htc-vive-standalone.webp" alt="Unreal Engine 5.6 Android Packaging & APK Build Tutorial | Meta Quest & HTC VIVE Standalone" caption="Unreal Engine 5.6 Android Packaging & APK Build Tutorial | Meta Quest & HTC VIVE Standalone" >}}
+{{< figure src="/blog/unreal-engine-android-packaging-apk-build-tutorial-meta-quest-htc-vive-standalone/unreal-engine-android-packaging-apk-build-tutorial-meta-quest-htc-vive-standalone.webp" alt="Unreal Engine 5.7 Android Packaging & APK Build Tutorial | Meta Quest & HTC VIVE Standalone" caption="Unreal Engine 5.7 Android Packaging & APK Build Tutorial | Meta Quest & HTC VIVE Standalone" >}}
 
 Let's cut the noise. You want quick, clean, and painless Unreal Engine APK builds and packaging? You're in the right place.
 
@@ -38,7 +38,7 @@ Get the installer's source code on:
 
 ## Microsot Visual Studio Installer Configuration File
 
-This is the [Microsot Visual Studio Installer configuration file](visual-studio-2022.vsconfig) that automatically selects and installs all the required components needed by various versions of Unreal Engine including `5.6`.
+This is the [Microsot Visual Studio Installer configuration file](visual-studio-2022.vsconfig) that automatically selects and installs all the required components needed by various versions of Unreal Engine including `5.7`.
 
 ## Plugins
 
@@ -68,6 +68,10 @@ if "%BUILDTOOLS_VERSION%" == "" SET BUILDTOOLS_VERSION=35.0.1
 if "%CMAKE_VERSION%" == "" SET CMAKE_VERSION=3.22.1
 if "%NDK_VERSION%" == "" SET NDK_VERSION=27.2.12479018
 {{< /codeblock >}}
+
+#### UE 5.7 Android Development Requirements
+
+At the time of this writing the [official documentation for UE 5.7 Android Development Requirements](https://dev.epicgames.com/documentation/en-us/unreal-engine/android-development-requirements-for-unreal-engine?application_version=5.7) has not been updated yet and matches exactly of those for UE `5.6.1`.
 
 ### UE 5.6 Android Project Settings
 
