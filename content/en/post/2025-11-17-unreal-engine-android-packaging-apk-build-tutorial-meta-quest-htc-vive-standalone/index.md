@@ -46,6 +46,10 @@ You can [follow the detailed steps from the previous tutorial](/blog/deploy-unre
 - [00:25:54 - 00:27:13 Prerequisites (JDK)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=1554s)
 - [00:27:14 - 00:32:47 Prerequisites (SetupAndroid.bat)](https://www.youtube.com/watch?v=EClbEbNcl4k&t=1634s)
 
+### Note Regarding Engines Built From Source
+
+As explained in my earlier tutorials on [Building Unreal Engine 5.6 From the GitHub Source Code on Microsoft Windows](/blog/build-unreal-engine-from-github-source-code-microsof-windows/) and [Building Unreal Engine 5.6 From the GitHub Source Code on GNU/Linux With Android Support](/blog/build-unreal-engine-from-github-source-code-gnu-linux-with-android-support/) you have to setup your Android build environmnet before even attempting to setup the engine for building from source. Once done you can start building your own Unreal Engine from source.
+
 ## Microsot Visual Studio Installer Configuration File
 
 This is the [Microsot Visual Studio Installer configuration file](visual-studio-2022.vsconfig) that automatically selects and installs all the required components needed by various versions of Unreal Engine including `5.7`.
